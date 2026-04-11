@@ -87,6 +87,14 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.soupday.cc3_unity_tools": {
+      "version": "file:D:/Senior 2/GP/ccic_unity_tools-2_2_6/CCiC-Unity-Tools-2.2.6",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.0"
+      }
+    },
     "com.unity.ai.inference": {
       "version": "2.6.1",
       "depth": 0,

@@ -42,8 +42,7 @@ extern void ObjectRenderer__ctor_m4E865527DB8C6C774FCF194DD3C7CBB05719645F (void
 extern void U3CU3Ec__DisplayClass10_0__ctor_m6BA5FC57E9A321CEDDF43E5CCB242AF0D6AF2512 (void);
 extern void U3CU3Ec__DisplayClass10_0_U3CRenderDetectionsU3Eb__0_m34D4461D437EF031D354F2FBC39A6C68026C0E5A (void);
 extern void ObjectStamper_get_HasSpawned_m10229C714A20FAFA889141F610F2AF769807381B (void);
-extern void ObjectStamper_PlacePermanentCube_m8783C2A667DB6718C367C7741631A02445CA3E52 (void);
-extern void ObjectStamper_ResetStamper_m30607ACD6427B8D15991402C6E2241115F68D221 (void);
+extern void ObjectStamper_PlacePermanentCharacter_mF0487548987D071FBEA5D8F1435509D361BEA802 (void);
 extern void ObjectStamper__ctor_m2576CCB7E17594C15286E7CA65E6AF2A46E4445E (void);
 extern void PassthroughHandler_Start_m792A73DA1E43797C2B7789CAB52CCB4760D26002 (void);
 extern void PassthroughHandler__ctor_m696268AC34EA3980C42AD3BBCC396B042495A801 (void);
@@ -51,7 +50,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[44] = 
+static Il2CppMethodPointer s_methodPointers[43] = 
 {
 	MarkerController_Awake_mE57339E57225EB54672CDBF929AD4962A4668A95,
 	MarkerController_UpdateMarker_mA933B125C78BB7343AC8705281C0B4F04568E74B,
@@ -88,8 +87,7 @@ static Il2CppMethodPointer s_methodPointers[44] =
 	U3CU3Ec__DisplayClass10_0__ctor_m6BA5FC57E9A321CEDDF43E5CCB242AF0D6AF2512,
 	U3CU3Ec__DisplayClass10_0_U3CRenderDetectionsU3Eb__0_m34D4461D437EF031D354F2FBC39A6C68026C0E5A,
 	ObjectStamper_get_HasSpawned_m10229C714A20FAFA889141F610F2AF769807381B,
-	ObjectStamper_PlacePermanentCube_m8783C2A667DB6718C367C7741631A02445CA3E52,
-	ObjectStamper_ResetStamper_m30607ACD6427B8D15991402C6E2241115F68D221,
+	ObjectStamper_PlacePermanentCharacter_mF0487548987D071FBEA5D8F1435509D361BEA802,
 	ObjectStamper__ctor_m2576CCB7E17594C15286E7CA65E6AF2A46E4445E,
 	PassthroughHandler_Start_m792A73DA1E43797C2B7789CAB52CCB4760D26002,
 	PassthroughHandler__ctor_m696268AC34EA3980C42AD3BBCC396B042495A801,
@@ -98,58 +96,57 @@ static Il2CppMethodPointer s_methodPointers[44] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[44] = 
+static const int32_t s_InvokerIndices[43] = 
 {
-	21582,
-	3038,
-	21582,
-	21582,
-	21582,
-	21582,
-	21582,
-	21346,
-	13983,
-	21094,
-	21346,
-	21582,
-	16269,
-	21582,
-	21094,
-	21346,
-	21582,
-	21346,
-	16269,
-	21582,
-	21094,
-	21346,
-	21582,
-	21346,
-	21582,
-	3993,
-	21582,
-	6636,
-	26595,
-	29538,
-	6660,
-	21582,
-	21582,
-	11574,
-	21094,
-	8620,
-	21582,
-	21582,
-	21582,
-	21582,
-	21582,
-	21582,
-	35990,
-	21582,
+	21636,
+	3042,
+	21636,
+	21636,
+	21636,
+	21636,
+	21636,
+	21400,
+	14017,
+	21148,
+	21400,
+	21636,
+	16307,
+	21636,
+	21148,
+	21400,
+	21636,
+	21400,
+	16307,
+	21636,
+	21148,
+	21400,
+	21636,
+	21400,
+	21636,
+	3999,
+	21636,
+	6646,
+	26651,
+	29596,
+	6670,
+	21636,
+	21636,
+	11600,
+	21148,
+	8638,
+	21636,
+	21636,
+	21636,
+	21636,
+	21636,
+	36048,
+	21636,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	44,
+	43,
 	s_methodPointers,
 	0,
 	NULL,

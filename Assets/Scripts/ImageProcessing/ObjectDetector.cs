@@ -156,7 +156,7 @@ public class ObjectDetector : MonoBehaviour
                 }
             }
             // 5. If the AI is at least 15% sure, save it!
-            if (maxConf > 0.4f)
+            if (maxConf > 0.3f)
             {
                 // Inside your if (maxConf > 0.15f) block in ObjectDetector.cs
 

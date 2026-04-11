@@ -272,7 +272,7 @@ inline void Dictionary_2_set_Item_m8E0F479453401E3DA3AB6E4927F62F14A7EB50D1 (Dic
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 127329
+// Method Definition Index: 127355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSkeletonMapping__ctor_mAD0EFFB4E51B507EC352ED9DB0FFF1C92D3E09A7 (OVRSkeletonMapping_tC39AC901BBAA2614D5C1006273A949399BF370BE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -291,7 +291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSkeletonMapping__ctor_mAD0EFFB4E51B50
 		return;
 	}
 }
-// Method Definition Index: 127330
+// Method Definition Index: 127356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSkeletonMapping__ctor_mBB8D3DD493239F7F8DAB728C33F6F3ECC91B3A46 (OVRSkeletonMapping_tC39AC901BBAA2614D5C1006273A949399BF370BE* __this, int32_t ___0_skeletonType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -314,7 +314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSkeletonMapping__ctor_mBB8D3DD493239F
 		return;
 	}
 }
-// Method Definition Index: 127331
+// Method Definition Index: 127357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OVRSkeletonMapping_GetJointMapping_mC46382B1A968F2553D2277D242247DB818318809 (int32_t ___0_jointSet, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -500,7 +500,7 @@ IL_00a6:
 		return L_18;
 	}
 }
-// Method Definition Index: 127332
+// Method Definition Index: 127358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OVRSkeletonMapping_GetRoot_mB5AF26DD7CC85C6E3A490988CB33455B1027E3CF (const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -517,7 +517,7 @@ IL_0005:
 		return L_0;
 	}
 }
-// Method Definition Index: 127333
+// Method Definition Index: 127359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRSkeletonMapping__cctor_m98181CB7DC844E3A111E8B3E1B6AEA16876A604D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

@@ -46,14 +46,26 @@
         "name": "Animation",
         "dependencies": [
           {
+            "name": "AnimationClip",
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Animator",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AnimatorController",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           },
@@ -65,8 +77,16 @@
           },
           {
             "name": "Avatar",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Motion",
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -452,7 +472,9 @@
           },
           {
             "name": "SkinnedMeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -980,9 +1002,7 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -1000,8 +1020,10 @@
           },
           {
             "name": "Collider",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/SampleScene.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
