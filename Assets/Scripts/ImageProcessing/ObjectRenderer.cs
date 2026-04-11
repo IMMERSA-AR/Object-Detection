@@ -13,7 +13,7 @@ public class ObjectRenderer : MonoBehaviour
 
     [Header("Label Filtering")]
     [SerializeField] private YOLOv9Labels[] labelFilters;
-    [SerializeField, Range(0f, 1f)] private float minConfidence = 0.4f;
+    [SerializeField, Range(0f, 1f)] private float minConfidence = 0.3f;
 
     private Camera _mainCamera;
     private const float ModelInputSize = 640f;
@@ -114,15 +114,30 @@ public class ObjectRenderer : MonoBehaviour
             {
                 continue;
             }
+            // ... inside your detection loop ...
             string labelName = detectedLabel.ToString();
+
             if (labelName.ToLower().Contains("chair"))
             {
                 ObjectStamper stamper = GetComponent<ObjectStamper>();
-                if (stamper != null)
+
+                // Only try to spawn if we found the stamper and Murad hasn't appeared yet
+                if (stamper != null && !stamper.HasSpawned)
                 {
-                    stamper.PlacePermanentCube(markerWorldPos, _mainCamera.transform.rotation);
+                    // IMPORTANT: We use the new method name 'PlacePermanentCharacter'
+                    // 'markerWorldPos' is the position calculated by your Raycast
+                    stamper.PlacePermanentCharacter(markerWorldPos, _mainCamera.transform.rotation);
                 }
             }
+            // string labelName = detectedLabel.ToString();
+            // if (labelName.ToLower().Contains("chair"))
+            // {
+            //     ObjectStamper stamper = GetComponent<ObjectStamper>();
+            //     if (stamper != null)
+            //     {
+            //         stamper.PlacePermanentCube(markerWorldPos, _mainCamera.transform.rotation);
+            //     }
+            // }
             Vector3 directionToPlayer = _mainCamera.transform.position - markerWorldPos;
             var markerRotation = Quaternion.LookRotation(_mainCamera.transform.position - markerWorldPos, Vector3.up);
 
