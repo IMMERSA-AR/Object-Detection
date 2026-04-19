@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dffebf828e08a2448fe717ab6278292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectStamper
-  characterPrefab: {fileID: 1505067724493744804, guid: 2718d2902efc036418caaf8e00d9401c, type: 3}
+  characterPrefab: {fileID: 6047812616954170691, guid: 91c6768d13e7e5046b7d198e576c50c3, type: 3}
   sideOffset: 0.2
 --- !u!1 &292039508
 GameObject:

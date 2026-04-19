@@ -76,7 +76,30 @@ public class ObjectDetector : MonoBehaviour
             yield return StartCoroutine(PerformInference(_cameraTexture));
         }
     }
+    private void SaveDebugImage(RenderTexture rt, string fileName)
+    {
+        // 1. Create a new Texture2D with the same dimensions
+        Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
 
+        // 2. Set the active RenderTexture and read pixels into the Texture2D
+        RenderTexture.active = rt;
+        tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+        tex.Apply();
+
+        // 3. Encode to JPG
+        byte[] bytes = tex.EncodeToJPG();
+
+        // 4. Determine the path (PersistentDataPath works on Quest and PC)
+        string path = System.IO.Path.Combine(Application.persistentDataPath, fileName);
+        System.IO.File.WriteAllBytes(path, bytes);
+
+        Debug.Log($"[DEBUG] Image saved to: {path}");
+
+        // Clean up
+        Destroy(tex);
+        RenderTexture.active = null;
+    }
+    private bool _hasSavedDebug = false;
     private IEnumerator PerformInference(Texture texture)
     {
         // --- NEW FIX: SQUASH THE IMAGE TO 640x640 ---
@@ -85,6 +108,11 @@ public class ObjectDetector : MonoBehaviour
 
         // 2. Squash the Quest's 1280x960 camera feed into the 640x640 box
         Graphics.Blit(texture, resizedRT);
+        if (!_hasSavedDebug)
+        {
+            SaveDebugImage(resizedRT, "AI_Input_Squashed.jpg");
+            _hasSavedDebug = true;
+        }
         totalFramesProcessed++;
         Debug.Log($"[SYSTEM] AI Frame Count: {totalFramesProcessed} | Time: {Time.time}");
 

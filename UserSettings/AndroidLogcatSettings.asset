@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 24108,
+        "processId": 28437,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -343,6 +343,24 @@
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 24108,
             "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 26581,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 26587,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 28437,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -399,7 +417,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "[Yolo",
+        "m_Filter": "[De",
         "m_UseRegularExpressions": false,
         "m_MatchCase": false
     },
