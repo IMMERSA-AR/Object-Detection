@@ -163,11 +163,12 @@ struct Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5;
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
 struct U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12;
-struct U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331;
+struct U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC;
 struct U3CU3Ec__DisplayClass10_0_tB0A8D8609AB1702396DD00D36D257A2B77FA9D86;
 struct Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401;
 struct MissingCharacterEventCallback_t955241181324E0FEF9A9BDBA400E8780F8979DE6;
 
+IL2CPP_EXTERN_C RuntimeClass* Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* BackendType_t8980A0E023782810BC4B82C1455132BB20D4E46D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
@@ -182,13 +183,15 @@ IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C
 IL2CPP_EXTERN_C RuntimeClass* OVRManager_t21429E69CA88C5E9C6EE3AAB75EAFBE6E1B129D4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Predicate_1_t96FF7A8BA33B286D69C3E80C8614331ECC3FB5A5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass10_0_tB0A8D8609AB1702396DD00D36D257A2B77FA9D86_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var;
@@ -196,12 +199,14 @@ IL2CPP_EXTERN_C RuntimeClass* Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5_i
 IL2CPP_EXTERN_C RuntimeClass* YOLOv9Labels_tD68F96ECBA1E25E9FD690B2AA52EBD1F091BBC68_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____2275CF619D77DF91480A0F22C96DC50310F42EB9092309918E331282DA4DCFCC_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____5E667AF5DB19B55C7235A668E951D4E61F7DDADCD1995C4FB15A16FBD820801C_FieldInfo_var;
+IL2CPP_EXTERN_C String_t* _stringLiteral097F81E677558DE3AFB91F7AD7F99FB65FEE67E0;
 IL2CPP_EXTERN_C String_t* _stringLiteral0ACD01722156B8516C7B5AED45E29FC23B05A674;
 IL2CPP_EXTERN_C String_t* _stringLiteral0BF10CAA4B19AB23D03CBE344A4A5C4CB1C37762;
 IL2CPP_EXTERN_C String_t* _stringLiteral12A8C46015EAA47F911CF6BE2B193EDFBE1FAF89;
 IL2CPP_EXTERN_C String_t* _stringLiteral142E7F04AD15522E43403C64A524E017226383F5;
 IL2CPP_EXTERN_C String_t* _stringLiteral249819019F617821E7DB3AB6761C339987D041B2;
 IL2CPP_EXTERN_C String_t* _stringLiteral2ED1363C59FFC5EE1B3F0BBB85BC37C0C54AA4DF;
+IL2CPP_EXTERN_C String_t* _stringLiteral32095C331F9ECA8AE926886DB37C3004D2D2C458;
 IL2CPP_EXTERN_C String_t* _stringLiteral3DCC273B4F9D302720FDEC5A69B71D13ECD644FC;
 IL2CPP_EXTERN_C String_t* _stringLiteral452C9DD953A7C6D8D9BD5E9B5CC425AEAF32C1F2;
 IL2CPP_EXTERN_C String_t* _stringLiteral5D394F131E58639C39EEEE212116249520DE21E6;
@@ -249,7 +254,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* Tensor_1_get_Item_m1F77E7DBF99955DAC7D9181B
 IL2CPP_EXTERN_C const RuntimeMethod* Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Tensor_1_get_Item_mA12180AF1AFA39D25AF6F47623574DDA87D245F7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CInferenceLoopU3Ed__15_System_Collections_IEnumerator_Reset_mEE3B0A79836C6772A8CF0A8A04C63EF6F1696BE0_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CPerformInferenceU3Ed__16_System_Collections_IEnumerator_Reset_m2508A739A233867F1269351FA4DD17FF9090C4BD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CPerformInferenceU3Ed__18_System_Collections_IEnumerator_Reset_m6D51D6FB67A472D8E4DC76F7CB3208716CB5BB85_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass10_0_U3CRenderDetectionsU3Eb__0_m34D4461D437EF031D354F2FBC39A6C68026C0E5A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueCollection_GetEnumerator_mE7F104C1E5F210491D3CC8D8AC3C8C8C28474D9A_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
@@ -1106,6 +1111,10 @@ struct TextWrappingModes_t982BC65D6DA703E73C04B99286285ECD3DDF207E
 {
 	int32_t ___value__;
 };
+struct TextureFormat_t87A73E4A3850D3410DC211676FC14B94226C1C1D 
+{
+	int32_t ___value__;
+};
 struct TextureMappingOptions_t0E1A47C529DEB45A875486256E7026E97C940DAE 
 {
 	int32_t ___value__;
@@ -1129,7 +1138,7 @@ struct YOLOv9Labels_tD68F96ECBA1E25E9FD690B2AA52EBD1F091BBC68
 {
 	int32_t ___value__;
 };
-struct U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331  : public RuntimeObject
+struct U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -1374,6 +1383,9 @@ struct Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB  : public ScriptableObje
 	bool ___loadedLayout;
 };
 struct RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27  : public Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700
+{
+};
+struct Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4  : public Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700
 {
 };
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
@@ -1638,6 +1650,7 @@ struct ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6  : public MonoBe
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ____inferenceCoroutine;
 	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ____cameraTexture;
 	int32_t ___totalFramesProcessed;
+	bool ____hasSavedDebug;
 };
 struct ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -2108,6 +2121,38 @@ struct TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_StaticFields
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
+{
+	ALIGN_FIELD (8) uint8_t m_Items[1];
+
+	inline uint8_t GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
+	{
+		m_Items[index] = value;
+	}
+};
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeArray
 {
 	ALIGN_FIELD (8) RuntimeObject* m_Items[1];
@@ -2238,38 +2283,6 @@ struct YOLOv9LabelsU5BU5D_tDB317E50D860CB9FFF794C8FCE96C32818E38B36  : public Ru
 		m_Items[index] = value;
 	}
 };
-struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031  : public RuntimeArray
-{
-	ALIGN_FIELD (8) uint8_t m_Items[1];
-
-	inline uint8_t GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline uint8_t* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, uint8_t value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline uint8_t GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline uint8_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, uint8_t value)
-	{
-		m_Items[index] = value;
-	}
-};
 
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponentInChildren_TisRuntimeObject_mE483A27E876DE8E4E6901D6814837F81D7C42F65_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
@@ -2347,7 +2360,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m9E3155FB84015C823606188F53B47CB44C444991 (String_t* ___0_str0, String_t* ___1_str1, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInferenceLoopU3Ed__15__ctor_m75B1F466A76E28A460071FFCCD9B8B89FD42BE1E (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__16__ctor_m853E09F0B0E085F39AB832FB0827BDE168805F9E (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D__ctor_mECF60A9EC0638EC353C02C8E99B6B465D23BE917 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, int32_t ___0_width, int32_t ___1_height, int32_t ___2_textureFormat, bool ___3_mipChain, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D_ReadPixels_m6B45DF7C051BF599C72ED09691F21A6C769EEBD9 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_source, int32_t ___1_destX, int32_t ___2_destY, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Texture2D_Apply_mA014182C9EE0BBF6EEE3B286854F29E50EB972DC (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ImageConversion_EncodeToJPG_mD3B358B8645CF85EBAD979554FFDE05A54A99804 (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_tex, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE (String_t* ___0_path1, String_t* ___1_path2, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077 (String_t* ___0_path, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_bytes, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__18__ctor_m563BCBA0880E306CAF7F4ECA4DAB6E24A2D65ABB (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PassthroughCameraAccess_get_IsPlaying_m6ED1573F1D425B4010FE8D96681EB18E5F5D0C60 (PassthroughCameraAccess_t1AB48BA59A738D15481F7F60404CCEF3AD656A53* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* PassthroughCameraAccess_GetTexture_mBCFD201E99C83DB06E9464263B48BA3C9C887972 (PassthroughCameraAccess_t1AB48BA59A738D15481F7F60404CCEF3AD656A53* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A PassthroughCameraAccess_get_CurrentResolution_mE35DC84739796960032F0C4016F76851C42448EB_inline (PassthroughCameraAccess_t1AB48BA59A738D15481F7F60404CCEF3AD656A53* __this, const RuntimeMethod* method) ;
@@ -2365,6 +2388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Behaviour_get_isActiveAndEnabled_mEB4ECC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* RenderTexture_GetTemporary_mDAD0D2A673F07BEC3B1A9555863E24A479E9BB11 (int32_t ___0_width, int32_t ___1_height, int32_t ___2_depthBuffer, int32_t ___3_format, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Graphics_Blit_m8D99E16B74C7D3C8F79F4F142C59DB6B38114504 (Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___0_source, RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___1_dest, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector_SaveDebugImage_m1E7D1DA1466A1D7654BF992654419A6A057E9E68 (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___0_rt, String_t* ___1_fileName, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TensorShape__ctor_mE6529014F06216A487E96933BFBA155C1FAF4FEE (TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34* __this, int32_t ___0_d0, int32_t ___1_d1, int32_t ___2_d2, int32_t ___3_d3, const RuntimeMethod* method) ;
 inline void Tensor_1__ctor_m43F3E259B9C1B9EF0A410E7C15B52692D88D8386 (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* __this, TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 ___0_shape, bool ___1_clearOnInit, const RuntimeMethod* method)
 {
@@ -2516,7 +2540,6 @@ inline MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33* Enumerator_ge
 {
 	return ((  MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33* (*) (Enumerator_tCD485DFB57DCF85519A3DF3EAA8CBC6FA1FC6EED*, const RuntimeMethod*))Enumerator_get_Current_mB407E755F3B4C51C54D24338D00A352E5B16E7F3_gshared_inline)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
 inline bool Enumerator_MoveNext_mAE61DCB29BB3C4A76244F96F319BCCEC66810FDA (Enumerator_tCD485DFB57DCF85519A3DF3EAA8CBC6FA1FC6EED* __this, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Enumerator_tCD485DFB57DCF85519A3DF3EAA8CBC6FA1FC6EED*, const RuntimeMethod*))Enumerator_MoveNext_mBE11DA1DAFC756EB87E884AADC5EDC4BB72FB032_gshared)(__this, method);
@@ -2580,7 +2603,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130949
+// Method Definition Index: 130801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarkerController_Awake_mE57339E57225EB54672CDBF929AD4962A4668A95 (MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2641,7 +2664,7 @@ IL_003a:
 		return;
 	}
 }
-// Method Definition Index: 130950
+// Method Definition Index: 130802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarkerController_UpdateMarker_mA933B125C78BB7343AC8705281C0B4F04568E74B (MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rotation, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___2_scale, String_t* ___3_text, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2719,7 +2742,7 @@ IL_0067:
 		return;
 	}
 }
-// Method Definition Index: 130951
+// Method Definition Index: 130803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarkerController_Update_m8F07845125B14CFB513C0985747F5E35ADFCBE22 (MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2830,7 +2853,7 @@ IL_005b:
 		return;
 	}
 }
-// Method Definition Index: 130952
+// Method Definition Index: 130804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarkerController__ctor_mD744CB8423348DA7713EF1B57C309E7726E5CD35 (MarkerController_tE7C992C2C9DC77C450D93CD22B08AB0372D58C33* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2846,7 +2869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarkerController__ctor_mD744CB8423348DA7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130953
+// Method Definition Index: 130805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector_Start_m902C588E393C348021AF2FABB7C4BA166FE49A5A (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2932,7 +2955,7 @@ IL_0062:
 		return;
 	}
 }
-// Method Definition Index: 130954
+// Method Definition Index: 130806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector_OnDestroy_mD0E71364105CB042AAD2EFBBFE5E9D3A758CF8F5 (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -2985,7 +3008,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 130955
+// Method Definition Index: 130807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector_LoadModel_m10F2A3E7A443D8BDCCE54B00045209245B8E274C (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3060,7 +3083,7 @@ IL_0063:
 		return;
 	}
 }
-// Method Definition Index: 130956
+// Method Definition Index: 130808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectDetector_InferenceLoop_mE03964A796B1C71426417D50C45B182E3C2A4FE5 (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3079,23 +3102,109 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectDetector_InferenceLoop_m
 		return L_1;
 	}
 }
-// Method Definition Index: 130957
+// Method Definition Index: 130809
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector_SaveDebugImage_m1E7D1DA1466A1D7654BF992654419A6A057E9E68 (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___0_rt, String_t* ___1_fileName, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral097F81E677558DE3AFB91F7AD7F99FB65FEE67E0);
+		s_Il2CppMethodInitialized = true;
+	}
+	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* V_0 = NULL;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_1 = NULL;
+	String_t* V_2 = NULL;
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:82>
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_0 = ___0_rt;
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_0);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_2 = ___0_rt;
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_2);
+		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_4 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
+		Texture2D__ctor_mECF60A9EC0638EC353C02C8E99B6B465D23BE917(L_4, L_1, L_3, 3, (bool)0, NULL);
+		V_0 = L_4;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:85>
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_5 = ___0_rt;
+		RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB(L_5, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:86>
+		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_6 = V_0;
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_7 = ___0_rt;
+		NullCheck(L_7);
+		int32_t L_8;
+		L_8 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_7);
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_9 = ___0_rt;
+		NullCheck(L_9);
+		int32_t L_10;
+		L_10 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_9);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline((&L_11), (0.0f), (0.0f), ((float)L_8), ((float)L_10), NULL);
+		NullCheck(L_6);
+		Texture2D_ReadPixels_m6B45DF7C051BF599C72ED09691F21A6C769EEBD9(L_6, L_11, 0, 0, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:87>
+		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_12 = V_0;
+		NullCheck(L_12);
+		Texture2D_Apply_mA014182C9EE0BBF6EEE3B286854F29E50EB972DC(L_12, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:90>
+		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_13 = V_0;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14;
+		L_14 = ImageConversion_EncodeToJPG_mD3B358B8645CF85EBAD979554FFDE05A54A99804(L_13, NULL);
+		V_1 = L_14;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:93>
+		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
+		String_t* L_15;
+		L_15 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
+		String_t* L_16 = ___1_fileName;
+		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
+		String_t* L_17;
+		L_17 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_15, L_16, NULL);
+		V_2 = L_17;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:94>
+		String_t* L_18 = V_2;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = V_1;
+		File_WriteAllBytes_mC491031DA14AA9B591F62D6AD0181D090E081077(L_18, L_19, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:96>
+		String_t* L_20 = V_2;
+		String_t* L_21;
+		L_21 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral097F81E677558DE3AFB91F7AD7F99FB65FEE67E0, L_20, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_21, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:99>
+		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_22 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_22, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:100>
+		RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB((RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27*)NULL, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:101>
+		return;
+	}
+}
+// Method Definition Index: 130810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectDetector_PerformInference_mF9C6988A3D2D87F4369B6F1F1CCB66C8EACD7250 (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* L_0 = (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331*)il2cpp_codegen_object_new(U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331_il2cpp_TypeInfo_var);
-		U3CPerformInferenceU3Ed__16__ctor_m853E09F0B0E085F39AB832FB0827BDE168805F9E(L_0, 0, NULL);
-		U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* L_1 = L_0;
+		U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* L_0 = (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC*)il2cpp_codegen_object_new(U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC_il2cpp_TypeInfo_var);
+		U3CPerformInferenceU3Ed__18__ctor_m563BCBA0880E306CAF7F4ECA4DAB6E24A2D65ABB(L_0, 0, NULL);
+		U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* L_1 = L_0;
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* L_2 = L_1;
+		U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* L_2 = L_1;
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_3 = ___0_texture;
 		NullCheck(L_2);
 		L_2->___texture = L_3;
@@ -3103,7 +3212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ObjectDetector_PerformInferenc
 		return L_2;
 	}
 }
-// Method Definition Index: 130958
+// Method Definition Index: 130811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ObjectDetector_TryEnsureCameraTexture_mA9E04339965F65752FE44F0634D452FFFBD482AA (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3123,7 +3232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ObjectDetector_TryEnsureCameraTexture_mA
 	memset((&V_4), 0, sizeof(V_4));
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:207>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:235>
 		PassthroughCameraAccess_t1AB48BA59A738D15481F7F60404CCEF3AD656A53* L_0 = __this->____cameraAccess;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3157,14 +3266,14 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:209>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:237>
 		V_1 = (bool)0;
 		goto IL_00b3;
 	}
 
 IL_002b:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:212>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:240>
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_5 = __this->____cameraTexture;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -3177,21 +3286,21 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:214>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:242>
 		V_1 = (bool)1;
 		goto IL_00b3;
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:217>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:245>
 		PassthroughCameraAccess_t1AB48BA59A738D15481F7F60404CCEF3AD656A53* L_8 = __this->____cameraAccess;
 		NullCheck(L_8);
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_9;
 		L_9 = PassthroughCameraAccess_GetTexture_mBCFD201E99C83DB06E9464263B48BA3C9C887972(L_8, NULL);
 		__this->____cameraTexture = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____cameraTexture), (void*)L_9);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:218>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:246>
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_10 = __this->____cameraTexture;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -3204,13 +3313,13 @@ IL_003f:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:220>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:248>
 		PassthroughCameraAccess_t1AB48BA59A738D15481F7F60404CCEF3AD656A53* L_13 = __this->____cameraAccess;
 		NullCheck(L_13);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_14;
 		L_14 = PassthroughCameraAccess_get_CurrentResolution_mE35DC84739796960032F0C4016F76851C42448EB_inline(L_13, NULL);
 		V_4 = L_14;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:221>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:249>
 		int32_t L_15;
 		L_15 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&V_4), NULL);
 		int32_t L_16 = L_15;
@@ -3227,14 +3336,14 @@ IL_003f:
 
 IL_0098:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:225>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:253>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralAB40F9F45E19FF013B7ECE4C770FE0FE00ED5469, NULL);
 	}
 
 IL_00a5:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:228>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:256>
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_22 = __this->____cameraTexture;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_23;
@@ -3245,12 +3354,12 @@ IL_00a5:
 
 IL_00b3:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:229>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:257>
 		bool L_24 = V_1;
 		return L_24;
 	}
 }
-// Method Definition Index: 130959
+// Method Definition Index: 130812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* ObjectDetector_TryPeekConfidenceOutput_mF5D0EAB18B909691D681766609588A65CD65781C (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3265,7 +3374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49
 	}
 	try
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:235>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:263>
 		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_0 = __this->____engine;
 		NullCheck(L_0);
 		Tensor_t605E6A43129BE2702B0B01D58A3AE82242D41B2C* L_1;
@@ -3286,8 +3395,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49
 CATCH_0016:
 	{
 		Exception_t* L_2 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:237>
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:239>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:265>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:267>
 		V_0 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)NULL;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_001c;
@@ -3295,12 +3404,12 @@ CATCH_0016:
 
 IL_001c:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:241>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:269>
 		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_3 = V_0;
 		return L_3;
 	}
 }
-// Method Definition Index: 130960
+// Method Definition Index: 130813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector__ctor_m6BF2B0E0BB79615E7651FD6A159BFF6C2A2FADA6 (ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3312,6 +3421,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector__ctor_m6BF2B0E0BB79615E76
 		__this->___kLayersPerFrame = ((int32_t)20);
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:22>
 		__this->___totalFramesProcessed = 0;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:102>
+		__this->____hasSavedDebug = (bool)0;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -3324,7 +3435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectDetector__ctor_m6BF2B0E0BB79615E76
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130961
+// Method Definition Index: 130814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInferenceLoopU3Ed__15__ctor_m75B1F466A76E28A460071FFCCD9B8B89FD42BE1E (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -3334,14 +3445,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInferenceLoopU3Ed__15__ctor_m75B1F466
 		return;
 	}
 }
-// Method Definition Index: 130962
+// Method Definition Index: 130815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInferenceLoopU3Ed__15_System_IDisposable_Dispose_m0623C0372247C1CD78FF9C34B6BF7C942A0EC7B9 (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 130963
+// Method Definition Index: 130816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInferenceLoopU3Ed__15_MoveNext_mD349349F0840E0167FD5B990A45E156F98902F36 (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3500,7 +3611,7 @@ IL_00c4:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 130964
+// Method Definition Index: 130817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInferenceLoopU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m88C203EE9F783DAEB81C9AB9C22277DE7563D7DA (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3508,7 +3619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInferenceLoopU3Ed__15_Syste
 		return L_0;
 	}
 }
-// Method Definition Index: 130965
+// Method Definition Index: 130818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInferenceLoopU3Ed__15_System_Collections_IEnumerator_Reset_mEE3B0A79836C6772A8CF0A8A04C63EF6F1696BE0 (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3517,7 +3628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInferenceLoopU3Ed__15_System_Collecti
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CInferenceLoopU3Ed__15_System_Collections_IEnumerator_Reset_mEE3B0A79836C6772A8CF0A8A04C63EF6F1696BE0_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 130966
+// Method Definition Index: 130819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInferenceLoopU3Ed__15_System_Collections_IEnumerator_get_Current_m529307320CF674853D35562D13366E722528B883 (U3CInferenceLoopU3Ed__15_t89A65E14A61A70A9C4B1D88C5D081722533D2C12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3533,8 +3644,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInferenceLoopU3Ed__15_Syste
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130967
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__16__ctor_m853E09F0B0E085F39AB832FB0827BDE168805F9E (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+// Method Definition Index: 130820
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__18__ctor_m563BCBA0880E306CAF7F4ECA4DAB6E24A2D65ABB (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -3543,15 +3654,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__16__ctor_m853E0
 		return;
 	}
 }
-// Method Definition Index: 130968
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__16_System_IDisposable_Dispose_m81B93BA0FEFFDACFBEC9562F9E56D134D73D856A (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, const RuntimeMethod* method) 
+// Method Definition Index: 130821
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__18_System_IDisposable_Dispose_m077C241D21A283CC3DF9499BC6E88BF2A5400C86 (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 130969
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPerformInferenceU3Ed__16_MoveNext_m49D0E5D2B5AF28887D70A4068C3AB130F0183BC9 (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, const RuntimeMethod* method) 
+// Method Definition Index: 130822
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPerformInferenceU3Ed__18_MoveNext_m9E089AE66F6E866E4769A0B0051DE46BD811F944 (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -3579,24 +3690,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPerformInferenceU3Ed__16_MoveNext_m49
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&YOLOv9Labels_tD68F96ECBA1E25E9FD690B2AA52EBD1F091BBC68_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral12A8C46015EAA47F911CF6BE2B193EDFBE1FAF89);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral32095C331F9ECA8AE926886DB37C3004D2D2C458);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DCC273B4F9D302720FDEC5A69B71D13ECD644FC);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral625D74B6955F317421D0E72173BED121688D9646);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC4FC8A63A355C28095498A55FF53CAB00C1CE023);
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	TextureTransform_tBE590CE62B01B4CFBF1E37135CE7FEAA1903ED1D V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
+	bool V_1 = false;
+	TextureTransform_tBE590CE62B01B4CFBF1E37135CE7FEAA1903ED1D V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
-	int32_t V_4 = 0;
-	bool V_5 = false;
+	bool V_4 = false;
+	int32_t V_5 = 0;
 	bool V_6 = false;
 	bool V_7 = false;
 	bool V_8 = false;
 	bool V_9 = false;
 	bool V_10 = false;
 	bool V_11 = false;
+	bool V_12 = false;
 	{
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
@@ -3628,12 +3741,12 @@ IL_001b:
 
 IL_001d:
 	{
-		goto IL_017d;
+		goto IL_01b6;
 	}
 
 IL_0022:
 	{
-		goto IL_01d2;
+		goto IL_020b;
 	}
 
 IL_0027:
@@ -3644,468 +3757,476 @@ IL_0027:
 IL_0029:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:84>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:107>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_2;
 		L_2 = RenderTexture_GetTemporary_mDAD0D2A673F07BEC3B1A9555863E24A479E9BB11(((int32_t)640), ((int32_t)640), 0, 0, NULL);
 		__this->___U3CresizedRTU3E5__1 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CresizedRTU3E5__1), (void*)L_2);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:87>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:110>
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_3 = __this->___texture;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_4 = __this->___U3CresizedRTU3E5__1;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m8D99E16B74C7D3C8F79F4F142C59DB6B38114504(L_3, L_4, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:88>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:111>
 		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_5 = __this->___U3CU3E4__this;
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_6 = __this->___U3CU3E4__this;
-		NullCheck(L_6);
-		int32_t L_7 = L_6->___totalFramesProcessed;
 		NullCheck(L_5);
-		L_5->___totalFramesProcessed = ((int32_t)il2cpp_codegen_add(L_7, 1));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:89>
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_8 = __this->___U3CU3E4__this;
-		NullCheck(L_8);
-		int32_t L_9 = L_8->___totalFramesProcessed;
-		int32_t L_10 = L_9;
-		RuntimeObject* L_11 = Box(il2cpp_defaults.int32_class, &L_10);
-		float L_12;
-		L_12 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_13 = L_12;
-		RuntimeObject* L_14 = Box(il2cpp_defaults.single_class, &L_13);
-		String_t* L_15;
-		L_15 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralC4FC8A63A355C28095498A55FF53CAB00C1CE023, L_11, L_14, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_15, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:92>
-		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_16;
-		memset((&L_16), 0, sizeof(L_16));
-		TensorShape__ctor_mE6529014F06216A487E96933BFBA155C1FAF4FEE((&L_16), 1, 3, ((int32_t)640), ((int32_t)640), NULL);
-		__this->___U3CtensorShapeU3E5__2 = L_16;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:93>
-		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_17 = __this->___U3CtensorShapeU3E5__2;
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_18 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)il2cpp_codegen_object_new(Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
-		Tensor_1__ctor_m43F3E259B9C1B9EF0A410E7C15B52692D88D8386(L_18, L_17, (bool)1, Tensor_1__ctor_m43F3E259B9C1B9EF0A410E7C15B52692D88D8386_RuntimeMethod_var);
-		__this->___U3CinputTensorU3E5__3 = L_18;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CinputTensorU3E5__3), (void*)L_18);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:96>
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_19 = __this->___U3CresizedRTU3E5__1;
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_20 = __this->___U3CinputTensorU3E5__3;
-		il2cpp_codegen_initobj((&V_1), sizeof(TextureTransform_tBE590CE62B01B4CFBF1E37135CE7FEAA1903ED1D));
-		TextureTransform_tBE590CE62B01B4CFBF1E37135CE7FEAA1903ED1D L_21 = V_1;
-		TextureConverter_ToTensor_mBA572530E690363EAD5582EC8657D41740C359B9(L_19, L_20, L_21, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:99>
-		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_22 = __this->___U3CresizedRTU3E5__1;
-		RenderTexture_ReleaseTemporary_mEEF2C1990196FF06FDD0DC190928AD3A023EBDD2(L_22, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:102>
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_23 = __this->___U3CU3E4__this;
-		NullCheck(L_23);
-		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_24 = L_23->____engine;
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_25 = __this->___U3CinputTensorU3E5__3;
-		NullCheck(L_24);
-		RuntimeObject* L_26;
-		L_26 = Worker_ScheduleIterable_m5474B244CBC01A87259BBF6BE5C5D35107FAEE60(L_24, L_25, NULL);
-		__this->___U3CscheduleU3E5__4 = L_26;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CscheduleU3E5__4), (void*)L_26);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:103>
-		RuntimeObject* L_27 = __this->___U3CscheduleU3E5__4;
-		V_2 = (bool)((((RuntimeObject*)(RuntimeObject*)L_27) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_28 = V_2;
-		if (!L_28)
+		bool L_6 = L_5->____hasSavedDebug;
+		V_1 = (bool)((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
+		bool L_7 = V_1;
+		if (!L_7)
 		{
-			goto IL_013b;
+			goto IL_0091;
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:105>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:113>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_8 = __this->___U3CU3E4__this;
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_9 = __this->___U3CresizedRTU3E5__1;
+		NullCheck(L_8);
+		ObjectDetector_SaveDebugImage_m1E7D1DA1466A1D7654BF992654419A6A057E9E68(L_8, L_9, _stringLiteral32095C331F9ECA8AE926886DB37C3004D2D2C458, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:114>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_10 = __this->___U3CU3E4__this;
+		NullCheck(L_10);
+		L_10->____hasSavedDebug = (bool)1;
+	}
+
+IL_0091:
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:116>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_11 = __this->___U3CU3E4__this;
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_12 = __this->___U3CU3E4__this;
+		NullCheck(L_12);
+		int32_t L_13 = L_12->___totalFramesProcessed;
+		NullCheck(L_11);
+		L_11->___totalFramesProcessed = ((int32_t)il2cpp_codegen_add(L_13, 1));
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:117>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_14 = __this->___U3CU3E4__this;
+		NullCheck(L_14);
+		int32_t L_15 = L_14->___totalFramesProcessed;
+		int32_t L_16 = L_15;
+		RuntimeObject* L_17 = Box(il2cpp_defaults.int32_class, &L_16);
+		float L_18;
+		L_18 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_19 = L_18;
+		RuntimeObject* L_20 = Box(il2cpp_defaults.single_class, &L_19);
+		String_t* L_21;
+		L_21 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralC4FC8A63A355C28095498A55FF53CAB00C1CE023, L_17, L_20, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral3DCC273B4F9D302720FDEC5A69B71D13ECD644FC, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:106>
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_21, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:120>
+		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_22;
+		memset((&L_22), 0, sizeof(L_22));
+		TensorShape__ctor_mE6529014F06216A487E96933BFBA155C1FAF4FEE((&L_22), 1, 3, ((int32_t)640), ((int32_t)640), NULL);
+		__this->___U3CtensorShapeU3E5__2 = L_22;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:121>
+		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_23 = __this->___U3CtensorShapeU3E5__2;
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_24 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)il2cpp_codegen_object_new(Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
+		Tensor_1__ctor_m43F3E259B9C1B9EF0A410E7C15B52692D88D8386(L_24, L_23, (bool)1, Tensor_1__ctor_m43F3E259B9C1B9EF0A410E7C15B52692D88D8386_RuntimeMethod_var);
+		__this->___U3CinputTensorU3E5__3 = L_24;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CinputTensorU3E5__3), (void*)L_24);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:124>
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_25 = __this->___U3CresizedRTU3E5__1;
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_26 = __this->___U3CinputTensorU3E5__3;
+		il2cpp_codegen_initobj((&V_2), sizeof(TextureTransform_tBE590CE62B01B4CFBF1E37135CE7FEAA1903ED1D));
+		TextureTransform_tBE590CE62B01B4CFBF1E37135CE7FEAA1903ED1D L_27 = V_2;
+		TextureConverter_ToTensor_mBA572530E690363EAD5582EC8657D41740C359B9(L_25, L_26, L_27, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:127>
+		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_28 = __this->___U3CresizedRTU3E5__1;
+		RenderTexture_ReleaseTemporary_mEEF2C1990196FF06FDD0DC190928AD3A023EBDD2(L_28, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:130>
 		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_29 = __this->___U3CU3E4__this;
 		NullCheck(L_29);
 		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_30 = L_29->____engine;
 		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_31 = __this->___U3CinputTensorU3E5__3;
 		NullCheck(L_30);
-		Worker_Schedule_mB1327ED170CCCD298B9FC790A922947AE8E8D6CD(L_30, L_31, NULL);
-		goto IL_0197;
-	}
-
-IL_013b:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:111>
-		__this->___U3CitU3E5__15 = 0;
-		goto IL_0185;
-	}
-
-IL_0145:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:114>
-		int32_t L_32 = __this->___U3CitU3E5__15;
-		V_4 = ((int32_t)il2cpp_codegen_add(L_32, 1));
-		int32_t L_33 = V_4;
-		__this->___U3CitU3E5__15 = L_33;
-		int32_t L_34 = V_4;
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_35 = __this->___U3CU3E4__this;
-		NullCheck(L_35);
-		int32_t L_36 = L_35->___kLayersPerFrame;
-		V_3 = (bool)((((int32_t)((int32_t)(L_34%L_36))) == ((int32_t)0))? 1 : 0);
-		bool L_37 = V_3;
-		if (!L_37)
+		RuntimeObject* L_32;
+		L_32 = Worker_ScheduleIterable_m5474B244CBC01A87259BBF6BE5C5D35107FAEE60(L_30, L_31, NULL);
+		__this->___U3CscheduleU3E5__4 = L_32;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CscheduleU3E5__4), (void*)L_32);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:131>
+		RuntimeObject* L_33 = __this->___U3CscheduleU3E5__4;
+		V_3 = (bool)((((RuntimeObject*)(RuntimeObject*)L_33) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_34 = V_3;
+		if (!L_34)
 		{
-			goto IL_0184;
+			goto IL_0172;
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:115>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:133>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral3DCC273B4F9D302720FDEC5A69B71D13ECD644FC, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:134>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_35 = __this->___U3CU3E4__this;
+		NullCheck(L_35);
+		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_36 = L_35->____engine;
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_37 = __this->___U3CinputTensorU3E5__3;
+		NullCheck(L_36);
+		Worker_Schedule_mB1327ED170CCCD298B9FC790A922947AE8E8D6CD(L_36, L_37, NULL);
+		goto IL_01d0;
+	}
+
+IL_0172:
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:139>
+		__this->___U3CitU3E5__15 = 0;
+		goto IL_01be;
+	}
+
+IL_017c:
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:142>
+		int32_t L_38 = __this->___U3CitU3E5__15;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_38, 1));
+		int32_t L_39 = V_5;
+		__this->___U3CitU3E5__15 = L_39;
+		int32_t L_40 = V_5;
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_41 = __this->___U3CU3E4__this;
+		NullCheck(L_41);
+		int32_t L_42 = L_41->___kLayersPerFrame;
+		V_4 = (bool)((((int32_t)((int32_t)(L_40%L_42))) == ((int32_t)0))? 1 : 0);
+		bool L_43 = V_4;
+		if (!L_43)
+		{
+			goto IL_01bd;
+		}
+	}
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:143>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
 		return (bool)1;
 	}
 
-IL_017d:
+IL_01b6:
 	{
 		__this->___U3CU3E1__state = (-1);
 	}
 
-IL_0184:
+IL_01bd:
 	{
 	}
 
-IL_0185:
+IL_01be:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:112>
-		RuntimeObject* L_38 = __this->___U3CscheduleU3E5__4;
-		NullCheck(L_38);
-		bool L_39;
-		L_39 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_38);
-		V_5 = L_39;
-		bool L_40 = V_5;
-		if (L_40)
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:140>
+		RuntimeObject* L_44 = __this->___U3CscheduleU3E5__4;
+		NullCheck(L_44);
+		bool L_45;
+		L_45 = InterfaceFuncInvoker0< bool >::Invoke(0, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_44);
+		V_6 = L_45;
+		bool L_46 = V_6;
+		if (L_46)
 		{
-			goto IL_0145;
+			goto IL_017c;
 		}
 	}
 	{
 	}
 
-IL_0197:
+IL_01d0:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:122>
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_41 = __this->___U3CU3E4__this;
-		NullCheck(L_41);
-		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_42 = L_41->____engine;
-		NullCheck(L_42);
-		Tensor_t605E6A43129BE2702B0B01D58A3AE82242D41B2C* L_43;
-		L_43 = Worker_PeekOutput_m6CA6DB97F875E0854B22887759FB89FD68A4D138(L_42, 0, NULL);
-		__this->___U3CoutputTensorU3E5__5 = ((Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)IsInstClass((RuntimeObject*)L_43, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var));
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CoutputTensorU3E5__5), (void*)((Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)IsInstClass((RuntimeObject*)L_43, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:125>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_44 = __this->___U3CoutputTensorU3E5__5;
-		NullCheck(L_44);
-		Tensor_ReadbackRequest_m4C28B8ABE0768E75C25EB0ADF503F56BEB698208(L_44, NULL);
-		goto IL_01da;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:150>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_47 = __this->___U3CU3E4__this;
+		NullCheck(L_47);
+		Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5* L_48 = L_47->____engine;
+		NullCheck(L_48);
+		Tensor_t605E6A43129BE2702B0B01D58A3AE82242D41B2C* L_49;
+		L_49 = Worker_PeekOutput_m6CA6DB97F875E0854B22887759FB89FD68A4D138(L_48, 0, NULL);
+		__this->___U3CoutputTensorU3E5__5 = ((Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)IsInstClass((RuntimeObject*)L_49, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var));
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CoutputTensorU3E5__5), (void*)((Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)IsInstClass((RuntimeObject*)L_49, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var)));
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:153>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_50 = __this->___U3CoutputTensorU3E5__5;
+		NullCheck(L_50);
+		Tensor_ReadbackRequest_m4C28B8ABE0768E75C25EB0ADF503F56BEB698208(L_50, NULL);
+		goto IL_0213;
 	}
 
-IL_01c1:
+IL_01fa:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:128>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:156>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
 		return (bool)1;
 	}
 
-IL_01d2:
+IL_020b:
 	{
 		__this->___U3CU3E1__state = (-1);
 	}
 
-IL_01da:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:126>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_45 = __this->___U3CoutputTensorU3E5__5;
-		NullCheck(L_45);
-		bool L_46;
-		L_46 = Tensor_IsReadbackRequestDone_m62AFC8E2B8CBD8857550FEE5C86F536E42258AB6(L_45, NULL);
-		V_6 = (bool)((((int32_t)L_46) == ((int32_t)0))? 1 : 0);
-		bool L_47 = V_6;
-		if (L_47)
-		{
-			goto IL_01c1;
-		}
-	}
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:132>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_48 = __this->___U3CoutputTensorU3E5__5;
-		NullCheck(L_48);
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_49;
-		L_49 = Tensor_1_ReadbackAndClone_m94DDCE51E7C12C75F71D7E022BD3729968EC0120(L_48, Tensor_1_ReadbackAndClone_m94DDCE51E7C12C75F71D7E022BD3729968EC0120_RuntimeMethod_var);
-		__this->___U3CcpuTensorU3E5__6 = L_49;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcpuTensorU3E5__6), (void*)L_49);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:134>
-		__this->___U3CelementsU3E5__7 = ((int32_t)8400);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:135>
-		__this->___U3CclassesU3E5__8 = ((int32_t)80);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:137>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_50 = (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918*)il2cpp_codegen_object_new(List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918_il2cpp_TypeInfo_var);
-		List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802(L_50, List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802_RuntimeMethod_var);
-		__this->___U3CfilteredCoordsU3E5__9 = L_50;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfilteredCoordsU3E5__9), (void*)L_50);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:138>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_51 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
-		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_51, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
-		__this->___U3CfilteredLabelsU3E5__10 = L_51;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfilteredLabelsU3E5__10), (void*)L_51);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:139>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_52 = (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918*)il2cpp_codegen_object_new(List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918_il2cpp_TypeInfo_var);
-		List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802(L_52, List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802_RuntimeMethod_var);
-		__this->___U3CfilteredConfsU3E5__11 = L_52;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfilteredConfsU3E5__11), (void*)L_52);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:142>
-		__this->___U3CiU3E5__16 = 0;
-		goto IL_0452;
-	}
-
-IL_023f:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:144>
-		__this->___U3CmaxConfU3E5__17 = (0.0f);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:145>
-		__this->___U3CclassIdU3E5__18 = (-1);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:148>
-		__this->___U3CcU3E5__19 = 0;
-		goto IL_02c4;
-	}
-
-IL_025b:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:151>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_53 = __this->___U3CcpuTensorU3E5__6;
-		int32_t L_54 = __this->___U3CcU3E5__19;
-		int32_t L_55 = __this->___U3CelementsU3E5__7;
-		int32_t L_56 = __this->___U3CiU3E5__16;
-		NullCheck(L_53);
-		float L_57;
-		L_57 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_53, ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_add(L_54, 4)), L_55)), L_56)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
-		__this->___U3CconfU3E5__20 = L_57;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:152>
-		float L_58 = __this->___U3CconfU3E5__20;
-		float L_59 = __this->___U3CmaxConfU3E5__17;
-		V_7 = (bool)((((float)L_58) > ((float)L_59))? 1 : 0);
-		bool L_60 = V_7;
-		if (!L_60)
-		{
-			goto IL_02b1;
-		}
-	}
+IL_0213:
 	{
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:154>
-		float L_61 = __this->___U3CconfU3E5__20;
-		__this->___U3CmaxConfU3E5__17 = L_61;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:155>
-		int32_t L_62 = __this->___U3CcU3E5__19;
-		__this->___U3CclassIdU3E5__18 = L_62;
-	}
-
-IL_02b1:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:148>
-		int32_t L_63 = __this->___U3CcU3E5__19;
-		V_4 = L_63;
-		int32_t L_64 = V_4;
-		__this->___U3CcU3E5__19 = ((int32_t)il2cpp_codegen_add(L_64, 1));
-	}
-
-IL_02c4:
-	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:148>
-		int32_t L_65 = __this->___U3CcU3E5__19;
-		int32_t L_66 = __this->___U3CclassesU3E5__8;
-		V_8 = (bool)((((int32_t)L_65) < ((int32_t)L_66))? 1 : 0);
-		bool L_67 = V_8;
-		if (L_67)
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_51 = __this->___U3CoutputTensorU3E5__5;
+		NullCheck(L_51);
+		bool L_52;
+		L_52 = Tensor_IsReadbackRequestDone_m62AFC8E2B8CBD8857550FEE5C86F536E42258AB6(L_51, NULL);
+		V_7 = (bool)((((int32_t)L_52) == ((int32_t)0))? 1 : 0);
+		bool L_53 = V_7;
+		if (L_53)
 		{
-			goto IL_025b;
+			goto IL_01fa;
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:159>
-		float L_68 = __this->___U3CmaxConfU3E5__17;
-		V_9 = (bool)((((float)L_68) > ((float)(0.300000012f)))? 1 : 0);
-		bool L_69 = V_9;
-		if (!L_69)
-		{
-			goto IL_043f;
-		}
-	}
-	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:160>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_54 = __this->___U3CoutputTensorU3E5__5;
+		NullCheck(L_54);
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_55;
+		L_55 = Tensor_1_ReadbackAndClone_m94DDCE51E7C12C75F71D7E022BD3729968EC0120(L_54, Tensor_1_ReadbackAndClone_m94DDCE51E7C12C75F71D7E022BD3729968EC0120_RuntimeMethod_var);
+		__this->___U3CcpuTensorU3E5__6 = L_55;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcpuTensorU3E5__6), (void*)L_55);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:162>
+		__this->___U3CelementsU3E5__7 = ((int32_t)8400);
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:163>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_70 = __this->___U3CcpuTensorU3E5__6;
-		int32_t L_71 = __this->___U3CiU3E5__16;
-		NullCheck(L_70);
-		float L_72;
-		L_72 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_70, L_71, Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
-		__this->___U3CcxU3E5__21 = L_72;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:164>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_73 = __this->___U3CcpuTensorU3E5__6;
-		int32_t L_74 = __this->___U3CelementsU3E5__7;
-		int32_t L_75 = __this->___U3CiU3E5__16;
-		NullCheck(L_73);
-		float L_76;
-		L_76 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_73, ((int32_t)il2cpp_codegen_add(L_74, L_75)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
-		__this->___U3CcyU3E5__22 = L_76;
+		__this->___U3CclassesU3E5__8 = ((int32_t)80);
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:165>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_77 = __this->___U3CcpuTensorU3E5__6;
-		int32_t L_78 = __this->___U3CelementsU3E5__7;
-		int32_t L_79 = __this->___U3CiU3E5__16;
-		NullCheck(L_77);
-		float L_80;
-		L_80 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_77, ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(2, L_78)), L_79)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
-		__this->___U3CwU3E5__23 = L_80;
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_56 = (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918*)il2cpp_codegen_object_new(List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918_il2cpp_TypeInfo_var);
+		List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802(L_56, List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802_RuntimeMethod_var);
+		__this->___U3CfilteredCoordsU3E5__9 = L_56;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfilteredCoordsU3E5__9), (void*)L_56);
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:166>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_81 = __this->___U3CcpuTensorU3E5__6;
-		int32_t L_82 = __this->___U3CelementsU3E5__7;
-		int32_t L_83 = __this->___U3CiU3E5__16;
-		NullCheck(L_81);
-		float L_84;
-		L_84 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_81, ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(3, L_82)), L_83)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
-		__this->___U3ChU3E5__24 = L_84;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:169>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_85 = __this->___U3CfilteredCoordsU3E5__9;
-		float L_86 = __this->___U3CcxU3E5__21;
-		NullCheck(L_85);
-		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_85, L_86, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_57 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
+		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_57, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
+		__this->___U3CfilteredLabelsU3E5__10 = L_57;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfilteredLabelsU3E5__10), (void*)L_57);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:167>
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_58 = (List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918*)il2cpp_codegen_object_new(List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918_il2cpp_TypeInfo_var);
+		List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802(L_58, List_1__ctor_mC29D3D824786832A31096310B3B3016B8B42B802_RuntimeMethod_var);
+		__this->___U3CfilteredConfsU3E5__11 = L_58;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfilteredConfsU3E5__11), (void*)L_58);
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:170>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_87 = __this->___U3CfilteredCoordsU3E5__9;
-		float L_88 = __this->___U3CcyU3E5__22;
-		NullCheck(L_87);
-		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_87, L_88, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:171>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_89 = __this->___U3CfilteredCoordsU3E5__9;
-		float L_90 = __this->___U3CwU3E5__23;
-		NullCheck(L_89);
-		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_89, L_90, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
+		__this->___U3CiU3E5__16 = 0;
+		goto IL_048b;
+	}
+
+IL_0278:
+	{
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:172>
+		__this->___U3CmaxConfU3E5__17 = (0.0f);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:173>
+		__this->___U3CclassIdU3E5__18 = (-1);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:176>
+		__this->___U3CcU3E5__19 = 0;
+		goto IL_02fd;
+	}
+
+IL_0294:
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:179>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_59 = __this->___U3CcpuTensorU3E5__6;
+		int32_t L_60 = __this->___U3CcU3E5__19;
+		int32_t L_61 = __this->___U3CelementsU3E5__7;
+		int32_t L_62 = __this->___U3CiU3E5__16;
+		NullCheck(L_59);
+		float L_63;
+		L_63 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_59, ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_add(L_60, 4)), L_61)), L_62)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
+		__this->___U3CconfU3E5__20 = L_63;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:180>
+		float L_64 = __this->___U3CconfU3E5__20;
+		float L_65 = __this->___U3CmaxConfU3E5__17;
+		V_8 = (bool)((((float)L_64) > ((float)L_65))? 1 : 0);
+		bool L_66 = V_8;
+		if (!L_66)
+		{
+			goto IL_02ea;
+		}
+	}
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:182>
+		float L_67 = __this->___U3CconfU3E5__20;
+		__this->___U3CmaxConfU3E5__17 = L_67;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:183>
+		int32_t L_68 = __this->___U3CcU3E5__19;
+		__this->___U3CclassIdU3E5__18 = L_68;
+	}
+
+IL_02ea:
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:176>
+		int32_t L_69 = __this->___U3CcU3E5__19;
+		V_5 = L_69;
+		int32_t L_70 = V_5;
+		__this->___U3CcU3E5__19 = ((int32_t)il2cpp_codegen_add(L_70, 1));
+	}
+
+IL_02fd:
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:176>
+		int32_t L_71 = __this->___U3CcU3E5__19;
+		int32_t L_72 = __this->___U3CclassesU3E5__8;
+		V_9 = (bool)((((int32_t)L_71) < ((int32_t)L_72))? 1 : 0);
+		bool L_73 = V_9;
+		if (L_73)
+		{
+			goto IL_0294;
+		}
+	}
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:187>
+		float L_74 = __this->___U3CmaxConfU3E5__17;
+		V_10 = (bool)((((float)L_74) > ((float)(0.300000012f)))? 1 : 0);
+		bool L_75 = V_10;
+		if (!L_75)
+		{
+			goto IL_0478;
+		}
+	}
+	{
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:191>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_76 = __this->___U3CcpuTensorU3E5__6;
+		int32_t L_77 = __this->___U3CiU3E5__16;
+		NullCheck(L_76);
+		float L_78;
+		L_78 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_76, L_77, Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
+		__this->___U3CcxU3E5__21 = L_78;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:192>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_79 = __this->___U3CcpuTensorU3E5__6;
+		int32_t L_80 = __this->___U3CelementsU3E5__7;
+		int32_t L_81 = __this->___U3CiU3E5__16;
+		NullCheck(L_79);
+		float L_82;
+		L_82 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_79, ((int32_t)il2cpp_codegen_add(L_80, L_81)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
+		__this->___U3CcyU3E5__22 = L_82;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:193>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_83 = __this->___U3CcpuTensorU3E5__6;
+		int32_t L_84 = __this->___U3CelementsU3E5__7;
+		int32_t L_85 = __this->___U3CiU3E5__16;
+		NullCheck(L_83);
+		float L_86;
+		L_86 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_83, ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(2, L_84)), L_85)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
+		__this->___U3CwU3E5__23 = L_86;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:194>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_87 = __this->___U3CcpuTensorU3E5__6;
+		int32_t L_88 = __this->___U3CelementsU3E5__7;
+		int32_t L_89 = __this->___U3CiU3E5__16;
+		NullCheck(L_87);
+		float L_90;
+		L_90 = Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D(L_87, ((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(3, L_88)), L_89)), Tensor_1_get_Item_m700936CC86513CDD2304FE46E9FF8DE31BC1E68D_RuntimeMethod_var);
+		__this->___U3ChU3E5__24 = L_90;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:197>
 		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_91 = __this->___U3CfilteredCoordsU3E5__9;
-		float L_92 = __this->___U3ChU3E5__24;
+		float L_92 = __this->___U3CcxU3E5__21;
 		NullCheck(L_91);
 		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_91, L_92, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:174>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_93 = __this->___U3CfilteredLabelsU3E5__10;
-		int32_t L_94 = __this->___U3CclassIdU3E5__18;
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:198>
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_93 = __this->___U3CfilteredCoordsU3E5__9;
+		float L_94 = __this->___U3CcyU3E5__22;
 		NullCheck(L_93);
-		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_93, L_94, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:175>
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_95 = __this->___U3CfilteredConfsU3E5__11;
-		float L_96 = __this->___U3CmaxConfU3E5__17;
+		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_93, L_94, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:199>
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_95 = __this->___U3CfilteredCoordsU3E5__9;
+		float L_96 = __this->___U3CwU3E5__23;
 		NullCheck(L_95);
 		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_95, L_96, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:177>
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_97 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_98 = L_97;
-		int32_t L_99 = __this->___U3CclassIdU3E5__18;
-		int32_t L_100 = L_99;
-		RuntimeObject* L_101 = Box(YOLOv9Labels_tD68F96ECBA1E25E9FD690B2AA52EBD1F091BBC68_il2cpp_TypeInfo_var, &L_100);
-		NullCheck(L_98);
-		ArrayElementTypeCheck (L_98, L_101);
-		(L_98)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_101);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_102 = L_98;
-		float L_103 = __this->___U3CmaxConfU3E5__17;
-		float L_104 = ((float)il2cpp_codegen_multiply(L_103, (100.0f)));
-		RuntimeObject* L_105 = Box(il2cpp_defaults.single_class, &L_104);
-		NullCheck(L_102);
-		ArrayElementTypeCheck (L_102, L_105);
-		(L_102)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_105);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_106 = L_102;
-		float L_107 = __this->___U3CcxU3E5__21;
-		float L_108 = __this->___U3CwU3E5__23;
-		float L_109 = ((float)il2cpp_codegen_subtract(L_107, ((float)(L_108/(2.0f)))));
-		RuntimeObject* L_110 = Box(il2cpp_defaults.single_class, &L_109);
-		NullCheck(L_106);
-		ArrayElementTypeCheck (L_106, L_110);
-		(L_106)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_110);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_111 = L_106;
-		float L_112 = __this->___U3CcyU3E5__22;
-		float L_113 = __this->___U3ChU3E5__24;
-		float L_114 = ((float)il2cpp_codegen_subtract(L_112, ((float)(L_113/(2.0f)))));
-		RuntimeObject* L_115 = Box(il2cpp_defaults.single_class, &L_114);
-		NullCheck(L_111);
-		ArrayElementTypeCheck (L_111, L_115);
-		(L_111)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_115);
-		String_t* L_116;
-		L_116 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral12A8C46015EAA47F911CF6BE2B193EDFBE1FAF89, L_111, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:200>
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_97 = __this->___U3CfilteredCoordsU3E5__9;
+		float L_98 = __this->___U3ChU3E5__24;
+		NullCheck(L_97);
+		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_97, L_98, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:202>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_99 = __this->___U3CfilteredLabelsU3E5__10;
+		int32_t L_100 = __this->___U3CclassIdU3E5__18;
+		NullCheck(L_99);
+		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_99, L_100, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:203>
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_101 = __this->___U3CfilteredConfsU3E5__11;
+		float L_102 = __this->___U3CmaxConfU3E5__17;
+		NullCheck(L_101);
+		List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_inline(L_101, L_102, List_1_Add_m2F86E252D086E288E02FA1C830B7E86C0A431E51_RuntimeMethod_var);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:205>
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_103 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_104 = L_103;
+		int32_t L_105 = __this->___U3CclassIdU3E5__18;
+		int32_t L_106 = L_105;
+		RuntimeObject* L_107 = Box(YOLOv9Labels_tD68F96ECBA1E25E9FD690B2AA52EBD1F091BBC68_il2cpp_TypeInfo_var, &L_106);
+		NullCheck(L_104);
+		ArrayElementTypeCheck (L_104, L_107);
+		(L_104)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_107);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_108 = L_104;
+		float L_109 = __this->___U3CmaxConfU3E5__17;
+		float L_110 = ((float)il2cpp_codegen_multiply(L_109, (100.0f)));
+		RuntimeObject* L_111 = Box(il2cpp_defaults.single_class, &L_110);
+		NullCheck(L_108);
+		ArrayElementTypeCheck (L_108, L_111);
+		(L_108)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_111);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_112 = L_108;
+		float L_113 = __this->___U3CcxU3E5__21;
+		float L_114 = __this->___U3CwU3E5__23;
+		float L_115 = ((float)il2cpp_codegen_subtract(L_113, ((float)(L_114/(2.0f)))));
+		RuntimeObject* L_116 = Box(il2cpp_defaults.single_class, &L_115);
+		NullCheck(L_112);
+		ArrayElementTypeCheck (L_112, L_116);
+		(L_112)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_116);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_117 = L_112;
+		float L_118 = __this->___U3CcyU3E5__22;
+		float L_119 = __this->___U3ChU3E5__24;
+		float L_120 = ((float)il2cpp_codegen_subtract(L_118, ((float)(L_119/(2.0f)))));
+		RuntimeObject* L_121 = Box(il2cpp_defaults.single_class, &L_120);
+		NullCheck(L_117);
+		ArrayElementTypeCheck (L_117, L_121);
+		(L_117)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_121);
+		String_t* L_122;
+		L_122 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral12A8C46015EAA47F911CF6BE2B193EDFBE1FAF89, L_117, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_116, NULL);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_122, NULL);
 	}
 
-IL_043f:
+IL_0478:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:142>
-		int32_t L_117 = __this->___U3CiU3E5__16;
-		V_4 = L_117;
-		int32_t L_118 = V_4;
-		__this->___U3CiU3E5__16 = ((int32_t)il2cpp_codegen_add(L_118, 1));
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:170>
+		int32_t L_123 = __this->___U3CiU3E5__16;
+		V_5 = L_123;
+		int32_t L_124 = V_5;
+		__this->___U3CiU3E5__16 = ((int32_t)il2cpp_codegen_add(L_124, 1));
 	}
 
-IL_0452:
+IL_048b:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:142>
-		int32_t L_119 = __this->___U3CiU3E5__16;
-		int32_t L_120 = __this->___U3CelementsU3E5__7;
-		V_10 = (bool)((((int32_t)L_119) < ((int32_t)L_120))? 1 : 0);
-		bool L_121 = V_10;
-		if (L_121)
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:170>
+		int32_t L_125 = __this->___U3CiU3E5__16;
+		int32_t L_126 = __this->___U3CelementsU3E5__7;
+		V_11 = (bool)((((int32_t)L_125) < ((int32_t)L_126))? 1 : 0);
+		bool L_127 = V_11;
+		if (L_127)
 		{
-			goto IL_023f;
+			goto IL_0278;
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:180>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_122 = __this->___U3CfilteredLabelsU3E5__10;
-		NullCheck(L_122);
-		int32_t L_123;
-		L_123 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_122, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
-		int32_t L_124 = L_123;
-		RuntimeObject* L_125 = Box(il2cpp_defaults.int32_class, &L_124);
-		String_t* L_126;
-		L_126 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral625D74B6955F317421D0E72173BED121688D9646, L_125, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:208>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_128 = __this->___U3CfilteredLabelsU3E5__10;
+		NullCheck(L_128);
+		int32_t L_129;
+		L_129 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_128, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
+		int32_t L_130 = L_129;
+		RuntimeObject* L_131 = Box(il2cpp_defaults.int32_class, &L_130);
+		String_t* L_132;
+		L_132 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral625D74B6955F317421D0E72173BED121688D9646, L_131, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_126, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:183>
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:184>
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_127 = __this->___U3CfilteredLabelsU3E5__10;
-		NullCheck(L_127);
-		int32_t L_128;
-		L_128 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_127, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
-		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_129;
-		memset((&L_129), 0, sizeof(L_129));
-		TensorShape__ctor_m45385FF64A28FAFB0F1CCCE96CBEDD5FCEB65F57((&L_129), L_128, 4, NULL);
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_130 = __this->___U3CfilteredCoordsU3E5__9;
-		NullCheck(L_130);
-		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_131;
-		L_131 = List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658(L_130, List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658_RuntimeMethod_var);
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_132 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)il2cpp_codegen_object_new(Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
-		Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03(L_132, L_129, L_131, 0, Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03_RuntimeMethod_var);
-		__this->___U3CfinalCoordsU3E5__12 = L_132;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfinalCoordsU3E5__12), (void*)L_132);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:185>
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:186>
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_132, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:211>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:212>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_133 = __this->___U3CfilteredLabelsU3E5__10;
 		NullCheck(L_133);
 		int32_t L_134;
 		L_134 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_133, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
 		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_135;
 		memset((&L_135), 0, sizeof(L_135));
-		TensorShape__ctor_m39149594474A116B4435AE2AFA023846C0E30621((&L_135), L_134, NULL);
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_136 = __this->___U3CfilteredLabelsU3E5__10;
+		TensorShape__ctor_m45385FF64A28FAFB0F1CCCE96CBEDD5FCEB65F57((&L_135), L_134, 4, NULL);
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_136 = __this->___U3CfilteredCoordsU3E5__9;
 		NullCheck(L_136);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_137;
-		L_137 = List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA(L_136, List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var);
-		Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* L_138 = (Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379*)il2cpp_codegen_object_new(Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379_il2cpp_TypeInfo_var);
-		Tensor_1__ctor_mD6D1CDD15C1163DDE3EB938CB12EBE3898E28003(L_138, L_135, L_137, 0, Tensor_1__ctor_mD6D1CDD15C1163DDE3EB938CB12EBE3898E28003_RuntimeMethod_var);
-		__this->___U3CfinalLabelsU3E5__13 = L_138;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfinalLabelsU3E5__13), (void*)L_138);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:187>
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:188>
+		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_137;
+		L_137 = List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658(L_136, List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658_RuntimeMethod_var);
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_138 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)il2cpp_codegen_object_new(Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
+		Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03(L_138, L_135, L_137, 0, Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03_RuntimeMethod_var);
+		__this->___U3CfinalCoordsU3E5__12 = L_138;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfinalCoordsU3E5__12), (void*)L_138);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:213>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:214>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_139 = __this->___U3CfilteredLabelsU3E5__10;
 		NullCheck(L_139);
 		int32_t L_140;
@@ -4113,89 +4234,106 @@ IL_0452:
 		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_141;
 		memset((&L_141), 0, sizeof(L_141));
 		TensorShape__ctor_m39149594474A116B4435AE2AFA023846C0E30621((&L_141), L_140, NULL);
-		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_142 = __this->___U3CfilteredConfsU3E5__11;
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_142 = __this->___U3CfilteredLabelsU3E5__10;
 		NullCheck(L_142);
-		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_143;
-		L_143 = List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658(L_142, List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658_RuntimeMethod_var);
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_144 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)il2cpp_codegen_object_new(Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
-		Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03(L_144, L_141, L_143, 0, Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03_RuntimeMethod_var);
-		__this->___U3CfinalConfsU3E5__14 = L_144;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfinalConfsU3E5__14), (void*)L_144);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:191>
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_145 = __this->___U3CU3E4__this;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_143;
+		L_143 = List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA(L_142, List_1_ToArray_m65479FB75A5FE539EA1A0D6681172717D23CEAAA_RuntimeMethod_var);
+		Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* L_144 = (Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379*)il2cpp_codegen_object_new(Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379_il2cpp_TypeInfo_var);
+		Tensor_1__ctor_mD6D1CDD15C1163DDE3EB938CB12EBE3898E28003(L_144, L_141, L_143, 0, Tensor_1__ctor_mD6D1CDD15C1163DDE3EB938CB12EBE3898E28003_RuntimeMethod_var);
+		__this->___U3CfinalLabelsU3E5__13 = L_144;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfinalLabelsU3E5__13), (void*)L_144);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:215>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:216>
+		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_145 = __this->___U3CfilteredLabelsU3E5__10;
 		NullCheck(L_145);
-		ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* L_146 = L_145->____objectRenderer;
+		int32_t L_146;
+		L_146 = List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_inline(L_145, List_1_get_Count_mF590592E32D421DE2C6E2F0D5C2F62FB14CCEFDF_RuntimeMethod_var);
+		TensorShape_t262F74805ED00A4B71BBAE6C0766049D944ACE34 L_147;
+		memset((&L_147), 0, sizeof(L_147));
+		TensorShape__ctor_m39149594474A116B4435AE2AFA023846C0E30621((&L_147), L_146, NULL);
+		List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918* L_148 = __this->___U3CfilteredConfsU3E5__11;
+		NullCheck(L_148);
+		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_149;
+		L_149 = List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658(L_148, List_1_ToArray_m7A70CC060DF87F0CCC73317BC6DE68C5D970C658_RuntimeMethod_var);
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_150 = (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4*)il2cpp_codegen_object_new(Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4_il2cpp_TypeInfo_var);
+		Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03(L_150, L_147, L_149, 0, Tensor_1__ctor_m3939998527BC32D9233CBDF54948038625888C03_RuntimeMethod_var);
+		__this->___U3CfinalConfsU3E5__14 = L_150;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CfinalConfsU3E5__14), (void*)L_150);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:219>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_151 = __this->___U3CU3E4__this;
+		NullCheck(L_151);
+		ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* L_152 = L_151->____objectRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_147;
-		L_147 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_146, NULL);
-		V_11 = L_147;
-		bool L_148 = V_11;
-		if (!L_148)
+		bool L_153;
+		L_153 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_152, NULL);
+		V_12 = L_153;
+		bool L_154 = V_12;
+		if (!L_154)
 		{
-			goto IL_053a;
+			goto IL_0573;
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:193>
-		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_149 = __this->___U3CU3E4__this;
-		NullCheck(L_149);
-		ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* L_150 = L_149->____objectRenderer;
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_151 = __this->___U3CfinalCoordsU3E5__12;
-		Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* L_152 = __this->___U3CfinalLabelsU3E5__13;
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_153 = __this->___U3CfinalConfsU3E5__14;
-		NullCheck(L_150);
-		ObjectRenderer_RenderDetections_m9B7C9125346B5CCC3516125243C95BE58370099E(L_150, L_151, L_152, L_153, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:221>
+		ObjectDetector_tFB353B01D51F3E496A54E862DA5ED92D26B10FC6* L_155 = __this->___U3CU3E4__this;
+		NullCheck(L_155);
+		ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* L_156 = L_155->____objectRenderer;
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_157 = __this->___U3CfinalCoordsU3E5__12;
+		Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* L_158 = __this->___U3CfinalLabelsU3E5__13;
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_159 = __this->___U3CfinalConfsU3E5__14;
+		NullCheck(L_156);
+		ObjectRenderer_RenderDetections_m9B7C9125346B5CCC3516125243C95BE58370099E(L_156, L_157, L_158, L_159, NULL);
 	}
 
-IL_053a:
+IL_0573:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:197>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_154 = __this->___U3CinputTensorU3E5__3;
-		NullCheck(L_154);
-		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_154, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:198>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_155 = __this->___U3CoutputTensorU3E5__5;
-		NullCheck(L_155);
-		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_155, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:199>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_156 = __this->___U3CcpuTensorU3E5__6;
-		NullCheck(L_156);
-		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_156, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:200>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_157 = __this->___U3CfinalCoordsU3E5__12;
-		NullCheck(L_157);
-		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_157, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:201>
-		Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* L_158 = __this->___U3CfinalLabelsU3E5__13;
-		NullCheck(L_158);
-		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_158, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:202>
-		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_159 = __this->___U3CfinalConfsU3E5__14;
-		NullCheck(L_159);
-		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_159, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:203>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:225>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_160 = __this->___U3CinputTensorU3E5__3;
+		NullCheck(L_160);
+		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_160, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:226>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_161 = __this->___U3CoutputTensorU3E5__5;
+		NullCheck(L_161);
+		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_161, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:227>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_162 = __this->___U3CcpuTensorU3E5__6;
+		NullCheck(L_162);
+		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_162, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:228>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_163 = __this->___U3CfinalCoordsU3E5__12;
+		NullCheck(L_163);
+		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_163, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:229>
+		Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* L_164 = __this->___U3CfinalLabelsU3E5__13;
+		NullCheck(L_164);
+		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_164, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:230>
+		Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* L_165 = __this->___U3CfinalConfsU3E5__14;
+		NullCheck(L_165);
+		Tensor_Dispose_mC721F698FDA8725FDF7895BB4A623F484136A74D(L_165, NULL);
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectDetector.cs:231>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 130970
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPerformInferenceU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFCCAE85BEC55B3170CB6B6E9C737F3BD1E2DF1E7 (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, const RuntimeMethod* method) 
+// Method Definition Index: 130823
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPerformInferenceU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAACE25AE0F54BA0632483CCE970AA27D2E81BA47 (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
 	}
 }
-// Method Definition Index: 130971
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__16_System_Collections_IEnumerator_Reset_m2508A739A233867F1269351FA4DD17FF9090C4BD (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, const RuntimeMethod* method) 
+// Method Definition Index: 130824
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPerformInferenceU3Ed__18_System_Collections_IEnumerator_Reset_m6D51D6FB67A472D8E4DC76F7CB3208716CB5BB85 (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CPerformInferenceU3Ed__16_System_Collections_IEnumerator_Reset_m2508A739A233867F1269351FA4DD17FF9090C4BD_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CPerformInferenceU3Ed__18_System_Collections_IEnumerator_Reset_m6D51D6FB67A472D8E4DC76F7CB3208716CB5BB85_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 130972
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPerformInferenceU3Ed__16_System_Collections_IEnumerator_get_Current_m3FA7C3464BB1D52D2DFD009FFCFCCE79C238608C (U3CPerformInferenceU3Ed__16_t96189203A08988A915A10A6430E2FFEB0AE0C331* __this, const RuntimeMethod* method) 
+// Method Definition Index: 130825
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPerformInferenceU3Ed__18_System_Collections_IEnumerator_get_Current_mF0C86543D94018A7FD4E490BC134F0C5A483395B (U3CPerformInferenceU3Ed__18_t59613D73CD60D717ADBFFF5CEADC33D0FEA841BC* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -4210,7 +4348,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPerformInferenceU3Ed__16_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130973
+// Method Definition Index: 130826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectRenderer_Awake_m0AD60D25E066F54E2A8709068C6226F7EA726C2B (ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4344,7 +4482,7 @@ IL_0068:
 		return;
 	}
 }
-// Method Definition Index: 130974
+// Method Definition Index: 130827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectRenderer_RenderDetections_m9B7C9125346B5CCC3516125243C95BE58370099E (ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* __this, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* ___0_coords, Tensor_1_t65B864E8272AE642C573473CC6901460AD6A3379* ___1_labelIDs, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* ___2_confidences, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5187,7 +5325,7 @@ IL_04ec:
 		return;
 	}
 }
-// Method Definition Index: 130975
+// Method Definition Index: 130828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectRenderer_ClearPreviousMarkers_m1E6244CCA3D4CAF44844A3E69087C134B4DA9539 (ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5320,7 +5458,7 @@ IL_0061:
 		return;
 	}
 }
-// Method Definition Index: 130976
+// Method Definition Index: 130829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ObjectRenderer_DetectionToViewport_mF3E57CEF65FD2FB2A480E2FF5146FB9DD6380184 (ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* __this, float ___0_normalizedX, float ___1_normalizedY, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -5347,7 +5485,7 @@ IL_001b:
 		return L_5;
 	}
 }
-// Method Definition Index: 130977
+// Method Definition Index: 130830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ObjectRenderer_GetConfidence_m1C5B6247C18D58EC3774691280964A04F54B5D21 (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* ___0_coords, Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* ___1_confidenceTensor, int32_t ___2_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5510,7 +5648,7 @@ IL_009c:
 		return L_25;
 	}
 }
-// Method Definition Index: 130978
+// Method Definition Index: 130831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ObjectRenderer_SampleConfidence_m23C19B4326CB93411F8D2D5F195DA1197016216F (Tensor_1_tF7D2A544E958ACBBDF69FBFE22DB56B8D49776E4* ___0_tensor, int32_t ___1_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5629,7 +5767,7 @@ IL_0054:
 		return L_13;
 	}
 }
-// Method Definition Index: 130979
+// Method Definition Index: 130832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ObjectRenderer_SampleSurfaceNormal_mC42B7D65C0F6E0D641984FD236C10B4C240E4C14 (ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_position, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_fallbackNormal, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5817,7 +5955,7 @@ IL_00f6:
 		return L_41;
 	}
 }
-// Method Definition Index: 130980
+// Method Definition Index: 130833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectRenderer__ctor_m4E865527DB8C6C774FCF194DD3C7CBB05719645F (ObjectRenderer_t86049AB207338BEF934D66D63D7641F022B77F32* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5849,7 +5987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectRenderer__ctor_m4E865527DB8C6C774F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130981
+// Method Definition Index: 130834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass10_0__ctor_m6BA5FC57E9A321CEDDF43E5CCB242AF0D6AF2512 (U3CU3Ec__DisplayClass10_0_tB0A8D8609AB1702396DD00D36D257A2B77FA9D86* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5857,7 +5995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass10_0__ctor_m6BA5FC5
 		return;
 	}
 }
-// Method Definition Index: 130982
+// Method Definition Index: 130835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass10_0_U3CRenderDetectionsU3Eb__0_m34D4461D437EF031D354F2FBC39A6C68026C0E5A (U3CU3Ec__DisplayClass10_0_tB0A8D8609AB1702396DD00D36D257A2B77FA9D86* __this, int32_t ___0_label, const RuntimeMethod* method) 
 {
 	{
@@ -5875,7 +6013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass10_0_U3CRenderDetec
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130983
+// Method Definition Index: 130836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ObjectStamper_get_HasSpawned_m10229C714A20FAFA889141F610F2AF769807381B (ObjectStamper_tA10C756B7AAA82D1CB1FF4F65A13901CC962AFE3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5884,7 +6022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ObjectStamper_get_HasSpawned_m10229C714A
 		return L_0;
 	}
 }
-// Method Definition Index: 130984
+// Method Definition Index: 130837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectStamper_PlacePermanentCharacter_mF0487548987D071FBEA5D8F1435509D361BEA802 (ObjectStamper_tA10C756B7AAA82D1CB1FF4F65A13901CC962AFE3* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_chairPos, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rotation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6058,7 +6196,7 @@ IL_0114:
 		return;
 	}
 }
-// Method Definition Index: 130985
+// Method Definition Index: 130838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectStamper__ctor_m2576CCB7E17594C15286E7CA65E6AF2A46E4445E (ObjectStamper_tA10C756B7AAA82D1CB1FF4F65A13901CC962AFE3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6078,7 +6216,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectStamper__ctor_m2576CCB7E17594C1528
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130986
+// Method Definition Index: 130839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PassthroughHandler_Start_m792A73DA1E43797C2B7789CAB52CCB4760D26002 (PassthroughHandler_t1E0E66DD44FC422199953D4C358D8330D8138BC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6095,7 +6233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PassthroughHandler_Start_m792A73DA1E4379
 		return;
 	}
 }
-// Method Definition Index: 130987
+// Method Definition Index: 130840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PassthroughHandler__ctor_m696268AC34EA3980C42AD3BBCC396B042495A801 (PassthroughHandler_t1E0E66DD44FC422199953D4C358D8330D8138BC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6119,7 +6257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PassthroughHandler__ctor_m696268AC34EA39
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130988
+// Method Definition Index: 130841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6135,7 +6273,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A90
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130989
+// Method Definition Index: 130842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6151,7 +6289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 130990
+// Method Definition Index: 130843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6194,7 +6332,7 @@ IL_005d:
 		return L_7;
 	}
 }
-// Method Definition Index: 130991
+// Method Definition Index: 130844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6299,13 +6437,28 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 130983
+// Method Definition Index: 130836
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ObjectStamper_get_HasSpawned_m10229C714A20FAFA889141F610F2AF769807381B_inline (ObjectStamper_tA10C756B7AAA82D1CB1FF4F65A13901CC962AFE3* __this, const RuntimeMethod* method) 
 {
 	{
 		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/ImageProcessing/ObjectStamper.cs:10>
 		bool L_0 = __this->____hasSpawnedGlobal;
 		return L_0;
+	}
+}
+// Method Definition Index: 78494
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___0_x;
+		__this->___m_XMin = L_0;
+		float L_1 = ___1_y;
+		__this->___m_YMin = L_1;
+		float L_2 = ___2_width;
+		__this->___m_Width = L_2;
+		float L_3 = ___3_height;
+		__this->___m_Height = L_3;
+		return;
 	}
 }
 // Method Definition Index: 111623

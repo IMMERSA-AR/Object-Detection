@@ -7,113 +7,118 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Canvas_shoes_Pbr
-    second: {fileID: 2100000, guid: 3246f6eef9cf0314c841e5b2bb6c72c7, type: 2}
+      name: CC_Base_Tear_Ducts
+    second: {fileID: 2100000, guid: 006757f72a7c83f46872a82865c1f86a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hair_Transparency_Pbr
-    second: {fileID: 2100000, guid: 0cf8e0ffc6bd86049b9b817bfc1d5002, type: 2}
+      name: Canvas_shoes
+    second: {fileID: 2100000, guid: 3890f4ed9d578ce4eb833a4c9e516414, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Layered_sweater_Pbr
-    second: {fileID: 2100000, guid: f29dde9af38f68547a2fbcaad18bbdd8, type: 2}
+      name: Hair_Transparency
+    second: {fileID: 2100000, guid: 9a22b15a592223b458e3fb05d69fd26e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Scalp_Transparency_Pbr
-    second: {fileID: 2100000, guid: 884abb4c84a998945bca375ecc888318, type: 2}
+      name: Layered_sweater
+    second: {fileID: 2100000, guid: 11add338278962a42acb6c9e425be204, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slim_fit_pants_Pbr
-    second: {fileID: 2100000, guid: fc7cc1d0ca874dd4cbcc747e4e867047, type: 2}
+      name: Scalp_Transparency
+    second: {fileID: 2100000, guid: 9b1dac59f0e07e74b8547c818c690caa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Cornea_L_Pbr
-    second: {fileID: 2100000, guid: 771daf2db17e50045a15ed8d5073d7cd, type: 2}
+      name: Slim_fit_pants
+    second: {fileID: 2100000, guid: 18878e17391340941ac50e0bd4074952, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Cornea_R_Pbr
-    second: {fileID: 2100000, guid: cf58203d622d5d941ba0e24bd2b82d53, type: 2}
+      name: Std_Cornea_L
+    second: {fileID: 2100000, guid: ed30dcdcff6ef9648b62eb583451dae2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Eye_L_Pbr
-    second: {fileID: 2100000, guid: f4f5420045c14b24386a1650483fda01, type: 2}
+      name: Std_Cornea_R
+    second: {fileID: 2100000, guid: 87ef6ab8c253ddb42a39aa11a939ed03, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Eye_Occlusion_L_Pbr
-    second: {fileID: 2100000, guid: 0bf88f7b971cf8446911f5793a10290a, type: 2}
+      name: Std_Eye_L
+    second: {fileID: 2100000, guid: 4abd8f7b74d6cdc45bca9e2809df3727, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Eye_Occlusion_R_Pbr
-    second: {fileID: 2100000, guid: 60965523900694d43aada22a4b05c01a, type: 2}
+      name: Std_Eye_Occlusion_L
+    second: {fileID: 2100000, guid: 4948cde7b1475fd448baab6e6d7ab888, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Eye_R_Pbr
-    second: {fileID: 2100000, guid: b28b2cc379a4a1045b24e42a36a393dc, type: 2}
+      name: Std_Eye_Occlusion_R
+    second: {fileID: 2100000, guid: e70afc55aaeacab4b82bb34410bde4fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Eyelash_Pbr
-    second: {fileID: 2100000, guid: d44ac23230d0fdb4e84fdcca3fc45d9f, type: 2}
+      name: Std_Eye_R
+    second: {fileID: 2100000, guid: d3bef525e4117324983b840ba70ac2e4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Lower_Teeth_Pbr
-    second: {fileID: 2100000, guid: 34722a8d08aec7849a3c40787a69bd6e, type: 2}
+      name: Std_Eyelash
+    second: {fileID: 2100000, guid: 884bf64664ed4bb4a8861670141fb4f5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Nails_Pbr
-    second: {fileID: 2100000, guid: b0a458aca68ffab44a163b3d388e6106, type: 2}
+      name: Std_Lower_Teeth
+    second: {fileID: 2100000, guid: a774e3631ad979b448ef338d1c953a2d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Skin_Arm_Pbr
-    second: {fileID: 2100000, guid: 31e8e506d45b0534a94916173574f03e, type: 2}
+      name: Std_Nails
+    second: {fileID: 2100000, guid: fe846a48aa82e9a43b825084fc542e78, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Skin_Body_Pbr
-    second: {fileID: 2100000, guid: d92d57ab499f6e848b966144b8f9309a, type: 2}
+      name: Std_Skin_Arm
+    second: {fileID: 2100000, guid: 511d242948d47cf4f850e642e66c9863, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Skin_Head_Pbr
-    second: {fileID: 2100000, guid: 4fac8afa9b73cff4aa812f78885580e0, type: 2}
+      name: Std_Skin_Body
+    second: {fileID: 2100000, guid: 7c75f70893e24734fb5f69d5eb315b23, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Skin_Leg_Pbr
-    second: {fileID: 2100000, guid: 1aa8962614019cd47b275ee77d1a6021, type: 2}
+      name: Std_Skin_Head
+    second: {fileID: 2100000, guid: c4fc5f0271b350d4a83222427bbc0593, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Tearline_L_Pbr
-    second: {fileID: 2100000, guid: 0e759a0777e3b944a9def24de6036f2e, type: 2}
+      name: Std_Skin_Leg
+    second: {fileID: 2100000, guid: b55913cac4545b040b29429b195ac7a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Tearline_R_Pbr
-    second: {fileID: 2100000, guid: 92c9a99f56eb876439db5b318b637ce7, type: 2}
+      name: Std_Tearline_L
+    second: {fileID: 2100000, guid: 9add5a2e2aa03774e8dc15290a6166b8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Tongue_Pbr
-    second: {fileID: 2100000, guid: 0d70ee61fa300d343927189ca588b054, type: 2}
+      name: Std_Tearline_R
+    second: {fileID: 2100000, guid: 04dce029d7e20d249b1a0d58a8f764c1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Std_Upper_Teeth_Pbr
-    second: {fileID: 2100000, guid: e129577c945728e4daecd3c1e2a06519, type: 2}
+      name: Std_Tongue
+    second: {fileID: 2100000, guid: b21c12636f58dc346b36e0e53427d38b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Std_Upper_Teeth
+    second: {fileID: 2100000, guid: b32511f3c301605479ef1f70761c9bfa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -127,7 +132,9 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Calibration' has import animation warnings
+      that might lower retargeting quality:\n\t'CC_Base_NeckTwist02' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -145,7 +152,7 @@ ModelImporter:
       takeName: 0_T-Pose
       internalID: -7881739814215078984
       firstFrame: 0
-      lastFrame: 2
+      lastFrame: 1037
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -170,11 +177,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: 2026_4_10_17_28_45
-      takeName: 2026_4_10_17_28_45
-      internalID: -369050565821828224
+      name: Calibration
+      takeName: Calibration
+      internalID: 3294320872195724860
       firstFrame: 0
-      lastFrame: 2
+      lastFrame: 1037
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -1217,27 +1224,12 @@ ModelImporter:
       position: {x: 0.00000014305114, y: 0.019999932, z: 0.0000007629394}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1.0000001}
-    - name: CC_Base_Eye
-      parentName: 
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
     - name: CC_Base_EyeOcclusion
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: CC_Base_TearLine
-      parentName: 
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: CC_Base_Teeth
-      parentName: 
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: CC_Base_Tongue
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
