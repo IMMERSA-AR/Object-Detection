@@ -13,7 +13,7 @@ public class ObjectRenderer : MonoBehaviour
 
     [Header("Label Filtering")]
     [SerializeField] private YOLOv9Labels[] labelFilters;
-    [SerializeField, Range(0f, 1f)] private float minConfidence = 0.3f;
+    [SerializeField, Range(0f, 1f)] private float minConfidence = 0.5f;
 
     private Camera _mainCamera;
     private const float ModelInputSize = 640f;
@@ -48,10 +48,18 @@ public class ObjectRenderer : MonoBehaviour
         var numDetections = coords.shape[0];
         ClearPreviousMarkers();
 
+        // --- NEW: Variables to track the closest chair ---
+        Vector3 closestChairPos = Vector3.zero;
+        float minDistance = float.MaxValue; // Start at infinity
+        bool foundChairThisFrame = false;
+        int chairCountThisFrame = 0;
+
         var imageWidth = ModelInputSize;
         var imageHeight = ModelInputSize;
         var halfWidth = imageWidth * 0.5f;
         var halfHeight = imageHeight * 0.5f;
+
+
 
         for (var i = 0; i < numDetections; i++)
         {
@@ -119,15 +127,35 @@ public class ObjectRenderer : MonoBehaviour
 
             if (labelName.ToLower().Contains("chair"))
             {
-                ObjectStamper stamper = GetComponent<ObjectStamper>();
+                chairCountThisFrame++; // Increase the chair count by 1
 
-                // Only try to spawn if we found the stamper and Murad hasn't appeared yet
-                if (stamper != null && !stamper.HasSpawned)
+                // 1. FIRST: Check confidence (Move this up so we don't process "weak" chairs)
+                var chairConfidence = GetConfidence(coords, confidences, i);
+                if (chairConfidence < minConfidence) continue;
+
+                // 2. SECOND: Aspect Ratio Check
+                // A chair is usually tall or square. A table is wide.
+                float aspectRatio = detectedWidth / detectedHeight;
+
+                // If the width is 20% larger than the height (1.2), it's likely a table
+                if (aspectRatio > 1.2f)
                 {
-                    // IMPORTANT: We use the new method name 'PlacePermanentCharacter'
-                    // 'markerWorldPos' is the position calculated by your Raycast
-                    stamper.PlacePermanentCharacter(markerWorldPos, _mainCamera.transform.rotation);
+                    // Debug.Log($"[Chair Tracker] Ignored wide object. AR: {aspectRatio:F2}");
+                    continue;
                 }
+
+                // 3. THIRD: If it passed the tests, count it!
+                chairCountThisFrame++;
+
+                float distanceToChair = Vector3.Distance(_mainCamera.transform.position, markerWorldPos);
+
+                if (distanceToChair < minDistance)
+                {
+                    minDistance = distanceToChair;
+                    closestChairPos = markerWorldPos;
+                    foundChairThisFrame = true;
+                }
+
             }
             // string labelName = detectedLabel.ToString();
             // if (labelName.ToLower().Contains("chair"))
@@ -176,6 +204,73 @@ public class ObjectRenderer : MonoBehaviour
 
 
         }
+        if (foundChairThisFrame)
+        {
+            //closestChairPos.y = 0f;
+            Debug.Log($"[Chair Tracker Summary] Total chair detections: {chairCountThisFrame}. Closest is {minDistance:F2} meters away.");
+
+            ObjectStamper stamper = GetComponent<ObjectStamper>();
+
+            // Only try to spawn if we found the stamper and Murad hasn't appeared yet
+            if (stamper != null && !stamper.HasSpawned)
+            {
+                // --- NEW: SPAWN THE GOLD DOT ---
+                // We create a basic Unity sphere to mark the chosen spot
+                // GameObject goldDot = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                // goldDot.transform.position = closestChairPos;
+                // goldDot.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f); // 15cm big (slightly bigger than your green dots)
+
+                // // Give it a bright gold/yellow color so it stands out!
+                // goldDot.GetComponent<Renderer>().material.color = new Color(1.0f, 0.6f, 0.0f);
+
+                // Vector3 lookDirection = _mainCamera.transform.right;
+                // lookDirection.y = 0; // Keep him sitting perfectly straight
+                // Quaternion spawnRotation = Quaternion.identity;
+                // if (lookDirection != Vector3.zero)
+                // {
+                //     spawnRotation = Quaternion.LookRotation(lookDirection);
+                // }
+
+                // // Spawn him at the closest chair, facing right
+                // stamper.PlacePermanentCharacter(closestChairPos, spawnRotation);
+                // Make Murad look at the player
+                Vector3 directionToPlayer = _mainCamera.transform.position - closestChairPos;
+                directionToPlayer.y = 0; // Keep him standing perfectly straight
+
+                Quaternion lookAtPlayerRot = Quaternion.identity;
+                if (directionToPlayer != Vector3.zero)
+                {
+                    lookAtPlayerRot = Quaternion.LookRotation(directionToPlayer);
+                }
+
+                // Spawn him at the closest chair, facing the player
+                stamper.PlacePermanentCharacter(closestChairPos, lookAtPlayerRot);
+            }
+        }
+        // if (foundChairThisFrame)
+        // {
+        //     ObjectStamper stamper = GetComponent<ObjectStamper>();
+
+        //     // Only try to spawn if we found the stamper and Murad hasn't appeared yet
+        //     if (stamper != null && !stamper.HasSpawned)
+        //     {
+        //         // Make Murad look at the player
+        //         Vector3 directionToPlayer = _mainCamera.transform.position - closestChairPos;
+        //         directionToPlayer.y = 0; // Keep him standing perfectly straight
+
+        //         // Default rotation just in case
+        //         Quaternion lookAtPlayerRot = Quaternion.identity;
+
+        //         // Safety check: only look if the direction isn't zero!
+        //         if (directionToPlayer != Vector3.zero)
+        //         {
+        //             lookAtPlayerRot = Quaternion.LookRotation(directionToPlayer);
+        //         }
+
+        //         // Spawn him at the closest chair, facing the player
+        //         stamper.PlacePermanentCharacter(closestChairPos, lookAtPlayerRot);
+        //     }
+        // }
     }
 
     private void ClearPreviousMarkers()
