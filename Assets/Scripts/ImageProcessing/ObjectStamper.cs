@@ -3,8 +3,13 @@ using UnityEngine;
 public class ObjectStamper : MonoBehaviour
 {
     [Header("Settings")]
-    public GameObject characterPrefab; // Drag 'Murad' prefab here in Inspector
-    [SerializeField] private float sideOffset = 0.5f; // Murad stands 0.5m to the side
+    public GameObject characterPrefab;
+    [SerializeField] private float sideOffset = 0.5f;
+
+    // --- NEW: Add a slider to manually adjust his height ---
+    [Header("Adjustments")]
+    [Tooltip("Use negative numbers to move him down (e.g., -0.5)")]
+    [SerializeField] private float heightOffset = 0.0f;
 
     private bool _hasSpawnedGlobal = false;
     public bool HasSpawned => _hasSpawnedGlobal;
@@ -13,24 +18,25 @@ public class ObjectStamper : MonoBehaviour
     {
         if (_hasSpawnedGlobal) return;
 
-        // 1. Move him further out to ensure he doesn't hit the chair's collider
-        float widerOffset = 0.9f;
+        float distanceToUser = Vector3.Distance(Camera.main.transform.position, chairPos);
+        if (distanceToUser > 3.0f) return;
+
+        float widerOffset = 0.0f;
         Vector3 spawnPos = chairPos + (rotation * Vector3.right * widerOffset);
 
-        // 2. INCREASE RAYCAST HEIGHT
+        // 2. Optimized Raycast
         RaycastHit groundHit;
-        // Start the ray 2 meters ABOVE the chair to ensure it captures the floor properly
-        // We shoot down a long distance (10m) to be safe
+
+        // We shoot the ray slightly further away to avoid hitting the chair's collider
         if (Physics.Raycast(spawnPos + Vector3.up * 2.0f, Vector3.down, out groundHit, 10.0f))
         {
-            // Set height to exactly where the ray hit the ground
-            spawnPos.y = groundHit.point.y;
+            // Apply the offset to the raycast hit
+            spawnPos.y = groundHit.point.y + heightOffset;
         }
         else
         {
-            // If the Raycast fails to find anything, snap him to y = 0 
-            // In most Meta Quest Passthrough scenes, 0 is the floor level
-            spawnPos.y = 0f;
+            // Apply the offset to the default zero height
+            spawnPos.y = 0f + heightOffset;
         }
 
         // 3. Spawn
@@ -46,6 +52,14 @@ public class ObjectStamper : MonoBehaviour
         }
 
         _hasSpawnedGlobal = true;
+
+        ObjectDetector detector = FindAnyObjectByType<ObjectDetector>();
+        if (detector != null)
+        {
+            detector.enabled = false;
+            Debug.Log("AI Inference stopped to prevent freezing.");
+        }
+
         Debug.Log($"Murad placed at height: {spawnPos.y}");
     }
 }
