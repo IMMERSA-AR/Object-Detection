@@ -14,6 +14,8 @@ public class ObjectRenderer : MonoBehaviour
     [Header("Label Filtering")]
     [SerializeField] private YOLOv9Labels[] labelFilters;
     [SerializeField, Range(0f, 1f)] private float minConfidence = 0.5f;
+    [Header("UI Instruction")]
+    public GameObject searchUIObject; // Drag your Canvas or Text object here
 
     private Camera _mainCamera;
     private const float ModelInputSize = 640f;
@@ -35,9 +37,24 @@ public class ObjectRenderer : MonoBehaviour
 
     public void RenderDetections(Unity.InferenceEngine.Tensor<float> coords, Unity.InferenceEngine.Tensor<int> labelIDs, Unity.InferenceEngine.Tensor<float> confidences = null)
     {
-        if (coords == null || labelIDs == null)
+        if (coords == null || labelIDs == null) return;
+
+        ObjectStamper stamper = GetComponent<ObjectStamper>();
+
+        // --- NEW: UI DISPLAY LOGIC ---
+        if (stamper != null && stamper.HasSpawned)
         {
+            // 1. Hide the "Search for chair" screen text immediately
+            if (searchUIObject != null) searchUIObject.SetActive(false);
+
+            // 2. Wipe any existing 3D markers and stop running detection
+            ClearPreviousMarkers();
             return;
+        }
+        else
+        {
+            // Show the instruction while we are still searching
+            if (searchUIObject != null) searchUIObject.SetActive(true);
         }
 
         if (!_cameraAccess || !_envRaycastManager)
@@ -157,15 +174,6 @@ public class ObjectRenderer : MonoBehaviour
                 }
 
             }
-            // string labelName = detectedLabel.ToString();
-            // if (labelName.ToLower().Contains("chair"))
-            // {
-            //     ObjectStamper stamper = GetComponent<ObjectStamper>();
-            //     if (stamper != null)
-            //     {
-            //         stamper.PlacePermanentCube(markerWorldPos, _mainCamera.transform.rotation);
-            //     }
-            // }
             Vector3 directionToPlayer = _mainCamera.transform.position - markerWorldPos;
             var markerRotation = Quaternion.LookRotation(_mainCamera.transform.position - markerWorldPos, Vector3.up);
 
@@ -176,9 +184,9 @@ public class ObjectRenderer : MonoBehaviour
                 continue;
             }
 
-            var labelWithConfidence = confidence >= 0f
-                ? $"{dictionaryKey} ({confidence * 100f:F0}%)"
-                : dictionaryKey;
+
+            //var labelWithConfidence = confidence >= 0f ? $"{dictionaryKey} ({confidence * 100f:F0}%)": dictionaryKey;
+            var labelWithConfidence = "Search for chair...";
 
             var lookupKey = dictionaryKey;
             if (_activeMarkers.TryGetValue(lookupKey, out MarkerController existingMarker))
@@ -209,7 +217,7 @@ public class ObjectRenderer : MonoBehaviour
             //closestChairPos.y = 0f;
             Debug.Log($"[Chair Tracker Summary] Total chair detections: {chairCountThisFrame}. Closest is {minDistance:F2} meters away.");
 
-            ObjectStamper stamper = GetComponent<ObjectStamper>();
+            //ObjectStamper stamper = GetComponent<ObjectStamper>();
 
             // Only try to spawn if we found the stamper and Murad hasn't appeared yet
             if (stamper != null && !stamper.HasSpawned)
@@ -247,30 +255,6 @@ public class ObjectRenderer : MonoBehaviour
                 stamper.PlacePermanentCharacter(closestChairPos, lookAtPlayerRot);
             }
         }
-        // if (foundChairThisFrame)
-        // {
-        //     ObjectStamper stamper = GetComponent<ObjectStamper>();
-
-        //     // Only try to spawn if we found the stamper and Murad hasn't appeared yet
-        //     if (stamper != null && !stamper.HasSpawned)
-        //     {
-        //         // Make Murad look at the player
-        //         Vector3 directionToPlayer = _mainCamera.transform.position - closestChairPos;
-        //         directionToPlayer.y = 0; // Keep him standing perfectly straight
-
-        //         // Default rotation just in case
-        //         Quaternion lookAtPlayerRot = Quaternion.identity;
-
-        //         // Safety check: only look if the direction isn't zero!
-        //         if (directionToPlayer != Vector3.zero)
-        //         {
-        //             lookAtPlayerRot = Quaternion.LookRotation(directionToPlayer);
-        //         }
-
-        //         // Spawn him at the closest chair, facing the player
-        //         stamper.PlacePermanentCharacter(closestChairPos, lookAtPlayerRot);
-        //     }
-        // }
     }
 
     private void ClearPreviousMarkers()
