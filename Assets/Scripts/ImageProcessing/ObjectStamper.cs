@@ -21,45 +21,49 @@ public class ObjectStamper : MonoBehaviour
         float distanceToUser = Vector3.Distance(Camera.main.transform.position, chairPos);
         if (distanceToUser > 3.0f) return;
 
-        float widerOffset = 0.0f;
-        Vector3 spawnPos = chairPos + (rotation * Vector3.right * widerOffset);
+        // 1. --- CHANGED: Spawn Murad near the PLAYER'S RIGHT SIDE! ---
+        Vector3 camPos = Camera.main.transform.position;
+        Vector3 camRight = Camera.main.transform.right;
+        camRight.y = 0; // Keep the direction flat on the floor
 
-        // 2. Optimized Raycast
+        // Spawn Murad exactly 0.5 meters to your right so he actually has to walk to the chair
+        Vector3 spawnPos = camPos + (camRight.normalized * 0.5f);
+
+        // 2. Optimized Raycast (Finds the floor height for his new starting position)
         RaycastHit groundHit;
-
-        // We shoot the ray slightly further away to avoid hitting the chair's collider
         if (Physics.Raycast(spawnPos + Vector3.up * 2.0f, Vector3.down, out groundHit, 10.0f))
         {
-            // Apply the offset to the raycast hit
             spawnPos.y = groundHit.point.y + heightOffset;
         }
         else
         {
-            // Apply the offset to the default zero height
             spawnPos.y = 0f + heightOffset;
         }
 
-        // 3. Spawn
+        // 3. Spawn Murad into the world
         GameObject character = Instantiate(characterPrefab, spawnPos, Quaternion.identity);
         character.name = "Murad_Character";
 
-        // 4. Face User
-        if (Camera.main != null)
+        // 4. --- NEW: Tell Murad to start walking! ---
+        MuradController muradScript = character.GetComponent<MuradController>();
+        if (muradScript != null)
         {
-            Vector3 lookDir = Camera.main.transform.position - character.transform.position;
-            lookDir.y = 0;
-            character.transform.rotation = Quaternion.LookRotation(lookDir);
+            // We pass the actual 3D chair position to his brain
+            muradScript.WalkToChair(chairPos);
+        }
+        else
+        {
+            Debug.LogError("Murad prefab is missing the MuradController script!");
         }
 
         _hasSpawnedGlobal = true;
 
+        // Turn off AI to save headset battery once he spawns
         ObjectDetector detector = FindAnyObjectByType<ObjectDetector>();
         if (detector != null)
         {
             detector.enabled = false;
             Debug.Log("AI Inference stopped to prevent freezing.");
         }
-
-        Debug.Log($"Murad placed at height: {spawnPos.y}");
     }
 }
