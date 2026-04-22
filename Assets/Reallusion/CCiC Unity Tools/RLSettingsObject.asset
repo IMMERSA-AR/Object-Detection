@@ -29,7 +29,7 @@ MonoBehaviour:
   performPostInstallationRuntimeCheck: 0
   updateMessage: 
   updateAvailable: 0
-  lastUpdateCheck: 639121984832810451
+  lastUpdateCheck: 639124723999258299
   jsonTagName: 2.2.6
   jsonHtmlUrl: https://github.com/soupday/CCiC-Unity-Tools/releases/tag/2.2.6
   jsonPublishedAt: 2026-04-07T20:05:42Z

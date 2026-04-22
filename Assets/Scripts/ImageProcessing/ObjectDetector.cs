@@ -29,7 +29,6 @@ public class ObjectDetector : MonoBehaviour
         if (!_cameraAccess || !_objectRenderer)
         {
             Debug.LogError("[ObjectDetector] PassthroughCameraAccess or Object Renderer not found in the scene.");
-            return;
         }
 
         LoadModel();
@@ -63,6 +62,7 @@ public class ObjectDetector : MonoBehaviour
 
     private IEnumerator InferenceLoop()
     {
+
         while (isActiveAndEnabled)
         {
             if (!TryEnsureCameraTexture())
@@ -184,7 +184,7 @@ public class ObjectDetector : MonoBehaviour
                 }
             }
             // 5. If the AI is at least 15% sure, save it!
-            if (maxConf > 0.3f)
+            if (maxConf > 0.5f)
             {
                 // Inside your if (maxConf > 0.15f) block in ObjectDetector.cs
 
