@@ -33,7 +33,7 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
 
     // Set the blendshape index to go to (-1 means there is not one assigned)
     [Tooltip("Blendshape index to trigger for each viseme.")]
-    public int [] visemeToBlendTargets = Enumerable.Range(0, OVRLipSync.VisemeCount).ToArray();
+    public int[] visemeToBlendTargets = Enumerable.Range(0, OVRLipSync.VisemeCount).ToArray();
 
     // enable/disable sending signals to viseme engine
     [Tooltip("Enable using the test keys defined below to manually trigger each viseme.")]
@@ -42,6 +42,7 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
         "default the QWERTY row of a US keyboard.")]
 
     public float mouthExaggeration = 1.5f;
+
     public KeyCode[] visemeTestKeys =
     {
         KeyCode.BackQuote,
@@ -89,10 +90,12 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
     /// <summary>
     /// Start this instance.
     /// </summary>
-    void Start ()
+    void Start()
     {
+        AutoMapVisemes();
+
         // morph target needs to be set manually; possibly other components will need the same
-        if(skinnedMeshRenderer == null)
+        if (skinnedMeshRenderer == null)
         {
             Debug.LogError("LipSyncContextMorphTarget.Start Error: " +
                 "Please set the target Skinned Mesh Renderer to be controlled!");
@@ -101,7 +104,7 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
 
         // make sure there is a phoneme context assigned to this object
         lipsyncContext = GetComponent<OVRLipSyncContextBase>();
-        if(lipsyncContext == null)
+        if (lipsyncContext == null)
         {
             Debug.LogError("LipSyncContextMorphTarget.Start Error: " +
                 "No OVRLipSyncContext component on this object!");
@@ -116,9 +119,9 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
     /// <summary>
     /// Update this instance.
     /// </summary>
-    void Update ()
+    void Update()
     {
-        if((lipsyncContext != null) && (skinnedMeshRenderer != null))
+        if ((lipsyncContext != null) && (skinnedMeshRenderer != null))
         {
             // get the current viseme frame
             OVRLipSync.Frame frame = lipsyncContext.GetCurrentPhonemeFrame();
@@ -153,7 +156,7 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
             }
         }
 
-        CheckLaughterKey();
+        //CheckLaughterKey();
     }
 
     /// <summary>
@@ -168,7 +171,7 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
                 // Viseme blend weights are in range of 0->1.0, we need to make range 100
                 skinnedMeshRenderer.SetBlendShapeWeight(
                     visemeToBlendTargets[i],
-                    frame.Visemes[i] * 100.0f*mouthExaggeration);
+                    frame.Visemes[i] * 100.0f * mouthExaggeration);
             }
         }
     }
@@ -225,5 +228,50 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
         {
             lipsyncContext.SetLaughterBlend(0);
         }
+    }
+    void AutoMapVisemes()
+    {
+        var mesh = skinnedMeshRenderer.sharedMesh;
+
+        // Element 0: Silence
+        visemeToBlendTargets[0] = mesh.GetBlendShapeIndex("V_None");
+
+        // Element 1: P, B, M (Lips pressed)
+        visemeToBlendTargets[1] = mesh.GetBlendShapeIndex("V_Explosive");
+
+        // Element 2: F, V (Bottom lip to teeth)
+        visemeToBlendTargets[2] = mesh.GetBlendShapeIndex("V_Dental_Lip");
+
+        // Element 3: Th
+        visemeToBlendTargets[3] = mesh.GetBlendShapeIndex("V_Lip_Open");
+
+        // Element 4 & 5: D, T, K, G (Jaw drops)
+        visemeToBlendTargets[4] = mesh.GetBlendShapeIndex("V_Open");
+        visemeToBlendTargets[5] = mesh.GetBlendShapeIndex("Merged_Open_Mouth");
+
+        // Element 6: Ch, Sh
+        visemeToBlendTargets[6] = mesh.GetBlendShapeIndex("V_Affricate");
+
+        // Element 7: S, Z
+        visemeToBlendTargets[7] = mesh.GetBlendShapeIndex("V_Lip_Open");
+
+        // Element 8 & 9: N, L, R
+        visemeToBlendTargets[8] = mesh.GetBlendShapeIndex("V_Lip_Open");
+        visemeToBlendTargets[9] = mesh.GetBlendShapeIndex("V_Lip_Open");
+
+        // Element 10 & 11: Ah, Eh (Big mouth open)
+        visemeToBlendTargets[10] = mesh.GetBlendShapeIndex("Merged_Open_Mouth");
+        visemeToBlendTargets[11] = mesh.GetBlendShapeIndex("Mouth_Drop_Lower");
+
+        // Element 12: Ih
+        visemeToBlendTargets[12] = mesh.GetBlendShapeIndex("Mouth_Drop_Lower");
+
+        // Element 13: Oh
+        visemeToBlendTargets[13] = mesh.GetBlendShapeIndex("V_Tight_O");
+
+        // Element 14: Ou
+        visemeToBlendTargets[14] = mesh.GetBlendShapeIndex("V_Tight");
+
+
     }
 }
