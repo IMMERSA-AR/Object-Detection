@@ -89,4 +89,5 @@ MonoBehaviour:
   moveSpeed: 1.5
   stoppingDistance: 0.2
   rotationSpeed: 8
-  seatHeightOffset: -0.6
+  seatHeightOffset: -0.7
+  seatForwardOffset: 0
