@@ -37,25 +37,16 @@ public class ObjectRenderer : MonoBehaviour
 
     public void RenderDetections(Unity.InferenceEngine.Tensor<float> coords, Unity.InferenceEngine.Tensor<int> labelIDs, Unity.InferenceEngine.Tensor<float> confidences = null)
     {
-        if (coords == null || labelIDs == null) return;
-
         ObjectStamper stamper = GetComponent<ObjectStamper>();
 
-        // --- NEW: UI DISPLAY LOGIC ---
+        // If Murad is already sitting, ignore the AI data completely
         if (stamper != null && stamper.HasSpawned)
         {
-            // 1. Hide the "Search for chair" screen text immediately
-            if (searchUIObject != null) searchUIObject.SetActive(false);
-
-            // 2. Wipe any existing 3D markers and stop running detection
-            ClearPreviousMarkers();
             return;
         }
-        else
-        {
-            // Show the instruction while we are still searching
-            if (searchUIObject != null) searchUIObject.SetActive(true);
-        }
+
+        // Basic safety checks
+        if (coords == null || labelIDs == null) return;
 
         if (!_cameraAccess || !_envRaycastManager)
         {
@@ -186,7 +177,7 @@ public class ObjectRenderer : MonoBehaviour
 
 
             //var labelWithConfidence = confidence >= 0f ? $"{dictionaryKey} ({confidence * 100f:F0}%)": dictionaryKey;
-            var labelWithConfidence = "Search for chair...";
+            var labelWithConfidence = $"{dictionaryKey}";
 
             var lookupKey = dictionaryKey;
             if (_activeMarkers.TryGetValue(lookupKey, out MarkerController existingMarker))
@@ -275,29 +266,6 @@ public class ObjectRenderer : MonoBehaviour
         // to ensure the Y axis is flipped for Unity Viewport space.
         return new Vector2(Mathf.Clamp01(normalizedX), Mathf.Clamp01(1f - normalizedY));
     }
-    // private Vector2 DetectionToViewport(float normalizedX, float normalizedY)
-    // {
-    //     var resolution = (Vector2)_cameraAccess.CurrentResolution;
-    //     if (resolution == Vector2.zero)
-    //     {
-    //         resolution = (Vector2)_cameraAccess.Intrinsics.SensorResolution;
-    //     }
-    //     if (resolution == Vector2.zero)
-    //     {
-    //         return new Vector2(Mathf.Clamp01(normalizedX), Mathf.Clamp01(1f - normalizedY));
-    //     }
-
-    //     var scaledX = Mathf.Clamp01(normalizedX) * ModelInputSize;
-    //     var scaledY = Mathf.Clamp01(normalizedY) * ModelInputSize;
-
-    //     var actualPixel = new Vector2(
-    //         scaledX * (resolution.x / ModelInputSize),
-    //         scaledY * (resolution.y / ModelInputSize));
-
-    //     return new Vector2(
-    //         Mathf.Clamp01(actualPixel.x / resolution.x),
-    //         Mathf.Clamp01(1f - actualPixel.y / resolution.y));
-    // }
 
     private static float GetConfidence(Unity.InferenceEngine.Tensor<float> coords, Unity.InferenceEngine.Tensor<float> confidenceTensor, int index)
     {
@@ -375,5 +343,31 @@ public class ObjectRenderer : MonoBehaviour
         }
 
         return fallbackNormal;
+    }
+    private void Update()
+    {
+        ObjectStamper stamper = GetComponent<ObjectStamper>();
+
+        // This runs every single frame, making it 100% guaranteed to turn off
+        if (stamper != null && searchUIObject != null)
+        {
+            if (stamper.HasSpawned)
+            {
+                // Murad is sitting -> Force text off
+                if (searchUIObject.activeSelf)
+                {
+                    searchUIObject.SetActive(false);
+                    ClearPreviousMarkers(); // Wipe any stuck green boxes
+                }
+            }
+            else
+            {
+                // Murad is not here yet -> Force text on
+                if (!searchUIObject.activeSelf)
+                {
+                    searchUIObject.SetActive(true);
+                }
+            }
+        }
     }
 }

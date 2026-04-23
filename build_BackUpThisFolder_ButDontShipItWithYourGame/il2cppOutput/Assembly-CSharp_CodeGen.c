@@ -44,6 +44,7 @@ extern void ObjectRenderer_DetectionToViewport_mF3E57CEF65FD2FB2A480E2FF5146FB9D
 extern void ObjectRenderer_GetConfidence_m1C5B6247C18D58EC3774691280964A04F54B5D21 (void);
 extern void ObjectRenderer_SampleConfidence_m23C19B4326CB93411F8D2D5F195DA1197016216F (void);
 extern void ObjectRenderer_SampleSurfaceNormal_mC42B7D65C0F6E0D641984FD236C10B4C240E4C14 (void);
+extern void ObjectRenderer_Update_mA08A1B9B6B3F15D85747347B03A7CF44B95E2880 (void);
 extern void ObjectRenderer__ctor_m4E865527DB8C6C774FCF194DD3C7CBB05719645F (void);
 extern void U3CU3Ec__DisplayClass11_0__ctor_mCBA518AE27020F6B5F9CA41EE1B75EAEC89B73C4 (void);
 extern void U3CU3Ec__DisplayClass11_0_U3CRenderDetectionsU3Eb__0_mF666A14E05E3775A580D377EE3FB7A253EF1FAD1 (void);
@@ -56,7 +57,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[49] = 
+static Il2CppMethodPointer s_methodPointers[50] = 
 {
 	MarkerController_Awake_mE57339E57225EB54672CDBF929AD4962A4668A95,
 	MarkerController_UpdateMarker_mA933B125C78BB7343AC8705281C0B4F04568E74B,
@@ -95,6 +96,7 @@ static Il2CppMethodPointer s_methodPointers[49] =
 	ObjectRenderer_GetConfidence_m1C5B6247C18D58EC3774691280964A04F54B5D21,
 	ObjectRenderer_SampleConfidence_m23C19B4326CB93411F8D2D5F195DA1197016216F,
 	ObjectRenderer_SampleSurfaceNormal_mC42B7D65C0F6E0D641984FD236C10B4C240E4C14,
+	ObjectRenderer_Update_mA08A1B9B6B3F15D85747347B03A7CF44B95E2880,
 	ObjectRenderer__ctor_m4E865527DB8C6C774FCF194DD3C7CBB05719645F,
 	U3CU3Ec__DisplayClass11_0__ctor_mCBA518AE27020F6B5F9CA41EE1B75EAEC89B73C4,
 	U3CU3Ec__DisplayClass11_0_U3CRenderDetectionsU3Eb__0_mF666A14E05E3775A580D377EE3FB7A253EF1FAD1,
@@ -108,7 +110,7 @@ static Il2CppMethodPointer s_methodPointers[49] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[49] = 
+static const int32_t s_InvokerIndices[50] = 
 {
 	21736,
 	3062,
@@ -149,6 +151,7 @@ static const int32_t s_InvokerIndices[49] =
 	6711,
 	21736,
 	21736,
+	21736,
 	11659,
 	21247,
 	8688,
@@ -164,7 +167,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	49,
+	50,
 	s_methodPointers,
 	0,
 	NULL,
