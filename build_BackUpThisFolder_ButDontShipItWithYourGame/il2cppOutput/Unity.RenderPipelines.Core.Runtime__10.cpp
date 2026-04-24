@@ -2244,13 +2244,13 @@ struct U3CPrivateImplementationDetailsU3E_tC0CFE0E72EA6AEB9FDCA54EF2234CE64CE60C
 {
 	__StaticArrayInitTypeSizeU3D256_tFF0698189192518573932BF8BAD96F26AE81C394 ___45AC882BD91FEBD5A58E67471A0EF32BFC485447A8A18D61DBA335FDA5A2C097;
 	__StaticArrayInitTypeSizeU3D512_tD5EE40AF533BCA2B34240A0AF9E47B54EE2C2146 ___4A1D5C231BB4DDB64A57CFF5FC45592F845DB22D8DE0DCCA7BB59D822908C39A;
-	__StaticArrayInitTypeSizeU3D28587_t7B1364F5000E26DFCF85D66B7BCFD1C9AFBF7EA0 ___57156B96EE2E1800F2FC9D7DF4E6C831D9A2C63FBD3C7A8BBCC1006EC866B340;
 	__StaticArrayInitTypeSizeU3D31098_t515AFFD0881073A6DD7D448E7A3F5BB8267DDA9D ___6081DEDFF0CDF1E803BCC1A3E1C0FFEF99AB42C2596D55C6CE93DB67BAA4D972;
 	__StaticArrayInitTypeSizeU3D1024_tE9529042519107E9BDFEDEF85470FAEC0E29AE29 ___90C2D148CDB931199C77ADD692B92324CDFC328EDD1D0AB7FA24830C177A4FF4;
 	__StaticArrayInitTypeSizeU3D144_t023031078A4D5CACFAF6FAC01AF3EF50C233B8F0 ___BDFF4BF48DBC7214A392CF884F7F2A6073CCDB77CA3EB11BEBB93DA8ED8B2158;
 	__StaticArrayInitTypeSizeU3D4096_tE096F2ECC3A5A67E1989C4EEC721B45B2398F951 ___C606E03B5FE8EAD2ECA6BCB45AE684039D928B4EE7C4A03C63D0DF9F94F81DAF;
 	__StaticArrayInitTypeSizeU3D24_tDA29C1CE09CD3A30099C8B146E9FEF78D228D62A ___CD9A54ED1F18BF97DB08914E280EA7349E11CA2C4885A4D8052552CEBA84208D;
 	__StaticArrayInitTypeSizeU3D1024_tE9529042519107E9BDFEDEF85470FAEC0E29AE29 ___E806AA89271C778BAF8A2CC19587A816553FEE987D203B134B3B1435B1D158C7;
+	__StaticArrayInitTypeSizeU3D28587_t7B1364F5000E26DFCF85D66B7BCFD1C9AFBF7EA0 ___F4DE7A806B599BE55CAA239F960553525F737243E251D4B907D78F7C2FFC64E8;
 	__StaticArrayInitTypeSizeU3D24_tDA29C1CE09CD3A30099C8B146E9FEF78D228D62A ___FE78C65211DD0B56A97024FB61111E686EF1FE054AA132BA58E2891AC496F1EE;
 };
 struct GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2_StaticFields
@@ -3666,39 +3666,39 @@ IL2CPP_EXTERN_C void Sky_t5AB138933D60CB215B9FBA33CB82283A2F743A14_marshal_com_c
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64604
+// Method Definition Index: 64654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StageRuntimeInterface__ctor_m77ED24F527202E13B5FF938C2BF1C7E4E0173661 (StageRuntimeInterface_t7199160066F29199FF869D85C2DA24810E8899DC* __this, Func_2_t7651168D245405F42589A52EE635B3E27C50A8FB* ___0_AddGameObject, Func_1_t2CF654106B924961EA2A880955474BC6DC4577B9* ___1_GetCamera, Func_1_tB75BEC9664231A1D7D60CCD8D054AC7168A10997* ___2_GetSunLight, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:81>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:82>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:83>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:84>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:86>
 		Func_2_t7651168D245405F42589A52EE635B3E27C50A8FB* L_0 = ___0_AddGameObject;
 		__this->___m_AddGameObject = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_AddGameObject), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:87>
 		Func_1_t2CF654106B924961EA2A880955474BC6DC4577B9* L_1 = ___1_GetCamera;
 		__this->___m_GetCamera = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_GetCamera), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:88>
 		Func_1_tB75BEC9664231A1D7D60CCD8D054AC7168A10997* L_2 = ___2_GetSunLight;
 		__this->___m_GetSunLight = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_GetSunLight), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:89>
 		return;
 	}
 }
-// Method Definition Index: 64605
+// Method Definition Index: 64655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* StageRuntimeInterface_AddGameObject_mBA0539C875795229002891A57B2AB97543FB314D (StageRuntimeInterface_t7199160066F29199FF869D85C2DA24810E8899DC* __this, bool ___0_persistent, const RuntimeMethod* method) 
 {
 	Func_2_t7651168D245405F42589A52EE635B3E27C50A8FB* G_B2_0 = NULL;
 	Func_2_t7651168D245405F42589A52EE635B3E27C50A8FB* G_B1_0 = NULL;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:98>
 		Func_2_t7651168D245405F42589A52EE635B3E27C50A8FB* L_0 = __this->___m_AddGameObject;
 		Func_2_t7651168D245405F42589A52EE635B3E27C50A8FB* L_1 = L_0;
 		if (L_1)
@@ -3727,14 +3727,14 @@ IL_0013:
 		return G_B3_0;
 	}
 }
-// Method Definition Index: 64606
+// Method Definition Index: 64656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* StageRuntimeInterface_get_camera_mD25AB28B41CDED30E6D478BBC00E631B938AF1A0 (StageRuntimeInterface_t7199160066F29199FF869D85C2DA24810E8899DC* __this, const RuntimeMethod* method) 
 {
 	Func_1_t2CF654106B924961EA2A880955474BC6DC4577B9* G_B2_0 = NULL;
 	Func_1_t2CF654106B924961EA2A880955474BC6DC4577B9* G_B1_0 = NULL;
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:101>
 		Func_1_t2CF654106B924961EA2A880955474BC6DC4577B9* L_0 = __this->___m_GetCamera;
 		Func_1_t2CF654106B924961EA2A880955474BC6DC4577B9* L_1 = L_0;
 		if (L_1)
@@ -3762,14 +3762,14 @@ IL_0012:
 		return G_B3_0;
 	}
 }
-// Method Definition Index: 64607
+// Method Definition Index: 64657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* StageRuntimeInterface_get_sunLight_mD1B5AB2BB6B385D2AE0D4A6660D402D8319C4B86 (StageRuntimeInterface_t7199160066F29199FF869D85C2DA24810E8899DC* __this, const RuntimeMethod* method) 
 {
 	Func_1_tB75BEC9664231A1D7D60CCD8D054AC7168A10997* G_B2_0 = NULL;
 	Func_1_tB75BEC9664231A1D7D60CCD8D054AC7168A10997* G_B1_0 = NULL;
 	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/LookDev/IDataProvider.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/LookDev/IDataProvider.cs:104>
 		Func_1_tB75BEC9664231A1D7D60CCD8D054AC7168A10997* L_0 = __this->___m_GetSunLight;
 		Func_1_tB75BEC9664231A1D7D60CCD8D054AC7168A10997* L_1 = L_0;
 		if (L_1)
@@ -3805,7 +3805,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64608
+// Method Definition Index: 64658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetWidget_mC9A7F8C4B39F05BFA164FA25C5C811106EFFEDA5 (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3839,20 +3839,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetWidget_mC9A7F8
 	DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* G_B9_0 = NULL;
 	DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* G_B9_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:24>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:25>
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisBitField_t4178A9AD81C436DBE57F464343BA996642134062_m746752E08FAB2F073637F2656907F8B777D71D51(__this, DebugUIHandlerWidget_CastWidget_TisBitField_t4178A9AD81C436DBE57F464343BA996642134062_m746752E08FAB2F073637F2656907F8B777D71D51_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:26>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:27>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -3860,9 +3860,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetWidget_mC9A7F8
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:29>
 		V_0 = 0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:30>
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_6 = __this->___m_Field;
 		NullCheck(L_6);
 		GUIContentU5BU5D_t98DA1EEA8D0A2C4AE42CE11C4840B627CADFC503* L_7 = ((EnumField_1_t8B03F7187ED36764C4BDB3683D3A208587958D8E*)L_6)->___enumNames;
@@ -3873,14 +3873,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetWidget_mC9A7F8
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:30>
 		GUIContentU5BU5D_t98DA1EEA8D0A2C4AE42CE11C4840B627CADFC503* L_8 = V_1;
 		int32_t L_9 = V_2;
 		NullCheck(L_8);
 		int32_t L_10 = L_9;
 		GUIContent_t15E48D4BEB1E6B6044F7DEB5E350800F511C2ED2* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
 		V_3 = L_11;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:32>
 		int32_t L_12 = V_0;
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_13 = __this->___toggles;
 		NullCheck(L_13);
@@ -3894,34 +3894,34 @@ IL_004e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:33>
 		goto IL_011c;
 	}
 
 IL_006f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:35>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_16 = __this->___toggles;
 		int32_t L_17 = V_0;
 		NullCheck(L_16);
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_18;
 		L_18 = List_1_get_Item_m37FFA8C9F52EDDFD9EE56DE6B12954C3FD4CB5BA(L_16, L_17, List_1_get_Item_m37FFA8C9F52EDDFD9EE56DE6B12954C3FD4CB5BA_RuntimeMethod_var);
 		V_4 = L_18;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:36>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_19 = V_4;
 		Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA* L_20 = (Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA*)il2cpp_codegen_object_new(Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA_il2cpp_TypeInfo_var);
 		Func_2__ctor_mF0ABAE563501FB4B795991365F3011147BE07E2E(L_20, __this, (intptr_t)((void*)DebugUIHandlerBitField_GetValue_m83486BB1A30BD81A1BC807D8CCD979FB7009306A_RuntimeMethod_var), NULL);
 		NullCheck(L_19);
 		L_19->___getter = L_20;
 		Il2CppCodeGenWriteBarrier((void**)(&L_19->___getter), (void*)L_20);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:37>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_21 = V_4;
 		Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D* L_22 = (Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D*)il2cpp_codegen_object_new(Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D_il2cpp_TypeInfo_var);
 		Action_2__ctor_m4C35233BEC41AA19D1AFC7620C4ACDFFE2FF1B8E(L_22, __this, (intptr_t)((void*)DebugUIHandlerBitField_SetValue_mE5AF66449A807CD3704C70057C54662FE1F9B5A2_RuntimeMethod_var), NULL);
 		NullCheck(L_21);
 		L_21->___setter = L_22;
 		Il2CppCodeGenWriteBarrier((void**)(&L_21->___setter), (void*)L_22);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:38>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_23 = V_4;
 		int32_t L_24 = V_0;
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_25 = __this->___m_Field;
@@ -3956,7 +3956,7 @@ IL_00c8:
 	{
 		NullCheck(G_B6_1);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(G_B6_1, G_B6_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:39>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_30 = V_4;
 		int32_t L_31 = V_0;
 		if ((((int32_t)L_31) > ((int32_t)0)))
@@ -3987,16 +3987,16 @@ IL_00e5:
 	{
 		NullCheck(G_B9_1);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(G_B9_1, G_B9_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:40>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_35 = V_4;
 		NullCheck(L_35);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_35, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:41>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_36 = V_4;
 		int32_t L_37 = V_0;
 		NullCheck(L_36);
 		L_36->___index = L_37;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:42>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_38 = V_4;
 		NullCheck(L_38);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_39 = L_38->___nameLabel;
@@ -4006,11 +4006,11 @@ IL_00e5:
 		L_41 = GUIContent_get_text_mC6D7981351923AD7F802AC659314BA56DF7F3ED6(L_40, NULL);
 		NullCheck(L_39);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_39, L_41);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:43>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_42 = V_4;
 		NullCheck(L_42);
 		DebugUIHandlerIndirectToggle_Init_mFB2213D89BCF29671F255C37E862F94F31F12506(L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:44>
 		int32_t L_43 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_43, 1));
 	}
@@ -4023,7 +4023,7 @@ IL_011c:
 
 IL_0120:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:30>
 		int32_t L_45 = V_2;
 		GUIContentU5BU5D_t98DA1EEA8D0A2C4AE42CE11C4840B627CADFC503* L_46 = V_1;
 		NullCheck(L_46);
@@ -4038,7 +4038,7 @@ IL_0120:
 
 IL_012b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:50>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_47 = __this->___toggles;
 		int32_t L_48 = V_0;
 		NullCheck(L_47);
@@ -4049,19 +4049,19 @@ IL_012b:
 		L_50 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_49, NULL);
 		il2cpp_codegen_runtime_class_init_inline(CoreUtils_tEE57AB2B0DAE9561F4954B08800A8F957850B038_il2cpp_TypeInfo_var);
 		CoreUtils_Destroy_mD2FDD299C528530E4CC5F99EFBAF90ABC7B02C69(L_50, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:51>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_51 = __this->___toggles;
 		int32_t L_52 = V_0;
 		NullCheck(L_51);
 		List_1_set_Item_m011023A908CBCCA66DF0D8BBC6DBC5088AE58998(L_51, L_52, (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6*)NULL, List_1_set_Item_m011023A908CBCCA66DF0D8BBC6DBC5088AE58998_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:48>
 		int32_t L_53 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_53, 1));
 	}
 
 IL_0156:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:48>
 		int32_t L_54 = V_0;
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_55 = __this->___toggles;
 		NullCheck(L_55);
@@ -4075,11 +4075,11 @@ IL_0156:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 64609
+// Method Definition Index: 64659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerBitField_GetValue_m83486BB1A30BD81A1BC807D8CCD979FB7009306A (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4093,7 +4093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerBitField_GetValue_m83486BB
 	bool V_1 = false;
 	int32_t V_2 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:57>
 		int32_t L_0 = ___0_index;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -4103,17 +4103,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerBitField_GetValue_m83486BB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:60>
 		V_1 = (bool)0;
 		goto IL_0033;
 	}
 
 IL_000e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:66>
 		int32_t L_2 = ___0_index;
 		___0_index = ((int32_t)il2cpp_codegen_subtract(L_2, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:67>
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_3 = __this->___m_Field;
 		NullCheck(L_3);
 		Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2* L_4;
@@ -4122,7 +4122,7 @@ IL_000e:
 		int32_t L_5;
 		L_5 = Convert_ToInt32_m9FEA65DB96264479B5268014F10754787382D297(L_4, NULL);
 		V_2 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:68>
 		int32_t L_6 = V_2;
 		int32_t L_7 = ___0_index;
 		V_1 = (bool)((!(((uint32_t)((int32_t)(L_6&((int32_t)(1<<((int32_t)(L_7&((int32_t)31)))))))) <= ((uint32_t)0)))? 1 : 0);
@@ -4131,12 +4131,12 @@ IL_000e:
 
 IL_0033:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:70>
 		bool L_8 = V_1;
 		return L_8;
 	}
 }
-// Method Definition Index: 64610
+// Method Definition Index: 64660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetValue_mE5AF66449A807CD3704C70057C54662FE1F9B5A2 (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, int32_t ___0_index, bool ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4161,7 +4161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetValue_mE5AF664
 	bool V_5 = false;
 	Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA* G_B6_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:74>
 		int32_t L_0 = ___0_index;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -4171,7 +4171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetValue_mE5AF664
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:77>
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_2 = __this->___m_Field;
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -4182,7 +4182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_SetValue_mE5AF664
 		L_5 = Enum_ToObject_m7952B7BD43E48BBF79BB973BD31E7FF9E62B948E(L_4, 0, NULL);
 		NullCheck(L_2);
 		Field_1_SetValue_mE2EDC8A71D590A82B80FEC3DE50A080215891350(L_2, L_5, Field_1_SetValue_mE2EDC8A71D590A82B80FEC3DE50A080215891350_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:78>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_6 = __this->___toggles;
 		NullCheck(L_6);
 		Enumerator_tBD6CCEFF2A49D89AD7FA0FFAD05836DB4820EBA0 L_7;
@@ -4207,11 +4207,11 @@ FINALLY_0065:
 
 IL_0036_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:78>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:78>
 				DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_8;
 				L_8 = Enumerator_get_Current_mE590953A4C326CF67C59D28E45486C48C9B53E20_inline((&V_1), Enumerator_get_Current_mE590953A4C326CF67C59D28E45486C48C9B53E20_RuntimeMethod_var);
 				V_2 = L_8;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:80>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:80>
 				DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_9 = V_2;
 				if (L_9)
 				{
@@ -4241,7 +4241,7 @@ IL_004b_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:81>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:81>
 				DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_13 = V_2;
 				NullCheck(L_13);
 				DebugUIHandlerIndirectToggle_UpdateValueLabel_mECFCCF09947AA410A2D6F756F08BB6CDDCD05AAC(L_13, NULL);
@@ -4253,7 +4253,7 @@ IL_0059_1:
 
 IL_005a_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:78>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:78>
 				bool L_14;
 				L_14 = Enumerator_MoveNext_mC96504A155AB4A051C8922CF50E64D260B64CD93((&V_1), Enumerator_MoveNext_mC96504A155AB4A051C8922CF50E64D260B64CD93_RuntimeMethod_var);
 				if (L_14)
@@ -4278,7 +4278,7 @@ IL_0074:
 
 IL_0077:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:86>
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_15 = __this->___m_Field;
 		NullCheck(L_15);
 		Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2* L_16;
@@ -4287,7 +4287,7 @@ IL_0077:
 		int32_t L_17;
 		L_17 = Convert_ToInt32_m9FEA65DB96264479B5268014F10754787382D297(L_16, NULL);
 		V_4 = L_17;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:87>
 		bool L_18 = ___1_value;
 		V_5 = L_18;
 		bool L_19 = V_5;
@@ -4297,7 +4297,7 @@ IL_0077:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:88>
 		int32_t L_20 = V_4;
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_21 = __this->___m_Field;
 		NullCheck(L_21);
@@ -4313,7 +4313,7 @@ IL_0077:
 
 IL_00a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:90>
 		int32_t L_26 = V_4;
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_27 = __this->___m_Field;
 		NullCheck(L_27);
@@ -4328,7 +4328,7 @@ IL_00a5:
 
 IL_00b8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:91>
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_32 = __this->___m_Field;
 		BitField_t4178A9AD81C436DBE57F464343BA996642134062* L_33 = __this->___m_Field;
 		NullCheck(L_33);
@@ -4344,11 +4344,11 @@ IL_00b8:
 
 IL_00d7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:93>
 		return;
 	}
 }
-// Method Definition Index: 64611
+// Method Definition Index: 64661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerBitField_OnSelection_m11DE74FFB02ED64DBB4A40EDF0C27A5FD8F52AD0 (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4364,7 +4364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerBitField_OnSelection_m11DE
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:103>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -4395,7 +4395,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:105>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -4405,7 +4405,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:107>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -4418,7 +4418,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:109>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -4432,7 +4432,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:111>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -4442,13 +4442,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:115>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:116>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -4463,60 +4463,60 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:120>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:121>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:121>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64612
+// Method Definition Index: 64662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_OnDeselection_m6503BAFA10C4FA983C294370C405B50CD32D3008 (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:128>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:129>
 		return;
 	}
 }
-// Method Definition Index: 64613
+// Method Definition Index: 64663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_OnIncrement_m4C54446147993E50B939A1111F0EE2E40264663E (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:137>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:137>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:138>
 		return;
 	}
 }
-// Method Definition Index: 64614
+// Method Definition Index: 64664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_OnDecrement_m7A7522DB09A33E214B84AD1AB34CFE9B2513761C (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:146>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:147>
 		return;
 	}
 }
-// Method Definition Index: 64615
+// Method Definition Index: 64665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_OnAction_m05B63A9FC76EB4DF6203C2DDDDE4D816BD2307B3 (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:154>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_1 = __this->___valueToggle;
 		NullCheck(L_1);
@@ -4524,11 +4524,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField_OnAction_m05B63A9
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:155>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:155>
 		return;
 	}
 }
-// Method Definition Index: 64616
+// Method Definition Index: 64666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerBitField_Next_m6EC5781F4884FBEF25226F957C2011C8D17291BD (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4543,7 +4543,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:163>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		bool L_1;
@@ -4577,7 +4577,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:164>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -4586,13 +4586,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:166>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:166>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:168>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:168>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -4605,7 +4605,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:169>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:169>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -4614,7 +4614,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:171>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -4622,12 +4622,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:172>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerBitField.cs:172>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64617
+// Method Definition Index: 64667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField__ctor_mA489C3E5573EEEB6A429E55DACA850EF4CD3768A (DebugUIHandlerBitField_tD1BF4F9B1AE1892031AE9125C9B2BB53DB09EC91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4643,7 +4643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerBitField__ctor_mA489C3E557
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64618
+// Method Definition Index: 64668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_SetWidget_mB1AEC7776B1E2D838441E957ACE6973849F10780 (DebugUIHandlerButton_t12E4F16718430EDBEBA8F9B9E3FD735FA7C0A31D* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4653,15 +4653,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_SetWidget_mB1AEC777
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:16>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:17>
 		Button_t94987D29C31193E49E17586BF7642576A0F6CE7A* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisButton_t94987D29C31193E49E17586BF7642576A0F6CE7A_m38AE021C41D0312CCA4DD24F917B6F9001952C86(__this, DebugUIHandlerWidget_CastWidget_TisButton_t94987D29C31193E49E17586BF7642576A0F6CE7A_m38AE021C41D0312CCA4DD24F917B6F9001952C86_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:18>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		Button_t94987D29C31193E49E17586BF7642576A0F6CE7A* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -4669,51 +4669,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_SetWidget_mB1AEC777
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 64619
+// Method Definition Index: 64669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerButton_OnSelection_mDB94CC63682FF286935252FB0471C520D6502F5F (DebugUIHandlerButton_t12E4F16718430EDBEBA8F9B9E3FD735FA7C0A31D* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:29>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:30>
 		V_0 = (bool)1;
 		goto IL_0017;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:31>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 64620
+// Method Definition Index: 64670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_OnDeselection_m06297EBFD0C4B8858B1FF36EBD2F167931893074 (DebugUIHandlerButton_t12E4F16718430EDBEBA8F9B9E3FD735FA7C0A31D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:38>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:39>
 		return;
 	}
 }
-// Method Definition Index: 64621
+// Method Definition Index: 64671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_OnAction_m2B245BDA71B32B5F8BD1208C0CC6C9DF6E969E65 (DebugUIHandlerButton_t12E4F16718430EDBEBA8F9B9E3FD735FA7C0A31D* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:46>
 		Button_t94987D29C31193E49E17586BF7642576A0F6CE7A* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1;
@@ -4726,7 +4726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_OnAction_m2B245BDA7
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:47>
 		Button_t94987D29C31193E49E17586BF7642576A0F6CE7A* L_3 = __this->___m_Field;
 		NullCheck(L_3);
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4;
@@ -4737,11 +4737,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton_OnAction_m2B245BDA7
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerButton.cs:48>
 		return;
 	}
 }
-// Method Definition Index: 64622
+// Method Definition Index: 64672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton__ctor_mB0A7B33C44011CE96C5B101E391C2C233E56CEB0 (DebugUIHandlerButton_t12E4F16718430EDBEBA8F9B9E3FD735FA7C0A31D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4757,7 +4757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerButton__ctor_mB0A7B33C4401
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64623
+// Method Definition Index: 64673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIPrefabBundle__ctor_m871F8F84F6E1DD549EACAA3E911D32C92DEC3B49 (DebugUIPrefabBundle_t9CBD16AF01B2AF5EC5E4937C1DFDBEFF3F1304A8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4773,7 +4773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIPrefabBundle__ctor_m871F8F84F6E1D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64624
+// Method Definition Index: 64674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_OnEnable_mEDB28828751EBF1C982CA3E6C45B84406E4E5563 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4792,7 +4792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_OnEnable_mEDB288287
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:41>
 		List_1_t60729D90EC5710C8B2774D6941E86786A2382626* L_0 = __this->___prefabs;
 		V_0 = (bool)((((RuntimeObject*)(List_1_t60729D90EC5710C8B2774D6941E86786A2382626*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_1 = V_0;
@@ -4802,7 +4802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_OnEnable_mEDB288287
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:42>
 		List_1_t60729D90EC5710C8B2774D6941E86786A2382626* L_2 = (List_1_t60729D90EC5710C8B2774D6941E86786A2382626*)il2cpp_codegen_object_new(List_1_t60729D90EC5710C8B2774D6941E86786A2382626_il2cpp_TypeInfo_var);
 		List_1__ctor_mFFB9A5E69D3E1F9E380ED3341A850E5D077BE20D(L_2, List_1__ctor_mFFB9A5E69D3E1F9E380ED3341A850E5D077BE20D_RuntimeMethod_var);
 		__this->___prefabs = L_2;
@@ -4811,7 +4811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_OnEnable_mEDB288287
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:44>
 		Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554* L_3 = __this->___m_PrefabsMap;
 		V_1 = (bool)((((RuntimeObject*)(Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_4 = V_1;
@@ -4821,7 +4821,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:45>
 		Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554* L_5 = (Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554*)il2cpp_codegen_object_new(Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m5B6B55E8F53628DB82462FB6F1C7C5A381F347F9(L_5, Dictionary_2__ctor_m5B6B55E8F53628DB82462FB6F1C7C5A381F347F9_RuntimeMethod_var);
 		__this->___m_PrefabsMap = L_5;
@@ -4830,7 +4830,7 @@ IL_0019:
 
 IL_0031:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:47>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_6 = __this->___m_UIPanels;
 		V_2 = (bool)((((RuntimeObject*)(List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_7 = V_2;
@@ -4840,7 +4840,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:48>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_8 = (List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA*)il2cpp_codegen_object_new(List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA_il2cpp_TypeInfo_var);
 		List_1__ctor_m7569D96D15A4EA74ECE1B5EF453D0463A04B099A(L_8, List_1__ctor_m7569D96D15A4EA74ECE1B5EF453D0463A04B099A_RuntimeMethod_var);
 		__this->___m_UIPanels = L_8;
@@ -4849,17 +4849,17 @@ IL_0031:
 
 IL_0049:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:50>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_9;
 		L_9 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		NullCheck(L_9);
 		DebugManager_RegisterRootCanvas_m17796C585AB91ADE0FA5901FD3B800B75A0C1A18(L_9, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:51>
 		return;
 	}
 }
-// Method Definition Index: 64625
+// Method Definition Index: 64675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Update_m824889AC55699E3EED275361E755D61623ABC514 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4876,7 +4876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Update_m824889AC556
 	bool V_2 = false;
 	int32_t G_B6_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:55>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_0;
 		L_0 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -4884,7 +4884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Update_m824889AC556
 		int32_t L_1;
 		L_1 = DebugManager_GetState_mA45CEE821FEFFF5A7546DA822FD046F63FEF37CF(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:56>
 		int32_t L_2 = __this->___m_DebugTreeState;
 		int32_t L_3 = V_0;
 		V_1 = (bool)((((int32_t)((((int32_t)L_2) == ((int32_t)L_3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -4895,15 +4895,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Update_m824889AC556
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:58>
 		DebugUIHandlerCanvas_ResetAllHierarchy_m7583874C16AC780324D02B6728DBD9F38EF5D079(__this, NULL);
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:61>
 		DebugUIHandlerCanvas_HandleInput_m68428B2A6A70270746D6B490A99D6AD51F112C98(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:64>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_5 = __this->___m_UIPanels;
 		if (!L_5)
 		{
@@ -4949,7 +4949,7 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:65>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_14 = __this->___m_UIPanels;
 		int32_t L_15 = __this->___m_SelectedPanel;
 		NullCheck(L_14);
@@ -4961,21 +4961,21 @@ IL_0061:
 
 IL_007c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:66>
 		return;
 	}
 }
-// Method Definition Index: 64626
+// Method Definition Index: 64676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_RequestHierarchyReset_m795844483B9DE139935276CB7BB5015E9868071B (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:70>
 		__this->___m_DebugTreeState = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 64627
+// Method Definition Index: 64677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ResetAllHierarchy_m7583874C16AC780324D02B6728DBD9F38EF5D079 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4991,7 +4991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ResetAllHierarchy_m
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_1 = NULL;
 	RuntimeObject* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:75>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
@@ -5034,13 +5034,13 @@ IL_0043:
 
 IL_0010_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:75>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:75>
 				RuntimeObject* L_5 = V_0;
 				NullCheck(L_5);
 				RuntimeObject* L_6;
 				L_6 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_5);
 				V_1 = ((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_6, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var));
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:76>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:76>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = V_1;
 				NullCheck(L_7);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -5051,7 +5051,7 @@ IL_0010_1:
 
 IL_0028_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:75>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:75>
 				RuntimeObject* L_9 = V_0;
 				NullCheck(L_9);
 				bool L_10;
@@ -5073,13 +5073,13 @@ IL_0028_1:
 
 IL_0044:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:78>
 		DebugUIHandlerCanvas_Rebuild_m035E60DC55732E3B23E7082C4E7518DB72B756ED(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:79>
 		return;
 	}
 }
-// Method Definition Index: 64628
+// Method Definition Index: 64678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Rebuild_m035E60DC55732E3B23E7082C4E7518DB72B756ED (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5149,11 +5149,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Rebuild_m035E60DC55
 	int32_t G_B18_0 = 0;
 	int32_t G_B23_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:84>
 		Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554* L_0 = __this->___m_PrefabsMap;
 		NullCheck(L_0);
 		Dictionary_2_Clear_m6B2DCDDD73719AE684C19A25C591DD319684C639(L_0, Dictionary_2_Clear_m6B2DCDDD73719AE684C19A25C591DD319684C639_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:85>
 		List_1_t60729D90EC5710C8B2774D6941E86786A2382626* L_1 = __this->___prefabs;
 		NullCheck(L_1);
 		Enumerator_tE48FE2D8152C9B38349AB8B5B9B921D1FFDD68AF L_2;
@@ -5178,11 +5178,11 @@ FINALLY_0076:
 
 IL_001d_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:85>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:85>
 				DebugUIPrefabBundle_t9CBD16AF01B2AF5EC5E4937C1DFDBEFF3F1304A8* L_3;
 				L_3 = Enumerator_get_Current_mC1AE7C3CF2D1A63AA28E06AA606B71AEF0039A5E_inline((&V_10), Enumerator_get_Current_mC1AE7C3CF2D1A63AA28E06AA606B71AEF0039A5E_RuntimeMethod_var);
 				V_11 = L_3;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:87>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:87>
 				DebugUIPrefabBundle_t9CBD16AF01B2AF5EC5E4937C1DFDBEFF3F1304A8* L_4 = V_11;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___type;
@@ -5190,7 +5190,7 @@ IL_001d_1:
 				Type_t* L_6;
 				L_6 = il2cpp_codegen_get_type(L_5, Type_GetType_m71A077E0B5DA3BD1DC0AB9AE387056CFCF56F93F_RuntimeMethod_var, DebugUIHandlerCanvas_Rebuild_m035E60DC55732E3B23E7082C4E7518DB72B756ED_RuntimeMethod_var);
 				V_12 = L_6;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:89>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:89>
 				Type_t* L_7 = V_12;
 				bool L_8;
 				L_8 = Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172(L_7, (Type_t*)NULL, NULL);
@@ -5225,7 +5225,7 @@ IL_004f_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:90>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:90>
 				Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554* L_13 = __this->___m_PrefabsMap;
 				Type_t* L_14 = V_12;
 				DebugUIPrefabBundle_t9CBD16AF01B2AF5EC5E4937C1DFDBEFF3F1304A8* L_15 = V_11;
@@ -5241,7 +5241,7 @@ IL_006a_1:
 
 IL_006b_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:85>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:85>
 				bool L_17;
 				L_17 = Enumerator_MoveNext_m355B90EC24729F2B145E9F4D9A99072DE4D2E014((&V_10), Enumerator_MoveNext_m355B90EC24729F2B145E9F4D9A99072DE4D2E014_RuntimeMethod_var);
 				if (L_17)
@@ -5261,11 +5261,11 @@ IL_006b_1:
 
 IL_0085:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:93>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_18 = __this->___m_UIPanels;
 		NullCheck(L_18);
 		List_1_Clear_m284371DF436C6C0DC689FDD377CD136FE4FF569A_inline(L_18, List_1_Clear_m284371DF436C6C0DC689FDD377CD136FE4FF569A_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:95>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_19;
 		L_19 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -5273,21 +5273,21 @@ IL_0085:
 		int32_t L_20;
 		L_20 = DebugManager_GetState_mA45CEE821FEFFF5A7546DA822FD046F63FEF37CF(L_19, NULL);
 		__this->___m_DebugTreeState = L_20;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:96>
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_21;
 		L_21 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		NullCheck(L_21);
 		ReadOnlyCollection_1_tF0FFDCC1E1E5FFF308EA742DAB59C57038E63299* L_22;
 		L_22 = DebugManager_get_panels_m6D2F1002F12979053200CD6A29CCED2635F12F6E(L_21, NULL);
 		V_0 = L_22;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:100>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_23;
 		L_23 = Component_GetComponentInParent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m9266965D02368C3A64AED51B741DA840A0966FE3(__this, Component_GetComponentInParent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m9266965D02368C3A64AED51B741DA840A0966FE3_RuntimeMethod_var);
 		NullCheck(L_23);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_24;
 		L_24 = RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488(L_23, NULL);
 		V_1 = L_24;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:101>
 		float L_25;
 		L_25 = Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline((&V_1), NULL);
 		float L_26;
@@ -5296,7 +5296,7 @@ IL_0085:
 		float L_27;
 		L_27 = Math_Min_mE913811A2F7566294BF4649A434282634E7254B3(L_25, L_26, NULL);
 		V_2 = L_27;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:102>
 		float L_28 = V_2;
 		int32_t L_29;
 		L_29 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
@@ -5305,23 +5305,23 @@ IL_0085:
 		int32_t L_31;
 		L_31 = Math_Min_m53C488772A34D53917BCA2A491E79A0A5356ED52(L_29, L_30, NULL);
 		V_3 = ((float)(L_28/((float)L_31)));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:104>
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_32;
 		L_32 = Screen_get_safeArea_m2ADAD6C36CC5DB40CC2DAD300DD1DF7CA4DF2525(NULL);
 		V_4 = L_32;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:105>
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_5), (5.0f), (5.0f), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:106>
 		float L_33;
 		L_33 = Rect_get_xMin_mE89C40702926D016A633399E20DB9501E251630D_inline((&V_4), NULL);
 		float L_34 = V_3;
 		V_6 = ((float)il2cpp_codegen_multiply(L_33, L_34));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:107>
 		float L_35;
 		L_35 = Rect_get_yMin_mB19848FB25DE61EDF958F7A22CFDD86DE103062F_inline((&V_4), NULL);
 		float L_36 = V_3;
 		V_7 = ((float)il2cpp_codegen_multiply(((-L_35)), L_36));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:108>
 		float L_37 = V_6;
 		float L_38 = V_7;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39;
@@ -5331,9 +5331,9 @@ IL_0085:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_41;
 		L_41 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_39, L_40, NULL);
 		V_8 = L_41;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:111>
 		V_9 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:112>
 		ReadOnlyCollection_1_tF0FFDCC1E1E5FFF308EA742DAB59C57038E63299* L_42 = V_0;
 		NullCheck(L_42);
 		RuntimeObject* L_43;
@@ -5373,13 +5373,13 @@ IL_026a:
 
 IL_0131_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:112>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:112>
 				RuntimeObject* L_46 = V_14;
 				NullCheck(L_46);
 				Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_47;
 				L_47 = InterfaceFuncInvoker0< Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* >::Invoke(0, IEnumerator_1_tA2A0171F4D8D4B815DB1910FC01B4E7E4A30E759_il2cpp_TypeInfo_var, L_46);
 				V_15 = L_47;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:114>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:114>
 				Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_48 = V_15;
 				NullCheck(L_48);
 				bool L_49;
@@ -5441,13 +5441,13 @@ IL_0175_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:115>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:115>
 				goto IL_0250_1;
 			}
 
 IL_0180_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:117>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:117>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_59 = __this->___panelPrefab;
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_60;
 				L_60 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -5458,7 +5458,7 @@ IL_0180_1:
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_62;
 				L_62 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_61, NULL);
 				V_16 = L_62;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:118>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:118>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_63 = V_16;
 				Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_64 = V_15;
 				NullCheck(L_64);
@@ -5466,18 +5466,18 @@ IL_0180_1:
 				L_65 = Panel_get_displayName_m186C10E927B2800035B328BD9A40D8B5FB3D4EE4_inline(L_64, NULL);
 				NullCheck(L_63);
 				Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_63, L_65, NULL);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:121>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:121>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_66 = V_16;
 				NullCheck(L_66);
 				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_67;
 				L_67 = GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4(L_66, GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4_RuntimeMethod_var);
 				V_17 = L_67;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:122>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:122>
 				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_68 = V_17;
 				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_69 = V_8;
 				NullCheck(L_68);
 				RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_68, L_69, NULL);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:123>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:123>
 				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_70 = V_17;
 				float L_71;
 				L_71 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_4), NULL);
@@ -5485,42 +5485,42 @@ IL_0180_1:
 				float L_73 = V_7;
 				NullCheck(L_70);
 				RectTransform_SetSizeWithCurrentAnchors_m53A04549B7687A1DEA2C7484E56D89809390CE44(L_70, 1, ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_71, L_72)), ((float)il2cpp_codegen_multiply((2.0f), L_73)))), NULL);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:126>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:126>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_74 = V_16;
 				NullCheck(L_74);
 				DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_75;
 				L_75 = GameObject_GetComponent_TisDebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1_mE5A861A527E7E300EAB7A5B188492162C012104E(L_74, GameObject_GetComponent_TisDebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1_mE5A861A527E7E300EAB7A5B188492162C012104E_RuntimeMethod_var);
 				V_18 = L_75;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:127>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:127>
 				DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_76 = V_18;
 				Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_77 = V_15;
 				NullCheck(L_76);
 				DebugUIHandlerPanel_SetPanel_mC9EE00598AED6937770AE24C09F5305B7EBDE271(L_76, L_77, NULL);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:128>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:128>
 				DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_78 = V_18;
 				NullCheck(L_78);
 				L_78->___Canvas = __this;
 				Il2CppCodeGenWriteBarrier((void**)(&L_78->___Canvas), (void*)__this);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:129>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:129>
 				List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_79 = __this->___m_UIPanels;
 				DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_80 = V_18;
 				NullCheck(L_79);
 				List_1_Add_m88954D8FE05E5DD400224837CA8B93161706B145_inline(L_79, L_80, List_1_Add_m88954D8FE05E5DD400224837CA8B93161706B145_RuntimeMethod_var);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:130>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:130>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_81 = V_16;
 				NullCheck(L_81);
 				DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_82;
 				L_82 = GameObject_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m6A57E4E0B2D805BCF09A1034F743FF4EB223CC7F(L_81, GameObject_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m6A57E4E0B2D805BCF09A1034F743FF4EB223CC7F_RuntimeMethod_var);
 				V_19 = L_82;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:131>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:131>
 				V_20 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:132>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:132>
 				Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_83 = V_15;
 				DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_84 = V_19;
 				NullCheck(L_84);
 				RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_85 = L_84->___contentHolder;
 				DebugUIHandlerCanvas_Traverse_m7C1AB7935DE310A3493083E3B42DABECD756907D(__this, L_83, L_85, (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL, (&V_20), NULL);
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:134>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:134>
 				DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_86 = V_20;
 				bool L_87;
 				L_87 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_86, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -5563,7 +5563,7 @@ IL_0243_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:136>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:136>
 				DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_95 = V_20;
 				V_9 = L_95;
 			}
@@ -5574,7 +5574,7 @@ IL_024f_1:
 
 IL_0250_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:112>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:112>
 				RuntimeObject* L_96 = V_14;
 				NullCheck(L_96);
 				bool L_97;
@@ -5596,15 +5596,15 @@ IL_0250_1:
 
 IL_026b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:140>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:140>
 		int32_t L_98 = __this->___m_SelectedPanel;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_99 = V_9;
 		DebugUIHandlerCanvas_ActivatePanel_mA608E38437FBD80E35B37FC859CE5E8C4741D808(__this, L_98, L_99, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:141>
 		return;
 	}
 }
-// Method Definition Index: 64629
+// Method Definition Index: 64679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Traverse_m7C1AB7935DE310A3493083E3B42DABECD756907D (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, RuntimeObject* ___0_container, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_parentTransform, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___2_parentUIHandler, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1** ___3_selectedHandler, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5666,16 +5666,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_Traverse_m7C1AB7935
 	int32_t G_B29_0 = 0;
 	int32_t G_B36_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:145>
 		V_0 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:147>
 		V_1 = 0;
 		goto IL_01df;
 	}
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:149>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:149>
 		RuntimeObject* L_0 = ___0_container;
 		NullCheck(L_0);
 		ObservableList_1_tA2EE47FA1DF709EB5C98A99799E1701D66260C08* L_1;
@@ -5685,7 +5685,7 @@ IL_000a:
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_3;
 		L_3 = ObservableList_1_get_Item_m1F4A7F428EB3A3A76BCCFB658764160578DA7719(L_1, L_2, ObservableList_1_get_Item_m1F4A7F428EB3A3A76BCCFB658764160578DA7719_RuntimeMethod_var);
 		V_2 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:151>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:151>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_4 = V_2;
 		NullCheck(L_4);
 		bool L_5;
@@ -5719,13 +5719,13 @@ IL_0029:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:152>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:152>
 		goto IL_01db;
 	}
 
 IL_0034:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:156>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:156>
 		Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554* L_9 = __this->___m_PrefabsMap;
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_10 = V_2;
 		NullCheck(L_10);
@@ -5742,7 +5742,7 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:158>
 		Dictionary_2_t0DF082D543936AF873C34E8274B97120CB396554* L_14 = __this->___m_PrefabsMap;
 		NullCheck(L_14);
 		Enumerator_tAB61826F6B2A50F15AB082CEF759D9DB595870C1 L_15;
@@ -5767,11 +5767,11 @@ FINALLY_009a:
 
 IL_0061_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:158>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:158>
 				KeyValuePair_2_tE118A8E7464B3B0C137BDDDF9FBA5018AC059046 L_16;
 				L_16 = Enumerator_get_Current_m464CF5F960CEEE73383250BEB7433E974B3D60C4_inline((&V_10), Enumerator_get_Current_m464CF5F960CEEE73383250BEB7433E974B3D60C4_RuntimeMethod_var);
 				V_11 = L_16;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:160>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:160>
 				Type_t* L_17;
 				L_17 = KeyValuePair_2_get_Key_mEF3330075BBBE808ED617A800E2EBFCA669FF9DF_inline((&V_11), KeyValuePair_2_get_Key_mEF3330075BBBE808ED617A800E2EBFCA669FF9DF_RuntimeMethod_var);
 				Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_18 = V_2;
@@ -5789,11 +5789,11 @@ IL_0061_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:162>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:162>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22;
 				L_22 = KeyValuePair_2_get_Value_mCDF04E76652DA1F6EBF03804F09408490B33C7A0_inline((&V_11), KeyValuePair_2_get_Value_mCDF04E76652DA1F6EBF03804F09408490B33C7A0_RuntimeMethod_var);
 				V_3 = L_22;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:163>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:163>
 				goto IL_0098_1;
 			}
 
@@ -5803,7 +5803,7 @@ IL_008e_1:
 
 IL_008f_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:158>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:158>
 				bool L_23;
 				L_23 = Enumerator_MoveNext_m07A1E82BA021CE93419527779399F5DE37180A6F((&V_10), Enumerator_MoveNext_m07A1E82BA021CE93419527779399F5DE37180A6F_RuntimeMethod_var);
 				if (L_23)
@@ -5829,7 +5829,7 @@ IL_00a9:
 
 IL_00aa:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:168>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:168>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -5842,7 +5842,7 @@ IL_00aa:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:170>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:170>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_27 = V_2;
 		NullCheck(L_27);
 		Type_t* L_28;
@@ -5878,13 +5878,13 @@ IL_00cf:
 		L_31 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B20_1, G_B20_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_31, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:171>
 		goto IL_01db;
 	}
 
 IL_00df:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:174>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:174>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32 = V_3;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = ___1_parentTransform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -5894,7 +5894,7 @@ IL_00df:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35;
 		L_35 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_34, NULL);
 		V_4 = L_35;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:175>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:175>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36 = V_4;
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_37 = V_2;
 		NullCheck(L_37);
@@ -5902,13 +5902,13 @@ IL_00df:
 		L_38 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_37, NULL);
 		NullCheck(L_36);
 		Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_36, L_38, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:176>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_39 = V_4;
 		NullCheck(L_39);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_40;
 		L_40 = GameObject_GetComponent_TisDebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1_mDDAC5639CCCD1277DED622CB58EA0D7C4626B07D(L_39, GameObject_GetComponent_TisDebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1_mDDAC5639CCCD1277DED622CB58EA0D7C4626B07D_RuntimeMethod_var);
 		V_5 = L_40;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:178>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:178>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_41 = V_5;
 		bool L_42;
 		L_42 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_41, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -5920,7 +5920,7 @@ IL_00df:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:180>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_44 = V_2;
 		NullCheck(L_44);
 		Type_t* L_45;
@@ -5956,13 +5956,13 @@ IL_012b:
 		L_48 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B25_1, G_B25_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_48, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:181>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:181>
 		goto IL_01db;
 	}
 
 IL_013b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:184>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:184>
 		String_t* L_49 = __this->___m_CurrentQueryPath;
 		bool L_50;
 		L_50 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_49, NULL);
@@ -5999,7 +5999,7 @@ IL_015c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:186>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:186>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1** L_56 = ___3_selectedHandler;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_57 = V_5;
 		*((RuntimeObject**)L_56) = (RuntimeObject*)L_57;
@@ -6008,7 +6008,7 @@ IL_015c:
 
 IL_0169:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:189>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:189>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_58 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_59;
@@ -6021,7 +6021,7 @@ IL_0169:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:189>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:189>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_61 = V_0;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_62 = V_5;
 		NullCheck(L_61);
@@ -6030,31 +6030,31 @@ IL_0169:
 
 IL_017f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:190>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:190>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_63 = V_5;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_64 = V_0;
 		NullCheck(L_63);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_63, L_64, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:191>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:191>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_65 = V_5;
 		V_0 = L_65;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:192>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:192>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_66 = V_5;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_67 = ___2_parentUIHandler;
 		NullCheck(L_66);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_66, L_67, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:193>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:193>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_68 = V_5;
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_69 = V_2;
 		NullCheck(L_68);
 		VirtualActionInvoker1< Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* >::Invoke(5, L_68, L_69);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:195>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:195>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_70 = V_4;
 		NullCheck(L_70);
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_71;
 		L_71 = GameObject_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m6A57E4E0B2D805BCF09A1034F743FF4EB223CC7F(L_70, GameObject_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m6A57E4E0B2D805BCF09A1034F743FF4EB223CC7F_RuntimeMethod_var);
 		V_6 = L_71;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:196>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:196>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_72 = V_6;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_73;
@@ -6087,7 +6087,7 @@ IL_01c0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:197>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:197>
 		RuntimeObject* L_77 = V_7;
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_78 = V_6;
 		NullCheck(L_78);
@@ -6103,14 +6103,14 @@ IL_01da:
 
 IL_01db:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:147>
 		int32_t L_82 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_82, 1));
 	}
 
 IL_01df:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:147>
 		int32_t L_83 = V_1;
 		RuntimeObject* L_84 = ___0_container;
 		NullCheck(L_84);
@@ -6127,11 +6127,11 @@ IL_01df:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:199>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:199>
 		return;
 	}
 }
-// Method Definition Index: 64630
+// Method Definition Index: 64680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerCanvas_GetWidgetFromPath_mD5CB2171F21E6300C270800005853C2D32D3095C (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, String_t* ___0_queryPath, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6158,7 +6158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		NullCheck(L_1);
 		L_1->___queryPath = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___queryPath), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:203>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:203>
 		U3CU3Ec__DisplayClass14_0_t37CE54F4C65A211F186E0F6CB422A8F64326CB01* L_3 = V_0;
 		NullCheck(L_3);
 		String_t* L_4 = L_3->___queryPath;
@@ -6172,23 +6172,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:204>
 		V_3 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
 		goto IL_004d;
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:206>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:206>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_7 = __this->___m_UIPanels;
 		int32_t L_8 = __this->___m_SelectedPanel;
 		NullCheck(L_7);
 		DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_9;
 		L_9 = List_1_get_Item_m7EA65C60C848B017BFDB3E6E65E48ADA5137A843(L_7, L_8, List_1_get_Item_m7EA65C60C848B017BFDB3E6E65E48ADA5137A843_RuntimeMethod_var);
 		V_1 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:208>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:209>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:210>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:208>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:209>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:210>
 		DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_10 = V_1;
 		NullCheck(L_10);
 		DebugUIHandlerWidgetU5BU5D_t201B9DAEA939E2253E4F4DCDCBF3286615907657* L_11;
@@ -6204,12 +6204,12 @@ IL_0021:
 
 IL_004d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:211>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:211>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_15 = V_3;
 		return L_15;
 	}
 }
-// Method Definition Index: 64631
+// Method Definition Index: 64681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ActivatePanel_mA608E38437FBD80E35B37FC859CE5E8C4741D808 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, int32_t ___0_index, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_selectedWidget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6232,7 +6232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ActivatePanel_mA608
 	Action_1_t566FF172AF42BE1A3BD0D13A9DD36E450CB186E9* G_B5_0 = NULL;
 	List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* G_B5_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:215>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:215>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_0 = __this->___m_UIPanels;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -6245,13 +6245,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ActivatePanel_mA608
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:216>
 		goto IL_00ad;
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:218>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:218>
 		int32_t L_3 = ___0_index;
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_4 = __this->___m_UIPanels;
 		NullCheck(L_4);
@@ -6265,7 +6265,7 @@ IL_0018:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:219>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:219>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_7 = __this->___m_UIPanels;
 		NullCheck(L_7);
 		int32_t L_8;
@@ -6275,7 +6275,7 @@ IL_0018:
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:221>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:221>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_9 = __this->___m_UIPanels;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t695A341F2414591F9C296CBD30C1A448BE1B9F0B_il2cpp_TypeInfo_var);
 		Action_1_t566FF172AF42BE1A3BD0D13A9DD36E450CB186E9* L_10 = ((U3CU3Ec_t695A341F2414591F9C296CBD30C1A448BE1B9F0B_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t695A341F2414591F9C296CBD30C1A448BE1B9F0B_il2cpp_TypeInfo_var))->___U3CU3E9__15_0;
@@ -6305,7 +6305,7 @@ IL_0061:
 	{
 		NullCheck(G_B6_1);
 		List_1_ForEach_m5E00B4FE42A8A6E2D9BFF9CD3404025EC247BD4C(G_B6_1, G_B6_0, List_1_ForEach_m5E00B4FE42A8A6E2D9BFF9CD3404025EC247BD4C_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:222>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:222>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_15 = __this->___m_UIPanels;
 		int32_t L_16 = ___0_index;
 		NullCheck(L_15);
@@ -6316,10 +6316,10 @@ IL_0061:
 		L_18 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_17, NULL);
 		NullCheck(L_18);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_18, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:223>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:223>
 		int32_t L_19 = ___0_index;
 		__this->___m_SelectedPanel = L_19;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:225>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:225>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_20 = ___1_selectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -6332,7 +6332,7 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:226>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:226>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_23 = __this->___m_UIPanels;
 		int32_t L_24 = ___0_index;
 		NullCheck(L_23);
@@ -6346,18 +6346,18 @@ IL_0061:
 
 IL_00a4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:228>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:228>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_27 = ___1_selectedWidget;
 		DebugUIHandlerCanvas_ChangeSelection_mE3D51E1E6390B8C7B5926F26122F8AF2588BF03D(__this, L_27, (bool)1, NULL);
 	}
 
 IL_00ad:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:229>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:229>
 		return;
 	}
 }
-// Method Definition Index: 64632
+// Method Definition Index: 64682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ChangeSelection_mE3D51E1E6390B8C7B5926F26122F8AF2588BF03D (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_widget, bool ___1_fromNext, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6374,7 +6374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ChangeSelection_mE3
 	bool V_5 = false;
 	int32_t G_B12_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:233>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:233>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_widget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6387,13 +6387,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ChangeSelection_mE3
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:234>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:234>
 		goto IL_00bc;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:236>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:236>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3 = __this->___m_SelectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -6406,7 +6406,7 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:237>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:237>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6 = __this->___m_SelectedWidget;
 		NullCheck(L_6);
 		VirtualActionInvoker0::Invoke(7, L_6);
@@ -6414,17 +6414,17 @@ IL_0011:
 
 IL_002d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:239>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:239>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7 = __this->___m_SelectedWidget;
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:240>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:240>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = ___0_widget;
 		__this->___m_SelectedWidget = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SelectedWidget), (void*)L_8);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:241>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:241>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9 = ___0_widget;
 		DebugUIHandlerCanvas_SetScrollTarget_mD305DF6EA8FC2C84F08EDCAE2336DDD15C2E3E86(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:243>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:243>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = __this->___m_SelectedWidget;
 		bool L_11 = ___1_fromNext;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
@@ -6439,7 +6439,7 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:245>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:245>
 		bool L_15 = ___1_fromNext;
 		V_4 = L_15;
 		bool L_16 = V_4;
@@ -6449,14 +6449,14 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:246>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:246>
 		DebugUIHandlerCanvas_SelectNextItem_mF022DBBBACE5AE3F83DACC62AFAE5C74AD29131A(__this, NULL);
 		goto IL_006f;
 	}
 
 IL_0068:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:248>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:248>
 		DebugUIHandlerCanvas_SelectPreviousItem_mFD931025553965A1F5D279142A18F271A0F87D84(__this, NULL);
 	}
 
@@ -6467,7 +6467,7 @@ IL_006f:
 
 IL_0072:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:252>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:252>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_17 = __this->___m_SelectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -6501,7 +6501,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:253>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:253>
 		String_t* L_22 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
 		__this->___m_CurrentQueryPath = L_22;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CurrentQueryPath), (void*)L_22);
@@ -6510,7 +6510,7 @@ IL_0092:
 
 IL_00a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:255>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:255>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_23 = __this->___m_SelectedWidget;
 		NullCheck(L_23);
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_24;
@@ -6528,11 +6528,11 @@ IL_00bb:
 
 IL_00bc:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:257>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:257>
 		return;
 	}
 }
-// Method Definition Index: 64633
+// Method Definition Index: 64683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousItem_mFD931025553965A1F5D279142A18F271A0F87D84 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6545,7 +6545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousItem_
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:261>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:261>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___m_SelectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6558,19 +6558,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousItem_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:262>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:262>
 		goto IL_0033;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:264>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:264>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3 = __this->___m_SelectedWidget;
 		NullCheck(L_3);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_4;
 		L_4 = VirtualFuncInvoker0< DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* >::Invoke(11, L_3);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:266>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:266>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -6583,18 +6583,18 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:267>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:267>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		DebugUIHandlerCanvas_ChangeSelection_mE3D51E1E6390B8C7B5926F26122F8AF2588BF03D(__this, L_8, (bool)0, NULL);
 	}
 
 IL_0033:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:268>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:268>
 		return;
 	}
 }
-// Method Definition Index: 64634
+// Method Definition Index: 64684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectNextPanel_mDEAC3EE25EEEB60C1B1CFBDF0693F629BC6CAE36 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6606,10 +6606,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectNextPanel_mDE
 	int32_t V_0 = 0;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:272>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:272>
 		int32_t L_0 = __this->___m_SelectedPanel;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:273>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:273>
 		int32_t L_1 = V_0;
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_2 = __this->___m_UIPanels;
 		NullCheck(L_2);
@@ -6623,13 +6623,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectNextPanel_mDE
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:274>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:274>
 		V_0 = 0;
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:275>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:275>
 		int32_t L_5 = V_0;
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_6 = __this->___m_UIPanels;
 		NullCheck(L_6);
@@ -6638,14 +6638,14 @@ IL_0021:
 		int32_t L_8;
 		L_8 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_5, 0, ((int32_t)il2cpp_codegen_subtract(L_7, 1)), NULL);
 		V_0 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:276>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:276>
 		int32_t L_9 = V_0;
 		DebugUIHandlerCanvas_ActivatePanel_mA608E38437FBD80E35B37FC859CE5E8C4741D808(__this, L_9, (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:277>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:277>
 		return;
 	}
 }
-// Method Definition Index: 64635
+// Method Definition Index: 64685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousPanel_m8BC52AA79EF5DCDDC00BBBB42AFDB89AEB7D7F34 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6657,10 +6657,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousPanel
 	int32_t V_0 = 0;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:281>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:281>
 		int32_t L_0 = __this->___m_SelectedPanel;
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:282>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:282>
 		int32_t L_1 = V_0;
 		V_1 = (bool)((((int32_t)L_1) < ((int32_t)0))? 1 : 0);
 		bool L_2 = V_1;
@@ -6670,7 +6670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousPanel
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:283>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:283>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_3 = __this->___m_UIPanels;
 		NullCheck(L_3);
 		int32_t L_4;
@@ -6680,7 +6680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectPreviousPanel
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:284>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:284>
 		int32_t L_5 = V_0;
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_6 = __this->___m_UIPanels;
 		NullCheck(L_6);
@@ -6689,14 +6689,14 @@ IL_0020:
 		int32_t L_8;
 		L_8 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_5, 0, ((int32_t)il2cpp_codegen_subtract(L_7, 1)), NULL);
 		V_0 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:285>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:285>
 		int32_t L_9 = V_0;
 		DebugUIHandlerCanvas_ActivatePanel_mA608E38437FBD80E35B37FC859CE5E8C4741D808(__this, L_9, (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:286>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:286>
 		return;
 	}
 }
-// Method Definition Index: 64636
+// Method Definition Index: 64686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectNextItem_mF022DBBBACE5AE3F83DACC62AFAE5C74AD29131A (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6709,7 +6709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectNextItem_mF02
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:290>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:290>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___m_SelectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6722,19 +6722,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SelectNextItem_mF02
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:291>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:291>
 		goto IL_0033;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:293>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:293>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3 = __this->___m_SelectedWidget;
 		NullCheck(L_3);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_4;
 		L_4 = VirtualFuncInvoker0< DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* >::Invoke(12, L_3);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:295>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:295>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -6747,18 +6747,18 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:296>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:296>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		DebugUIHandlerCanvas_ChangeSelection_mE3D51E1E6390B8C7B5926F26122F8AF2588BF03D(__this, L_8, (bool)1, NULL);
 	}
 
 IL_0033:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:297>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:297>
 		return;
 	}
 }
-// Method Definition Index: 64637
+// Method Definition Index: 64687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ChangeSelectionValue_m74FA9A84A4B35EC27B0BCB8F936A829D37F4A5EB (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, float ___0_multiplier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6772,7 +6772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ChangeSelectionValu
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:301>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:301>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___m_SelectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6785,13 +6785,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ChangeSelectionValu
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:302>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:302>
 		goto IL_0051;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:304>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:304>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_3;
 		L_3 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -6799,7 +6799,7 @@ IL_0013:
 		float L_4;
 		L_4 = DebugManager_GetAction_mF49CDA3900720779DADCA26D660A9C08DAC7741C(L_3, 7, NULL);
 		V_0 = (bool)((((int32_t)((((float)L_4) == ((float)(0.0f)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:306>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:306>
 		float L_5 = ___0_multiplier;
 		V_2 = (bool)((((float)L_5) < ((float)(0.0f)))? 1 : 0);
 		bool L_6 = V_2;
@@ -6809,7 +6809,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:307>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:307>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7 = __this->___m_SelectedWidget;
 		bool L_8 = V_0;
 		NullCheck(L_7);
@@ -6819,7 +6819,7 @@ IL_0013:
 
 IL_0044:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:309>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:309>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9 = __this->___m_SelectedWidget;
 		bool L_10 = V_0;
 		NullCheck(L_9);
@@ -6828,11 +6828,11 @@ IL_0044:
 
 IL_0051:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:310>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:310>
 		return;
 	}
 }
-// Method Definition Index: 64638
+// Method Definition Index: 64688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ActivateSelection_m930DEED7D808635689EC11BA9C0C40BDCB31EC88 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6843,7 +6843,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ActivateSelection_m
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:314>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:314>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___m_SelectedWidget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6856,13 +6856,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_ActivateSelection_m
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:315>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:315>
 		goto IL_001f;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:317>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:317>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3 = __this->___m_SelectedWidget;
 		NullCheck(L_3);
 		VirtualActionInvoker0::Invoke(8, L_3);
@@ -6870,11 +6870,11 @@ IL_0013:
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:318>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:318>
 		return;
 	}
 }
-// Method Definition Index: 64639
+// Method Definition Index: 64689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_HandleInput_m68428B2A6A70270746D6B490A99D6AD51F112C98 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6897,7 +6897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_HandleInput_m68428B
 	bool V_9 = false;
 	int32_t G_B9_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:322>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:322>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_0;
 		L_0 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -6912,13 +6912,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_HandleInput_m68428B
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:324>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:324>
 		DebugUIHandlerCanvas_SelectPreviousPanel_m8BC52AA79EF5DCDDC00BBBB42AFDB89AEB7D7F34(__this, NULL);
 	}
 
 IL_0023:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:327>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:327>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_3;
 		L_3 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -6933,13 +6933,13 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:329>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:329>
 		DebugUIHandlerCanvas_SelectNextPanel_mDEAC3EE25EEEB60C1B1CFBDF0693F629BC6CAE36(__this, NULL);
 	}
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:332>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:332>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_6;
 		L_6 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -6954,13 +6954,13 @@ IL_0045:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:333>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:333>
 		DebugUIHandlerCanvas_ActivateSelection_m930DEED7D808635689EC11BA9C0C40BDCB31EC88(__this, NULL);
 	}
 
 IL_0067:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:335>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:335>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_9;
 		L_9 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -6996,7 +6996,7 @@ IL_0088:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:336>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:336>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_14;
 		L_14 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -7012,7 +7012,7 @@ IL_0088:
 
 IL_00ae:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:338>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:338>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_18;
 		L_18 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -7020,7 +7020,7 @@ IL_00ae:
 		float L_19;
 		L_19 = DebugManager_GetAction_mF49CDA3900720779DADCA26D660A9C08DAC7741C(L_18, 6, NULL);
 		V_0 = L_19;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:339>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:339>
 		float L_20 = V_0;
 		V_7 = (bool)((((int32_t)((((float)L_20) == ((float)(0.0f)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_21 = V_7;
@@ -7030,14 +7030,14 @@ IL_00ae:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:340>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:340>
 		float L_22 = V_0;
 		DebugUIHandlerCanvas_ChangeSelectionValue_m74FA9A84A4B35EC27B0BCB8F936A829D37F4A5EB(__this, L_22, NULL);
 	}
 
 IL_00d3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:342>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:342>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_23;
 		L_23 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -7045,7 +7045,7 @@ IL_00d3:
 		float L_24;
 		L_24 = DebugManager_GetAction_mF49CDA3900720779DADCA26D660A9C08DAC7741C(L_23, 5, NULL);
 		V_1 = L_24;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:343>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:343>
 		float L_25 = V_1;
 		V_8 = (bool)((((int32_t)((((float)L_25) == ((float)(0.0f)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_26 = V_8;
@@ -7055,7 +7055,7 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:345>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:345>
 		float L_27 = V_1;
 		V_9 = (bool)((((float)L_27) < ((float)(0.0f)))? 1 : 0);
 		bool L_28 = V_9;
@@ -7065,14 +7065,14 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:346>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:346>
 		DebugUIHandlerCanvas_SelectNextItem_mF022DBBBACE5AE3F83DACC62AFAE5C74AD29131A(__this, NULL);
 		goto IL_010f;
 	}
 
 IL_0108:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:348>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:348>
 		DebugUIHandlerCanvas_SelectPreviousItem_mFD931025553965A1F5D279142A18F271A0F87D84(__this, NULL);
 	}
 
@@ -7082,11 +7082,11 @@ IL_010f:
 
 IL_0110:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:350>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:350>
 		return;
 	}
 }
-// Method Definition Index: 64640
+// Method Definition Index: 64690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SetScrollTarget_mD305DF6EA8FC2C84F08EDCAE2336DDD15C2E3E86 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7100,7 +7100,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas_SetScrollTarget_mD3
 	bool V_0 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:354>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:354>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_0 = __this->___m_UIPanels;
 		if (!L_0)
 		{
@@ -7146,7 +7146,7 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:355>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:355>
 		List_1_t58474FE9542ACA4091CD798BCE2CD3F27FB2D6FA* L_9 = __this->___m_UIPanels;
 		int32_t L_10 = __this->___m_SelectedPanel;
 		NullCheck(L_9);
@@ -7159,11 +7159,11 @@ IL_0036:
 
 IL_0052:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:356>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:356>
 		return;
 	}
 }
-// Method Definition Index: 64641
+// Method Definition Index: 64691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas__ctor_m98615720A510A28352CA09B092C5AF43FC27C776 (DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7179,7 +7179,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerCanvas__ctor_m98615720A510
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64642
+// Method Definition Index: 64692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m97BA6E5961CD1B001BBCA2054508710317780160 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7196,7 +7196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m97BA6E5961CD1B001BBCA205
 		return;
 	}
 }
-// Method Definition Index: 64643
+// Method Definition Index: 64693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m775C4B6FC2C623756041294726B7DA41A73D4926 (U3CU3Ec_t695A341F2414591F9C296CBD30C1A448BE1B9F0B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7204,12 +7204,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m775C4B6FC2C62375604129472
 		return;
 	}
 }
-// Method Definition Index: 64644
+// Method Definition Index: 64694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CRebuildU3Eb__12_0_m0B768BF30ADC6380A48FEBAAE47297DE18E12394 (U3CU3Ec_t695A341F2414591F9C296CBD30C1A448BE1B9F0B* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_x, const RuntimeMethod* method) 
 {
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:114>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_x;
 		NullCheck(L_0);
 		bool L_1;
@@ -7238,11 +7238,11 @@ IL_0014:
 		return (bool)G_B3_0;
 	}
 }
-// Method Definition Index: 64645
+// Method Definition Index: 64695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CActivatePanelU3Eb__15_0_m178DE0B54B076B42EE28B1256BC18545966CA344 (U3CU3Ec_t695A341F2414591F9C296CBD30C1A448BE1B9F0B* __this, DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* ___0_p, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:221>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:221>
 		DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* L_0 = ___0_p;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -7260,7 +7260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CActivatePanelU3Eb__15_0_m178D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64646
+// Method Definition Index: 64696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass14_0__ctor_m861EA10CA07D6929E70405A3BA2BA284C590C739 (U3CU3Ec__DisplayClass14_0_t37CE54F4C65A211F186E0F6CB422A8F64326CB01* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7268,11 +7268,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass14_0__ctor_m861EA10
 		return;
 	}
 }
-// Method Definition Index: 64647
+// Method Definition Index: 64697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass14_0_U3CGetWidgetFromPathU3Eb__0_mF4214EF157153DCDF6CDE37D01DD63581EF7AF63 (U3CU3Ec__DisplayClass14_0_t37CE54F4C65A211F186E0F6CB422A8F64326CB01* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_w, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:210>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs:210>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_w;
 		NullCheck(L_0);
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_1;
@@ -7294,7 +7294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass14_0_U3CGetWidgetFr
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64648
+// Method Definition Index: 64698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetWidget_mFBE0123D585E284425748A780F55D4FB030388CD (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7319,20 +7319,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetWidget_mFBE0123D5
 	DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* G_B3_0 = NULL;
 	DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* G_B3_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:31>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:32>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790_mFED559A3B19C840A1DC752BE8AB8C070517CBBA4(__this, DebugUIHandlerWidget_CastWidget_TisColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790_mFED559A3B19C840A1DC752BE8AB8C070517CBBA4_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:33>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:34>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -7340,75 +7340,75 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetWidget_mFBE0123D5
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:36>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_6 = __this->___fieldR;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_7 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_7, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_0_mBAFD5BD05F214AC2AB8E17AEBEB13FA1381E17EC_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		L_6->___getter = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___getter), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:37>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_8 = __this->___fieldR;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_9 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_9, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_1_m2967C435E96AB4E261D1338BA62BF4D99A6D4CE3_RuntimeMethod_var), NULL);
 		NullCheck(L_8);
 		L_8->___setter = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___setter), (void*)L_9);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:38>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_10 = __this->___fieldR;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_11 = __this->___fieldG;
 		NullCheck(L_10);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_10, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:39>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_12 = __this->___fieldR;
 		DebugUIHandlerColor_SetupSettings_mE3ED3D6152635D1EEB1D5076089E0588957E9E46(__this, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:41>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_13 = __this->___fieldG;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_14 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_14, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_2_m69B6AA580A85659F23F70B1460442019B83343C6_RuntimeMethod_var), NULL);
 		NullCheck(L_13);
 		L_13->___getter = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&L_13->___getter), (void*)L_14);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:42>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_15 = __this->___fieldG;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_16 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_16, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_3_m54A73A1D77BCC317E3F597AD6A2E7829739304C3_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
 		L_15->___setter = L_16;
 		Il2CppCodeGenWriteBarrier((void**)(&L_15->___setter), (void*)L_16);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:43>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_17 = __this->___fieldG;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_18 = __this->___fieldR;
 		NullCheck(L_17);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_17, L_18, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:44>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_19 = __this->___fieldG;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_20 = __this->___fieldB;
 		NullCheck(L_19);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_19, L_20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:45>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_21 = __this->___fieldG;
 		DebugUIHandlerColor_SetupSettings_mE3ED3D6152635D1EEB1D5076089E0588957E9E46(__this, L_21, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:47>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_22 = __this->___fieldB;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_23 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_23, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_4_m408843B0828821EE347D7DE706C7A405F0FDC871_RuntimeMethod_var), NULL);
 		NullCheck(L_22);
 		L_22->___getter = L_23;
 		Il2CppCodeGenWriteBarrier((void**)(&L_22->___getter), (void*)L_23);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:48>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_24 = __this->___fieldB;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_25 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_25, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_5_m436E90BB8D0498318BD2634574361FB231DFF66D_RuntimeMethod_var), NULL);
 		NullCheck(L_24);
 		L_24->___setter = L_25;
 		Il2CppCodeGenWriteBarrier((void**)(&L_24->___setter), (void*)L_25);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:49>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_26 = __this->___fieldB;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_27 = __this->___fieldG;
 		NullCheck(L_26);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_26, L_27, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:50>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_28 = __this->___fieldB;
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_29 = __this->___m_Field;
 		NullCheck(L_29);
@@ -7437,10 +7437,10 @@ IL_0140:
 	{
 		NullCheck(G_B3_1);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(G_B3_1, G_B3_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:51>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_32 = __this->___fieldB;
 		DebugUIHandlerColor_SetupSettings_mE3ED3D6152635D1EEB1D5076089E0588957E9E46(__this, L_32, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:53>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_33 = __this->___fieldA;
 		NullCheck(L_33);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34;
@@ -7450,35 +7450,35 @@ IL_0140:
 		bool L_36 = L_35->___showAlpha;
 		NullCheck(L_34);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_34, L_36, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:54>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_37 = __this->___fieldA;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_38 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_38, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_6_mADC9E3769B689A784BAE829BD1B84EF6F0FEFE94_RuntimeMethod_var), NULL);
 		NullCheck(L_37);
 		L_37->___getter = L_38;
 		Il2CppCodeGenWriteBarrier((void**)(&L_37->___getter), (void*)L_38);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:55>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_39 = __this->___fieldA;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_40 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_40, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetWidgetU3Eb__9_7_m8D466921CECBD6390902A54733F9CD84DE7C7209_RuntimeMethod_var), NULL);
 		NullCheck(L_39);
 		L_39->___setter = L_40;
 		Il2CppCodeGenWriteBarrier((void**)(&L_39->___setter), (void*)L_40);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:56>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_41 = __this->___fieldA;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_42 = __this->___fieldB;
 		NullCheck(L_41);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_41, L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:57>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_43 = __this->___fieldA;
 		DebugUIHandlerColor_SetupSettings_mE3ED3D6152635D1EEB1D5076089E0588957E9E46(__this, L_43, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:59>
 		DebugUIHandlerColor_UpdateColor_m0D7C0E504BECE85E4E0A47F9D69DA52B2E7ABD94(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:60>
 		return;
 	}
 }
-// Method Definition Index: 64649
+// Method Definition Index: 64699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetValue_m076FEA35FD3244F27C5B751CD68071091FFD0B60 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, float ___0_x, bool ___1_r, bool ___2_g, bool ___3_b, bool ___4_a, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7494,13 +7494,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetValue_m076FEA35FD
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:64>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Field_1_GetValue_m0968A99BCF67D6015EE73587828342E31B9F3E76(L_0, Field_1_GetValue_m0968A99BCF67D6015EE73587828342E31B9F3E76_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:65>
 		bool L_2 = ___1_r;
 		V_1 = L_2;
 		bool L_3 = V_1;
@@ -7510,14 +7510,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetValue_m076FEA35FD
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:65>
 		float L_4 = ___0_x;
 		(&V_0)->___r = L_4;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:66>
 		bool L_5 = ___2_g;
 		V_2 = L_5;
 		bool L_6 = V_2;
@@ -7527,14 +7527,14 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:66>
 		float L_7 = ___0_x;
 		(&V_0)->___g = L_7;
 	}
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:67>
 		bool L_8 = ___3_b;
 		V_3 = L_8;
 		bool L_9 = V_3;
@@ -7544,14 +7544,14 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:67>
 		float L_10 = ___0_x;
 		(&V_0)->___b = L_10;
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:68>
 		bool L_11 = ___4_a;
 		V_4 = L_11;
 		bool L_12 = V_4;
@@ -7561,25 +7561,25 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:68>
 		float L_13 = ___0_x;
 		(&V_0)->___a = L_13;
 	}
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:69>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_14 = __this->___m_Field;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_0;
 		NullCheck(L_14);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(16, L_14, L_15);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:70>
 		DebugUIHandlerColor_UpdateColor_m0D7C0E504BECE85E4E0A47F9D69DA52B2E7ABD94(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 64650
+// Method Definition Index: 64700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetupSettings_mE3ED3D6152635D1EEB1D5076089E0588957E9E46 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* ___0_field, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7592,40 +7592,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_SetupSettings_mE3ED3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:75>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_0 = ___0_field;
 		NullCheck(L_0);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_0, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:76>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_1 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_2 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_2, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetupSettingsU3Eb__11_0_m1650683DE2689FA919F5F23D7B3E37C1D1C698FC_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		L_1->___incStepGetter = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___incStepGetter), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:77>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_3 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_4 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_4, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetupSettingsU3Eb__11_1_mFB55DFA1E3A700E6C138C5FBC65EB9A73E7F2970_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		L_3->___incStepMultGetter = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&L_3->___incStepMultGetter), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:78>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_5 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_6 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_6, __this, (intptr_t)((void*)DebugUIHandlerColor_U3CSetupSettingsU3Eb__11_2_mAE4CAA0731F89269A24512B33CFDDD31CD325412_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		L_5->___decimalsGetter = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_5->___decimalsGetter), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:79>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_7 = ___0_field;
 		NullCheck(L_7);
 		DebugUIHandlerIndirectFloatField_Init_m8297DF272ED8D2435861EDB77AABF58290B96840(L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:80>
 		return;
 	}
 }
-// Method Definition Index: 64651
+// Method Definition Index: 64701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerColor_OnSelection_mFA64A94310860C1D786BB00CAE00D4203B323394 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7641,7 +7641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerColor_OnSelection_mFA64A94
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:90>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -7672,7 +7672,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:92>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -7682,7 +7682,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:94>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -7695,7 +7695,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:96>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -7709,7 +7709,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:98>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -7719,13 +7719,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:102>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:103>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -7740,60 +7740,60 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:107>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:108>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64652
+// Method Definition Index: 64702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_OnDeselection_mCFF411453C3E08A1091DA1A89742DE5AC06921F1 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:115>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:116>
 		return;
 	}
 }
-// Method Definition Index: 64653
+// Method Definition Index: 64703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_OnIncrement_m1591CEE2831C84A155719FCA0665C1C4AD877046 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:124>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:125>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:125>
 		return;
 	}
 }
-// Method Definition Index: 64654
+// Method Definition Index: 64704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_OnDecrement_m993B7499D6E2772D6DBA43EDAA40B90550D3F2F1 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:133>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:133>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:134>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:134>
 		return;
 	}
 }
-// Method Definition Index: 64655
+// Method Definition Index: 64705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_OnAction_m2E3B5E2D0D52E3F30759F91754378EA92BC0BD06 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:141>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_1 = __this->___valueToggle;
 		NullCheck(L_1);
@@ -7801,11 +7801,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_OnAction_m2E3B5E2D0D
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:142>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:142>
 		return;
 	}
 }
-// Method Definition Index: 64656
+// Method Definition Index: 64706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_UpdateColor_m0D7C0E504BECE85E4E0A47F9D69DA52B2E7ABD94 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7817,7 +7817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_UpdateColor_m0D7C0E5
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:146>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___colorImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7830,7 +7830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_UpdateColor_m0D7C0E5
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:147>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->___colorImage;
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -7842,11 +7842,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_UpdateColor_m0D7C0E5
 
 IL_0028:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:148>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:148>
 		return;
 	}
 }
-// Method Definition Index: 64657
+// Method Definition Index: 64707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerColor_Next_mE601A99ACB9E92FC1A40C2C952744C5C9372230A (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7861,7 +7861,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:156>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:156>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		bool L_1;
@@ -7895,7 +7895,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:157>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -7904,13 +7904,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:159>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:159>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:161>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:161>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -7923,7 +7923,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:162>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:162>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -7932,7 +7932,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:164>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -7940,12 +7940,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:165>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64658
+// Method Definition Index: 64708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor__ctor_mD6AF38D964CAAC9CC0759F2DE6DC077ABCA25ED6 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7953,7 +7953,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor__ctor_mD6AF38D964CAA
 		return;
 	}
 }
-// Method Definition Index: 64659
+// Method Definition Index: 64709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9_0_mBAFD5BD05F214AC2AB8E17AEBEB13FA1381E17EC (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7963,7 +7963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:36>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
@@ -7972,17 +7972,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		return L_2;
 	}
 }
-// Method Definition Index: 64660
+// Method Definition Index: 64710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_U3CSetWidgetU3Eb__9_1_m2967C435E96AB4E261D1338BA62BF4D99A6D4CE3 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:37>
 		float L_0 = ___0_x;
 		DebugUIHandlerColor_SetValue_m076FEA35FD3244F27C5B751CD68071091FFD0B60(__this, L_0, (bool)1, (bool)0, (bool)0, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64661
+// Method Definition Index: 64711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9_2_m69B6AA580A85659F23F70B1460442019B83343C6 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7992,7 +7992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:41>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
@@ -8001,17 +8001,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		return L_2;
 	}
 }
-// Method Definition Index: 64662
+// Method Definition Index: 64712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_U3CSetWidgetU3Eb__9_3_m54A73A1D77BCC317E3F597AD6A2E7829739304C3 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:42>
 		float L_0 = ___0_x;
 		DebugUIHandlerColor_SetValue_m076FEA35FD3244F27C5B751CD68071091FFD0B60(__this, L_0, (bool)0, (bool)1, (bool)0, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64663
+// Method Definition Index: 64713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9_4_m408843B0828821EE347D7DE706C7A405F0FDC871 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8021,7 +8021,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:47>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
@@ -8030,17 +8030,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		return L_2;
 	}
 }
-// Method Definition Index: 64664
+// Method Definition Index: 64714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_U3CSetWidgetU3Eb__9_5_m436E90BB8D0498318BD2634574361FB231DFF66D (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:48>
 		float L_0 = ___0_x;
 		DebugUIHandlerColor_SetValue_m076FEA35FD3244F27C5B751CD68071091FFD0B60(__this, L_0, (bool)0, (bool)0, (bool)1, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64665
+// Method Definition Index: 64715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9_6_mADC9E3769B689A784BAE829BD1B84EF6F0FEFE94 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8050,7 +8050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:54>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
@@ -8059,43 +8059,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetWidgetU3Eb__9
 		return L_2;
 	}
 }
-// Method Definition Index: 64666
+// Method Definition Index: 64716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerColor_U3CSetWidgetU3Eb__9_7_m8D466921CECBD6390902A54733F9CD84DE7C7209 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:55>
 		float L_0 = ___0_x;
 		DebugUIHandlerColor_SetValue_m076FEA35FD3244F27C5B751CD68071091FFD0B60(__this, L_0, (bool)0, (bool)0, (bool)0, (bool)1, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64667
+// Method Definition Index: 64717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetupSettingsU3Eb__11_0_m1650683DE2689FA919F5F23D7B3E37C1D1C698FC (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:76>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStep;
 		return L_1;
 	}
 }
-// Method Definition Index: 64668
+// Method Definition Index: 64718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetupSettingsU3Eb__11_1_mFB55DFA1E3A700E6C138C5FBC65EB9A73E7F2970 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:77>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStepMult;
 		return L_1;
 	}
 }
-// Method Definition Index: 64669
+// Method Definition Index: 64719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetupSettingsU3Eb__11_2_mAE4CAA0731F89269A24512B33CFDDD31CD325412 (DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerColor.cs:78>
 		ColorField_t6BB20214FF8E76FBA61FE664ACF6FAAF67D7E790* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___decimals;
@@ -8110,7 +8110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerColor_U3CSetupSettingsU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64670
+// Method Definition Index: 64720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80 (DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8125,7 +8125,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_2 = NULL;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:18>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___contentHolder;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -8138,18 +8138,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:19>
 		V_2 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
 		goto IL_0039;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:21>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_3;
 		L_3 = DebugUIHandlerContainer_GetActiveChildren_mB84ADFB63E20AA9B27EF865FE730DC75432598F9(__this, NULL);
 		V_0 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:23>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_4 = V_0;
 		NullCheck(L_4);
 		int32_t L_5;
@@ -8162,14 +8162,14 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:24>
 		V_2 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
 		goto IL_0039;
 	}
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:26>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_7 = V_0;
 		NullCheck(L_7);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8;
@@ -8180,12 +8180,12 @@ IL_002f:
 
 IL_0039:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:27>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9 = V_2;
 		return L_9;
 	}
 }
-// Method Definition Index: 64671
+// Method Definition Index: 64721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB (DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8200,7 +8200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_2 = NULL;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:31>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___contentHolder;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -8213,18 +8213,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:32>
 		V_2 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
 		goto IL_0040;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:34>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_3;
 		L_3 = DebugUIHandlerContainer_GetActiveChildren_mB84ADFB63E20AA9B27EF865FE730DC75432598F9(__this, NULL);
 		V_0 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:36>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_4 = V_0;
 		NullCheck(L_4);
 		int32_t L_5;
@@ -8237,14 +8237,14 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:37>
 		V_2 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
 		goto IL_0040;
 	}
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:39>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_7 = V_0;
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_8 = V_0;
 		NullCheck(L_8);
@@ -8259,12 +8259,12 @@ IL_002f:
 
 IL_0040:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:40>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11 = V_2;
 		return L_11;
 	}
 }
-// Method Definition Index: 64672
+// Method Definition Index: 64722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerContainer_IsDirectChild_mCD24A410A0F20F48BDCBE21A6878072614B9F7FB (DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8288,7 +8288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerContainer_IsDirectChild_mC
 		NullCheck(L_1);
 		L_1->___widget = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___widget), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:44>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3 = __this->___contentHolder;
 		NullCheck(L_3);
 		int32_t L_4;
@@ -8301,15 +8301,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerContainer_IsDirectChild_mC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:45>
 		V_2 = (bool)0;
 		goto IL_0041;
 	}
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:47>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:48>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_6;
 		L_6 = DebugUIHandlerContainer_GetActiveChildren_mB84ADFB63E20AA9B27EF865FE730DC75432598F9(__this, NULL);
 		U3CU3Ec__DisplayClass3_0_t6EE3AAB9FD05A5DA358497C8C65E208D926C626B* L_7 = V_0;
@@ -8323,12 +8323,12 @@ IL_0024:
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:49>
 		bool L_10 = V_2;
 		return L_10;
 	}
 }
-// Method Definition Index: 64673
+// Method Definition Index: 64723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* DebugUIHandlerContainer_GetActiveChildren_mB84ADFB63E20AA9B27EF865FE730DC75432598F9 (DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8352,11 +8352,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t19AF6AA21D8C846ECA36916624E1D052A893C
 	RuntimeObject* V_6 = NULL;
 	List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* V_7 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:53>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_0 = (List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6*)il2cpp_codegen_object_new(List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6_il2cpp_TypeInfo_var);
 		List_1__ctor_m98790EA4982388E2CBA29DB51AD1E619828E0BDF(L_0, List_1__ctor_m98790EA4982388E2CBA29DB51AD1E619828E0BDF_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:55>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1 = __this->___contentHolder;
 		NullCheck(L_1);
 		RuntimeObject* L_2;
@@ -8398,13 +8398,13 @@ IL_006e:
 
 IL_0016_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:55>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:55>
 				RuntimeObject* L_6 = V_1;
 				NullCheck(L_6);
 				RuntimeObject* L_7;
 				L_7 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(1, IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var, L_6);
 				V_2 = ((Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)CastclassClass((RuntimeObject*)L_7, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var));
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:57>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:57>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = V_2;
 				NullCheck(L_8);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
@@ -8420,13 +8420,13 @@ IL_0016_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:58>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:58>
 				goto IL_0050_1;
 			}
 
 IL_0039_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:60>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:60>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = V_2;
 				NullCheck(L_12);
 				bool L_13;
@@ -8439,7 +8439,7 @@ IL_0039_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:61>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:61>
 				List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_15 = V_0;
 				DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16 = V_3;
 				NullCheck(L_15);
@@ -8452,7 +8452,7 @@ IL_004f_1:
 
 IL_0050_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:55>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:55>
 				RuntimeObject* L_17 = V_1;
 				NullCheck(L_17);
 				bool L_18;
@@ -8474,7 +8474,7 @@ IL_0050_1:
 
 IL_006f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:64>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_19 = V_0;
 		V_7 = L_19;
 		goto IL_0074;
@@ -8482,12 +8482,12 @@ IL_006f:
 
 IL_0074:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:65>
 		List_1_t19AF6AA21D8C846ECA36916624E1D052A893C8F6* L_20 = V_7;
 		return L_20;
 	}
 }
-// Method Definition Index: 64674
+// Method Definition Index: 64724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerContainer__ctor_m19965C49C75B009FBA764A4802430855741F3310 (DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8503,7 +8503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerContainer__ctor_m19965C49C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64675
+// Method Definition Index: 64725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass3_0__ctor_m7C972827CF4936AA55AB609E47F79190416DDD2E (U3CU3Ec__DisplayClass3_0_t6EE3AAB9FD05A5DA358497C8C65E208D926C626B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8511,7 +8511,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass3_0__ctor_m7C972827
 		return;
 	}
 }
-// Method Definition Index: 64676
+// Method Definition Index: 64726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass3_0_U3CIsDirectChildU3Eb__0_mE86B269F22B9D136B3B900B71A6540059D336A60 (U3CU3Ec__DisplayClass3_0_t6EE3AAB9FD05A5DA358497C8C65E208D926C626B* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_x, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8521,7 +8521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass3_0_U3CIsDirectChil
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerContainer.cs:48>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_x;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_1 = __this->___widget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -8538,7 +8538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass3_0_U3CIsDirectChil
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64677
+// Method Definition Index: 64727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_OnIncrement_m4339F79F70A2975F699FD3CBEF4865A1E451B5BE (DebugUIHandlerEnumField_t4EBC472237B4F353E30729BE5245DE549534089F* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8559,7 +8559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_OnIncrement_m433
 	bool V_9 = false;
 	int32_t G_B12_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:14>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_0 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_0);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1;
@@ -8573,25 +8573,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_OnIncrement_m433
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:15>
 		goto IL_00f2;
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:17>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_3 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_3);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4;
 		L_4 = EnumField_1_get_enumValues_m0CAD9BD01CB4539D247116B93B586B3412FBD363_inline(L_3, EnumField_1_get_enumValues_m0CAD9BD01CB4539D247116B93B586B3412FBD363_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:18>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_5 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = EnumField_get_currentIndex_m4D47B593DC586CC3A0806A2987F6464718876802(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:20>
 		int32_t L_7 = V_1;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_8 = V_0;
 		NullCheck(L_8);
@@ -8603,14 +8603,14 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:22>
 		V_1 = 0;
 		goto IL_00cf;
 	}
 
 IL_0046:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:26>
 		bool L_10 = ___0_fast;
 		V_4 = L_10;
 		bool L_11 = V_4;
@@ -8620,12 +8620,12 @@ IL_0046:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:30>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_12 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_12);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_13 = L_12->___quickSeparators;
 		V_5 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:31>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_14 = V_5;
 		V_7 = (bool)((((RuntimeObject*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)L_14) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_15 = V_7;
@@ -8635,11 +8635,11 @@ IL_0046:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:33>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_16 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_16);
 		EnumField_InitQuickSeparators_m819096798D533BAFC6541EFCDB7B9DAE8B078D1E(L_16, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:34>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_17 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_17);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_18 = L_17->___quickSeparators;
@@ -8648,21 +8648,21 @@ IL_0046:
 
 IL_0082:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:37>
 		V_6 = 0;
 		goto IL_008e;
 	}
 
 IL_0087:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:38>
 		int32_t L_19 = V_6;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_19, 1));
 	}
 
 IL_008e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:38>
 		int32_t L_20 = V_6;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_21 = V_5;
 		NullCheck(L_21);
@@ -8697,7 +8697,7 @@ IL_00a3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:39>
 		int32_t L_28 = V_6;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_29 = V_5;
 		NullCheck(L_29);
@@ -8709,14 +8709,14 @@ IL_00a3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:41>
 		V_1 = 0;
 		goto IL_00c5;
 	}
 
 IL_00bd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:45>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_31 = V_5;
 		int32_t L_32 = V_6;
 		NullCheck(L_31);
@@ -8732,7 +8732,7 @@ IL_00c5:
 
 IL_00c8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:50>
 		int32_t L_35 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_35, 1));
 	}
@@ -8743,7 +8743,7 @@ IL_00ce:
 
 IL_00cf:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:54>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_36 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_37 = V_0;
 		int32_t L_38 = V_1;
@@ -8752,22 +8752,22 @@ IL_00cf:
 		int32_t L_40 = (L_37)->GetAt(static_cast<il2cpp_array_size_t>(L_39));
 		NullCheck(L_36);
 		VirtualActionInvoker1< int32_t >::Invoke(16, L_36, L_40);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:55>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_41 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		int32_t L_42 = V_1;
 		NullCheck(L_41);
 		EnumField_set_currentIndex_mEB5CA5FE86F8F8F9E2CFD3F08EA06DBC0E794FA7(L_41, L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:56>
 		VirtualActionInvoker0::Invoke(13, __this);
 	}
 
 IL_00f2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 64678
+// Method Definition Index: 64728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_OnDecrement_mADC546644129D9B435D96D6CC681B29A31ACDF62 (DebugUIHandlerEnumField_t4EBC472237B4F353E30729BE5245DE549534089F* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8790,7 +8790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_OnDecrement_mADC
 	bool V_11 = false;
 	int32_t G_B17_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:65>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_0 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_0);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_1;
@@ -8804,25 +8804,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_OnDecrement_mADC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:66>
 		goto IL_0126;
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:68>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_3 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_3);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4;
 		L_4 = EnumField_1_get_enumValues_m0CAD9BD01CB4539D247116B93B586B3412FBD363_inline(L_3, EnumField_1_get_enumValues_m0CAD9BD01CB4539D247116B93B586B3412FBD363_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:69>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_5 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = EnumField_get_currentIndex_m4D47B593DC586CC3A0806A2987F6464718876802(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:71>
 		int32_t L_7 = V_1;
 		V_3 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
 		bool L_8 = V_3;
@@ -8832,7 +8832,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:73>
 		bool L_9 = ___0_fast;
 		V_4 = L_9;
 		bool L_10 = V_4;
@@ -8842,12 +8842,12 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:77>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_11 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_11);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_12 = L_11->___quickSeparators;
 		V_5 = L_12;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:78>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_13 = V_5;
 		V_6 = (bool)((((RuntimeObject*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)L_13) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_14 = V_6;
@@ -8857,11 +8857,11 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:80>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_15 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_15);
 		EnumField_InitQuickSeparators_m819096798D533BAFC6541EFCDB7B9DAE8B078D1E(L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:81>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_16 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_16);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_17 = L_16->___quickSeparators;
@@ -8870,7 +8870,7 @@ IL_0019:
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:84>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_18 = V_5;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_19 = V_5;
 		NullCheck(L_19);
@@ -8883,7 +8883,7 @@ IL_0075:
 
 IL_0082:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:88>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_22 = V_0;
 		NullCheck(L_22);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_22)->max_length)), 1));
@@ -8896,7 +8896,7 @@ IL_008a:
 
 IL_008d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:93>
 		bool L_23 = ___0_fast;
 		V_7 = L_23;
 		bool L_24 = V_7;
@@ -8906,12 +8906,12 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:97>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_25 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_25);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_26 = L_25->___quickSeparators;
 		V_8 = L_26;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:98>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_27 = V_8;
 		V_10 = (bool)((((RuntimeObject*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)L_27) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_28 = V_10;
@@ -8921,11 +8921,11 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:100>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_29 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_29);
 		EnumField_InitQuickSeparators_m819096798D533BAFC6541EFCDB7B9DAE8B078D1E(L_29, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:101>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_30 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_30);
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_31 = L_30->___quickSeparators;
@@ -8934,7 +8934,7 @@ IL_008d:
 
 IL_00c9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:104>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_32 = V_8;
 		NullCheck(L_32);
 		V_9 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_32)->max_length)), 1));
@@ -8943,14 +8943,14 @@ IL_00c9:
 
 IL_00d3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:105>
 		int32_t L_33 = V_9;
 		V_9 = ((int32_t)il2cpp_codegen_subtract(L_33, 1));
 	}
 
 IL_00da:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:105>
 		int32_t L_34 = V_9;
 		if ((((int32_t)L_34) <= ((int32_t)0)))
 		{
@@ -8983,7 +8983,7 @@ IL_00ed:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:106>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_41 = V_8;
 		int32_t L_42 = V_9;
 		NullCheck(L_41);
@@ -8995,7 +8995,7 @@ IL_00ed:
 
 IL_00fc:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:110>
 		int32_t L_45 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_subtract(L_45, 1));
 	}
@@ -9006,7 +9006,7 @@ IL_0102:
 
 IL_0103:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:114>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_46 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_47 = V_0;
 		int32_t L_48 = V_1;
@@ -9015,22 +9015,22 @@ IL_0103:
 		int32_t L_50 = (L_47)->GetAt(static_cast<il2cpp_array_size_t>(L_49));
 		NullCheck(L_46);
 		VirtualActionInvoker1< int32_t >::Invoke(16, L_46, L_50);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:115>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_51 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		int32_t L_52 = V_1;
 		NullCheck(L_51);
 		EnumField_set_currentIndex_mEB5CA5FE86F8F8F9E2CFD3F08EA06DBC0E794FA7(L_51, L_52, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:116>
 		VirtualActionInvoker0::Invoke(13, __this);
 	}
 
 IL_0126:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:117>
 		return;
 	}
 }
-// Method Definition Index: 64679
+// Method Definition Index: 64729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_UpdateValueLabel_m36CA0D43AB06505769BF6D0B38D975D0D42612A3 (DebugUIHandlerEnumField_t4EBC472237B4F353E30729BE5245DE549534089F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9042,13 +9042,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_UpdateValueLabel
 	int32_t V_0 = 0;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:124>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_0 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = EnumField_get_currentIndex_m4D47B593DC586CC3A0806A2987F6464718876802(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:127>
 		int32_t L_2 = V_0;
 		V_1 = (bool)((((int32_t)L_2) < ((int32_t)0))? 1 : 0);
 		bool L_3 = V_1;
@@ -9058,13 +9058,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField_UpdateValueLabel
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:128>
 		V_0 = 0;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:130>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:130>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_4 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_4);
 		GUIContentU5BU5D_t98DA1EEA8D0A2C4AE42CE11C4840B627CADFC503* L_5 = ((EnumField_1_t30102EC7A5D104E7898CDF9F28EBC898AE2A815F*)L_4)->___enumNames;
@@ -9076,11 +9076,11 @@ IL_0017:
 		String_t* L_9;
 		L_9 = GUIContent_get_text_mC6D7981351923AD7F802AC659314BA56DF7F3ED6(L_8, NULL);
 		DebugUIHandlerField_1_SetLabelText_mC3EA4DCE43A514F15595B6BDA02C9F782C8D4792(__this, L_9, DebugUIHandlerField_1_SetLabelText_mC3EA4DCE43A514F15595B6BDA02C9F782C8D4792_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumField.cs:131>
 		return;
 	}
 }
-// Method Definition Index: 64680
+// Method Definition Index: 64730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField__ctor_mF6183B378AF80A25041E59C7116A05CA64F50813 (DebugUIHandlerEnumField_t4EBC472237B4F353E30729BE5245DE549534089F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9102,7 +9102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumField__ctor_mF6183B378
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64681
+// Method Definition Index: 64731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory_SetWidget_m63DB0958ED2BF1EDB8253A3A9F6DB85672438B39 (DebugUIHandlerEnumHistory_t6C92A37EB746F9F9825425BE69CBA080907ADBE0* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9129,7 +9129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory_SetWidget_m63D
 	int32_t G_B3_0 = 0;
 	float G_B6_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:16>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		HistoryEnumField_t3708BFF5BC85F8588A24CA70FB70BCAF188E9E08* L_1 = ((HistoryEnumField_t3708BFF5BC85F8588A24CA70FB70BCAF188E9E08*)IsInstClass((RuntimeObject*)L_0, HistoryEnumField_t3708BFF5BC85F8588A24CA70FB70BCAF188E9E08_il2cpp_TypeInfo_var));
 		if (L_1)
@@ -9155,12 +9155,12 @@ IL_000e:
 IL_0013:
 	{
 		V_0 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:17>
 		int32_t L_3 = V_0;
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_4 = (TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353*)(TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353*)SZArrayNew(TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353_il2cpp_TypeInfo_var, (uint32_t)L_3);
 		__this->___historyValues = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___historyValues), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:18>
 		int32_t L_5 = V_0;
 		if ((((int32_t)L_5) > ((int32_t)0)))
 		{
@@ -9181,14 +9181,14 @@ IL_002b:
 IL_0033:
 	{
 		V_1 = G_B6_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:19>
 		V_2 = 0;
 		goto IL_00ab;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:21>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_7 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___valueLabel;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -9196,7 +9196,7 @@ IL_0038:
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_9;
 		L_9 = Object_Instantiate_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m75BB91E96D4872051FDEF25E4A9E328E748F9F6E(L_7, L_8, Object_Instantiate_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m75BB91E96D4872051FDEF25E4A9E328E748F9F6E_RuntimeMethod_var);
 		V_3 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:22>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_10 = V_3;
 		NullCheck(L_10);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
@@ -9205,14 +9205,14 @@ IL_0038:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_11, NULL);
 		V_4 = L_12;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:23>
 		float* L_13 = (float*)(&(&V_4)->___x);
 		float* L_14 = L_13;
 		float L_15 = *((float*)L_14);
 		int32_t L_16 = V_2;
 		float L_17 = V_1;
 		*((float*)L_14) = (float)((float)il2cpp_codegen_add(L_15, ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_add(L_16, 1))), L_17))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:24>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_18 = V_3;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
@@ -9220,13 +9220,13 @@ IL_0038:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = V_4;
 		NullCheck(L_19);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_19, L_20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:25>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_21 = V_3;
 		NullCheck(L_21);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_22;
 		L_22 = Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888(L_21, Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888_RuntimeMethod_var);
 		V_5 = L_22;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:26>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_23 = V_5;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_24;
 		memset((&L_24), 0, sizeof(L_24));
@@ -9235,21 +9235,21 @@ IL_0038:
 		L_25 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_24, NULL);
 		NullCheck(L_23);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_23, L_25);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:27>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_26 = __this->___historyValues;
 		int32_t L_27 = V_2;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_28 = V_5;
 		NullCheck(L_26);
 		ArrayElementTypeCheck (L_26, L_28);
 		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(L_27), (Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62*)L_28);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:19>
 		int32_t L_29 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_29, 1));
 	}
 
 IL_00ab:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:19>
 		int32_t L_30 = V_2;
 		int32_t L_31 = V_0;
 		V_6 = (bool)((((int32_t)L_30) < ((int32_t)L_31))? 1 : 0);
@@ -9260,14 +9260,14 @@ IL_00ab:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:31>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_33 = ___0_widget;
 		DebugUIHandlerField_1_SetWidget_m2A1B8BD5C4AB0352141F839A45AA55B8175CDAB4(__this, L_33, DebugUIHandlerField_1_SetWidget_m2A1B8BD5C4AB0352141F839A45AA55B8175CDAB4_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:32>
 		return;
 	}
 }
-// Method Definition Index: 64682
+// Method Definition Index: 64732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory_UpdateValueLabel_m8BE6CCDBC0005E5C81A3463462393713D95B2614 (DebugUIHandlerEnumHistory_t6C92A37EB746F9F9825425BE69CBA080907ADBE0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9288,13 +9288,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory_UpdateValueLab
 	int32_t G_B5_0 = 0;
 	int32_t G_B9_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:39>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_0 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = EnumField_get_currentIndex_m4D47B593DC586CC3A0806A2987F6464718876802(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:42>
 		int32_t L_2 = V_0;
 		V_3 = (bool)((((int32_t)L_2) < ((int32_t)0))? 1 : 0);
 		bool L_3 = V_3;
@@ -9304,13 +9304,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory_UpdateValueLab
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:43>
 		V_0 = 0;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:45>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___valueLabel;
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_5 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		NullCheck(L_5);
@@ -9324,10 +9324,10 @@ IL_0017:
 		L_10 = GUIContent_get_text_mC6D7981351923AD7F802AC659314BA56DF7F3ED6(L_9, NULL);
 		NullCheck(L_4);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_4, L_10);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:47>
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_11 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)__this)->___m_Field;
 		V_1 = ((HistoryEnumField_t3708BFF5BC85F8588A24CA70FB70BCAF188E9E08*)IsInstClass((RuntimeObject*)L_11, HistoryEnumField_t3708BFF5BC85F8588A24CA70FB70BCAF188E9E08_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:48>
 		HistoryEnumField_t3708BFF5BC85F8588A24CA70FB70BCAF188E9E08* L_12 = V_1;
 		if (L_12)
 		{
@@ -9351,14 +9351,14 @@ IL_0047:
 IL_004d:
 	{
 		V_2 = G_B5_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:49>
 		V_4 = 0;
 		goto IL_00a2;
 	}
 
 IL_0053:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:51>
 		int32_t L_15 = V_4;
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_16 = __this->___historyValues;
 		NullCheck(L_16);
@@ -9395,7 +9395,7 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:52>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_23 = __this->___historyValues;
 		int32_t L_24 = V_4;
 		NullCheck(L_23);
@@ -9421,14 +9421,14 @@ IL_0072:
 
 IL_009b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:49>
 		int32_t L_35 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_35, 1));
 	}
 
 IL_00a2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:49>
 		int32_t L_36 = V_4;
 		int32_t L_37 = V_2;
 		V_6 = (bool)((((int32_t)L_36) < ((int32_t)L_37))? 1 : 0);
@@ -9439,7 +9439,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:55>
 		bool L_39;
 		L_39 = Behaviour_get_isActiveAndEnabled_mEB4ECCE9761A7016BC619557CEFEA1A30D3BF28A(__this, NULL);
 		V_7 = L_39;
@@ -9450,7 +9450,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:56>
 		RuntimeObject* L_41;
 		L_41 = DebugUIHandlerEnumHistory_RefreshAfterSanitization_m9BAE31D9C443E5C930847EDD01B99FB78A77ACF2(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_42;
@@ -9459,11 +9459,11 @@ IL_00a2:
 
 IL_00c6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 64683
+// Method Definition Index: 64733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DebugUIHandlerEnumHistory_RefreshAfterSanitization_m9BAE31D9C443E5C930847EDD01B99FB78A77ACF2 (DebugUIHandlerEnumHistory_t6C92A37EB746F9F9825425BE69CBA080907ADBE0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9482,7 +9482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DebugUIHandlerEnumHistory_Refr
 		return L_1;
 	}
 }
-// Method Definition Index: 64684
+// Method Definition Index: 64734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory__ctor_m0916E2112F932065DBBAF9F3813C9364E8CA7CE2 (DebugUIHandlerEnumHistory_t6C92A37EB746F9F9825425BE69CBA080907ADBE0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9498,7 +9498,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerEnumHistory__ctor_m0916E21
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64685
+// Method Definition Index: 64735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4__ctor_mA1B6468C0591D678F9997F3BC24D9FBB77DC8C7B (U3CRefreshAfterSanitizationU3Ed__4_tD36DBB20A42B258D7E2C933CEC8C5966B936A8DE* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9508,14 +9508,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4__ctor
 		return;
 	}
 }
-// Method Definition Index: 64686
+// Method Definition Index: 64736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4_System_IDisposable_Dispose_mC1C26EC8604D476A3D451C15B9F9470753A5FE16 (U3CRefreshAfterSanitizationU3Ed__4_tD36DBB20A42B258D7E2C933CEC8C5966B936A8DE* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 64687
+// Method Definition Index: 64737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRefreshAfterSanitizationU3Ed__4_MoveNext_m9C60488CBAA36235D58584F9B11FA56A5E43E90C (U3CRefreshAfterSanitizationU3Ed__4_tD36DBB20A42B258D7E2C933CEC8C5966B936A8DE* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -9562,7 +9562,7 @@ IL_0016:
 IL_0018:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:61>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -9572,7 +9572,7 @@ IL_0018:
 IL_0030:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:62>
 		DebugUIHandlerEnumHistory_t6C92A37EB746F9F9825425BE69CBA080907ADBE0* L_3 = __this->___U3CU3E4__this;
 		NullCheck(L_3);
 		EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* L_4 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)L_3)->___m_Field;
@@ -9587,7 +9587,7 @@ IL_0030:
 		L_8 = Func_1_Invoke_mA967B67675F9F5475EF2DA67722E3876436BF72E_inline(L_7, NULL);
 		NullCheck(L_4);
 		EnumField_set_currentIndex_mEB5CA5FE86F8F8F9E2CFD3F08EA06DBC0E794FA7(L_4, L_8, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:63>
 		DebugUIHandlerEnumHistory_t6C92A37EB746F9F9825425BE69CBA080907ADBE0* L_9 = __this->___U3CU3E4__this;
 		NullCheck(L_9);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_10 = ((DebugUIHandlerField_1_tEEFA31411824C74DD225CC307B0F5405C9052616*)L_9)->___valueLabel;
@@ -9610,11 +9610,11 @@ IL_0030:
 		L_19 = GUIContent_get_text_mC6D7981351923AD7F802AC659314BA56DF7F3ED6(L_18, NULL);
 		NullCheck(L_10);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_10, L_19);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerEnumHistory.cs:64>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 64688
+// Method Definition Index: 64738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m187EBBE4E909383FD956756EC3A3ED66B408DF7E (U3CRefreshAfterSanitizationU3Ed__4_tD36DBB20A42B258D7E2C933CEC8C5966B936A8DE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9622,7 +9622,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3E
 		return L_0;
 	}
 }
-// Method Definition Index: 64689
+// Method Definition Index: 64739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4_System_Collections_IEnumerator_Reset_mC899145E1B57D3F7A421DBD5CA16505B7948E91A (U3CRefreshAfterSanitizationU3Ed__4_tD36DBB20A42B258D7E2C933CEC8C5966B936A8DE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9631,7 +9631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRefreshAfterSanitizationU3Ed__4_System_Collections_IEnumerator_Reset_mC899145E1B57D3F7A421DBD5CA16505B7948E91A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 64690
+// Method Definition Index: 64740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3Ed__4_System_Collections_IEnumerator_get_Current_m080AE81866B34CC4BEDD1D0B670929DD58FA78BA (U3CRefreshAfterSanitizationU3Ed__4_tD36DBB20A42B258D7E2C933CEC8C5966B936A8DE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9647,7 +9647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64698
+// Method Definition Index: 64748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_SetWidget_mEC7E9E29D290619CEE8E85A87B6E299D41B51D4F (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9657,15 +9657,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_SetWidget_mEC7E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:18>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:19>
 		FloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisFloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B_mC87F94C18D268E97C5B98140429935FE1963D77A(__this, DebugUIHandlerWidget_CastWidget_TisFloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B_mC87F94C18D268E97C5B98140429935FE1963D77A_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		FloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -9673,80 +9673,80 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_SetWidget_mEC7E
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:21>
 		DebugUIHandlerFloatField_UpdateValueLabel_m82D62BFA0C18D2A4B2B1A6869F059FD2B7E836B1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 64699
+// Method Definition Index: 64749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerFloatField_OnSelection_m20116B3240DAC17E1A866FFF9762BFC7E5F59D3E (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:32>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:33>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:34>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:35>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64700
+// Method Definition Index: 64750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_OnDeselection_m597ACA65A33D50B70B712F95B687D782FF2187C9 (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:42>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:43>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 64701
+// Method Definition Index: 64751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_OnIncrement_mE2FBC3591F6E33EE3000061CE6FBB4410340B904 (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:52>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerFloatField_ChangeValue_m2D26CF4F074BFC3E8A2699EC4C4F79692FBE986B(__this, L_0, (1.0f), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 64702
+// Method Definition Index: 64752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_OnDecrement_m6DF136E8C97089F9782AD7A295AF9ED038371AC4 (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:61>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerFloatField_ChangeValue_m2D26CF4F074BFC3E8A2699EC4C4F79692FBE986B(__this, L_0, (-1.0f), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 64703
+// Method Definition Index: 64753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_ChangeValue_m2D26CF4F074BFC3E8A2699EC4C4F79692FBE986B (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, bool ___0_fast, float ___1_multiplier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9764,13 +9764,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_ChangeValue_m2D
 	float G_B3_1 = 0.0f;
 	float G_B3_2 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:66>
 		FloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1;
 		L_1 = Field_1_GetValue_m469535C7CB6AA29AAFB942ED8CA01BDF6E586032(L_0, Field_1_GetValue_m469535C7CB6AA29AAFB942ED8CA01BDF6E586032_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:67>
 		float L_2 = V_0;
 		FloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -9806,18 +9806,18 @@ IL_002e:
 	{
 		float L_8 = ___1_multiplier;
 		V_0 = ((float)il2cpp_codegen_add(G_B3_2, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(G_B3_1, G_B3_0)), L_8))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:68>
 		FloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B* L_9 = __this->___m_Field;
 		float L_10 = V_0;
 		NullCheck(L_9);
 		VirtualActionInvoker1< float >::Invoke(16, L_9, L_10);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:69>
 		DebugUIHandlerFloatField_UpdateValueLabel_m82D62BFA0C18D2A4B2B1A6869F059FD2B7E836B1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:70>
 		return;
 	}
 }
-// Method Definition Index: 64704
+// Method Definition Index: 64754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_UpdateValueLabel_m82D62BFA0C18D2A4B2B1A6869F059FD2B7E836B1 (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9829,7 +9829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_UpdateValueLabe
 	}
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:74>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___valueLabel;
 		FloatField_t1B59A5C6B3DE8E8B696383C91240F265B89B753B* L_1 = __this->___m_Field;
 		NullCheck(L_1);
@@ -9847,11 +9847,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField_UpdateValueLabe
 		L_7 = Single_ToString_m3F2C4433B6ADFA5ED8E3F14ED19CD23014E5179D((&V_0), L_6, NULL);
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFloatField.cs:75>
 		return;
 	}
 }
-// Method Definition Index: 64705
+// Method Definition Index: 64755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField__ctor_mA3216AEFF7C140CB330D3E43C590438DA39265C3 (DebugUIHandlerFloatField_t39D4DFCD8DBADE6C0486D995BE9358605DF04CF3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9867,7 +9867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFloatField__ctor_mA3216AEF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64706
+// Method Definition Index: 64756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_SetWidget_m828CBD39A3BD5745A713D2EA05DDA1BACC7B33F5 (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9899,20 +9899,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_SetWidget_m828CBD3
 	int32_t G_B3_0 = 0;
 	float G_B6_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:23>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:24>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisFoldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6_m59D0DC9D17B4413EFFDDB3F73F09C69360B4411B(__this, DebugUIHandlerWidget_CastWidget_TisFoldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6_m59D0DC9D17B4413EFFDDB3F73F09C69360B4411B_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:25>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:26>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -9920,7 +9920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_SetWidget_m828CBD3
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:28>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_6 = __this->___m_Field;
 		NullCheck(L_6);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7;
@@ -9947,7 +9947,7 @@ IL_004a:
 IL_004c:
 	{
 		V_0 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:29>
 		int32_t L_9 = V_0;
 		if ((((int32_t)L_9) > ((int32_t)0)))
 		{
@@ -9968,14 +9968,14 @@ IL_0058:
 IL_0060:
 	{
 		V_1 = G_B6_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:30>
 		V_2 = 0;
 		goto IL_0180;
 	}
 
 IL_0068:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:32>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_11 = __this->___nameLabel;
 		NullCheck(L_11);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
@@ -9988,26 +9988,26 @@ IL_0068:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
 		L_15 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_12, L_14, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
 		V_3 = L_15;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:33>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_3;
 		NullCheck(L_16);
 		LayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A* L_17;
 		L_17 = GameObject_AddComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mCAEF1A4C92D1C856A46417BA645409AE42F005D2(L_16, GameObject_AddComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mCAEF1A4C92D1C856A46417BA645409AE42F005D2_RuntimeMethod_var);
 		NullCheck(L_17);
 		VirtualActionInvoker1< bool >::Invoke(28, L_17, (bool)1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:34>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = V_3;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
 		L_19 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_18, NULL);
 		V_4 = ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_19, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:35>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_20 = __this->___nameLabel;
 		NullCheck(L_20);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_20, NULL);
 		V_5 = ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_21, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:36>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_22 = V_4;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_23 = V_4;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_8), (0.0f), (1.0f), NULL);
@@ -10017,14 +10017,14 @@ IL_0068:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_25 = V_8;
 		NullCheck(L_22);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_22, L_25, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:37>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_26 = V_4;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27;
 		memset((&L_27), 0, sizeof(L_27));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_27), (100.0f), (26.0f), NULL);
 		NullCheck(L_26);
 		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_26, L_27, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:38>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_28 = V_5;
 		NullCheck(L_28);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29;
@@ -10032,45 +10032,45 @@ IL_0068:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
 		L_30 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_29, NULL);
 		V_6 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:39>
 		float* L_31 = (float*)(&(&V_6)->___x);
 		float* L_32 = L_31;
 		float L_33 = *((float*)L_32);
 		int32_t L_34 = V_2;
 		float L_35 = V_1;
 		*((float*)L_32) = (float)((float)il2cpp_codegen_add(L_33, ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_add(L_34, 1))), L_35)), (215.0f)))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:40>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_36 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37 = V_6;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_38;
 		L_38 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_37, NULL);
 		NullCheck(L_36);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_36, L_38, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:41>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_39 = V_4;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_40;
 		memset((&L_40), 0, sizeof(L_40));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_40), (0.0f), (0.5f), NULL);
 		NullCheck(L_39);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_39, L_40, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:42>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_41 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
 		memset((&L_42), 0, sizeof(L_42));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_42), (0.0f), (0.0f), (13.0f), NULL);
 		NullCheck(L_41);
 		Transform_set_eulerAngles_m9F0BC484A7915A51FAB87230644229B75BACA004(L_41, L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:43>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_43 = V_3;
 		NullCheck(L_43);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_44;
 		L_44 = GameObject_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mBE6B722369FF149589D3D42A6A8435A9C5045B3F(L_43, GameObject_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mBE6B722369FF149589D3D42A6A8435A9C5045B3F_RuntimeMethod_var);
 		V_7 = L_44;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:44>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_45 = V_7;
 		NullCheck(L_45);
 		Text_set_fontSize_m426338B0A2CDA58609028FFD471EF5F2C9F364D4(L_45, ((int32_t)15), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:45>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_46 = V_7;
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_47 = __this->___m_Field;
 		NullCheck(L_47);
@@ -10082,14 +10082,14 @@ IL_0068:
 		String_t* L_51 = (L_48)->GetAt(static_cast<il2cpp_array_size_t>(L_50));
 		NullCheck(L_46);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_46, L_51);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:30>
 		int32_t L_52 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_52, 1));
 	}
 
 IL_0180:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:30>
 		int32_t L_53 = V_2;
 		int32_t L_54 = V_0;
 		V_9 = (bool)((((int32_t)L_53) < ((int32_t)L_54))? 1 : 0);
@@ -10100,13 +10100,13 @@ IL_0180:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:48>
 		DebugUIHandlerFoldout_UpdateValue_m8CE29D10B0F61188598331EBD881B8BA05B8B40E(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:49>
 		return;
 	}
 }
-// Method Definition Index: 64707
+// Method Definition Index: 64757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerFoldout_OnSelection_m0328778E15A4BE0ACF3915E9C27B15E4EE9B5551 (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10122,7 +10122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerFoldout_OnSelection_m03287
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:59>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -10153,7 +10153,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:61>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -10163,7 +10163,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:63>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -10176,7 +10176,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:65>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -10190,7 +10190,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:67>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -10200,13 +10200,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:71>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:72>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -10221,86 +10221,86 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:76>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:77>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64708
+// Method Definition Index: 64758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_OnDeselection_mA9BBD048A4139295D54316BA19A69BB73BD6D327 (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:84>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:85>
 		return;
 	}
 }
-// Method Definition Index: 64709
+// Method Definition Index: 64759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_OnIncrement_m0F9F9643478577474FA6CEB857FCDFEC50E1C767 (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:93>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Foldout_SetValue_m9C7EA58B4CD8DB13304A7F2E23A40CEDA2A1DD7B(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:94>
 		DebugUIHandlerFoldout_UpdateValue_m8CE29D10B0F61188598331EBD881B8BA05B8B40E(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:95>
 		return;
 	}
 }
-// Method Definition Index: 64710
+// Method Definition Index: 64760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_OnDecrement_mCB9E8525619929BFC7CC55C44BE5A56459C1CB7D (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:103>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Foldout_SetValue_m9C7EA58B4CD8DB13304A7F2E23A40CEDA2A1DD7B(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:104>
 		DebugUIHandlerFoldout_UpdateValue_m8CE29D10B0F61188598331EBD881B8BA05B8B40E(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:105>
 		return;
 	}
 }
-// Method Definition Index: 64711
+// Method Definition Index: 64761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_OnAction_mDEBF59190697160E20C69825947CE9D5DEC30FB0 (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:112>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Foldout_GetValue_m3AC0382B7AEF8DABEA86B4D8076A8ADCD21210B9(L_0, NULL);
 		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:113>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_2 = __this->___m_Field;
 		bool L_3 = V_0;
 		NullCheck(L_2);
 		Foldout_SetValue_m9C7EA58B4CD8DB13304A7F2E23A40CEDA2A1DD7B(L_2, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:114>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:114>
 		DebugUIHandlerFoldout_UpdateValue_m8CE29D10B0F61188598331EBD881B8BA05B8B40E(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:115>
 		return;
 	}
 }
-// Method Definition Index: 64712
+// Method Definition Index: 64762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_UpdateValue_m8CE29D10B0F61188598331EBD881B8BA05B8B40E (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:119>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_1 = __this->___m_Field;
 		NullCheck(L_1);
@@ -10308,11 +10308,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout_UpdateValue_m8CE29
 		L_2 = Foldout_GetValue_m3AC0382B7AEF8DABEA86B4D8076A8ADCD21210B9(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:120>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:120>
 		return;
 	}
 }
-// Method Definition Index: 64713
+// Method Definition Index: 64763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerFoldout_Next_m35EC9520B4E86C3FA7BC8A969C8227BCBFB10EBC (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10327,7 +10327,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:128>
 		Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		bool L_1;
@@ -10361,7 +10361,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:129>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -10370,13 +10370,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:131>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:133>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:133>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -10389,7 +10389,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:134>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:134>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -10398,7 +10398,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:136>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -10406,12 +10406,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:137>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerFoldout.cs:137>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64714
+// Method Definition Index: 64764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout__ctor_m8EA66D76CD7E71558FDA92201638EC736F33FB66 (DebugUIHandlerFoldout_tC97ACA0A875A9DA421CE5683527CA31D1147FB1A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10427,7 +10427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerFoldout__ctor_m8EA66D76CD7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64715
+// Method Definition Index: 64765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerGroup_SetWidget_m9D7EA85B890C75998306B269A787E181B5102C65 (DebugUIHandlerGroup_tF5ED7F0C9CD651956B369D0556A695F00FCE08E1* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10439,20 +10439,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerGroup_SetWidget_m9D7EA85B8
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:19>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:20>
 		Container_t0F404B4F1A7EFE36CAD5C2A9EA0261991099D217* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisContainer_t0F404B4F1A7EFE36CAD5C2A9EA0261991099D217_mA8C347BB407A149B76C79B62A4BEA56F4739D454(__this, DebugUIHandlerWidget_CastWidget_TisContainer_t0F404B4F1A7EFE36CAD5C2A9EA0261991099D217_mA8C347BB407A149B76C79B62A4BEA56F4739D454_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:21>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:23>
 		Container_t0F404B4F1A7EFE36CAD5C2A9EA0261991099D217* L_3 = __this->___m_Field;
 		NullCheck(L_3);
 		bool L_4;
@@ -10465,7 +10465,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerGroup_SetWidget_m9D7EA85B8
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:24>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___header;
 		NullCheck(L_6);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
@@ -10477,7 +10477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerGroup_SetWidget_m9D7EA85B8
 
 IL_0044:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:26>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->___nameLabel;
 		Container_t0F404B4F1A7EFE36CAD5C2A9EA0261991099D217* L_9 = __this->___m_Field;
 		NullCheck(L_9);
@@ -10489,11 +10489,11 @@ IL_0044:
 
 IL_005b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:27>
 		return;
 	}
 }
-// Method Definition Index: 64716
+// Method Definition Index: 64766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerGroup_OnSelection_mB089F2E1461618C744B0A54A28B5CFB07EFAB701 (DebugUIHandlerGroup_tF5ED7F0C9CD651956B369D0556A695F00FCE08E1* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10507,7 +10507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerGroup_OnSelection_mB089F2E
 	bool V_2 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:37>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -10539,39 +10539,39 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:39>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_5 = __this->___m_Container;
 		NullCheck(L_5);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6;
 		L_6 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:40>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_7;
 		L_7 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_1;
 		NullCheck(L_7);
 		DebugManager_ChangeSelection_m77C3E5AD1A1B7D9EEFA8C39BFD8A40B1AEEB856A(L_7, L_8, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:41>
 		V_2 = (bool)1;
 		goto IL_003c;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:44>
 		V_2 = (bool)0;
 		goto IL_003c;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:45>
 		bool L_9 = V_2;
 		return L_9;
 	}
 }
-// Method Definition Index: 64717
+// Method Definition Index: 64767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerGroup_Next_m0E5C76D1C72B2FC74608AEDD3F7A687D0E17033A (DebugUIHandlerGroup_tF5ED7F0C9CD651956B369D0556A695F00FCE08E1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10585,7 +10585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_2 = NULL;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:53>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_0 = __this->___m_Container;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -10598,7 +10598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:54>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3;
 		L_3 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_3;
@@ -10607,13 +10607,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:56>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_4 = __this->___m_Container;
 		NullCheck(L_4);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_4, NULL);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:58>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -10626,7 +10626,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:59>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9;
 		L_9 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_9;
@@ -10635,7 +10635,7 @@ IL_001a:
 
 IL_003a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:61>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = V_0;
 		V_2 = L_10;
 		goto IL_003e;
@@ -10643,12 +10643,12 @@ IL_003a:
 
 IL_003e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerGroup.cs:62>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11 = V_2;
 		return L_11;
 	}
 }
-// Method Definition Index: 64718
+// Method Definition Index: 64768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerGroup__ctor_m087A8C431E01E7AF80211A308D54B25FA5BD2250 (DebugUIHandlerGroup_tF5ED7F0C9CD651956B369D0556A695F00FCE08E1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10664,7 +10664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerGroup__ctor_m087A8C431E01E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64719
+// Method Definition Index: 64769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerHBox_SetWidget_m6FFBC1ED54189C8973415D2954E02C269A278779 (DebugUIHandlerHBox_t30C44FB8BAC115A3ECCB924366A495C2EB265EDC* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10674,19 +10674,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerHBox_SetWidget_m6FFBC1ED54
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:12>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:13>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_1;
 		L_1 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 64720
+// Method Definition Index: 64770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerHBox_OnSelection_mE4201C3C243D3EAE0A64EFF5987F9537206B4167 (DebugUIHandlerHBox_t30C44FB8BAC115A3ECCB924366A495C2EB265EDC* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10700,7 +10700,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerHBox_OnSelection_mE4201C3C
 	bool V_2 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:24>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -10732,39 +10732,39 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:26>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_5 = __this->___m_Container;
 		NullCheck(L_5);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6;
 		L_6 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:27>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_7;
 		L_7 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_1;
 		NullCheck(L_7);
 		DebugManager_ChangeSelection_m77C3E5AD1A1B7D9EEFA8C39BFD8A40B1AEEB856A(L_7, L_8, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:28>
 		V_2 = (bool)1;
 		goto IL_003c;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:31>
 		V_2 = (bool)0;
 		goto IL_003c;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:32>
 		bool L_9 = V_2;
 		return L_9;
 	}
 }
-// Method Definition Index: 64721
+// Method Definition Index: 64771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerHBox_Next_m1C398F0C0D1CDC97A08B3CA7C04D7AFCF32F5EEB (DebugUIHandlerHBox_t30C44FB8BAC115A3ECCB924366A495C2EB265EDC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10778,7 +10778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_2 = NULL;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:40>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_0 = __this->___m_Container;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -10791,7 +10791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:41>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3;
 		L_3 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_3;
@@ -10800,13 +10800,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:43>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_4 = __this->___m_Container;
 		NullCheck(L_4);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_4, NULL);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:45>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -10819,7 +10819,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:46>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9;
 		L_9 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_9;
@@ -10828,7 +10828,7 @@ IL_001a:
 
 IL_003a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:48>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = V_0;
 		V_2 = L_10;
 		goto IL_003e;
@@ -10836,12 +10836,12 @@ IL_003a:
 
 IL_003e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerHBox.cs:49>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11 = V_2;
 		return L_11;
 	}
 }
-// Method Definition Index: 64722
+// Method Definition Index: 64772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerHBox__ctor_m744194D9207EF339C9D586A969050830503A51F6 (DebugUIHandlerHBox_t30C44FB8BAC115A3ECCB924366A495C2EB265EDC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10857,84 +10857,84 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerHBox__ctor_m744194D9207EF3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64723
+// Method Definition Index: 64773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_Init_m8297DF272ED8D2435861EDB77AABF58290B96840 (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:43>
 		DebugUIHandlerIndirectFloatField_UpdateValueLabel_mC1801ED586636474218A11B89D795A6FF50E9CE8(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 64724
+// Method Definition Index: 64774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerIndirectFloatField_OnSelection_mA239F05E325E92B8BD5D359DAD11F6DC87260848 (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:54>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:55>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:56>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:57>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64725
+// Method Definition Index: 64775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_OnDeselection_m6C75859C026A3CA540B14970E007348B8747586A (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:64>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:65>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:66>
 		return;
 	}
 }
-// Method Definition Index: 64726
+// Method Definition Index: 64776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_OnIncrement_mC97828C6D3D2591BB9C2547ADBE03BC2C6C96F23 (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:74>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerIndirectFloatField_ChangeValue_m03670DD0C17DA24ACED728FE0D405138C9D40A40(__this, L_0, (1.0f), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:75>
 		return;
 	}
 }
-// Method Definition Index: 64727
+// Method Definition Index: 64777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_OnDecrement_mFC9FE6DCC32C5C15652B0976D8D40C251538D0AD (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:83>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerIndirectFloatField_ChangeValue_m03670DD0C17DA24ACED728FE0D405138C9D40A40(__this, L_0, (-1.0f), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:84>
 		return;
 	}
 }
-// Method Definition Index: 64728
+// Method Definition Index: 64778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_ChangeValue_m03670DD0C17DA24ACED728FE0D405138C9D40A40 (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, bool ___0_fast, float ___1_multiplier, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -10946,13 +10946,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_ChangeV
 	float G_B3_1 = 0.0f;
 	float G_B3_2 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:88>
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_0 = __this->___getter;
 		NullCheck(L_0);
 		float L_1;
 		L_1 = Func_1_Invoke_m6EC66204056853EDE42F634FECB2D7D4685B54B0_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:89>
 		float L_2 = V_0;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_3 = __this->___incStepGetter;
 		NullCheck(L_3);
@@ -10990,18 +10990,18 @@ IL_002e:
 	{
 		float L_8 = ___1_multiplier;
 		V_0 = ((float)il2cpp_codegen_add(G_B3_2, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(G_B3_1, G_B3_0)), L_8))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:90>
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_9 = __this->___setter;
 		float L_10 = V_0;
 		NullCheck(L_9);
 		Action_1_Invoke_mA8F89FB04FEA0F48A4F22EC84B5F9ADB2914341F_inline(L_9, L_10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:91>
 		DebugUIHandlerIndirectFloatField_UpdateValueLabel_mC1801ED586636474218A11B89D795A6FF50E9CE8(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:92>
 		return;
 	}
 }
-// Method Definition Index: 64729
+// Method Definition Index: 64779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_UpdateValueLabel_mC1801ED586636474218A11B89D795A6FF50E9CE8 (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11015,7 +11015,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_UpdateV
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:96>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___valueLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -11028,7 +11028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_UpdateV
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:97>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___valueLabel;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_4 = __this->___getter;
 		NullCheck(L_4);
@@ -11052,11 +11052,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField_UpdateV
 
 IL_004d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectFloatField.cs:98>
 		return;
 	}
 }
-// Method Definition Index: 64730
+// Method Definition Index: 64780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField__ctor_m0ACC509CE6DC880F0F7D9F92BD4C651E3C48C065 (DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11072,7 +11072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectFloatField__ctor_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64731
+// Method Definition Index: 64781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_Init_mFB2213D89BCF29671F255C37E862F94F31F12506 (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11084,9 +11084,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_Init_mFB221
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:37>
 		DebugUIHandlerIndirectToggle_UpdateValueLabel_mECFCCF09947AA410A2D6F756F08BB6CDDCD05AAC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:39>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_1 = L_0->___onValueChanged;
@@ -11094,94 +11094,94 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_Init_mFB221
 		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_2, __this, (intptr_t)((void*)DebugUIHandlerIndirectToggle_OnToggleValueChanged_m4B8562DBAD02E683C51D2E3E293F948139D8103F_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD(L_1, L_2, UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:40>
 		return;
 	}
 }
-// Method Definition Index: 64732
+// Method Definition Index: 64782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_OnToggleValueChanged_m4B8562DBAD02E683C51D2E3E293F948139D8103F (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:44>
 		Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D* L_0 = __this->___setter;
 		int32_t L_1 = __this->___index;
 		bool L_2 = ___0_value;
 		NullCheck(L_0);
 		Action_2_Invoke_mA231C16505354E47FA706ECA0D034A5A15E2C5A0_inline(L_0, L_1, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 64733
+// Method Definition Index: 64783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerIndirectToggle_OnSelection_m9AB28E2FE889601DC2241D2F9FF205DA416E5238 (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:55>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:56>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___checkmarkImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:57>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:58>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64734
+// Method Definition Index: 64784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_OnDeselection_m29103A2BDD465341E0FBFD47E23D0A0C77F7DD78 (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:65>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:66>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___checkmarkImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:67>
 		return;
 	}
 }
-// Method Definition Index: 64735
+// Method Definition Index: 64785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_OnAction_mE8B5245408FFB96A5AC3CAD66913ECC288647683 (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:74>
 		Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA* L_0 = __this->___getter;
 		int32_t L_1 = __this->___index;
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = Func_2_Invoke_m1543D7041BADF87D1F63EBF838B0DDCB40340C7E_inline(L_0, L_1, NULL);
 		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:75>
 		Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D* L_3 = __this->___setter;
 		int32_t L_4 = __this->___index;
 		bool L_5 = V_0;
 		NullCheck(L_3);
 		Action_2_Invoke_mA231C16505354E47FA706ECA0D034A5A15E2C5A0_inline(L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:76>
 		DebugUIHandlerIndirectToggle_UpdateValueLabel_mECFCCF09947AA410A2D6F756F08BB6CDDCD05AAC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:77>
 		return;
 	}
 }
-// Method Definition Index: 64736
+// Method Definition Index: 64786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_UpdateValueLabel_mECFCCF09947AA410A2D6F756F08BB6CDDCD05AAC (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11192,7 +11192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_UpdateValue
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:81>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___valueToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -11205,7 +11205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_UpdateValue
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:82>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_3 = __this->___valueToggle;
 		Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA* L_4 = __this->___getter;
 		int32_t L_5 = __this->___index;
@@ -11218,11 +11218,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle_UpdateValue
 
 IL_002e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs:83>
 		return;
 	}
 }
-// Method Definition Index: 64737
+// Method Definition Index: 64787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle__ctor_m8C396EBDCA669A7559520174C0BECE948E2E6964 (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11238,7 +11238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIndirectToggle__ctor_m8C39
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64738
+// Method Definition Index: 64788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_SetWidget_mECE6C25B51EE73AF198E2A839B99A12107174225 (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11248,15 +11248,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_SetWidget_mECE6C2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:18>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:19>
 		IntField_t44A28D09F4CD0658E53FCED78D08513508256A9A* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisIntField_t44A28D09F4CD0658E53FCED78D08513508256A9A_mEBC1E09BD4F38B137AA9CBFCE407352FDC8B0570(__this, DebugUIHandlerWidget_CastWidget_TisIntField_t44A28D09F4CD0658E53FCED78D08513508256A9A_mEBC1E09BD4F38B137AA9CBFCE407352FDC8B0570_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		IntField_t44A28D09F4CD0658E53FCED78D08513508256A9A* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -11264,80 +11264,80 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_SetWidget_mECE6C2
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:21>
 		DebugUIHandlerIntField_UpdateValueLabel_mE37F658D4F377685F119C9C2139970567BBACD79(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 64739
+// Method Definition Index: 64789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerIntField_OnSelection_m6275F31B59253780EEA5A158D1074EF63131AAA4 (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:32>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:33>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:34>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:35>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64740
+// Method Definition Index: 64790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_OnDeselection_m56D7C9510BABBB401C6E3FAD31553FE48BE98A6C (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:42>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:43>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 64741
+// Method Definition Index: 64791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_OnIncrement_mDB8DB60DDFD35E5521CAD4BCDB4BC6A3B1ADF072 (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:52>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerIntField_ChangeValue_mD8057A2A9FD94293116182A6407B63B5A21EAE13(__this, L_0, 1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 64742
+// Method Definition Index: 64792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_OnDecrement_m31C3683D87F62142EA82E3345E9F41F7B6861642 (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:61>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerIntField_ChangeValue_mD8057A2A9FD94293116182A6407B63B5A21EAE13(__this, L_0, (-1), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 64743
+// Method Definition Index: 64793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_ChangeValue_mD8057A2A9FD94293116182A6407B63B5A21EAE13 (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, bool ___0_fast, int32_t ___1_multiplier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11355,13 +11355,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_ChangeValue_mD805
 	int32_t G_B3_1 = 0;
 	int32_t G_B3_2 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:66>
 		IntField_t44A28D09F4CD0658E53FCED78D08513508256A9A* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = Field_1_GetValue_m2D7709F7BB39EF71F0B71C93703602919CD5C30E(L_0, Field_1_GetValue_m2D7709F7BB39EF71F0B71C93703602919CD5C30E_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:67>
 		int32_t L_2 = V_0;
 		IntField_t44A28D09F4CD0658E53FCED78D08513508256A9A* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -11397,18 +11397,18 @@ IL_002a:
 	{
 		int32_t L_8 = ___1_multiplier;
 		V_0 = ((int32_t)il2cpp_codegen_add(G_B3_2, ((int32_t)il2cpp_codegen_multiply(((int32_t)il2cpp_codegen_multiply(G_B3_1, G_B3_0)), L_8))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:68>
 		IntField_t44A28D09F4CD0658E53FCED78D08513508256A9A* L_9 = __this->___m_Field;
 		int32_t L_10 = V_0;
 		NullCheck(L_9);
 		VirtualActionInvoker1< int32_t >::Invoke(16, L_9, L_10);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:69>
 		DebugUIHandlerIntField_UpdateValueLabel_mE37F658D4F377685F119C9C2139970567BBACD79(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:70>
 		return;
 	}
 }
-// Method Definition Index: 64744
+// Method Definition Index: 64794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_UpdateValueLabel_mE37F658D4F377685F119C9C2139970567BBACD79 (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11422,7 +11422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_UpdateValueLabel_
 	bool V_0 = false;
 	int32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:74>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___valueLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -11435,7 +11435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_UpdateValueLabel_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:75>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___valueLabel;
 		IntField_t44A28D09F4CD0658E53FCED78D08513508256A9A* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -11450,11 +11450,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField_UpdateValueLabel_
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIntField.cs:76>
 		return;
 	}
 }
-// Method Definition Index: 64745
+// Method Definition Index: 64795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField__ctor_m3DE21A5DC240FA90CCAA3C2473B740EA5DB6795D (DebugUIHandlerIntField_tC1936F84ED04BF1268A9AE0EBA68B858D4760D70* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11470,7 +11470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerIntField__ctor_m3DE21A5DC2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64746
+// Method Definition Index: 64796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox_SetWidget_mDD74A0DBC434597426FEE13BC29072D50CBC9A06 (DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11485,15 +11485,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox_SetWidget_mDD74
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:23>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:24>
 		MessageBox_tF18729816BE7D624001E2C5172474709BD9B54C5* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisMessageBox_tF18729816BE7D624001E2C5172474709BD9B54C5_m2F430218585435AB41568F4E767AE20D9A56C89B(__this, DebugUIHandlerWidget_CastWidget_TisMessageBox_tF18729816BE7D624001E2C5172474709BD9B54C5_m2F430218585435AB41568F4E767AE20D9A56C89B_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:25>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		MessageBox_tF18729816BE7D624001E2C5172474709BD9B54C5* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -11501,11 +11501,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox_SetWidget_mDD74
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:27>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_5;
 		L_5 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(__this, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:28>
 		MessageBox_tF18729816BE7D624001E2C5172474709BD9B54C5* L_6 = __this->___m_Field;
 		NullCheck(L_6);
 		int32_t L_7 = L_6->___style;
@@ -11536,7 +11536,7 @@ IL_0047:
 
 IL_004d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:31>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_11 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var);
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_12 = ((DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var))->___k_WarningBackgroundColor;
@@ -11544,13 +11544,13 @@ IL_004d:
 		L_13 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_12, NULL);
 		NullCheck(L_11);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_11, L_13);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:32>
 		goto IL_0073;
 	}
 
 IL_0060:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:35>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_14 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var);
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_15 = ((DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var))->___k_ErrorBackgroundColor;
@@ -11558,21 +11558,21 @@ IL_0060:
 		L_16 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_15, NULL);
 		NullCheck(L_14);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_14, L_16);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:36>
 		goto IL_0073;
 	}
 
 IL_0073:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:38>
 		return;
 	}
 }
-// Method Definition Index: 64747
+// Method Definition Index: 64797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox_Update_mC6AAD02CB3CAB8D015429A2AB98EF2CE1FCBBF05 (DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:42>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		MessageBox_tF18729816BE7D624001E2C5172474709BD9B54C5* L_1 = __this->___m_Field;
 		NullCheck(L_1);
@@ -11580,28 +11580,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox_Update_mC6AAD02
 		L_2 = MessageBox_get_message_m32F8427E1F794F82DD3FAB6A24745643DC0F9758(L_1, NULL);
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:43>
 		return;
 	}
 }
-// Method Definition Index: 64748
+// Method Definition Index: 64798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerMessageBox_OnSelection_mD6864FB70FACC2CAEE460F1539A13C3BF77CE037 (DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:53>
 		V_0 = (bool)0;
 		goto IL_0005;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:54>
 		bool L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 64749
+// Method Definition Index: 64799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox__ctor_m62554FDCA7615AE940839BCFB47CB6D08E70EA3A (DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11609,7 +11609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox__ctor_m62554FDC
 		return;
 	}
 }
-// Method Definition Index: 64750
+// Method Definition Index: 64800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox__cctor_m26B483135106EE6EC132AB93FB99D288675C7B2A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11619,22 +11619,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox__cctor_m26B4831
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:16>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline((&L_0), (uint8_t)((int32_t)231), (uint8_t)((int32_t)180), (uint8_t)3, (uint8_t)((int32_t)30), NULL);
 		((DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var))->___k_WarningBackgroundColor = L_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:17>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline((&L_1), (uint8_t)((int32_t)231), (uint8_t)((int32_t)180), (uint8_t)3, (uint8_t)((int32_t)255), NULL);
 		((DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var))->___k_WarningTextColor = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:18>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_2;
 		memset((&L_2), 0, sizeof(L_2));
 		Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline((&L_2), (uint8_t)((int32_t)231), (uint8_t)((int32_t)75), (uint8_t)3, (uint8_t)((int32_t)30), NULL);
 		((DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerMessageBox_t324CB4FCA7F0B75000212BEC0B19D0C12A7F2C55_il2cpp_TypeInfo_var))->___k_ErrorBackgroundColor = L_2;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerMessageBox.cs:19>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_3;
 		memset((&L_3), 0, sizeof(L_3));
 		Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline((&L_3), (uint8_t)((int32_t)231), (uint8_t)((int32_t)75), (uint8_t)3, (uint8_t)((int32_t)255), NULL);
@@ -11650,7 +11650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerMessageBox__cctor_m26B4831
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64751
+// Method Definition Index: 64801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObject_SetWidget_m4E7450F5A99D05F6B0ED13F299F06F05DBED22A6 (DebugUIHandlerObject_tA0444036DFC60F7621F2FCD808C0508F98A02229* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11669,14 +11669,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObject_SetWidget_m4E7450F5
 	String_t* G_B3_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B3_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:17>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:18>
 		ObjectField_t31A0226BB7370CEE6059049B9FC17B476411B5B3* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisObjectField_t31A0226BB7370CEE6059049B9FC17B476411B5B3_m79103A4833791FB3D978E791AED584AA52C5643D(__this, DebugUIHandlerWidget_CastWidget_TisObjectField_t31A0226BB7370CEE6059049B9FC17B476411B5B3_m79103A4833791FB3D978E791AED584AA52C5643D_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		ObjectField_t31A0226BB7370CEE6059049B9FC17B476411B5B3* L_3 = V_0;
 		NullCheck(L_3);
@@ -11684,13 +11684,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObject_SetWidget_m4E7450F5
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:21>
 		ObjectField_t31A0226BB7370CEE6059049B9FC17B476411B5B3* L_5 = V_0;
 		NullCheck(L_5);
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_6;
 		L_6 = Field_1_GetValue_m15D7C437719C5A930CF6892F599108E46323605D(L_5, Field_1_GetValue_m15D7C437719C5A930CF6892F599108E46323605D_RuntimeMethod_var);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:22>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_7 = __this->___valueLabel;
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_8 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -11723,56 +11723,56 @@ IL_0045:
 	{
 		NullCheck(G_B3_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B3_1, G_B3_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:23>
 		return;
 	}
 }
-// Method Definition Index: 64752
+// Method Definition Index: 64802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerObject_OnSelection_m6D542F4B8E410706A32D73421E0190415E8B2029 (DebugUIHandlerObject_tA0444036DFC60F7621F2FCD808C0508F98A02229* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:33>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:34>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:35>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:36>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64753
+// Method Definition Index: 64803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObject_OnDeselection_mD2EC0E773C313C84F137A65F155717CA998458FC (DebugUIHandlerObject_tA0444036DFC60F7621F2FCD808C0508F98A02229* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:43>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:44>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObject.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 64754
+// Method Definition Index: 64804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObject__ctor_m528BF0B0615A0E1BABB9B0DC54CAE87263816424 (DebugUIHandlerObject_tA0444036DFC60F7621F2FCD808C0508F98A02229* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11788,7 +11788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObject__ctor_m528BF0B0615A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64755
+// Method Definition Index: 64805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_SetWidget_m0F33E6180097762049FA3E7ADA195D088C6B3FF2 (DebugUIHandlerObjectList_t24430130AD12E961DE50F90ADC83CA8FBE76D67E* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11798,42 +11798,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_SetWidget_m0F33
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:16>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerField_1_SetWidget_mD2D15CCF749258C5F75AB37577B37CA0906794DF(__this, L_0, DebugUIHandlerField_1_SetWidget_mD2D15CCF749258C5F75AB37577B37CA0906794DF_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:17>
 		__this->___m_Index = 0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:18>
 		return;
 	}
 }
-// Method Definition Index: 64756
+// Method Definition Index: 64806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_OnIncrement_m8B41BDBD0A806885FD343F3BF884473DFAF487E2 (DebugUIHandlerObjectList_t24430130AD12E961DE50F90ADC83CA8FBE76D67E* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:26>
 		int32_t L_0 = __this->___m_Index;
 		__this->___m_Index = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:27>
 		VirtualActionInvoker0::Invoke(13, __this);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 64757
+// Method Definition Index: 64807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_OnDecrement_m6C7C4BF276E3AFD6382379E0CF401F29DEE88D0A (DebugUIHandlerObjectList_t24430130AD12E961DE50F90ADC83CA8FBE76D67E* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:36>
 		int32_t L_0 = __this->___m_Index;
 		__this->___m_Index = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:37>
 		VirtualActionInvoker0::Invoke(13, __this);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:38>
 		return;
 	}
 }
-// Method Definition Index: 64758
+// Method Definition Index: 64808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_UpdateValueLabel_mFFA44C7A5797D807C367EE05D17F8F804914BB25 (DebugUIHandlerObjectList_t24430130AD12E961DE50F90ADC83CA8FBE76D67E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11849,15 +11849,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_UpdateValueLabe
 	ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* V_1 = NULL;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:45>
 		V_0 = _stringLiteral32189949CB1CA4A6EBB1A643EBE2DB69713D5407;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:46>
 		ObjectListField_t8FC9AAB904E0A6C1B51B185C9A8F98E8045DE093* L_0 = ((DebugUIHandlerField_1_t9975D77A4CE5ECFD9FF4275109C7D3976E0E659F*)__this)->___m_Field;
 		NullCheck(L_0);
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_1;
 		L_1 = Field_1_GetValue_m391CD3F5E30A9206198B32078A7663AC66BD93B3(L_0, Field_1_GetValue_m391CD3F5E30A9206198B32078A7663AC66BD93B3_RuntimeMethod_var);
 		V_1 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:47>
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_2 = V_1;
 		V_2 = (bool)((!(((RuntimeObject*)(ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A*)L_2) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_3 = V_2;
@@ -11867,7 +11867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_UpdateValueLabe
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:49>
 		int32_t L_4 = __this->___m_Index;
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_5 = V_1;
 		NullCheck(L_5);
@@ -11875,7 +11875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_UpdateValueLabe
 		int32_t L_6;
 		L_6 = Math_Clamp_mAB687477D3AAC0E7243D724F45626026980CE2FF_inline(L_4, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_5)->max_length)), 1)), NULL);
 		__this->___m_Index = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:50>
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_7 = V_1;
 		int32_t L_8 = __this->___m_Index;
 		NullCheck(L_7);
@@ -11889,14 +11889,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList_UpdateValueLabe
 
 IL_0042:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:52>
 		String_t* L_12 = V_0;
 		DebugUIHandlerField_1_SetLabelText_m2A37837F5EEAF5289DFA63619A9CEC53AE81B22E(__this, L_12, DebugUIHandlerField_1_SetLabelText_m2A37837F5EEAF5289DFA63619A9CEC53AE81B22E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectList.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 64759
+// Method Definition Index: 64809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList__ctor_m2284C2C9ADD6AA2A4AD7E95864D83895615590D7 (DebugUIHandlerObjectList_t24430130AD12E961DE50F90ADC83CA8FBE76D67E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11918,7 +11918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectList__ctor_m2284C2C9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64760
+// Method Definition Index: 64810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_SetWidget_mBB20D0C156BE14164B140C80F3795EE98CB59E6B (DebugUIHandlerObjectPopupField_tEFB7AB6808E43A2DD9E5B645FF7698C1616620A5* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11928,16 +11928,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_SetWidget
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:18>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerField_1_SetWidget_mDEED714CD7DC38639E8892889F549C4A7394E6AC(__this, L_0, DebugUIHandlerField_1_SetWidget_mDEED714CD7DC38639E8892889F549C4A7394E6AC_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:19>
 		__this->___m_Index = 0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 64761
+// Method Definition Index: 64811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_ChangeSelectedObject_mAC00E7ECA89C5BEDA33B428D63B1751699DCC1F1 (DebugUIHandlerObjectPopupField_tEFB7AB6808E43A2DD9E5B645FF7698C1616620A5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11955,7 +11955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_ChangeSel
 	bool V_6 = false;
 	bool V_7 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:24>
 		ObjectPopupField_t0014C448F74711A8989C09DF389009C2C283FBE1* L_0 = ((DebugUIHandlerField_1_t06C2DEBF9A805E8B9AA4B90CF065556698D652B6*)__this)->___m_Field;
 		V_4 = (bool)((((RuntimeObject*)(ObjectPopupField_t0014C448F74711A8989C09DF389009C2C283FBE1*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_1 = V_4;
@@ -11965,13 +11965,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_ChangeSel
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:25>
 		goto IL_008e;
 	}
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:27>
 		ObjectPopupField_t0014C448F74711A8989C09DF389009C2C283FBE1* L_2 = ((DebugUIHandlerField_1_t06C2DEBF9A805E8B9AA4B90CF065556698D652B6*)__this)->___m_Field;
 		NullCheck(L_2);
 		Func_1_t0A6D678B2225A2A8FD577D4830B7257527CDBEAD* L_3;
@@ -11980,7 +11980,7 @@ IL_0012:
 		RuntimeObject* L_4;
 		L_4 = Func_1_Invoke_mE90B8462BFAFAA8C1943D5DA5A572E2D5046F57C_inline(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:28>
 		RuntimeObject* L_5 = V_0;
 		V_5 = (bool)((((RuntimeObject*)(RuntimeObject*)L_5) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_6 = V_5;
@@ -11990,22 +11990,22 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:29>
 		goto IL_008e;
 	}
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:31>
 		RuntimeObject* L_7 = V_0;
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_8;
 		L_8 = Enumerable_ToArray_TisObject_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_m6FFA9BD09F6155B2C67C1696C416FE75E4AE7DFE(L_7, Enumerable_ToArray_TisObject_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_m6FFA9BD09F6155B2C67C1696C416FE75E4AE7DFE_RuntimeMethod_var);
 		V_1 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:32>
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_9 = V_1;
 		NullCheck(L_9);
 		V_2 = ((int32_t)(((RuntimeArray*)L_9)->max_length));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:34>
 		int32_t L_10 = __this->___m_Index;
 		int32_t L_11 = V_2;
 		V_6 = (bool)((((int32_t)((((int32_t)L_10) < ((int32_t)L_11))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -12016,14 +12016,14 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:36>
 		__this->___m_Index = 0;
 		goto IL_0071;
 	}
 
 IL_0057:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:38>
 		int32_t L_13 = __this->___m_Index;
 		V_7 = (bool)((((int32_t)L_13) < ((int32_t)0))? 1 : 0);
 		bool L_14 = V_7;
@@ -12033,62 +12033,62 @@ IL_0057:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:40>
 		int32_t L_15 = V_2;
 		__this->___m_Index = ((int32_t)il2cpp_codegen_subtract(L_15, 1));
 	}
 
 IL_0071:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:43>
 		ObjectU5BU5D_tD4BF1BEC72A31DF6611C0B8FA3112AF128FC3F8A* L_16 = V_1;
 		int32_t L_17 = __this->___m_Index;
 		NullCheck(L_16);
 		int32_t L_18 = L_17;
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
 		V_3 = L_19;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:44>
 		ObjectPopupField_t0014C448F74711A8989C09DF389009C2C283FBE1* L_20 = ((DebugUIHandlerField_1_t06C2DEBF9A805E8B9AA4B90CF065556698D652B6*)__this)->___m_Field;
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_21 = V_3;
 		NullCheck(L_20);
 		VirtualActionInvoker1< Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* >::Invoke(16, L_20, L_21);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:46>
 		VirtualActionInvoker0::Invoke(13, __this);
 	}
 
 IL_008e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 64762
+// Method Definition Index: 64812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_OnIncrement_m68AD4DBC494883E03790FC9A20F8F905ADDA8F55 (DebugUIHandlerObjectPopupField_tEFB7AB6808E43A2DD9E5B645FF7698C1616620A5* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:55>
 		int32_t L_0 = __this->___m_Index;
 		__this->___m_Index = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:56>
 		DebugUIHandlerObjectPopupField_ChangeSelectedObject_mAC00E7ECA89C5BEDA33B428D63B1751699DCC1F1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 64763
+// Method Definition Index: 64813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_OnDecrement_mD4A60D2B67DD07FEFDFA26CA4D72940ABD2B0521 (DebugUIHandlerObjectPopupField_tEFB7AB6808E43A2DD9E5B645FF7698C1616620A5* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:65>
 		int32_t L_0 = __this->___m_Index;
 		__this->___m_Index = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:66>
 		DebugUIHandlerObjectPopupField_ChangeSelectedObject_mAC00E7ECA89C5BEDA33B428D63B1751699DCC1F1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:67>
 		return;
 	}
 }
-// Method Definition Index: 64764
+// Method Definition Index: 64814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_UpdateValueLabel_m9205FC67BF573CDE152BF6F9FE8E9924FC96CD73 (DebugUIHandlerObjectPopupField_tEFB7AB6808E43A2DD9E5B645FF7698C1616620A5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12104,13 +12104,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField_UpdateVal
 	String_t* V_1 = NULL;
 	String_t* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:74>
 		ObjectPopupField_t0014C448F74711A8989C09DF389009C2C283FBE1* L_0 = ((DebugUIHandlerField_1_t06C2DEBF9A805E8B9AA4B90CF065556698D652B6*)__this)->___m_Field;
 		NullCheck(L_0);
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_1;
 		L_1 = Field_1_GetValue_m15D7C437719C5A930CF6892F599108E46323605D(L_0, Field_1_GetValue_m15D7C437719C5A930CF6892F599108E46323605D_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:75>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -12137,14 +12137,14 @@ IL_001d:
 IL_0023:
 	{
 		V_1 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:76>
 		String_t* L_6 = V_1;
 		DebugUIHandlerField_1_SetLabelText_m277DB399C88A11FFD03AC5BCEF0291096681DE08(__this, L_6, DebugUIHandlerField_1_SetLabelText_m277DB399C88A11FFD03AC5BCEF0291096681DE08_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerObjectPopupField.cs:77>
 		return;
 	}
 }
-// Method Definition Index: 64765
+// Method Definition Index: 64815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField__ctor_m4E0950018817DECE781FD86289BD80C326F64009 (DebugUIHandlerObjectPopupField_tEFB7AB6808E43A2DD9E5B645FF7698C1616620A5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12166,7 +12166,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerObjectPopupField__ctor_m4E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64766
+// Method Definition Index: 64816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_OnEnable_m69DF0926526D7445EBE1E32FE4404A81BABBCDFD (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12178,21 +12178,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_OnEnable_m69DF092652
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:32>
 		ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* L_0 = __this->___scrollRect;
 		NullCheck(L_0);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1;
 		L_1 = Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4(L_0, Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
 		__this->___m_ScrollTransform = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ScrollTransform), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:33>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		NullCheck(L_2);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3 = L_2->___contentHolder;
 		__this->___m_ContentTransform = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ContentTransform), (void*)L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:34>
 		Mask_tE8E16C858EC6ECCE545C03802BD1399F7F406213* L_4;
 		L_4 = Component_GetComponentInChildren_TisMask_tE8E16C858EC6ECCE545C03802BD1399F7F406213_mEE44A9CBDCC39C40D83D0F4D158FC6EAE9B653E7(__this, (bool)1, Component_GetComponentInChildren_TisMask_tE8E16C858EC6ECCE545C03802BD1399F7F406213_mEE44A9CBDCC39C40D83D0F4D158FC6EAE9B653E7_RuntimeMethod_var);
 		NullCheck(L_4);
@@ -12200,19 +12200,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_OnEnable_m69DF092652
 		L_5 = Mask_get_rectTransform_m4D1933DACBE7B0F93B1B83F1B3B0A09F65B24209(L_4, NULL);
 		__this->___m_MaskTransform = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MaskTransform), (void*)L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 64767
+// Method Definition Index: 64817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_SetPanel_mC9EE00598AED6937770AE24C09F5305B7EBDE271 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* ___0_panel, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:39>
 		Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_0 = ___0_panel;
 		__this->___m_Panel = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Panel), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:40>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_1 = __this->___nameLabel;
 		Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_2 = ___0_panel;
 		NullCheck(L_2);
@@ -12220,16 +12220,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_SetPanel_mC9EE00598A
 		L_3 = Panel_get_displayName_m186C10E927B2800035B328BD9A40D8B5FB3D4EE4_inline(L_2, NULL);
 		NullCheck(L_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_1, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:41>
 		return;
 	}
 }
-// Method Definition Index: 64768
+// Method Definition Index: 64818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* DebugUIHandlerPanel_GetPanel_m0A0D797F47E06C4AA2786605A367F93F0033291C (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:45>
 		Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_0 = __this->___m_Panel;
 		V_0 = L_0;
 		goto IL_000a;
@@ -12237,36 +12237,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Panel_t3A0D2006E8AEA607A6DF5188138E463A260852
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:46>
 		Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 64769
+// Method Definition Index: 64819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_SelectNextItem_mE8441685CAA9F387EF2CE85F0891BE31AAA02D22 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:53>
 		DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* L_0 = __this->___Canvas;
 		NullCheck(L_0);
 		DebugUIHandlerCanvas_SelectNextPanel_mDEAC3EE25EEEB60C1B1CFBDF0693F629BC6CAE36(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 64770
+// Method Definition Index: 64820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_SelectPreviousItem_m663163976D65D0D2DC673C57045428EC6A8A3D07 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:61>
 		DebugUIHandlerCanvas_t42F6FDECA89A5D5F3C1534DC37FABB37E1401209* L_0 = __this->___Canvas;
 		NullCheck(L_0);
 		DebugUIHandlerCanvas_SelectPreviousPanel_m8BC52AA79EF5DCDDC00BBBB42AFDB89AEB7D7F34(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 64771
+// Method Definition Index: 64821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_OnScrollbarClicked_m59907071BBE4297C3A0129488E8037487E957BD5 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12276,29 +12276,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_OnScrollbarClicked_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:69>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_0;
 		L_0 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		NullCheck(L_0);
 		DebugManager_SetScrollTarget_mA81C5DD4585EF12FD3C966E898549568B603FCE9(L_0, (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:70>
 		return;
 	}
 }
-// Method Definition Index: 64772
+// Method Definition Index: 64822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_SetScrollTarget_mBF5B2C49CA07FBD4E66F98A8A66B371548371E1D (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_target, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:74>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_target;
 		__this->___m_ScrollTarget = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ScrollTarget), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:75>
 		return;
 	}
 }
-// Method Definition Index: 64773
+// Method Definition Index: 64823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_UpdateScroll_m09894F7991090ADDF2CA28D1427902B13315E2AD (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12317,7 +12317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_UpdateScroll_m09894F
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_6;
 	memset((&V_6), 0, sizeof(V_6));
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:80>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___m_ScrollTarget;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12330,29 +12330,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_UpdateScroll_m09894F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:81>
 		goto IL_00b2;
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:83>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3 = __this->___m_ScrollTarget;
 		NullCheck(L_3);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_4;
 		L_4 = Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4(L_3, Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:85>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_5 = V_0;
 		float L_6;
 		L_6 = DebugUIHandlerPanel_GetYPosInScroll_mF30290CAB64304041EE4B2F5A04CDAF03E3E7397(__this, L_5, NULL);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:86>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_7 = __this->___m_MaskTransform;
 		float L_8;
 		L_8 = DebugUIHandlerPanel_GetYPosInScroll_mF30290CAB64304041EE4B2F5A04CDAF03E3E7397(__this, L_7, NULL);
 		V_2 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:87>
 		float L_9 = V_2;
 		float L_10 = V_1;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_11 = __this->___m_ContentTransform;
@@ -12372,19 +12372,19 @@ IL_0018:
 		L_17 = Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline((&V_6), NULL);
 		float L_18 = L_17.___y;
 		V_3 = ((float)(((float)il2cpp_codegen_subtract(L_9, L_10))/((float)il2cpp_codegen_subtract(L_14, L_18))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:88>
 		ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* L_19 = __this->___scrollRect;
 		NullCheck(L_19);
 		float L_20;
 		L_20 = ScrollRect_get_verticalNormalizedPosition_m4FE766F04272C1805FDE2A4B72D80F6190841FA1(L_19, NULL);
 		float L_21 = V_3;
 		V_4 = ((float)il2cpp_codegen_subtract(L_20, L_21));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:89>
 		float L_22 = V_4;
 		float L_23;
 		L_23 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_22, NULL);
 		V_4 = L_23;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:90>
 		ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* L_24 = __this->___scrollRect;
 		ScrollRect_t17D2F2939CA8953110180DF53164CFC3DC88D70E* L_25 = __this->___scrollRect;
 		NullCheck(L_25);
@@ -12401,11 +12401,11 @@ IL_0018:
 
 IL_00b2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:91>
 		return;
 	}
 }
-// Method Definition Index: 64774
+// Method Definition Index: 64824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerPanel_GetYPosInScroll_mF30290CAB64304041EE4B2F5A04CDAF03E3E7397 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_target, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -12418,11 +12418,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerPanel_GetYPosInScroll_mF3
 	memset((&V_3), 0, sizeof(V_3));
 	float V_4 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:95>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:96>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:97>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:98>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:99>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:99>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = ___0_target;
 		NullCheck(L_0);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
@@ -12450,7 +12450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerPanel_GetYPosInScroll_mF3
 		L_12 = Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline((&V_3), NULL);
 		float L_13 = L_12.___y;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_0), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract((0.5f), L_2)), L_6)), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract((0.5f), L_9)), L_13)), (0.0f), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:100>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_14 = ___0_target;
 		NullCheck(L_14);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
@@ -12459,7 +12459,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerPanel_GetYPosInScroll_mF3
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
 		L_17 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_15, L_16, NULL);
 		V_1 = L_17;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:101>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_18 = ___0_target;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
@@ -12469,7 +12469,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerPanel_GetYPosInScroll_mF3
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
 		L_21 = Transform_TransformPoint_m05BFF013DB830D7BFE44A007703694AE1062EE44(L_19, L_20, NULL);
 		V_2 = L_21;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:102>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_22 = __this->___m_ScrollTransform;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_2;
 		NullCheck(L_22);
@@ -12482,12 +12482,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerPanel_GetYPosInScroll_mF3
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:103>
 		float L_26 = V_4;
 		return L_26;
 	}
 }
-// Method Definition Index: 64775
+// Method Definition Index: 64825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerPanel_GetFirstItem_mABA1E55122FE52BB4A783346971540AC19CF37A0 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12498,8 +12498,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	}
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:107>
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:108>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_0;
 		L_0 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		NullCheck(L_0);
@@ -12511,12 +12511,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 
 IL_000f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:109>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 64776
+// Method Definition Index: 64826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_ResetDebugManager_m71122CF385993479CBC5C89B730A14AB60A6A35F (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12526,17 +12526,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel_ResetDebugManager_m7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:116>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_0;
 		L_0 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		NullCheck(L_0);
 		DebugManager_Reset_m8F235B190A155A4748A6101C46F5654D989C42CA(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPanel.cs:117>
 		return;
 	}
 }
-// Method Definition Index: 64777
+// Method Definition Index: 64827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel__ctor_mB233BB0C2B6784DC0B893D1ECB6BF9E02534BB01 (DebugUIHandlerPanel_tD1D81A5FA0B1D66A458483ED86E5D4FB81658EA1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12552,7 +12552,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPanel__ctor_mB233BB0C2B678
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64778
+// Method Definition Index: 64828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mC9765B3BA286E670BC938AFC9DAB902CB0DE7D7F (DebugUIHandlerPersistentCanvas_tC4C96BD52F7E1FF302C31269BB744E0D688FAC2D* __this, Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* ___0_widget, String_t* ___1_displayName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12590,7 +12590,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mC
 		NullCheck(L_1);
 		L_1->___widget = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___widget), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:18>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_3 = __this->___m_Items;
 		U3CU3Ec__DisplayClass3_0_tFFA3C83A168B164874D1DD9E772FC802A5734252* L_4 = V_0;
 		Predicate_1_t45500BA4BC285B32DA6810383551FE21816992F1* L_5 = (Predicate_1_t45500BA4BC285B32DA6810383551FE21816992F1*)il2cpp_codegen_object_new(Predicate_1_t45500BA4BC285B32DA6810383551FE21816992F1_il2cpp_TypeInfo_var);
@@ -12599,7 +12599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mC
 		int32_t L_6;
 		L_6 = List_1_FindIndex_mB927D7C11B77175700DD2C3B636EC501DDD5EAD2(L_3, L_5, List_1_FindIndex_mB927D7C11B77175700DD2C3B636EC501DDD5EAD2_RuntimeMethod_var);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:21>
 		int32_t L_7 = V_1;
 		V_4 = (bool)((((int32_t)L_7) > ((int32_t)(-1)))? 1 : 0);
 		bool L_8 = V_4;
@@ -12609,32 +12609,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:23>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_9 = __this->___m_Items;
 		int32_t L_10 = V_1;
 		NullCheck(L_9);
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_11;
 		L_11 = List_1_get_Item_mA2F08089E292DE3C29D94D3EBCFC68A4A331C046(L_9, L_10, List_1_get_Item_mA2F08089E292DE3C29D94D3EBCFC68A4A331C046_RuntimeMethod_var);
 		V_5 = L_11;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:24>
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_12 = V_5;
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
 		L_13 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_12, NULL);
 		il2cpp_codegen_runtime_class_init_inline(CoreUtils_tEE57AB2B0DAE9561F4954B08800A8F957850B038_il2cpp_TypeInfo_var);
 		CoreUtils_Destroy_mD2FDD299C528530E4CC5F99EFBAF90ABC7B02C69(L_13, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:25>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_14 = __this->___m_Items;
 		int32_t L_15 = V_1;
 		NullCheck(L_14);
 		List_1_RemoveAt_m7025835DD0910930DE97B9A1E3C11BA55A8347B1(L_14, L_15, List_1_RemoveAt_m7025835DD0910930DE97B9A1E3C11BA55A8347B1_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:26>
 		goto IL_00b6;
 	}
 
 IL_005b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:30>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_16 = __this->___valuePrefab;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_17 = __this->___panel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -12644,20 +12644,20 @@ IL_005b:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
 		L_19 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_18, NULL);
 		V_2 = L_19;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:31>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = V_2;
 		NullCheck(L_20);
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_21;
 		L_21 = GameObject_GetComponent_TisDebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2_mDEFC2F9B8740E0188645330A5B0A6AAE85570924(L_20, GameObject_GetComponent_TisDebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2_mDEFC2F9B8740E0188645330A5B0A6AAE85570924_RuntimeMethod_var);
 		V_3 = L_21;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:32>
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_22 = V_3;
 		U3CU3Ec__DisplayClass3_0_tFFA3C83A168B164874D1DD9E772FC802A5734252* L_23 = V_0;
 		NullCheck(L_23);
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_24 = L_23->___widget;
 		NullCheck(L_22);
 		VirtualActionInvoker1< Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* >::Invoke(5, L_22, L_24);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:33>
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_25 = V_3;
 		NullCheck(L_25);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_26 = L_25->___nameLabel;
@@ -12694,7 +12694,7 @@ IL_00a3:
 	{
 		NullCheck(G_B5_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B5_1, G_B5_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:34>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_33 = __this->___m_Items;
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_34 = V_3;
 		NullCheck(L_33);
@@ -12703,11 +12703,11 @@ IL_00a3:
 
 IL_00b6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 64779
+// Method Definition Index: 64829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mE74A529BF7329198C18D3BB864CDF3DE65BB5E13 (DebugUIHandlerPersistentCanvas_tC4C96BD52F7E1FF302C31269BB744E0D688FAC2D* __this, ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* ___0_widget, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___1_forceTupleIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12747,7 +12747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mE
 		NullCheck(L_1);
 		L_1->___widget = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___widget), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:43>
 		List_1_tC94B561287DC106A4C4FA516C6A2D5FEF21B2D28* L_3 = __this->___m_ValueTupleWidgets;
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_4 = V_0;
 		Predicate_1_t725E18028499A9035F2255CDAA5C098AF43FBA9D* L_5 = (Predicate_1_t725E18028499A9035F2255CDAA5C098AF43FBA9D*)il2cpp_codegen_object_new(Predicate_1_t725E18028499A9035F2255CDAA5C098AF43FBA9D_il2cpp_TypeInfo_var);
@@ -12756,7 +12756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Toggle_mE
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_6;
 		L_6 = List_1_Find_m92E03D2431F24401FFAFCAAFFFA9B711D80D7077(L_3, L_5, List_1_Find_m92E03D2431F24401FFAFCAAFFFA9B711D80D7077_RuntimeMethod_var);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:44>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_7 = V_1;
 		if (L_7)
 		{
@@ -12779,7 +12779,7 @@ IL_002c:
 IL_0032:
 	{
 		V_2 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:47>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_10 = V_1;
 		V_3 = (bool)((!(((RuntimeObject*)(ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B*)L_10) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_11 = V_3;
@@ -12789,13 +12789,13 @@ IL_0032:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:49>
 		List_1_tC94B561287DC106A4C4FA516C6A2D5FEF21B2D28* L_12 = __this->___m_ValueTupleWidgets;
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_13 = V_1;
 		NullCheck(L_12);
 		bool L_14;
 		L_14 = List_1_Remove_m01A6606C7833499A16C9B93DCF6D0299AE4777C5(L_12, L_13, List_1_Remove_m01A6606C7833499A16C9B93DCF6D0299AE4777C5_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:50>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_15 = V_0;
 		NullCheck(L_15);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_16 = L_15->___widget;
@@ -12810,7 +12810,7 @@ IL_0032:
 
 IL_005f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:53>
 		bool L_21;
 		L_21 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline((&___1_forceTupleIndex), Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
 		V_4 = L_21;
@@ -12821,7 +12821,7 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:54>
 		int32_t L_23;
 		L_23 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA((&___1_forceTupleIndex), Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
 		V_2 = L_23;
@@ -12829,7 +12829,7 @@ IL_005f:
 
 IL_0074:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:57>
 		int32_t L_24 = V_2;
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_25 = V_0;
 		NullCheck(L_25);
@@ -12845,14 +12845,14 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:59>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_29 = V_0;
 		NullCheck(L_29);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_30 = L_29->___widget;
 		int32_t L_31 = V_2;
 		NullCheck(L_30);
 		L_30->___pinnedElementIndex = ((int32_t)il2cpp_codegen_add(L_31, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:61>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_32 = V_0;
 		NullCheck(L_32);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_33 = L_32->___widget;
@@ -12860,7 +12860,7 @@ IL_0074:
 		String_t* L_34;
 		L_34 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_33, NULL);
 		V_6 = L_34;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:62>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_35 = V_0;
 		NullCheck(L_35);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_36 = L_35->___widget;
@@ -12875,7 +12875,7 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:64>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_39 = V_0;
 		NullCheck(L_39);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_40 = L_39->___widget;
@@ -12886,7 +12886,7 @@ IL_0074:
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_42;
 		L_42 = Foldout_get_columnLabels_m668E673185A4DFF88DCA1B1CBA7DCFA59E491F38_inline(((Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6*)IsInstClass((RuntimeObject*)L_41, Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6_il2cpp_TypeInfo_var)), NULL);
 		V_8 = L_42;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:65>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_43 = V_8;
 		if (!L_43)
 		{
@@ -12920,7 +12920,7 @@ IL_00f2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:67>
 		String_t* L_49 = V_6;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_50 = V_8;
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_51 = V_0;
@@ -12942,7 +12942,7 @@ IL_011b:
 
 IL_011c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:71>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_57 = V_0;
 		NullCheck(L_57);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_58 = L_57->___widget;
@@ -12958,7 +12958,7 @@ IL_011c:
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_64 = (L_59)->GetAt(static_cast<il2cpp_array_size_t>(L_63));
 		String_t* L_65 = V_6;
 		DebugUIHandlerPersistentCanvas_Toggle_mC9765B3BA286E670BC938AFC9DAB902CB0DE7D7F(__this, L_64, L_65, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:72>
 		List_1_tC94B561287DC106A4C4FA516C6A2D5FEF21B2D28* L_66 = __this->___m_ValueTupleWidgets;
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_67 = V_0;
 		NullCheck(L_67);
@@ -12970,7 +12970,7 @@ IL_011c:
 
 IL_0151:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:76>
 		U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* L_69 = V_0;
 		NullCheck(L_69);
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_70 = L_69->___widget;
@@ -12980,11 +12980,11 @@ IL_0151:
 
 IL_015f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:78>
 		return;
 	}
 }
-// Method Definition Index: 64780
+// Method Definition Index: 64830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerPersistentCanvas_IsEmpty_m45A4C96BA3029DF38BFD7351A819512906CB5BCE (DebugUIHandlerPersistentCanvas_tC4C96BD52F7E1FF302C31269BB744E0D688FAC2D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12995,7 +12995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerPersistentCanvas_IsEmpty_m
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:82>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_0 = __this->___m_Items;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -13006,12 +13006,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerPersistentCanvas_IsEmpty_m
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:83>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 64781
+// Method Definition Index: 64831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Clear_m2A4309CDFE971AA52847D9072DE808798DB1C580 (DebugUIHandlerPersistentCanvas_tC4C96BD52F7E1FF302C31269BB744E0D688FAC2D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13029,7 +13029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas_Clear_m2A
 	memset((&V_0), 0, sizeof(V_0));
 	DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* V_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:87>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_0 = __this->___m_Items;
 		NullCheck(L_0);
 		Enumerator_tD7AE95F6E5D88F7F238CEB18CF0127FAEA4A2289 L_1;
@@ -13054,11 +13054,11 @@ FINALLY_002f:
 
 IL_0010_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:87>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:87>
 				DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_2;
 				L_2 = Enumerator_get_Current_m655394E64BD4D66A3C2A32DE70EC85CEBB476988_inline((&V_0), Enumerator_get_Current_m655394E64BD4D66A3C2A32DE70EC85CEBB476988_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:88>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:88>
 				DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_3 = V_1;
 				NullCheck(L_3);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
@@ -13069,7 +13069,7 @@ IL_0010_1:
 
 IL_0024_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:87>
+				//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:87>
 				bool L_5;
 				L_5 = Enumerator_MoveNext_mFD87ED84C98D2374499B19037D2FED782EFA03B7((&V_0), Enumerator_MoveNext_mFD87ED84C98D2374499B19037D2FED782EFA03B7_RuntimeMethod_var);
 				if (L_5)
@@ -13089,15 +13089,15 @@ IL_0024_1:
 
 IL_003e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:90>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_6 = __this->___m_Items;
 		NullCheck(L_6);
 		List_1_Clear_m6CF84FBDB3BCF3418515B9E11B5546034F67315B_inline(L_6, List_1_Clear_m6CF84FBDB3BCF3418515B9E11B5546034F67315B_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:91>
 		return;
 	}
 }
-// Method Definition Index: 64782
+// Method Definition Index: 64832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas__ctor_mA5D2326C74A1A72C5E9802691ED667CF5991841E (DebugUIHandlerPersistentCanvas_tC4C96BD52F7E1FF302C31269BB744E0D688FAC2D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13110,12 +13110,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas__ctor_mA5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:13>
 		List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771* L_0 = (List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771*)il2cpp_codegen_object_new(List_1_tF20C51441729CC952E62F1E3EF53FB57F4C15771_il2cpp_TypeInfo_var);
 		List_1__ctor_m440529120A541C7267ACF63629F99BD889050209(L_0, List_1__ctor_m440529120A541C7267ACF63629F99BD889050209_RuntimeMethod_var);
 		__this->___m_Items = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Items), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:37>
 		List_1_tC94B561287DC106A4C4FA516C6A2D5FEF21B2D28* L_1 = (List_1_tC94B561287DC106A4C4FA516C6A2D5FEF21B2D28*)il2cpp_codegen_object_new(List_1_tC94B561287DC106A4C4FA516C6A2D5FEF21B2D28_il2cpp_TypeInfo_var);
 		List_1__ctor_mF4B90211A80B230BE2E4E168459313AE866C3292(L_1, List_1__ctor_mF4B90211A80B230BE2E4E168459313AE866C3292_RuntimeMethod_var);
 		__this->___m_ValueTupleWidgets = L_1;
@@ -13132,7 +13132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerPersistentCanvas__ctor_mA5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64783
+// Method Definition Index: 64833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass3_0__ctor_m36CB7670C22CE2BC7AEBDF17C15A238D1917B014 (U3CU3Ec__DisplayClass3_0_tFFA3C83A168B164874D1DD9E772FC802A5734252* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13140,11 +13140,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass3_0__ctor_m36CB7670
 		return;
 	}
 }
-// Method Definition Index: 64784
+// Method Definition Index: 64834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass3_0_U3CToggleU3Eb__0_mCAEB7CF73BAB66E6DDA60AF4E42AFC9F760B4B63 (U3CU3Ec__DisplayClass3_0_tFFA3C83A168B164874D1DD9E772FC802A5734252* __this, DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:18>
 		DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* L_0 = ___0_x;
 		NullCheck(L_0);
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_1;
@@ -13161,7 +13161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass3_0_U3CToggleU3Eb__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64785
+// Method Definition Index: 64835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m6761D236175AFD2E1E821B45A5490FFD870063E2 (U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13169,11 +13169,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m6761D236
 		return;
 	}
 }
-// Method Definition Index: 64786
+// Method Definition Index: 64836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass5_0_U3CToggleU3Eb__0_m79415F2A42AEBB68E27EC802026578C446D975F7 (U3CU3Ec__DisplayClass5_0_t9B203CA28E9E2C7F1417DE13B0AB6B4E8B0DE225* __this, ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerPersistentCanvas.cs:43>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_0 = ___0_x;
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_1 = __this->___widget;
 		return (bool)((((RuntimeObject*)(ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B*)L_0) == ((RuntimeObject*)(ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B*)L_1))? 1 : 0);
@@ -13187,17 +13187,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass5_0_U3CToggleU3Eb__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64787
+// Method Definition Index: 64837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_OnEnable_m55EBAF40971C22A5539D16F173781EB07ADE24E7 (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:27>
 		__this->___m_Timer = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 64788
+// Method Definition Index: 64838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_SetWidget_m6EC21DD1029C7F0AFF20CFAE38F11200B08D5671 (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13207,15 +13207,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_SetWidget_m6EC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:32>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:33>
 		ProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1_mC5FE91CF9A5E3BE9BF64AD6371A66AF3EC7B1A2F(__this, DebugUIHandlerWidget_CastWidget_TisProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1_mC5FE91CF9A5E3BE9BF64AD6371A66AF3EC7B1A2F_RuntimeMethod_var);
 		__this->___m_Value = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Value), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:34>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		ProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1* L_3 = __this->___m_Value;
 		NullCheck(L_3);
@@ -13223,53 +13223,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_SetWidget_m6EC
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:35>
 		DebugUIHandlerProgressBar_UpdateValue_mF9350F475FEA1F80625C7C3CB66D7D1F04DD1EBC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 64789
+// Method Definition Index: 64839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerProgressBar_OnSelection_m294EBF5EEB80AB4A38BD5100C4237CEEB71B3B2F (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:46>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:47>
 		V_0 = (bool)1;
 		goto IL_0017;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:48>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 64790
+// Method Definition Index: 64840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_OnDeselection_m8F886AC05206F610F8EDEDEA690A4A44C4DEC0B7 (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:55>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:56>
 		return;
 	}
 }
-// Method Definition Index: 64791
+// Method Definition Index: 64841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_Update_m5CDC7545ED2DF4B36A594AAA2C8857BE078B14DA (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:60>
 		float L_0 = __this->___m_Timer;
 		ProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1* L_1 = __this->___m_Value;
 		NullCheck(L_1);
@@ -13282,9 +13282,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_Update_m5CDC75
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:62>
 		DebugUIHandlerProgressBar_UpdateValue_mF9350F475FEA1F80625C7C3CB66D7D1F04DD1EBC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:63>
 		float L_4 = __this->___m_Timer;
 		ProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1* L_5 = __this->___m_Value;
 		NullCheck(L_5);
@@ -13294,29 +13294,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_Update_m5CDC75
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:66>
 		float L_7 = __this->___m_Timer;
 		float L_8;
 		L_8 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___m_Timer = ((float)il2cpp_codegen_add(L_7, L_8));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:67>
 		return;
 	}
 }
-// Method Definition Index: 64792
+// Method Definition Index: 64842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_UpdateValue_mF9350F475FEA1F80625C7C3CB66D7D1F04DD1EBC (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:71>
 		ProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1* L_0 = __this->___m_Value;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(12, L_0);
 		V_0 = ((*(float*)UnBox(L_1, il2cpp_defaults.single_class)));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:72>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		ProgressBarValue_t2B6FB200188DA2BB713BAC8C6B8FBF9C409C19E1* L_3 = __this->___m_Value;
 		float L_4 = V_0;
@@ -13327,25 +13327,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar_UpdateValue_mF
 		L_7 = VirtualFuncInvoker1< String_t*, RuntimeObject* >::Invoke(13, L_3, L_6);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:74>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = __this->___progressBarRect;
 		NullCheck(L_8);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
 		L_9 = Transform_get_localScale_m804A002A53A645CDFCD15BB0F37209162720363F(L_8, NULL);
 		V_1 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:75>
 		float L_10 = V_0;
 		(&V_1)->___x = L_10;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:76>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_11 = __this->___progressBarRect;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_1;
 		NullCheck(L_11);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_11, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerProgressBar.cs:77>
 		return;
 	}
 }
-// Method Definition Index: 64793
+// Method Definition Index: 64843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar__ctor_m127341206E907B17CA94F4C7BDC44D925B99F40C (DebugUIHandlerProgressBar_tA6915CF4CECF6D63B358B435A647B3692F6CE702* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13361,7 +13361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerProgressBar__ctor_m1273412
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64794
+// Method Definition Index: 64844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetWidget_mBB75329D9E885E936DF16C5F511D6FFBAF6C4FFB (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13396,20 +13396,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetWid
 	DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* G_B9_0 = NULL;
 	DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* G_B9_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:25>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:26>
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisRenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC_m749758340AF80DF34F27CD46D9128DBF3FC92054(__this, DebugUIHandlerWidget_CastWidget_TisRenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC_m749758340AF80DF34F27CD46D9128DBF3FC92054_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:27>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:28>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -13417,16 +13417,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetWid
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:30>
 		V_0 = 0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:31>
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_6 = __this->___m_Field;
 		NullCheck(L_6);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7;
 		L_7 = RenderingLayerField_get_renderingLayersNames_mD6A1988E5C6033FF3D0E2D8A40F2F1BDD391CDFF(L_6, NULL);
 		NullCheck(L_7);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_7)->max_length)), 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:32>
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_8 = __this->___m_Field;
 		NullCheck(L_8);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9;
@@ -13438,14 +13438,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetWid
 
 IL_005e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:32>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = V_2;
 		int32_t L_11 = V_3;
 		NullCheck(L_10);
 		int32_t L_12 = L_11;
 		String_t* L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
 		V_4 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:34>
 		int32_t L_14 = V_0;
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_15 = __this->___toggles;
 		NullCheck(L_15);
@@ -13459,34 +13459,34 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:35>
 		goto IL_011b;
 	}
 
 IL_0080:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:37>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_18 = __this->___toggles;
 		int32_t L_19 = V_0;
 		NullCheck(L_18);
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_20;
 		L_20 = List_1_get_Item_m37FFA8C9F52EDDFD9EE56DE6B12954C3FD4CB5BA(L_18, L_19, List_1_get_Item_m37FFA8C9F52EDDFD9EE56DE6B12954C3FD4CB5BA_RuntimeMethod_var);
 		V_5 = L_20;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:38>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_21 = V_5;
 		Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA* L_22 = (Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA*)il2cpp_codegen_object_new(Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA_il2cpp_TypeInfo_var);
 		Func_2__ctor_mF0ABAE563501FB4B795991365F3011147BE07E2E(L_22, __this, (intptr_t)((void*)DebugUIHandlerRenderingLayerField_GetValue_mDB171A6D198D634CD9E7C1D8C2D8D37DB1A8711C_RuntimeMethod_var), NULL);
 		NullCheck(L_21);
 		L_21->___getter = L_22;
 		Il2CppCodeGenWriteBarrier((void**)(&L_21->___getter), (void*)L_22);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:39>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_23 = V_5;
 		Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D* L_24 = (Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D*)il2cpp_codegen_object_new(Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D_il2cpp_TypeInfo_var);
 		Action_2__ctor_m4C35233BEC41AA19D1AFC7620C4ACDFFE2FF1B8E(L_24, __this, (intptr_t)((void*)DebugUIHandlerRenderingLayerField_SetValue_mC649AC7E3762DEA41DD8A7355DDB081137D6C4D6_RuntimeMethod_var), NULL);
 		NullCheck(L_23);
 		L_23->___setter = L_24;
 		Il2CppCodeGenWriteBarrier((void**)(&L_23->___setter), (void*)L_24);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:40>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_25 = V_5;
 		int32_t L_26 = V_0;
 		int32_t L_27 = V_1;
@@ -13518,7 +13518,7 @@ IL_00cb:
 	{
 		NullCheck(G_B6_1);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(G_B6_1, G_B6_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:41>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_31 = V_5;
 		int32_t L_32 = V_0;
 		if ((((int32_t)L_32) > ((int32_t)0)))
@@ -13549,27 +13549,27 @@ IL_00e8:
 	{
 		NullCheck(G_B9_1);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(G_B9_1, G_B9_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:42>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_36 = V_5;
 		NullCheck(L_36);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_36, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:43>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_37 = V_5;
 		int32_t L_38 = V_0;
 		NullCheck(L_37);
 		L_37->___index = L_38;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:44>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_39 = V_5;
 		NullCheck(L_39);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_40 = L_39->___nameLabel;
 		String_t* L_41 = V_4;
 		NullCheck(L_40);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_40, L_41);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:45>
 		DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6* L_42 = V_5;
 		NullCheck(L_42);
 		DebugUIHandlerIndirectToggle_Init_mFB2213D89BCF29671F255C37E862F94F31F12506(L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:46>
 		int32_t L_43 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_43, 1));
 	}
@@ -13582,7 +13582,7 @@ IL_011b:
 
 IL_011f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:32>
 		int32_t L_45 = V_3;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_46 = V_2;
 		NullCheck(L_46);
@@ -13597,7 +13597,7 @@ IL_011f:
 
 IL_012a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:52>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_47 = __this->___toggles;
 		int32_t L_48 = V_0;
 		NullCheck(L_47);
@@ -13608,19 +13608,19 @@ IL_012a:
 		L_50 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_49, NULL);
 		il2cpp_codegen_runtime_class_init_inline(CoreUtils_tEE57AB2B0DAE9561F4954B08800A8F957850B038_il2cpp_TypeInfo_var);
 		CoreUtils_Destroy_mD2FDD299C528530E4CC5F99EFBAF90ABC7B02C69(L_50, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:53>
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_51 = __this->___toggles;
 		int32_t L_52 = V_0;
 		NullCheck(L_51);
 		List_1_set_Item_m011023A908CBCCA66DF0D8BBC6DBC5088AE58998(L_51, L_52, (DebugUIHandlerIndirectToggle_tBC08AC2BCF26294B5A75071B5B4EA3446F8F77E6*)NULL, List_1_set_Item_m011023A908CBCCA66DF0D8BBC6DBC5088AE58998_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:50>
 		int32_t L_53 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_53, 1));
 	}
 
 IL_0155:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:50>
 		int32_t L_54 = V_0;
 		List_1_t40BC47FA2B9AF8634F886A1F8DC0EBEB8CA7ACBC* L_55 = __this->___toggles;
 		NullCheck(L_55);
@@ -13634,11 +13634,11 @@ IL_0155:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 64795
+// Method Definition Index: 64845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRenderingLayerField_GetValue_mDB171A6D198D634CD9E7C1D8C2D8D37DB1A8711C (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13652,13 +13652,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRenderingLayerField_GetVal
 	memset((&V_0), 0, sizeof(V_0));
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:59>
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 L_1;
 		L_1 = Field_1_GetValue_m27A803CE0F51C4934DD1361A7E58864F09B11591(L_0, Field_1_GetValue_m27A803CE0F51C4934DD1361A7E58864F09B11591_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:60>
 		RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1_il2cpp_TypeInfo_var);
 		uint32_t L_3;
@@ -13670,12 +13670,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRenderingLayerField_GetVal
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:61>
 		bool L_5 = V_1;
 		return L_5;
 	}
 }
-// Method Definition Index: 64796
+// Method Definition Index: 64846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetValue_mC649AC7E3762DEA41DD8A7355DDB081137D6C4D6 (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, int32_t ___0_index, bool ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13689,13 +13689,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetVal
 	memset((&V_0), 0, sizeof(V_0));
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:65>
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 L_1;
 		L_1 = Field_1_GetValue_m27A803CE0F51C4934DD1361A7E58864F09B11591(L_0, Field_1_GetValue_m27A803CE0F51C4934DD1361A7E58864F09B11591_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:66>
 		bool L_2 = ___1_value;
 		V_1 = L_2;
 		bool L_3 = V_1;
@@ -13705,7 +13705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetVal
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:67>
 		RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1_il2cpp_TypeInfo_var);
 		int32_t L_5;
@@ -13719,7 +13719,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_SetVal
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:69>
 		RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1_il2cpp_TypeInfo_var);
 		int32_t L_9;
@@ -13732,16 +13732,16 @@ IL_0027:
 
 IL_003b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:70>
 		RenderingLayerField_t97C2ABF54E427FDFC03A4D6AF25DDDE83AC067AC* L_12 = __this->___m_Field;
 		RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 L_13 = V_0;
 		NullCheck(L_12);
 		VirtualActionInvoker1< RenderingLayerMask_tD73B9FC1A65A937F18E56833FC83BF89C2B085A1 >::Invoke(16, L_12, L_13);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 64797
+// Method Definition Index: 64847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRenderingLayerField_OnSelection_m530DB5A94DCF936ACAEDE2A90F4469AA9421E3A5 (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13757,7 +13757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRenderingLayerField_OnSele
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:81>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -13788,7 +13788,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:83>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -13798,7 +13798,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:85>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -13811,7 +13811,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:87>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -13825,7 +13825,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:89>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -13835,13 +13835,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:93>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:94>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -13856,60 +13856,60 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:98>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:99>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:99>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64798
+// Method Definition Index: 64848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_OnDeselection_m140A3965114E3A91776D54E2536683E843E9E57C (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:106>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:107>
 		return;
 	}
 }
-// Method Definition Index: 64799
+// Method Definition Index: 64849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_OnIncrement_mC4C8CC17470721F0400CB26658EFA8F52D884979 (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:115>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:116>
 		return;
 	}
 }
-// Method Definition Index: 64800
+// Method Definition Index: 64850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_OnDecrement_mCD8A8B83D38441DB4DA806D4D3983CD77668F0B3 (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:124>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:125>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:125>
 		return;
 	}
 }
-// Method Definition Index: 64801
+// Method Definition Index: 64851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_OnAction_m31E43CDBAB1AA8B9C25F32BF7F32D46B006BF86F (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:132>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:132>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_1 = __this->___valueToggle;
 		NullCheck(L_1);
@@ -13917,11 +13917,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField_OnActi
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:133>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:133>
 		return;
 	}
 }
-// Method Definition Index: 64802
+// Method Definition Index: 64852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerRenderingLayerField_Next_m305C7316EA6F8E6AE2231DDE3E9FF9D7D89A7FE3 (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13936,7 +13936,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:141>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		bool L_1;
@@ -13970,7 +13970,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:142>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:142>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -13979,13 +13979,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:144>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:146>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -13998,7 +13998,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:147>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -14007,7 +14007,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:149>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:149>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -14015,12 +14015,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:150>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRenderingLayerField.cs:150>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64803
+// Method Definition Index: 64853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField__ctor_mAC0B600BEBD498E195C6C568485952DA2B5BD8B5 (DebugUIHandlerRenderingLayerField_t32E3BA2FD338CD48CFFDC63932C0D0415D3FFD27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14036,17 +14036,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRenderingLayerField__ctor_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64804
+// Method Definition Index: 64854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow_OnEnable_m49F4F79E8882BB233938663A86135EF0F997B32B (DebugUIHandlerRow_t645203F505F391F672E791F36AD2D7521ADF922A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:17>
 		__this->___m_Timer = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:18>
 		return;
 	}
 }
-// Method Definition Index: 64805
+// Method Definition Index: 64855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* DebugUIHandlerRow_GetChild_mB97EEC909223110337A5BE14CCF8A5274643F306 (DebugUIHandlerRow_t645203F505F391F672E791F36AD2D7521ADF922A* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14062,7 +14062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 	bool V_4 = false;
 	int32_t G_B6_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:22>
 		int32_t L_0 = ___0_index;
 		V_0 = (bool)((((int32_t)L_0) < ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -14072,14 +14072,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:23>
 		V_1 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 		goto IL_0065;
 	}
 
 IL_000d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:25>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_2);
@@ -14096,7 +14096,7 @@ IL_000d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:27>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_6);
@@ -14106,7 +14106,7 @@ IL_000d:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_7, 1, NULL);
 		V_3 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -14141,7 +14141,7 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:30>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15 = V_3;
 		int32_t L_16 = ___0_index;
 		NullCheck(L_15);
@@ -14160,19 +14160,19 @@ IL_0060:
 
 IL_0061:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:34>
 		V_1 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 		goto IL_0065;
 	}
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:35>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = V_1;
 		return L_19;
 	}
 }
-// Method Definition Index: 64806
+// Method Definition Index: 64856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRow_TryGetChild_m62300D7F233301BB16FC7DA09A9A05B4E07CF787 (DebugUIHandlerRow_t645203F505F391F672E791F36AD2D7521ADF922A* __this, int32_t ___0_index, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F** ___1_child, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14183,14 +14183,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRow_TryGetChild_m62300D7F2
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:39>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F** L_0 = ___1_child;
 		int32_t L_1 = ___0_index;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = DebugUIHandlerRow_GetChild_mB97EEC909223110337A5BE14CCF8A5274643F306(__this, L_1, NULL);
 		*((RuntimeObject**)L_0) = (RuntimeObject*)L_2;
 		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_0, (void*)(RuntimeObject*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:40>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F** L_3 = ___1_child;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = *((GameObject_t76FEDD663AB33C991A9C9A23129337651094216F**)L_3);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -14202,12 +14202,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRow_TryGetChild_m62300D7F2
 
 IL_0015:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:41>
 		bool L_6 = V_0;
 		return L_6;
 	}
 }
-// Method Definition Index: 64807
+// Method Definition Index: 64857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRow_IsActive_m9A1744A24CAB7464D894AFB957752B8CB807F7AF (DebugUIHandlerRow_t645203F505F391F672E791F36AD2D7521ADF922A* __this, Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590* ___0_table, int32_t ___1_index, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___2_child, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14226,7 +14226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerRow_IsActive_m9A1744A24CAB
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:45>
 		Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590* L_0 = ___0_table;
 		if (!L_0)
 		{
@@ -14258,14 +14258,14 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:46>
 		V_3 = (bool)0;
 		goto IL_0059;
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:48>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = ___2_child;
 		NullCheck(L_5);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
@@ -14274,7 +14274,7 @@ IL_0019:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Transform_Find_m3087032B0E1C5B96A2D2C27020BAEAE2DA08F932(L_6, _stringLiteral86FADB31129B6F40C720A97600D69389EA3567E3, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:49>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -14308,7 +14308,7 @@ IL_003e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:50>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = V_1;
 		NullCheck(L_13);
 		String_t* L_14;
@@ -14321,19 +14321,19 @@ IL_003e:
 
 IL_0055:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:52>
 		V_3 = (bool)1;
 		goto IL_0059;
 	}
 
 IL_0059:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:53>
 		bool L_16 = V_3;
 		return L_16;
 	}
 }
-// Method Definition Index: 64808
+// Method Definition Index: 64858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow_Update_mBE152302B758037599B09EDD65EA506773BD20DA (DebugUIHandlerRow_t645203F505F391F672E791F36AD2D7521ADF922A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14383,23 +14383,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow_Update_mBE152302B75803
 	bool V_31 = false;
 	bool V_32 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:60>
 		Row_t4263ADC980EB84EB443A525B26307F51EF796D4B* L_0;
 		L_0 = DebugUIHandlerWidget_CastWidget_TisRow_t4263ADC980EB84EB443A525B26307F51EF796D4B_m814482F60DC9B6BCE5723BC7540B5130E16A200B(__this, DebugUIHandlerWidget_CastWidget_TisRow_t4263ADC980EB84EB443A525B26307F51EF796D4B_m814482F60DC9B6BCE5723BC7540B5130E16A200B_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:61>
 		Row_t4263ADC980EB84EB443A525B26307F51EF796D4B* L_1 = V_0;
 		NullCheck(L_1);
 		RuntimeObject* L_2;
 		L_2 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(6, L_1);
 		V_1 = ((Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590*)IsInstClass((RuntimeObject*)L_2, Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:63>
 		V_2 = (0.100000001f);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:64>
 		float L_3 = __this->___m_Timer;
 		float L_4 = V_2;
 		V_3 = (bool)((((int32_t)((!(((float)L_3) >= ((float)L_4)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:65>
 		bool L_5 = V_3;
 		V_6 = L_5;
 		bool L_6 = V_6;
@@ -14409,7 +14409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow_Update_mBE152302B75803
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:66>
 		float L_7 = __this->___m_Timer;
 		float L_8 = V_2;
 		__this->___m_Timer = ((float)il2cpp_codegen_subtract(L_7, L_8));
@@ -14417,19 +14417,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow_Update_mBE152302B75803
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:67>
 		float L_9 = __this->___m_Timer;
 		float L_10;
 		L_10 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___m_Timer = ((float)il2cpp_codegen_add(L_9, L_10));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:69>
 		V_7 = 0;
 		goto IL_00e9;
 	}
 
 IL_0056:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:71>
 		int32_t L_11 = V_7;
 		bool L_12;
 		L_12 = DebugUIHandlerRow_TryGetChild_m62300D7F233301BB16FC7DA09A9A05B4E07CF787(__this, L_11, (&V_8), NULL);
@@ -14441,20 +14441,20 @@ IL_0056:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:72>
 		goto IL_00e3;
 	}
 
 IL_006c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:74>
 		Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590* L_14 = V_1;
 		int32_t L_15 = V_7;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_8;
 		bool L_17;
 		L_17 = DebugUIHandlerRow_IsActive_m9A1744A24CAB7464D894AFB957752B8CB807F7AF(__this, L_14, L_15, L_16, NULL);
 		V_9 = L_17;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:75>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_19;
@@ -14467,7 +14467,7 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:76>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = V_8;
 		bool L_22 = V_9;
 		NullCheck(L_21);
@@ -14476,7 +14476,7 @@ IL_006c:
 
 IL_0091:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:77>
 		bool L_23 = V_9;
 		bool L_24 = V_3;
 		V_12 = (bool)((int32_t)((int32_t)L_23&(int32_t)L_24));
@@ -14487,7 +14487,7 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:79>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = V_8;
 		NullCheck(L_26);
 		bool L_27;
@@ -14500,7 +14500,7 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:80>
 		DebugUIHandlerColor_tA1057D3530615A086352BCFD13E51F6FFBA2A276* L_29 = V_13;
 		NullCheck(L_29);
 		DebugUIHandlerColor_UpdateColor_m0D7C0E504BECE85E4E0A47F9D69DA52B2E7ABD94(L_29, NULL);
@@ -14508,7 +14508,7 @@ IL_0091:
 
 IL_00b3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:81>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = V_8;
 		NullCheck(L_30);
 		bool L_31;
@@ -14521,7 +14521,7 @@ IL_00b3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:82>
 		DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* L_33 = V_14;
 		NullCheck(L_33);
 		VirtualActionInvoker0::Invoke(13, L_33);
@@ -14529,7 +14529,7 @@ IL_00b3:
 
 IL_00ca:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:83>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = V_8;
 		NullCheck(L_34);
 		bool L_35;
@@ -14542,7 +14542,7 @@ IL_00ca:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:84>
 		DebugUIHandlerObjectList_t24430130AD12E961DE50F90ADC83CA8FBE76D67E* L_37 = V_15;
 		NullCheck(L_37);
 		VirtualActionInvoker0::Invoke(13, L_37);
@@ -14558,14 +14558,14 @@ IL_00e2:
 
 IL_00e3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:69>
 		int32_t L_38 = V_7;
 		V_7 = ((int32_t)il2cpp_codegen_add(L_38, 1));
 	}
 
 IL_00e9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:69>
 		int32_t L_39 = V_7;
 		Row_t4263ADC980EB84EB443A525B26307F51EF796D4B* L_40 = V_0;
 		NullCheck(L_40);
@@ -14582,28 +14582,28 @@ IL_00e9:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:89>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44;
 		L_44 = DebugUIHandlerRow_GetChild_mB97EEC909223110337A5BE14CCF8A5274643F306(__this, 0, NULL);
 		NullCheck(L_44);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_45;
 		L_45 = GameObject_GetComponent_TisDebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1_mDDAC5639CCCD1277DED622CB58EA0D7C4626B07D(L_44, GameObject_GetComponent_TisDebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1_mDDAC5639CCCD1277DED622CB58EA0D7C4626B07D_RuntimeMethod_var);
 		V_4 = L_45;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:90>
 		V_5 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:91>
 		V_20 = 0;
 		goto IL_01e1;
 	}
 
 IL_011a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:93>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_46 = V_4;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_47 = V_5;
 		NullCheck(L_46);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_46, L_47, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:94>
 		int32_t L_48 = V_20;
 		bool L_49;
 		L_49 = DebugUIHandlerRow_TryGetChild_m62300D7F233301BB16FC7DA09A9A05B4E07CF787(__this, L_48, (&V_21), NULL);
@@ -14615,13 +14615,13 @@ IL_011a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:95>
 		goto IL_01db;
 	}
 
 IL_013d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:97>
 		Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590* L_51 = V_1;
 		int32_t L_52 = V_20;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53 = V_21;
@@ -14635,16 +14635,16 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:98>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_56 = V_4;
 		V_5 = L_56;
 	}
 
 IL_0152:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:100>
 		V_22 = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:101>
 		int32_t L_57 = V_20;
 		V_25 = ((int32_t)il2cpp_codegen_add(L_57, 1));
 		goto IL_01ae;
@@ -14652,7 +14652,7 @@ IL_0152:
 
 IL_015d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:103>
 		int32_t L_58 = V_25;
 		bool L_59;
 		L_59 = DebugUIHandlerRow_TryGetChild_m62300D7F233301BB16FC7DA09A9A05B4E07CF787(__this, L_58, (&V_26), NULL);
@@ -14664,13 +14664,13 @@ IL_015d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:104>
 		goto IL_01a8;
 	}
 
 IL_0173:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:106>
 		Table_t02C23978AEDF525D15A9D9D7A528AC5D22DE8590* L_61 = V_1;
 		int32_t L_62 = V_25;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_63 = V_26;
@@ -14684,26 +14684,26 @@ IL_0173:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:108>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:108>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_66 = V_21;
 		NullCheck(L_66);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_67;
 		L_67 = GameObject_GetComponent_TisDebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1_mDDAC5639CCCD1277DED622CB58EA0D7C4626B07D(L_66, GameObject_GetComponent_TisDebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1_mDDAC5639CCCD1277DED622CB58EA0D7C4626B07D_RuntimeMethod_var);
 		V_29 = L_67;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:109>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_68 = V_4;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_69 = V_29;
 		NullCheck(L_68);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_68, L_69, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:110>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_70 = V_29;
 		V_4 = L_70;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:111>
 		int32_t L_71 = V_25;
 		V_20 = ((int32_t)il2cpp_codegen_subtract(L_71, 1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:112>
 		V_22 = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:113>
 		goto IL_01c3;
 	}
 
@@ -14713,14 +14713,14 @@ IL_01a7:
 
 IL_01a8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:101>
 		int32_t L_72 = V_25;
 		V_25 = ((int32_t)il2cpp_codegen_add(L_72, 1));
 	}
 
 IL_01ae:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:101>
 		int32_t L_73 = V_25;
 		Row_t4263ADC980EB84EB443A525B26307F51EF796D4B* L_74 = V_0;
 		NullCheck(L_74);
@@ -14739,7 +14739,7 @@ IL_01ae:
 
 IL_01c3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:116>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:116>
 		bool L_78 = V_22;
 		V_31 = (bool)((((int32_t)L_78) == ((int32_t)0))? 1 : 0);
 		bool L_79 = V_31;
@@ -14749,11 +14749,11 @@ IL_01c3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:118>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_80 = V_4;
 		NullCheck(L_80);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_80, (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:119>
 		goto IL_01f9;
 	}
 
@@ -14763,14 +14763,14 @@ IL_01da:
 
 IL_01db:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:91>
 		int32_t L_81 = V_20;
 		V_20 = ((int32_t)il2cpp_codegen_add(L_81, 1));
 	}
 
 IL_01e1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:91>
 		int32_t L_82 = V_20;
 		Row_t4263ADC980EB84EB443A525B26307F51EF796D4B* L_83 = V_0;
 		NullCheck(L_83);
@@ -14789,11 +14789,11 @@ IL_01e1:
 
 IL_01f9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:122>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerRow.cs:122>
 		return;
 	}
 }
-// Method Definition Index: 64809
+// Method Definition Index: 64859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow__ctor_m25AA9A1DE431B4C5C7CFED066F3DC0721EB6DF32 (DebugUIHandlerRow_t645203F505F391F672E791F36AD2D7521ADF922A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14809,7 +14809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerRow__ctor_m25AA9A1DE431B4C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64810
+// Method Definition Index: 64860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_SetWidget_mB013EB6AEA2897CEA4522F3D1306B1A376C62BC8 (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14822,15 +14822,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_SetWidget_mB013EB6A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:24>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:25>
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisBoolField_t39D6A35B4122FEB0926086FA434886E537378EAD_m602D3D052274597A72935E51D2408300CF76081C(__this, DebugUIHandlerWidget_CastWidget_TisBoolField_t39D6A35B4122FEB0926086FA434886E537378EAD_m602D3D052274597A72935E51D2408300CF76081C_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:26>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -14838,9 +14838,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_SetWidget_mB013EB6A
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:27>
 		VirtualActionInvoker0::Invoke(13, __this);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:29>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_5 = __this->___valueToggle;
 		NullCheck(L_5);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_6 = L_5->___onValueChanged;
@@ -14848,69 +14848,69 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_SetWidget_mB013EB6A
 		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_7, __this, (intptr_t)((void*)DebugUIHandlerToggle_OnToggleValueChanged_m547F4E123162D824FD6BF35941CFB92DBA301B06_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD(L_6, L_7, UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:30>
 		return;
 	}
 }
-// Method Definition Index: 64811
+// Method Definition Index: 64861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_OnToggleValueChanged_m547F4E123162D824FD6BF35941CFB92DBA301B06 (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:34>
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_0 = __this->___m_Field;
 		bool L_1 = ___0_value;
 		NullCheck(L_0);
 		VirtualActionInvoker1< bool >::Invoke(16, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 64812
+// Method Definition Index: 64862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerToggle_OnSelection_mC8CB6EA7DEB61BAF4F426B059218915AEA157115 (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:45>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:46>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___checkmarkImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:47>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:48>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64813
+// Method Definition Index: 64863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_OnDeselection_m5DC6563E07ABC6CD640C94827FC876D5E8068797 (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:55>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:56>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___checkmarkImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 64814
+// Method Definition Index: 64864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_OnAction_m4891CDA4A337AD1DA6B047E3DF4A363B2ED07ABE (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14921,24 +14921,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_OnAction_m4891CDA4A
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:64>
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Field_1_GetValue_m62541687AAAB2E6BD8CB30B968C5142B4F6D8CC0(L_0, Field_1_GetValue_m62541687AAAB2E6BD8CB30B968C5142B4F6D8CC0_RuntimeMethod_var);
 		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:65>
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_2 = __this->___m_Field;
 		bool L_3 = V_0;
 		NullCheck(L_2);
 		VirtualActionInvoker1< bool >::Invoke(16, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:66>
 		VirtualActionInvoker0::Invoke(13, __this);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:67>
 		return;
 	}
 }
-// Method Definition Index: 64815
+// Method Definition Index: 64865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_UpdateValueLabel_mA8DDCA729EAEF8AA280CA7746033DA73A25D2D59 (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14950,7 +14950,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_UpdateValueLabel_mA
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:74>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___valueToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14963,7 +14963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_UpdateValueLabel_mA
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:75>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_3 = __this->___valueToggle;
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -14975,11 +14975,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle_UpdateValueLabel_mA
 
 IL_0028:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggle.cs:76>
 		return;
 	}
 }
-// Method Definition Index: 64816
+// Method Definition Index: 64866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle__ctor_m7B4B26A73C24FF78F61592F9911F87650F0A7687 (DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14995,7 +14995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggle__ctor_m7B4B26A73C24
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64817
+// Method Definition Index: 64867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggleHistory_SetWidget_mF1C6F29B86AA5367D2C4B5BFF537F3F566B3E7DC (DebugUIHandlerToggleHistory_t6CA171585CD5D13FB3D66CD9D5A14A3D32331DA4* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15023,7 +15023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggleHistory_SetWidget_mF
 	int32_t G_B3_0 = 0;
 	float G_B6_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:16>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		HistoryBoolField_t76A4E68747D844E26F7A87751125E257F3B5D9F0* L_1 = ((HistoryBoolField_t76A4E68747D844E26F7A87751125E257F3B5D9F0*)IsInstClass((RuntimeObject*)L_0, HistoryBoolField_t76A4E68747D844E26F7A87751125E257F3B5D9F0_il2cpp_TypeInfo_var));
 		if (L_1)
@@ -15049,12 +15049,12 @@ IL_000e:
 IL_0013:
 	{
 		V_0 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:17>
 		int32_t L_3 = V_0;
 		ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098* L_4 = (ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098*)(ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098*)SZArrayNew(ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098_il2cpp_TypeInfo_var, (uint32_t)L_3);
 		__this->___historyToggles = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___historyToggles), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:18>
 		int32_t L_5 = V_0;
 		if ((((int32_t)L_5) > ((int32_t)0)))
 		{
@@ -15075,14 +15075,14 @@ IL_002b:
 IL_0033:
 	{
 		V_1 = G_B6_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:19>
 		V_2 = 0;
 		goto IL_011b;
 	}
 
 IL_003b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:21>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_7 = ((DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896*)__this)->___valueToggle;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -15090,7 +15090,7 @@ IL_003b:
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_9;
 		L_9 = Object_Instantiate_TisToggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F_m3394DE8798D1C6A93C4F5AAF1215DD479C1EA1DD(L_7, L_8, Object_Instantiate_TisToggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F_m3394DE8798D1C6A93C4F5AAF1215DD479C1EA1DD_RuntimeMethod_var);
 		V_3 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:22>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_10 = V_3;
 		NullCheck(L_10);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
@@ -15099,14 +15099,14 @@ IL_003b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_11, NULL);
 		V_4 = L_12;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:23>
 		float* L_13 = (float*)(&(&V_4)->___x);
 		float* L_14 = L_13;
 		float L_15 = *((float*)L_14);
 		int32_t L_16 = V_2;
 		float L_17 = V_1;
 		*((float*)L_14) = (float)((float)il2cpp_codegen_add(L_15, ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_add(L_16, 1))), L_17))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:24>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_18 = V_3;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
@@ -15114,7 +15114,7 @@ IL_003b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = V_4;
 		NullCheck(L_19);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_19, L_20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:25>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_21 = V_3;
 		NullCheck(L_21);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22;
@@ -15126,7 +15126,7 @@ IL_003b:
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_24;
 		L_24 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_23, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_5 = L_24;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:26>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_25 = V_5;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_26;
 		L_26 = Texture2D_get_whiteTexture_m3A243ED388F9EF0EC515015A6E0E50FD261D2FA1(NULL);
@@ -15139,7 +15139,7 @@ IL_003b:
 		L_29 = Sprite_Create_m827A9BDEC4566AB71966A40DB48A09BB064D81E7(L_26, L_27, L_28, NULL);
 		NullCheck(L_25);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_25, L_29, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:27>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_30 = V_5;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_31;
 		memset((&L_31), 0, sizeof(L_31));
@@ -15148,7 +15148,7 @@ IL_003b:
 		L_32 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_31, NULL);
 		NullCheck(L_30);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_30, L_32);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:28>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_33 = V_5;
 		NullCheck(L_33);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_34;
@@ -15160,7 +15160,7 @@ IL_003b:
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_36;
 		L_36 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_35, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_6 = L_36;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:29>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_37 = V_6;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_38;
 		memset((&L_38), 0, sizeof(L_38));
@@ -15169,7 +15169,7 @@ IL_003b:
 		L_39 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_38, NULL);
 		NullCheck(L_37);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_37, L_39);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:30>
 		ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098* L_40 = __this->___historyToggles;
 		int32_t L_41 = V_2;
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_42 = V_3;
@@ -15179,14 +15179,14 @@ IL_003b:
 		NullCheck(L_40);
 		ArrayElementTypeCheck (L_40, L_43);
 		(L_40)->SetAt(static_cast<il2cpp_array_size_t>(L_41), (Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F*)L_43);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:19>
 		int32_t L_44 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_44, 1));
 	}
 
 IL_011b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:19>
 		int32_t L_45 = V_2;
 		int32_t L_46 = V_0;
 		V_7 = (bool)((((int32_t)L_45) < ((int32_t)L_46))? 1 : 0);
@@ -15197,14 +15197,14 @@ IL_011b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:34>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_48 = ___0_widget;
 		DebugUIHandlerToggle_SetWidget_mB013EB6AEA2897CEA4522F3D1306B1A376C62BC8(__this, L_48, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 64818
+// Method Definition Index: 64868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggleHistory_UpdateValueLabel_m53680DAC7821FA5564196843381D8F885E3F428D (DebugUIHandlerToggleHistory_t6CA171585CD5D13FB3D66CD9D5A14A3D32331DA4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15223,12 +15223,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggleHistory_UpdateValueL
 	int32_t G_B3_0 = 0;
 	int32_t G_B7_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:42>
 		DebugUIHandlerToggle_UpdateValueLabel_mA8DDCA729EAEF8AA280CA7746033DA73A25D2D59(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:43>
 		BoolField_t39D6A35B4122FEB0926086FA434886E537378EAD* L_0 = ((DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896*)__this)->___m_Field;
 		V_0 = ((HistoryBoolField_t76A4E68747D844E26F7A87751125E257F3B5D9F0*)IsInstClass((RuntimeObject*)L_0, HistoryBoolField_t76A4E68747D844E26F7A87751125E257F3B5D9F0_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:44>
 		HistoryBoolField_t76A4E68747D844E26F7A87751125E257F3B5D9F0* L_1 = V_0;
 		if (L_1)
 		{
@@ -15252,14 +15252,14 @@ IL_001a:
 IL_0020:
 	{
 		V_1 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:45>
 		V_2 = 0;
 		goto IL_0060;
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:47>
 		int32_t L_4 = V_2;
 		ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098* L_5 = __this->___historyToggles;
 		NullCheck(L_5);
@@ -15296,7 +15296,7 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:48>
 		ToggleU5BU5D_t73C98F6CC63F9D7C0B8A26533CE6D7E218D00098* L_12 = __this->___historyToggles;
 		int32_t L_13 = V_2;
 		NullCheck(L_12);
@@ -15313,14 +15313,14 @@ IL_0042:
 
 IL_005b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:45>
 		int32_t L_19 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_19, 1));
 	}
 
 IL_0060:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:45>
 		int32_t L_20 = V_2;
 		int32_t L_21 = V_1;
 		V_4 = (bool)((((int32_t)L_20) < ((int32_t)L_21))? 1 : 0);
@@ -15331,7 +15331,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:51>
 		bool L_23;
 		L_23 = Behaviour_get_isActiveAndEnabled_mEB4ECCE9761A7016BC619557CEFEA1A30D3BF28A(__this, NULL);
 		V_5 = L_23;
@@ -15342,7 +15342,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:52>
 		RuntimeObject* L_25;
 		L_25 = DebugUIHandlerToggleHistory_RefreshAfterSanitization_mB09CBD9491CC001A16B22FD2F7333153BF612506(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_26;
@@ -15351,11 +15351,11 @@ IL_0060:
 
 IL_0083:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 64819
+// Method Definition Index: 64869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DebugUIHandlerToggleHistory_RefreshAfterSanitization_mB09CBD9491CC001A16B22FD2F7333153BF612506 (DebugUIHandlerToggleHistory_t6CA171585CD5D13FB3D66CD9D5A14A3D32331DA4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15374,7 +15374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DebugUIHandlerToggleHistory_Re
 		return L_1;
 	}
 }
-// Method Definition Index: 64820
+// Method Definition Index: 64870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggleHistory__ctor_m1D0260C9C7CFB872A3E21524715444ED3F6FEFBC (DebugUIHandlerToggleHistory_t6CA171585CD5D13FB3D66CD9D5A14A3D32331DA4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15390,7 +15390,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerToggleHistory__ctor_m1D026
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64821
+// Method Definition Index: 64871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4__ctor_mE7A3146511E19C2501D1087E3FCFBE75837DCBAB (U3CRefreshAfterSanitizationU3Ed__4_t37C0D010B1D44AE036E591D1A1CA70A71E2F44F6* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -15400,14 +15400,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4__ctor
 		return;
 	}
 }
-// Method Definition Index: 64822
+// Method Definition Index: 64872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4_System_IDisposable_Dispose_m916C7561F787139BCAAEB10C8D43BB643B125514 (U3CRefreshAfterSanitizationU3Ed__4_t37C0D010B1D44AE036E591D1A1CA70A71E2F44F6* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 64823
+// Method Definition Index: 64873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRefreshAfterSanitizationU3Ed__4_MoveNext_m631C0808EE7D82FA1D6F0B8039D3AA93965C29F1 (U3CRefreshAfterSanitizationU3Ed__4_t37C0D010B1D44AE036E591D1A1CA70A71E2F44F6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15460,7 +15460,7 @@ IL_0016:
 IL_0018:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:57>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -15470,7 +15470,7 @@ IL_0018:
 IL_0030:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:58>
 		DebugUIHandlerToggleHistory_t6CA171585CD5D13FB3D66CD9D5A14A3D32331DA4* L_3 = __this->___U3CU3E4__this;
 		NullCheck(L_3);
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_4 = ((DebugUIHandlerToggle_tB7C5A4F2A457F27E2D62C5589272FEC0C19B1896*)L_3)->___valueToggle;
@@ -15485,11 +15485,11 @@ IL_0030:
 		L_8 = Func_1_Invoke_mBB7F37C468451AF57FAF31635C544D6B8C4373B2_inline(L_7, NULL);
 		NullCheck(L_4);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_4, L_8, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerToggleHistory.cs:59>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 64824
+// Method Definition Index: 64874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC83DF44B95C3BEFEAE450D2F2699A606E94F935F (U3CRefreshAfterSanitizationU3Ed__4_t37C0D010B1D44AE036E591D1A1CA70A71E2F44F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15497,7 +15497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3E
 		return L_0;
 	}
 }
-// Method Definition Index: 64825
+// Method Definition Index: 64875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4_System_Collections_IEnumerator_Reset_m97EA3023930C1F29E1086F7D141B93ED488E219C (U3CRefreshAfterSanitizationU3Ed__4_t37C0D010B1D44AE036E591D1A1CA70A71E2F44F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15506,7 +15506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshAfterSanitizationU3Ed__4_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRefreshAfterSanitizationU3Ed__4_System_Collections_IEnumerator_Reset_m97EA3023930C1F29E1086F7D141B93ED488E219C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 64826
+// Method Definition Index: 64876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3Ed__4_System_Collections_IEnumerator_get_Current_m70EEB9C8257E30C1EB8730D7C52F5B24DD5860F1 (U3CRefreshAfterSanitizationU3Ed__4_t37C0D010B1D44AE036E591D1A1CA70A71E2F44F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15522,7 +15522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshAfterSanitizationU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64827
+// Method Definition Index: 64877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_SetWidget_mE43AAC56A1B3EE0B80878651978FA58835204D43 (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15532,15 +15532,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_SetWidget_mE43AA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:19>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:20>
 		UIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisUIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636_mDCA038F39A612AEB7F42BC0E5D177A052823A744(__this, DebugUIHandlerWidget_CastWidget_TisUIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636_mDCA038F39A612AEB7F42BC0E5D177A052823A744_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:21>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		UIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -15548,80 +15548,80 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_SetWidget_mE43AA
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:22>
 		DebugUIHandlerUIntField_UpdateValueLabel_mC8087A6A5B7CC2A625EB2B037E7C3223EF9AE72F(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:23>
 		return;
 	}
 }
-// Method Definition Index: 64828
+// Method Definition Index: 64878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerUIntField_OnSelection_mC17408F0DF4132756C3356AC3DDB3DDE41615018 (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:33>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:34>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:35>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:36>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64829
+// Method Definition Index: 64879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_OnDeselection_m2AE7C5834668EC7592BAC21B28A92EF2B63873BE (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:43>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:44>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 64830
+// Method Definition Index: 64880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_OnIncrement_m54BF1BBC4C764649885CB3FA3FBC45B858554DB8 (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:53>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerUIntField_ChangeValue_m3CC1A7386C1805CF9113C4016BD888392EA1ED77(__this, L_0, 1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 64831
+// Method Definition Index: 64881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_OnDecrement_m13F770A6F4E10B94952256F87A4E6DAA63F8AF9F (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:62>
 		bool L_0 = ___0_fast;
 		DebugUIHandlerUIntField_ChangeValue_m3CC1A7386C1805CF9113C4016BD888392EA1ED77(__this, L_0, (-1), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:63>
 		return;
 	}
 }
-// Method Definition Index: 64832
+// Method Definition Index: 64882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_ChangeValue_m3CC1A7386C1805CF9113C4016BD888392EA1ED77 (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, bool ___0_fast, int32_t ___1_multiplier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15641,13 +15641,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_ChangeValue_m3CC
 	uint32_t G_B8_1 = 0;
 	int64_t G_B8_2 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:67>
 		UIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		uint32_t L_1;
 		L_1 = Field_1_GetValue_m5AB711420D2537F66BA9190AF59840BD2D284F0E(L_0, Field_1_GetValue_m5AB711420D2537F66BA9190AF59840BD2D284F0E_RuntimeMethod_var);
 		V_0 = ((int64_t)(uint64_t)((uint32_t)L_1));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:69>
 		int64_t L_2 = V_0;
 		if (L_2)
 		{
@@ -15675,13 +15675,13 @@ IL_0018:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:70>
 		goto IL_0057;
 	}
 
 IL_001e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:72>
 		int64_t L_5 = V_0;
 		UIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636* L_6 = __this->___m_Field;
 		NullCheck(L_6);
@@ -15717,22 +15717,22 @@ IL_003b:
 	{
 		int32_t L_11 = ___1_multiplier;
 		V_0 = ((int64_t)il2cpp_codegen_add(G_B8_2, ((int64_t)il2cpp_codegen_multiply(((int64_t)(uint64_t)((uint32_t)((int32_t)il2cpp_codegen_multiply((int32_t)G_B8_1, (int32_t)G_B8_0)))), ((int64_t)L_11)))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:73>
 		UIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636* L_12 = __this->___m_Field;
 		int64_t L_13 = V_0;
 		NullCheck(L_12);
 		VirtualActionInvoker1< uint32_t >::Invoke(16, L_12, ((int32_t)(uint32_t)L_13));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:74>
 		DebugUIHandlerUIntField_UpdateValueLabel_mC8087A6A5B7CC2A625EB2B037E7C3223EF9AE72F(__this, NULL);
 	}
 
 IL_0057:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:75>
 		return;
 	}
 }
-// Method Definition Index: 64833
+// Method Definition Index: 64883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_UpdateValueLabel_mC8087A6A5B7CC2A625EB2B037E7C3223EF9AE72F (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15746,7 +15746,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_UpdateValueLabel
 	bool V_0 = false;
 	uint32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:79>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___valueLabel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -15759,7 +15759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_UpdateValueLabel
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:80>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___valueLabel;
 		UIntField_t0D5D8410DC6004E58515C2C503A81535DB7F5636* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -15774,11 +15774,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField_UpdateValueLabel
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerUIntField.cs:81>
 		return;
 	}
 }
-// Method Definition Index: 64834
+// Method Definition Index: 64884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField__ctor_mF43B3EE4A84D70A5066F52B5B50845F41BE687FC (DebugUIHandlerUIntField_tBB4A60AC8223E8A22E17D13C1BE9D0E71664644C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15794,17 +15794,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerUIntField__ctor_mF43B3EE4A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64835
+// Method Definition Index: 64885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_OnEnable_m7038D3F49F5D49DAC0ED5F377D6A15A6EC68D69B (DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:27>
 		__this->___m_Timer = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 64836
+// Method Definition Index: 64886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_SetWidget_mA142AE7CCB143CA40E3E63E03CCED6EF916A445A (DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15814,15 +15814,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_SetWidget_mA142AE7CC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:32>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:33>
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisValue_tD3281A1DB8DBD137422F643A60AE1E5F0C736457_mB96C0AAC0A091F04A2CF543CB2C956F0E7C6560C(__this, DebugUIHandlerWidget_CastWidget_TisValue_tD3281A1DB8DBD137422F643A60AE1E5F0C736457_mB96C0AAC0A091F04A2CF543CB2C956F0E7C6560C_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:34>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -15830,56 +15830,56 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_SetWidget_mA142AE7CC
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 64837
+// Method Definition Index: 64887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerValue_OnSelection_mEF84CDA2A38FA0FBC19C8E93B42542223145E36B (DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:45>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:46>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:47>
 		V_0 = (bool)1;
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:48>
 		bool L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64838
+// Method Definition Index: 64888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_OnDeselection_m0EA789B780B5D638F66A1DACC0AE45CA94466BC3 (DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:55>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:56>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___valueLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_2);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_2, L_3);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 64839
+// Method Definition Index: 64889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_Update_mE41E37D577A414A9EB1FF35937B92F4A3F5B3AFC (DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15897,7 +15897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_Update_mE41E37D577A4
 	memset((&G_B5_0), 0, sizeof(G_B5_0));
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B5_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:61>
 		float L_0 = __this->___m_Timer;
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_1 = __this->___m_Field;
 		NullCheck(L_1);
@@ -15910,13 +15910,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_Update_mE41E37D577A4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:63>
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_4 = __this->___m_Field;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
 		L_5 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(12, L_4);
 		V_1 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:64>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___valueLabel;
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_7 = __this->___m_Field;
 		RuntimeObject* L_8 = V_1;
@@ -15925,7 +15925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_Update_mE41E37D577A4
 		L_9 = VirtualFuncInvoker1< String_t*, RuntimeObject* >::Invoke(13, L_7, L_8);
 		NullCheck(L_6);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_6, L_9);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:66>
 		RuntimeObject* L_10 = V_1;
 		V_2 = (bool)((!(((RuntimeObject*)(RuntimeObject*)((RuntimeObject*)IsInstSealed((RuntimeObject*)L_10, il2cpp_defaults.single_class))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_11 = V_2;
@@ -15935,7 +15935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue_Update_mE41E37D577A4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:67>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = __this->___valueLabel;
 		RuntimeObject* L_13 = V_1;
 		if ((((float)((*(float*)UnBox(L_13, il2cpp_defaults.single_class)))) == ((float)(0.0f))))
@@ -15968,7 +15968,7 @@ IL_006d:
 
 IL_0073:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:68>
 		float L_16 = __this->___m_Timer;
 		Value_tD3281A1DB8DBD137422F643A60AE1E5F0C736457* L_17 = __this->___m_Field;
 		NullCheck(L_17);
@@ -15978,16 +15978,16 @@ IL_0073:
 
 IL_008c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:71>
 		float L_19 = __this->___m_Timer;
 		float L_20;
 		L_20 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___m_Timer = ((float)il2cpp_codegen_add(L_19, L_20));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:72>
 		return;
 	}
 }
-// Method Definition Index: 64840
+// Method Definition Index: 64890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue__ctor_mFAC0D77BD1806745E3234F08069159AA0E89933A (DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15995,7 +15995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue__ctor_mFAC0D77BD1806
 		return;
 	}
 }
-// Method Definition Index: 64841
+// Method Definition Index: 64891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue__cctor_m184E221EB625B23EBE7F859B538A9702E1DF4BB9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16005,7 +16005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue__cctor_m184E221EB625
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValue.cs:20>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		L_0 = Color_get_gray_m6D01087E0F20F34718EBA5B213853B4BB49F1DEF(NULL);
 		((DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerValue_t6FF8751421AEBD0EDC37F7F506085C3F9B40E7E2_il2cpp_TypeInfo_var))->___k_ZeroColor = L_0;
@@ -16020,52 +16020,52 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValue__cctor_m184E221EB625
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64842
+// Method Definition Index: 64892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_OnEnable_m613D58FAFEAF3BB5260860B442F2FE7DD9D023AE (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:37>
 		__this->___m_Timer = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:38>
 		return;
 	}
 }
-// Method Definition Index: 64843
+// Method Definition Index: 64893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerValueTuple_OnSelection_mD15A16F607E21EC2EB3AC225B6F604464A81B609 (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:48>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:49>
 		V_0 = (bool)1;
 		goto IL_0017;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:50>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 64844
+// Method Definition Index: 64894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_OnDeselection_mAB7EE62B9B56D51B3D078970A048C01186BE2A0E (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:57>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:58>
 		return;
 	}
 }
-// Method Definition Index: 64845
+// Method Definition Index: 64895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_SetWidget_m871CAFD886AC966A996678883FBACBC846ACAAF9 (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16093,16 +16093,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_SetWidget_m871C
 	memset((&V_7), 0, sizeof(V_7));
 	bool V_8 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:62>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___m_Widget = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___m_Widget), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:63>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B_mB105B6E0B0BA8DC28F04B052C5E5B973981230DF(__this, DebugUIHandlerWidget_CastWidget_TisValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B_mB105B6E0B0BA8DC28F04B052C5E5B973981230DF_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:64>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___nameLabel;
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_3 = __this->___m_Field;
 		NullCheck(L_3);
@@ -16110,41 +16110,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_SetWidget_m871C
 		L_4 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_2, L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:66>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_5 = __this->___m_Field;
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = ValueTuple_get_numElements_m6C292C670ADCA27ED67B9AB6A5F7981C5ECA21A7(L_5, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D((bool)((((int32_t)L_6) > ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:67>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_7 = __this->___m_Field;
 		NullCheck(L_7);
 		int32_t L_8;
 		L_8 = ValueTuple_get_numElements_m6C292C670ADCA27ED67B9AB6A5F7981C5ECA21A7(L_7, NULL);
 		V_0 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:68>
 		int32_t L_9 = V_0;
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_10 = (TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353*)(TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353*)SZArrayNew(TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353_il2cpp_TypeInfo_var, (uint32_t)L_9);
 		__this->___valueElements = L_10;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___valueElements), (void*)L_10);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:69>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_11 = __this->___valueElements;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = __this->___valueLabel;
 		NullCheck(L_11);
 		ArrayElementTypeCheck (L_11, L_12);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(0), (Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62*)L_12);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:70>
 		int32_t L_13 = V_0;
 		V_1 = ((float)((230.0f)/((float)L_13)));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:71>
 		V_2 = 1;
 		goto IL_0153;
 	}
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:73>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_14 = __this->___valueLabel;
 		NullCheck(L_14);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
@@ -16155,26 +16155,26 @@ IL_0075:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17;
 		L_17 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_15, L_16, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
 		V_3 = L_17;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:74>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = V_3;
 		NullCheck(L_18);
 		LayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A* L_19;
 		L_19 = GameObject_AddComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mCAEF1A4C92D1C856A46417BA645409AE42F005D2(L_18, GameObject_AddComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mCAEF1A4C92D1C856A46417BA645409AE42F005D2_RuntimeMethod_var);
 		NullCheck(L_19);
 		VirtualActionInvoker1< bool >::Invoke(28, L_19, (bool)1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:75>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = V_3;
 		NullCheck(L_20);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_20, NULL);
 		V_4 = ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_21, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:76>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_22 = __this->___nameLabel;
 		NullCheck(L_22);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
 		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_22, NULL);
 		V_5 = ((RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)IsInstSealed((RuntimeObject*)L_23, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:77>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_24 = V_4;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_25 = V_4;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_7), (0.0f), (1.0f), NULL);
@@ -16184,14 +16184,14 @@ IL_0075:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27 = V_7;
 		NullCheck(L_24);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_24, L_27, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:78>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_28 = V_4;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29;
 		memset((&L_29), 0, sizeof(L_29));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_29), (100.0f), (26.0f), NULL);
 		NullCheck(L_28);
 		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_28, L_29, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:79>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_30 = V_5;
 		NullCheck(L_30);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31;
@@ -16199,28 +16199,28 @@ IL_0075:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32;
 		L_32 = Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline(L_31, NULL);
 		V_6 = L_32;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:80>
 		float* L_33 = (float*)(&(&V_6)->___x);
 		float* L_34 = L_33;
 		float L_35 = *((float*)L_34);
 		int32_t L_36 = V_2;
 		float L_37 = V_1;
 		*((float*)L_34) = (float)((float)il2cpp_codegen_add(L_35, ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_add(L_36, 1))), L_37)), (200.0f)))));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:81>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_38 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39 = V_6;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_40;
 		L_40 = Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline(L_39, NULL);
 		NullCheck(L_38);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_38, L_40, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:82>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_41 = V_4;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_42;
 		memset((&L_42), 0, sizeof(L_42));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_42), (0.0f), (1.0f), NULL);
 		NullCheck(L_41);
 		RectTransform_set_pivot_m79D0177D383D432A93C2615F1932B739B1C6E146(L_41, L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:83>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_43 = __this->___valueElements;
 		int32_t L_44 = V_2;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_45 = V_3;
@@ -16230,14 +16230,14 @@ IL_0075:
 		NullCheck(L_43);
 		ArrayElementTypeCheck (L_43, L_46);
 		(L_43)->SetAt(static_cast<il2cpp_array_size_t>(L_44), (Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62*)L_46);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:71>
 		int32_t L_47 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_47, 1));
 	}
 
 IL_0153:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:71>
 		int32_t L_48 = V_2;
 		int32_t L_49 = V_0;
 		V_8 = (bool)((((int32_t)L_48) < ((int32_t)L_49))? 1 : 0);
@@ -16248,11 +16248,11 @@ IL_0153:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:85>
 		return;
 	}
 }
-// Method Definition Index: 64846
+// Method Definition Index: 64896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_UpdateValueLabels_mDA0BEF235B594C709A29EE84E98A1E1513927A5F (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16274,14 +16274,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_UpdateValueLabe
 	memset((&G_B9_0), 0, sizeof(G_B9_0));
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B9_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:89>
 		V_0 = 0;
 		goto IL_0099;
 	}
 
 IL_0008:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:91>
 		int32_t L_0 = V_0;
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_1 = __this->___valueElements;
 		NullCheck(L_1);
@@ -16318,7 +16318,7 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:93>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_8 = __this->___m_Field;
 		NullCheck(L_8);
 		ValueU5BU5D_t315A4B8A6CC5335E0926EA030D79C971EF9CF19F* L_9 = L_8->___values;
@@ -16330,7 +16330,7 @@ IL_0025:
 		RuntimeObject* L_13;
 		L_13 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(12, L_12);
 		V_2 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:94>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_14 = __this->___valueElements;
 		int32_t L_15 = V_0;
 		NullCheck(L_14);
@@ -16349,7 +16349,7 @@ IL_0025:
 		L_24 = VirtualFuncInvoker1< String_t*, RuntimeObject* >::Invoke(13, L_22, L_23);
 		NullCheck(L_17);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_17, L_24);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:96>
 		RuntimeObject* L_25 = V_2;
 		V_3 = (bool)((!(((RuntimeObject*)(RuntimeObject*)((RuntimeObject*)IsInstSealed((RuntimeObject*)L_25, il2cpp_defaults.single_class))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_26 = V_3;
@@ -16359,7 +16359,7 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:97>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_27 = __this->___valueElements;
 		int32_t L_28 = V_0;
 		NullCheck(L_27);
@@ -16400,14 +16400,14 @@ IL_0093:
 
 IL_0094:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:89>
 		int32_t L_34 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_34, 1));
 	}
 
 IL_0099:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:89>
 		int32_t L_35 = V_0;
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_36 = __this->___m_Field;
 		NullCheck(L_36);
@@ -16421,17 +16421,17 @@ IL_0099:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:100>
 		return;
 	}
 }
-// Method Definition Index: 64847
+// Method Definition Index: 64897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple_Update_m2CF36221014AC1938BF1D581E0A0B5F623CF7DA3 (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:104>
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_0 = __this->___m_Field;
 		if (!L_0)
 		{
@@ -16463,9 +16463,9 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:106>
 		VirtualActionInvoker0::Invoke(13, __this);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:107>
 		float L_5 = __this->___m_Timer;
 		ValueTuple_t04B143B9A6965455D65F7BB42D19AF35FA43423B* L_6 = __this->___m_Field;
 		NullCheck(L_6);
@@ -16476,16 +16476,16 @@ IL_0022:
 
 IL_0047:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:110>
 		float L_8 = __this->___m_Timer;
 		float L_9;
 		L_9 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___m_Timer = ((float)il2cpp_codegen_add(L_8, L_9));
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:111>
 		return;
 	}
 }
-// Method Definition Index: 64848
+// Method Definition Index: 64898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple__ctor_m9A053B90BB55180B87200A944A6AE765CD437E6E (DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16493,7 +16493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple__ctor_m9A053B90
 		return;
 	}
 }
-// Method Definition Index: 64849
+// Method Definition Index: 64899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple__cctor_m9A1FECFB32AFED4FA314257247D84489ED3FE22C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16503,7 +16503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple__cctor_m9A1FECF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerValueTuple.cs:30>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		L_0 = Color_get_gray_m6D01087E0F20F34718EBA5B213853B4BB49F1DEF(NULL);
 		((DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229_StaticFields*)il2cpp_codegen_static_fields_for(DebugUIHandlerValueTuple_tEEE8A64A0E0B01784A9DFAFFD2BF6F3B8117F229_il2cpp_TypeInfo_var))->___k_ZeroColor = L_0;
@@ -16518,7 +16518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerValueTuple__cctor_m9A1FECF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64850
+// Method Definition Index: 64900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVBox_SetWidget_mC00F497831E97C0E451298B026A0E0015C09810D (DebugUIHandlerVBox_t6EAD0C2AECCDB1DB651BA32B821D18AD1B70989B* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16528,19 +16528,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVBox_SetWidget_mC00F497831
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:12>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:13>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_1;
 		L_1 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 64851
+// Method Definition Index: 64901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVBox_OnSelection_mF51E61D686F63DFE7788D34F438B090C83685606 (DebugUIHandlerVBox_t6EAD0C2AECCDB1DB651BA32B821D18AD1B70989B* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16554,7 +16554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVBox_OnSelection_mF51E61D6
 	bool V_2 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:24>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -16586,39 +16586,39 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:26>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_5 = __this->___m_Container;
 		NullCheck(L_5);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6;
 		L_6 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:27>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_7;
 		L_7 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_1;
 		NullCheck(L_7);
 		DebugManager_ChangeSelection_m77C3E5AD1A1B7D9EEFA8C39BFD8A40B1AEEB856A(L_7, L_8, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:28>
 		V_2 = (bool)1;
 		goto IL_003c;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:31>
 		V_2 = (bool)0;
 		goto IL_003c;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:32>
 		bool L_9 = V_2;
 		return L_9;
 	}
 }
-// Method Definition Index: 64852
+// Method Definition Index: 64902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerVBox_Next_mF6722FDBA8AD3554A1838B7FF305D0468699C7B9 (DebugUIHandlerVBox_t6EAD0C2AECCDB1DB651BA32B821D18AD1B70989B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16632,7 +16632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_2 = NULL;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:40>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_0 = __this->___m_Container;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -16645,7 +16645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:41>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3;
 		L_3 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_3;
@@ -16654,13 +16654,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:43>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_4 = __this->___m_Container;
 		NullCheck(L_4);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_4, NULL);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:45>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_6 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -16673,7 +16673,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:46>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9;
 		L_9 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_9;
@@ -16682,7 +16682,7 @@ IL_001a:
 
 IL_003a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:48>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = V_0;
 		V_2 = L_10;
 		goto IL_003e;
@@ -16690,12 +16690,12 @@ IL_003a:
 
 IL_003e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVBox.cs:49>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11 = V_2;
 		return L_11;
 	}
 }
-// Method Definition Index: 64853
+// Method Definition Index: 64903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVBox__ctor_m64FA47D67C1E274862860178B57B7D62028779C8 (DebugUIHandlerVBox_t6EAD0C2AECCDB1DB651BA32B821D18AD1B70989B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16711,7 +16711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVBox__ctor_m64FA47D67C1E27
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64854
+// Method Definition Index: 64904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetWidget_mBC7196017B1F462C0A6C4D59156725BDF0F21CFF (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16728,20 +16728,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetWidget_mBC71960
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:25>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:26>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisVector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816_m2DA80B714993DA4161150F00CBC5ABD462576A16(__this, DebugUIHandlerWidget_CastWidget_TisVector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816_m2DA80B714993DA4161150F00CBC5ABD462576A16_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:27>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:28>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -16749,55 +16749,55 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetWidget_mBC71960
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:30>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_6 = __this->___fieldX;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_7 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_7, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_0_m40766D6438349BCCD397A409FD47D6DF7D627E95_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		L_6->___getter = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___getter), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:31>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_8 = __this->___fieldX;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_9 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_9, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_1_mDC687994C1C6D34598870969A1C929ED67C3D2AD_RuntimeMethod_var), NULL);
 		NullCheck(L_8);
 		L_8->___setter = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___setter), (void*)L_9);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:32>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_10 = __this->___fieldX;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_11 = __this->___fieldY;
 		NullCheck(L_10);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_10, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:33>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_12 = __this->___fieldX;
 		DebugUIHandlerVector2_SetupSettings_m030AF4AD168A09C5FE2447B0F7F3D560FDF74086(__this, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:35>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_13 = __this->___fieldY;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_14 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_14, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_2_mF99FF85396E7934B035370C2B77BECD5828073BF_RuntimeMethod_var), NULL);
 		NullCheck(L_13);
 		L_13->___getter = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&L_13->___getter), (void*)L_14);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:36>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_15 = __this->___fieldY;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_16 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_16, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_3_mEC21ACEA4E8A9B81D5EE772B1E0117834DC3C921_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
 		L_15->___setter = L_16;
 		Il2CppCodeGenWriteBarrier((void**)(&L_15->___setter), (void*)L_16);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:37>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_17 = __this->___fieldY;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_18 = __this->___fieldX;
 		NullCheck(L_17);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_17, L_18, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:38>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_19 = __this->___fieldY;
 		DebugUIHandlerVector2_SetupSettings_m030AF4AD168A09C5FE2447B0F7F3D560FDF74086(__this, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:39>
 		return;
 	}
 }
-// Method Definition Index: 64855
+// Method Definition Index: 64905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetValue_m62F288A92EB3B3804703359D741236CA57F01468 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, float ___0_v, bool ___1_x, bool ___2_y, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16811,13 +16811,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetValue_m62F288A9
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:43>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		L_1 = Field_1_GetValue_m35BC0454EB241EF390E1AC4F4E9FFDF5286BDCA1(L_0, Field_1_GetValue_m35BC0454EB241EF390E1AC4F4E9FFDF5286BDCA1_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:44>
 		bool L_2 = ___1_x;
 		V_1 = L_2;
 		bool L_3 = V_1;
@@ -16827,14 +16827,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetValue_m62F288A9
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:44>
 		float L_4 = ___0_v;
 		(&V_0)->___x = L_4;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:45>
 		bool L_5 = ___2_y;
 		V_2 = L_5;
 		bool L_6 = V_2;
@@ -16844,23 +16844,23 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:45>
 		float L_7 = ___0_v;
 		(&V_0)->___y = L_7;
 	}
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:46>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_8 = __this->___m_Field;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = V_0;
 		NullCheck(L_8);
 		VirtualActionInvoker1< Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 >::Invoke(16, L_8, L_9);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 64856
+// Method Definition Index: 64906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetupSettings_m030AF4AD168A09C5FE2447B0F7F3D560FDF74086 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* ___0_field, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16873,40 +16873,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_SetupSettings_m030
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:51>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_0 = ___0_field;
 		NullCheck(L_0);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_0, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:52>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_1 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_2 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_2, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetupSettingsU3Eb__8_0_mE4033438C35E72EE5CBBF1F35A04BBEE9CB4B207_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		L_1->___incStepGetter = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___incStepGetter), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:53>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_3 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_4 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_4, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetupSettingsU3Eb__8_1_m5098326D73A3D982ED62D3DA8F591F1CC68DEABD_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		L_3->___incStepMultGetter = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&L_3->___incStepMultGetter), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:54>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_5 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_6 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_6, __this, (intptr_t)((void*)DebugUIHandlerVector2_U3CSetupSettingsU3Eb__8_2_m6024441393B4D412E29E62645E4E3AE6E41AC107_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		L_5->___decimalsGetter = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_5->___decimalsGetter), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:55>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_7 = ___0_field;
 		NullCheck(L_7);
 		DebugUIHandlerIndirectFloatField_Init_m8297DF272ED8D2435861EDB77AABF58290B96840(L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:56>
 		return;
 	}
 }
-// Method Definition Index: 64857
+// Method Definition Index: 64907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVector2_OnSelection_m7AFD01CE9D04771B069EDA118F28905C3A2BD2BA (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16922,7 +16922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVector2_OnSelection_m7AFD0
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:66>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -16953,7 +16953,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:68>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -16963,7 +16963,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:70>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -16976,7 +16976,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:72>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -16990,7 +16990,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:74>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -17000,13 +17000,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:78>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:79>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -17021,60 +17021,60 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:83>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:84>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64858
+// Method Definition Index: 64908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_OnDeselection_m73F49E75445B6A2B9FE2569D2BD3242E467191C5 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:91>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:92>
 		return;
 	}
 }
-// Method Definition Index: 64859
+// Method Definition Index: 64909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_OnIncrement_m03B6B3999DB0B5E6E0AAAC929F7CF703D2C8F361 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:100>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:101>
 		return;
 	}
 }
-// Method Definition Index: 64860
+// Method Definition Index: 64910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_OnDecrement_m863DAB569083D5930357BC892524B8E3080A392B (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:109>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:110>
 		return;
 	}
 }
-// Method Definition Index: 64861
+// Method Definition Index: 64911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_OnAction_m50C6E7ABC27523886E25FA460DCEA1A3E3817212 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:117>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_1 = __this->___valueToggle;
 		NullCheck(L_1);
@@ -17082,11 +17082,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_OnAction_m50C6E7AB
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:118>
 		return;
 	}
 }
-// Method Definition Index: 64862
+// Method Definition Index: 64912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerVector2_Next_mD9DB032D3A4C0F049B9759E5182EACECD0417EBE (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17101,7 +17101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:126>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		bool L_1;
@@ -17135,7 +17135,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:127>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -17144,13 +17144,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:129>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:131>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -17163,7 +17163,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:132>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:132>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -17172,7 +17172,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:134>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:134>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -17180,12 +17180,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:135>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64863
+// Method Definition Index: 64913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2__ctor_m7FFA0AB89BD22952D133B159892D93DFB0289C95 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17193,7 +17193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2__ctor_m7FFA0AB89BD
 		return;
 	}
 }
-// Method Definition Index: 64864
+// Method Definition Index: 64914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_0_m40766D6438349BCCD397A409FD47D6DF7D627E95 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17203,7 +17203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:30>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
@@ -17212,17 +17212,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64865
+// Method Definition Index: 64915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_1_mDC687994C1C6D34598870969A1C929ED67C3D2AD (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:31>
 		float L_0 = ___0_x;
 		DebugUIHandlerVector2_SetValue_m62F288A92EB3B3804703359D741236CA57F01468(__this, L_0, (bool)1, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64866
+// Method Definition Index: 64916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_2_mF99FF85396E7934B035370C2B77BECD5828073BF (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17232,7 +17232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:35>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
@@ -17241,43 +17241,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64867
+// Method Definition Index: 64917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector2_U3CSetWidgetU3Eb__6_3_mEC21ACEA4E8A9B81D5EE772B1E0117834DC3C921 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:36>
 		float L_0 = ___0_x;
 		DebugUIHandlerVector2_SetValue_m62F288A92EB3B3804703359D741236CA57F01468(__this, L_0, (bool)0, (bool)1, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64868
+// Method Definition Index: 64918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetupSettingsU3Eb__8_0_mE4033438C35E72EE5CBBF1F35A04BBEE9CB4B207 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:52>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStep;
 		return L_1;
 	}
 }
-// Method Definition Index: 64869
+// Method Definition Index: 64919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetupSettingsU3Eb__8_1_m5098326D73A3D982ED62D3DA8F591F1CC68DEABD (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:53>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStepMult;
 		return L_1;
 	}
 }
-// Method Definition Index: 64870
+// Method Definition Index: 64920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetupSettingsU3Eb__8_2_m6024441393B4D412E29E62645E4E3AE6E41AC107 (DebugUIHandlerVector2_t106B2660A92F06C25B5CCD8D7445358BAD5385D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector2.cs:54>
 		Vector2Field_t5CDE5FE31ACEDA9AA41D204ABBE50392E2080816* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___decimals;
@@ -17292,7 +17292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector2_U3CSetupSettingsU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64871
+// Method Definition Index: 64921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetWidget_m51C9378CD3689FA2AE11828984E4EE630A23C092 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17311,20 +17311,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetWidget_m51C9378
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:27>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:28>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisVector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94_m62220701C4511E220418623CD1A59B57AD999A5D(__this, DebugUIHandlerWidget_CastWidget_TisVector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94_m62220701C4511E220418623CD1A59B57AD999A5D_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:29>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:30>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -17332,82 +17332,82 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetWidget_m51C9378
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:32>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_6 = __this->___fieldX;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_7 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_7, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_0_mAB6B7CD5EB1A3BDAD9022F1E34F6B3E5FD6AB198_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		L_6->___getter = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___getter), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:33>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_8 = __this->___fieldX;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_9 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_9, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_1_m6C8891791339BFC4674E7F6ACA93407BB01742E5_RuntimeMethod_var), NULL);
 		NullCheck(L_8);
 		L_8->___setter = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___setter), (void*)L_9);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:34>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_10 = __this->___fieldX;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_11 = __this->___fieldY;
 		NullCheck(L_10);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_10, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:35>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_12 = __this->___fieldX;
 		DebugUIHandlerVector3_SetupSettings_m681D4F4C06C60CF01EA0305923C351134A583494(__this, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:37>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_13 = __this->___fieldY;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_14 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_14, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_2_mE180B24E364395A808BDAEF108C3B5CCC7B34A8F_RuntimeMethod_var), NULL);
 		NullCheck(L_13);
 		L_13->___getter = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&L_13->___getter), (void*)L_14);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:38>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_15 = __this->___fieldY;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_16 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_16, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_3_mE87B8C4818974E2A09F967C07693A5EE4E279543_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
 		L_15->___setter = L_16;
 		Il2CppCodeGenWriteBarrier((void**)(&L_15->___setter), (void*)L_16);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:39>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_17 = __this->___fieldY;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_18 = __this->___fieldX;
 		NullCheck(L_17);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_17, L_18, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:40>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_19 = __this->___fieldY;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_20 = __this->___fieldZ;
 		NullCheck(L_19);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_19, L_20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:41>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_21 = __this->___fieldY;
 		DebugUIHandlerVector3_SetupSettings_m681D4F4C06C60CF01EA0305923C351134A583494(__this, L_21, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:43>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_22 = __this->___fieldZ;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_23 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_23, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_4_m0A890E89CA123AF98F3675599F42983DFFF6BED3_RuntimeMethod_var), NULL);
 		NullCheck(L_22);
 		L_22->___getter = L_23;
 		Il2CppCodeGenWriteBarrier((void**)(&L_22->___getter), (void*)L_23);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:44>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_24 = __this->___fieldZ;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_25 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_25, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_5_m6F02ECC974164F8BD416D09591C0A7FC562D9E00_RuntimeMethod_var), NULL);
 		NullCheck(L_24);
 		L_24->___setter = L_25;
 		Il2CppCodeGenWriteBarrier((void**)(&L_24->___setter), (void*)L_25);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:45>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_26 = __this->___fieldZ;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_27 = __this->___fieldY;
 		NullCheck(L_26);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_26, L_27, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:46>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_28 = __this->___fieldZ;
 		DebugUIHandlerVector3_SetupSettings_m681D4F4C06C60CF01EA0305923C351134A583494(__this, L_28, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:47>
 		return;
 	}
 }
-// Method Definition Index: 64872
+// Method Definition Index: 64922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetValue_m4D9723FBDE1075AD99708C9BDDA5F7EF1749EE02 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, float ___0_v, bool ___1_x, bool ___2_y, bool ___3_z, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17422,13 +17422,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetValue_m4D9723FB
 	bool V_2 = false;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:51>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Field_1_GetValue_m64B831DFD988D14A1DA8AD2548F2B1D1867218CC(L_0, Field_1_GetValue_m64B831DFD988D14A1DA8AD2548F2B1D1867218CC_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:52>
 		bool L_2 = ___1_x;
 		V_1 = L_2;
 		bool L_3 = V_1;
@@ -17438,14 +17438,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetValue_m4D9723FB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:52>
 		float L_4 = ___0_v;
 		(&V_0)->___x = L_4;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:53>
 		bool L_5 = ___2_y;
 		V_2 = L_5;
 		bool L_6 = V_2;
@@ -17455,14 +17455,14 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:53>
 		float L_7 = ___0_v;
 		(&V_0)->___y = L_7;
 	}
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:54>
 		bool L_8 = ___3_z;
 		V_3 = L_8;
 		bool L_9 = V_3;
@@ -17472,23 +17472,23 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:54>
 		float L_10 = ___0_v;
 		(&V_0)->___z = L_10;
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:55>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_11 = __this->___m_Field;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
 		NullCheck(L_11);
 		VirtualActionInvoker1< Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 >::Invoke(16, L_11, L_12);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:56>
 		return;
 	}
 }
-// Method Definition Index: 64873
+// Method Definition Index: 64923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetupSettings_m681D4F4C06C60CF01EA0305923C351134A583494 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* ___0_field, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17501,40 +17501,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_SetupSettings_m681
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:60>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_0 = ___0_field;
 		NullCheck(L_0);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_0, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:61>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_1 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_2 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_2, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetupSettingsU3Eb__9_0_m8A2F0E9E84CEDEF51C39FC2064AE4A567D536B5E_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		L_1->___incStepGetter = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___incStepGetter), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:62>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_3 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_4 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_4, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetupSettingsU3Eb__9_1_m8817E674DE9AA44BDA955FCBAE74FCE86AE00D69_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		L_3->___incStepMultGetter = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&L_3->___incStepMultGetter), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:63>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_5 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_6 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_6, __this, (intptr_t)((void*)DebugUIHandlerVector3_U3CSetupSettingsU3Eb__9_2_mEF5F59D1C0046A69401A520E2EA72E08E51683A7_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		L_5->___decimalsGetter = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_5->___decimalsGetter), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:64>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_7 = ___0_field;
 		NullCheck(L_7);
 		DebugUIHandlerIndirectFloatField_Init_m8297DF272ED8D2435861EDB77AABF58290B96840(L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:65>
 		return;
 	}
 }
-// Method Definition Index: 64874
+// Method Definition Index: 64924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVector3_OnSelection_mC678FC573B0C47D7CA67D22621B503036BF51398 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17550,7 +17550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVector3_OnSelection_mC678F
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:75>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -17581,7 +17581,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:77>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -17591,7 +17591,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:79>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -17604,7 +17604,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:81>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -17618,7 +17618,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:83>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -17628,13 +17628,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:87>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:88>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -17649,60 +17649,60 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:92>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:93>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64875
+// Method Definition Index: 64925
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_OnDeselection_m441D4222C4429198D8A935B78E0D83C544511023 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:100>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:101>
 		return;
 	}
 }
-// Method Definition Index: 64876
+// Method Definition Index: 64926
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_OnIncrement_mC053EC7624798FB68ED978E92BF251117E30E0D1 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:109>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:110>
 		return;
 	}
 }
-// Method Definition Index: 64877
+// Method Definition Index: 64927
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_OnDecrement_mD51DBE51C01228D2C0F1ADB74C93F0E35ECC71F3 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:118>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:119>
 		return;
 	}
 }
-// Method Definition Index: 64878
+// Method Definition Index: 64928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_OnAction_m59987EEEA08CA2D312FCFFD4B6945A6F3F1CF351 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:126>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_1 = __this->___valueToggle;
 		NullCheck(L_1);
@@ -17710,11 +17710,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_OnAction_m59987EEE
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:127>
 		return;
 	}
 }
-// Method Definition Index: 64879
+// Method Definition Index: 64929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerVector3_Next_mC9CB584A704F41B945432F643549DC068B8C5048 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17729,7 +17729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:135>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		bool L_1;
@@ -17763,7 +17763,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:136>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -17772,13 +17772,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:138>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:140>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:140>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -17791,7 +17791,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:141>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -17800,7 +17800,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:143>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:143>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -17808,12 +17808,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:144>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64880
+// Method Definition Index: 64930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3__ctor_mE28CE6E9E387BB4C4AD0DA6CBF3DBEA1AA3C34B6 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17821,7 +17821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3__ctor_mE28CE6E9E38
 		return;
 	}
 }
-// Method Definition Index: 64881
+// Method Definition Index: 64931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_0_mAB6B7CD5EB1A3BDAD9022F1E34F6B3E5FD6AB198 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17831,7 +17831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:32>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
@@ -17840,17 +17840,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64882
+// Method Definition Index: 64932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_1_m6C8891791339BFC4674E7F6ACA93407BB01742E5 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, float ___0_v, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:33>
 		float L_0 = ___0_v;
 		DebugUIHandlerVector3_SetValue_m4D9723FBDE1075AD99708C9BDDA5F7EF1749EE02(__this, L_0, (bool)1, (bool)0, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64883
+// Method Definition Index: 64933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_2_mE180B24E364395A808BDAEF108C3B5CCC7B34A8F (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17860,7 +17860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:37>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
@@ -17869,17 +17869,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64884
+// Method Definition Index: 64934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_3_mE87B8C4818974E2A09F967C07693A5EE4E279543 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, float ___0_v, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:38>
 		float L_0 = ___0_v;
 		DebugUIHandlerVector3_SetValue_m4D9723FBDE1075AD99708C9BDDA5F7EF1749EE02(__this, L_0, (bool)0, (bool)1, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64885
+// Method Definition Index: 64935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_4_m0A890E89CA123AF98F3675599F42983DFFF6BED3 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17889,7 +17889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:43>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
@@ -17898,43 +17898,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64886
+// Method Definition Index: 64936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector3_U3CSetWidgetU3Eb__7_5_m6F02ECC974164F8BD416D09591C0A7FC562D9E00 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, float ___0_v, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:44>
 		float L_0 = ___0_v;
 		DebugUIHandlerVector3_SetValue_m4D9723FBDE1075AD99708C9BDDA5F7EF1749EE02(__this, L_0, (bool)0, (bool)0, (bool)1, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64887
+// Method Definition Index: 64937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetupSettingsU3Eb__9_0_m8A2F0E9E84CEDEF51C39FC2064AE4A567D536B5E (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:61>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStep;
 		return L_1;
 	}
 }
-// Method Definition Index: 64888
+// Method Definition Index: 64938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetupSettingsU3Eb__9_1_m8817E674DE9AA44BDA955FCBAE74FCE86AE00D69 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:62>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStepMult;
 		return L_1;
 	}
 }
-// Method Definition Index: 64889
+// Method Definition Index: 64939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetupSettingsU3Eb__9_2_mEF5F59D1C0046A69401A520E2EA72E08E51683A7 (DebugUIHandlerVector3_t3A8C786750EB68B4F84DA9BFCFE482F4EF9AAF7D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector3.cs:63>
 		Vector3Field_t4019EB5DDB0C820FA72499C5F078A9BE00DCAF94* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___decimals;
@@ -17949,7 +17949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector3_U3CSetupSettingsU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64890
+// Method Definition Index: 64940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetWidget_m0ACF9FA8301635E697FAD1F98F39B3430ADF2F30 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17970,20 +17970,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetWidget_m0ACF9FA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:29>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:30>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_1;
 		L_1 = DebugUIHandlerWidget_CastWidget_TisVector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3_m5AEC63274589FDF4F19B27A345F1F20028713F9A(__this, DebugUIHandlerWidget_CastWidget_TisVector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3_m5AEC63274589FDF4F19B27A345F1F20028713F9A_RuntimeMethod_var);
 		__this->___m_Field = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Field), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:31>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_2;
 		L_2 = Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31(__this, Component_GetComponent_TisDebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8_m8809EE5ED4C3BF4D74C7638E16D5B433D2DE2D31_RuntimeMethod_var);
 		__this->___m_Container = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:32>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___nameLabel;
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_4 = __this->___m_Field;
 		NullCheck(L_4);
@@ -17991,109 +17991,109 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetWidget_m0ACF9FA
 		L_5 = Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline(L_4, NULL);
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_3, L_5);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:34>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_6 = __this->___fieldX;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_7 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_7, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_0_m08BEFA85D371D04F0B038DF845898F2B2E1361CC_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		L_6->___getter = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___getter), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:35>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_8 = __this->___fieldX;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_9 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_9, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_1_mB0D840131A3B9F0174D378AAB9C31B2D46EFCBA8_RuntimeMethod_var), NULL);
 		NullCheck(L_8);
 		L_8->___setter = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___setter), (void*)L_9);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:36>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_10 = __this->___fieldX;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_11 = __this->___fieldY;
 		NullCheck(L_10);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_10, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:37>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_12 = __this->___fieldX;
 		DebugUIHandlerVector4_SetupSettings_m6E1D7C8A778144AEC0FED0B4B5F65834B03CFABF(__this, L_12, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:39>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_13 = __this->___fieldY;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_14 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_14, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_2_m259CA925AB02780A7FC19E6E00ECD27A8D9492EB_RuntimeMethod_var), NULL);
 		NullCheck(L_13);
 		L_13->___getter = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&L_13->___getter), (void*)L_14);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:40>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_15 = __this->___fieldY;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_16 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_16, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_3_m43586D00F180DB14B0A50C3470181CE50013D28C_RuntimeMethod_var), NULL);
 		NullCheck(L_15);
 		L_15->___setter = L_16;
 		Il2CppCodeGenWriteBarrier((void**)(&L_15->___setter), (void*)L_16);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:41>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_17 = __this->___fieldY;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_18 = __this->___fieldX;
 		NullCheck(L_17);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_17, L_18, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:42>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_19 = __this->___fieldY;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_20 = __this->___fieldZ;
 		NullCheck(L_19);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_19, L_20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:43>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_21 = __this->___fieldY;
 		DebugUIHandlerVector4_SetupSettings_m6E1D7C8A778144AEC0FED0B4B5F65834B03CFABF(__this, L_21, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:45>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_22 = __this->___fieldZ;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_23 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_23, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_4_mEE993AC3EDBF96F1A45843A1AAC8CD4600128D19_RuntimeMethod_var), NULL);
 		NullCheck(L_22);
 		L_22->___getter = L_23;
 		Il2CppCodeGenWriteBarrier((void**)(&L_22->___getter), (void*)L_23);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:46>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_24 = __this->___fieldZ;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_25 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_25, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_5_m2380D05D15DD6A2D525A4465ADFF4D1C8F0C21E7_RuntimeMethod_var), NULL);
 		NullCheck(L_24);
 		L_24->___setter = L_25;
 		Il2CppCodeGenWriteBarrier((void**)(&L_24->___setter), (void*)L_25);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:47>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_26 = __this->___fieldZ;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_27 = __this->___fieldY;
 		NullCheck(L_26);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_26, L_27, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:48>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_28 = __this->___fieldZ;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_29 = __this->___fieldW;
 		NullCheck(L_28);
 		DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline(L_28, L_29, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:49>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_30 = __this->___fieldZ;
 		DebugUIHandlerVector4_SetupSettings_m6E1D7C8A778144AEC0FED0B4B5F65834B03CFABF(__this, L_30, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:51>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_31 = __this->___fieldW;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_32 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_32, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_6_mB5AE87731664D5FF4407F389918BCAE29C29E66F_RuntimeMethod_var), NULL);
 		NullCheck(L_31);
 		L_31->___getter = L_32;
 		Il2CppCodeGenWriteBarrier((void**)(&L_31->___getter), (void*)L_32);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:52>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_33 = __this->___fieldW;
 		Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* L_34 = (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A*)il2cpp_codegen_object_new(Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m770CD2F8BB65F2EDA5128CA2F96D71C35B23E859(L_34, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_7_mFC96D46A98F25512F5BE486E12F504F4ACC1D592_RuntimeMethod_var), NULL);
 		NullCheck(L_33);
 		L_33->___setter = L_34;
 		Il2CppCodeGenWriteBarrier((void**)(&L_33->___setter), (void*)L_34);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:53>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_35 = __this->___fieldW;
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_36 = __this->___fieldZ;
 		NullCheck(L_35);
 		DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline(L_35, L_36, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:54>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_37 = __this->___fieldW;
 		DebugUIHandlerVector4_SetupSettings_m6E1D7C8A778144AEC0FED0B4B5F65834B03CFABF(__this, L_37, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 64891
+// Method Definition Index: 64941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetValue_mDDE5A79FCB5E7FC86F7F59BFF4ED7D08B419A1ED (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, float ___0_v, bool ___1_x, bool ___2_y, bool ___3_z, bool ___4_w, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18109,13 +18109,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetValue_mDDE5A79F
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:59>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_1;
 		L_1 = Field_1_GetValue_m36C6FCEF8084FFAC4351BB53A298145B627A4CA6(L_0, Field_1_GetValue_m36C6FCEF8084FFAC4351BB53A298145B627A4CA6_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:60>
 		bool L_2 = ___1_x;
 		V_1 = L_2;
 		bool L_3 = V_1;
@@ -18125,14 +18125,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetValue_mDDE5A79F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:60>
 		float L_4 = ___0_v;
 		(&V_0)->___x = L_4;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:61>
 		bool L_5 = ___2_y;
 		V_2 = L_5;
 		bool L_6 = V_2;
@@ -18142,14 +18142,14 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:61>
 		float L_7 = ___0_v;
 		(&V_0)->___y = L_7;
 	}
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:62>
 		bool L_8 = ___3_z;
 		V_3 = L_8;
 		bool L_9 = V_3;
@@ -18159,14 +18159,14 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:62>
 		float L_10 = ___0_v;
 		(&V_0)->___z = L_10;
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:63>
 		bool L_11 = ___4_w;
 		V_4 = L_11;
 		bool L_12 = V_4;
@@ -18176,23 +18176,23 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:63>
 		float L_13 = ___0_v;
 		(&V_0)->___w = L_13;
 	}
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:64>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_14 = __this->___m_Field;
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_15 = V_0;
 		NullCheck(L_14);
 		VirtualActionInvoker1< Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 >::Invoke(16, L_14, L_15);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:65>
 		return;
 	}
 }
-// Method Definition Index: 64892
+// Method Definition Index: 64942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetupSettings_m6E1D7C8A778144AEC0FED0B4B5F65834B03CFABF (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* ___0_field, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18205,40 +18205,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_SetupSettings_m6E1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:69>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_0 = ___0_field;
 		NullCheck(L_0);
 		DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline(L_0, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:70>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_1 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_2 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_2, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetupSettingsU3Eb__10_0_m2294F14B1936842ABAD989616BD8FFFB9D19960C_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		L_1->___incStepGetter = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___incStepGetter), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:71>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_3 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_4 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_4, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetupSettingsU3Eb__10_1_m87F6A7549919BF2D29BED6A03DCFB2F5A5CE30D3_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		L_3->___incStepMultGetter = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&L_3->___incStepMultGetter), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:72>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_5 = ___0_field;
 		Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* L_6 = (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7*)il2cpp_codegen_object_new(Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7_il2cpp_TypeInfo_var);
 		Func_1__ctor_m94E0C712F86101E026834DA318C3FFF46DE49C71(L_6, __this, (intptr_t)((void*)DebugUIHandlerVector4_U3CSetupSettingsU3Eb__10_2_m33E9FAAEBEE26FA4A43E670F562C48F3169CFEFF_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		L_5->___decimalsGetter = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_5->___decimalsGetter), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:73>
 		DebugUIHandlerIndirectFloatField_tDAC2E6339808111FDCBBBB87E11412F525C4087E* L_7 = ___0_field;
 		NullCheck(L_7);
 		DebugUIHandlerIndirectFloatField_Init_m8297DF272ED8D2435861EDB77AABF58290B96840(L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:74>
 		return;
 	}
 }
-// Method Definition Index: 64893
+// Method Definition Index: 64943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVector4_OnSelection_m13FAB6F972E9526565914FC704E535C45A1D58C1 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18254,7 +18254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerVector4_OnSelection_m13FAB
 	bool V_4 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:84>
 		bool L_0 = ___0_fromNext;
 		if (L_0)
 		{
@@ -18285,7 +18285,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:86>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_4);
@@ -18295,7 +18295,7 @@ IL_0015:
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:88>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_6 = __this->___valueToggle;
 		NullCheck(L_6);
 		bool L_7;
@@ -18308,7 +18308,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:90>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_9 = __this->___m_Container;
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = ___1_previous;
 		NullCheck(L_9);
@@ -18322,7 +18322,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:92>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_13 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorSelected;
 		NullCheck(L_13);
@@ -18332,13 +18332,13 @@ IL_002f:
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:96>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_15 = __this->___m_Container;
 		NullCheck(L_15);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16;
 		L_16 = DebugUIHandlerContainer_GetLastItem_m19783039A96D0E481190EC168D1147EA34C353FB(L_15, NULL);
 		V_3 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:97>
 		il2cpp_codegen_runtime_class_init_inline(DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672_il2cpp_TypeInfo_var);
 		DebugManager_t7B02CD44432A634FA9654CC7ABE89DBA061A8672* L_17;
 		L_17 = DebugManager_get_instance_m6606C2006331B9BDE453C15E14F3747930B3FC3D(NULL);
@@ -18353,60 +18353,60 @@ IL_0080:
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:101>
 		V_4 = (bool)1;
 		goto IL_0086;
 	}
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:102>
 		bool L_19 = V_4;
 		return L_19;
 	}
 }
-// Method Definition Index: 64894
+// Method Definition Index: 64944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_OnDeselection_m848522A1837716ACEDBA77E7C40F965E7A69717C (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:109>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___nameLabel;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ((DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)__this)->___colorDefault;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:110>
 		return;
 	}
 }
-// Method Definition Index: 64895
+// Method Definition Index: 64945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_OnIncrement_m7C040482A50C8BA301CF8AECE0B380DC01AA36A4 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:118>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:119>
 		return;
 	}
 }
-// Method Definition Index: 64896
+// Method Definition Index: 64946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_OnDecrement_mD7C8F3016A697A94C281400CC3B98A06F6E2FF69 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:127>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:128>
 		return;
 	}
 }
-// Method Definition Index: 64897
+// Method Definition Index: 64947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_OnAction_m0189C1E29F75BC018C2D5BF6732F1EB3ABB35BD3 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:135>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_1 = __this->___valueToggle;
 		NullCheck(L_1);
@@ -18414,11 +18414,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_OnAction_m0189C1E2
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(L_1, NULL);
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:136>
 		return;
 	}
 }
-// Method Definition Index: 64898
+// Method Definition Index: 64948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerVector4_Next_m27898CC501B5F74A1FFF47D030B187FEB2956DFF (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18433,7 +18433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_3 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:144>
 		UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* L_0 = __this->___valueToggle;
 		NullCheck(L_0);
 		bool L_1;
@@ -18467,7 +18467,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:145>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_5;
 		L_5 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_5;
@@ -18476,13 +18476,13 @@ IL_001d:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:147>
 		DebugUIHandlerContainer_tCC800935A2D1C8FFE9D26E8F2CE9E2CCB0C24DE8* L_6 = __this->___m_Container;
 		NullCheck(L_6);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerContainer_GetFirstItem_m6218F40059CE4BA28F39DA27F7FC12A59C225F80(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:149>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:149>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -18495,7 +18495,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:150>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:150>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_11;
 		L_11 = DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3(__this, NULL);
 		V_2 = L_11;
@@ -18504,7 +18504,7 @@ IL_002a:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:152>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:152>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_12 = V_0;
 		V_2 = L_12;
 		goto IL_004e;
@@ -18512,12 +18512,12 @@ IL_004a:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:153>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_2;
 		return L_13;
 	}
 }
-// Method Definition Index: 64899
+// Method Definition Index: 64949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4__ctor_m45C4574D831F218759A99BF64E570281E91BCABC (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18525,7 +18525,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4__ctor_m45C4574D831
 		return;
 	}
 }
-// Method Definition Index: 64900
+// Method Definition Index: 64950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_0_m08BEFA85D371D04F0B038DF845898F2B2E1361CC (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18535,7 +18535,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:34>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_1;
@@ -18544,17 +18544,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64901
+// Method Definition Index: 64951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_1_mB0D840131A3B9F0174D378AAB9C31B2D46EFCBA8 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:35>
 		float L_0 = ___0_x;
 		DebugUIHandlerVector4_SetValue_mDDE5A79FCB5E7FC86F7F59BFF4ED7D08B419A1ED(__this, L_0, (bool)1, (bool)0, (bool)0, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64902
+// Method Definition Index: 64952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_2_m259CA925AB02780A7FC19E6E00ECD27A8D9492EB (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18564,7 +18564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:39>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_1;
@@ -18573,17 +18573,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64903
+// Method Definition Index: 64953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_3_m43586D00F180DB14B0A50C3470181CE50013D28C (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:40>
 		float L_0 = ___0_x;
 		DebugUIHandlerVector4_SetValue_mDDE5A79FCB5E7FC86F7F59BFF4ED7D08B419A1ED(__this, L_0, (bool)0, (bool)1, (bool)0, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64904
+// Method Definition Index: 64954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_4_mEE993AC3EDBF96F1A45843A1AAC8CD4600128D19 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18593,7 +18593,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:45>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_1;
@@ -18602,17 +18602,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64905
+// Method Definition Index: 64955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_5_m2380D05D15DD6A2D525A4465ADFF4D1C8F0C21E7 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:46>
 		float L_0 = ___0_x;
 		DebugUIHandlerVector4_SetValue_mDDE5A79FCB5E7FC86F7F59BFF4ED7D08B419A1ED(__this, L_0, (bool)0, (bool)0, (bool)1, (bool)0, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64906
+// Method Definition Index: 64956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_6_mB5AE87731664D5FF4407F389918BCAE29C29E66F (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18622,7 +18622,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:51>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_1;
@@ -18631,43 +18631,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetWidgetU3Eb_
 		return L_2;
 	}
 }
-// Method Definition Index: 64907
+// Method Definition Index: 64957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerVector4_U3CSetWidgetU3Eb__8_7_mFC96D46A98F25512F5BE486E12F504F4ACC1D592 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:52>
 		float L_0 = ___0_x;
 		DebugUIHandlerVector4_SetValue_mDDE5A79FCB5E7FC86F7F59BFF4ED7D08B419A1ED(__this, L_0, (bool)0, (bool)0, (bool)0, (bool)1, NULL);
 		return;
 	}
 }
-// Method Definition Index: 64908
+// Method Definition Index: 64958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetupSettingsU3Eb__10_0_m2294F14B1936842ABAD989616BD8FFFB9D19960C (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:70>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStep;
 		return L_1;
 	}
 }
-// Method Definition Index: 64909
+// Method Definition Index: 64959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetupSettingsU3Eb__10_1_m87F6A7549919BF2D29BED6A03DCFB2F5A5CE30D3 (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:71>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		float L_1 = L_0->___incStepMult;
 		return L_1;
 	}
 }
-// Method Definition Index: 64910
+// Method Definition Index: 64960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetupSettingsU3Eb__10_2_m33E9FAAEBEE26FA4A43E670F562C48F3169CFEFF (DebugUIHandlerVector4_t259AFB4DC18993BD5EE021CC45EF3CCB58F9EFFF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:72>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerVector4.cs:72>
 		Vector4Field_t9C175CACC33030F0B57C4CB016466127D28E4AD3* L_0 = __this->___m_Field;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___decimals;
@@ -18682,92 +18682,92 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugUIHandlerVector4_U3CSetupSettingsU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64911
+// Method Definition Index: 64961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_get_parentUIHandler_m2F40C42629AB71EDAEE402C22FE160B76D78D8AE (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___U3CparentUIHandlerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 64912
+// Method Definition Index: 64962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_value;
 		__this->___U3CparentUIHandlerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CparentUIHandlerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 64913
+// Method Definition Index: 64963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_get_previousUIHandler_m618D35DF8E71F7E7EEAD6ED05F77EA51A5214C34 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___U3CpreviousUIHandlerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 64914
+// Method Definition Index: 64964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_value;
 		__this->___U3CpreviousUIHandlerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpreviousUIHandlerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 64915
+// Method Definition Index: 64965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_get_nextUIHandler_m2DFDEE3BE43A204B29BC39087AF60AA86D09BE90 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___U3CnextUIHandlerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 64916
+// Method Definition Index: 64966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_value;
 		__this->___U3CnextUIHandlerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CnextUIHandlerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 64917
+// Method Definition Index: 64967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_OnEnable_m97D5414C310F4E3DB00053EEE5DADBFED53C960C (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 64918
+// Method Definition Index: 64968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_SetWidget_mEE5CAA4C4DCDD02ACBF70B35B23F81CF8DE60F5A (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* ___0_widget, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:48>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = ___0_widget;
 		__this->___m_Widget = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Widget), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:49>
 		return;
 	}
 }
-// Method Definition Index: 64919
+// Method Definition Index: 64969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* DebugUIHandlerWidget_GetWidget_m2B98AD3E32CE71B3F39C93BD7E7C0BEA5897033C (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:53>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_0 = __this->___m_Widget;
 		V_0 = L_0;
 		goto IL_000a;
@@ -18775,61 +18775,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:54>
 		Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 64921
+// Method Definition Index: 64971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DebugUIHandlerWidget_OnSelection_m378D3DE45EB78D9C684239E3D9B53DF27D257F27 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, bool ___0_fromNext, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___1_previous, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:81>
 		V_0 = (bool)1;
 		goto IL_0005;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:82>
 		bool L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 64922
+// Method Definition Index: 64972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_OnDeselection_mBF3AF27B21F180E69D3A57D44CB26F7CB20ECCD9 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:87>
 		return;
 	}
 }
-// Method Definition Index: 64923
+// Method Definition Index: 64973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_OnAction_m5561D81BF72FC055972C2D14BC92E221EA9294EC (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:92>
 		return;
 	}
 }
-// Method Definition Index: 64924
+// Method Definition Index: 64974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_OnIncrement_m4128084E64169D31815E5C0BF79DB25A08A75F22 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:98>
 		return;
 	}
 }
-// Method Definition Index: 64925
+// Method Definition Index: 64975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_OnDecrement_mEFF4903ADBBEE2E4C99AE09FFD83718DBBA12894 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, bool ___0_fast, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:104>
 		return;
 	}
 }
-// Method Definition Index: 64926
+// Method Definition Index: 64976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_Previous_mE43110A6F1E2AABBCE916D5CDE8523E7C543E4E3 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18841,7 +18841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* V_0 = NULL;
 	DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:112>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:112>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0;
 		L_0 = DebugUIHandlerWidget_get_previousUIHandler_m618D35DF8E71F7E7EEAD6ED05F77EA51A5214C34_inline(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18874,12 +18874,12 @@ IL_001d:
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:113>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:113>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 64927
+// Method Definition Index: 64977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_Next_mCCCE23E0DBA851BCF1D6169678B52037FE5D9DC3 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18896,7 +18896,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 	bool V_5 = false;
 	bool V_6 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:121>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:121>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0;
 		L_0 = DebugUIHandlerWidget_get_nextUIHandler_m2DFDEE3BE43A204B29BC39087AF60AA86D09BE90_inline(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18910,7 +18910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:122>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:122>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_3;
 		L_3 = DebugUIHandlerWidget_get_nextUIHandler_m2DFDEE3BE43A204B29BC39087AF60AA86D09BE90_inline(__this, NULL);
 		V_1 = L_3;
@@ -18919,7 +18919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:124>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_4;
 		L_4 = DebugUIHandlerWidget_get_parentUIHandler_m2F40C42629AB71EDAEE402C22FE160B76D78D8AE_inline(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18933,7 +18933,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:126>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_7;
 		L_7 = DebugUIHandlerWidget_get_parentUIHandler_m2F40C42629AB71EDAEE402C22FE160B76D78D8AE_inline(__this, NULL);
 		V_3 = L_7;
@@ -18942,13 +18942,13 @@ IL_001a:
 
 IL_0034:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:129>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_8 = V_3;
 		NullCheck(L_8);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_9;
 		L_9 = DebugUIHandlerWidget_get_nextUIHandler_m2DFDEE3BE43A204B29BC39087AF60AA86D09BE90_inline(L_8, NULL);
 		V_4 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:131>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_10 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -18961,7 +18961,7 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:132>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:132>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_13 = V_4;
 		V_1 = L_13;
 		goto IL_006a;
@@ -18969,7 +18969,7 @@ IL_0034:
 
 IL_0050:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:134>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:134>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_14 = V_3;
 		NullCheck(L_14);
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_15;
@@ -18979,7 +18979,7 @@ IL_0050:
 
 IL_0058:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:127>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_16 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -18996,28 +18996,28 @@ IL_0058:
 
 IL_0066:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:138>
 		V_1 = (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1*)NULL;
 		goto IL_006a;
 	}
 
 IL_006a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:139>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:139>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_19 = V_1;
 		return L_19;
 	}
 }
-// Method Definition Index: 64928
+// Method Definition Index: 64978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget__ctor_m2105E00AE3370003AE9303EDDA5ABB544CE420E5 (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:15>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_0), (0.800000012f), (0.800000012f), (0.800000012f), (1.0f), NULL);
 		__this->___colorDefault = L_0;
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:21>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_1), (0.25f), (0.649999976f), (0.800000012f), (1.0f), NULL);
@@ -19034,7 +19034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugUIHandlerWidget__ctor_m2105E00AE337
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 64929
+// Method Definition Index: 64979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout_Start_m031F3AF5DA5840E25AB29B054311BABBC425FA7D (UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19046,46 +19046,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout_Start_m031F3AF5DA5840E25AB29B0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:19>
 		Toggle_Start_m3E085820286E51F69BD848C1EA1FCA7DFD07E3E7(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:20>
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_0 = ((Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F*)__this)->___onValueChanged;
 		UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9* L_1 = (UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9*)il2cpp_codegen_object_new(UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9_il2cpp_TypeInfo_var);
 		UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD(L_1, __this, (intptr_t)((void*)UIFoldout_SetState_m041BAB7EB961B7D84E99C388E6405D4B62FEFC32_RuntimeMethod_var), NULL);
 		NullCheck(L_0);
 		UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD(L_0, L_1, UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:21>
 		bool L_2;
 		L_2 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(__this, NULL);
 		UIFoldout_SetState_m041BAB7EB961B7D84E99C388E6405D4B62FEFC32(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 64930
+// Method Definition Index: 64980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout_OnValidate_mE61A4777FD785B1EC726B57B32C96C2E88767E4C (UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:27>
 		bool L_0;
 		L_0 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619(__this, NULL);
 		UIFoldout_SetState_m169A04E74F6DFC0F376CD2D233CA5111E6F165B8(__this, L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 64931
+// Method Definition Index: 64981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout_SetState_m041BAB7EB961B7D84E99C388E6405D4B62FEFC32 (UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* __this, bool ___0_state, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:36>
 		bool L_0 = ___0_state;
 		UIFoldout_SetState_m169A04E74F6DFC0F376CD2D233CA5111E6F165B8(__this, L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:37>
 		return;
 	}
 }
-// Method Definition Index: 64932
+// Method Definition Index: 64982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout_SetState_m169A04E74F6DFC0F376CD2D233CA5111E6F165B8 (UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* __this, bool ___0_state, bool ___1_rebuildLayout, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19103,7 +19103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout_SetState_m169A04E74F6DFC0F376C
 	bool V_4 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:44>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___arrowOpened;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19147,13 +19147,13 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:45>
 		goto IL_00b8;
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:47>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___arrowOpened;
 		NullCheck(L_7);
 		bool L_8;
@@ -19167,7 +19167,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:48>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___arrowOpened;
 		bool L_12 = ___0_state;
 		NullCheck(L_11);
@@ -19176,7 +19176,7 @@ IL_0035:
 
 IL_0057:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:50>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___arrowClosed;
 		NullCheck(L_13);
 		bool L_14;
@@ -19190,7 +19190,7 @@ IL_0057:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:51>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = __this->___arrowClosed;
 		bool L_18 = ___0_state;
 		NullCheck(L_17);
@@ -19199,7 +19199,7 @@ IL_0057:
 
 IL_0079:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:53>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___content;
 		NullCheck(L_19);
 		bool L_20;
@@ -19213,7 +19213,7 @@ IL_0079:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:54>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = __this->___content;
 		bool L_24 = ___0_state;
 		NullCheck(L_23);
@@ -19222,7 +19222,7 @@ IL_0079:
 
 IL_009b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:56>
 		bool L_25 = ___1_rebuildLayout;
 		V_4 = L_25;
 		bool L_26 = V_4;
@@ -19232,7 +19232,7 @@ IL_009b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:57>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
 		L_27 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_27);
@@ -19244,11 +19244,11 @@ IL_009b:
 
 IL_00b8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/UIFoldout.cs:58>
 		return;
 	}
 }
-// Method Definition Index: 64933
+// Method Definition Index: 64983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout__ctor_mD1494EF8AB928679E6683D9C1C58B6953EB2D1E8 (UIFoldout_tEE4060406AECDD237DAA6D45B8776FAE8A636ADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19331,73 +19331,73 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIFoldout__ctor_mD1494EF8AB928679E6683D9
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 61382
+// Method Definition Index: 61431
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Widget_get_displayName_m1E7836A53BF88619C4815EA70F9243319567F0F4_inline (Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.cs:148>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.cs:148>
 		String_t* L_0 = __this->___U3CdisplayNameU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 64916
+// Method Definition Index: 64966
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_set_nextUIHandler_m84F82CC75B6BCF91986150F4DE1D96D963E78CC8_inline (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_value;
 		__this->___U3CnextUIHandlerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CnextUIHandlerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 64914
+// Method Definition Index: 64964
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_set_previousUIHandler_m7F60E1430A65740C8EFCCD87F1724CB08BE2F422_inline (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_value;
 		__this->___U3CpreviousUIHandlerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpreviousUIHandlerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 64912
+// Method Definition Index: 64962
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugUIHandlerWidget_set_parentUIHandler_mF23913A3178CA556A5709A8E5782585240A4E784_inline (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = ___0_value;
 		__this->___U3CparentUIHandlerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CparentUIHandlerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 61487
+// Method Definition Index: 61536
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* BitField_get_enumType_m579A37FEF96B7B00BD32858A935EB6BE21FC9203_inline (BitField_t4178A9AD81C436DBE57F464343BA996642134062* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Fields.cs:626>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Fields.cs:628>
 		Type_t* L_0 = __this->___m_EnumType;
 		return L_0;
 	}
 }
-// Method Definition Index: 61403
+// Method Definition Index: 61452
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* Button_get_action_m5796CC1DF3A5C10D2538EA5ACF4EEF0DF68DFB13_inline (Button_t94987D29C31193E49E17586BF7642576A0F6CE7A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.cs:285>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.cs:285>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = __this->___U3CactionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 875
+// Method Definition Index: 876
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78510
+// Method Definition Index: 83572
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19413,7 +19413,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78512
+// Method Definition Index: 83574
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19429,7 +19429,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 80336
+// Method Definition Index: 85398
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -19440,7 +19440,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 78516
+// Method Definition Index: 83578
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_xMin_mE89C40702926D016A633399E20DB9501E251630D_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19456,7 +19456,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78518
+// Method Definition Index: 83580
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_yMin_mB19848FB25DE61EDF958F7A22CFDD86DE103062F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19472,7 +19472,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 80355
+// Method Definition Index: 85417
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -19499,34 +19499,34 @@ IL_0023:
 		return L_9;
 	}
 }
-// Method Definition Index: 61514
+// Method Definition Index: 61563
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObservableList_1_tA2EE47FA1DF709EB5C98A99799E1701D66260C08* Panel_get_children_m42233087374A0F3438E9F666F0EBD00922D3018A_inline (Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Panel.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Panel.cs:51>
 		ObservableList_1_tA2EE47FA1DF709EB5C98A99799E1701D66260C08* L_0 = __this->___U3CchildrenU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 61505
+// Method Definition Index: 61554
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Panel_get_displayName_m186C10E927B2800035B328BD9A40D8B5FB3D4EE4_inline (Panel_t3A0D2006E8AEA607A6DF5188138E463A26085295* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Panel.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Panel.cs:21>
 		String_t* L_0 = __this->___U3CdisplayNameU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 61386
+// Method Definition Index: 61435
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Widget_get_queryPath_mB3729532CECC96E1EC3F3D8BF51ABA50BAEA84C9_inline (Widget_tE8D6AF1D7525CC84E8F2C3B73162016736A6A2FF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.cs:158>
 		String_t* L_0 = __this->___U3CqueryPathU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 80312
+// Method Definition Index: 85374
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -19577,7 +19577,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 80075
+// Method Definition Index: 85137
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___0_r, uint8_t ___1_g, uint8_t ___2_b, uint8_t ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -19593,7 +19593,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7C
 		return;
 	}
 }
-// Method Definition Index: 80077
+// Method Definition Index: 85139
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___0_c, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -19620,25 +19620,25 @@ IL_003d:
 		return L_9;
 	}
 }
-// Method Definition Index: 61463
+// Method Definition Index: 61512
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Func_1_tC288CCB64EFD1F5FD49C3F8DE91FE62905E44BCD* EnumField_get_getIndex_m9D3DADB71BE92C1B54FD5315B8C06BA2D68EE3FD_inline (EnumField_t15C8FC0EB96499DFDCEC2B9DBB27B2BBCD5E262C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Fields.cs:444>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Fields.cs:446>
 		Func_1_tC288CCB64EFD1F5FD49C3F8DE91FE62905E44BCD* L_0 = __this->___U3CgetIndexU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 61352
+// Method Definition Index: 61401
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* Foldout_get_columnLabels_m668E673185A4DFF88DCA1B1CBA7DCFA59E491F38_inline (Foldout_tB410CB76F06E3A386EA0943B8EE3A9071409A8A6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Containers.cs:195>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Containers.cs:195>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = __this->___m_ColumnLabels;
 		return L_0;
 	}
 }
-// Method Definition Index: 80366
+// Method Definition Index: 85428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -19661,7 +19661,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 80365
+// Method Definition Index: 85427
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -19684,7 +19684,7 @@ IL_0015:
 		return L_5;
 	}
 }
-// Method Definition Index: 80183
+// Method Definition Index: 85245
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -19697,7 +19697,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 2093
+// Method Definition Index: 2095
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Math_Clamp_mAB687477D3AAC0E7243D724F45626026980CE2FF_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19756,16 +19756,16 @@ IL_0017:
 		return L_10;
 	}
 }
-// Method Definition Index: 61476
+// Method Definition Index: 61525
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Func_1_t0A6D678B2225A2A8FD577D4830B7257527CDBEAD* ObjectPopupField_get_getObjects_m0A2BB1F0852583920F3C6E14C451E2D7A44B1321_inline (ObjectPopupField_t0014C448F74711A8989C09DF389009C2C283FBE1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Fields.cs:526>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Fields.cs:528>
 		Func_1_t0A6D678B2225A2A8FD577D4830B7257527CDBEAD* L_0 = __this->___U3CgetObjectsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 78514
+// Method Definition Index: 83576
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -19786,7 +19786,7 @@ IL_0015:
 		return L_3;
 	}
 }
-// Method Definition Index: 80313
+// Method Definition Index: 85375
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -19834,7 +19834,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 80314
+// Method Definition Index: 85376
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19855,7 +19855,7 @@ IL_0010:
 		return L_5;
 	}
 }
-// Method Definition Index: 80217
+// Method Definition Index: 85279
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -19886,16 +19886,16 @@ IL_0030:
 		return L_13;
 	}
 }
-// Method Definition Index: 61336
+// Method Definition Index: 61385
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObservableList_1_tA2EE47FA1DF709EB5C98A99799E1701D66260C08* Container_get_children_mF5C23A0F324E22BEBEF2EA14CE8DA7BEA72D631B_inline (Container_t0F404B4F1A7EFE36CAD5C2A9EA0261991099D217* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Containers.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Containers.cs:22>
 		ObservableList_1_tA2EE47FA1DF709EB5C98A99799E1701D66260C08* L_0 = __this->___U3CchildrenU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 78494
+// Method Definition Index: 83556
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -19910,7 +19910,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 80367
+// Method Definition Index: 85429
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19933,34 +19933,34 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 64913
+// Method Definition Index: 64963
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_get_previousUIHandler_m618D35DF8E71F7E7EEAD6ED05F77EA51A5214C34_inline (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:30>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___U3CpreviousUIHandlerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 64911
+// Method Definition Index: 64961
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_get_parentUIHandler_m2F40C42629AB71EDAEE402C22FE160B76D78D8AE_inline (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:26>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___U3CparentUIHandlerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 64915
+// Method Definition Index: 64965
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* DebugUIHandlerWidget_get_nextUIHandler_m2DFDEE3BE43A204B29BC39087AF60AA86D09BE90_inline (DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerWidget.cs:34>
 		DebugUIHandlerWidget_tE597C749DDA3EBA7627F38F8A77EB5A171B9E6D1* L_0 = __this->___U3CnextUIHandlerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 80039
+// Method Definition Index: 85101
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -19975,19 +19975,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 895
+// Method Definition Index: 896
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Func_2_Invoke_m2B29DFDA6A7434AAEE067AD31DCF54666F3EDDAB_gshared_inline (Func_2_t058E85C490577FC5BDB6A16EAE2C7C9728A3798B* __this, bool ___0_arg, const RuntimeMethod* method) 
 {
 	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, bool, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 893
+// Method Definition Index: 894
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Func_1_Invoke_m1412272198DFA4066C83206E5B43353AF10A2EEE_gshared_inline (Func_1_tD5C081AE11746B200C711DD48DBEB00E3A9276D4* __this, const RuntimeMethod* method) 
 {
 	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 11653
+// Method Definition Index: 11665
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19995,7 +19995,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 11717
+// Method Definition Index: 11729
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20003,16 +20003,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 61454
+// Method Definition Index: 61503
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* EnumField_1_get_enumValues_m57133D963D0026316A142116322797AE32B16AA5_gshared_inline (EnumField_1_tFD5F1C50A039766ED19A180B4C39ADD375052766* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Fields.cs:391>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Fields.cs:393>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___m_EnumValues;
 		return L_0;
 	}
 }
-// Method Definition Index: 11672
+// Method Definition Index: 11684
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20042,7 +20042,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 11664
+// Method Definition Index: 11676
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -20080,7 +20080,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 11552
+// Method Definition Index: 11564
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20088,7 +20088,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D250721629385
 		return L_0;
 	}
 }
-// Method Definition Index: 11644
+// Method Definition Index: 11656
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20096,7 +20096,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 11645
+// Method Definition Index: 11657
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20104,46 +20104,46 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 61454
+// Method Definition Index: 61503
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* EnumField_1_get_enumValues_m0CAD9BD01CB4539D247116B93B586B3412FBD363_gshared_inline (EnumField_1_t30102EC7A5D104E7898CDF9F28EBC898AE2A815F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Fields.cs:391>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Fields.cs:393>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = __this->___m_EnumValues;
 		return L_0;
 	}
 }
-// Method Definition Index: 893
+// Method Definition Index: 894
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Func_1_Invoke_mA967B67675F9F5475EF2DA67722E3876436BF72E_gshared_inline (Func_1_tC288CCB64EFD1F5FD49C3F8DE91FE62905E44BCD* __this, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 893
+// Method Definition Index: 894
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Func_1_Invoke_m6EC66204056853EDE42F634FECB2D7D4685B54B0_gshared_inline (Func_1_t11C3830580201E0A3A3A2C76523B7905EF40BCF7* __this, const RuntimeMethod* method) 
 {
 	typedef float (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 877
+// Method Definition Index: 878
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mA8F89FB04FEA0F48A4F22EC84B5F9ADB2914341F_gshared_inline (Action_1_t310F18CB4338A2740CA701F160C62E2C3198E66A* __this, float ___0_obj, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, float, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 879
+// Method Definition Index: 880
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_mA231C16505354E47FA706ECA0D034A5A15E2C5A0_gshared_inline (Action_2_t9CCF9E751EBE923D11BC558BD78BB0B1709C733D* __this, int32_t ___0_arg1, bool ___1_arg2, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, bool, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 895
+// Method Definition Index: 896
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Func_2_Invoke_m1543D7041BADF87D1F63EBF838B0DDCB40340C7E_gshared_inline (Func_2_t63A057E8762189D8C22BF71360D00C1047680DFA* __this, int32_t ___0_arg, const RuntimeMethod* method) 
 {
 	typedef bool (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 2231
+// Method Definition Index: 2233
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20151,16 +20151,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2
 		return L_0;
 	}
 }
-// Method Definition Index: 61417
+// Method Definition Index: 61466
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* Field_1_get_getter_m8EBEAE8C20A7D95D190D9922565CECD9E9D9A8D8_gshared_inline (Field_1_t32151A22D4B1B5C1DFFDDACD9F3C78D19596507A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@317e801bb3aa/Runtime/Debugging/DebugUI.Fields.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.render-pipelines.core@615f7ded20c5/Runtime/Debugging/DebugUI.Fields.cs:21>
 		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_0 = __this->___U3CgetterU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 893
+// Method Definition Index: 894
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Func_1_Invoke_mBB7F37C468451AF57FAF31635C544D6B8C4373B2_gshared_inline (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* __this, const RuntimeMethod* method) 
 {
 	typedef bool (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);

@@ -164,6 +164,12 @@
             "icon": null
           },
           {
+            "name": "AudioMixerGroup",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AudioResource",
             "scenes": [
               "Assets/Scenes/SampleScene.unity"
