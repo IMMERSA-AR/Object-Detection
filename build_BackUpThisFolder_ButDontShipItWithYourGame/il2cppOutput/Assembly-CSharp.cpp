@@ -362,7 +362,7 @@ IL2CPP_EXTERN_C RuntimeClass* WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B35
 IL2CPP_EXTERN_C RuntimeClass* Worker_tA26D4104BB9D52F94D10411345FBE85ABCF37ED5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* YOLOv9Labels_tD68F96ECBA1E25E9FD690B2AA52EBD1F091BBC68_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____19579C4B5B38A1B0F2BB508E331E8C7925480629B7F890010D1C7E00ABB4BCC6_FieldInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____5C86CF5AFCAE1429662C9533E9B052A97AD8D84AE4ACEEAD2DFBDA459712602B_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____51D650D17D93F066DBC9C86E3F644752191365B2179FEBDB0FA5739BC9AD97F8_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral012EA4C3202701A436058B0ACF973A13B348187F;
 IL2CPP_EXTERN_C String_t* _stringLiteral01904426CCB9F48796557873AD9C57E3C28E5B66;
 IL2CPP_EXTERN_C String_t* _stringLiteral0606DD972BDBA8168F1DB07E557A3E5986C76F5B;
@@ -1152,7 +1152,7 @@ struct __StaticArrayInitTypeSizeU3D257_tAF5BECF4D73BF6717CEB281F32CE475A5F445779
 };
 #pragma pack(pop, tp)
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D437_t055CF78921C7F6BE21DB25E7A141DDD27DD484D4 
+struct __StaticArrayInitTypeSizeU3D461_tE1D42C482944ACB02B3E541A272B7C188F05C0E0 
 {
 	union
 	{
@@ -1162,7 +1162,7 @@ struct __StaticArrayInitTypeSizeU3D437_t055CF78921C7F6BE21DB25E7A141DDD27DD484D4
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D437_t055CF78921C7F6BE21DB25E7A141DDD27DD484D4__padding[437];
+		uint8_t __StaticArrayInitTypeSizeU3D461_tE1D42C482944ACB02B3E541A272B7C188F05C0E0__padding[461];
 	};
 };
 #pragma pack(pop, tp)
@@ -2721,7 +2721,7 @@ struct List_1_t0D1C46FD8DDDE974D93CA4F3474EEC05AF950918_StaticFields
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
 	__StaticArrayInitTypeSizeU3D257_tAF5BECF4D73BF6717CEB281F32CE475A5F445779 ___19579C4B5B38A1B0F2BB508E331E8C7925480629B7F890010D1C7E00ABB4BCC6;
-	__StaticArrayInitTypeSizeU3D437_t055CF78921C7F6BE21DB25E7A141DDD27DD484D4 ___5C86CF5AFCAE1429662C9533E9B052A97AD8D84AE4ACEEAD2DFBDA459712602B;
+	__StaticArrayInitTypeSizeU3D461_tE1D42C482944ACB02B3E541A272B7C188F05C0E0 ___51D650D17D93F066DBC9C86E3F644752191365B2179FEBDB0FA5739BC9AD97F8;
 };
 struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B_StaticFields
 {
@@ -8229,7 +8229,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_Start_m2EBD87BE5743AD
 	String_t* G_B16_0 = NULL;
 	String_t* G_B16_1 = NULL;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:57>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:57>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___statusText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8242,12 +8242,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_Start_m2EBD87BE5743AD
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:59>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:59>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3;
 		L_3 = Component_GetComponentInChildren_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA5C534600978A673C682FADEE1BBFE1B535981AA(__this, Component_GetComponentInChildren_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA5C534600978A673C682FADEE1BBFE1B535981AA_RuntimeMethod_var);
 		__this->___statusText = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___statusText), (void*)L_3);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:61>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:61>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___statusText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -8260,11 +8260,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_Start_m2EBD87BE5743AD
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:63>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:63>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_7 = __this->___statusText;
 		NullCheck(L_7);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_7, _stringLiteral1A42D4129737B9D8C1DEE75879B6AA83C8F74D22);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:64>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:64>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = __this->___statusText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9;
 		L_9 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
@@ -8275,7 +8275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_Start_m2EBD87BE5743AD
 
 IL_0054:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:68>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:68>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralCAC67D444CC4DF39D3CA5AA5DB6DC3A6394BBC44, NULL);
 	}
@@ -8286,7 +8286,7 @@ IL_0061:
 
 IL_0062:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:71>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:71>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = __this->___rightController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -8299,11 +8299,11 @@ IL_0062:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:74>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:73>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
 		L_13 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteral8B2BA149AD620F72CDF40EE270812BA52F59A2BB, NULL);
 		V_4 = L_13;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:75>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:74>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_15;
@@ -8316,7 +8316,7 @@ IL_0062:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:77>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:76>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = V_4;
 		NullCheck(L_17);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18;
@@ -8328,7 +8328,7 @@ IL_0062:
 
 IL_009e:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:81>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:80>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralF53A490E5A65F62711F936CAAEAE1AE8E89BF8E0, NULL);
 	}
@@ -8339,33 +8339,33 @@ IL_00ab:
 
 IL_00ac:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:85>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:84>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_19;
 		L_19 = Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B(__this, Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
 		__this->___audioSource = L_19;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioSource), (void*)L_19);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:86>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:85>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_20 = __this->___audioSource;
 		NullCheck(L_20);
 		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_20, (0.0f), NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:87>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:86>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_21 = __this->___audioSource;
 		NullCheck(L_21);
 		AudioSource_set_playOnAwake_m7EACC6ECEF12D7BA86A4E5A53603F1C8F9E11949(L_21, (bool)0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:88>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:87>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_22 = __this->___audioSource;
 		NullCheck(L_22);
 		AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56(L_22, (bool)0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:89>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:88>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_23 = __this->___audioSource;
 		NullCheck(L_23);
 		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_23, (1.0f), NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:90>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:89>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AudioListenerU5BU5D_t2D06C54959B74670B6F43370FBB2436474558E4F* L_24;
 		L_24 = Object_FindObjectsOfType_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_m2E4ACE5419CB53C0B4980CDE3029E2F7F893CE80(Object_FindObjectsOfType_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_m2E4ACE5419CB53C0B4980CDE3029E2F7F893CE80_RuntimeMethod_var);
 		V_0 = L_24;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:91>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:90>
 		AudioListenerU5BU5D_t2D06C54959B74670B6F43370FBB2436474558E4F* L_25 = V_0;
 		NullCheck(L_25);
 		int32_t L_26 = ((int32_t)(((RuntimeArray*)L_25)->max_length));
@@ -8374,7 +8374,7 @@ IL_00ac:
 		L_28 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral7C344140B42BF10C4F4037B0F6DABDB349BC77A6, L_27, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_28, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:92>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:91>
 		AudioListenerU5BU5D_t2D06C54959B74670B6F43370FBB2436474558E4F* L_29 = V_0;
 		V_6 = L_29;
 		V_7 = 0;
@@ -8383,14 +8383,14 @@ IL_00ac:
 
 IL_011b:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:92>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:91>
 		AudioListenerU5BU5D_t2D06C54959B74670B6F43370FBB2436474558E4F* L_30 = V_6;
 		int32_t L_31 = V_7;
 		NullCheck(L_30);
 		int32_t L_32 = L_31;
 		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_33 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_32));
 		V_8 = L_33;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:93>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:92>
 		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_34 = V_8;
 		NullCheck(L_34);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35;
@@ -8414,7 +8414,7 @@ IL_011b:
 
 IL_0150:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:92>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:91>
 		int32_t L_43 = V_7;
 		AudioListenerU5BU5D_t2D06C54959B74670B6F43370FBB2436474558E4F* L_44 = V_6;
 		NullCheck(L_44);
@@ -8424,7 +8424,7 @@ IL_0150:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:94>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:93>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_45;
 		L_45 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_45);
@@ -8440,7 +8440,7 @@ IL_0150:
 		L_51 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral78A388CE67E0C27BB87E14F3BCD7B4E98C892153, L_46, L_50, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_51, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:95>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:94>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_52 = __this->___audioSource;
 		NullCheck(L_52);
 		AudioMixerGroup_tD29AC8336F7425DF007944F8195CEABF34FC3311* L_53;
@@ -8480,7 +8480,7 @@ IL_01b2:
 		L_58 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B16_1, G_B16_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_58, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:97>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:96>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_59 = __this->___laserPointer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_60;
@@ -8493,25 +8493,25 @@ IL_01b2:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:99>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:98>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_62 = __this->___laserPointer;
 		NullCheck(L_62);
 		LineRenderer_set_positionCount_m2001FB4044053895ECBE897AB833284F3300B205(L_62, 2, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:100>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:99>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_63 = __this->___laserPointer;
 		NullCheck(L_63);
 		LineRenderer_set_startWidth_m3899722E198D636DB216CB61C980214707069F4A(L_63, (0.00499999989f), NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:101>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:100>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_64 = __this->___laserPointer;
 		NullCheck(L_64);
 		LineRenderer_set_endWidth_mC7260401655C8BE1CBDFB832009295C89613F81D(L_64, (0.00499999989f), NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:102>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:101>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_65 = __this->___laserPointer;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_66;
 		L_66 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_65);
 		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_65, 0, L_66, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:103>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:102>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_67 = __this->___laserPointer;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_68;
 		L_68 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
@@ -8521,7 +8521,7 @@ IL_01b2:
 
 IL_0224:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:108>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:107>
 		OVRLipSyncContext_t342D32A8FAD2AABE6C9F3585CCEB8D6D04C58D8C* L_69 = __this->___lipSyncContext;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_70;
@@ -8534,7 +8534,7 @@ IL_0224:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:109>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:108>
 		OVRLipSyncContext_t342D32A8FAD2AABE6C9F3585CCEB8D6D04C58D8C* L_72;
 		L_72 = Component_GetComponent_TisOVRLipSyncContext_t342D32A8FAD2AABE6C9F3585CCEB8D6D04C58D8C_m47D9E068D0E138B7B9CF9ABBE5D96649F74D6E74(__this, Component_GetComponent_TisOVRLipSyncContext_t342D32A8FAD2AABE6C9F3585CCEB8D6D04C58D8C_m47D9E068D0E138B7B9CF9ABBE5D96649F74D6E74_RuntimeMethod_var);
 		__this->___lipSyncContext = L_72;
@@ -8543,7 +8543,7 @@ IL_0224:
 
 IL_0242:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:111>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:110>
 		OVRLipSyncContext_t342D32A8FAD2AABE6C9F3585CCEB8D6D04C58D8C* L_73 = __this->___lipSyncContext;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_74;
@@ -8556,7 +8556,7 @@ IL_0242:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:112>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:111>
 		OVRLipSyncContext_t342D32A8FAD2AABE6C9F3585CCEB8D6D04C58D8C* L_76 = __this->___lipSyncContext;
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_77 = __this->___audioSource;
 		NullCheck(L_76);
@@ -8567,14 +8567,14 @@ IL_0242:
 
 IL_0267:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:114>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:113>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral63A53CDD2B7FF298E8E045A76B7F061C04F4BF5E, NULL);
 	}
 
 IL_0272:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:116>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:115>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_78;
 		L_78 = Microphone_get_devices_mC2821E200C36C599DDC37927DEC9EA725240812D(NULL);
 		NullCheck(L_78);
@@ -8586,7 +8586,7 @@ IL_0272:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:118>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:117>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_80;
 		L_80 = Microphone_get_devices_mC2821E200C36C599DDC37927DEC9EA725240812D(NULL);
 		NullCheck(L_80);
@@ -8594,7 +8594,7 @@ IL_0272:
 		String_t* L_82 = (L_80)->GetAt(static_cast<il2cpp_array_size_t>(L_81));
 		__this->___micDevice = L_82;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___micDevice), (void*)L_82);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:119>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:118>
 		String_t* L_83 = __this->___micDevice;
 		String_t* L_84;
 		L_84 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral4024949DF90E24A67719EE254EF4C3BAFA366D53, L_83, NULL);
@@ -8605,14 +8605,14 @@ IL_0272:
 
 IL_02a8:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:121>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:120>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral0D2FC1E4DCF5B4E84F7C568F8345D461C6EA140F, NULL);
 	}
 
 IL_02b3:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:122>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:121>
 		return;
 	}
 }
@@ -8667,7 +8667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_Update_m1609517CD2A41
 	memset((&G_B31_0), 0, sizeof(G_B31_0));
 	LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* G_B31_1 = NULL;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:126>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:125>
 		Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_0 = __this->___mainThreadActions;
 		V_0 = L_0;
 		V_1 = (bool)0;
@@ -8706,7 +8706,7 @@ IL_0046:
 
 IL_0016_1:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:129>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:128>
 				Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_4 = __this->___mainThreadActions;
 				NullCheck(L_4);
 				Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_5;
@@ -8717,7 +8717,7 @@ IL_0016_1:
 
 IL_0027_1:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:128>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:127>
 				Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_6 = __this->___mainThreadActions;
 				NullCheck(L_6);
 				int32_t L_7;
@@ -8741,7 +8741,7 @@ IL_0027_1:
 
 IL_0047:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:132>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:131>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_9 = __this->___audioSource;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -8754,15 +8754,15 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:135>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:134>
 		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(_stringLiteral012EA4C3202701A436058B0ACF973A13B348187F, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:136>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:135>
 		goto IL_02ba;
 	}
 
 IL_0068:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:140>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:139>
 		Queue_1_t93D633EE7B57CE0A53889D0202ADF003CFD0AEF0* L_12 = __this->___audioQueue;
 		NullCheck(L_12);
 		int32_t L_13;
@@ -8796,13 +8796,13 @@ IL_0087:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:142>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:141>
 		Queue_1_t93D633EE7B57CE0A53889D0202ADF003CFD0AEF0* L_17 = __this->___audioQueue;
 		NullCheck(L_17);
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_18;
 		L_18 = Queue_1_Dequeue_mD445D3EAEA8FE909C013DB0D5109A86A5F41C7D8(L_17, Queue_1_Dequeue_mD445D3EAEA8FE909C013DB0D5109A86A5F41C7D8_RuntimeMethod_var);
 		V_5 = L_18;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:143>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:142>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_19 = V_5;
 		NullCheck(L_19);
 		float L_20;
@@ -8813,32 +8813,32 @@ IL_0087:
 		L_23 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2E31923F09AAB63F74608CE71C888D9A3A3F0C34, L_22, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_23, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:148>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:147>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_24 = __this->___audioSource;
 		NullCheck(L_24);
 		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_24, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:149>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:148>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_25 = __this->___audioSource;
 		NullCheck(L_25);
 		AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56(L_25, (bool)0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:150>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:149>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_26 = __this->___audioSource;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_27 = V_5;
 		NullCheck(L_26);
 		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_26, L_27, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:151>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:150>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_28 = __this->___audioSource;
 		NullCheck(L_28);
 		AudioSource_set_mute_m6407E0AEE7F088AC69BD8C1D270C2B2049769B09(L_28, (bool)0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:152>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:151>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_29 = __this->___audioSource;
 		NullCheck(L_29);
 		AudioSource_set_volume_mD902BBDBBDE0E3C148609BF3C05096148E90F2C0(L_29, (1.0f), NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:153>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:152>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_30 = __this->___audioSource;
 		NullCheck(L_30);
 		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_30, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:157>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:156>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_31 = __this->___speakerSource;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -8851,28 +8851,28 @@ IL_0087:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:159>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:158>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_34 = __this->___speakerSource;
 		NullCheck(L_34);
 		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_34, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:160>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:159>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_35 = __this->___speakerSource;
 		NullCheck(L_35);
 		AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56(L_35, (bool)0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:161>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:160>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_36 = __this->___speakerSource;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_37 = V_5;
 		NullCheck(L_36);
 		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_36, L_37, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:162>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:161>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_38 = __this->___speakerSource;
 		NullCheck(L_38);
 		AudioSource_set_mute_m6407E0AEE7F088AC69BD8C1D270C2B2049769B09(L_38, (bool)0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:163>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:162>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_39 = __this->___speakerSource;
 		NullCheck(L_39);
 		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_39, (1.0f), NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:164>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:163>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_40 = __this->___speakerSource;
 		NullCheck(L_40);
 		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_40, NULL);
@@ -8880,7 +8880,7 @@ IL_0087:
 
 IL_0170:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:167>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:166>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_41 = __this->___karimAnimator;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_42;
@@ -8893,7 +8893,7 @@ IL_0170:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:167>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:166>
 		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_44 = __this->___karimAnimator;
 		NullCheck(L_44);
 		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_44, _stringLiteral43BE0BFAAEEFE3D375DB01ED82A806D4FE8E7527, (bool)1, NULL);
@@ -8905,7 +8905,7 @@ IL_0194:
 
 IL_0195:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:171>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:170>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45 = __this->___rightController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_46;
@@ -8918,9 +8918,9 @@ IL_0195:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:173>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:172>
 		V_9 = (bool)0;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:174>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:173>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_48 = __this->___rightController;
 		NullCheck(L_48);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49;
@@ -8930,7 +8930,7 @@ IL_0195:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_51;
 		L_51 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_50, NULL);
 		Ray__ctor_mE298992FD10A3894C38373198385F345C58BD64C_inline((&V_10), L_49, L_51, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:175>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:174>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_52 = __this->___rightController;
 		NullCheck(L_52);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_53;
@@ -8944,7 +8944,7 @@ IL_0195:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_57;
 		L_57 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_53, L_56, NULL);
 		V_11 = L_57;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:177>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:176>
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_58 = V_10;
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		bool L_59;
@@ -8957,11 +8957,11 @@ IL_0195:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:179>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:178>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_61;
 		L_61 = RaycastHit_get_point_m02B764612562AFE0F998CC7CFB2EEDE41BA47F39((&V_12), NULL);
 		V_11 = L_61;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:180>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:179>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_62;
 		L_62 = RaycastHit_get_collider_m84B160439BBEAB6D9E94B799F720E25C9E2D444D((&V_12), NULL);
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_63 = __this->___npcCollider;
@@ -8976,7 +8976,7 @@ IL_0195:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:181>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:180>
 		V_9 = (bool)1;
 	}
 
@@ -8986,7 +8986,7 @@ IL_0226:
 
 IL_0227:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:184>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:183>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_66 = __this->___laserPointer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_67;
@@ -8999,7 +8999,7 @@ IL_0227:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:186>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:185>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_69 = __this->___laserPointer;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_70 = __this->___rightController;
 		NullCheck(L_70);
@@ -9007,12 +9007,12 @@ IL_0227:
 		L_71 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_70, NULL);
 		NullCheck(L_69);
 		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_69, 0, L_71, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:187>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:186>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_72 = __this->___laserPointer;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_73 = V_11;
 		NullCheck(L_72);
 		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_72, 1, L_73, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:188>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:187>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_74 = __this->___laserPointer;
 		bool L_75 = V_9;
 		if (L_75)
@@ -9042,7 +9042,7 @@ IL_0277:
 	{
 		NullCheck(G_B28_1);
 		LineRenderer_set_startColor_mF72FAB20C09372FC8F2CBFCBD837FA02A87FBA91(G_B28_1, G_B28_0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:189>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:188>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_78 = __this->___laserPointer;
 		bool L_79 = V_9;
 		if (L_79)
@@ -9076,7 +9076,7 @@ IL_0293:
 
 IL_029a:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:192>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:191>
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		bool L_82;
 		L_82 = OVRInput_GetDown_mEF663E99B6E5FABB41B86716C6D04C788C979139(((int32_t)67108864), ((int32_t)-2147483648LL), NULL);
@@ -9089,7 +9089,7 @@ IL_029a:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:193>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:192>
 		VoiceAPIController_ToggleRecording_m5A3AC49461A0CB1C1BD9CB00401367735AB045B6(__this, NULL);
 	}
 
@@ -9099,7 +9099,7 @@ IL_02b9:
 
 IL_02ba:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:195>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:194>
 		return;
 	}
 }
@@ -9120,10 +9120,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_ToggleRecording_m5A3A
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:198>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:197>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral30633A71AD3707CDE222F87D2564B746A60DD3A8, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:200>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:199>
 		bool L_0 = __this->___isRecording;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -9133,9 +9133,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_ToggleRecording_m5A3A
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:202>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:201>
 		__this->___isRecording = (bool)1;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:205>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:204>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___statusText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -9148,11 +9148,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_ToggleRecording_m5A3A
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:207>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:206>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___statusText;
 		NullCheck(L_5);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_5, _stringLiteralA4249AEA5B1AE9E78829F6D9A0EFE24DE7967450);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:208>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:207>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___statusText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7;
 		L_7 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
@@ -9162,7 +9162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_ToggleRecording_m5A3A
 
 IL_0055:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:211>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:210>
 		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_8;
 		L_8 = VoiceAPIController_RecordingSessionTask_mA22330803231B5903A09CBE7421EB4180A8AC738(__this, NULL);
 		goto IL_009c;
@@ -9170,9 +9170,9 @@ IL_0055:
 
 IL_005f:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:215>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:214>
 		__this->___isRecording = (bool)0;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:218>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:217>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_9 = __this->___statusText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -9185,11 +9185,11 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:220>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:219>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_12 = __this->___statusText;
 		NullCheck(L_12);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_12, _stringLiteral1DB522A448C7E3B757875333BD51A6E14B36B29A);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:221>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:220>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_13 = __this->___statusText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14;
 		L_14 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
@@ -9203,7 +9203,7 @@ IL_009b:
 
 IL_009c:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:224>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:223>
 		return;
 	}
 }
@@ -9268,29 +9268,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_ProcessReceivedWav_mA
 	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* V_0 = NULL;
 	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* V_1 = NULL;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:351>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:350>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ___0_wavBytes;
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_1;
 		L_1 = VoiceAPIController_Convert16BitWavToFloats_m0A0AF9A07452463620A7A920F80134255D1D4736(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:355>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:354>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_2 = V_0;
 		NullCheck(L_2);
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_3;
 		L_3 = AudioClip_Create_mE8111F06981E42666B6A9A59D0A3EBE002D2CDFB(_stringLiteral47574A7C4B133B0816301F2F634071AECCF0ABBE, ((int32_t)(((RuntimeArray*)L_2)->max_length)), 1, ((int32_t)44100), (bool)0, NULL);
 		V_1 = L_3;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:356>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:355>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_4 = V_1;
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_5 = V_0;
 		NullCheck(L_4);
 		bool L_6;
 		L_6 = AudioClip_SetData_m7B473C614C11953D746770F4F89B44600B5A6AF3(L_4, L_5, 0, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:358>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:357>
 		Queue_1_t93D633EE7B57CE0A53889D0202ADF003CFD0AEF0* L_7 = __this->___audioQueue;
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_8 = V_1;
 		NullCheck(L_7);
 		Queue_1_Enqueue_m55772813E1CDCCC3CFFC84B2744AD6D5602C9205(L_7, L_8, Queue_1_Enqueue_m55772813E1CDCCC3CFFC84B2744AD6D5602C9205_RuntimeMethod_var);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:359>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:358>
 		return;
 	}
 }
@@ -9308,9 +9308,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52C
 	SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* V_2 = NULL;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:363>
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:364>
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:365>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:362>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:363>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:364>
 		int32_t L_0 = ___1_currentPosition;
 		int32_t L_1 = ___0_lastPosition;
 		if ((((int32_t)L_0) > ((int32_t)L_1)))
@@ -9339,18 +9339,18 @@ IL_0016:
 IL_0019:
 	{
 		V_0 = G_B3_0;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:367>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:366>
 		int32_t L_8 = V_0;
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_9 = (SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C*)(SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C*)SZArrayNew(SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C_il2cpp_TypeInfo_var, (uint32_t)L_8);
 		V_1 = L_9;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:368>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:367>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_10 = __this->___recordingClip;
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_11 = V_1;
 		int32_t L_12 = ___0_lastPosition;
 		NullCheck(L_10);
 		bool L_13;
 		L_13 = AudioClip_GetData_m1F6480FFDA2E354A7D8C8DE40F61AAB5AF6B4A1D(L_10, L_11, L_12, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:369>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:368>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_14 = V_1;
 		V_2 = L_14;
 		goto IL_0033;
@@ -9358,7 +9358,7 @@ IL_0019:
 
 IL_0033:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:370>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:369>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_15 = V_2;
 		return L_15;
 	}
@@ -9378,19 +9378,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	bool V_3 = false;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_4 = NULL;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:373>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:372>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_0 = ___0_samples;
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)il2cpp_codegen_multiply(((int32_t)(((RuntimeArray*)L_0)->max_length)), 2)));
 		V_0 = L_1;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:374>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:373>
 		V_1 = 0;
 		goto IL_004e;
 	}
 
 IL_0010:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:376>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:375>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_2 = ___0_samples;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
@@ -9399,26 +9399,26 @@ IL_0010:
 		float L_6;
 		L_6 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(((float)il2cpp_codegen_multiply(L_5, (32767.0f))), (-32768.0f), (32767.0f), NULL);
 		V_2 = il2cpp_codegen_cast_double_to_int<int16_t>(L_6);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:377>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:376>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = V_0;
 		int32_t L_8 = V_1;
 		int16_t L_9 = V_2;
 		NullCheck(L_7);
 		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_multiply(L_8, 2))), (uint8_t)((int32_t)(uint8_t)((int32_t)((int32_t)L_9&((int32_t)255)))));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:378>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:377>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = V_0;
 		int32_t L_11 = V_1;
 		int16_t L_12 = V_2;
 		NullCheck(L_10);
 		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add(((int32_t)il2cpp_codegen_multiply(L_11, 2)), 1))), (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_12>>8))&((int32_t)255)))));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:374>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:373>
 		int32_t L_13 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
 IL_004e:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:374>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:373>
 		int32_t L_14 = V_1;
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_15 = ___0_samples;
 		NullCheck(L_15);
@@ -9430,7 +9430,7 @@ IL_004e:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:380>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:379>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_17 = V_0;
 		V_4 = L_17;
 		goto IL_005d;
@@ -9438,7 +9438,7 @@ IL_004e:
 
 IL_005d:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:381>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:380>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_18 = V_4;
 		return L_18;
 	}
@@ -9465,16 +9465,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52C
 	int32_t G_B6_0 = 0;
 	int32_t G_B17_0 = 0;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:385>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:384>
 		V_0 = 0;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:388>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:387>
 		V_3 = 0;
 		goto IL_003f;
 	}
 
 IL_0007:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:390>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:389>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ___0_wavBytes;
 		int32_t L_1 = V_3;
 		NullCheck(L_0);
@@ -9532,23 +9532,23 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:392>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:391>
 		int32_t L_17 = V_3;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_17, 8));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:393>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:392>
 		goto IL_004d;
 	}
 
 IL_003a:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:388>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:387>
 		int32_t L_18 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:388>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:387>
 		int32_t L_19 = V_3;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_20 = ___0_wavBytes;
 		NullCheck(L_20);
@@ -9562,7 +9562,7 @@ IL_003f:
 
 IL_004d:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:399>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:398>
 		int32_t L_22 = V_0;
 		if (L_22)
 		{
@@ -9631,29 +9631,29 @@ IL_0075:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:401>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:400>
 		V_0 = ((int32_t)44);
 	}
 
 IL_0080:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:404>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:403>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_37 = ___0_wavBytes;
 		NullCheck(L_37);
 		int32_t L_38 = V_0;
 		V_1 = ((int32_t)(((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_37)->max_length)), L_38))/2));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:405>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:404>
 		int32_t L_39 = V_1;
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_40 = (SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C*)(SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C*)SZArrayNew(SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C_il2cpp_TypeInfo_var, (uint32_t)L_39);
 		V_2 = L_40;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:407>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:406>
 		V_7 = 0;
 		goto IL_00b3;
 	}
 
 IL_0094:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:410>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:409>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_41 = V_2;
 		int32_t L_42 = V_7;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_43 = ___0_wavBytes;
@@ -9663,14 +9663,14 @@ IL_0094:
 		L_46 = BitConverter_ToInt16_m13F278223B819C82CC647398B22C125B02FA2E61(L_43, ((int32_t)il2cpp_codegen_add(L_44, ((int32_t)il2cpp_codegen_multiply(L_45, 2)))), NULL);
 		NullCheck(L_41);
 		(L_41)->SetAt(static_cast<il2cpp_array_size_t>(L_42), (float)((float)(((float)L_46)/(32768.0f))));
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:407>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:406>
 		int32_t L_47 = V_7;
 		V_7 = ((int32_t)il2cpp_codegen_add(L_47, 1));
 	}
 
 IL_00b3:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:407>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:406>
 		int32_t L_48 = V_7;
 		int32_t L_49 = V_1;
 		V_8 = (bool)((((int32_t)L_48) < ((int32_t)L_49))? 1 : 0);
@@ -9681,7 +9681,7 @@ IL_00b3:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:413>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:412>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_51 = V_2;
 		V_9 = L_51;
 		goto IL_00c3;
@@ -9689,7 +9689,7 @@ IL_00b3:
 
 IL_00c3:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:414>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:413>
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_52 = V_9;
 		return L_52;
 	}
@@ -9829,7 +9829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_UpdateUI_mCBDB7B1D8D2
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5 = ___1_color;
 		NullCheck(L_4);
 		L_4->___color = L_5;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:445>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:444>
 		Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_6 = __this->___mainThreadActions;
 		V_1 = L_6;
 		V_2 = (bool)0;
@@ -9862,10 +9862,10 @@ IL_0054:
 		{
 			Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_9 = V_1;
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_9, (&V_2), NULL);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:447>
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:448>
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:449>
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:450>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:446>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:447>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:448>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:449>
 			Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_10 = __this->___mainThreadActions;
 			U3CU3Ec__DisplayClass28_0_t1B4537E34D97D66B1579379139C3986E762AF03B* L_11 = V_0;
 			Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_12 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
@@ -9882,7 +9882,7 @@ IL_0054:
 
 IL_0055:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:452>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:451>
 		return;
 	}
 }
@@ -9899,7 +9899,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController_OnDestroy_m1B841A381D
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:456>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:455>
 		ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_0 = __this->___websocket;
 		if (!L_0)
 		{
@@ -9930,11 +9930,11 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:458>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:457>
 		CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* L_4 = __this->___cts;
 		NullCheck(L_4);
 		CancellationTokenSource_Cancel_m64C48B9DCD25A9EBEC8DC170C79441564BC3755B(L_4, NULL);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:459>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:458>
 		ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_5 = __this->___websocket;
 		il2cpp_codegen_runtime_class_init_inline(CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED_il2cpp_TypeInfo_var);
 		CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED L_6;
@@ -9946,7 +9946,7 @@ IL_001a:
 
 IL_0047:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:461>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:460>
 		return;
 	}
 }
@@ -9966,23 +9966,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceAPIController__ctor_m63EDAF45ED21A6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:17>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:17>
 		__this->___wsUrl = _stringLiteralE53452ECE4288AA487385E40AA9EB114FB001551;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___wsUrl), (void*)_stringLiteralE53452ECE4288AA487385E40AA9EB114FB001551);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:20>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:20>
 		__this->___characterId = _stringLiteral0FF9AD7BEA0F95F41AB9568D6A96E1AFB8AAA498;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___characterId), (void*)_stringLiteral0FF9AD7BEA0F95F41AB9568D6A96E1AFB8AAA498);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:21>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:21>
 		__this->___role = _stringLiteralB534CB6DEFEED748A9D0A830C0C38C89D8147BB2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___role), (void*)_stringLiteralB534CB6DEFEED748A9D0A830C0C38C89D8147BB2);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:46>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:46>
 		__this->___isRecording = (bool)0;
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:53>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:53>
 		Queue_1_t93D633EE7B57CE0A53889D0202ADF003CFD0AEF0* L_0 = (Queue_1_t93D633EE7B57CE0A53889D0202ADF003CFD0AEF0*)il2cpp_codegen_object_new(Queue_1_t93D633EE7B57CE0A53889D0202ADF003CFD0AEF0_il2cpp_TypeInfo_var);
 		Queue_1__ctor_m31EE4A62857C733C4B8E28A0055E10C385C28FE3(L_0, Queue_1__ctor_m31EE4A62857C733C4B8E28A0055E10C385C28FE3_RuntimeMethod_var);
 		__this->___audioQueue = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___audioQueue), (void*)L_0);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:54>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:54>
 		Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_1 = (Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA*)il2cpp_codegen_object_new(Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA_il2cpp_TypeInfo_var);
 		Queue_1__ctor_mCB1D86FC102A8C3B82A02702CAEDAE815FE04272(L_1, Queue_1__ctor_mCB1D86FC102A8C3B82A02702CAEDAE815FE04272_RuntimeMethod_var);
 		__this->___mainThreadActions = L_1;
@@ -10011,7 +10011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0__ctor_m2FEA656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CRecordingSessionTaskU3Eb__0_m9249C61CBF4FC333925D9805CBDAD01498F146D1 (U3CU3Ec__DisplayClass21_0_t05238DF9B85D8AFEA0274A726CD2F8B2DCA41C4B* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:324>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:323>
 		VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_0 = __this->___U3CU3E4__this;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = __this->___audioBytes;
 		NullCheck(L_0);
@@ -10046,7 +10046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass28_0_U3CUpdateUIU3E
 	}
 	bool V_0 = false;
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:449>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:448>
 		VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_0 = __this->___U3CU3E4__this;
 		NullCheck(L_0);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = L_0->___statusText;
@@ -10061,14 +10061,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass28_0_U3CUpdateUIU3E
 		}
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:449>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:448>
 		VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_4 = __this->___U3CU3E4__this;
 		NullCheck(L_4);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = L_4->___statusText;
 		String_t* L_6 = __this->___text;
 		NullCheck(L_5);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_5, L_6);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:449>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:448>
 		VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_7 = __this->___U3CU3E4__this;
 		NullCheck(L_7);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = L_7->___statusText;
@@ -10079,7 +10079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass28_0_U3CUpdateUIU3E
 
 IL_0046:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:450>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:449>
 		return;
 	}
 }
@@ -10159,14 +10159,14 @@ IL_000d_1:
 
 IL_000f_1:
 		{
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:425>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:424>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)262144));
 			ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 L_3;
 			memset((&L_3), 0, sizeof(L_3));
 			ArraySegment_1__ctor_m8A879E5F534A391C62D3D65CDF9B8F0A7E1AED86((&L_3), L_2, ArraySegment_1__ctor_m8A879E5F534A391C62D3D65CDF9B8F0A7E1AED86_RuntimeMethod_var);
 			__this->___U3CbufferU3E5__1 = L_3;
 			Il2CppCodeGenWriteBarrier((void**)&(((&__this->___U3CbufferU3E5__1))->____array), (void*)NULL);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:426>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:425>
 			MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_4 = (MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2*)il2cpp_codegen_object_new(MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2_il2cpp_TypeInfo_var);
 			MemoryStream__ctor_m8F3BAE0B48E65BAA13C52FB020E502B3EA22CA6B(L_4, NULL);
 			__this->___U3CmsU3E5__2 = L_4;
@@ -10249,7 +10249,7 @@ IL_0043_2:
 
 IL_0044_2:
 				{
-					//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:431>
+					//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:430>
 					VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_10 = __this->___U3CU3E4__this;
 					NullCheck(L_10);
 					ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_11 = L_10->___websocket;
@@ -10310,7 +10310,7 @@ IL_00bd_2:
 					Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CresultU3E5__3), (void*)L_26);
 					__this->___U3CU3Es__4 = (WebSocketReceiveResult_t31FCE9F2E53843C065CD57BE10581EE47D6FAD2C*)NULL;
 					Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3Es__4), (void*)(WebSocketReceiveResult_t31FCE9F2E53843C065CD57BE10581EE47D6FAD2C*)NULL);
-					//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:432>
+					//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:431>
 					MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_27 = __this->___U3CmsU3E5__2;
 					ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* L_28 = (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093*)(&__this->___U3CbufferU3E5__1);
 					il2cpp_codegen_runtime_class_init_inline(ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093_il2cpp_TypeInfo_var);
@@ -10325,7 +10325,7 @@ IL_00bd_2:
 					L_33 = WebSocketReceiveResult_get_Count_mCD1591C6EAFAA98DDEBA26821531A80EB9E614C6_inline(L_32, NULL);
 					NullCheck(L_27);
 					VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_27, L_29, L_31, L_33);
-					//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:433>
+					//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:432>
 					WebSocketReceiveResult_t31FCE9F2E53843C065CD57BE10581EE47D6FAD2C* L_34 = __this->___U3CresultU3E5__3;
 					NullCheck(L_34);
 					bool L_35;
@@ -10338,12 +10338,12 @@ IL_00bd_2:
 					}
 				}
 				{
-					//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:435>
+					//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:434>
 					MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_37 = __this->___U3CmsU3E5__2;
 					NullCheck(L_37);
 					int64_t L_38;
 					L_38 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_37, ((int64_t)0), 0);
-					//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:436>
+					//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:435>
 					MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_39 = __this->___U3CmsU3E5__2;
 					Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_40;
 					L_40 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
@@ -10408,7 +10408,7 @@ IL_014e_3:
 
 IL_0150_3:
 						{
-							//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:438>
+							//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:437>
 							StreamReader_t81027449065C1B0C339DB46241D8001A6F61130B* L_46 = __this->___U3CreaderU3E5__5;
 							NullCheck(L_46);
 							Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* L_47;
@@ -10499,7 +10499,7 @@ CATCH_01f9:
 
 IL_021f:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:441>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:440>
 		__this->___U3CU3E1__state = ((int32_t)-2);
 		ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093* L_62 = (ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093*)(&__this->___U3CbufferU3E5__1);
 		il2cpp_codegen_initobj(L_62, sizeof(ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093));
@@ -10654,14 +10654,14 @@ IL_000e_1:
 
 IL_0010_1:
 		{
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:227>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:226>
 			VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_2 = __this->___U3CU3E4__this;
 			ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_3 = (ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F*)il2cpp_codegen_object_new(ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F_il2cpp_TypeInfo_var);
 			ClientWebSocket__ctor_m75DD6220EA55DB5AEEA0AEE5E5809885EE52E138(L_3, NULL);
 			NullCheck(L_2);
 			L_2->___websocket = L_3;
 			Il2CppCodeGenWriteBarrier((void**)(&L_2->___websocket), (void*)L_3);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:228>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:227>
 			VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_4 = __this->___U3CU3E4__this;
 			CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B* L_5 = (CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B*)il2cpp_codegen_object_new(CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B_il2cpp_TypeInfo_var);
 			CancellationTokenSource__ctor_m2ADB5D13368A9D364C20BB6039EC6DE858735E2C(L_5, NULL);
@@ -10777,7 +10777,7 @@ IL_008f_2:
 
 IL_0094_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:233>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:232>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_7 = __this->___U3CU3E4__this;
 				NullCheck(L_7);
 				String_t* L_8 = L_7->___wsUrl;
@@ -10785,13 +10785,13 @@ IL_0094_2:
 				L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB3F9038BC50A0F6226EFB7C9544E7D8BE9BDD354, L_8, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_9, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:234>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:233>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_10 = __this->___U3CU3E4__this;
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_11;
 				L_11 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
 				NullCheck(L_10);
 				VoiceAPIController_UpdateUI_mCBDB7B1D8D26770D7843D429B6CA9C1173FAA1FE(L_10, _stringLiteral3601EBFCBD34C287F86CE9019C0B1A2668725830, L_11, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:235>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:234>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_12 = __this->___U3CU3E4__this;
 				NullCheck(L_12);
 				ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_13 = L_12->___websocket;
@@ -10848,10 +10848,10 @@ IL_012c_2:
 IL_0148_2:
 			{
 				TaskAwaiter_GetResult_mC1D712500AE49B4A89C85D6B79D87D1BA9A6B94D((&V_1), NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:236>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:235>
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9F8395799C79A0E19761568F3AC4E9DF9ADD8E50, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:238>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:237>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_29 = __this->___U3CU3E4__this;
 				NullCheck(L_29);
 				Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* L_30;
@@ -10903,20 +10903,20 @@ IL_01b8_2:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwelcomeMsgU3E5__1), (void*)L_40);
 				__this->___U3CU3Es__7 = (String_t*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3Es__7), (void*)(String_t*)NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:239>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:238>
 				String_t* L_41 = __this->___U3CwelcomeMsgU3E5__1;
 				String_t* L_42;
 				L_42 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral9BCA444B2544CBD467031589E94A80C9733EFFEA, L_41, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_42, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:242>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:241>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_43 = __this->___U3CU3E4__this;
 				NullCheck(L_43);
 				String_t* L_44 = L_43->___characterId;
 				String_t* L_45;
 				L_45 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralD100D78F121ADF59ED3E7E782E9D3CDA4D775FEF, L_44, NULL);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_45, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:243>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:242>
 				SessionStartMsg_tAB5366C226C9A90397ADADB7327223C400B7EE51* L_46 = (SessionStartMsg_tAB5366C226C9A90397ADADB7327223C400B7EE51*)il2cpp_codegen_object_new(SessionStartMsg_tAB5366C226C9A90397ADADB7327223C400B7EE51_il2cpp_TypeInfo_var);
 				SessionStartMsg__ctor_m92A4B2832B34B5D0C90FD5ECA2300AA44BC00909(L_46, NULL);
 				SessionStartMsg_tAB5366C226C9A90397ADADB7327223C400B7EE51* L_47 = L_46;
@@ -10928,7 +10928,7 @@ IL_01b8_2:
 				Il2CppCodeGenWriteBarrier((void**)(&L_47->___character_id), (void*)L_49);
 				__this->___U3CstartMsgU3E5__2 = L_47;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstartMsgU3E5__2), (void*)L_47);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:244>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:243>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_50 = __this->___U3CU3E4__this;
 				SessionStartMsg_tAB5366C226C9A90397ADADB7327223C400B7EE51* L_51 = __this->___U3CstartMsgU3E5__2;
 				String_t* L_52;
@@ -10975,7 +10975,7 @@ IL_0273_2:
 IL_0290_2:
 			{
 				TaskAwaiter_GetResult_mC1D712500AE49B4A89C85D6B79D87D1BA9A6B94D((&V_4), NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:246>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:245>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_62 = __this->___U3CU3E4__this;
 				NullCheck(L_62);
 				Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* L_63;
@@ -11027,21 +11027,21 @@ IL_02f8_2:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstartAckU3E5__3), (void*)L_73);
 				__this->___U3CU3Es__8 = (String_t*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3Es__8), (void*)(String_t*)NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:247>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:246>
 				String_t* L_74 = __this->___U3CstartAckU3E5__3;
 				String_t* L_75;
 				L_75 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral0606DD972BDBA8168F1DB07E557A3E5986C76F5B, L_74, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_75, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:250>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:249>
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral888080F5423EAE65F74E9A163FB26E42AEAD3442, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:251>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:250>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_76 = __this->___U3CU3E4__this;
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_77;
 				L_77 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
 				NullCheck(L_76);
 				VoiceAPIController_UpdateUI_mCBDB7B1D8D26770D7843D429B6CA9C1173FAA1FE(L_76, _stringLiteralA4249AEA5B1AE9E78829F6D9A0EFE24DE7967450, L_77, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:252>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:251>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_78 = __this->___U3CU3E4__this;
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_79 = __this->___U3CU3E4__this;
 				NullCheck(L_79);
@@ -11051,16 +11051,16 @@ IL_02f8_2:
 				NullCheck(L_78);
 				L_78->___recordingClip = L_81;
 				Il2CppCodeGenWriteBarrier((void**)(&L_78->___recordingClip), (void*)L_81);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:253>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:252>
 				__this->___U3ClastPosU3E5__4 = 0;
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:254>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:253>
 				__this->___U3CchunkIndexU3E5__5 = 0;
 				goto IL_05fa_2;
 			}
 
 IL_0388_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:258>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:257>
 				il2cpp_codegen_runtime_class_init_inline(Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572_il2cpp_TypeInfo_var);
 				Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_82;
 				L_82 = Task_Delay_m4B84654B4DAADEC41096D9F01C099CCEA9927A48(((int32_t)200), NULL);
@@ -11103,14 +11103,14 @@ IL_03cb_2:
 IL_03e8_2:
 			{
 				TaskAwaiter_GetResult_mC1D712500AE49B4A89C85D6B79D87D1BA9A6B94D((&V_6), NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:259>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:258>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_91 = __this->___U3CU3E4__this;
 				NullCheck(L_91);
 				String_t* L_92 = L_91->___micDevice;
 				int32_t L_93;
 				L_93 = Microphone_GetPosition_m13F4C8EBE8536893D9AD8388B0E5B46D62E6A459(L_92, NULL);
 				__this->___U3CcurrentPosU3E5__9 = L_93;
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:260>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:259>
 				int32_t L_94 = __this->___U3CcurrentPosU3E5__9;
 				int32_t L_95 = __this->___U3ClastPosU3E5__4;
 				V_7 = (bool)((((int32_t)L_94) == ((int32_t)L_95))? 1 : 0);
@@ -11121,13 +11121,13 @@ IL_03e8_2:
 				}
 			}
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:260>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:259>
 				goto IL_05fa_2;
 			}
 
 IL_041f_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:262>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:261>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_97 = __this->___U3CU3E4__this;
 				int32_t L_98 = __this->___U3ClastPosU3E5__4;
 				int32_t L_99 = __this->___U3CcurrentPosU3E5__9;
@@ -11136,10 +11136,10 @@ IL_041f_2:
 				L_100 = VoiceAPIController_GetMicSamples_m7AB0BC4A9D8A80AFFA15E4E06952FFA08E6AC51E(L_97, L_98, L_99, NULL);
 				__this->___U3CsamplesU3E5__10 = L_100;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CsamplesU3E5__10), (void*)L_100);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:263>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:262>
 				int32_t L_101 = __this->___U3CcurrentPosU3E5__9;
 				__this->___U3ClastPosU3E5__4 = L_101;
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:265>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:264>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_102 = __this->___U3CU3E4__this;
 				SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_103 = __this->___U3CsamplesU3E5__10;
 				NullCheck(L_102);
@@ -11147,14 +11147,14 @@ IL_041f_2:
 				L_104 = VoiceAPIController_EncodeToPCM16_m299ED4BA4635C17C632162EA6E891D1C9F1CB222(L_102, L_103, NULL);
 				__this->___U3CpcmBytesU3E5__11 = L_104;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CpcmBytesU3E5__11), (void*)L_104);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:266>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:265>
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_105 = __this->___U3CpcmBytesU3E5__11;
 				il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 				String_t* L_106;
 				L_106 = Convert_ToBase64String_mD0680EF77270244071965AFA1207921C73EEA323(L_105, NULL);
 				__this->___U3Cb64U3E5__12 = L_106;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3Cb64U3E5__12), (void*)L_106);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:268>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:267>
 				AudioChunkMsg_t92EC00310A98900C683E5B94EDBFF1EEFAE7261E* L_107 = (AudioChunkMsg_t92EC00310A98900C683E5B94EDBFF1EEFAE7261E*)il2cpp_codegen_object_new(AudioChunkMsg_t92EC00310A98900C683E5B94EDBFF1EEFAE7261E_il2cpp_TypeInfo_var);
 				AudioChunkMsg__ctor_mB8ACF021789B982286035E1013E071A289F2B25B(L_107, NULL);
 				AudioChunkMsg_t92EC00310A98900C683E5B94EDBFF1EEFAE7261E* L_108 = L_107;
@@ -11168,7 +11168,7 @@ IL_041f_2:
 				Il2CppCodeGenWriteBarrier((void**)(&L_110->___audio), (void*)L_111);
 				__this->___U3CchunkMsgU3E5__13 = L_110;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CchunkMsgU3E5__13), (void*)L_110);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:269>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:268>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_112 = __this->___U3CU3E4__this;
 				AudioChunkMsg_t92EC00310A98900C683E5B94EDBFF1EEFAE7261E* L_113 = __this->___U3CchunkMsgU3E5__13;
 				String_t* L_114;
@@ -11215,7 +11215,7 @@ IL_04e1_2:
 IL_04fe_2:
 			{
 				TaskAwaiter_GetResult_mC1D712500AE49B4A89C85D6B79D87D1BA9A6B94D((&V_8), NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:270>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:269>
 				int32_t L_124 = __this->___U3CchunkIndexU3E5__5;
 				int32_t L_125 = L_124;
 				RuntimeObject* L_126 = Box(il2cpp_defaults.int32_class, &L_125);
@@ -11227,7 +11227,7 @@ IL_04fe_2:
 				L_130 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral4EE90D276FE3A8E4036E2F41FE22BC85C9BC510A, L_126, L_129, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_130, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:272>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:271>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_131 = __this->___U3CU3E4__this;
 				NullCheck(L_131);
 				Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* L_132;
@@ -11279,13 +11279,13 @@ IL_058e_2:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CackU3E5__14), (void*)L_142);
 				__this->___U3CU3Es__15 = (String_t*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3Es__15), (void*)(String_t*)NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:273>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:272>
 				String_t* L_143 = __this->___U3CackU3E5__14;
 				String_t* L_144;
 				L_144 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF8112CF505B5345245B61C7E3A1232EC6249DF42, L_143, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_144, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:274>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:273>
 				int32_t L_145 = __this->___U3CchunkIndexU3E5__5;
 				V_10 = L_145;
 				int32_t L_146 = V_10;
@@ -11304,7 +11304,7 @@ IL_058e_2:
 
 IL_05fa_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:256>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:255>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_147 = __this->___U3CU3E4__this;
 				NullCheck(L_147);
 				bool L_148 = L_147->___isRecording;
@@ -11316,12 +11316,12 @@ IL_05fa_2:
 				}
 			}
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:277>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:276>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_150 = __this->___U3CU3E4__this;
 				NullCheck(L_150);
 				String_t* L_151 = L_150->___micDevice;
 				Microphone_End_mB368877FCC9EA1522914006671E637848A0F7CC6(L_151, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:278>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:277>
 				int32_t L_152 = __this->___U3CchunkIndexU3E5__5;
 				int32_t L_153 = L_152;
 				RuntimeObject* L_154 = Box(il2cpp_defaults.int32_class, &L_153);
@@ -11329,15 +11329,15 @@ IL_05fa_2:
 				L_155 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral8889FB735DD35A8ADF22123FB58465764225D4D4, L_154, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_155, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:281>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:280>
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral8E8AFFEA1EEC17485D62E2376BBE995AEB206F2F, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:282>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:281>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_156 = __this->___U3CU3E4__this;
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_157;
 				L_157 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
 				NullCheck(L_156);
 				VoiceAPIController_UpdateUI_mCBDB7B1D8D26770D7843D429B6CA9C1173FAA1FE(L_156, _stringLiteral1DB522A448C7E3B757875333BD51A6E14B36B29A, L_157, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:283>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:282>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_158 = __this->___U3CU3E4__this;
 				EndUtteranceMsg_tECF82F5938BCBA2E5077B91A344DB0C7ACEB10D3* L_159 = (EndUtteranceMsg_tECF82F5938BCBA2E5077B91A344DB0C7ACEB10D3*)il2cpp_codegen_object_new(EndUtteranceMsg_tECF82F5938BCBA2E5077B91A344DB0C7ACEB10D3_il2cpp_TypeInfo_var);
 				EndUtteranceMsg__ctor_m376AC18EC688791A1CD878E7D08085B582E72497(L_159, NULL);
@@ -11385,17 +11385,17 @@ IL_06a8_2:
 IL_06c5_2:
 			{
 				TaskAwaiter_GetResult_mC1D712500AE49B4A89C85D6B79D87D1BA9A6B94D((&V_12), NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:286>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:285>
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral395CB9AFA4987299857E694496670BF8F3DFC906, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:287>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:286>
 				__this->___U3CaudioChunksReceivedU3E5__6 = 0;
 				goto IL_09df_2;
 			}
 
 IL_06e4_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:291>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:290>
 				il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 				DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_170;
 				L_170 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
@@ -11405,7 +11405,7 @@ IL_06e4_2:
 				L_173 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral6F0EDEFD0B3658F9FB951CC9C0D52782A17D5578, L_172, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_173, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:292>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:291>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_174 = __this->___U3CU3E4__this;
 				NullCheck(L_174);
 				Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0* L_175;
@@ -11457,7 +11457,7 @@ IL_075f_2:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CmsgU3E5__16), (void*)L_185);
 				__this->___U3CU3Es__18 = (String_t*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3Es__18), (void*)(String_t*)NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:293>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:292>
 				il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 				DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_186;
 				L_186 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
@@ -11467,13 +11467,13 @@ IL_075f_2:
 				L_189 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral7E439E51208D135150A0525C16C0A5C44147E6DD, L_188, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_189, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:294>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:293>
 				String_t* L_190 = __this->___U3CmsgU3E5__16;
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_191;
 				L_191 = JsonUtility_FromJson_TisServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9_m1BD2C277C44ED14FEE1A3E0195209FCA66C1A77E(L_190, JsonUtility_FromJson_TisServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9_m1BD2C277C44ED14FEE1A3E0195209FCA66C1A77E_RuntimeMethod_var);
 				__this->___U3CresponseU3E5__17 = L_191;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CresponseU3E5__17), (void*)L_191);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:295>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:294>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_192 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_192);
 				String_t* L_193 = L_192->___type;
@@ -11481,7 +11481,7 @@ IL_075f_2:
 				String_t* L_195;
 				L_195 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteralC99F13CF6530FED722DC60A07E8646723BCE7B67, L_193, _stringLiteral99BEEA56E359730E935A795C8D322027A7C039D8, L_194, NULL);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_195, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:297>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:296>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_196 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_196);
 				String_t* L_197 = L_196->___type;
@@ -11495,7 +11495,7 @@ IL_075f_2:
 				}
 			}
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:299>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:298>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_200 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_200);
 				String_t* L_201 = L_200->___message;
@@ -11503,13 +11503,13 @@ IL_075f_2:
 				L_202 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral57367C154E284A2B246E2DA4624B65DEBF8DE872, L_201, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_202, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:300>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:299>
 				goto IL_09fb_2;
 			}
 
 IL_080c_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:303>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:302>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_203 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_203);
 				String_t* L_204 = L_203->___type;
@@ -11523,7 +11523,7 @@ IL_080c_2:
 				}
 			}
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:305>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:304>
 				int32_t L_207 = __this->___U3CaudioChunksReceivedU3E5__6;
 				int32_t L_208 = L_207;
 				RuntimeObject* L_209 = Box(il2cpp_defaults.int32_class, &L_208);
@@ -11531,13 +11531,13 @@ IL_080c_2:
 				L_210 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral48A0EF50E9433846F94E112652E5D09E41C54098, L_209, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_210, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:306>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:305>
 				goto IL_09fb_2;
 			}
 
 IL_0848_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:309>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:308>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_211 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_211);
 				String_t* L_212 = L_211->___type;
@@ -11560,12 +11560,12 @@ IL_0848_2:
 				NullCheck(L_216);
 				L_216->___U3CU3E4__this = L_217;
 				Il2CppCodeGenWriteBarrier((void**)(&L_216->___U3CU3E4__this), (void*)L_217);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:311>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:310>
 				int32_t L_218 = __this->___U3CaudioChunksReceivedU3E5__6;
 				V_10 = L_218;
 				int32_t L_219 = V_10;
 				__this->___U3CaudioChunksReceivedU3E5__6 = ((int32_t)il2cpp_codegen_add(L_219, 1));
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:312>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:311>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_220 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_220);
 				String_t* L_221 = L_220->___audio;
@@ -11579,7 +11579,7 @@ IL_0848_2:
 				}
 			}
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:314>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:313>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_224 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_224);
 				int32_t L_225 = L_224->___chunk_index;
@@ -11589,13 +11589,13 @@ IL_0848_2:
 				L_228 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral01904426CCB9F48796557873AD9C57E3C28E5B66, L_227, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_228, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:315>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:314>
 				goto IL_09df_2;
 			}
 
 IL_08d1_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:318>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:317>
 				U3CU3Ec__DisplayClass21_0_t05238DF9B85D8AFEA0274A726CD2F8B2DCA41C4B* L_229 = __this->___U3CU3E8__19;
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_230 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_230);
@@ -11606,7 +11606,7 @@ IL_08d1_2:
 				NullCheck(L_229);
 				L_229->___audioBytes = L_232;
 				Il2CppCodeGenWriteBarrier((void**)(&L_229->___audioBytes), (void*)L_232);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:319>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:318>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_233 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_233);
 				int32_t L_234 = L_233->___chunk_index;
@@ -11622,13 +11622,13 @@ IL_08d1_2:
 				L_241 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral0EB1DAAAEB14068BFC6BBAF5FE632EDA0BEB5400, L_236, L_240, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_241, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:320>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:319>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_242 = __this->___U3CU3E4__this;
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_243;
 				L_243 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
 				NullCheck(L_242);
 				VoiceAPIController_UpdateUI_mCBDB7B1D8D26770D7843D429B6CA9C1173FAA1FE(L_242, _stringLiteral9D080604BB86F99020F272D43E9463D021B61510, L_243, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:322>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:321>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_244 = __this->___U3CU3E4__this;
 				NullCheck(L_244);
 				Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_245 = L_244->___mainThreadActions;
@@ -11672,7 +11672,7 @@ IL_099c_2:
 					Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_249 = __this->___U3CU3Es__20;
 					bool* L_250 = (bool*)(&__this->___U3CU3Es__21);
 					Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_249, L_250, NULL);
-					//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:324>
+					//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:323>
 					VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_251 = __this->___U3CU3E4__this;
 					NullCheck(L_251);
 					Queue_1_tDCDB1CEF747EF8D38C6708645EC5FD3799C168BA* L_252 = L_251->___mainThreadActions;
@@ -11700,7 +11700,7 @@ IL_099d_2:
 
 IL_09ae_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:329>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:328>
 				ServerMsg_t31BB210548077A72264C7C3E09FB24A5D18CA2E9* L_255 = __this->___U3CresponseU3E5__17;
 				NullCheck(L_255);
 				String_t* L_256 = L_255->___type;
@@ -11720,7 +11720,7 @@ IL_09d0_2:
 
 IL_09df_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:289>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:288>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_258 = __this->___U3CU3E4__this;
 				NullCheck(L_258);
 				ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_259 = L_258->___websocket;
@@ -11737,10 +11737,10 @@ IL_09df_2:
 
 IL_09fb_2:
 			{
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:333>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:332>
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral5CC9C090E03880D275D2756E26CF149074587894, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:334>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:333>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_262 = __this->___U3CU3E4__this;
 				NullCheck(L_262);
 				ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_263 = L_262->___websocket;
@@ -11792,13 +11792,13 @@ IL_0a69_2:
 IL_0a86_2:
 			{
 				TaskAwaiter_GetResult_mC1D712500AE49B4A89C85D6B79D87D1BA9A6B94D((&V_19), NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:335>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:334>
 				VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_276 = __this->___U3CU3E4__this;
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_277;
 				L_277 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 				NullCheck(L_276);
 				VoiceAPIController_UpdateUI_mCBDB7B1D8D26770D7843D429B6CA9C1173FAA1FE(L_276, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, L_277, NULL);
-				//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:336>
+				//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:335>
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA3851BEEE10B248783256A82BD03C2FCCFB16BD0, NULL);
 				__this->___U3CwelcomeMsgU3E5__1 = (String_t*)NULL;
@@ -11823,12 +11823,12 @@ IL_0a86_2:
 CATCH_0ac7_1:
 		{
 			Exception_t* L_278 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:338>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:337>
 			V_20 = L_278;
 			Exception_t* L_279 = V_20;
 			__this->___U3CeU3E5__22 = L_279;
 			Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CeU3E5__22), (void*)L_279);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:340>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:339>
 			Exception_t* L_280 = __this->___U3CeU3E5__22;
 			NullCheck(L_280);
 			String_t* L_281;
@@ -11837,7 +11837,7 @@ CATCH_0ac7_1:
 			L_282 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral06B3D804125B428DE7F08F1F466672D119A9F7BF)), L_281, NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_282, NULL);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:341>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:340>
 			Exception_t* L_283 = __this->___U3CeU3E5__22;
 			NullCheck(L_283);
 			String_t* L_284;
@@ -11845,7 +11845,7 @@ CATCH_0ac7_1:
 			String_t* L_285;
 			L_285 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE4AC8241ADF867C2A66E8D35BE12299E101A6C03)), L_284, NULL);
 			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_285, NULL);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:342>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:341>
 			VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_286 = __this->___U3CU3E4__this;
 			Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_287;
 			L_287 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
@@ -11885,7 +11885,7 @@ CATCH_0b23:
 
 IL_0b3d:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:344>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:343>
 		__this->___U3CU3E1__state = ((int32_t)-2);
 		AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06* L_291 = (AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06*)(&__this->___U3CU3Et__builder);
 		il2cpp_codegen_runtime_class_init_inline(AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06_il2cpp_TypeInfo_var);
@@ -11961,7 +11961,7 @@ IL_000c_1:
 
 IL_000e_1:
 		{
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:418>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:417>
 			Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_2;
 			L_2 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 			String_t* L_3 = __this->___text;
@@ -11970,7 +11970,7 @@ IL_000e_1:
 			L_4 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(17, L_2, L_3);
 			__this->___U3CbytesU3E5__1 = L_4;
 			Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CbytesU3E5__1), (void*)L_4);
-			//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:419>
+			//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:418>
 			VoiceAPIController_tAFA39069667104006BC03D0AACD108C27E7B1D6F* L_5 = __this->___U3CU3E4__this;
 			NullCheck(L_5);
 			ClientWebSocket_tCA318357FEA5850DFE2109A0139A57F152E0D71F* L_6 = L_5->___websocket;
@@ -12056,7 +12056,7 @@ CATCH_00ab:
 
 IL_00ca:
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:420>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:419>
 		__this->___U3CU3E1__state = ((int32_t)-2);
 		__this->___U3CbytesU3E5__1 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CbytesU3E5__1), (void*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL);
@@ -12096,12 +12096,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SessionStartMsg__ctor_m92A4B2832B34B5D0C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:468>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:467>
 		__this->___type = _stringLiteral0A2394B5D5B43AFF00C0A73C352E42E2977E0515;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___type), (void*)_stringLiteral0A2394B5D5B43AFF00C0A73C352E42E2977E0515);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:470>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:469>
 		__this->___sample_rate = ((int32_t)16000);
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:471>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:470>
 		__this->___audio_format = _stringLiteral0936FF3F7C84D8807A4F78EAA0EF73E084871E94;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___audio_format), (void*)_stringLiteral0936FF3F7C84D8807A4F78EAA0EF73E084871E94);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -12126,7 +12126,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioChunkMsg__ctor_mB8ACF021789B9822860
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:477>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:476>
 		__this->___type = _stringLiteralCA68379B493F7A705904E91E20E8802086AABFCB;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___type), (void*)_stringLiteralCA68379B493F7A705904E91E20E8802086AABFCB);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -12151,7 +12151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EndUtteranceMsg__ctor_m376AC18EC688791A1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Senior 2/GP/Image Processing/Assets/StreamVoiceAPIController.cs:485>
+		//<source_info:D:/Senior 2/GP/Image Processing/Assets/Scripts/VoiceController/StreamVoiceAPIController.cs:484>
 		__this->___type = _stringLiteral78DE359308CEE6018080E618F61E23070050E4CA;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___type), (void*)_stringLiteral78DE359308CEE6018080E618F61E23070050E4CA);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -12222,7 +12222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____19579C4B5B38A1B0F2BB508E331E8C7925480629B7F890010D1C7E00ABB4BCC6_FieldInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____5C86CF5AFCAE1429662C9533E9B052A97AD8D84AE4ACEEAD2DFBDA459712602B_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____51D650D17D93F066DBC9C86E3F644752191365B2179FEBDB0FA5739BC9AD97F8_FieldInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E V_0;
@@ -12231,9 +12231,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E));
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)437));
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)461));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____5C86CF5AFCAE1429662C9533E9B052A97AD8D84AE4ACEEAD2DFBDA459712602B_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA____51D650D17D93F066DBC9C86E3F644752191365B2179FEBDB0FA5739BC9AD97F8_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
 		(&V_0)->___FilePathsData = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
