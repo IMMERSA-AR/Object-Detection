@@ -32,3 +32,33 @@
 # OS generated
 .DS_Store
 Thumbs.db
+
+
+# --- ADDED FOR VR / MODERN UNITY / VS CODE ---
+
+# Modern Unity User Settings
+/[Uu]ser[Ss]ettings/
+/[Uu]ser[Ss]ettings.meta
+
+# Security (Android Keystores)
+*.keystore
+*.jks
+*.sig
+
+# Modern IDEs
+.vs/
+.idea/
+.vscode/
+
+# Additional Build Artifacts
+*.aab
+*.obb
+*.exe
+*.app/
+*.ipa
+*.unity3d
+
+# Crash Logs
+sysinfo.txt
+crash_info.txt
+crashlytics-build.properties
