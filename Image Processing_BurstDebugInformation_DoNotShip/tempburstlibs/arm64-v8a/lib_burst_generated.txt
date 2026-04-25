@@ -11,7 +11,7 @@ Library: D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Senior 2\GP\Image Processing\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.14f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Senior 2\GP\Image Processing\Library\Burst
 --output=D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -83,7 +83,7 @@ Library: D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Senior 2\GP\Image Processing\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.14f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Senior 2\GP\Image Processing\Library\Burst
 --output=D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -160,7 +160,7 @@ Library: D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Senior 2\GP\Image Processing\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.14f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Senior 2\GP\Image Processing\Library\Burst
 --output=D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -278,7 +278,7 @@ Library: D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Senior 2\GP\Image Processing\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.14f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Senior 2\GP\Image Processing\Library\Burst
 --output=D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -296,7 +296,7 @@ Library: D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Senior 2\GP\Image Processing\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.14f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Senior 2\GP\Image Processing\Library\Burst
 --output=D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
@@ -314,7 +314,7 @@ Library: D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Senior 2\GP\Image Processing\Temp\Burst
 --debug=Full
---key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f1/Editor/Data/PlaybackEngines/AndroidPlayer
+--key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.14f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Senior 2\GP\Image Processing\Library\Burst
 --output=D:\Senior 2\GP\Image Processing\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/

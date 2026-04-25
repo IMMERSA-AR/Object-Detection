@@ -3855,7 +3855,7 @@ inline void List_1_AddWithResize_m3BC29F7B58E0D226596FF7A4E536CB56867FEEE4 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 32363
+// Method Definition Index: 32402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Model_tA2D597686F5091B2507DCA498749D2AEC46BE29C* GraphConverter_GraphToModel_mE99622F707E477DB39597AC6CC1CB3C2C36AABF7 (GraphModule_tFCF522ED1E3E6FFE139791E192C088727BD8AC74* ___0_gm, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4533,7 +4533,7 @@ IL_0344:
 		return L_177;
 	}
 }
-// Method Definition Index: 32364
+// Method Definition Index: 32403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphModule_tFCF522ED1E3E6FFE139791E192C088727BD8AC74* GraphConverter_ModelToGraphModule_m601478C28850697832A8531CFAA13EBF226DF17E (Model_tA2D597686F5091B2507DCA498749D2AEC46BE29C* ___0_model, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5079,7 +5079,7 @@ IL_024a:
 		return L_127;
 	}
 }
-// Method Definition Index: 32365
+// Method Definition Index: 32404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArgumentU5BU5D_tF675E63FDFDE4A41F15F7BE0759141EFE09AB603* GraphConverter_LayerToArgs_mAA2EB316F4EA490301E03754F97837D34E47E9F0 (Layer_tF12B2F87C397A2BE4A2F04768753EA2B6867C039* ___0_layer, NodeU5BU5D_t02B325792364BCC18389CB4A7272AB19006CD79E* ___1_inputs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13201,7 +13201,7 @@ IL_2f89:
 		return L_2867;
 	}
 }
-// Method Definition Index: 32366
+// Method Definition Index: 32405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Layer_tF12B2F87C397A2BE4A2F04768753EA2B6867C039* GraphConverter_NodeToLayer_m108F4E4E07B8C63CFFF270ACBA3F9DF747CFF38D (Node_t207E721361EBF061A8466055FF747A4CB5D05DFA* ___0_node, Func_2_tE5104C009A88CA54EC23070D6C0FFD0167D12253* ___1_getIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23507,7 +23507,7 @@ IL_418f:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 28841
+// Method Definition Index: 28880
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PartialTensor_get_dataType_mAEFDFD8C9EF2835DACA5320EA27A96E9EB205895_inline (PartialTensor_t6E971891A0465DA5A53927F6347414C94678959F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23516,7 +23516,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PartialTensor_get_dataTyp
 		return L_0;
 	}
 }
-// Method Definition Index: 28842
+// Method Definition Index: 28881
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DynamicTensorShape_t9059EB40BCBB9F8684F49C974C1F56D34E79038E PartialTensor_get_shape_m49066131BB4F93BFB14B8A2BF39D4809C188A758_inline (PartialTensor_t6E971891A0465DA5A53927F6347414C94678959F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23525,7 +23525,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DynamicTensorShape_t9059EB40BCBB9
 		return L_0;
 	}
 }
-// Method Definition Index: 11664
+// Method Definition Index: 11676
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m245719711D3C17B6A4B118F0B64BAA1381423903_gshared_inline (List_1_t677DC538487CBE7999495A237C5E7457DF0BE381* __this, Input_tD8D01F2A6200BED9D1B4E6137826AD3FA4901A31 ___0_item, const RuntimeMethod* method) 
 {
 	InputU5BU5D_t40D8D19798F000B373B551F89BEA679F7256C5B2* V_0 = NULL;
@@ -23563,7 +23563,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 11664
+// Method Definition Index: 11676
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -23601,7 +23601,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 11664
+// Method Definition Index: 11676
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mE38619109440526150956EA18C67814DF23840A2_gshared_inline (List_1_t318D453040EF7A4FE0491D3853C3CE0DB696ECDB* __this, Output_t7A6747E925D1D50C2B5C4F52EE622EC5CBDDEF22 ___0_item, const RuntimeMethod* method) 
 {
 	OutputU5BU5D_t16D33A8349D135EF6770C512FBB19994627BC63A* V_0 = NULL;
@@ -23639,7 +23639,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 11717
+// Method Definition Index: 11729
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23647,7 +23647,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 11717
+// Method Definition Index: 11729
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Input_tD8D01F2A6200BED9D1B4E6137826AD3FA4901A31 Enumerator_get_Current_mC655EFAA1361887EDE96CB7EBF613A4BA93EEC4D_gshared_inline (Enumerator_t11C610DB39F583F381146E3CD372D46D7AE90E7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23655,7 +23655,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Input_tD8D01F2A6200BED9D1B4E61378
 		return L_0;
 	}
 }
-// Method Definition Index: 11653
+// Method Definition Index: 11665
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mDF22A569754F245F85DB63CA3EA6102BEA40510F_gshared_inline (List_1_t318D453040EF7A4FE0491D3853C3CE0DB696ECDB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23663,7 +23663,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mDF22A56
 		return L_0;
 	}
 }
-// Method Definition Index: 895
+// Method Definition Index: 896
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Func_2_Invoke_m5216F6C7BCECCCED81384876C2968E0D4358618B_gshared_inline (Func_2_t9A0D493A82DCC47C9C819A3B045E02D9B5DDCE1B* __this, RuntimeObject* ___0_arg, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);

@@ -2589,6 +2589,7 @@ struct TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9  : public MaskableGrap
 	float ___m_cSpacing;
 	float ___m_monoSpacing;
 	bool ___m_duoSpace;
+	float ___m_characterHorizontalScale;
 	float ___m_wordSpacing;
 	float ___m_lineSpacing;
 	float ___m_lineSpacingDelta;
@@ -3831,7 +3832,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 100323
+// Method Definition Index: 100579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3845,7 +3846,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC
 	BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* V_1 = NULL;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:353>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:353>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -3886,7 +3887,7 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:354>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:354>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_6;
 		L_6 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -3902,19 +3903,19 @@ IL_001f:
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:355>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:355>
 		V_1 = (BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622*)NULL;
 		goto IL_0039;
 	}
 
 IL_0039:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:356>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:356>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_9 = V_1;
 		return L_9;
 	}
 }
-// Method Definition Index: 100324
+// Method Definition Index: 100580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_compositionString_m4332AACD655CF044F84411B3BCE32BF2034AC4CC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3926,7 +3927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_compositionStrin
 	String_t* V_0 = NULL;
 	String_t* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:361>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:361>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_0;
 		L_0 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -3962,18 +3963,18 @@ IL_0021:
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:361>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:361>
 		String_t* L_5 = V_0;
 		return L_5;
 	}
 }
-// Method Definition Index: 100325
+// Method Definition Index: 100581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:371>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:371>
 		bool L_0 = __this->___m_ReadOnly;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -3983,14 +3984,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_compositionLength_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:372>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:372>
 		V_1 = 0;
 		goto IL_001d;
 	}
 
 IL_000f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:374>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:374>
 		String_t* L_2;
 		L_2 = TMP_InputField_get_compositionString_m4332AACD655CF044F84411B3BCE32BF2034AC4CC(__this, NULL);
 		NullCheck(L_2);
@@ -4002,12 +4003,12 @@ IL_000f:
 
 IL_001d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:375>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:375>
 		int32_t L_4 = V_1;
 		return L_4;
 	}
 }
-// Method Definition Index: 100326
+// Method Definition Index: 100582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField__ctor_m6C5321A190D58235E29A17D7EE17D249D210A07B (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4024,189 +4025,189 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField__ctor_m6C5321A190D58235E2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:138>
 		__this->___m_IsDrivenByLayoutComponents = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:153>
 		__this->___m_ScrollSensitivity = (1.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:159>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:159>
 		__this->___m_ContentType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:165>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:171>
 		__this->___m_AsteriskChar = ((int32_t)42);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:177>
 		__this->___m_KeyboardType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:180>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:186>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:186>
 		__this->___m_HideMobileInput = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:192>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:192>
 		__this->___m_HideSoftKeyboard = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:198>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:198>
 		__this->___m_CharacterValidation = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:204>
 		String_t* L_0 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
 		__this->___m_RegexValue = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RegexValue), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:210>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:210>
 		__this->___m_GlobalPointSize = (14.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:216>
 		__this->___m_CharacterLimit = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:222>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:222>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_1 = (SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500*)il2cpp_codegen_object_new(SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500_il2cpp_TypeInfo_var);
 		SubmitEvent__ctor_m7D30737EA13979AD78F6D7C46563FD43A32301C8(L_1, NULL);
 		__this->___m_OnEndEdit = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnEndEdit), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:228>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:228>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_2 = (SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500*)il2cpp_codegen_object_new(SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500_il2cpp_TypeInfo_var);
 		SubmitEvent__ctor_m7D30737EA13979AD78F6D7C46563FD43A32301C8(L_2, NULL);
 		__this->___m_OnSubmit = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnSubmit), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:234>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:234>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_3 = (SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119*)il2cpp_codegen_object_new(SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119_il2cpp_TypeInfo_var);
 		SelectionEvent__ctor_m9EF6D8DB48A30C615541A297E3739B078BA2F8AD(L_3, NULL);
 		__this->___m_OnSelect = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnSelect), (void*)L_3);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:240>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:240>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_4 = (SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119*)il2cpp_codegen_object_new(SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119_il2cpp_TypeInfo_var);
 		SelectionEvent__ctor_m9EF6D8DB48A30C615541A297E3739B078BA2F8AD(L_4, NULL);
 		__this->___m_OnDeselect = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnDeselect), (void*)L_4);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:246>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:246>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_5 = (TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401*)il2cpp_codegen_object_new(TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401_il2cpp_TypeInfo_var);
 		TextSelectionEvent__ctor_mB76781548533BA217F1FDD39550335889994027E(L_5, NULL);
 		__this->___m_OnTextSelection = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnTextSelection), (void*)L_5);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:252>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:252>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_6 = (TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401*)il2cpp_codegen_object_new(TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401_il2cpp_TypeInfo_var);
 		TextSelectionEvent__ctor_mB76781548533BA217F1FDD39550335889994027E(L_6, NULL);
 		__this->___m_OnEndTextSelection = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnEndTextSelection), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:258>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:258>
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* L_7 = (OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D*)il2cpp_codegen_object_new(OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D_il2cpp_TypeInfo_var);
 		OnChangeEvent__ctor_mA7F876316D0F5198E90ECA7304C6542D63758698(L_7, NULL);
 		__this->___m_OnValueChanged = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnValueChanged), (void*)L_7);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:264>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:264>
 		TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* L_8 = (TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1*)il2cpp_codegen_object_new(TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1_il2cpp_TypeInfo_var);
 		TouchScreenKeyboardEvent__ctor_mA7D12057CDF3115B9B47CFFE817A2D901B90EB37(L_8, NULL);
 		__this->___m_OnTouchScreenKeyboardStatusChanged = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OnTouchScreenKeyboardStatusChanged), (void*)L_8);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:273>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:273>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9;
 		memset((&L_9), 0, sizeof(L_9));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_9), (0.196078435f), (0.196078435f), (0.196078435f), (1.0f), NULL);
 		__this->___m_CaretColor = L_9;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:276>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:276>
 		__this->___m_CustomCaretColor = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:279>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:279>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_10;
 		memset((&L_10), 0, sizeof(L_10));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_10), (0.65882355f), (0.807843149f), (1.0f), (0.752941191f), NULL);
 		__this->___m_SelectionColor = L_10;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:287>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:287>
 		String_t* L_11 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
 		__this->___m_Text = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_11);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:291>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:291>
 		__this->___m_CaretBlinkRate = (0.850000024f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:295>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:295>
 		__this->___m_CaretWidth = 1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:298>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:298>
 		__this->___m_ReadOnly = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:301>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:301>
 		__this->___m_RichText = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:305>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:305>
 		__this->___m_StringPosition = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:306>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:306>
 		__this->___m_StringSelectPosition = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:307>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:307>
 		__this->___m_CaretPosition = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:308>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:308>
 		__this->___m_CaretSelectPosition = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:310>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:310>
 		__this->___caretRectTrans = (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___caretRectTrans), (void*)(RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:311>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:311>
 		__this->___m_CursorVerts = (UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CursorVerts), (void*)(UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:317>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:317>
 		__this->___m_AllowInput = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:319>
 		__this->___m_ShouldActivateNextUpdate = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:320>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:320>
 		__this->___m_UpdateDrag = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:321>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:321>
 		__this->___m_DragPositionOutOfBounds = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:325>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:325>
 		__this->___m_BlinkCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_BlinkCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:326>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:326>
 		__this->___m_BlinkStartTime = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:327>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:327>
 		__this->___m_DragCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DragCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:328>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:328>
 		__this->___m_OriginalText = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OriginalText), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:329>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:329>
 		__this->___m_WasCanceled = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:330>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:330>
 		__this->___m_HasDoneFocusTransition = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:332>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:332>
 		__this->___m_PreventCallback = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:334>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:334>
 		__this->___m_TouchKeyboardAllowsInPlaceEditing = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:336>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:336>
 		__this->___m_IsTextComponentUpdateRequired = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:338>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:338>
 		__this->___m_HasTextBeenRemoved = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:341>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:341>
 		__this->___m_DoubleClickDelay = (0.5f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:343>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:343>
 		__this->___m_IsApplePlatform = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:363>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:363>
 		__this->___m_IsCompositionActive = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:364>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:364>
 		__this->___m_ShouldUpdateIMEWindowPosition = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:365>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:365>
 		__this->___m_PreviousIMEInsertionLine = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:811>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:811>
 		__this->___m_OnFocusSelectAll = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:823>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:823>
 		__this->___m_ResetOnDeActivation = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:824>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:824>
 		__this->___m_SelectionStillActive = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:825>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:825>
 		__this->___m_ReleaseSelection = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:851>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:851>
 		__this->___m_RestoreOriginalTextOnEscape = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:862>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:862>
 		__this->___m_isRichTextEditingAllowed = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:897>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:897>
 		__this->___m_LineLimit = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:941>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:941>
 		__this->___m_InputValidator = (TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_InputValidator), (void*)(TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:946>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:946>
 		__this->___m_ShouldActivateOnSelect = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1000>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1000>
 		__this->___m_IsKeyboardBeingClosedInHoloLens = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2328>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2328>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_12 = (Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB*)il2cpp_codegen_object_new(Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB_il2cpp_TypeInfo_var);
 		Event__ctor_m14342F32F62A39A8B8032286E2DCC07FEF72BFF4(L_12, NULL);
 		__this->___m_ProcessingEvent = L_12;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ProcessingEvent), (void*)L_12);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:380>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:380>
 		il2cpp_codegen_runtime_class_init_inline(Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712_il2cpp_TypeInfo_var);
 		Selectable__ctor_m340EDFEA07F025166175C3ECB1BD2EEDD81C8638(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:382>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:382>
 		TMP_InputField_SetTextComponentWrapMode_m9CF72ADC54A79451A8B35A85FFF2232F1D6A79ED(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:383>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:383>
 		return;
 	}
 }
-// Method Definition Index: 100327
+// Method Definition Index: 100583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* TMP_InputField_get_mesh_m200F4FCC0738B54A3DFED98FF430660DB52E3E00 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4219,7 +4220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D
 	bool V_0 = false;
 	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* V_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:389>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:389>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_0 = __this->___m_Mesh;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4232,7 +4233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:390>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:390>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_3 = (Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4*)il2cpp_codegen_object_new(Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4_il2cpp_TypeInfo_var);
 		Mesh__ctor_m5A9AECEDDAFFD84811ED8928012BDE97A9CEBD00(L_3, NULL);
 		__this->___m_Mesh = L_3;
@@ -4241,7 +4242,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D
 
 IL_001c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:391>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:391>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_4 = __this->___m_Mesh;
 		V_1 = L_4;
 		goto IL_0025;
@@ -4249,23 +4250,23 @@ IL_001c:
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:392>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:392>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_5 = V_1;
 		return L_5;
 	}
 }
-// Method Definition Index: 100328
+// Method Definition Index: 100584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_shouldActivateOnSelect_mCA3FDA8E9622BDB9210D8DB282826F508295B6D9 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:402>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:402>
 		bool L_0 = ___0_value;
 		__this->___m_ShouldActivateOnSelect = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:403>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:403>
 		return;
 	}
 }
-// Method Definition Index: 100329
+// Method Definition Index: 100585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_shouldActivateOnSelect_m47DA4130B93772553DB222B8C30D5721A3828D1E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4277,7 +4278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_shouldActivateOnSelec
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:406>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:406>
 		bool L_0 = __this->___m_ShouldActivateOnSelect;
 		if (!L_0)
 		{
@@ -4305,12 +4306,12 @@ IL_0018:
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:407>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:407>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100330
+// Method Definition Index: 100586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_shouldHideMobileInput_mB40438A3E4172E95CE11F03FD2484E954CDB1F1B (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4323,7 +4324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_shouldHideMobileInput
 	int32_t V_1 = 0;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:417>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:417>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -4385,7 +4386,7 @@ IL_0022:
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:425>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:425>
 		bool L_7 = __this->___m_HideMobileInput;
 		V_2 = L_7;
 		goto IL_0036;
@@ -4393,19 +4394,19 @@ IL_0029:
 
 IL_0032:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:427>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:427>
 		V_2 = (bool)1;
 		goto IL_0036;
 	}
 
 IL_0036:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:429>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:429>
 		bool L_8 = V_2;
 		return L_8;
 	}
 }
-// Method Definition Index: 100331
+// Method Definition Index: 100587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_shouldHideMobileInput_mB1D2ADC209DE64154BAD42C2D25BFDA27081BB9B (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4418,7 +4419,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_shouldHideMobileInput
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:433>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:433>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -4480,30 +4481,30 @@ IL_0022:
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:441>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:441>
 		bool* L_7 = (bool*)(&__this->___m_HideMobileInput);
 		bool L_8 = ___0_value;
 		bool L_9;
 		L_9 = SetPropertyUtility_SetStruct_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mFC5853627DE5D7B57CA91271BE9B87C37468C5B0(L_7, L_8, SetPropertyUtility_SetStruct_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mFC5853627DE5D7B57CA91271BE9B87C37468C5B0_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:442>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:442>
 		goto IL_0041;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:444>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:444>
 		__this->___m_HideMobileInput = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:445>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:445>
 		goto IL_0041;
 	}
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:447>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:447>
 		return;
 	}
 }
-// Method Definition Index: 100332
+// Method Definition Index: 100588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_shouldHideSoftKeyboard_m08F3F6AB9DC9A89029B6A41E26F42B7222535790 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4516,7 +4517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_shouldHideSoftKeyboar
 	int32_t V_1 = 0;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:454>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:454>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -4621,7 +4622,7 @@ IL_0042:
 
 IL_0049:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:479>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:479>
 		bool L_11 = __this->___m_HideSoftKeyboard;
 		V_2 = L_11;
 		goto IL_0056;
@@ -4629,19 +4630,19 @@ IL_0049:
 
 IL_0052:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:481>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:481>
 		V_2 = (bool)1;
 		goto IL_0056;
 	}
 
 IL_0056:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:483>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:483>
 		bool L_12 = V_2;
 		return L_12;
 	}
 }
-// Method Definition Index: 100333
+// Method Definition Index: 100589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_shouldHideSoftKeyboard_m0414B5C0C3B07F0371671963D699EEA303D8A13E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4656,7 +4657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_shouldHideSoftKeyboar
 	bool V_2 = false;
 	int32_t G_B23_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:487>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:487>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -4761,26 +4762,26 @@ IL_0042:
 
 IL_0049:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:512>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:512>
 		bool* L_11 = (bool*)(&__this->___m_HideSoftKeyboard);
 		bool L_12 = ___0_value;
 		bool L_13;
 		L_13 = SetPropertyUtility_SetStruct_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mFC5853627DE5D7B57CA91271BE9B87C37468C5B0(L_11, L_12, SetPropertyUtility_SetStruct_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_mFC5853627DE5D7B57CA91271BE9B87C37468C5B0_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:513>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:513>
 		goto IL_0061;
 	}
 
 IL_0058:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:515>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:515>
 		__this->___m_HideSoftKeyboard = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:516>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:516>
 		goto IL_0061;
 	}
 
 IL_0061:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:519>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:519>
 		bool L_14 = __this->___m_HideSoftKeyboard;
 		if (!L_14)
 		{
@@ -4826,22 +4827,22 @@ IL_0086:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:521>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:521>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_20 = __this->___m_SoftKeyboard;
 		NullCheck(L_20);
 		TouchScreenKeyboard_set_active_m4382D57F87E4C86B59864E86BE93A8A2A474B7C2(L_20, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:522>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:522>
 		__this->___m_SoftKeyboard = (TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SoftKeyboard), (void*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)NULL);
 	}
 
 IL_00a0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:524>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:524>
 		return;
 	}
 }
-// Method Definition Index: 100334
+// Method Definition Index: 100590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_isKeyboardUsingEvents_mE8A5552B89353CF45DBC4206F55ED41EB7C0F273 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4856,7 +4857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_isKeyboardUsingEvents_mE8
 	int32_t G_B16_0 = 0;
 	int32_t G_B22_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:529>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:529>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -4973,7 +4974,7 @@ IL_0054:
 
 IL_005b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:532>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:532>
 		bool L_9;
 		L_9 = TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1(__this, NULL);
 		if (!L_9)
@@ -5000,7 +5001,7 @@ IL_006c:
 
 IL_006f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:538>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:538>
 		bool L_11 = __this->___m_HideSoftKeyboard;
 		V_2 = L_11;
 		goto IL_009c;
@@ -5008,14 +5009,14 @@ IL_006f:
 
 IL_0078:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:550>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:550>
 		V_2 = (bool)0;
 		goto IL_009c;
 	}
 
 IL_007c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:553>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:553>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_12 = __this->___m_SoftKeyboard;
 		if (!L_12)
 		{
@@ -5044,19 +5045,19 @@ IL_0095:
 
 IL_0098:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:556>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:556>
 		V_2 = (bool)1;
 		goto IL_009c;
 	}
 
 IL_009c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:558>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:558>
 		bool L_15 = V_2;
 		return L_15;
 	}
 }
-// Method Definition Index: 100335
+// Method Definition Index: 100591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_isUWP_mF4D492C45E598A35755C69FF79AC7994619FDE25 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5068,7 +5069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_isUWP_mF4D492C45E598A3575
 	bool V_0 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:562>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:562>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -5107,17 +5108,17 @@ IL_001f:
 
 IL_0022:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:563>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:563>
 		bool L_3 = V_0;
 		return L_3;
 	}
 }
-// Method Definition Index: 100336
+// Method Definition Index: 100592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:592>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:592>
 		String_t* L_0 = __this->___m_Text;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5125,34 +5126,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF5243
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:593>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:593>
 		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100337
+// Method Definition Index: 100593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:596>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:596>
 		String_t* L_0 = ___0_value;
 		TMP_InputField_SetText_m8D34D265867AA18228AA10E118A2DFE630911BFE(__this, L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:597>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:597>
 		return;
 	}
 }
-// Method Definition Index: 100338
+// Method Definition Index: 100594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextWithoutNotify_mE5ED91EB1759228F56E15A0E4BF47A7F8E28AB23 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, String_t* ___0_input, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:605>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:605>
 		String_t* L_0 = ___0_input;
 		TMP_InputField_SetText_m8D34D265867AA18228AA10E118A2DFE630911BFE(__this, L_0, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:606>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:606>
 		return;
 	}
 }
-// Method Definition Index: 100339
+// Method Definition Index: 100595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetText_m8D34D265867AA18228AA10E118A2DFE630911BFE (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, String_t* ___0_value, bool ___1_sendCallback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5170,7 +5171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetText_m8D34D265867AA182
 	bool V_5 = false;
 	bool V_6 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:610>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:610>
 		String_t* L_0;
 		L_0 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		String_t* L_1 = ___0_value;
@@ -5184,13 +5185,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetText_m8D34D265867AA182
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:611>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:611>
 		goto IL_00df;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:613>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:613>
 		String_t* L_4 = ___0_value;
 		V_1 = (bool)((((RuntimeObject*)(String_t*)L_4) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_5 = V_1;
@@ -5200,24 +5201,24 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:614>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:614>
 		___0_value = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 	}
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:616>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:616>
 		String_t* L_6 = ___0_value;
 		String_t* L_7 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
 		NullCheck(L_6);
 		String_t* L_8;
 		L_8 = String_Replace_mABDB7003A1D0AEDCAE9FF85E3DFFFBA752D2A166(L_6, _stringLiteral1489F923C4DCA729178B3E3233458550D8DDDF29, L_7, NULL);
 		___0_value = L_8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:618>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:618>
 		String_t* L_9 = ___0_value;
 		__this->___m_Text = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_9);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:652>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:652>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_10 = __this->___m_SoftKeyboard;
 		V_2 = (bool)((!(((RuntimeObject*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)L_10) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_11 = V_2;
@@ -5227,7 +5228,7 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:653>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:653>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_12 = __this->___m_SoftKeyboard;
 		String_t* L_13 = __this->___m_Text;
 		NullCheck(L_12);
@@ -5236,7 +5237,7 @@ IL_0025:
 
 IL_005d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:655>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:655>
 		int32_t L_14 = __this->___m_StringPosition;
 		String_t* L_15 = __this->___m_Text;
 		NullCheck(L_15);
@@ -5250,7 +5251,7 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:656>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:656>
 		String_t* L_18 = __this->___m_Text;
 		NullCheck(L_18);
 		int32_t L_19;
@@ -5265,7 +5266,7 @@ IL_005d:
 
 IL_0092:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:657>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:657>
 		int32_t L_22 = __this->___m_StringSelectPosition;
 		String_t* L_23 = __this->___m_Text;
 		NullCheck(L_23);
@@ -5279,7 +5280,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:658>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:658>
 		String_t* L_26 = __this->___m_Text;
 		NullCheck(L_26);
 		int32_t L_27;
@@ -5289,13 +5290,13 @@ IL_0092:
 
 IL_00bc:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:660>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:660>
 		__this->___m_forceRectTransformAdjustment = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:662>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:662>
 		__this->___m_IsTextComponentUpdateRequired = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:663>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:663>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:665>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:665>
 		bool L_28 = ___1_sendCallback;
 		V_6 = L_28;
 		bool L_29 = V_6;
@@ -5305,22 +5306,22 @@ IL_00bc:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:666>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:666>
 		TMP_InputField_SendOnValueChanged_m9138A30966454771476FF25A71ED03DDAF6EC0C7(__this, NULL);
 	}
 
 IL_00df:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:667>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:667>
 		return;
 	}
 }
-// Method Definition Index: 100340
+// Method Definition Index: 100596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:672>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:672>
 		bool L_0 = __this->___m_AllowInput;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5328,17 +5329,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_isFocused_m7FD1AA3B92
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:672>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:672>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100341
+// Method Definition Index: 100597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_caretBlinkRate_mACAF2093330BB9CB0B8C5F7D76EAA4EB0AE4DD18 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:677>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:677>
 		float L_0 = __this->___m_CaretBlinkRate;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5346,12 +5347,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_caretBlinkRate_mACAF
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:677>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:677>
 		float L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100342
+// Method Definition Index: 100598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretBlinkRate_m4D4B8F3C2169EE3FA7B27BECBD1563BFAD7B41F7 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5363,7 +5364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretBlinkRate_m4D4B8
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:680>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:680>
 		float* L_0 = (float*)(&__this->___m_CaretBlinkRate);
 		float L_1 = ___0_value;
 		bool L_2;
@@ -5376,7 +5377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretBlinkRate_m4D4B8
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:682>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:682>
 		bool L_4 = __this->___m_AllowInput;
 		V_1 = L_4;
 		bool L_5 = V_1;
@@ -5386,7 +5387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretBlinkRate_m4D4B8
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:683>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:683>
 		TMP_InputField_SetCaretActive_mC9858C9E1FE6D8800219C49C52A9FACC1ED5EEC1(__this, NULL);
 	}
 
@@ -5396,16 +5397,16 @@ IL_0023:
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:685>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:685>
 		return;
 	}
 }
-// Method Definition Index: 100343
+// Method Definition Index: 100599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretWidth_mA95E0A88F505D9618791AEDE9D649CA70F7E3B65 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:688>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:688>
 		int32_t L_0 = __this->___m_CaretWidth;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5413,12 +5414,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretWidth_mA95E0A
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:688>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:688>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100344
+// Method Definition Index: 100600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretWidth_m291DBA8BEF0BD40BB4FAEE2AC71F9CDD114FAA9A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5429,7 +5430,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretWidth_m291DBA8BE
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:688>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:688>
 		int32_t* L_0 = (int32_t*)(&__this->___m_CaretWidth);
 		int32_t L_1 = ___0_value;
 		bool L_2;
@@ -5442,22 +5443,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretWidth_m291DBA8BE
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:688>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:688>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:688>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:688>
 		return;
 	}
 }
-// Method Definition Index: 100345
+// Method Definition Index: 100601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* TMP_InputField_get_textViewport_m51E9CFB11A78199484D2BC2750F19DB7D2A26763 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:690>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___m_TextViewport;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5465,12 +5466,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E5896
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:690>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100346
+// Method Definition Index: 100602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_textViewport_m3CB40F8DD0636EFBA496F1E76D41EE9C9570CB17 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5480,21 +5481,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_textViewport_m3CB40F8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:690>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5** L_0 = (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5**)(&__this->___m_TextViewport);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_mBFA261629B0D5D1E366AB1623121C5B782DD9606(L_0, L_1, SetPropertyUtility_SetClass_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_mBFA261629B0D5D1E366AB1623121C5B782DD9606_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:690>
 		return;
 	}
 }
-// Method Definition Index: 100347
+// Method Definition Index: 100603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* TMP_InputField_get_textComponent_m85C4BC3F4C18206B3B942F03DB0B953B028EE1CE (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:694>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:694>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5502,12 +5503,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:694>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:694>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100348
+// Method Definition Index: 100604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_textComponent_mCECC9B18AE37E999E5B38431D89C17B9BE384E07 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5518,7 +5519,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_textComponent_mCECC9B
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:697>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:697>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9** L_0 = (TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9**)(&__this->___m_TextComponent);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = ___0_value;
 		bool L_2;
@@ -5531,22 +5532,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_textComponent_mCECC9B
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:699>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:699>
 		TMP_InputField_SetTextComponentWrapMode_m9CF72ADC54A79451A8B35A85FFF2232F1D6A79ED(__this, NULL);
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:701>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:701>
 		return;
 	}
 }
-// Method Definition Index: 100349
+// Method Definition Index: 100605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* TMP_InputField_get_placeholder_m6C5FDEB031E2900A1792B928E4864B21B144AB3C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:706>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:706>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_0 = __this->___m_Placeholder;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5554,12 +5555,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:706>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:706>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100350
+// Method Definition Index: 100606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_placeholder_m597012397FF55E6DE7E5E63972A3BE03EEAC480A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5569,21 +5570,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_placeholder_m59701239
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:706>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:706>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931** L_0 = (Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931**)(&__this->___m_Placeholder);
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisGraphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_mE421F377EED34B95EADB00952D278948A79C622C(L_0, L_1, SetPropertyUtility_SetClass_TisGraphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_mE421F377EED34B95EADB00952D278948A79C622C_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:706>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:706>
 		return;
 	}
 }
-// Method Definition Index: 100351
+// Method Definition Index: 100607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* TMP_InputField_get_verticalScrollbar_mCB3FAFA0D86926FCD1A6620009BF3AEB274F17DD (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:710>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:710>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_0 = __this->___m_VerticalScrollbar;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5591,12 +5592,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Scrollbar_t7CDC9B956698D9385A11E4C12964CD5147
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:710>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:710>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100352
+// Method Definition Index: 100608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_verticalScrollbar_m8863C8FDC647B006DC8DAD8C3EDCF6353E08F945 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5613,7 +5614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_verticalScrollbar_m88
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:713>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:713>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_0 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5626,7 +5627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_verticalScrollbar_m88
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:714>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:714>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_3 = __this->___m_VerticalScrollbar;
 		NullCheck(L_3);
 		ScrollEvent_tDDBE21D44D65DF069C54FE3ACF7668D976E6BBB6* L_4;
@@ -5639,12 +5640,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_verticalScrollbar_m88
 
 IL_002e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:716>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:716>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3** L_6 = (Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3**)(&__this->___m_VerticalScrollbar);
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_7 = ___0_value;
 		bool L_8;
 		L_8 = SetPropertyUtility_SetClass_TisScrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3_m3F423B38C210742DAA5776C2FF9CCF31CB75D14F(L_6, L_7, SetPropertyUtility_SetClass_TisScrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3_m3F423B38C210742DAA5776C2FF9CCF31CB75D14F_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:718>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:718>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_9 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -5657,7 +5658,7 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:720>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:720>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_12 = __this->___m_VerticalScrollbar;
 		NullCheck(L_12);
 		ScrollEvent_tDDBE21D44D65DF069C54FE3ACF7668D976E6BBB6* L_13;
@@ -5670,16 +5671,16 @@ IL_002e:
 
 IL_0069:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:723>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:723>
 		return;
 	}
 }
-// Method Definition Index: 100353
+// Method Definition Index: 100609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_scrollSensitivity_m219F37C4A7DF784B9522EE565AE70EB813E799A8 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:726>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:726>
 		float L_0 = __this->___m_ScrollSensitivity;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5687,12 +5688,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_scrollSensitivity_m2
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:726>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:726>
 		float L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100354
+// Method Definition Index: 100610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_scrollSensitivity_m67129EC21A5560B781F61CB5C2282F977EB9AE12 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5703,7 +5704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_scrollSensitivity_m67
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:726>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:726>
 		float* L_0 = (float*)(&__this->___m_ScrollSensitivity);
 		float L_1 = ___0_value;
 		bool L_2;
@@ -5716,17 +5717,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_scrollSensitivity_m67
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:726>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:726>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:726>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:726>
 		return;
 	}
 }
-// Method Definition Index: 100355
+// Method Definition Index: 100611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F TMP_InputField_get_caretColor_m9733E1CB5CAD3CCFA9C32343D12F0095BA6DC76F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -5734,7 +5735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F G_B3_0;
 	memset((&G_B3_0), 0, sizeof(G_B3_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:728>
 		bool L_0;
 		L_0 = TMP_InputField_get_customCaretColor_m566EC393CFD6206101A2E0BE5AA2BB9D7233CF19(__this, NULL);
 		if (L_0)
@@ -5766,17 +5767,17 @@ IL_001c:
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:728>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = V_0;
 		return L_4;
 	}
 }
-// Method Definition Index: 100356
+// Method Definition Index: 100612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretColor_mAF2AF8646B44D6AAA885F2A664DB88431E22177C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:728>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_0 = (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F*)(&__this->___m_CaretColor);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ___0_value;
 		bool L_2;
@@ -5789,22 +5790,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretColor_mAF2AF8646
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:728>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:728>
 		return;
 	}
 }
-// Method Definition Index: 100357
+// Method Definition Index: 100613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_customCaretColor_m566EC393CFD6206101A2E0BE5AA2BB9D7233CF19 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:730>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:730>
 		bool L_0 = __this->___m_CustomCaretColor;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5812,17 +5813,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_customCaretColor_m566
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:730>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:730>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100358
+// Method Definition Index: 100614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_customCaretColor_m9A33CA9154050A1C09881207B9C7B832B6C44B6B (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:730>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:730>
 		bool L_0 = __this->___m_CustomCaretColor;
 		bool L_1 = ___0_value;
 		V_0 = (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)L_1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -5833,26 +5834,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_customCaretColor_m9A3
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:730>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:730>
 		bool L_3 = ___0_value;
 		__this->___m_CustomCaretColor = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:730>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:730>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:730>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:730>
 		return;
 	}
 }
-// Method Definition Index: 100359
+// Method Definition Index: 100615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F TMP_InputField_get_selectionColor_m99D5B9FBC11FEAA170C113FB238120A73429F5BB (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:732>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_SelectionColor;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5860,17 +5861,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:732>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100360
+// Method Definition Index: 100616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionColor_m9B30F4DC90BBD21ECDA6B5888F2F8E4B2EC7686D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:732>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* L_0 = (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F*)(&__this->___m_SelectionColor);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ___0_value;
 		bool L_2;
@@ -5883,22 +5884,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionColor_m9B30F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:732>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:732>
 		return;
 	}
 }
-// Method Definition Index: 100361
+// Method Definition Index: 100617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* TMP_InputField_get_onEndEdit_m0CE9718C71A834CC279430E20DC7FF4F42114FD3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:734>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:734>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_0 = __this->___m_OnEndEdit;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5906,12 +5907,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:734>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:734>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100362
+// Method Definition Index: 100618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onEndEdit_mE34D6037D2C9FCAE1C9AF253D34D72541D306F4A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5921,21 +5922,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onEndEdit_mE34D6037D2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:734>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:734>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500** L_0 = (SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500**)(&__this->___m_OnEndEdit);
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisSubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500_m1CEE6D732F25A3426F9A15F8FB26140C3B6F0A7B(L_0, L_1, SetPropertyUtility_SetClass_TisSubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500_m1CEE6D732F25A3426F9A15F8FB26140C3B6F0A7B_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:734>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:734>
 		return;
 	}
 }
-// Method Definition Index: 100363
+// Method Definition Index: 100619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* TMP_InputField_get_onSubmit_mAA494FA0B3CFFB2916B399BD5D87C2E1AA637B90 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:736>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_0 = __this->___m_OnSubmit;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5943,12 +5944,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:736>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100364
+// Method Definition Index: 100620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onSubmit_m0FD1B91CB6BDD3864C74BFDBC458DF0C3B2EA193 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5958,21 +5959,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onSubmit_m0FD1B91CB6B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:736>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500** L_0 = (SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500**)(&__this->___m_OnSubmit);
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisSubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500_m1CEE6D732F25A3426F9A15F8FB26140C3B6F0A7B(L_0, L_1, SetPropertyUtility_SetClass_TisSubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500_m1CEE6D732F25A3426F9A15F8FB26140C3B6F0A7B_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:736>
 		return;
 	}
 }
-// Method Definition Index: 100365
+// Method Definition Index: 100621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* TMP_InputField_get_onSelect_m6762226148A4B3265EE5FD70ED894BBE8DE86AF0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:738>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:738>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_0 = __this->___m_OnSelect;
 		V_0 = L_0;
 		goto IL_000a;
@@ -5980,12 +5981,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SelectionEvent_t8FC75B869F70C9F0BF13390AD0237
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:738>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:738>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100366
+// Method Definition Index: 100622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onSelect_m0D471B94B9358B9AD840B3F5E2A756C1D5DACD1F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5995,21 +5996,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onSelect_m0D471B94B93
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:738>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:738>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119** L_0 = (SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119**)(&__this->___m_OnSelect);
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisSelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119_m3C0AA1BEABED6E6E546B972C001E54726BF54A12(L_0, L_1, SetPropertyUtility_SetClass_TisSelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119_m3C0AA1BEABED6E6E546B972C001E54726BF54A12_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:738>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:738>
 		return;
 	}
 }
-// Method Definition Index: 100367
+// Method Definition Index: 100623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* TMP_InputField_get_onDeselect_mC9429495032728AEE8FCB818D61EDFB5DC7F9B0A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:740>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:740>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_0 = __this->___m_OnDeselect;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6017,12 +6018,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SelectionEvent_t8FC75B869F70C9F0BF13390AD0237
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:740>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:740>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100368
+// Method Definition Index: 100624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onDeselect_m13E94D8DA5530F8E6B438D98E1C8B801E3702006 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6032,21 +6033,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onDeselect_m13E94D8DA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:740>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:740>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119** L_0 = (SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119**)(&__this->___m_OnDeselect);
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisSelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119_m3C0AA1BEABED6E6E546B972C001E54726BF54A12(L_0, L_1, SetPropertyUtility_SetClass_TisSelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119_m3C0AA1BEABED6E6E546B972C001E54726BF54A12_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:740>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:740>
 		return;
 	}
 }
-// Method Definition Index: 100369
+// Method Definition Index: 100625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* TMP_InputField_get_onTextSelection_mEBA14AF8E2BAF100DE885B78385F510A8E978A33 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:742>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:742>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_0 = __this->___m_OnTextSelection;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6054,12 +6055,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TextSelectionEvent_t6C496DAA6DAF01754C27C58A9
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:742>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:742>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100370
+// Method Definition Index: 100626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onTextSelection_m52044BF605C6084CC95CB9D492652BA29D4E5699 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6069,21 +6070,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onTextSelection_m5204
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:742>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:742>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401** L_0 = (TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401**)(&__this->___m_OnTextSelection);
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisTextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401_m76B2C8A0A51371A26D2328DBADCDE256F61AE622(L_0, L_1, SetPropertyUtility_SetClass_TisTextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401_m76B2C8A0A51371A26D2328DBADCDE256F61AE622_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:742>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:742>
 		return;
 	}
 }
-// Method Definition Index: 100371
+// Method Definition Index: 100627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* TMP_InputField_get_onEndTextSelection_mB01ED58A536B3DCC323A974C27C50337EAC7CAD5 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:744>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:744>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_0 = __this->___m_OnEndTextSelection;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6091,12 +6092,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TextSelectionEvent_t6C496DAA6DAF01754C27C58A9
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:744>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:744>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100372
+// Method Definition Index: 100628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onEndTextSelection_mAF020E9DF7C78B4A16653D2F5F77C8B78B474C67 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6106,21 +6107,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onEndTextSelection_mA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:744>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:744>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401** L_0 = (TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401**)(&__this->___m_OnEndTextSelection);
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisTextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401_m76B2C8A0A51371A26D2328DBADCDE256F61AE622(L_0, L_1, SetPropertyUtility_SetClass_TisTextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401_m76B2C8A0A51371A26D2328DBADCDE256F61AE622_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:744>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:744>
 		return;
 	}
 }
-// Method Definition Index: 100373
+// Method Definition Index: 100629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* TMP_InputField_get_onValueChanged_m407B5F5BFD1F4B04032F6B90B06F5072F5993407 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:746>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:746>
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* L_0 = __this->___m_OnValueChanged;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6128,12 +6129,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:746>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:746>
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100374
+// Method Definition Index: 100630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onValueChanged_m2C1B41AC850107D098E1D8BC481D23ED5310952E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6143,21 +6144,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onValueChanged_m2C1B4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:746>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:746>
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D** L_0 = (OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D**)(&__this->___m_OnValueChanged);
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisOnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D_mB517C32C5B8088583094DB25889C9FEE39FA36C3(L_0, L_1, SetPropertyUtility_SetClass_TisOnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D_mB517C32C5B8088583094DB25889C9FEE39FA36C3_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:746>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:746>
 		return;
 	}
 }
-// Method Definition Index: 100375
+// Method Definition Index: 100631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* TMP_InputField_get_onTouchScreenKeyboardStatusChanged_mF14075CDC1B4C99F300FCAD70350CDF144CB4818 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:748>
 		TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* L_0 = __this->___m_OnTouchScreenKeyboardStatusChanged;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6165,12 +6166,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547E
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:748>
 		TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100376
+// Method Definition Index: 100632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onTouchScreenKeyboardStatusChanged_m7AC290C056FF92BFA6558AEEE89E10BAC48A92CA (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6180,21 +6181,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onTouchScreenKeyboard
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:748>
 		TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1** L_0 = (TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1**)(&__this->___m_OnTouchScreenKeyboardStatusChanged);
 		TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisTouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1_mE4E8A8376059D436E9F5CC7C619B144292EB5837(L_0, L_1, SetPropertyUtility_SetClass_TisTouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1_mE4E8A8376059D436E9F5CC7C619B144292EB5837_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:748>
 		return;
 	}
 }
-// Method Definition Index: 100377
+// Method Definition Index: 100633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* TMP_InputField_get_onValidateInput_mF293BE6DE7AAA1F8E37E20B73418A639A8963A7D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:750>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:750>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_0 = __this->___m_OnValidateInput;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6202,12 +6203,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR OnValidateInput_t88ECDC5C12A807AF2A5761369563
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:750>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:750>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100378
+// Method Definition Index: 100634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onValidateInput_mDA2BDCF7BFA9F24D48BA27027B9BCD366164C972 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6217,21 +6218,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onValidateInput_mDA2B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:750>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:750>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530** L_0 = (OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530**)(&__this->___m_OnValidateInput);
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_1 = ___0_value;
 		bool L_2;
 		L_2 = SetPropertyUtility_SetClass_TisOnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530_m6E3905221207770D8194E8F38AF2BDF74A20C7C5(L_0, L_1, SetPropertyUtility_SetClass_TisOnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530_m6E3905221207770D8194E8F38AF2BDF74A20C7C5_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:750>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:750>
 		return;
 	}
 }
-// Method Definition Index: 100379
+// Method Definition Index: 100635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_characterLimit_m59833E0A22BACBDF3EDA6A70A30B87272FBAA409 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:754>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:754>
 		int32_t L_0 = __this->___m_CharacterLimit;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6239,12 +6240,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_characterLimit_m59
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:754>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:754>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100380
+// Method Definition Index: 100636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterLimit_m64ADC294FC147C1E0806B5C175B9EA626059D4DC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6257,7 +6258,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterLimit_m64ADC
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:757>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:757>
 		int32_t* L_0 = (int32_t*)(&__this->___m_CharacterLimit);
 		int32_t L_1 = ___0_value;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
@@ -6273,9 +6274,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterLimit_m64ADC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:759>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:759>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:760>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:760>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_5 = __this->___m_SoftKeyboard;
 		V_1 = (bool)((!(((RuntimeObject*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)L_5) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_6 = V_1;
@@ -6285,7 +6286,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterLimit_m64ADC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:761>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:761>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_7 = __this->___m_SoftKeyboard;
 		int32_t L_8 = ___0_value;
 		NullCheck(L_7);
@@ -6298,16 +6299,16 @@ IL_0039:
 
 IL_003a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:763>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:763>
 		return;
 	}
 }
-// Method Definition Index: 100381
+// Method Definition Index: 100637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_pointSize_m2F9C02B8B2E8501799E118F3FC1675DB1555EEB3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:773>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:773>
 		float L_0 = __this->___m_GlobalPointSize;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6315,12 +6316,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_pointSize_m2F9C02B8B
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:773>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:773>
 		float L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100382
+// Method Definition Index: 100638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_pointSize_m5001D4D1325CE0737CAA65D86ACAB2D88DAA87C3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6332,7 +6333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_pointSize_m5001D4D132
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:776>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:776>
 		float* L_0 = (float*)(&__this->___m_GlobalPointSize);
 		float L_1 = ___0_value;
 		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
@@ -6348,25 +6349,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_pointSize_m5001D4D132
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:778>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:778>
 		float L_5 = __this->___m_GlobalPointSize;
 		TMP_InputField_SetGlobalPointSize_m3FFB4ADB49E9D601673A53AEA78839B964D32A81(__this, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:779>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:779>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
 IL_0031:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:781>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:781>
 		return;
 	}
 }
-// Method Definition Index: 100383
+// Method Definition Index: 100639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* TMP_InputField_get_fontAsset_m9EAAF4737728BB51C8D5D7A1AC46E77DD970F176 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:789>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:789>
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_0 = __this->___m_GlobalFontAsset;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6374,12 +6375,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:789>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:789>
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100384
+// Method Definition Index: 100640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_fontAsset_mB102F697B83B5115F2E4B30A076FE67D30BCA201 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6390,7 +6391,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_fontAsset_mB102F697B8
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:792>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:792>
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160** L_0 = (TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160**)(&__this->___m_GlobalFontAsset);
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_1 = ___0_value;
 		bool L_2;
@@ -6403,25 +6404,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_fontAsset_mB102F697B8
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:794>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:794>
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_4 = __this->___m_GlobalFontAsset;
 		TMP_InputField_SetGlobalFontAsset_m4AD28DDE68A928EA340F360105C99A1EBC789201(__this, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:795>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:795>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:797>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:797>
 		return;
 	}
 }
-// Method Definition Index: 100385
+// Method Definition Index: 100641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_onFocusSelectAll_m6A1A06461D6B01EE2E68624B9D7E5E3C7D092CDC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:807>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:807>
 		bool L_0 = __this->___m_OnFocusSelectAll;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6429,28 +6430,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_onFocusSelectAll_m6A1
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:807>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:807>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100386
+// Method Definition Index: 100642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_onFocusSelectAll_mDC9C36C7201E90054B97AE94251577ABB103FD75 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:808>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:808>
 		bool L_0 = ___0_value;
 		__this->___m_OnFocusSelectAll = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:808>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:808>
 		return;
 	}
 }
-// Method Definition Index: 100387
+// Method Definition Index: 100643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_resetOnDeActivation_m6BB1C27CCFB72767235B459ED4F3A81965273771 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:819>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:819>
 		bool L_0 = __this->___m_ResetOnDeActivation;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6458,28 +6459,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_resetOnDeActivation_m
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:819>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:819>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100388
+// Method Definition Index: 100644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_resetOnDeActivation_mCB035C9EADE4A6896C42DDCEC996D00D4A7F6CB2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:820>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:820>
 		bool L_0 = ___0_value;
 		__this->___m_ResetOnDeActivation = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:820>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:820>
 		return;
 	}
 }
-// Method Definition Index: 100389
+// Method Definition Index: 100645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_keepTextSelectionVisible_m20090B00622A366364A7B78208CD912EC2A89AE1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:835>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:835>
 		bool L_0 = __this->___m_KeepTextSelectionVisible;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6487,28 +6488,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_keepTextSelectionVisi
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:835>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:835>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100390
+// Method Definition Index: 100646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_keepTextSelectionVisible_m7E3ECE7499F30BF1D763B36560674A0B52B35BB0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:836>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:836>
 		bool L_0 = ___0_value;
 		__this->___m_KeepTextSelectionVisible = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:836>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:836>
 		return;
 	}
 }
-// Method Definition Index: 100391
+// Method Definition Index: 100647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_restoreOriginalTextOnEscape_m138E8AAD613E1A3693B8B9E6469B6450F86D367D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:847>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:847>
 		bool L_0 = __this->___m_RestoreOriginalTextOnEscape;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6516,28 +6517,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_restoreOriginalTextOn
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:847>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:847>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100392
+// Method Definition Index: 100648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_restoreOriginalTextOnEscape_mA8F67F61689BBD34C3B4811DAD7380253EA8069C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:848>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:848>
 		bool L_0 = ___0_value;
 		__this->___m_RestoreOriginalTextOnEscape = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:848>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:848>
 		return;
 	}
 }
-// Method Definition Index: 100393
+// Method Definition Index: 100649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_isRichTextEditingAllowed_mBF19A7F1ECC8F9C2F06D1D7636F45882E671CCB3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:858>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:858>
 		bool L_0 = __this->___m_isRichTextEditingAllowed;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6545,28 +6546,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_isRichTextEditingAllo
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:858>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:858>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100394
+// Method Definition Index: 100650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_isRichTextEditingAllowed_m3BEB725A42ACC0CD7990E36B4B707AB892EA8B21 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:859>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:859>
 		bool L_0 = ___0_value;
 		__this->___m_isRichTextEditingAllowed = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:859>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:859>
 		return;
 	}
 }
-// Method Definition Index: 100395
+// Method Definition Index: 100651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_contentType_m32EEDFC275E9CB6C759A4F117EBAA40336B9030D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:866>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:866>
 		int32_t L_0 = __this->___m_ContentType;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6574,12 +6575,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_contentType_m32EED
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:866>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:866>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100396
+// Method Definition Index: 100652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_contentType_mB9BCF78B6868FBB3CDE671DDF008E3716D3ADC91 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6590,7 +6591,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_contentType_mB9BCF78B
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:866>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:866>
 		int32_t* L_0 = (int32_t*)(&__this->___m_ContentType);
 		int32_t L_1 = ___0_value;
 		bool L_2;
@@ -6603,22 +6604,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_contentType_mB9BCF78B
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:866>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:866>
 		TMP_InputField_EnforceContentType_m4D5F42FD6E04B3B3B541E978C9C603B7696E7AB2(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:866>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:866>
 		return;
 	}
 }
-// Method Definition Index: 100397
+// Method Definition Index: 100653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_lineType_mE221F133A310EB6C93DA24E1F5900E948771D64C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:870>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:870>
 		int32_t L_0 = __this->___m_LineType;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6626,12 +6627,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_lineType_mE221F133
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:870>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:870>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100398
+// Method Definition Index: 100654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_lineType_m0B3A3770A8229ABCDF139F80765FC6C3A659FD21 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6643,7 +6644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_lineType_m0B3A3770A82
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:873>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:873>
 		int32_t* L_0 = (int32_t*)(&__this->___m_LineType);
 		int32_t L_1 = ___0_value;
 		bool L_2;
@@ -6656,28 +6657,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_lineType_m0B3A3770A82
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:875>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:875>
 		ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39* L_4 = (ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39*)(ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39*)SZArrayNew(ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39_il2cpp_TypeInfo_var, (uint32_t)2);
 		ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39* L_5 = L_4;
 		NullCheck(L_5);
 		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(1), (int32_t)1);
 		TMP_InputField_SetToCustomIfContentTypeIsNot_mB9AC8BE6A15C7DC926F5064C49A0F2199CC6B14D(__this, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:876>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:876>
 		TMP_InputField_SetTextComponentWrapMode_m9CF72ADC54A79451A8B35A85FFF2232F1D6A79ED(__this, NULL);
 	}
 
 IL_002b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:878>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:878>
 		return;
 	}
 }
-// Method Definition Index: 100399
+// Method Definition Index: 100655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_lineLimit_m771801BE2D9D7F788EDA1F90336929FC54193D9F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:886>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:886>
 		int32_t L_0 = __this->___m_LineLimit;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6685,12 +6686,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_lineLimit_m771801B
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:886>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:886>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100400
+// Method Definition Index: 100656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_lineLimit_mD645AAD616399138A50AA905E8A8CD4B5B177B62 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6701,7 +6702,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_lineLimit_mD645AAD616
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:889>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:889>
 		int32_t L_0 = __this->___m_LineType;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -6711,14 +6712,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_lineLimit_mD645AAD616
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:890>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:890>
 		__this->___m_LineLimit = 1;
 		goto IL_0024;
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:892>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:892>
 		int32_t* L_2 = (int32_t*)(&__this->___m_LineLimit);
 		int32_t L_3 = ___0_value;
 		bool L_4;
@@ -6727,16 +6728,16 @@ IL_0017:
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:894>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:894>
 		return;
 	}
 }
-// Method Definition Index: 100401
+// Method Definition Index: 100657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_inputType_m93A6CC8FF76412F46471D91952323CE4C63B7D34 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:902>
 		int32_t L_0 = __this->___m_InputType;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6744,12 +6745,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_inputType_m93A6CC8
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:902>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100402
+// Method Definition Index: 100658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_inputType_mF1647C27280C29CE45DB74457ABF43B46A19366C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6760,7 +6761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_inputType_mF1647C2728
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:902>
 		int32_t* L_0 = (int32_t*)(&__this->___m_InputType);
 		int32_t L_1 = ___0_value;
 		bool L_2;
@@ -6773,22 +6774,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_inputType_mF1647C2728
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:902>
 		TMP_InputField_SetToCustom_m798A8846432794AA8687F6020551B512357D2CF0(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:902>
 		return;
 	}
 }
-// Method Definition Index: 100403
+// Method Definition Index: 100659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* TMP_InputField_get_touchScreenKeyboard_m44E552259EAC91F413D206E481238C5748DB3C34 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:907>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:907>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_0 = __this->___m_SoftKeyboard;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6796,17 +6797,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchScreenKeyboard_tE87B78A3DAED69816B44C992
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:907>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:907>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100404
+// Method Definition Index: 100660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_keyboardType_m8B616A743B2FAB03C6263F1582171BB390F94F8B (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:914>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:914>
 		int32_t L_0 = __this->___m_KeyboardType;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6814,12 +6815,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_keyboardType_m8B61
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:914>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:914>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100405
+// Method Definition Index: 100661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_keyboardType_m97210FB5D41B6AAE5352D2BD6C1D45AF8174FC95 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6830,7 +6831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_keyboardType_m97210FB
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:917>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:917>
 		int32_t* L_0 = (int32_t*)(&__this->___m_KeyboardType);
 		int32_t L_1 = ___0_value;
 		bool L_2;
@@ -6843,22 +6844,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_keyboardType_m97210FB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:918>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:918>
 		TMP_InputField_SetToCustom_m798A8846432794AA8687F6020551B512357D2CF0(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:919>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:919>
 		return;
 	}
 }
-// Method Definition Index: 100406
+// Method Definition Index: 100662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:930>
 		int32_t L_0 = __this->___m_CharacterValidation;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6866,12 +6867,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_characterValidatio
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:930>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100407
+// Method Definition Index: 100663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterValidation_mE2D042600CF00A3F5D8EFF09271C0FCDCE324D4C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6882,7 +6883,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterValidation_m
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:930>
 		int32_t* L_0 = (int32_t*)(&__this->___m_CharacterValidation);
 		int32_t L_1 = ___0_value;
 		bool L_2;
@@ -6895,22 +6896,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_characterValidation_m
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:930>
 		TMP_InputField_SetToCustom_m798A8846432794AA8687F6020551B512357D2CF0(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:930>
 		return;
 	}
 }
-// Method Definition Index: 100408
+// Method Definition Index: 100664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* TMP_InputField_get_inputValidator_mF47AEABCFD04F4F9FE7F7C64331A8B01B7976CF7 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:937>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:937>
 		TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* L_0 = __this->___m_InputValidator;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6918,12 +6919,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TMP_InputValidator_t3429AF61284AE19180C3FB81C
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:937>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:937>
 		TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100409
+// Method Definition Index: 100665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_inputValidator_m619FB8CCDB4B2BA3FE13ADF567137061647E9AA2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6934,7 +6935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_inputValidator_m619FB
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:938>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:938>
 		TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98** L_0 = (TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98**)(&__this->___m_InputValidator);
 		TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* L_1 = ___0_value;
 		bool L_2;
@@ -6947,22 +6948,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_inputValidator_m619FB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:938>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:938>
 		TMP_InputField_SetToCustom_mB668A3AB0C1900F2B2618DB9C1288C805DD21D58(__this, 8, NULL);
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:938>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:938>
 		return;
 	}
 }
-// Method Definition Index: 100410
+// Method Definition Index: 100666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_readOnly_m551BFA0AB64EBD12F49C0993305274BC8176E0A5 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:943>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:943>
 		bool L_0 = __this->___m_ReadOnly;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6970,28 +6971,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_readOnly_m551BFA0AB64
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:943>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:943>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100411
+// Method Definition Index: 100667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_readOnly_m05A0789FE9583F510DF5299A963BA0C32EC03C8A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:943>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:943>
 		bool L_0 = ___0_value;
 		__this->___m_ReadOnly = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:943>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:943>
 		return;
 	}
 }
-// Method Definition Index: 100412
+// Method Definition Index: 100668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_richText_mFDFECA8E9F49F27A5FCCB4D147C283581BE66155 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:948>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:948>
 		bool L_0 = __this->___m_RichText;
 		V_0 = L_0;
 		goto IL_000a;
@@ -6999,31 +7000,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_richText_mFDFECA8E9F4
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:948>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:948>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100413
+// Method Definition Index: 100669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_richText_m1AE9CD128CFF3316C1C602717337241666AA1FA4 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:948>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:948>
 		bool L_0 = ___0_value;
 		__this->___m_RichText = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:948>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:948>
 		TMP_InputField_SetTextComponentRichTextMode_mAA7F99B2DFD5DD46007BF0247B37A8CA008F1947(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:948>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:948>
 		return;
 	}
 }
-// Method Definition Index: 100414
+// Method Definition Index: 100670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:951>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:951>
 		int32_t L_0 = __this->___m_LineType;
 		if ((((int32_t)L_0) == ((int32_t)2)))
 		{
@@ -7050,17 +7051,17 @@ IL_0016:
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:951>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:951>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100415
+// Method Definition Index: 100671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar TMP_InputField_get_asteriskChar_m3D3F22537749D339A3DB36BE6C56015D0B06A38E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	Il2CppChar V_0 = 0x0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:953>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:953>
 		Il2CppChar L_0 = __this->___m_AsteriskChar;
 		V_0 = L_0;
 		goto IL_000a;
@@ -7068,12 +7069,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar TMP_InputField_get_asteriskChar_m3
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:953>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:953>
 		Il2CppChar L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100416
+// Method Definition Index: 100672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_asteriskChar_m5A6D4BEB046DC3E1397972AEF86F00F5FEDB4CD0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Il2CppChar ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7084,7 +7085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_asteriskChar_m5A6D4BE
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:953>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:953>
 		Il2CppChar* L_0 = (Il2CppChar*)(&__this->___m_AsteriskChar);
 		Il2CppChar L_1 = ___0_value;
 		bool L_2;
@@ -7097,22 +7098,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_asteriskChar_m5A6D4BE
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:953>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:953>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:953>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:953>
 		return;
 	}
 }
-// Method Definition Index: 100417
+// Method Definition Index: 100673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_wasCanceled_mEF43E80CFB8EE3DCE8599D64213D3F977D9794FF (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:954>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:954>
 		bool L_0 = __this->___m_WasCanceled;
 		V_0 = L_0;
 		goto IL_000a;
@@ -7120,18 +7121,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_wasCanceled_mEF43E80C
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:954>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:954>
 		bool L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100418
+// Method Definition Index: 100674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ClampStringPos_mCEF1B5B73F19C6FFA1A9411FCA485B7F81C73D05 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t* ___0_pos, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:959>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:959>
 		int32_t* L_0 = ___0_pos;
 		int32_t L_1 = *((int32_t*)L_0);
 		V_0 = (bool)((((int32_t)((((int32_t)L_1) > ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -7142,7 +7143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ClampStringPos_mCEF1B5B73
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:960>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:960>
 		int32_t* L_3 = ___0_pos;
 		*((int32_t*)L_3) = (int32_t)0;
 		goto IL_0032;
@@ -7150,7 +7151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ClampStringPos_mCEF1B5B73
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:961>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:961>
 		int32_t* L_4 = ___0_pos;
 		int32_t L_5 = *((int32_t*)L_4);
 		String_t* L_6;
@@ -7166,7 +7167,7 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:962>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:962>
 		int32_t* L_9 = ___0_pos;
 		String_t* L_10;
 		L_10 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
@@ -7178,17 +7179,17 @@ IL_0012:
 
 IL_0032:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:963>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:963>
 		return;
 	}
 }
-// Method Definition Index: 100419
+// Method Definition Index: 100675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ClampCaretPos_m24F8EDB52862BA470A2CD5FD3D2A62AA86A00FC1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t* ___0_pos, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:967>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:967>
 		int32_t* L_0 = ___0_pos;
 		int32_t L_1 = *((int32_t*)L_0);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___m_TextComponent;
@@ -7205,7 +7206,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ClampCaretPos_m24F8EDB528
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:968>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:968>
 		int32_t* L_6 = ___0_pos;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_7 = __this->___m_TextComponent;
 		NullCheck(L_7);
@@ -7218,7 +7219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ClampCaretPos_m24F8EDB528
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:970>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:970>
 		int32_t* L_10 = ___0_pos;
 		int32_t L_11 = *((int32_t*)L_10);
 		V_1 = (bool)((((int32_t)((((int32_t)L_11) > ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -7229,24 +7230,24 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:971>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:971>
 		int32_t* L_13 = ___0_pos;
 		*((int32_t*)L_13) = (int32_t)0;
 	}
 
 IL_003e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:972>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:972>
 		return;
 	}
 }
-// Method Definition Index: 100420
+// Method Definition Index: 100676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_ClampArrayIndex_mFD46E1F200092DC5CD5BB8BE57E2D550F0DE21C0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:976>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:976>
 		int32_t L_0 = ___0_index;
 		V_0 = (bool)((((int32_t)L_0) < ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -7256,14 +7257,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_ClampArrayIndex_mFD46E
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:977>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:977>
 		V_1 = 0;
 		goto IL_0011;
 	}
 
 IL_000d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:979>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:979>
 		int32_t L_2 = ___0_index;
 		V_1 = L_2;
 		goto IL_0011;
@@ -7271,17 +7272,17 @@ IL_000d:
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:980>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:980>
 		int32_t L_3 = V_1;
 		return L_3;
 	}
 }
-// Method Definition Index: 100421
+// Method Definition Index: 100677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:987>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:987>
 		int32_t L_0 = __this->___m_CaretPosition;
 		int32_t L_1;
 		L_1 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
@@ -7291,31 +7292,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretPositionInter
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:987>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:987>
 		int32_t L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100422
+// Method Definition Index: 100678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:987>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:987>
 		int32_t L_0 = ___0_value;
 		__this->___m_CaretPosition = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:987>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:987>
 		int32_t* L_1 = (int32_t*)(&__this->___m_CaretPosition);
 		TMP_InputField_ClampCaretPos_m24F8EDB52862BA470A2CD5FD3D2A62AA86A00FC1(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:987>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:987>
 		return;
 	}
 }
-// Method Definition Index: 100423
+// Method Definition Index: 100679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:988>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:988>
 		int32_t L_0 = __this->___m_StringPosition;
 		int32_t L_1;
 		L_1 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
@@ -7325,31 +7326,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_stringPositionInte
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:988>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:988>
 		int32_t L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100424
+// Method Definition Index: 100680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:988>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:988>
 		int32_t L_0 = ___0_value;
 		__this->___m_StringPosition = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:988>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:988>
 		int32_t* L_1 = (int32_t*)(&__this->___m_StringPosition);
 		TMP_InputField_ClampStringPos_mCEF1B5B73F19C6FFA1A9411FCA485B7F81C73D05(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:988>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:988>
 		return;
 	}
 }
-// Method Definition Index: 100425
+// Method Definition Index: 100681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:990>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:990>
 		int32_t L_0 = __this->___m_CaretSelectPosition;
 		int32_t L_1;
 		L_1 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
@@ -7359,31 +7360,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretSelectPositio
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:990>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:990>
 		int32_t L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100426
+// Method Definition Index: 100682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:990>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:990>
 		int32_t L_0 = ___0_value;
 		__this->___m_CaretSelectPosition = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:990>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:990>
 		int32_t* L_1 = (int32_t*)(&__this->___m_CaretSelectPosition);
 		TMP_InputField_ClampCaretPos_m24F8EDB52862BA470A2CD5FD3D2A62AA86A00FC1(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:990>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:990>
 		return;
 	}
 }
-// Method Definition Index: 100427
+// Method Definition Index: 100683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:991>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:991>
 		int32_t L_0 = __this->___m_StringSelectPosition;
 		int32_t L_1;
 		L_1 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
@@ -7393,31 +7394,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_stringSelectPositi
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:991>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:991>
 		int32_t L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100428
+// Method Definition Index: 100684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:991>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:991>
 		int32_t L_0 = ___0_value;
 		__this->___m_StringSelectPosition = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:991>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:991>
 		int32_t* L_1 = (int32_t*)(&__this->___m_StringSelectPosition);
 		TMP_InputField_ClampStringPos_mCEF1B5B73F19C6FFA1A9411FCA485B7F81C73D05(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:991>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:991>
 		return;
 	}
 }
-// Method Definition Index: 100429
+// Method Definition Index: 100685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:993>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:993>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_1;
@@ -7428,43 +7429,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_get_hasSelection_mA2CF23C
 
 IL_0015:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:993>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:993>
 		bool L_2 = V_0;
 		return L_2;
 	}
 }
-// Method Definition Index: 100430
+// Method Definition Index: 100686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_caretPosition_m1F103634776349DFA375AC8C64F1D2535A693A15 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1008>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1008>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 100431
+// Method Definition Index: 100687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_caretPosition_mD5B0AFA01D9947B7EFC98CD4C4BF927518513FF4 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1009>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1009>
 		int32_t L_0 = ___0_value;
 		TMP_InputField_set_selectionAnchorPosition_mB6E72D94EFD7C55EAFA8F8AAC30D255935438B06(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1009>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1009>
 		int32_t L_1 = ___0_value;
 		TMP_InputField_set_selectionFocusPosition_m862731C1A303D3778E292AB427BC1BEF4407050D(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1009>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1009>
 		TMP_InputField_UpdateStringIndexFromCaretPosition_m8D3E94E9EDF597A60FBEF486E005DB87E8450EAB(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1009>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1009>
 		return;
 	}
 }
-// Method Definition Index: 100432
+// Method Definition Index: 100688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionAnchorPosition_mAAD925C368B16EFE972C11F551A1D9DCB93B0B93 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1020>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1020>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		V_0 = L_0;
@@ -7473,17 +7474,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionAnchorPos
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1021>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1021>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100433
+// Method Definition Index: 100689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionAnchorPosition_mB6E72D94EFD7C55EAFA8F8AAC30D255935438B06 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1025>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1025>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
 		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
@@ -7494,31 +7495,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionAnchorPositi
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1026>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1026>
 		goto IL_001f;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1028>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1028>
 		int32_t L_2 = ___0_value;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1029>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1029>
 		__this->___m_IsStringPositionDirty = (bool)1;
 	}
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1030>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1030>
 		return;
 	}
 }
-// Method Definition Index: 100434
+// Method Definition Index: 100690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionFocusPosition_m64C9DB19CDB18E29B7CB02DCC84B5F05ACDB473E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1041>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1041>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		V_0 = L_0;
@@ -7527,17 +7528,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionFocusPosi
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1042>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1042>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100435
+// Method Definition Index: 100691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionFocusPosition_m862731C1A303D3778E292AB427BC1BEF4407050D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1045>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1045>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
 		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
@@ -7548,57 +7549,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionFocusPositio
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1046>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1046>
 		goto IL_001f;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1048>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1048>
 		int32_t L_2 = ___0_value;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1049>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1049>
 		__this->___m_IsStringPositionDirty = (bool)1;
 	}
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1050>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1050>
 		return;
 	}
 }
-// Method Definition Index: 100436
+// Method Definition Index: 100692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_stringPosition_m5C9E52B4A7304183ED4F690AD6239D57B142A7B6 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1059>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1059>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 100437
+// Method Definition Index: 100693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_stringPosition_mB6538BDB302FECF09EAD5BA986FB11BBE6A49E8A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1060>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1060>
 		int32_t L_0 = ___0_value;
 		TMP_InputField_set_selectionStringAnchorPosition_m60E8DEBD9389373AD410E7E868D3C36CCA202B8E(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1060>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1060>
 		int32_t L_1 = ___0_value;
 		TMP_InputField_set_selectionStringFocusPosition_mB23FDE5288C4F033028320FE4DBDEB096AAB3917(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1060>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1060>
 		TMP_InputField_UpdateCaretPositionFromStringIndex_mC5C4A5C506805EEB1B32577969B126E257246D2C(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1060>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1060>
 		return;
 	}
 }
-// Method Definition Index: 100438
+// Method Definition Index: 100694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionStringAnchorPosition_m321370B1A913B9B619DE5C5A5E5FA8D251C0B8F2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1071>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1071>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		V_0 = L_0;
@@ -7607,17 +7608,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionStringAnc
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1072>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1072>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100439
+// Method Definition Index: 100695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionStringAnchorPosition_m60E8DEBD9389373AD410E7E868D3C36CCA202B8E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1076>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1076>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
 		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
@@ -7628,31 +7629,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionStringAnchor
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1077>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1077>
 		goto IL_001f;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1079>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1079>
 		int32_t L_2 = ___0_value;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1080>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1080>
 		__this->___m_IsCaretPositionDirty = (bool)1;
 	}
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1081>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1081>
 		return;
 	}
 }
-// Method Definition Index: 100440
+// Method Definition Index: 100696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionStringFocusPosition_mA044AFF5699E8B61BF3CBE271522AC8CA7088B0F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1092>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1092>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_0 = L_0;
@@ -7661,17 +7662,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_selectionStringFoc
 
 IL_000a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1093>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1093>
 		int32_t L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100441
+// Method Definition Index: 100697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionStringFocusPosition_mB23FDE5288C4F033028320FE4DBDEB096AAB3917 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1096>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1096>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
 		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
@@ -7682,26 +7683,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_selectionStringFocusP
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1097>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1097>
 		goto IL_001f;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1099>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1099>
 		int32_t L_2 = ___0_value;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1100>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1100>
 		__this->___m_IsCaretPositionDirty = (bool)1;
 	}
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1101>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1101>
 		return;
 	}
 }
-// Method Definition Index: 100442
+// Method Definition Index: 100698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Awake_m9DD070E7E2CCA92235D36300602D63A0C18B1B0E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7713,9 +7714,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Awake_m9DD070E7E2CCA92235
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1131>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1131>
 		Selectable_Awake_m55439376D9E09A622C61C4BD7DA413E1E0EFD469(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1133>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1133>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		bool L_0 = ((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDeviceEvaluated;
 		V_0 = L_0;
@@ -7726,30 +7727,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Awake_m9DD070E7E2CCA92235
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1134>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1134>
 		goto IL_002d;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1138>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1138>
 		String_t* L_2;
 		L_2 = SystemInfo_get_deviceModel_m308FFBADED4BF6CB34C318A0BBDA762D09A7F185(NULL);
 		bool L_3;
 		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, _stringLiteralB5850621E3DAE427B6A0C36B747CB1B7926EED95, NULL);
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDevice = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1139>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1139>
 		((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDeviceEvaluated = (bool)1;
 	}
 
 IL_002d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1140>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1140>
 		return;
 	}
 }
-// Method Definition Index: 100443
+// Method Definition Index: 100699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnEnable_m3A78BC51F18EDA6775A85DB81F8F401B17D04475 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7804,9 +7805,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnEnable_m3A78BC51F18EDA6
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B6_1 = NULL;
 	int32_t G_B13_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1148>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1148>
 		Selectable_OnEnable_mBE48F9440061AFFCEA53B103F7C7A059AC115FA7(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1150>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1150>
 		String_t* L_0 = __this->___m_Text;
 		V_2 = (bool)((((RuntimeObject*)(String_t*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_1 = V_2;
@@ -7816,7 +7817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnEnable_m3A78BC51F18EDA6
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1151>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1151>
 		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
 		__this->___m_Text = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_2);
@@ -7824,7 +7825,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnEnable_m3A78BC51F18EDA6
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1153>
 		int32_t L_3;
 		L_3 = SystemInfo_get_operatingSystemFamily_mC8B13A7D2F34699EDDA4F7629F117C76F0C865FA(NULL);
 		if ((((int32_t)L_3) == ((int32_t)1)))
@@ -7868,11 +7869,11 @@ IL_004c:
 	{
 		NullCheck(G_B6_1);
 		G_B6_1->___m_IsApplePlatform = (bool)G_B6_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1156>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1156>
 		RuntimeObject* L_8;
 		L_8 = Component_GetComponent_TisILayoutController_tD6B9DA814D1859D5391E51BDD5CDD3192AD5DFA8_m4632B99DD2C9CBC8BF7ECF26C68DE9190DA2CF9F(__this, Component_GetComponent_TisILayoutController_tD6B9DA814D1859D5391E51BDD5CDD3192AD5DFA8_m4632B99DD2C9CBC8BF7ECF26C68DE9190DA2CF9F_RuntimeMethod_var);
 		V_0 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1158>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1158>
 		RuntimeObject* L_9 = V_0;
 		V_3 = (bool)((!(((RuntimeObject*)(RuntimeObject*)L_9) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_10 = V_3;
@@ -7882,9 +7883,9 @@ IL_004c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1160>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1160>
 		__this->___m_IsDrivenByLayoutComponents = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1161>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1161>
 		LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* L_11;
 		L_11 = Component_GetComponent_TisLayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE_m1F9456DE15CE473E9CC8A0C861F424A2EF8D1F8B(__this, Component_GetComponent_TisLayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE_m1F9456DE15CE473E9CC8A0C861F424A2EF8D1F8B_RuntimeMethod_var);
 		__this->___m_LayoutGroup = L_11;
@@ -7894,13 +7895,13 @@ IL_004c:
 
 IL_0077:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1164>
 		__this->___m_IsDrivenByLayoutComponents = (bool)0;
 	}
 
 IL_007e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1166>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1166>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		bool L_12;
 		L_12 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
@@ -7912,7 +7913,7 @@ IL_007e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1168>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1168>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_14 = __this->___m_CachedInputRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_15;
@@ -7946,7 +7947,7 @@ IL_00aa:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1170>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1170>
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_19 = (TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB*)(TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB*)SZArrayNew(TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB_il2cpp_TypeInfo_var, (uint32_t)1);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_20 = L_19;
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_21 = { reinterpret_cast<intptr_t> (TMP_SelectionCaret_tCDD93BB06825C506A7D3E06648FB33E3D61981EB_0_0_0_var) };
@@ -7959,11 +7960,11 @@ IL_00aa:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
 		GameObject__ctor_m721D643351E55308EA4F5F41B67D5446D11C61F0(L_23, _stringLiteral2E5F5CB4979BE02FA2697A4671278BE10C23D41A, L_20, NULL);
 		V_6 = L_23;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1172>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1172>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = V_6;
 		NullCheck(L_24);
 		Object_set_hideFlags_mACB8BFC903FB3B01BBD427753E791BF28B5E33D4(L_24, ((int32_t)52), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1173>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1173>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = V_6;
 		NullCheck(L_25);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
@@ -7977,14 +7978,14 @@ IL_00aa:
 		L_29 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_28, NULL);
 		NullCheck(L_26);
 		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_26, L_29, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1174>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1174>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = V_6;
 		NullCheck(L_30);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31;
 		L_31 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_30, NULL);
 		NullCheck(L_31);
 		Transform_SetAsFirstSibling_mBE0D0E76099F829466DC2FBD71ACFCF3C8EC03BD(L_31, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1175>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1175>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = V_6;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33;
 		L_33 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
@@ -7993,21 +7994,21 @@ IL_00aa:
 		L_34 = GameObject_get_layer_m108902B9C89E9F837CE06B9942AA42307450FEAF(L_33, NULL);
 		NullCheck(L_32);
 		GameObject_set_layer_m6E1AF478A2CC86BD222B96317BEB78B7D89B18D0(L_32, L_34, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1177>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = V_6;
 		NullCheck(L_35);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_36;
 		L_36 = GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4(L_35, GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4_RuntimeMethod_var);
 		__this->___caretRectTrans = L_36;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___caretRectTrans), (void*)L_36);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1178>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1178>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_37 = V_6;
 		NullCheck(L_37);
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_38;
 		L_38 = GameObject_GetComponent_TisCanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860_m352B503784BB68953253ED4AD666B68C6CF05BA9(L_37, GameObject_GetComponent_TisCanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860_m352B503784BB68953253ED4AD666B68C6CF05BA9_RuntimeMethod_var);
 		__this->___m_CachedInputRenderer = L_38;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CachedInputRenderer), (void*)L_38);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1179>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1179>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_39 = __this->___m_CachedInputRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_il2cpp_TypeInfo_var);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_40;
@@ -8016,14 +8017,14 @@ IL_00aa:
 		L_41 = Texture2D_get_whiteTexture_m3A243ED388F9EF0EC515015A6E0E50FD261D2FA1(NULL);
 		NullCheck(L_39);
 		CanvasRenderer_SetMaterial_m445BACF01EF1997CBFCBB79AB64E09AF39860196(L_39, L_40, L_41, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1182>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1182>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_42 = V_6;
 		NullCheck(L_42);
 		LayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A* L_43;
 		L_43 = GameObject_AddComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mCAEF1A4C92D1C856A46417BA645409AE42F005D2(L_42, GameObject_AddComponent_TisLayoutElement_tB1F24CC11AF4AA87015C8D8EE06D22349C5BF40A_mCAEF1A4C92D1C856A46417BA645409AE42F005D2_RuntimeMethod_var);
 		NullCheck(L_43);
 		VirtualActionInvoker1< bool >::Invoke(28, L_43, (bool)1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1184>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1184>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
@@ -8033,16 +8034,16 @@ IL_0160:
 
 IL_0161:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1188>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_44;
 		L_44 = Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4(__this, Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
 		__this->___m_RectTransform = L_44;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RectTransform), (void*)L_44);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1191>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1191>
 		IScrollHandlerU5BU5D_tB75AD9E80F9638ED9B3AA977FD42132F857C7821* L_45;
 		L_45 = Component_GetComponentsInParent_TisIScrollHandler_t762CB73017D561E11CF6759ED9FD8C9F24B3D13F_mB7DC50B5B9E75CDC907C040EF0AEC52BBB0451B6(__this, Component_GetComponentsInParent_TisIScrollHandler_t762CB73017D561E11CF6759ED9FD8C9F24B3D13F_mB7DC50B5B9E75CDC907C040EF0AEC52BBB0451B6_RuntimeMethod_var);
 		V_1 = L_45;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1192>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1192>
 		IScrollHandlerU5BU5D_tB75AD9E80F9638ED9B3AA977FD42132F857C7821* L_46 = V_1;
 		NullCheck(L_46);
 		V_7 = (bool)((((int32_t)((int32_t)(((RuntimeArray*)L_46)->max_length))) > ((int32_t)1))? 1 : 0);
@@ -8053,7 +8054,7 @@ IL_0161:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1193>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1193>
 		IScrollHandlerU5BU5D_tB75AD9E80F9638ED9B3AA977FD42132F857C7821* L_48 = V_1;
 		NullCheck(L_48);
 		int32_t L_49 = 1;
@@ -8064,7 +8065,7 @@ IL_0161:
 
 IL_018e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1196>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1196>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_51 = __this->___m_TextViewport;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_52;
@@ -8077,20 +8078,20 @@ IL_018e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1198>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1198>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_54 = __this->___m_TextViewport;
 		NullCheck(L_54);
 		RectMask2D_tACF92BE999C791A665BD1ADEABF5BCEB82846670* L_55;
 		L_55 = Component_GetComponent_TisRectMask2D_tACF92BE999C791A665BD1ADEABF5BCEB82846670_m6D14E9D9ED30494BDFDA9210DE8FC7869AAD48E2(L_54, Component_GetComponent_TisRectMask2D_tACF92BE999C791A665BD1ADEABF5BCEB82846670_m6D14E9D9ED30494BDFDA9210DE8FC7869AAD48E2_RuntimeMethod_var);
 		__this->___m_TextViewportRectMask = L_55;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_TextViewportRectMask), (void*)L_55);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1200>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1200>
 		TMP_InputField_UpdateMaskRegions_mD22E32D41A5E6EDAC8A7547194CA34A4DE918343(__this, NULL);
 	}
 
 IL_01ba:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1204>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1204>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_56 = __this->___m_CachedInputRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_57;
@@ -8103,7 +8104,7 @@ IL_01ba:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1205>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1205>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_59 = __this->___m_CachedInputRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_il2cpp_TypeInfo_var);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_60;
@@ -8116,7 +8117,7 @@ IL_01ba:
 
 IL_01e2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1207>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1207>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_62 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_63;
@@ -8129,19 +8130,19 @@ IL_01e2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1209>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1209>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_65 = __this->___m_TextComponent;
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_66 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_66, __this, (intptr_t)((void*)TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138_RuntimeMethod_var), NULL);
 		NullCheck(L_65);
 		Graphic_RegisterDirtyVerticesCallback_m46034B2100B5D28BDBCCB34C1283B1B9B2DB9A9E(L_65, L_66, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1210>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1210>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_67 = __this->___m_TextComponent;
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_68 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_68, __this, (intptr_t)((void*)TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2_RuntimeMethod_var), NULL);
 		NullCheck(L_67);
 		Graphic_RegisterDirtyVerticesCallback_m46034B2100B5D28BDBCCB34C1283B1B9B2DB9A9E(L_67, L_68, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1213>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1213>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_69 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_70;
@@ -8154,7 +8155,7 @@ IL_01e2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1215>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1215>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_72 = __this->___m_VerticalScrollbar;
 		NullCheck(L_72);
 		ScrollEvent_tDDBE21D44D65DF069C54FE3ACF7668D976E6BBB6* L_73;
@@ -8167,28 +8168,28 @@ IL_01e2:
 
 IL_0256:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1218>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1218>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
 IL_025e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1222>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1222>
 		bool L_75;
 		L_75 = TouchScreenKeyboard_get_isInPlaceEditingAllowed_mE57CDF32437DD1DCDC665072457C91DD31EB93D0(NULL);
 		__this->___m_TouchKeyboardAllowsInPlaceEditing = L_75;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1226>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1226>
 		il2cpp_codegen_runtime_class_init_inline(TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_il2cpp_TypeInfo_var);
 		FastAction_1_tE50C6A692DF85AB55BE3160B659FA7DF19DFA005* L_76 = ((TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_StaticFields*)il2cpp_codegen_static_fields_for(TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_il2cpp_TypeInfo_var))->___TEXT_CHANGED_EVENT;
 		Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A* L_77 = (Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A*)il2cpp_codegen_object_new(Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m95478636F075134CA2998E22B214611472600983(L_77, __this, (intptr_t)((void*)TMP_InputField_ON_TEXT_CHANGED_mEA6A2C8BD4AF9D1C0CF5A6EC9608F2149256B553_RuntimeMethod_var), NULL);
 		NullCheck(L_76);
 		FastAction_1_Add_m368726E3508DB2176C4F87A79C0C0CC4816176D6(L_76, L_77, FastAction_1_Add_m368726E3508DB2176C4F87A79C0C0CC4816176D6_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1227>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1227>
 		return;
 	}
 }
-// Method Definition Index: 100444
+// Method Definition Index: 100700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDisable_m2E967647BDF216075B8F3EB3C1559B6AAA2D3C95 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8213,12 +8214,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDisable_m2E967647BDF216
 	bool V_2 = false;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1232>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1232>
 		__this->___m_BlinkCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_BlinkCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1234>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1234>
 		TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D(__this, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1235>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1235>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8231,19 +8232,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDisable_m2E967647BDF216
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1237>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1237>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___m_TextComponent;
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_4 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_4, __this, (intptr_t)((void*)TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		Graphic_UnregisterDirtyVerticesCallback_mA36A388BF7DDB2D71596D6F13CEFCA79B4199B5C(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1238>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1238>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___m_TextComponent;
 		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_6 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_6, __this, (intptr_t)((void*)TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		Graphic_UnregisterDirtyVerticesCallback_mA36A388BF7DDB2D71596D6F13CEFCA79B4199B5C(L_5, L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1240>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1240>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_7 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -8256,7 +8257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDisable_m2E967647BDF216
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1241>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1241>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_10 = __this->___m_VerticalScrollbar;
 		NullCheck(L_10);
 		ScrollEvent_tDDBE21D44D65DF069C54FE3ACF7668D976E6BBB6* L_11;
@@ -8273,10 +8274,10 @@ IL_007e:
 
 IL_007f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1244>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1244>
 		il2cpp_codegen_runtime_class_init_inline(CanvasUpdateRegistry_t7A4CC63D880F418DCDE83152B6FDB3259DF14DD1_il2cpp_TypeInfo_var);
 		CanvasUpdateRegistry_UnRegisterCanvasElementForRebuild_m61F9979AB8AFBA924430757FE09967D7A335D916(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1247>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1247>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_13 = __this->___m_CachedInputRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -8289,7 +8290,7 @@ IL_007f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1248>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1248>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_16 = __this->___m_CachedInputRenderer;
 		NullCheck(L_16);
 		CanvasRenderer_Clear_m496D522F1DBD1037417E470CF2D4D9FD22F68E81(L_16, NULL);
@@ -8297,7 +8298,7 @@ IL_007f:
 
 IL_00a2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1250>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1250>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_17 = __this->___m_Mesh;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -8310,7 +8311,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1251>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1251>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_20 = __this->___m_Mesh;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(L_20, NULL);
@@ -8318,23 +8319,23 @@ IL_00a2:
 
 IL_00be:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1253>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1253>
 		__this->___m_Mesh = (Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Mesh), (void*)(Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1256>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1256>
 		il2cpp_codegen_runtime_class_init_inline(TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_il2cpp_TypeInfo_var);
 		FastAction_1_tE50C6A692DF85AB55BE3160B659FA7DF19DFA005* L_21 = ((TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_StaticFields*)il2cpp_codegen_static_fields_for(TMPro_EventManager_t0234DB5BF625FC164B395C5C3B6F2CB8C89A3BA9_il2cpp_TypeInfo_var))->___TEXT_CHANGED_EVENT;
 		Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A* L_22 = (Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A*)il2cpp_codegen_object_new(Action_1_t7F8A08D55E64F30F0E9A4213699C99903459421A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m95478636F075134CA2998E22B214611472600983(L_22, __this, (intptr_t)((void*)TMP_InputField_ON_TEXT_CHANGED_mEA6A2C8BD4AF9D1C0CF5A6EC9608F2149256B553_RuntimeMethod_var), NULL);
 		NullCheck(L_21);
 		FastAction_1_Remove_mB29130AC90F5F8967CD89587717469E44E4D186F(L_21, L_22, FastAction_1_Remove_mB29130AC90F5F8967CD89587717469E44E4D186F_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1258>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1258>
 		Selectable_OnDisable_m293DB718E1101FC77E655E4A2C4F2DE1DBD4663C(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1259>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1259>
 		return;
 	}
 }
-// Method Definition Index: 100445
+// Method Definition Index: 100701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ON_TEXT_CHANGED_mEA6A2C8BD4AF9D1C0CF5A6EC9608F2149256B553 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8351,14 +8352,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ON_TEXT_CHANGED_mEA6A2C8B
 	int32_t G_B3_0 = 0;
 	int32_t G_B7_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1268>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1268>
 		Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* L_0 = ___0_obj;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, L_1, NULL);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1270>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1270>
 		bool L_3 = V_0;
 		if (!L_3)
 		{
@@ -8386,7 +8387,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1272>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1272>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		bool L_6;
 		L_6 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
@@ -8417,13 +8418,13 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1274>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1274>
 		TMP_InputField_UpdateCaretPositionFromStringIndex_mC5C4A5C506805EEB1B32577969B126E257246D2C(__this, NULL);
 	}
 
 IL_0042:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1281>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1281>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_9 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -8436,7 +8437,7 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1282>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1282>
 		TMP_InputField_UpdateScrollbar_m61D071BE0C6F2D5C8FD3F75AF4B6A256685429C9(__this, NULL);
 	}
 
@@ -8446,11 +8447,11 @@ IL_0058:
 
 IL_0059:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1284>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1284>
 		return;
 	}
 }
-// Method Definition Index: 100446
+// Method Definition Index: 100702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TMP_InputField_CaretBlink_m280BE5F4289F6C4ABA767D15C147E39DA6B54AD5 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8469,12 +8470,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TMP_InputField_CaretBlink_m280
 		return L_1;
 	}
 }
-// Method Definition Index: 100447
+// Method Definition Index: 100703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetCaretVisible_m1D8A496EA7137B9CCEFD1785B1D5BFA3A3325194 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1315>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1315>
 		bool L_0 = __this->___m_AllowInput;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -8484,36 +8485,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetCaretVisible_m1D8A496E
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1316>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1316>
 		goto IL_0029;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1318>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1318>
 		__this->___m_CaretVisible = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1319>
 		float L_2;
 		L_2 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		__this->___m_BlinkStartTime = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1320>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1320>
 		TMP_InputField_SetCaretActive_mC9858C9E1FE6D8800219C49C52A9FACC1ED5EEC1(__this, NULL);
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1321>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1321>
 		return;
 	}
 }
-// Method Definition Index: 100448
+// Method Definition Index: 100704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetCaretActive_mC9858C9E1FE6D8800219C49C52A9FACC1ED5EEC1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	bool V_2 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1327>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1327>
 		bool L_0 = __this->___m_AllowInput;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -8523,13 +8524,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetCaretActive_mC9858C9E1
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1328>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1328>
 		goto IL_004d;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1330>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1330>
 		float L_2 = __this->___m_CaretBlinkRate;
 		V_1 = (bool)((((float)L_2) > ((float)(0.0f)))? 1 : 0);
 		bool L_3 = V_1;
@@ -8539,7 +8540,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1332>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1332>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4 = __this->___m_BlinkCoroutine;
 		V_2 = (bool)((((RuntimeObject*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)L_4) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_5 = V_2;
@@ -8549,7 +8550,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1333>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1333>
 		RuntimeObject* L_6;
 		L_6 = TMP_InputField_CaretBlink_m280BE5F4289F6C4ABA767D15C147E39DA6B54AD5(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7;
@@ -8565,22 +8566,22 @@ IL_0041:
 
 IL_0044:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1337>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1337>
 		__this->___m_CaretVisible = (bool)1;
 	}
 
 IL_004d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1339>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1339>
 		return;
 	}
 }
-// Method Definition Index: 100449
+// Method Definition Index: 100705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnFocus_mBDC52EE4DF24C43E6C4C272B09FDAE6F7CB5970F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1343>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1343>
 		bool L_0 = __this->___m_OnFocusSelectAll;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -8590,36 +8591,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnFocus_mBDC52EE4DF24C43E
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1344>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1344>
 		TMP_InputField_SelectAll_mC66107E00F20D1E401A04108D2A9136559AD23F7(__this, NULL);
 	}
 
 IL_0012:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1345>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1345>
 		return;
 	}
 }
-// Method Definition Index: 100450
+// Method Definition Index: 100706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SelectAll_mC66107E00F20D1E401A04108D2A9136559AD23F7 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1349>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1349>
 		__this->___m_isSelectAll = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1350>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1350>
 		String_t* L_0;
 		L_0 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_0, NULL);
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1351>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1351>
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, 0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1352>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1352>
 		return;
 	}
 }
-// Method Definition Index: 100451
+// Method Definition Index: 100707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextEnd_mC781F7D531E0B22F73DF2C6E5F882243DD133E6A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -8629,7 +8630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextEnd_mC781F7D531E0
 	bool V_4 = false;
 	int32_t V_5 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1360>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1360>
 		bool L_0 = __this->___m_isRichTextEditingAllowed;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -8639,14 +8640,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextEnd_mC781F7D531E0
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1362>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1362>
 		String_t* L_2;
 		L_2 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		NullCheck(L_2);
 		int32_t L_3;
 		L_3 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_2, NULL);
 		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1364>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1364>
 		bool L_4 = ___0_shift;
 		V_2 = L_4;
 		bool L_5 = V_2;
@@ -8656,7 +8657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextEnd_mC781F7D531E0
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1366>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1366>
 		int32_t L_6 = V_1;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_6, NULL);
 		goto IL_0040;
@@ -8664,10 +8665,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextEnd_mC781F7D531E0
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1370>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1370>
 		int32_t L_7 = V_1;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1371>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1371>
 		int32_t L_8;
 		L_8 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_8, NULL);
@@ -8680,7 +8681,7 @@ IL_0040:
 
 IL_0043:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1376>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1376>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_9 = __this->___m_TextComponent;
 		NullCheck(L_9);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_10;
@@ -8688,7 +8689,7 @@ IL_0043:
 		NullCheck(L_10);
 		int32_t L_11 = L_10->___characterCount;
 		V_3 = ((int32_t)il2cpp_codegen_subtract(L_11, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1378>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1378>
 		bool L_12 = ___0_shift;
 		V_4 = L_12;
 		bool L_13 = V_4;
@@ -8698,10 +8699,10 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1380>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1380>
 		int32_t L_14 = V_3;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_14, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1381>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1381>
 		int32_t L_15 = V_3;
 		int32_t L_16;
 		L_16 = TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59(__this, L_15, NULL);
@@ -8711,14 +8712,14 @@ IL_0043:
 
 IL_0078:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1385>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1385>
 		int32_t L_17 = V_3;
 		int32_t L_18 = L_17;
 		V_5 = L_18;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_18, NULL);
 		int32_t L_19 = V_5;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1386>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1386>
 		int32_t L_20 = V_3;
 		int32_t L_21;
 		L_21 = TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59(__this, L_20, NULL);
@@ -8735,13 +8736,13 @@ IL_00a8:
 
 IL_00a9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1390>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1390>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1391>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1391>
 		return;
 	}
 }
-// Method Definition Index: 100452
+// Method Definition Index: 100708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextStart_m8D0AA8989DE9DB5D0B540343640BFAAA1C0CEC9E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -8751,7 +8752,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextStart_m8D0AA8989D
 	bool V_4 = false;
 	int32_t V_5 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1399>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1399>
 		bool L_0 = __this->___m_isRichTextEditingAllowed;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -8761,9 +8762,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextStart_m8D0AA8989D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1401>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1401>
 		V_1 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1403>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1403>
 		bool L_2 = ___0_shift;
 		V_2 = L_2;
 		bool L_3 = V_2;
@@ -8773,7 +8774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextStart_m8D0AA8989D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1405>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1405>
 		int32_t L_4 = V_1;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_4, NULL);
 		goto IL_0036;
@@ -8781,10 +8782,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveTextStart_m8D0AA8989D
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1409>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1409>
 		int32_t L_5 = V_1;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1410>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1410>
 		int32_t L_6;
 		L_6 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_6, NULL);
@@ -8797,9 +8798,9 @@ IL_0036:
 
 IL_0039:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1415>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1415>
 		V_3 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1417>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1417>
 		bool L_7 = ___0_shift;
 		V_4 = L_7;
 		bool L_8 = V_4;
@@ -8809,10 +8810,10 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1419>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1419>
 		int32_t L_9 = V_3;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1420>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1420>
 		int32_t L_10 = V_3;
 		int32_t L_11;
 		L_11 = TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59(__this, L_10, NULL);
@@ -8822,14 +8823,14 @@ IL_0039:
 
 IL_005d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1424>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1424>
 		int32_t L_12 = V_3;
 		int32_t L_13 = L_12;
 		V_5 = L_13;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_13, NULL);
 		int32_t L_14 = V_5;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_14, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1425>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1425>
 		int32_t L_15 = V_3;
 		int32_t L_16;
 		L_16 = TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59(__this, L_15, NULL);
@@ -8846,13 +8847,13 @@ IL_008d:
 
 IL_008e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1429>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1429>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1430>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1430>
 		return;
 	}
 }
-// Method Definition Index: 100453
+// Method Definition Index: 100709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveToEndOfLine_m42BC00BF1E1A82E956220244E72E577C667297D8 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_ctrl, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -8862,7 +8863,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveToEndOfLine_m42BC00BF
 	int32_t V_4 = 0;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1440>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1440>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
@@ -8874,7 +8875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveToEndOfLine_m42BC00BF
 		NullCheck(L_2);
 		int32_t L_4 = ((L_2)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_3)))->___lineNumber;
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1443>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1443>
 		bool L_5 = ___1_ctrl;
 		if (L_5)
 		{
@@ -8909,7 +8910,7 @@ IL_0042:
 IL_0054:
 	{
 		V_1 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1445>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1445>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_14 = __this->___m_TextComponent;
 		NullCheck(L_14);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_15;
@@ -8920,7 +8921,7 @@ IL_0054:
 		NullCheck(L_16);
 		int32_t L_18 = ((L_16)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_17)))->___index;
 		V_2 = L_18;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1447>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1447>
 		bool L_19 = ___0_shift;
 		V_3 = L_19;
 		bool L_20 = V_3;
@@ -8930,10 +8931,10 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1449>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1449>
 		int32_t L_21 = V_2;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_21, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1451>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1451>
 		int32_t L_22 = V_1;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_22, NULL);
 		goto IL_00b5;
@@ -8941,14 +8942,14 @@ IL_0054:
 
 IL_008a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1455>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1455>
 		int32_t L_23 = V_2;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_23, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1456>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1456>
 		int32_t L_24;
 		L_24 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_24, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1458>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1458>
 		int32_t L_25 = V_1;
 		int32_t L_26 = L_25;
 		V_4 = L_26;
@@ -8959,13 +8960,13 @@ IL_008a:
 
 IL_00b5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1461>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1461>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1462>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1462>
 		return;
 	}
 }
-// Method Definition Index: 100454
+// Method Definition Index: 100710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveToStartOfLine_mC73D470B797643AC87FCFCC778D43DD945B18252 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_ctrl, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -8976,7 +8977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveToStartOfLine_mC73D47
 	int32_t V_5 = 0;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1471>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1471>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
@@ -8988,7 +8989,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveToStartOfLine_mC73D47
 		NullCheck(L_2);
 		int32_t L_4 = ((L_2)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_3)))->___lineNumber;
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1474>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1474>
 		bool L_5 = ___1_ctrl;
 		if (L_5)
 		{
@@ -9017,9 +9018,9 @@ IL_0042:
 IL_0043:
 	{
 		V_1 = G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1476>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1476>
 		V_2 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1477>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1477>
 		int32_t L_11 = V_1;
 		V_3 = (bool)((((int32_t)L_11) > ((int32_t)0))? 1 : 0);
 		bool L_12 = V_3;
@@ -9029,7 +9030,7 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1478>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1478>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_13 = __this->___m_TextComponent;
 		NullCheck(L_13);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_14;
@@ -9053,7 +9054,7 @@ IL_0043:
 
 IL_008a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1480>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1480>
 		bool L_23 = ___0_shift;
 		V_4 = L_23;
 		bool L_24 = V_4;
@@ -9063,10 +9064,10 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1482>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1482>
 		int32_t L_25 = V_2;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_25, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1484>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1484>
 		int32_t L_26 = V_1;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_26, NULL);
 		goto IL_00d0;
@@ -9074,14 +9075,14 @@ IL_008a:
 
 IL_00a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1488>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1488>
 		int32_t L_27 = V_2;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_27, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1489>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1489>
 		int32_t L_28;
 		L_28 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_28, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1491>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1491>
 		int32_t L_29 = V_1;
 		int32_t L_30 = L_29;
 		V_5 = L_30;
@@ -9092,13 +9093,13 @@ IL_00a5:
 
 IL_00d0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1494>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1494>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1495>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1495>
 		return;
 	}
 }
-// Method Definition Index: 100455
+// Method Definition Index: 100711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_clipboard_m53271C5A442FE382959DEF76525B14616E58BFAE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9109,7 +9110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_clipboard_m53271
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1502>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1502>
 		il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		String_t* L_0;
 		L_0 = GUIUtility_get_systemCopyBuffer_m01E2DF71533C31A4C552B9177D7CBA0C6CA3FC2A(NULL);
@@ -9119,12 +9120,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_clipboard_m53271
 
 IL_0009:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1503>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1503>
 		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
-// Method Definition Index: 100456
+// Method Definition Index: 100712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_clipboard_m2A21EC4F18EF6AB80DD0D03887BB115E3AB5D0BB (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9134,15 +9135,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_clipboard_m2A21EC4F18
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1506>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1506>
 		String_t* L_0 = ___0_value;
 		il2cpp_codegen_runtime_class_init_inline(GUIUtility_tA20863F7281628086EFC61CF90CB52D20E1FD76A_il2cpp_TypeInfo_var);
 		GUIUtility_set_systemCopyBuffer_mD14AE32BFEA4773BDC679205D470A228B8F225E8(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1507>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1507>
 		return;
 	}
 }
-// Method Definition Index: 100457
+// Method Definition Index: 100713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -9153,7 +9154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_InPlaceEditing_m2FEE000FC
 	int32_t G_B7_0 = 0;
 	int32_t G_B13_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1512>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1512>
 		bool L_0 = __this->___m_TouchKeyboardAllowsInPlaceEditing;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -9163,14 +9164,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_InPlaceEditing_m2FEE000FC
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1513>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1513>
 		V_1 = (bool)1;
 		goto IL_0065;
 	}
 
 IL_000f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1515>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1515>
 		bool L_2;
 		L_2 = TMP_InputField_isUWP_mF4D492C45E598A35755C69FF79AC7994619FDE25(__this, NULL);
 		V_2 = L_2;
@@ -9181,7 +9182,7 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1516>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1516>
 		bool L_4;
 		L_4 = TouchScreenKeyboard_get_isSupported_mCFAC95CA6CAA06B4E21F42E3C40A39668D6B438E(NULL);
 		V_1 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
@@ -9190,7 +9191,7 @@ IL_000f:
 
 IL_0024:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1518>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1518>
 		bool L_5;
 		L_5 = TouchScreenKeyboard_get_isSupported_mCFAC95CA6CAA06B4E21F42E3C40A39668D6B438E(NULL);
 		if (!L_5)
@@ -9220,14 +9221,14 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1519>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1519>
 		V_1 = (bool)1;
 		goto IL_0065;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1521>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1521>
 		bool L_8;
 		L_8 = TouchScreenKeyboard_get_isSupported_mCFAC95CA6CAA06B4E21F42E3C40A39668D6B438E(NULL);
 		if (!L_8)
@@ -9265,26 +9266,26 @@ IL_0057:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1522>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1522>
 		V_1 = (bool)0;
 		goto IL_0065;
 	}
 
 IL_0061:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1524>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1524>
 		V_1 = (bool)1;
 		goto IL_0065;
 	}
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1525>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1525>
 		bool L_12 = V_1;
 		return L_12;
 	}
 }
-// Method Definition Index: 100458
+// Method Definition Index: 100714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_InPlaceEditingChanged_mE8146C8039843A43A3511456D3F52ED0D4E8B195 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9296,7 +9297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_InPlaceEditingChanged_mE8
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1530>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1530>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		bool L_0 = ((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDevice;
 		if (L_0)
@@ -9325,12 +9326,12 @@ IL_001b:
 
 IL_001e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1531>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1531>
 		bool L_3 = V_0;
 		return L_3;
 	}
 }
-// Method Definition Index: 100459
+// Method Definition Index: 100715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_TouchScreenKeyboardShouldBeUsed_m8806A4066DDEDF4266EF3D5DE493F246BCE482F3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9346,12 +9347,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_TouchScreenKeyboardShould
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1537>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1537>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_0;
 		L_0 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1538>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1538>
 		int32_t L_1 = V_0;
 		V_2 = L_1;
 		int32_t L_2 = V_2;
@@ -9380,7 +9381,7 @@ IL_0012:
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1542>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1542>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		bool L_5 = ((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDevice;
 		V_3 = L_5;
@@ -9391,7 +9392,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1543>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1543>
 		bool L_7;
 		L_7 = TouchScreenKeyboard_get_isSupported_mCFAC95CA6CAA06B4E21F42E3C40A39668D6B438E(NULL);
 		V_4 = L_7;
@@ -9400,7 +9401,7 @@ IL_0019:
 
 IL_002b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1545>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1545>
 		bool L_8;
 		L_8 = TouchScreenKeyboard_get_isInPlaceEditingAllowed_mE57CDF32437DD1DCDC665072457C91DD31EB93D0(NULL);
 		V_4 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
@@ -9409,7 +9410,7 @@ IL_002b:
 
 IL_0037:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1547>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1547>
 		bool L_9;
 		L_9 = TouchScreenKeyboard_get_isSupported_mCFAC95CA6CAA06B4E21F42E3C40A39668D6B438E(NULL);
 		V_4 = L_9;
@@ -9418,12 +9419,12 @@ IL_0037:
 
 IL_0040:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1549>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1549>
 		bool L_10 = V_4;
 		return L_10;
 	}
 }
-// Method Definition Index: 100460
+// Method Definition Index: 100716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateKeyboardStringPosition_m767CE12FCEEC4416181BEAB149C0A58597BA05C0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9438,8 +9439,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateKeyboardStringPosit
 	int32_t G_B6_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1557>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1558>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1557>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1558>
 		bool L_0 = __this->___m_HideMobileInput;
 		if (!L_0)
 		{
@@ -9506,7 +9507,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1560>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1560>
 		int32_t L_7;
 		L_7 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_8;
@@ -9514,7 +9515,7 @@ IL_0035:
 		int32_t L_9;
 		L_9 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_7, L_8, NULL);
 		V_1 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1561>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1561>
 		int32_t L_10;
 		L_10 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_11;
@@ -9522,7 +9523,7 @@ IL_0035:
 		int32_t L_12;
 		L_12 = Mathf_Abs_mD945EDDEA0D62D21BFDBAB7B1C0F18DFF1CEC905_inline(((int32_t)il2cpp_codegen_subtract(L_10, L_11)), NULL);
 		V_2 = L_12;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1562>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1562>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_13 = __this->___m_SoftKeyboard;
 		int32_t L_14 = V_1;
 		int32_t L_15 = V_2;
@@ -9535,11 +9536,11 @@ IL_0035:
 
 IL_0073:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1564>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1564>
 		return;
 	}
 }
-// Method Definition Index: 100461
+// Method Definition Index: 100717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateStringPositionFromKeyboard_mED93ADC3A6B158262ECFB07CD6B21EC39B99022E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 V_0;
@@ -9551,23 +9552,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateStringPositionFromK
 	bool V_5 = false;
 	bool V_6 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1569>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1569>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_0 = __this->___m_SoftKeyboard;
 		NullCheck(L_0);
 		RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 L_1;
 		L_1 = TouchScreenKeyboard_get_selection_m1D44C9A8D4EA91F61706F048ED318E537DC46AB2(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1574>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1574>
 		RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 L_2 = V_0;
 		int32_t L_3 = L_2.___start;
 		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1575>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1575>
 		int32_t L_4;
 		L_4 = RangeInt_get_end_m5835FBEB410CB8AC0928AEFD95728A9AD57F6C63((&V_0), NULL);
 		V_2 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1577>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1577>
 		V_3 = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1579>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1579>
 		int32_t L_5;
 		L_5 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_6 = V_1;
@@ -9579,12 +9580,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateStringPositionFromK
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1581>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1581>
 		V_3 = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1582>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1582>
 		int32_t L_8 = V_1;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_8, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1584>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1584>
 		int32_t L_9;
 		L_9 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_10;
@@ -9594,7 +9595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateStringPositionFromK
 
 IL_004f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1587>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1587>
 		int32_t L_11;
 		L_11 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_12 = V_2;
@@ -9606,12 +9607,12 @@ IL_004f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1589>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1589>
 		int32_t L_14 = V_2;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_14, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1590>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1590>
 		V_3 = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1592>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1592>
 		int32_t L_15;
 		L_15 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_16;
@@ -9621,7 +9622,7 @@ IL_004f:
 
 IL_0080:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1595>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1595>
 		bool L_17 = V_3;
 		V_6 = L_17;
 		bool L_18 = V_6;
@@ -9631,21 +9632,21 @@ IL_0080:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1597>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1597>
 		float L_19;
 		L_19 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		__this->___m_BlinkStartTime = L_19;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1599>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1599>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
 IL_009b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1601>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1601>
 		return;
 	}
 }
-// Method Definition Index: 100462
+// Method Definition Index: 100718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_LateUpdate_m9D1496DFE349C330C4FD29BDE290209E22E66DC4 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9725,7 +9726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_LateUpdate_m9D1496DFE349C
 	int32_t G_B132_0 = 0;
 	int32_t G_B137_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1610>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1610>
 		bool L_0 = __this->___m_ShouldActivateNextUpdate;
 		V_1 = L_0;
 		bool L_1 = V_1;
@@ -9735,7 +9736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_LateUpdate_m9D1496DFE349C
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1612>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1612>
 		bool L_2;
 		L_2 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		V_2 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
@@ -9746,23 +9747,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_LateUpdate_m9D1496DFE349C
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1614>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1614>
 		TMP_InputField_ActivateInputFieldInternal_m95B34ECC08F02FF048EFC2272CE07648657627BC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1615>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1615>
 		__this->___m_ShouldActivateNextUpdate = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1616>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1616>
 		goto IL_05f2;
 	}
 
 IL_002d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1620>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1620>
 		__this->___m_ShouldActivateNextUpdate = (bool)0;
 	}
 
 IL_0035:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1625>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1625>
 		bool L_4;
 		L_4 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		if (!L_4)
@@ -9792,13 +9793,13 @@ IL_0046:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1626>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1626>
 		TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D(__this, (bool)0, NULL);
 	}
 
 IL_0052:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1629>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1629>
 		bool L_7;
 		L_7 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		if (L_7)
@@ -9827,7 +9828,7 @@ IL_0063:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1631>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1631>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_10;
 		L_10 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -9858,7 +9859,7 @@ IL_007d:
 IL_0087:
 	{
 		V_5 = G_B16_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1633>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1633>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_15;
@@ -9889,15 +9890,15 @@ IL_009c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1635>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1635>
 		TMP_InputField_ReleaseSelection_mC70F802822362452CFDD9FE095F5147E6BB5020F(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1636>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1636>
 		goto IL_05f2;
 	}
 
 IL_00af:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1639>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1639>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_19;
@@ -9933,7 +9934,7 @@ IL_00c9:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1641>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1641>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = V_5;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___m_PreviouslySelectedObject;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -9947,17 +9948,17 @@ IL_00c9:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1642>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1642>
 		goto IL_05f2;
 	}
 
 IL_00eb:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1644>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1644>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = V_5;
 		__this->___m_PreviouslySelectedObject = L_28;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PreviouslySelectedObject), (void*)L_28);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1647>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1647>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_29 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_30;
@@ -9995,13 +9996,13 @@ IL_0115:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1650>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1650>
 		goto IL_05f2;
 	}
 
 IL_0121:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1654>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1654>
 		bool L_36 = __this->___m_ResetOnDeActivation;
 		V_10 = L_36;
 		bool L_37 = V_10;
@@ -10011,15 +10012,15 @@ IL_0121:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1656>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1656>
 		TMP_InputField_ReleaseSelection_mC70F802822362452CFDD9FE095F5147E6BB5020F(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1657>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1657>
 		goto IL_05f2;
 	}
 
 IL_013a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1661>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1661>
 		bool L_38 = __this->___m_KeepTextSelectionVisible;
 		if (L_38)
 		{
@@ -10053,19 +10054,19 @@ IL_0152:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1662>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1662>
 		TMP_InputField_ReleaseSelection_mC70F802822362452CFDD9FE095F5147E6BB5020F(__this, NULL);
 	}
 
 IL_015f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1664>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1664>
 		goto IL_05f2;
 	}
 
 IL_0164:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1668>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1668>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_43 = __this->___m_ProcessingEvent;
 		if (!L_43)
 		{
@@ -10106,13 +10107,13 @@ IL_018a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1671>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1671>
 		V_13 = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1672>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1672>
 		float L_49;
 		L_49 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		V_14 = L_49;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1674>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1674>
 		float L_50 = __this->___m_KeyDownStartTime;
 		float L_51 = __this->___m_DoubleClickDelay;
 		float L_52 = V_14;
@@ -10124,16 +10125,16 @@ IL_018a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1675>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1675>
 		V_13 = (bool)1;
 	}
 
 IL_01b5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1677>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1677>
 		float L_54 = V_14;
 		__this->___m_KeyDownStartTime = L_54;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1679>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1679>
 		bool L_55 = V_13;
 		V_16 = L_55;
 		bool L_56 = V_16;
@@ -10143,9 +10144,9 @@ IL_01b5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1688>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1688>
 		TMP_InputField_ReleaseSelection_mC70F802822362452CFDD9FE095F5147E6BB5020F(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1690>
 		goto IL_05f2;
 	}
 
@@ -10159,9 +10160,9 @@ IL_01d3:
 
 IL_01d4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1722>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1722>
 		TMP_InputField_UpdateMaskRegions_mD22E32D41A5E6EDAC8A7547194CA34A4DE918343(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1724>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1724>
 		bool L_57;
 		L_57 = TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1(__this, NULL);
 		if (!L_57)
@@ -10201,15 +10202,15 @@ IL_01f7:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1726>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1726>
 		goto IL_05f2;
 	}
 
 IL_0203:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1729>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1729>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1731>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1731>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_61 = __this->___m_SoftKeyboard;
 		if (!L_61)
 		{
@@ -10240,7 +10241,7 @@ IL_0223:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1733>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1733>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_65 = __this->___m_SoftKeyboard;
 		V_19 = (bool)((!(((RuntimeObject*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)L_65) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_66 = V_19;
@@ -10250,7 +10251,7 @@ IL_0223:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1735>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1735>
 		bool L_67 = __this->___m_ReadOnly;
 		V_21 = (bool)((((int32_t)L_67) == ((int32_t)0))? 1 : 0);
 		bool L_68 = V_21;
@@ -10260,7 +10261,7 @@ IL_0223:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1736>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_69 = __this->___m_SoftKeyboard;
 		NullCheck(L_69);
 		String_t* L_70;
@@ -10270,13 +10271,13 @@ IL_0223:
 
 IL_0261:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1738>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1738>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_71 = __this->___m_SoftKeyboard;
 		NullCheck(L_71);
 		int32_t L_72;
 		L_72 = TouchScreenKeyboard_get_status_mCC466FDEC7E1913D8585ABA7F048FC198CB19504(L_71, NULL);
 		V_20 = L_72;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1741>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1741>
 		int32_t L_73 = __this->___m_LastKeyCode;
 		if ((((int32_t)L_73) == ((int32_t)((int32_t)13))))
 		{
@@ -10312,15 +10313,15 @@ IL_0286:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1743>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1743>
 		V_20 = 2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1745>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1745>
 		__this->___m_IsKeyboardBeingClosedInHoloLens = (bool)1;
 	}
 
 IL_0298:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1748>
 		int32_t L_77 = V_20;
 		V_24 = L_77;
 		int32_t L_78 = V_24;
@@ -10348,33 +10349,33 @@ IL_0298:
 
 IL_02b7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1751>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1751>
 		TMP_InputField_SendTouchScreenKeyboardStatusChanged_mF0F1E86DFF3023EA6167004879DAE86E1D2C3AEB(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1752>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1752>
 		goto IL_02ef;
 	}
 
 IL_02c0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1754>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1754>
 		__this->___m_ReleaseSelection = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1755>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1755>
 		__this->___m_WasCanceled = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1756>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1756>
 		TMP_InputField_SendTouchScreenKeyboardStatusChanged_mF0F1E86DFF3023EA6167004879DAE86E1D2C3AEB(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1757>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1757>
 		goto IL_02ef;
 	}
 
 IL_02d7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1759>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1759>
 		__this->___m_ReleaseSelection = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1760>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1760>
 		TMP_InputField_SendTouchScreenKeyboardStatusChanged_mF0F1E86DFF3023EA6167004879DAE86E1D2C3AEB(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1761>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1761>
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(76, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1762>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1762>
 		goto IL_02ef;
 	}
 
@@ -10384,21 +10385,21 @@ IL_02ef:
 
 IL_02f0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1766>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1766>
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(37, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1767>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1767>
 		goto IL_05f2;
 	}
 
 IL_02fd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1770>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1770>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_80 = __this->___m_SoftKeyboard;
 		NullCheck(L_80);
 		String_t* L_81;
 		L_81 = TouchScreenKeyboard_get_text_m74593E81B017446204A9DB1F7359922A2C005B1E(L_80, NULL);
 		V_0 = L_81;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1772>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1772>
 		String_t* L_82 = __this->___m_Text;
 		String_t* L_83 = V_0;
 		bool L_84;
@@ -10411,7 +10412,7 @@ IL_02fd:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1774>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1774>
 		bool L_86 = __this->___m_ReadOnly;
 		V_26 = L_86;
 		bool L_87 = V_26;
@@ -10421,7 +10422,7 @@ IL_02fd:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1776>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1776>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_88 = __this->___m_SoftKeyboard;
 		String_t* L_89 = __this->___m_Text;
 		NullCheck(L_88);
@@ -10431,26 +10432,26 @@ IL_02fd:
 
 IL_0344:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1780>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1780>
 		__this->___m_Text = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1782>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1782>
 		V_27 = 0;
 		goto IL_0464;
 	}
 
 IL_0358:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1784>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1784>
 		String_t* L_90 = V_0;
 		int32_t L_91 = V_27;
 		NullCheck(L_90);
 		Il2CppChar L_92;
 		L_92 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(L_90, L_91, NULL);
 		V_28 = L_92;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1785>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1785>
 		V_29 = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1787>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1787>
 		Il2CppChar L_93 = V_28;
 		if ((((int32_t)L_93) == ((int32_t)((int32_t)13))))
 		{
@@ -10478,13 +10479,13 @@ IL_0374:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1788>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1788>
 		V_28 = ((int32_t)10);
 	}
 
 IL_037e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1790>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1790>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_96;
 		L_96 = TMP_InputField_get_onValidateInput_mF293BE6DE7AAA1F8E37E20B73418A639A8963A7D(__this, NULL);
 		V_31 = (bool)((!(((RuntimeObject*)(OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530*)L_96) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -10495,7 +10496,7 @@ IL_037e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1791>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1791>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_98;
 		L_98 = TMP_InputField_get_onValidateInput_mF293BE6DE7AAA1F8E37E20B73418A639A8963A7D(__this, NULL);
 		String_t* L_99 = __this->___m_Text;
@@ -10513,7 +10514,7 @@ IL_037e:
 
 IL_03af:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1792>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1792>
 		int32_t L_104;
 		L_104 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_32 = (bool)((!(((uint32_t)L_104) <= ((uint32_t)0)))? 1 : 0);
@@ -10524,10 +10525,10 @@ IL_03af:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1794>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1794>
 		String_t* L_106 = __this->___m_Text;
 		V_33 = L_106;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1795>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1795>
 		String_t* L_107 = __this->___m_Text;
 		String_t* L_108 = __this->___m_Text;
 		NullCheck(L_108);
@@ -10537,7 +10538,7 @@ IL_03af:
 		Il2CppChar L_111;
 		L_111 = TMP_InputField_Validate_m76212763DA49DFD7C152C65F8AF6CC056EE69979(__this, L_107, L_109, L_110, NULL);
 		V_28 = L_111;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1796>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1796>
 		String_t* L_112 = V_33;
 		String_t* L_113 = __this->___m_Text;
 		bool L_114;
@@ -10547,7 +10548,7 @@ IL_03af:
 
 IL_03f2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1799>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1799>
 		int32_t L_115;
 		L_115 = TMP_InputField_get_lineType_mE221F133A310EB6C93DA24E1F5900E948771D64C(__this, NULL);
 		if ((((int32_t)L_115) == ((int32_t)2)))
@@ -10576,19 +10577,19 @@ IL_0404:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1801>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1801>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1803>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1803>
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(76, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1804>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1804>
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(37, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1805>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1805>
 		goto IL_05f2;
 	}
 
 IL_0427:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1810>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1810>
 		Il2CppChar L_118 = V_28;
 		if (!L_118)
 		{
@@ -10635,7 +10636,7 @@ IL_043f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1811>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1811>
 		String_t* L_122 = __this->___m_Text;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		String_t* L_123;
@@ -10648,14 +10649,14 @@ IL_043f:
 
 IL_045d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1782>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1782>
 		int32_t L_125 = V_27;
 		V_27 = ((int32_t)il2cpp_codegen_add(L_125, 1));
 	}
 
 IL_0464:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1782>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1782>
 		int32_t L_126 = V_27;
 		String_t* L_127 = V_0;
 		NullCheck(L_127);
@@ -10669,7 +10670,7 @@ IL_0464:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1814>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1814>
 		int32_t L_130;
 		L_130 = TMP_InputField_get_characterLimit_m59833E0A22BACBDF3EDA6A70A30B87272FBAA409(__this, NULL);
 		if ((((int32_t)L_130) <= ((int32_t)0)))
@@ -10703,7 +10704,7 @@ IL_0496:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1815>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1815>
 		String_t* L_135 = __this->___m_Text;
 		int32_t L_136;
 		L_136 = TMP_InputField_get_characterLimit_m59833E0A22BACBDF3EDA6A70A30B87272FBAA409(__this, NULL);
@@ -10716,9 +10717,9 @@ IL_0496:
 
 IL_04b4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1817>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1817>
 		TMP_InputField_UpdateStringPositionFromKeyboard_mED93ADC3A6B158262ECFB07CD6B21EC39B99022E(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1821>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1821>
 		String_t* L_138 = __this->___m_Text;
 		String_t* L_139 = V_0;
 		bool L_140;
@@ -10731,7 +10732,7 @@ IL_04b4:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1822>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1822>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_142 = __this->___m_SoftKeyboard;
 		String_t* L_143 = __this->___m_Text;
 		NullCheck(L_142);
@@ -10740,7 +10741,7 @@ IL_04b4:
 
 IL_04df:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1824>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1824>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 	}
 
@@ -10751,8 +10752,8 @@ IL_04e7:
 
 IL_04ed:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1829>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1830>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1829>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1830>
 		bool L_144 = __this->___m_HideMobileInput;
 		if (!L_144)
 		{
@@ -10808,7 +10809,7 @@ IL_0521:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1832>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1832>
 		int32_t L_151;
 		L_151 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_152;
@@ -10816,7 +10817,7 @@ IL_0521:
 		int32_t L_153;
 		L_153 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_151, L_152, NULL);
 		V_40 = L_153;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1833>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1833>
 		int32_t L_154;
 		L_154 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_155;
@@ -10824,7 +10825,7 @@ IL_0521:
 		int32_t L_156;
 		L_156 = Mathf_Abs_mD945EDDEA0D62D21BFDBAB7B1C0F18DFF1CEC905_inline(((int32_t)il2cpp_codegen_subtract(L_154, L_155)), NULL);
 		V_41 = L_156;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1834>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1834>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_157 = __this->___m_SoftKeyboard;
 		int32_t L_158 = V_40;
 		int32_t L_159 = V_41;
@@ -10838,8 +10839,8 @@ IL_0521:
 
 IL_0567:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1836>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1837>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1836>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1837>
 		bool L_161 = __this->___m_HideMobileInput;
 		if (!L_161)
 		{
@@ -10921,13 +10922,13 @@ IL_059f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1839>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1839>
 		TMP_InputField_UpdateStringPositionFromKeyboard_mED93ADC3A6B158262ECFB07CD6B21EC39B99022E(__this, NULL);
 	}
 
 IL_05ae:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1852>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1852>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_168 = __this->___m_SoftKeyboard;
 		if (!L_168)
 		{
@@ -10958,7 +10959,7 @@ IL_05c7:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1854>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1854>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_172 = __this->___m_SoftKeyboard;
 		NullCheck(L_172);
 		int32_t L_173;
@@ -10971,23 +10972,23 @@ IL_05c7:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1855>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1855>
 		__this->___m_WasCanceled = (bool)1;
 	}
 
 IL_05e9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1857>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1857>
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(37, __this, (BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F*)NULL);
 	}
 
 IL_05f2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1859>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1859>
 		return;
 	}
 }
-// Method Definition Index: 100463
+// Method Definition Index: 100719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_MayDrag_mB0F0807D39BED3B80A5EF8F757E8956D5869ED1F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11000,11 +11001,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_MayDrag_mB0F0807D39BED3B8
 	int32_t G_B8_0 = 0;
 	int32_t G_B10_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1863>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1864>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1865>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1866>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1867>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1863>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1864>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1865>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1866>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1867>
 		bool L_0;
 		L_0 = VirtualFuncInvoker0< bool >::Invoke(9, __this);
 		if (!L_0)
@@ -11086,17 +11087,17 @@ IL_0043:
 
 IL_0046:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1868>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1868>
 		bool L_9 = V_0;
 		return L_9;
 	}
 }
-// Method Definition Index: 100464
+// Method Definition Index: 100720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnBeginDrag_m0F9B51A6CEBD12DAB6DFFF1CA1F15AD1D3495940 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1872>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1872>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
 		bool L_1;
 		L_1 = TMP_InputField_MayDrag_mB0F0807D39BED3B80A5EF8F757E8956D5869ED1F(__this, L_0, NULL);
@@ -11108,23 +11109,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnBeginDrag_m0F9B51A6CEBD
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1873>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1873>
 		goto IL_0018;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1875>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1875>
 		__this->___m_UpdateDrag = (bool)1;
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1876>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1876>
 		return;
 	}
 }
-// Method Definition Index: 100465
+// Method Definition Index: 100721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDrag_mBA444852C709D10301A31FAD4DA6AD33479C05E4 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11149,7 +11150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDrag_mBA444852C709D1030
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B12_1 = NULL;
 	int32_t G_B19_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1880>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1880>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
 		bool L_1;
 		L_1 = TMP_InputField_MayDrag_mB0F0807D39BED3B80A5EF8F757E8956D5869ED1F(__this, L_0, NULL);
@@ -11161,13 +11162,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDrag_mBA444852C709D1030
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1881>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1881>
 		goto IL_01f2;
 	}
 
 IL_0014:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1885>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1885>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___m_TextComponent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_4 = ___0_eventData;
 		NullCheck(L_4);
@@ -11183,7 +11184,7 @@ IL_0014:
 		int32_t L_9;
 		L_9 = TMP_TextUtilities_GetCursorIndexFromPosition_mC95254F6E9C80CC65D7B89AB3281FB090DACAF43(L_3, L_6, L_8, (&V_0), NULL);
 		V_1 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1887>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1887>
 		bool L_10 = __this->___m_isRichTextEditingAllowed;
 		V_3 = L_10;
 		bool L_11 = V_3;
@@ -11193,7 +11194,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1889>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1889>
 		int32_t L_12 = V_0;
 		V_4 = (bool)((((int32_t)L_12) == ((int32_t)1))? 1 : 0);
 		bool L_13 = V_4;
@@ -11203,7 +11204,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1891>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1891>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_14 = __this->___m_TextComponent;
 		NullCheck(L_14);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_15;
@@ -11219,7 +11220,7 @@ IL_0014:
 
 IL_0071:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1893>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1893>
 		int32_t L_19 = V_0;
 		V_5 = (bool)((((int32_t)L_19) == ((int32_t)2))? 1 : 0);
 		bool L_20 = V_5;
@@ -11229,7 +11230,7 @@ IL_0071:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1895>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1895>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_21 = __this->___m_TextComponent;
 		NullCheck(L_21);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_22;
@@ -11258,7 +11259,7 @@ IL_00bb:
 
 IL_00c1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1900>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1900>
 		int32_t L_31 = V_0;
 		V_6 = (bool)((((int32_t)L_31) == ((int32_t)1))? 1 : 0);
 		bool L_32 = V_6;
@@ -11268,9 +11269,9 @@ IL_00c1:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1902>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1903>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1904>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1903>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1904>
 		int32_t L_33 = V_1;
 		if (!L_33)
 		{
@@ -11326,7 +11327,7 @@ IL_0129:
 
 IL_0132:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1906>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1906>
 		int32_t L_48 = V_0;
 		V_7 = (bool)((((int32_t)L_48) == ((int32_t)2))? 1 : 0);
 		bool L_49 = V_7;
@@ -11336,7 +11337,7 @@ IL_0132:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1908>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1908>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_50 = __this->___m_TextComponent;
 		NullCheck(L_50);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_51;
@@ -11364,15 +11365,15 @@ IL_017c:
 
 IL_017d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1912>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1912>
 		int32_t L_60;
 		L_60 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_61;
 		L_61 = TMP_InputField_GetCaretPositionFromStringIndex_m24E11A6B461D41DAD8CA4DC96F0AB263175DE283(__this, L_60, NULL);
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_61, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1914>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1914>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1916>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1916>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_62;
 		L_62 = TMP_InputField_get_textViewport_m51E9CFB11A78199484D2BC2750F19DB7D2A26763(__this, NULL);
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_63 = ___0_eventData;
@@ -11387,7 +11388,7 @@ IL_017d:
 		bool L_67;
 		L_67 = RectTransformUtility_RectangleContainsScreenPoint_mBA6600E46C416EF032491AED969AA00BE2249630(L_62, L_64, L_66, NULL);
 		__this->___m_DragPositionOutOfBounds = (bool)((((int32_t)L_67) == ((int32_t)0))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1917>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1917>
 		bool L_68 = __this->___m_DragPositionOutOfBounds;
 		if (!L_68)
 		{
@@ -11415,7 +11416,7 @@ IL_01cb:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1918>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1918>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_71 = ___0_eventData;
 		RuntimeObject* L_72;
 		L_72 = TMP_InputField_MouseDragOutsideRect_m19E6E5421BFCC996DC30FD6FCD07EF890931FB44(__this, L_71, NULL);
@@ -11427,9 +11428,9 @@ IL_01cb:
 
 IL_01e4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1920>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1920>
 		TMP_InputField_UpdateKeyboardStringPosition_m767CE12FCEEC4416181BEAB149C0A58597BA05C0(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1921>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1921>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_74 = ___0_eventData;
 		NullCheck(L_74);
 		VirtualActionInvoker0::Invoke(5, L_74);
@@ -11437,11 +11438,11 @@ IL_01e4:
 
 IL_01f2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1926>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1926>
 		return;
 	}
 }
-// Method Definition Index: 100466
+// Method Definition Index: 100722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TMP_InputField_MouseDragOutsideRect_m19E6E5421BFCC996DC30FD6FCD07EF890931FB44 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11465,12 +11466,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TMP_InputField_MouseDragOutsid
 		return L_2;
 	}
 }
-// Method Definition Index: 100467
+// Method Definition Index: 100723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnEndDrag_m0CB1102EBBDC28E1AFA38FD0D50469F08492D4AC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1969>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1969>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
 		bool L_1;
 		L_1 = TMP_InputField_MayDrag_mB0F0807D39BED3B80A5EF8F757E8956D5869ED1F(__this, L_0, NULL);
@@ -11482,23 +11483,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnEndDrag_m0CB1102EBBDC28
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1970>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1970>
 		goto IL_0018;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1972>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1972>
 		__this->___m_UpdateDrag = (bool)0;
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1973>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1973>
 		return;
 	}
 }
-// Method Definition Index: 100468
+// Method Definition Index: 100724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnPointerDown_mA194D68CFB19DF910D8EE1B63DF5FF4D795C6C8D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11549,7 +11550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnPointerDown_mA194D68CFB
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B44_1 = NULL;
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B44_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1977>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1977>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
 		bool L_1;
 		L_1 = TMP_InputField_MayDrag_mB0F0807D39BED3B80A5EF8F757E8956D5869ED1F(__this, L_0, NULL);
@@ -11561,13 +11562,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnPointerDown_mA194D68CFB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1978>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1978>
 		goto IL_0591;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1980>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1980>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_3;
 		L_3 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -11576,13 +11577,13 @@ IL_0016:
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_eventData;
 		NullCheck(L_3);
 		EventSystem_SetSelectedGameObject_m9675415B7B3FE13B35E2CCB220F0C8AF04ECA173(L_3, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1982>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1982>
 		bool L_6 = __this->___m_AllowInput;
 		V_0 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1983>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1983>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_7 = ___0_eventData;
 		Selectable_OnPointerDown_m4425D3C7641AAD2430A7E666F35047E2F3B623D3(__this, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1985>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1985>
 		bool L_8;
 		L_8 = TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1(__this, NULL);
 		V_5 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
@@ -11593,7 +11594,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1987>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1987>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_10 = __this->___m_SoftKeyboard;
 		if (!L_10)
 		{
@@ -11624,10 +11625,10 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1989>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1989>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_14 = ___0_eventData;
 		VirtualActionInvoker1< BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* >::Invoke(36, __this, L_14);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1990>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1990>
 		goto IL_0591;
 	}
 
@@ -11637,11 +11638,11 @@ IL_0074:
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1995>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1995>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_15 = __this->___m_ProcessingEvent;
 		bool L_16;
 		L_16 = Event_PopEvent_mC780BAA7CE4F0E75C8B5C7DC5EB430C278B0D0AE(L_15, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:1996>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:1996>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_17 = __this->___m_ProcessingEvent;
 		if (!L_17)
 		{
@@ -11665,13 +11666,13 @@ IL_009b:
 IL_009c:
 	{
 		V_1 = (bool)G_B12_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2002>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2002>
 		V_2 = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2003>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2003>
 		float L_20;
 		L_20 = Time_get_unscaledTime_mAF4040B858903E1325D1C65B8BF1AC61460B2503(NULL);
 		V_3 = L_20;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2005>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2005>
 		float L_21 = __this->___m_PointerDownClickStartTime;
 		float L_22 = __this->___m_DoubleClickDelay;
 		float L_23 = V_3;
@@ -11683,16 +11684,16 @@ IL_009c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2006>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2006>
 		V_2 = (bool)1;
 	}
 
 IL_00bd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2008>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2008>
 		float L_25 = V_3;
 		__this->___m_PointerDownClickStartTime = L_25;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2012>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2012>
 		bool L_26 = V_0;
 		if (L_26)
 		{
@@ -11720,7 +11721,7 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2016>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2016>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_29 = __this->___m_TextComponent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_30 = ___0_eventData;
 		NullCheck(L_30);
@@ -11736,7 +11737,7 @@ IL_00d3:
 		int32_t L_35;
 		L_35 = TMP_TextUtilities_GetCursorIndexFromPosition_mC95254F6E9C80CC65D7B89AB3281FB090DACAF43(L_29, L_32, L_34, (&V_9), NULL);
 		V_10 = L_35;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2018>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2018>
 		bool L_36 = V_1;
 		V_11 = L_36;
 		bool L_37 = V_11;
@@ -11746,7 +11747,7 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2020>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2020>
 		bool L_38 = __this->___m_isRichTextEditingAllowed;
 		V_12 = L_38;
 		bool L_39 = V_12;
@@ -11756,7 +11757,7 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2022>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2022>
 		int32_t L_40 = V_9;
 		V_13 = (bool)((((int32_t)L_40) == ((int32_t)1))? 1 : 0);
 		bool L_41 = V_13;
@@ -11766,7 +11767,7 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2024>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2024>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_42 = __this->___m_TextComponent;
 		NullCheck(L_42);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_43;
@@ -11782,7 +11783,7 @@ IL_00d3:
 
 IL_014a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2026>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2026>
 		int32_t L_47 = V_9;
 		V_14 = (bool)((((int32_t)L_47) == ((int32_t)2))? 1 : 0);
 		bool L_48 = V_14;
@@ -11792,7 +11793,7 @@ IL_014a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2028>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2028>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_49 = __this->___m_TextComponent;
 		NullCheck(L_49);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_50;
@@ -11821,7 +11822,7 @@ IL_0197:
 
 IL_019d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2033>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2033>
 		int32_t L_59 = V_9;
 		V_15 = (bool)((((int32_t)L_59) == ((int32_t)1))? 1 : 0);
 		bool L_60 = V_15;
@@ -11831,9 +11832,9 @@ IL_019d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2035>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2036>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2037>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2035>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2036>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2037>
 		int32_t L_61 = V_10;
 		if (!L_61)
 		{
@@ -11889,7 +11890,7 @@ IL_0209:
 
 IL_0212:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2039>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2039>
 		int32_t L_76 = V_9;
 		V_16 = (bool)((((int32_t)L_76) == ((int32_t)2))? 1 : 0);
 		bool L_77 = V_16;
@@ -11899,7 +11900,7 @@ IL_0212:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2041>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2041>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_78 = __this->___m_TextComponent;
 		NullCheck(L_78);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_79;
@@ -11932,7 +11933,7 @@ IL_0260:
 
 IL_0266:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2047>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2047>
 		bool L_88 = __this->___m_isRichTextEditingAllowed;
 		V_17 = L_88;
 		bool L_89 = V_17;
@@ -11942,7 +11943,7 @@ IL_0266:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2049>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2049>
 		int32_t L_90 = V_9;
 		V_18 = (bool)((((int32_t)L_90) == ((int32_t)1))? 1 : 0);
 		bool L_91 = V_18;
@@ -11952,7 +11953,7 @@ IL_0266:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2051>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2051>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_92 = __this->___m_TextComponent;
 		NullCheck(L_92);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_93;
@@ -11972,7 +11973,7 @@ IL_0266:
 
 IL_02b5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2053>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2053>
 		int32_t L_99 = V_9;
 		V_20 = (bool)((((int32_t)L_99) == ((int32_t)2))? 1 : 0);
 		bool L_100 = V_20;
@@ -11982,7 +11983,7 @@ IL_02b5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2055>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2055>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_101 = __this->___m_TextComponent;
 		NullCheck(L_101);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_102;
@@ -12015,7 +12016,7 @@ IL_030e:
 
 IL_0314:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2060>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2060>
 		int32_t L_113 = V_9;
 		V_21 = (bool)((((int32_t)L_113) == ((int32_t)1))? 1 : 0);
 		bool L_114 = V_21;
@@ -12025,9 +12026,9 @@ IL_0314:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2062>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2063>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2064>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2062>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2063>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2064>
 		int32_t L_115 = V_10;
 		if (!L_115)
 		{
@@ -12092,7 +12093,7 @@ IL_0381:
 
 IL_0395:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2066>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2066>
 		int32_t L_132 = V_9;
 		V_22 = (bool)((((int32_t)L_132) == ((int32_t)2))? 1 : 0);
 		bool L_133 = V_22;
@@ -12102,7 +12103,7 @@ IL_0395:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2068>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2068>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_134 = __this->___m_TextComponent;
 		NullCheck(L_134);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_135;
@@ -12138,7 +12139,7 @@ IL_03ef:
 
 IL_03f0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2074>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2074>
 		bool L_146 = V_2;
 		V_23 = L_146;
 		bool L_147 = V_23;
@@ -12148,7 +12149,7 @@ IL_03f0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2076>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2076>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_148 = __this->___m_TextComponent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_149 = ___0_eventData;
 		NullCheck(L_149);
@@ -12164,7 +12165,7 @@ IL_03f0:
 		int32_t L_154;
 		L_154 = TMP_TextUtilities_FindIntersectingWord_m93E6DBCA2781A67271E7D0F8906CA0488CA08EB2(L_148, L_151, L_153, NULL);
 		V_24 = L_154;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2078>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2078>
 		int32_t L_155 = V_24;
 		V_25 = (bool)((((int32_t)((((int32_t)L_155) == ((int32_t)(-1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_156 = V_25;
@@ -12174,7 +12175,7 @@ IL_03f0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2083>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2083>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_157 = __this->___m_TextComponent;
 		NullCheck(L_157);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_158;
@@ -12185,7 +12186,7 @@ IL_03f0:
 		NullCheck(L_159);
 		int32_t L_161 = ((L_159)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_160)))->___firstCharacterIndex;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_161, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2084>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2084>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_162 = __this->___m_TextComponent;
 		NullCheck(L_162);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_163;
@@ -12196,7 +12197,7 @@ IL_03f0:
 		NullCheck(L_164);
 		int32_t L_166 = ((L_164)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_165)))->___lastCharacterIndex;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, ((int32_t)il2cpp_codegen_add(L_166, 1)), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2086>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2086>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_167 = __this->___m_TextComponent;
 		NullCheck(L_167);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_168;
@@ -12208,7 +12209,7 @@ IL_03f0:
 		NullCheck(L_169);
 		int32_t L_171 = ((L_169)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_170)))->___index;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_171, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2087>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2087>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_172 = __this->___m_TextComponent;
 		NullCheck(L_172);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_173;
@@ -12235,14 +12236,14 @@ IL_03f0:
 
 IL_04e9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2092>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2092>
 		int32_t L_182 = V_10;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_182, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2093>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2093>
 		int32_t L_183;
 		L_183 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, ((int32_t)il2cpp_codegen_add(L_183, 1)), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2095>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2095>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_184 = __this->___m_TextComponent;
 		NullCheck(L_184);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_185;
@@ -12253,7 +12254,7 @@ IL_04e9:
 		NullCheck(L_186);
 		int32_t L_188 = ((L_186)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_187)))->___index;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_188, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2096>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2096>
 		int32_t L_189;
 		L_189 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_190 = __this->___m_TextComponent;
@@ -12275,7 +12276,7 @@ IL_0550:
 
 IL_0553:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2101>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2101>
 		int32_t L_195;
 		L_195 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_196;
@@ -12289,17 +12290,17 @@ IL_0553:
 
 IL_0574:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2104>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2104>
 		__this->___m_isSelectAll = (bool)0;
 	}
 
 IL_057c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2107>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2107>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2108>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2108>
 		TMP_InputField_UpdateKeyboardStringPosition_m767CE12FCEEC4416181BEAB149C0A58597BA05C0(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2109>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2109>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_199 = ___0_eventData;
 		NullCheck(L_199);
 		VirtualActionInvoker0::Invoke(5, L_199);
@@ -12307,11 +12308,11 @@ IL_057c:
 
 IL_0591:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2114>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2114>
 		return;
 	}
 }
-// Method Definition Index: 100469
+// Method Definition Index: 100725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_KeyPressed_m1C528E6E9E2FB05DFA8CA61F880DEE24C2C304F6 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___0_evt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12353,13 +12354,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_KeyPressed_m1C528E6E9E
 	int32_t G_B78_0 = 0;
 	int32_t G_B83_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2124>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2124>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_0 = ___0_evt;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = Event_get_modifiers_mD55E7CF06EB720434F0F174EA569B2A29792D39B(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2125>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2125>
 		bool L_2 = __this->___m_IsApplePlatform;
 		if (L_2)
 		{
@@ -12381,13 +12382,13 @@ IL_0018:
 IL_001e:
 	{
 		V_1 = (bool)G_B3_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2126>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2126>
 		int32_t L_5 = V_0;
 		V_2 = (bool)((!(((uint32_t)((int32_t)((int32_t)L_5&1))) <= ((uint32_t)0)))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2127>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2127>
 		int32_t L_6 = V_0;
 		V_3 = (bool)((!(((uint32_t)((int32_t)((int32_t)L_6&4))) <= ((uint32_t)0)))? 1 : 0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2128>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2128>
 		bool L_7 = V_1;
 		if (!L_7)
 		{
@@ -12415,13 +12416,13 @@ IL_0039:
 IL_003a:
 	{
 		V_4 = (bool)G_B7_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2129>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2129>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_10 = ___0_evt;
 		NullCheck(L_10);
 		int32_t L_11;
 		L_11 = Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64(L_10, NULL);
 		__this->___m_LastKeyCode = L_11;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2131>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2131>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_12 = ___0_evt;
 		NullCheck(L_12);
 		int32_t L_13;
@@ -12601,47 +12602,47 @@ IL_00c3:
 
 IL_0101:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2135>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2135>
 		TMP_InputField_Backspace_m1962DCE85EA39B861EF3E9E147A63C8CFE58A917(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2136>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2136>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0111:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2141>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2141>
 		TMP_InputField_DeleteKey_m3EE34B2EE784E0F8833BCEA668B590D8C838BDCC(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2142>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2142>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0121:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2147>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2147>
 		bool L_27 = V_2;
 		bool L_28 = V_1;
 		TMP_InputField_MoveToStartOfLine_mC73D470B797643AC87FCFCC778D43DD945B18252(__this, L_27, L_28, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2148>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2148>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0133:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2153>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2153>
 		bool L_29 = V_2;
 		bool L_30 = V_1;
 		TMP_InputField_MoveToEndOfLine_m42BC00BF1E1A82E956220244E72E577C667297D8(__this, L_29, L_30, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2154>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2154>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0145:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2160>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2160>
 		bool L_31 = V_4;
 		V_9 = L_31;
 		bool L_32 = V_9;
@@ -12651,22 +12652,22 @@ IL_0145:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2162>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2162>
 		TMP_InputField_SelectAll_mC66107E00F20D1E401A04108D2A9136559AD23F7(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2163>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2163>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_015e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2165>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2165>
 		goto IL_030a;
 	}
 
 IL_0163:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2171>
 		bool L_33 = V_4;
 		V_10 = L_33;
 		bool L_34 = V_10;
@@ -12676,7 +12677,7 @@ IL_0163:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2173>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2173>
 		int32_t L_35;
 		L_35 = TMP_InputField_get_inputType_m93A6CC8FF76412F46471D91952323CE4C63B7D34(__this, NULL);
 		V_11 = (bool)((((int32_t)((((int32_t)L_35) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -12687,7 +12688,7 @@ IL_0163:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2174>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2174>
 		String_t* L_37;
 		L_37 = TMP_InputField_GetSelectedString_m4BF128EBC96DAB95E95CD9F292A1EB99AD1238C6(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
@@ -12697,27 +12698,27 @@ IL_0163:
 
 IL_018d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2176>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2176>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		TMP_InputField_set_clipboard_m2A21EC4F18EF6AB80DD0D03887BB115E3AB5D0BB(_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
 	}
 
 IL_0198:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2177>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_01a0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2179>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2179>
 		goto IL_030a;
 	}
 
 IL_01a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2185>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2185>
 		bool L_38 = V_4;
 		V_12 = L_38;
 		bool L_39 = V_12;
@@ -12727,25 +12728,25 @@ IL_01a5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2187>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2187>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		String_t* L_40;
 		L_40 = TMP_InputField_get_clipboard_m53271C5A442FE382959DEF76525B14616E58BFAE(NULL);
 		VirtualActionInvoker1< String_t* >::Invoke(70, __this, L_40);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2188>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_01c3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2190>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2190>
 		goto IL_030a;
 	}
 
 IL_01c8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2196>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2196>
 		bool L_41 = V_4;
 		V_13 = L_41;
 		bool L_42 = V_13;
@@ -12755,7 +12756,7 @@ IL_01c8:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2198>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2198>
 		int32_t L_43;
 		L_43 = TMP_InputField_get_inputType_m93A6CC8FF76412F46471D91952323CE4C63B7D34(__this, NULL);
 		V_14 = (bool)((((int32_t)((((int32_t)L_43) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -12766,7 +12767,7 @@ IL_01c8:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2199>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2199>
 		String_t* L_45;
 		L_45 = TMP_InputField_GetSelectedString_m4BF128EBC96DAB95E95CD9F292A1EB99AD1238C6(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
@@ -12776,95 +12777,95 @@ IL_01c8:
 
 IL_01f2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2201>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2201>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		TMP_InputField_set_clipboard_m2A21EC4F18EF6AB80DD0D03887BB115E3AB5D0BB(_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
 	}
 
 IL_01fd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2202>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2202>
 		TMP_InputField_Delete_mD817C69CFF25B762DF673A1FD31DAF0E2F761784(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2203>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2203>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2204>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2204>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2205>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2205>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_021a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2207>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2207>
 		goto IL_030a;
 	}
 
 IL_021f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2212>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2212>
 		bool L_46 = V_2;
 		bool L_47 = V_1;
 		TMP_InputField_MoveLeft_m787CBD78E57FDD7DC28A10CA1624EA4118157898(__this, L_46, L_47, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2213>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2213>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0231:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2218>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2218>
 		bool L_48 = V_2;
 		bool L_49 = V_1;
 		TMP_InputField_MoveRight_m8831525A4FF9E75CA86BD5E4BAC9351EF640D497(__this, L_48, L_49, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2219>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2219>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0243:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2224>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2224>
 		bool L_50 = V_2;
 		TMP_InputField_MoveUp_m0A8E579FDBE203C29D7AF1B4225C9A64498DE5A9(__this, L_50, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2225>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2225>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0254:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2230>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2230>
 		bool L_51 = V_2;
 		TMP_InputField_MoveDown_mB8F65AD03355C867F63BAB0021C93B75F534CCBE(__this, L_51, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2231>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2231>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0265:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2236>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2236>
 		bool L_52 = V_2;
 		TMP_InputField_MovePageUp_mA945CEDD104AAC4B417B1AC6D95FC75798ED3040(__this, L_52, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2237>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2237>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0276:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2242>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2242>
 		bool L_53 = V_2;
 		TMP_InputField_MovePageDown_mE32EFCBEB2A1D230D3C6C8B27357C454F4AD5EC2(__this, L_53, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2243>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2243>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_0287:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2250>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2250>
 		int32_t L_54;
 		L_54 = TMP_InputField_get_lineType_mE221F133A310EB6C93DA24E1F5900E948771D64C(__this, NULL);
 		V_15 = (bool)((((int32_t)((((int32_t)L_54) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -12875,22 +12876,22 @@ IL_0287:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2252>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2252>
 		__this->___m_ReleaseSelection = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2253>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2253>
 		V_8 = 1;
 		goto IL_03ae;
 	}
 
 IL_02aa:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2257>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2257>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_56 = __this->___m_TextComponent;
 		NullCheck(L_56);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_57;
 		L_57 = TMP_Text_get_textInfo_mA24C606B8EA51436E4AA3B9D6DCDFA7A8995E10E(L_56, NULL);
 		V_16 = L_57;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2259>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2259>
 		int32_t L_58 = __this->___m_LineLimit;
 		if ((((int32_t)L_58) <= ((int32_t)0)))
 		{
@@ -12928,39 +12929,39 @@ IL_02da:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2261>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2261>
 		__this->___m_ReleaseSelection = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2262>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2262>
 		V_8 = 1;
 		goto IL_03ae;
 	}
 
 IL_02f0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2265>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2265>
 		goto IL_030a;
 	}
 
 IL_02f3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2270>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2270>
 		__this->___m_ReleaseSelection = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2271>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2271>
 		__this->___m_WasCanceled = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2272>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2272>
 		V_8 = 1;
 		goto IL_03ae;
 	}
 
 IL_030a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2276>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2276>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_64 = ___0_evt;
 		NullCheck(L_64);
 		Il2CppChar L_65;
 		L_65 = Event_get_character_m8F7A92E90EF65B9379C01432B42D6BF818C32A61(L_64, NULL);
 		V_5 = L_65;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2279>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2279>
 		bool L_66;
 		L_66 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		if (L_66)
@@ -13014,14 +13015,14 @@ IL_0332:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2280>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2280>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_033d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2283>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2283>
 		Il2CppChar L_71 = V_5;
 		if ((((int32_t)L_71) == ((int32_t)((int32_t)13))))
 		{
@@ -13049,13 +13050,13 @@ IL_034b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2284>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2284>
 		V_5 = ((int32_t)10);
 	}
 
 IL_0355:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2287>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2287>
 		bool L_74 = V_2;
 		if (!L_74)
 		{
@@ -13083,13 +13084,13 @@ IL_0361:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2288>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2288>
 		V_5 = ((int32_t)11);
 	}
 
 IL_036b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2290>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2290>
 		Il2CppChar L_77 = V_5;
 		bool L_78;
 		L_78 = VirtualFuncInvoker1< bool, Il2CppChar >::Invoke(67, __this, L_77);
@@ -13101,14 +13102,14 @@ IL_036b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2292>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2292>
 		Il2CppChar L_80 = V_5;
 		VirtualActionInvoker1< Il2CppChar >::Invoke(71, __this, L_80);
 	}
 
 IL_0384:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2295>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2295>
 		Il2CppChar L_81 = V_5;
 		V_22 = (bool)((((int32_t)L_81) == ((int32_t)0))? 1 : 0);
 		bool L_82 = V_22;
@@ -13118,7 +13119,7 @@ IL_0384:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2297>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2297>
 		int32_t L_83;
 		L_83 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
 		V_23 = (bool)((((int32_t)L_83) > ((int32_t)0))? 1 : 0);
@@ -13129,7 +13130,7 @@ IL_0384:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2299>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2299>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
@@ -13139,19 +13140,19 @@ IL_03a8:
 
 IL_03a9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2302>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2302>
 		V_8 = 0;
 		goto IL_03ae;
 	}
 
 IL_03ae:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2303>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2303>
 		int32_t L_85 = V_8;
 		return L_85;
 	}
 }
-// Method Definition Index: 100470
+// Method Definition Index: 100726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_IsValidChar_m12ACC6064ABA5E72C3CF133AFC578300A67EEFC1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Il2CppChar ___0_c, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -13160,7 +13161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_IsValidChar_m12ACC6064ABA
 	bool V_3 = false;
 	int32_t G_B5_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2308>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2308>
 		Il2CppChar L_0 = ___0_c;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)127)))? 1 : 0);
 		bool L_1 = V_0;
@@ -13170,14 +13171,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TMP_InputField_IsValidChar_m12ACC6064ABA
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2309>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2309>
 		V_1 = (bool)0;
 		goto IL_0034;
 	}
 
 IL_000e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2312>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2312>
 		Il2CppChar L_2 = ___0_c;
 		if ((((int32_t)L_2) == ((int32_t)((int32_t)9))))
 		{
@@ -13205,14 +13206,14 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2313>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2313>
 		V_1 = (bool)1;
 		goto IL_0034;
 	}
 
 IL_0023:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2316>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2316>
 		Il2CppChar L_5 = ___0_c;
 		V_3 = (bool)((((int32_t)L_5) < ((int32_t)((int32_t)32)))? 1 : 0);
 		bool L_6 = V_3;
@@ -13222,38 +13223,38 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2317>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2317>
 		V_1 = (bool)0;
 		goto IL_0034;
 	}
 
 IL_0030:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2319>
 		V_1 = (bool)1;
 		goto IL_0034;
 	}
 
 IL_0034:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2323>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2323>
 		bool L_7 = V_1;
 		return L_7;
 	}
 }
-// Method Definition Index: 100471
+// Method Definition Index: 100727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ProcessEvent_mED1F52CCCF82A49EF61E080D8A55B63EB8878124 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___0_e, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2332>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2332>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_0 = ___0_e;
 		int32_t L_1;
 		L_1 = TMP_InputField_KeyPressed_m1C528E6E9E2FB05DFA8CA61F880DEE24C2C304F6(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2333>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2333>
 		return;
 	}
 }
-// Method Definition Index: 100472
+// Method Definition Index: 100728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnUpdateSelected_m04CB39F3A7156D62E73D7A04E52F4356DD40FCA3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13283,7 +13284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnUpdateSelected_m04CB39F
 	int32_t G_B33_0 = 0;
 	int32_t G_B35_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2342>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2342>
 		bool L_0;
 		L_0 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		V_2 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
@@ -13294,28 +13295,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnUpdateSelected_m04CB39F
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2343>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2343>
 		goto IL_0159;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2345>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2345>
 		V_0 = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2346>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2346>
 		V_1 = 0;
 		goto IL_0115;
 	}
 
 IL_001c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2352>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2352>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_2 = __this->___m_ProcessingEvent;
 		NullCheck(L_2);
 		int32_t L_3;
 		L_3 = Event_get_rawType_mD7CD874F3C8DFD4DFB6237E79A7C3A484B33CE56(L_2, NULL);
 		V_3 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2354>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2354>
 		int32_t L_4 = V_3;
 		V_4 = (bool)((((int32_t)L_4) == ((int32_t)5))? 1 : 0);
 		bool L_5 = V_4;
@@ -13325,13 +13326,13 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2355>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2355>
 		goto IL_0115;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2357>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2357>
 		int32_t L_6 = V_3;
 		V_5 = (bool)((((int32_t)L_6) == ((int32_t)4))? 1 : 0);
 		bool L_7 = V_5;
@@ -13341,9 +13342,9 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2359>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2359>
 		V_0 = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2362>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2362>
 		bool L_8 = __this->___m_IsCompositionActive;
 		if (!L_8)
 		{
@@ -13372,7 +13373,7 @@ IL_005c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2365>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2365>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_11 = __this->___m_ProcessingEvent;
 		NullCheck(L_11);
 		Il2CppChar L_12;
@@ -13406,7 +13407,7 @@ IL_0081:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2366>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2366>
 		goto IL_0115;
 	}
 
@@ -13416,12 +13417,12 @@ IL_008c:
 
 IL_008d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2369>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2369>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_16 = __this->___m_ProcessingEvent;
 		int32_t L_17;
 		L_17 = TMP_InputField_KeyPressed_m1C528E6E9E2FB05DFA8CA61F880DEE24C2C304F6(__this, L_16, NULL);
 		V_1 = L_17;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2370>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2370>
 		int32_t L_18 = V_1;
 		V_8 = (bool)((((int32_t)L_18) == ((int32_t)1))? 1 : 0);
 		bool L_19 = V_8;
@@ -13431,7 +13432,7 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2372>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2372>
 		bool L_20 = __this->___m_WasCanceled;
 		V_9 = (bool)((((int32_t)L_20) == ((int32_t)0))? 1 : 0);
 		bool L_21 = V_9;
@@ -13441,31 +13442,31 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2373>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2373>
 		TMP_InputField_SendOnSubmit_m3993BECBCAB4632CD5C564C0BC38486FC2320D14(__this, NULL);
 	}
 
 IL_00bb:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2375>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2375>
 		TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D(__this, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2376>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2376>
 		goto IL_0129;
 	}
 
 IL_00c5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2379>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2379>
 		__this->___m_IsTextComponentUpdateRequired = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2380>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2380>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2382>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2382>
 		goto IL_0115;
 	}
 
 IL_00d5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2385>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2385>
 		int32_t L_22 = V_3;
 		V_11 = L_22;
 		int32_t L_23 = V_11;
@@ -13482,7 +13483,7 @@ IL_00d5:
 
 IL_00e6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2389>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2389>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_25 = __this->___m_ProcessingEvent;
 		NullCheck(L_25);
 		String_t* L_26;
@@ -13504,17 +13505,17 @@ IL_00e6:
 
 IL_0107:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2392>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2392>
 		TMP_InputField_SelectAll_mC66107E00F20D1E401A04108D2A9136559AD23F7(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2393>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2393>
 		V_0 = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2394>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2394>
 		goto IL_0112;
 	}
 
 IL_0112:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2396>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2396>
 		goto IL_0114;
 	}
 
@@ -13524,7 +13525,7 @@ IL_0114:
 
 IL_0115:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2348>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2348>
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_30 = __this->___m_ProcessingEvent;
 		bool L_31;
 		L_31 = Event_PopEvent_mC780BAA7CE4F0E75C8B5C7DC5EB430C278B0D0AE(L_30, NULL);
@@ -13538,7 +13539,7 @@ IL_0115:
 
 IL_0129:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2401>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2401>
 		bool L_33 = V_0;
 		if (L_33)
 		{
@@ -13585,9 +13586,9 @@ IL_0143:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2403>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2403>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2404>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2404>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_37 = ___0_eventData;
 		NullCheck(L_37);
 		VirtualActionInvoker0::Invoke(5, L_37);
@@ -13595,11 +13596,11 @@ IL_0143:
 
 IL_0159:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2406>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2406>
 		return;
 	}
 }
-// Method Definition Index: 100473
+// Method Definition Index: 100729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnScroll_m87663801D19AE16C594D8C106CD2A5532CE1B22E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13617,7 +13618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnScroll_m87663801D19AE16
 	memset((&V_4), 0, sizeof(V_4));
 	bool V_5 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2415>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2415>
 		int32_t L_0 = __this->___m_LineType;
 		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_1;
@@ -13627,7 +13628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnScroll_m87663801D19AE16
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2417>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2417>
 		RuntimeObject* L_2 = __this->___m_IScrollHandlerParent;
 		V_2 = (bool)((!(((RuntimeObject*)(RuntimeObject*)L_2) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_3 = V_2;
@@ -13637,7 +13638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnScroll_m87663801D19AE16
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2418>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2418>
 		RuntimeObject* L_4 = __this->___m_IScrollHandlerParent;
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_5 = ___0_eventData;
 		NullCheck(L_4);
@@ -13646,13 +13647,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnScroll_m87663801D19AE16
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2420>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2420>
 		goto IL_00e1;
 	}
 
 IL_002e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2423>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2423>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___m_TextComponent;
 		NullCheck(L_6);
 		float L_7;
@@ -13672,24 +13673,24 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2424>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2424>
 		goto IL_00e1;
 	}
 
 IL_0058:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2426>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2426>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_12 = ___0_eventData;
 		NullCheck(L_12);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13;
 		L_13 = PointerEventData_get_scrollDelta_m38C419C3E84811D17D1A42973AF7B3A457B316EA_inline(L_12, NULL);
 		float L_14 = L_13.___y;
 		V_0 = ((-L_14));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2429>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2429>
 		float L_15;
 		L_15 = TMP_InputField_GetScrollPositionRelativeToViewport_mE320B683741E2E7403D1F2ADCD65F44B68FA4158(__this, NULL);
 		__this->___m_ScrollPosition = L_15;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2431>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2431>
 		float L_16 = __this->___m_ScrollPosition;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_17 = __this->___m_TextComponent;
 		NullCheck(L_17);
@@ -13700,15 +13701,15 @@ IL_0058:
 		float L_20 = V_0;
 		float L_21 = __this->___m_ScrollSensitivity;
 		__this->___m_ScrollPosition = ((float)il2cpp_codegen_add(L_16, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)((1.0f)/((float)L_19))), L_20)), L_21))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2433>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2433>
 		float L_22 = __this->___m_ScrollPosition;
 		float L_23;
 		L_23 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_22, NULL);
 		__this->___m_ScrollPosition = L_23;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2435>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2435>
 		float L_24 = __this->___m_ScrollPosition;
 		TMP_InputField_AdjustTextPositionRelativeToViewport_m7EC3FED9FB3F4F5450E60552FE36F0D79E48592C(__this, L_24, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2437>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2437>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_25 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_26;
@@ -13721,7 +13722,7 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2439>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2439>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_28 = __this->___m_VerticalScrollbar;
 		float L_29 = __this->___m_ScrollPosition;
 		NullCheck(L_28);
@@ -13730,11 +13731,11 @@ IL_0058:
 
 IL_00e1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2443>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2443>
 		return;
 	}
 }
-// Method Definition Index: 100474
+// Method Definition Index: 100730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_GetScrollPositionRelativeToViewport_mE320B683741E2E7403D1F2ADCD65F44B68FA4158 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
@@ -13742,13 +13743,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_GetScrollPositionRelativ
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2448>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2448>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___m_TextViewport;
 		NullCheck(L_0);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_1;
 		L_1 = RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2450>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2450>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___m_TextComponent;
 		NullCheck(L_2);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_3;
@@ -13784,10 +13785,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_GetScrollPositionRelativ
 		float L_19;
 		L_19 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_0), NULL);
 		V_1 = ((float)(((float)il2cpp_codegen_add(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_5, L_8)), L_11)), L_12)), L_16))/((float)il2cpp_codegen_subtract(L_18, L_19))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2452>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2452>
 		float L_20 = V_1;
 		V_1 = ((float)(((float)il2cpp_codegen_cast_double_to_int<int32_t>(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_20, (1000.0f))), (0.5f)))))/(1000.0f)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2454>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2454>
 		float L_21 = V_1;
 		V_2 = L_21;
 		goto IL_0097;
@@ -13795,12 +13796,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_GetScrollPositionRelativ
 
 IL_0097:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2455>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2455>
 		float L_22 = V_2;
 		return L_22;
 	}
 }
-// Method Definition Index: 100475
+// Method Definition Index: 100731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_GetSelectedString_m4BF128EBC96DAB95E95CD9F292A1EB99AD1238C6 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13816,7 +13817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_GetSelectedString_m4
 	bool V_4 = false;
 	int32_t V_5 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2459>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2459>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		V_2 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
@@ -13827,22 +13828,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TMP_InputField_GetSelectedString_m4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2460>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2460>
 		V_3 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		goto IL_004a;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2462>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2462>
 		int32_t L_2;
 		L_2 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2463>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2463>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_1 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2466>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2466>
 		int32_t L_4 = V_0;
 		int32_t L_5 = V_1;
 		V_4 = (bool)((((int32_t)L_4) > ((int32_t)L_5))? 1 : 0);
@@ -13853,20 +13854,20 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2468>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2468>
 		int32_t L_7 = V_0;
 		V_5 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2469>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2469>
 		int32_t L_8 = V_1;
 		V_0 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2470>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2470>
 		int32_t L_9 = V_5;
 		V_1 = L_9;
 	}
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2479>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2479>
 		String_t* L_10;
 		L_10 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_11 = V_0;
@@ -13881,12 +13882,12 @@ IL_0038:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2480>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2480>
 		String_t* L_15 = V_3;
 		return L_15;
 	}
 }
-// Method Definition Index: 100476
+// Method Definition Index: 100732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindNextWordBegin_m1207B66382CCC488015CD5EB2E017C20E20A6AF2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13900,7 +13901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindNextWordBegin_m120
 	int32_t V_2 = 0;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2484>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2484>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		String_t* L_1;
@@ -13916,7 +13917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindNextWordBegin_m120
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2485>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2485>
 		String_t* L_4;
 		L_4 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		NullCheck(L_4);
@@ -13928,7 +13929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindNextWordBegin_m120
 
 IL_002b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2487>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2487>
 		String_t* L_6;
 		L_6 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
@@ -13939,7 +13940,7 @@ IL_002b:
 		int32_t L_9;
 		L_9 = String_IndexOfAny_m1AE18DB3B14A0D05EF4A2D3403D4DC1930A199F3(L_6, L_7, ((int32_t)il2cpp_codegen_add(L_8, 1)), NULL);
 		V_0 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2489>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2489>
 		int32_t L_10 = V_0;
 		V_3 = (bool)((((int32_t)L_10) == ((int32_t)(-1)))? 1 : 0);
 		bool L_11 = V_3;
@@ -13949,7 +13950,7 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2490>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2490>
 		String_t* L_12;
 		L_12 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		NullCheck(L_12);
@@ -13961,14 +13962,14 @@ IL_002b:
 
 IL_005a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2492>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2492>
 		int32_t L_14 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_14, 1));
 	}
 
 IL_005e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2494>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2494>
 		int32_t L_15 = V_0;
 		V_2 = L_15;
 		goto IL_0062;
@@ -13976,12 +13977,12 @@ IL_005e:
 
 IL_0062:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2495>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2495>
 		int32_t L_16 = V_2;
 		return L_16;
 	}
 }
-// Method Definition Index: 100477
+// Method Definition Index: 100733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveRight_m8831525A4FF9E75CA86BD5E4BAC9351EF640D497 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_ctrl, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -13997,7 +13998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveRight_m8831525A4FF9E7
 	int32_t G_B11_0 = 0;
 	int32_t G_B18_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2499>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2499>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		if (!L_0)
@@ -14026,7 +14027,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2503>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2503>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_4;
@@ -14038,7 +14039,7 @@ IL_0010:
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_6, NULL);
 		int32_t L_7 = V_2;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2504>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2504>
 		int32_t L_8;
 		L_8 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_9;
@@ -14048,13 +14049,13 @@ IL_0010:
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_10, NULL);
 		int32_t L_11 = V_2;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2509>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2509>
 		goto IL_0250;
 	}
 
 IL_0059:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2513>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2513>
 		bool L_12 = ___1_ctrl;
 		V_3 = L_12;
 		bool L_13 = V_3;
@@ -14064,7 +14065,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2514>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2514>
 		int32_t L_14;
 		L_14 = TMP_InputField_FindNextWordBegin_m1207B66382CCC488015CD5EB2E017C20E20A6AF2(__this, NULL);
 		V_0 = L_14;
@@ -14073,7 +14074,7 @@ IL_0059:
 
 IL_006a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2517>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2517>
 		bool L_15 = __this->___m_isRichTextEditingAllowed;
 		V_4 = L_15;
 		bool L_16 = V_4;
@@ -14083,7 +14084,7 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2520>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2520>
 		int32_t L_17;
 		L_17 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		String_t* L_18;
@@ -14126,7 +14127,7 @@ IL_00a4:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2521>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2521>
 		int32_t L_25;
 		L_25 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_add(L_25, 2));
@@ -14135,7 +14136,7 @@ IL_00a4:
 
 IL_00b5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2523>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2523>
 		int32_t L_26;
 		L_26 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_add(L_26, 1));
@@ -14148,7 +14149,7 @@ IL_00be:
 
 IL_00c4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2528>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2528>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_27 = __this->___m_TextComponent;
 		NullCheck(L_27);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_28;
@@ -14194,7 +14195,7 @@ IL_0112:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2529>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2529>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_38 = __this->___m_TextComponent;
 		NullCheck(L_38);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_39;
@@ -14221,7 +14222,7 @@ IL_0112:
 
 IL_0160:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2531>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2531>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_48 = __this->___m_TextComponent;
 		NullCheck(L_48);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_49;
@@ -14255,7 +14256,7 @@ IL_01a3:
 
 IL_01a4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2536>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2536>
 		bool L_58 = ___0_shift;
 		V_7 = L_58;
 		bool L_59 = V_7;
@@ -14265,10 +14266,10 @@ IL_01a4:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2538>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2538>
 		int32_t L_60 = V_0;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_60, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2539>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2539>
 		int32_t L_61;
 		L_61 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_62;
@@ -14279,14 +14280,14 @@ IL_01a4:
 
 IL_01cd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2543>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2543>
 		int32_t L_63 = V_0;
 		int32_t L_64 = L_63;
 		V_2 = L_64;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_64, NULL);
 		int32_t L_65 = V_2;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_65, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2546>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2546>
 		int32_t L_66;
 		L_66 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_67 = __this->___m_TextComponent;
@@ -14317,7 +14318,7 @@ IL_01cd:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2547>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2547>
 		int32_t L_78;
 		L_78 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_79;
@@ -14335,11 +14336,11 @@ IL_024f:
 
 IL_0250:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2553>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2553>
 		return;
 	}
 }
-// Method Definition Index: 100478
+// Method Definition Index: 100734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindPrevWordBegin_mD8DA9061047B673CDB67C2F762A14C1514CFEC17 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14353,7 +14354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindPrevWordBegin_mD8D
 	int32_t V_2 = 0;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2557>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2557>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_1 = (bool)((((int32_t)((int32_t)il2cpp_codegen_subtract(L_0, 2))) < ((int32_t)0))? 1 : 0);
@@ -14364,14 +14365,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_FindPrevWordBegin_mD8D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2558>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2558>
 		V_2 = 0;
 		goto IL_0041;
 	}
 
 IL_0014:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2560>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2560>
 		String_t* L_2;
 		L_2 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
@@ -14382,7 +14383,7 @@ IL_0014:
 		int32_t L_5;
 		L_5 = String_LastIndexOfAny_mE627BF79C35A4C2C4CE3D973AB30B963F230F361(L_2, L_3, ((int32_t)il2cpp_codegen_subtract(L_4, 2)), NULL);
 		V_0 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2562>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2562>
 		int32_t L_6 = V_0;
 		V_3 = (bool)((((int32_t)L_6) == ((int32_t)(-1)))? 1 : 0);
 		bool L_7 = V_3;
@@ -14392,21 +14393,21 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2563>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2563>
 		V_0 = 0;
 		goto IL_003d;
 	}
 
 IL_0039:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2565>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2565>
 		int32_t L_8 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_003d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2567>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2567>
 		int32_t L_9 = V_0;
 		V_2 = L_9;
 		goto IL_0041;
@@ -14414,12 +14415,12 @@ IL_003d:
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2568>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2568>
 		int32_t L_10 = V_2;
 		return L_10;
 	}
 }
-// Method Definition Index: 100479
+// Method Definition Index: 100735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveLeft_m787CBD78E57FDD7DC28A10CA1624EA4118157898 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_ctrl, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -14437,7 +14438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveLeft_m787CBD78E57FDD7
 	int32_t G_B22_0 = 0;
 	int32_t G_B31_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2572>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2572>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		if (!L_0)
@@ -14466,7 +14467,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2576>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2576>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_4;
@@ -14478,7 +14479,7 @@ IL_0010:
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_6, NULL);
 		int32_t L_7 = V_2;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2577>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2577>
 		int32_t L_8;
 		L_8 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_9;
@@ -14488,13 +14489,13 @@ IL_0010:
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_10, NULL);
 		int32_t L_11 = V_2;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_11, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2582>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2582>
 		goto IL_021a;
 	}
 
 IL_0059:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2586>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2586>
 		bool L_12 = ___1_ctrl;
 		V_3 = L_12;
 		bool L_13 = V_3;
@@ -14504,7 +14505,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2587>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2587>
 		int32_t L_14;
 		L_14 = TMP_InputField_FindPrevWordBegin_mD8DA9061047B673CDB67C2F762A14C1514CFEC17(__this, NULL);
 		V_0 = L_14;
@@ -14513,7 +14514,7 @@ IL_0059:
 
 IL_006a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2590>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2590>
 		bool L_15 = __this->___m_isRichTextEditingAllowed;
 		V_4 = L_15;
 		bool L_16 = V_4;
@@ -14523,7 +14524,7 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2593>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2593>
 		int32_t L_17;
 		L_17 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		if ((((int32_t)L_17) <= ((int32_t)0)))
@@ -14561,7 +14562,7 @@ IL_009c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2594>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2594>
 		int32_t L_23;
 		L_23 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_23, 2));
@@ -14570,7 +14571,7 @@ IL_009c:
 
 IL_00ad:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2596>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2596>
 		int32_t L_24;
 		L_24 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_24, 1));
@@ -14583,9 +14584,9 @@ IL_00b6:
 
 IL_00bc:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2600>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2601>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2602>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2600>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2601>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2602>
 		int32_t L_25;
 		L_25 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		if ((((int32_t)L_25) < ((int32_t)1)))
@@ -14624,7 +14625,7 @@ IL_00ea:
 IL_0105:
 	{
 		V_0 = G_B18_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2605>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2605>
 		int32_t L_35 = V_0;
 		if ((((int32_t)L_35) <= ((int32_t)0)))
 		{
@@ -14677,7 +14678,7 @@ IL_0159:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2606>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2606>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_47 = __this->___m_TextComponent;
 		NullCheck(L_47);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_48;
@@ -14701,7 +14702,7 @@ IL_0183:
 
 IL_0184:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2610>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2610>
 		bool L_52 = ___0_shift;
 		V_7 = L_52;
 		bool L_53 = V_7;
@@ -14711,10 +14712,10 @@ IL_0184:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2612>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2612>
 		int32_t L_54 = V_0;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_54, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2613>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2613>
 		int32_t L_55;
 		L_55 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_56;
@@ -14725,14 +14726,14 @@ IL_0184:
 
 IL_01aa:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2617>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2617>
 		int32_t L_57 = V_0;
 		int32_t L_58 = L_57;
 		V_2 = L_58;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_58, NULL);
 		int32_t L_59 = V_2;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_59, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2620>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2620>
 		int32_t L_60;
 		L_60 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		if ((((int32_t)L_60) <= ((int32_t)0)))
@@ -14772,7 +14773,7 @@ IL_01f6:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2621>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2621>
 		int32_t L_68;
 		L_68 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_69;
@@ -14790,11 +14791,11 @@ IL_0219:
 
 IL_021a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2627>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2627>
 		return;
 	}
 }
-// Method Definition Index: 100480
+// Method Definition Index: 100736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineUpCharacterPosition_m6FAA53F203CF66F87F62F985E830CB769A169F16 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_originalPos, bool ___1_goToFirstChar, const RuntimeMethod* method) 
 {
 	TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 V_0;
@@ -14821,7 +14822,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineUpCharacterPositio
 	int32_t G_B6_0 = 0;
 	int32_t G_B11_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2632>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2632>
 		int32_t L_0 = ___0_originalPos;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = __this->___m_TextComponent;
 		NullCheck(L_1);
@@ -14837,14 +14838,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineUpCharacterPositio
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2633>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2633>
 		int32_t L_5 = ___0_originalPos;
 		___0_originalPos = ((int32_t)il2cpp_codegen_subtract(L_5, 1));
 	}
 
 IL_0022:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2635>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2635>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___m_TextComponent;
 		NullCheck(L_6);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_7;
@@ -14856,11 +14857,11 @@ IL_0022:
 		int32_t L_10 = L_9;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
 		V_0 = L_11;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2636>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2636>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_12 = V_0;
 		int32_t L_13 = L_12.___lineNumber;
 		V_1 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2639>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2639>
 		int32_t L_14 = V_1;
 		V_7 = (bool)((((int32_t)((int32_t)il2cpp_codegen_subtract(L_14, 1))) < ((int32_t)0))? 1 : 0);
 		bool L_15 = V_7;
@@ -14870,7 +14871,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2640>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2640>
 		bool L_16 = ___1_goToFirstChar;
 		if (L_16)
 		{
@@ -14896,7 +14897,7 @@ IL_0053:
 
 IL_005a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2642>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2642>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_18 = __this->___m_TextComponent;
 		NullCheck(L_18);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_19;
@@ -14907,13 +14908,13 @@ IL_005a:
 		NullCheck(L_20);
 		int32_t L_22 = ((L_20)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_21)))->___firstCharacterIndex;
 		V_2 = ((int32_t)il2cpp_codegen_subtract(L_22, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2644>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2644>
 		V_3 = (-1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2645>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2645>
 		V_4 = (32767.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2646>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2646>
 		V_5 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2648>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2648>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_23 = __this->___m_TextComponent;
 		NullCheck(L_23);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_24;
@@ -14929,7 +14930,7 @@ IL_005a:
 
 IL_00ac:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2650>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2650>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_28 = __this->___m_TextComponent;
 		NullCheck(L_28);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_29;
@@ -14941,20 +14942,20 @@ IL_00ac:
 		int32_t L_32 = L_31;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_33 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_32));
 		V_10 = L_33;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2652>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2652>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_34 = V_0;
 		float L_35 = L_34.___origin;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_36 = V_10;
 		float L_37 = L_36.___origin;
 		V_11 = ((float)il2cpp_codegen_subtract(L_35, L_37));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2653>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2653>
 		float L_38 = V_11;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_39 = V_10;
 		float L_40 = L_39.___xAdvance;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_41 = V_10;
 		float L_42 = L_41.___origin;
 		V_12 = ((float)(L_38/((float)il2cpp_codegen_subtract(L_40, L_42))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2655>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2655>
 		float L_43 = V_12;
 		if ((!(((float)L_43) >= ((float)(0.0f)))))
 		{
@@ -14982,7 +14983,7 @@ IL_0102:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2657>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2657>
 		float L_46 = V_12;
 		V_14 = (bool)((((float)L_46) < ((float)(0.5f)))? 1 : 0);
 		bool L_47 = V_14;
@@ -14992,7 +14993,7 @@ IL_0102:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2658>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2658>
 		int32_t L_48 = V_9;
 		V_8 = L_48;
 		goto IL_0187;
@@ -15000,7 +15001,7 @@ IL_0102:
 
 IL_011e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2660>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2660>
 		int32_t L_49 = V_9;
 		V_8 = ((int32_t)il2cpp_codegen_add(L_49, 1));
 		goto IL_0187;
@@ -15008,12 +15009,12 @@ IL_011e:
 
 IL_0126:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2663>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2663>
 		float L_50 = V_11;
 		float L_51;
 		L_51 = fabsf(L_50);
 		V_11 = L_51;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2665>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2665>
 		float L_52 = V_11;
 		float L_53 = V_4;
 		V_15 = (bool)((((float)L_52) < ((float)L_53))? 1 : 0);
@@ -15024,27 +15025,27 @@ IL_0126:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2667>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2667>
 		int32_t L_55 = V_9;
 		V_3 = L_55;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2668>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2668>
 		float L_56 = V_11;
 		V_4 = L_56;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2669>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2669>
 		float L_57 = V_12;
 		V_5 = L_57;
 	}
 
 IL_0148:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2648>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2648>
 		int32_t L_58 = V_9;
 		V_9 = ((int32_t)il2cpp_codegen_add(L_58, 1));
 	}
 
 IL_014f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2648>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2648>
 		int32_t L_59 = V_9;
 		int32_t L_60 = V_2;
 		V_16 = (bool)((((int32_t)L_59) < ((int32_t)L_60))? 1 : 0);
@@ -15055,7 +15056,7 @@ IL_014f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2673>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2673>
 		int32_t L_62 = V_3;
 		V_17 = (bool)((((int32_t)L_62) == ((int32_t)(-1)))? 1 : 0);
 		bool L_63 = V_17;
@@ -15065,7 +15066,7 @@ IL_014f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2673>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2673>
 		int32_t L_64 = V_2;
 		V_8 = L_64;
 		goto IL_0187;
@@ -15073,7 +15074,7 @@ IL_014f:
 
 IL_016c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2677>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2677>
 		float L_65 = V_5;
 		V_18 = (bool)((((float)L_65) < ((float)(0.5f)))? 1 : 0);
 		bool L_66 = V_18;
@@ -15083,7 +15084,7 @@ IL_016c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2678>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2678>
 		int32_t L_67 = V_3;
 		V_8 = L_67;
 		goto IL_0187;
@@ -15091,7 +15092,7 @@ IL_016c:
 
 IL_0180:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2680>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2680>
 		int32_t L_68 = V_3;
 		V_8 = ((int32_t)il2cpp_codegen_add(L_68, 1));
 		goto IL_0187;
@@ -15099,12 +15100,12 @@ IL_0180:
 
 IL_0187:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2681>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2681>
 		int32_t L_69 = V_8;
 		return L_69;
 	}
 }
-// Method Definition Index: 100481
+// Method Definition Index: 100737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineDownCharacterPosition_m0A95990F452ECFB15A5BF8C12D8E92592CF3B2CD (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_originalPos, bool ___1_goToLastChar, const RuntimeMethod* method) 
 {
 	TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 V_0;
@@ -15131,7 +15132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineDownCharacterPosit
 	int32_t G_B6_0 = 0;
 	int32_t G_B11_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2686>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2686>
 		int32_t L_0 = ___0_originalPos;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = __this->___m_TextComponent;
 		NullCheck(L_1);
@@ -15147,7 +15148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineDownCharacterPosit
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2687>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2687>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___m_TextComponent;
 		NullCheck(L_5);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_6;
@@ -15160,7 +15161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_LineDownCharacterPosit
 
 IL_0036:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2689>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2689>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = __this->___m_TextComponent;
 		NullCheck(L_8);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_9;
@@ -15172,11 +15173,11 @@ IL_0036:
 		int32_t L_12 = L_11;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
 		V_0 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2690>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_14 = V_0;
 		int32_t L_15 = L_14.___lineNumber;
 		V_1 = L_15;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2693>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2693>
 		int32_t L_16 = V_1;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_17 = __this->___m_TextComponent;
 		NullCheck(L_17);
@@ -15192,7 +15193,7 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2694>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2694>
 		bool L_21 = ___1_goToLastChar;
 		if (L_21)
 		{
@@ -15224,7 +15225,7 @@ IL_008a:
 
 IL_0091:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2697>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2697>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_26 = __this->___m_TextComponent;
 		NullCheck(L_26);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_27;
@@ -15235,13 +15236,13 @@ IL_0091:
 		NullCheck(L_28);
 		int32_t L_30 = ((L_28)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add(L_29, 1)))))->___lastCharacterIndex;
 		V_2 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2699>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2699>
 		V_3 = (-1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2700>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2700>
 		V_4 = (32767.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2701>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2701>
 		V_5 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2703>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2703>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_31 = __this->___m_TextComponent;
 		NullCheck(L_31);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_32;
@@ -15257,7 +15258,7 @@ IL_0091:
 
 IL_00e3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2705>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2705>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_36 = __this->___m_TextComponent;
 		NullCheck(L_36);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_37;
@@ -15269,20 +15270,20 @@ IL_00e3:
 		int32_t L_40 = L_39;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_41 = (L_38)->GetAt(static_cast<il2cpp_array_size_t>(L_40));
 		V_10 = L_41;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2707>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2707>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_42 = V_0;
 		float L_43 = L_42.___origin;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_44 = V_10;
 		float L_45 = L_44.___origin;
 		V_11 = ((float)il2cpp_codegen_subtract(L_43, L_45));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2708>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2708>
 		float L_46 = V_11;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_47 = V_10;
 		float L_48 = L_47.___xAdvance;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_49 = V_10;
 		float L_50 = L_49.___origin;
 		V_12 = ((float)(L_46/((float)il2cpp_codegen_subtract(L_48, L_50))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2710>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2710>
 		float L_51 = V_12;
 		if ((!(((float)L_51) >= ((float)(0.0f)))))
 		{
@@ -15310,7 +15311,7 @@ IL_0139:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2712>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2712>
 		float L_54 = V_12;
 		V_14 = (bool)((((float)L_54) < ((float)(0.5f)))? 1 : 0);
 		bool L_55 = V_14;
@@ -15320,7 +15321,7 @@ IL_0139:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2713>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2713>
 		int32_t L_56 = V_9;
 		V_7 = L_56;
 		goto IL_01be;
@@ -15328,7 +15329,7 @@ IL_0139:
 
 IL_0155:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2715>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2715>
 		int32_t L_57 = V_9;
 		V_7 = ((int32_t)il2cpp_codegen_add(L_57, 1));
 		goto IL_01be;
@@ -15336,12 +15337,12 @@ IL_0155:
 
 IL_015d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2718>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2718>
 		float L_58 = V_11;
 		float L_59;
 		L_59 = fabsf(L_58);
 		V_11 = L_59;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2720>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2720>
 		float L_60 = V_11;
 		float L_61 = V_4;
 		V_15 = (bool)((((float)L_60) < ((float)L_61))? 1 : 0);
@@ -15352,27 +15353,27 @@ IL_015d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2722>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2722>
 		int32_t L_63 = V_9;
 		V_3 = L_63;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2723>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2723>
 		float L_64 = V_11;
 		V_4 = L_64;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2724>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2724>
 		float L_65 = V_12;
 		V_5 = L_65;
 	}
 
 IL_017f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2703>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2703>
 		int32_t L_66 = V_9;
 		V_9 = ((int32_t)il2cpp_codegen_add(L_66, 1));
 	}
 
 IL_0186:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2703>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2703>
 		int32_t L_67 = V_9;
 		int32_t L_68 = V_2;
 		V_16 = (bool)((((int32_t)L_67) < ((int32_t)L_68))? 1 : 0);
@@ -15383,7 +15384,7 @@ IL_0186:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2728>
 		int32_t L_70 = V_3;
 		V_17 = (bool)((((int32_t)L_70) == ((int32_t)(-1)))? 1 : 0);
 		bool L_71 = V_17;
@@ -15393,7 +15394,7 @@ IL_0186:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2728>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2728>
 		int32_t L_72 = V_2;
 		V_7 = L_72;
 		goto IL_01be;
@@ -15401,7 +15402,7 @@ IL_0186:
 
 IL_01a3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2732>
 		float L_73 = V_5;
 		V_18 = (bool)((((float)L_73) < ((float)(0.5f)))? 1 : 0);
 		bool L_74 = V_18;
@@ -15411,7 +15412,7 @@ IL_01a3:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2733>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2733>
 		int32_t L_75 = V_3;
 		V_7 = L_75;
 		goto IL_01be;
@@ -15419,7 +15420,7 @@ IL_01a3:
 
 IL_01b7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2735>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2735>
 		int32_t L_76 = V_3;
 		V_7 = ((int32_t)il2cpp_codegen_add(L_76, 1));
 		goto IL_01be;
@@ -15427,12 +15428,12 @@ IL_01b7:
 
 IL_01be:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2736>
 		int32_t L_77 = V_7;
 		return L_77;
 	}
 }
-// Method Definition Index: 100482
+// Method Definition Index: 100738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageUpCharacterPosition_m68C124FCEE737E9CB486D5218A2B5804D407BD0A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_originalPos, bool ___1_goToFirstChar, const RuntimeMethod* method) 
 {
 	TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 V_0;
@@ -15465,7 +15466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageUpCharacterPositio
 	int32_t G_B6_0 = 0;
 	int32_t G_B16_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2741>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2741>
 		int32_t L_0 = ___0_originalPos;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = __this->___m_TextComponent;
 		NullCheck(L_1);
@@ -15481,14 +15482,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageUpCharacterPositio
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2742>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2742>
 		int32_t L_5 = ___0_originalPos;
 		___0_originalPos = ((int32_t)il2cpp_codegen_subtract(L_5, 1));
 	}
 
 IL_0022:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2744>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2744>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___m_TextComponent;
 		NullCheck(L_6);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_7;
@@ -15500,11 +15501,11 @@ IL_0022:
 		int32_t L_10 = L_9;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
 		V_0 = L_11;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2745>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2745>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_12 = V_0;
 		int32_t L_13 = L_12.___lineNumber;
 		V_1 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2748>
 		int32_t L_14 = V_1;
 		V_9 = (bool)((((int32_t)((int32_t)il2cpp_codegen_subtract(L_14, 1))) < ((int32_t)0))? 1 : 0);
 		bool L_15 = V_9;
@@ -15514,7 +15515,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2749>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2749>
 		bool L_16 = ___1_goToFirstChar;
 		if (L_16)
 		{
@@ -15540,7 +15541,7 @@ IL_0053:
 
 IL_005a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2751>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2751>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_18 = __this->___m_TextViewport;
 		NullCheck(L_18);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_19;
@@ -15549,7 +15550,7 @@ IL_005a:
 		float L_20;
 		L_20 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_11), NULL);
 		V_2 = L_20;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2753>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2753>
 		int32_t L_21 = V_1;
 		V_3 = ((int32_t)il2cpp_codegen_subtract(L_21, 1));
 		goto IL_00bd;
@@ -15557,7 +15558,7 @@ IL_005a:
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2757>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2757>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_22 = __this->___m_TextComponent;
 		NullCheck(L_22);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_23;
@@ -15585,20 +15586,20 @@ IL_0075:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2758>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2758>
 		goto IL_00c7;
 	}
 
 IL_00b8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2755>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2755>
 		int32_t L_34 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_subtract(L_34, 1));
 	}
 
 IL_00bd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2755>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2755>
 		int32_t L_35 = V_3;
 		V_13 = (bool)((((int32_t)L_35) > ((int32_t)0))? 1 : 0);
 		bool L_36 = V_13;
@@ -15610,7 +15611,7 @@ IL_00bd:
 
 IL_00c7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2761>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2761>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_37 = __this->___m_TextComponent;
 		NullCheck(L_37);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_38;
@@ -15621,13 +15622,13 @@ IL_00c7:
 		NullCheck(L_39);
 		int32_t L_41 = ((L_39)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_40)))->___lastCharacterIndex;
 		V_4 = L_41;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2763>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2763>
 		V_5 = (-1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2764>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2764>
 		V_6 = (32767.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2765>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2765>
 		V_7 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2767>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2767>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_42 = __this->___m_TextComponent;
 		NullCheck(L_42);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_43;
@@ -15643,7 +15644,7 @@ IL_00c7:
 
 IL_0117:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2769>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2769>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_47 = __this->___m_TextComponent;
 		NullCheck(L_47);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_48;
@@ -15655,20 +15656,20 @@ IL_0117:
 		int32_t L_51 = L_50;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_52 = (L_49)->GetAt(static_cast<il2cpp_array_size_t>(L_51));
 		V_15 = L_52;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2771>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2771>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_53 = V_0;
 		float L_54 = L_53.___origin;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_55 = V_15;
 		float L_56 = L_55.___origin;
 		V_16 = ((float)il2cpp_codegen_subtract(L_54, L_56));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2772>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2772>
 		float L_57 = V_16;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_58 = V_15;
 		float L_59 = L_58.___xAdvance;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_60 = V_15;
 		float L_61 = L_60.___origin;
 		V_17 = ((float)(L_57/((float)il2cpp_codegen_subtract(L_59, L_61))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2774>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2774>
 		float L_62 = V_17;
 		if ((!(((float)L_62) >= ((float)(0.0f)))))
 		{
@@ -15696,7 +15697,7 @@ IL_016d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2776>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2776>
 		float L_65 = V_17;
 		V_19 = (bool)((((float)L_65) < ((float)(0.5f)))? 1 : 0);
 		bool L_66 = V_19;
@@ -15706,7 +15707,7 @@ IL_016d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2777>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2777>
 		int32_t L_67 = V_14;
 		V_10 = L_67;
 		goto IL_01f8;
@@ -15714,7 +15715,7 @@ IL_016d:
 
 IL_0189:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2779>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2779>
 		int32_t L_68 = V_14;
 		V_10 = ((int32_t)il2cpp_codegen_add(L_68, 1));
 		goto IL_01f8;
@@ -15722,12 +15723,12 @@ IL_0189:
 
 IL_0191:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2782>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2782>
 		float L_69 = V_16;
 		float L_70;
 		L_70 = fabsf(L_69);
 		V_16 = L_70;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2784>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2784>
 		float L_71 = V_16;
 		float L_72 = V_6;
 		V_20 = (bool)((((float)L_71) < ((float)L_72))? 1 : 0);
@@ -15738,27 +15739,27 @@ IL_0191:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2786>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2786>
 		int32_t L_74 = V_14;
 		V_5 = L_74;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2787>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2787>
 		float L_75 = V_16;
 		V_6 = L_75;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2788>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2788>
 		float L_76 = V_17;
 		V_7 = L_76;
 	}
 
 IL_01b4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2767>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2767>
 		int32_t L_77 = V_14;
 		V_14 = ((int32_t)il2cpp_codegen_add(L_77, 1));
 	}
 
 IL_01bb:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2767>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2767>
 		int32_t L_78 = V_14;
 		int32_t L_79 = V_4;
 		V_21 = (bool)((((int32_t)L_78) < ((int32_t)L_79))? 1 : 0);
@@ -15769,7 +15770,7 @@ IL_01bb:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2792>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2792>
 		int32_t L_81 = V_5;
 		V_22 = (bool)((((int32_t)L_81) == ((int32_t)(-1)))? 1 : 0);
 		bool L_82 = V_22;
@@ -15779,7 +15780,7 @@ IL_01bb:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2792>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2792>
 		int32_t L_83 = V_4;
 		V_10 = L_83;
 		goto IL_01f8;
@@ -15787,7 +15788,7 @@ IL_01bb:
 
 IL_01db:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2796>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2796>
 		float L_84 = V_7;
 		V_23 = (bool)((((float)L_84) < ((float)(0.5f)))? 1 : 0);
 		bool L_85 = V_23;
@@ -15797,7 +15798,7 @@ IL_01db:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2797>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2797>
 		int32_t L_86 = V_5;
 		V_10 = L_86;
 		goto IL_01f8;
@@ -15805,7 +15806,7 @@ IL_01db:
 
 IL_01f0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2799>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2799>
 		int32_t L_87 = V_5;
 		V_10 = ((int32_t)il2cpp_codegen_add(L_87, 1));
 		goto IL_01f8;
@@ -15813,12 +15814,12 @@ IL_01f0:
 
 IL_01f8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2800>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2800>
 		int32_t L_88 = V_10;
 		return L_88;
 	}
 }
-// Method Definition Index: 100483
+// Method Definition Index: 100739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageDownCharacterPosition_mD00879F9AD1E5315C8896D8CB421FAB93045F818 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_originalPos, bool ___1_goToLastChar, const RuntimeMethod* method) 
 {
 	TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 V_0;
@@ -15851,7 +15852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageDownCharacterPosit
 	int32_t G_B6_0 = 0;
 	int32_t G_B16_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2805>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2805>
 		int32_t L_0 = ___0_originalPos;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = __this->___m_TextComponent;
 		NullCheck(L_1);
@@ -15867,7 +15868,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageDownCharacterPosit
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2806>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2806>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___m_TextComponent;
 		NullCheck(L_5);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_6;
@@ -15880,7 +15881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_PageDownCharacterPosit
 
 IL_0036:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2808>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2808>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = __this->___m_TextComponent;
 		NullCheck(L_8);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_9;
@@ -15892,11 +15893,11 @@ IL_0036:
 		int32_t L_12 = L_11;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
 		V_0 = L_13;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2809>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2809>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_14 = V_0;
 		int32_t L_15 = L_14.___lineNumber;
 		V_1 = L_15;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2812>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2812>
 		int32_t L_16 = V_1;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_17 = __this->___m_TextComponent;
 		NullCheck(L_17);
@@ -15912,7 +15913,7 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2813>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2813>
 		bool L_21 = ___1_goToLastChar;
 		if (L_21)
 		{
@@ -15944,7 +15945,7 @@ IL_008a:
 
 IL_0091:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2815>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2815>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_26 = __this->___m_TextViewport;
 		NullCheck(L_26);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_27;
@@ -15953,7 +15954,7 @@ IL_0091:
 		float L_28;
 		L_28 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_11), NULL);
 		V_2 = L_28;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2817>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2817>
 		int32_t L_29 = V_1;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_29, 1));
 		goto IL_00f4;
@@ -15961,7 +15962,7 @@ IL_0091:
 
 IL_00ac:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2821>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2821>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_30 = __this->___m_TextComponent;
 		NullCheck(L_30);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_31;
@@ -15989,20 +15990,20 @@ IL_00ac:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2822>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2822>
 		goto IL_010f;
 	}
 
 IL_00ef:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2819>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2819>
 		int32_t L_42 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_42, 1));
 	}
 
 IL_00f4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2819>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2819>
 		int32_t L_43 = V_3;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_44 = __this->___m_TextComponent;
 		NullCheck(L_44);
@@ -16020,7 +16021,7 @@ IL_00f4:
 
 IL_010f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2826>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2826>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_48 = __this->___m_TextComponent;
 		NullCheck(L_48);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_49;
@@ -16031,13 +16032,13 @@ IL_010f:
 		NullCheck(L_50);
 		int32_t L_52 = ((L_50)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_51)))->___lastCharacterIndex;
 		V_4 = L_52;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2828>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2828>
 		V_5 = (-1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2829>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2829>
 		V_6 = (32767.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2830>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2830>
 		V_7 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2832>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2832>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_53 = __this->___m_TextComponent;
 		NullCheck(L_53);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_54;
@@ -16053,7 +16054,7 @@ IL_010f:
 
 IL_015f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2834>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2834>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_58 = __this->___m_TextComponent;
 		NullCheck(L_58);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_59;
@@ -16065,20 +16066,20 @@ IL_015f:
 		int32_t L_62 = L_61;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_63 = (L_60)->GetAt(static_cast<il2cpp_array_size_t>(L_62));
 		V_15 = L_63;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2836>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2836>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_64 = V_0;
 		float L_65 = L_64.___origin;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_66 = V_15;
 		float L_67 = L_66.___origin;
 		V_16 = ((float)il2cpp_codegen_subtract(L_65, L_67));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2837>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2837>
 		float L_68 = V_16;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_69 = V_15;
 		float L_70 = L_69.___xAdvance;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_71 = V_15;
 		float L_72 = L_71.___origin;
 		V_17 = ((float)(L_68/((float)il2cpp_codegen_subtract(L_70, L_72))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2839>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2839>
 		float L_73 = V_17;
 		if ((!(((float)L_73) >= ((float)(0.0f)))))
 		{
@@ -16106,7 +16107,7 @@ IL_01b5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2841>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2841>
 		float L_76 = V_17;
 		V_19 = (bool)((((float)L_76) < ((float)(0.5f)))? 1 : 0);
 		bool L_77 = V_19;
@@ -16116,7 +16117,7 @@ IL_01b5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2842>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2842>
 		int32_t L_78 = V_14;
 		V_9 = L_78;
 		goto IL_0240;
@@ -16124,7 +16125,7 @@ IL_01b5:
 
 IL_01d1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2844>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2844>
 		int32_t L_79 = V_14;
 		V_9 = ((int32_t)il2cpp_codegen_add(L_79, 1));
 		goto IL_0240;
@@ -16132,12 +16133,12 @@ IL_01d1:
 
 IL_01d9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2847>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2847>
 		float L_80 = V_16;
 		float L_81;
 		L_81 = fabsf(L_80);
 		V_16 = L_81;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2849>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2849>
 		float L_82 = V_16;
 		float L_83 = V_6;
 		V_20 = (bool)((((float)L_82) < ((float)L_83))? 1 : 0);
@@ -16148,27 +16149,27 @@ IL_01d9:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2851>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2851>
 		int32_t L_85 = V_14;
 		V_5 = L_85;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2852>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2852>
 		float L_86 = V_16;
 		V_6 = L_86;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2853>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2853>
 		float L_87 = V_17;
 		V_7 = L_87;
 	}
 
 IL_01fc:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2832>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2832>
 		int32_t L_88 = V_14;
 		V_14 = ((int32_t)il2cpp_codegen_add(L_88, 1));
 	}
 
 IL_0203:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2832>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2832>
 		int32_t L_89 = V_14;
 		int32_t L_90 = V_4;
 		V_21 = (bool)((((int32_t)L_89) < ((int32_t)L_90))? 1 : 0);
@@ -16179,7 +16180,7 @@ IL_0203:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2857>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2857>
 		int32_t L_92 = V_5;
 		V_22 = (bool)((((int32_t)L_92) == ((int32_t)(-1)))? 1 : 0);
 		bool L_93 = V_22;
@@ -16189,7 +16190,7 @@ IL_0203:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2857>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2857>
 		int32_t L_94 = V_4;
 		V_9 = L_94;
 		goto IL_0240;
@@ -16197,7 +16198,7 @@ IL_0203:
 
 IL_0223:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2859>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2859>
 		float L_95 = V_7;
 		V_23 = (bool)((((float)L_95) < ((float)(0.5f)))? 1 : 0);
 		bool L_96 = V_23;
@@ -16207,7 +16208,7 @@ IL_0223:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2860>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2860>
 		int32_t L_97 = V_5;
 		V_9 = L_97;
 		goto IL_0240;
@@ -16215,7 +16216,7 @@ IL_0223:
 
 IL_0238:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2862>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2862>
 		int32_t L_98 = V_5;
 		V_9 = ((int32_t)il2cpp_codegen_add(L_98, 1));
 		goto IL_0240;
@@ -16223,23 +16224,23 @@ IL_0238:
 
 IL_0240:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2863>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2863>
 		int32_t L_99 = V_9;
 		return L_99;
 	}
 }
-// Method Definition Index: 100484
+// Method Definition Index: 100740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveDown_mB8F65AD03355C867F63BAB0021C93B75F534CCBE (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2868>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2868>
 		bool L_0 = ___0_shift;
 		TMP_InputField_MoveDown_m96FE2822D035DFBE82474737DEE8DED622AAD868(__this, L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2869>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2869>
 		return;
 	}
 }
-// Method Definition Index: 100485
+// Method Definition Index: 100741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveDown_m96FE2822D035DFBE82474737DEE8DED622AAD868 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_goToLastChar, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -16249,7 +16250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveDown_m96FE2822D035DFB
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2874>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2874>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		if (!L_0)
@@ -16278,7 +16279,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2878>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2878>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		int32_t L_4;
@@ -16294,7 +16295,7 @@ IL_0010:
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2881>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2881>
 		bool L_8;
 		L_8 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		if (L_8)
@@ -16326,7 +16327,7 @@ IL_0054:
 IL_0061:
 	{
 		V_0 = G_B8_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2883>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2883>
 		bool L_15 = ___0_shift;
 		V_3 = L_15;
 		bool L_16 = V_3;
@@ -16336,10 +16337,10 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2885>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2885>
 		int32_t L_17 = V_0;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_17, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2886>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2886>
 		int32_t L_18;
 		L_18 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_19;
@@ -16350,14 +16351,14 @@ IL_0061:
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2890>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2890>
 		int32_t L_20 = V_0;
 		int32_t L_21 = L_20;
 		V_2 = L_21;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_21, NULL);
 		int32_t L_22 = V_2;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_22, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2891>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2891>
 		int32_t L_23;
 		L_23 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_24;
@@ -16371,22 +16372,22 @@ IL_0086:
 
 IL_00b7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2897>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2897>
 		return;
 	}
 }
-// Method Definition Index: 100486
+// Method Definition Index: 100742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveUp_m0A8E579FDBE203C29D7AF1B4225C9A64498DE5A9 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2901>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2901>
 		bool L_0 = ___0_shift;
 		TMP_InputField_MoveUp_m79291882C851A7AEC3945EB8479D31984941F8DB(__this, L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2902>
 		return;
 	}
 }
-// Method Definition Index: 100487
+// Method Definition Index: 100743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveUp_m79291882C851A7AEC3945EB8479D31984941F8DB (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_goToFirstChar, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -16396,7 +16397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MoveUp_m79291882C851A7AEC
 	int32_t G_B3_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2907>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2907>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		if (!L_0)
@@ -16425,7 +16426,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2911>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2911>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		int32_t L_4;
@@ -16441,7 +16442,7 @@ IL_0010:
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2914>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2914>
 		bool L_8;
 		L_8 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		if (L_8)
@@ -16467,7 +16468,7 @@ IL_0043:
 IL_0050:
 	{
 		V_0 = G_B8_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2916>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2916>
 		bool L_12 = ___0_shift;
 		V_3 = L_12;
 		bool L_13 = V_3;
@@ -16477,10 +16478,10 @@ IL_0050:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2918>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2918>
 		int32_t L_14 = V_0;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_14, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2919>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2919>
 		int32_t L_15;
 		L_15 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_16;
@@ -16491,14 +16492,14 @@ IL_0050:
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2923>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2923>
 		int32_t L_17 = V_0;
 		int32_t L_18 = L_17;
 		V_2 = L_18;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_18, NULL);
 		int32_t L_19 = V_2;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2924>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2924>
 		int32_t L_20;
 		L_20 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_21;
@@ -16512,22 +16513,22 @@ IL_0075:
 
 IL_00a6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2930>
 		return;
 	}
 }
-// Method Definition Index: 100488
+// Method Definition Index: 100744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MovePageUp_mA945CEDD104AAC4B417B1AC6D95FC75798ED3040 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2935>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2935>
 		bool L_0 = ___0_shift;
 		TMP_InputField_MovePageUp_m1B01B4C15C5D556CED7B34E7F55149E1DA35ECF1(__this, L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2936>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2936>
 		return;
 	}
 }
-// Method Definition Index: 100489
+// Method Definition Index: 100745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MovePageUp_m1B01B4C15C5D556CED7B34E7F55149E1DA35ECF1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_goToFirstChar, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -16546,7 +16547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MovePageUp_m1B01B4C15C5D5
 	int32_t G_B8_0 = 0;
 	float G_B15_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2940>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2940>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		if (!L_0)
@@ -16575,7 +16576,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2944>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2944>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		int32_t L_4;
@@ -16591,7 +16592,7 @@ IL_0010:
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2947>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2947>
 		bool L_8;
 		L_8 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		if (L_8)
@@ -16617,7 +16618,7 @@ IL_0043:
 IL_0050:
 	{
 		V_0 = G_B8_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2949>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2949>
 		bool L_12 = ___0_shift;
 		V_3 = L_12;
 		bool L_13 = V_3;
@@ -16627,10 +16628,10 @@ IL_0050:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2951>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2951>
 		int32_t L_14 = V_0;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_14, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2952>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2952>
 		int32_t L_15;
 		L_15 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_16;
@@ -16641,14 +16642,14 @@ IL_0050:
 
 IL_0075:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2956>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2956>
 		int32_t L_17 = V_0;
 		int32_t L_18 = L_17;
 		V_2 = L_18;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_18, NULL);
 		int32_t L_19 = V_2;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2957>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2957>
 		int32_t L_20;
 		L_20 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_21;
@@ -16662,7 +16663,7 @@ IL_0075:
 
 IL_00a6:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2966>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2966>
 		int32_t L_24 = __this->___m_LineType;
 		V_4 = (bool)((!(((uint32_t)L_24) <= ((uint32_t)0)))? 1 : 0);
 		bool L_25 = V_4;
@@ -16672,7 +16673,7 @@ IL_00a6:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2968>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2968>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_26 = __this->___m_TextViewport;
 		NullCheck(L_26);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_27;
@@ -16681,7 +16682,7 @@ IL_00a6:
 		float L_28;
 		L_28 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_8), NULL);
 		V_5 = L_28;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2970>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2970>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_29 = __this->___m_TextComponent;
 		NullCheck(L_29);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_30;
@@ -16699,7 +16700,7 @@ IL_00a6:
 		L_35 = Bounds_get_max_m6446F2AB97C1E57CA89467B9DE52D4EB61F1CB09_inline((&V_9), NULL);
 		float L_36 = L_35.___y;
 		V_6 = ((float)il2cpp_codegen_add(L_32, L_36));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2971>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2971>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_37 = __this->___m_TextViewport;
 		NullCheck(L_37);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38;
@@ -16713,7 +16714,7 @@ IL_00a6:
 		float L_42;
 		L_42 = Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E_inline((&V_8), NULL);
 		V_7 = ((float)il2cpp_codegen_add(L_39, L_42));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2973>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2973>
 		float L_43 = V_7;
 		float L_44 = V_6;
 		float L_45 = V_5;
@@ -16738,7 +16739,7 @@ IL_0137:
 IL_0139:
 	{
 		V_5 = G_B15_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2975>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2975>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_49 = __this->___m_TextComponent;
 		NullCheck(L_49);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_50;
@@ -16755,28 +16756,28 @@ IL_0139:
 		L_55 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_52, L_54, NULL);
 		NullCheck(L_51);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_51, L_55, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2976>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2976>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
 IL_016b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2983>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2983>
 		return;
 	}
 }
-// Method Definition Index: 100490
+// Method Definition Index: 100746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MovePageDown_mE32EFCBEB2A1D230D3C6C8B27357C454F4AD5EC2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2988>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2988>
 		bool L_0 = ___0_shift;
 		TMP_InputField_MovePageDown_m80AEFB5ACD656505A347F13FAEFB55EA62F0EC86(__this, L_0, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2989>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2989>
 		return;
 	}
 }
-// Method Definition Index: 100491
+// Method Definition Index: 100747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MovePageDown_m80AEFB5ACD656505A347F13FAEFB55EA62F0EC86 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_shift, bool ___1_goToLastChar, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -16795,7 +16796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MovePageDown_m80AEFB5ACD6
 	int32_t G_B8_0 = 0;
 	float G_B15_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2993>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2993>
 		bool L_0;
 		L_0 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		if (!L_0)
@@ -16824,7 +16825,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:2997>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:2997>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		int32_t L_4;
@@ -16840,7 +16841,7 @@ IL_0010:
 
 IL_0038:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3000>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3000>
 		bool L_8;
 		L_8 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		if (L_8)
@@ -16872,7 +16873,7 @@ IL_0054:
 IL_0061:
 	{
 		V_0 = G_B8_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3002>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3002>
 		bool L_15 = ___0_shift;
 		V_3 = L_15;
 		bool L_16 = V_3;
@@ -16882,10 +16883,10 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3004>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3004>
 		int32_t L_17 = V_0;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_17, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3005>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3005>
 		int32_t L_18;
 		L_18 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_19;
@@ -16896,14 +16897,14 @@ IL_0061:
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3009>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3009>
 		int32_t L_20 = V_0;
 		int32_t L_21 = L_20;
 		V_2 = L_21;
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_21, NULL);
 		int32_t L_22 = V_2;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_22, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3010>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3010>
 		int32_t L_23;
 		L_23 = TMP_InputField_get_caretSelectPositionInternal_m977002CC2C821A3B4FA5FB3F1BC15C7DD0BA35A4(__this, NULL);
 		int32_t L_24;
@@ -16917,7 +16918,7 @@ IL_0086:
 
 IL_00b7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3018>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3018>
 		int32_t L_27 = __this->___m_LineType;
 		V_4 = (bool)((!(((uint32_t)L_27) <= ((uint32_t)0)))? 1 : 0);
 		bool L_28 = V_4;
@@ -16927,7 +16928,7 @@ IL_00b7:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3020>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3020>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_29 = __this->___m_TextViewport;
 		NullCheck(L_29);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_30;
@@ -16936,7 +16937,7 @@ IL_00b7:
 		float L_31;
 		L_31 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_8), NULL);
 		V_5 = L_31;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3022>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3022>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_32 = __this->___m_TextComponent;
 		NullCheck(L_32);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_33;
@@ -16954,7 +16955,7 @@ IL_00b7:
 		L_38 = Bounds_get_min_m465AC9BBE1DE5D8E8AD95AC19B9899068FEEBB13_inline((&V_9), NULL);
 		float L_39 = L_38.___y;
 		V_6 = ((float)il2cpp_codegen_add(L_35, L_39));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3023>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3023>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_40 = __this->___m_TextViewport;
 		NullCheck(L_40);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41;
@@ -16968,7 +16969,7 @@ IL_00b7:
 		float L_45;
 		L_45 = Rect_get_yMin_mB19848FB25DE61EDF958F7A22CFDD86DE103062F_inline((&V_8), NULL);
 		V_7 = ((float)il2cpp_codegen_add(L_42, L_45));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3025>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3025>
 		float L_46 = V_7;
 		float L_47 = V_6;
 		float L_48 = V_5;
@@ -16993,7 +16994,7 @@ IL_0148:
 IL_014a:
 	{
 		V_5 = G_B15_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3027>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3027>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_52 = __this->___m_TextComponent;
 		NullCheck(L_52);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_53;
@@ -17010,17 +17011,17 @@ IL_014a:
 		L_58 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_55, L_57, NULL);
 		NullCheck(L_54);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_54, L_58, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3028>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3028>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
 IL_017c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3035>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3035>
 		return;
 	}
 }
-// Method Definition Index: 100492
+// Method Definition Index: 100748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Delete_mD817C69CFF25B762DF673A1FD31DAF0E2F761784 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17034,7 +17035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Delete_mD817C69CFF25B762D
 	int32_t V_8 = 0;
 	int32_t G_B7_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3039>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3039>
 		bool L_0 = __this->___m_ReadOnly;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -17044,13 +17045,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Delete_mD817C69CFF25B762D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3040>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3040>
 		goto IL_0269;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3042>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3042>
 		int32_t L_2 = __this->___m_StringPosition;
 		int32_t L_3 = __this->___m_StringSelectPosition;
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)L_3))? 1 : 0);
@@ -17061,13 +17062,13 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3043>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3043>
 		goto IL_0269;
 	}
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3045>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3045>
 		bool L_5 = __this->___m_isRichTextEditingAllowed;
 		if (L_5)
 		{
@@ -17095,7 +17096,7 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3048>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3048>
 		int32_t L_8 = __this->___m_StringPosition;
 		int32_t L_9 = __this->___m_StringSelectPosition;
 		V_3 = (bool)((((int32_t)L_8) < ((int32_t)L_9))? 1 : 0);
@@ -17106,7 +17107,7 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3050>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3050>
 		String_t* L_11;
 		L_11 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_12 = __this->___m_StringPosition;
@@ -17117,7 +17118,7 @@ IL_0038:
 		L_15 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_11, L_12, ((int32_t)il2cpp_codegen_subtract(L_13, L_14)), NULL);
 		__this->___m_Text = L_15;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_15);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3051>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3051>
 		int32_t L_16 = __this->___m_StringPosition;
 		__this->___m_StringSelectPosition = L_16;
 		goto IL_00b8;
@@ -17125,7 +17126,7 @@ IL_0038:
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3055>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3055>
 		String_t* L_17;
 		L_17 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_18 = __this->___m_StringSelectPosition;
@@ -17136,14 +17137,14 @@ IL_0086:
 		L_21 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_17, L_18, ((int32_t)il2cpp_codegen_subtract(L_19, L_20)), NULL);
 		__this->___m_Text = L_21;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_21);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3056>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3056>
 		int32_t L_22 = __this->___m_StringSelectPosition;
 		__this->___m_StringPosition = L_22;
 	}
 
 IL_00b8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3059>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3059>
 		bool L_23 = __this->___m_isSelectAll;
 		V_4 = L_23;
 		bool L_24 = V_4;
@@ -17153,13 +17154,13 @@ IL_00b8:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3061>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3061>
 		int32_t L_25 = 0;
 		V_5 = L_25;
 		__this->___m_CaretSelectPosition = L_25;
 		int32_t L_26 = V_5;
 		__this->___m_CaretPosition = L_26;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3062>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3062>
 		__this->___m_isSelectAll = (bool)0;
 	}
 
@@ -17170,7 +17171,7 @@ IL_00df:
 
 IL_00e5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3067>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3067>
 		int32_t L_27 = __this->___m_CaretPosition;
 		int32_t L_28 = __this->___m_CaretSelectPosition;
 		V_6 = (bool)((((int32_t)L_27) < ((int32_t)L_28))? 1 : 0);
@@ -17181,12 +17182,12 @@ IL_00e5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3069>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3069>
 		int32_t L_30 = __this->___m_CaretSelectPosition;
 		int32_t L_31;
 		L_31 = TMP_InputField_ClampArrayIndex_mFD46E1F200092DC5CD5BB8BE57E2D550F0DE21C0(__this, ((int32_t)il2cpp_codegen_subtract(L_30, 1)), NULL);
 		V_7 = L_31;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3070>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3070>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_32 = __this->___m_TextComponent;
 		NullCheck(L_32);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_33;
@@ -17197,7 +17198,7 @@ IL_00e5:
 		NullCheck(L_34);
 		int32_t L_36 = ((L_34)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_35)))->___index;
 		__this->___m_StringPosition = L_36;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3071>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3071>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_37 = __this->___m_TextComponent;
 		NullCheck(L_37);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_38;
@@ -17217,7 +17218,7 @@ IL_00e5:
 		NullCheck(L_44);
 		int32_t L_46 = ((L_44)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_45)))->___stringLength;
 		__this->___m_StringSelectPosition = ((int32_t)il2cpp_codegen_add(L_41, L_46));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3073>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3073>
 		String_t* L_47;
 		L_47 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_48 = __this->___m_StringPosition;
@@ -17228,10 +17229,10 @@ IL_00e5:
 		L_51 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_47, L_48, ((int32_t)il2cpp_codegen_subtract(L_49, L_50)), NULL);
 		__this->___m_Text = L_51;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_51);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3075>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3075>
 		int32_t L_52 = __this->___m_StringPosition;
 		__this->___m_StringSelectPosition = L_52;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3076>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3076>
 		int32_t L_53 = __this->___m_CaretPosition;
 		__this->___m_CaretSelectPosition = L_53;
 		goto IL_0268;
@@ -17239,12 +17240,12 @@ IL_00e5:
 
 IL_01b5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3080>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3080>
 		int32_t L_54 = __this->___m_CaretPosition;
 		int32_t L_55;
 		L_55 = TMP_InputField_ClampArrayIndex_mFD46E1F200092DC5CD5BB8BE57E2D550F0DE21C0(__this, ((int32_t)il2cpp_codegen_subtract(L_54, 1)), NULL);
 		V_8 = L_55;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3081>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3081>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_56 = __this->___m_TextComponent;
 		NullCheck(L_56);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_57;
@@ -17264,7 +17265,7 @@ IL_01b5:
 		NullCheck(L_63);
 		int32_t L_65 = ((L_63)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_64)))->___stringLength;
 		__this->___m_StringPosition = ((int32_t)il2cpp_codegen_add(L_60, L_65));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3082>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3082>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_66 = __this->___m_TextComponent;
 		NullCheck(L_66);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_67;
@@ -17275,7 +17276,7 @@ IL_01b5:
 		NullCheck(L_68);
 		int32_t L_70 = ((L_68)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_69)))->___index;
 		__this->___m_StringSelectPosition = L_70;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3084>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3084>
 		String_t* L_71;
 		L_71 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_72 = __this->___m_StringSelectPosition;
@@ -17286,10 +17287,10 @@ IL_01b5:
 		L_75 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_71, L_72, ((int32_t)il2cpp_codegen_subtract(L_73, L_74)), NULL);
 		__this->___m_Text = L_75;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_75);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3086>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3086>
 		int32_t L_76 = __this->___m_StringSelectPosition;
 		__this->___m_StringPosition = L_76;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3087>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3087>
 		int32_t L_77 = __this->___m_CaretSelectPosition;
 		__this->___m_CaretPosition = L_77;
 	}
@@ -17300,11 +17301,11 @@ IL_0268:
 
 IL_0269:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3094>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3094>
 		return;
 	}
 }
-// Method Definition Index: 100493
+// Method Definition Index: 100749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DeleteKey_m3EE34B2EE784E0F8833BCEA668B590D8C838BDCC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17318,7 +17319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DeleteKey_m3EE34B2EE784E0
 	bool V_8 = false;
 	int32_t G_B15_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3101>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3101>
 		bool L_0 = __this->___m_ReadOnly;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -17328,13 +17329,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DeleteKey_m3EE34B2EE784E0
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3102>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3102>
 		goto IL_01d7;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3104>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3104>
 		bool L_2;
 		L_2 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		V_1 = L_2;
@@ -17345,20 +17346,20 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3106>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3106>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3108>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3108>
 		TMP_InputField_Delete_mD817C69CFF25B762DF673A1FD31DAF0E2F761784(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3109>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3109>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3110>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3110>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 		goto IL_01d7;
 	}
 
 IL_003d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3114>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3114>
 		bool L_4 = __this->___m_isRichTextEditingAllowed;
 		V_2 = L_4;
 		bool L_5 = V_2;
@@ -17368,7 +17369,7 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3116>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3116>
 		int32_t L_6;
 		L_6 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		String_t* L_7;
@@ -17384,7 +17385,7 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3119>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3119>
 		String_t* L_10;
 		L_10 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_11;
@@ -17403,7 +17404,7 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3120>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3120>
 		String_t* L_15;
 		L_15 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_16;
@@ -17418,7 +17419,7 @@ IL_003d:
 
 IL_009a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3122>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3122>
 		String_t* L_18;
 		L_18 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_19;
@@ -17432,11 +17433,11 @@ IL_009a:
 
 IL_00b2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3124>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3124>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3126>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3126>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3127>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3127>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 	}
 
@@ -17447,7 +17448,7 @@ IL_00c8:
 
 IL_00ce:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3132>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3132>
 		int32_t L_21;
 		L_21 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_22 = __this->___m_TextComponent;
@@ -17464,7 +17465,7 @@ IL_00ce:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3134>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3134>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_26 = __this->___m_TextComponent;
 		NullCheck(L_26);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_27;
@@ -17476,7 +17477,7 @@ IL_00ce:
 		NullCheck(L_28);
 		int32_t L_30 = ((L_28)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_29)))->___stringLength;
 		V_6 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3137>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3137>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_31 = __this->___m_TextComponent;
 		NullCheck(L_31);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_32;
@@ -17522,7 +17523,7 @@ IL_0162:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3138>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3138>
 		int32_t L_42 = V_6;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_43 = __this->___m_TextComponent;
 		NullCheck(L_43);
@@ -17539,7 +17540,7 @@ IL_0162:
 
 IL_018f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3141>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3141>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_48 = __this->___m_TextComponent;
 		NullCheck(L_48);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_49;
@@ -17551,7 +17552,7 @@ IL_018f:
 		NullCheck(L_50);
 		int32_t L_52 = ((L_50)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_51)))->___index;
 		V_7 = L_52;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3143>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3143>
 		String_t* L_53;
 		L_53 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_54 = V_7;
@@ -17561,9 +17562,9 @@ IL_018f:
 		L_56 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_53, L_54, L_55, NULL);
 		__this->___m_Text = L_56;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_56);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3145>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3147>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3147>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 	}
 
@@ -17577,11 +17578,11 @@ IL_01d6:
 
 IL_01d7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3155>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3155>
 		return;
 	}
 }
-// Method Definition Index: 100494
+// Method Definition Index: 100750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Backspace_m1962DCE85EA39B861EF3E9E147A63C8CFE58A917 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17604,7 +17605,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Backspace_m1962DCE85EA39B
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B20_1 = NULL;
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B20_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3162>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3162>
 		bool L_0 = __this->___m_ReadOnly;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -17614,13 +17615,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Backspace_m1962DCE85EA39B
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3163>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3163>
 		goto IL_0255;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3165>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3165>
 		bool L_2;
 		L_2 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 		V_1 = L_2;
@@ -17631,20 +17632,20 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3167>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3167>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3169>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3169>
 		TMP_InputField_Delete_mD817C69CFF25B762DF673A1FD31DAF0E2F761784(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3170>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3170>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3171>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 		goto IL_0255;
 	}
 
 IL_003d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3175>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3175>
 		bool L_4 = __this->___m_isRichTextEditingAllowed;
 		V_2 = L_4;
 		bool L_5 = V_2;
@@ -17654,7 +17655,7 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3177>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3177>
 		int32_t L_6;
 		L_6 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		V_3 = (bool)((((int32_t)L_6) > ((int32_t)0))? 1 : 0);
@@ -17665,9 +17666,9 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3179>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3179>
 		V_4 = 1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3182>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3182>
 		String_t* L_8;
 		L_8 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_9;
@@ -17686,13 +17687,13 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3183>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3183>
 		V_4 = 2;
 	}
 
 IL_0081:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3185>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3185>
 		int32_t L_13;
 		L_13 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_14 = V_4;
@@ -17701,7 +17702,7 @@ IL_0081:
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_15, NULL);
 		int32_t L_16 = V_6;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_16, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3187>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3187>
 		String_t* L_17;
 		L_17 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_18;
@@ -17712,7 +17713,7 @@ IL_0081:
 		L_20 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_17, L_18, L_19, NULL);
 		__this->___m_Text = L_20;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_20);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3189>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3189>
 		int32_t L_21;
 		L_21 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		int32_t L_22 = ((int32_t)il2cpp_codegen_subtract(L_21, 1));
@@ -17720,11 +17721,11 @@ IL_0081:
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_22, NULL);
 		int32_t L_23 = V_6;
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_23, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3191>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3191>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3193>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3193>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3194>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3194>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 	}
 
@@ -17735,7 +17736,7 @@ IL_00e7:
 
 IL_00ed:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3199>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3199>
 		int32_t L_24;
 		L_24 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		V_7 = (bool)((((int32_t)L_24) > ((int32_t)0))? 1 : 0);
@@ -17746,11 +17747,11 @@ IL_00ed:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3201>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3201>
 		int32_t L_26;
 		L_26 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		V_8 = ((int32_t)il2cpp_codegen_subtract(L_26, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3202>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3202>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_27 = __this->___m_TextComponent;
 		NullCheck(L_27);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_28;
@@ -17761,7 +17762,7 @@ IL_00ed:
 		NullCheck(L_29);
 		int32_t L_31 = ((L_29)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_30)))->___stringLength;
 		V_9 = L_31;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3205>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3205>
 		int32_t L_32 = V_8;
 		if ((((int32_t)L_32) <= ((int32_t)0)))
 		{
@@ -17812,7 +17813,7 @@ IL_0173:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3207>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3207>
 		int32_t L_44 = V_9;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_45 = __this->___m_TextComponent;
 		NullCheck(L_45);
@@ -17824,14 +17825,14 @@ IL_0173:
 		NullCheck(L_47);
 		int32_t L_49 = ((L_47)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_48, 1)))))->___stringLength;
 		V_9 = ((int32_t)il2cpp_codegen_add(L_44, L_49));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3208>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3208>
 		int32_t L_50 = V_8;
 		V_8 = ((int32_t)il2cpp_codegen_subtract(L_50, 1));
 	}
 
 IL_01a4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3212>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3212>
 		String_t* L_51;
 		L_51 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_52 = __this->___m_TextComponent;
@@ -17849,9 +17850,9 @@ IL_01a4:
 		L_58 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_51, L_56, L_57, NULL);
 		__this->___m_Text = L_58;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_58);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3215>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3216>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3217>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3215>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3216>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3217>
 		int32_t L_59;
 		L_59 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		if ((((int32_t)L_59) < ((int32_t)1)))
@@ -17903,7 +17904,7 @@ IL_0217:
 		int32_t L_70 = V_6;
 		NullCheck(G_B20_2);
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(G_B20_2, L_70, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3219>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3219>
 		int32_t L_71 = V_8;
 		int32_t L_72 = L_71;
 		V_6 = L_72;
@@ -17914,11 +17915,11 @@ IL_0217:
 
 IL_023e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3222>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3222>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3224>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3224>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3225>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3225>
 		TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64(__this, NULL);
 	}
 
@@ -17928,11 +17929,11 @@ IL_0254:
 
 IL_0255:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3233>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3233>
 		return;
 	}
 }
-// Method Definition Index: 100495
+// Method Definition Index: 100751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Append_m4595DE62B0D6CD1E1EACC127F8B84563351190C8 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, String_t* ___0_input, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -17944,7 +17945,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Append_m4595DE62B0D6CD1E1
 	bool V_6 = false;
 	int32_t G_B10_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3241>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3241>
 		bool L_0 = __this->___m_ReadOnly;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -17954,13 +17955,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Append_m4595DE62B0D6CD1E1
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3242>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3242>
 		goto IL_006c;
 	}
 
 IL_000d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3244>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3244>
 		bool L_2;
 		L_2 = TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1(__this, NULL);
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
@@ -17971,15 +17972,15 @@ IL_000d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3245>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3245>
 		goto IL_006c;
 	}
 
 IL_001c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3247>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3247>
 		V_2 = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3247>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3247>
 		String_t* L_4 = ___0_input;
 		NullCheck(L_4);
 		int32_t L_5;
@@ -17990,14 +17991,14 @@ IL_001c:
 
 IL_0027:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3249>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3249>
 		String_t* L_6 = ___0_input;
 		int32_t L_7 = V_2;
 		NullCheck(L_6);
 		Il2CppChar L_8;
 		L_8 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(L_6, L_7, NULL);
 		V_4 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3251>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3251>
 		Il2CppChar L_9 = V_4;
 		if ((((int32_t)L_9) >= ((int32_t)((int32_t)32))))
 		{
@@ -18039,21 +18040,21 @@ IL_004c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3253>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3253>
 		Il2CppChar L_14 = V_4;
 		VirtualActionInvoker1< Il2CppChar >::Invoke(71, __this, L_14);
 	}
 
 IL_005d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3247>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3247>
 		int32_t L_15 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 	}
 
 IL_0062:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3247>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3247>
 		int32_t L_16 = V_2;
 		int32_t L_17 = V_3;
 		V_6 = (bool)((((int32_t)L_16) < ((int32_t)L_17))? 1 : 0);
@@ -18066,11 +18067,11 @@ IL_0062:
 
 IL_006c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3256>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3256>
 		return;
 	}
 }
-// Method Definition Index: 100496
+// Method Definition Index: 100752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Append_m90791E607DDDAD68C715529BF47B24726ED86582 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Il2CppChar ___0_input, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -18090,7 +18091,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Append_m90791E607DDDAD68C
 	bool V_14 = false;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3260>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3260>
 		bool L_0 = __this->___m_ReadOnly;
 		V_2 = L_0;
 		bool L_1 = V_2;
@@ -18100,13 +18101,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Append_m90791E607DDDAD68C
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3261>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3261>
 		goto IL_02c4;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3263>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3263>
 		bool L_2;
 		L_2 = TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1(__this, NULL);
 		V_3 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
@@ -18117,13 +18118,13 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3264>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3264>
 		goto IL_02c4;
 	}
 
 IL_0022:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3267>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3267>
 		int32_t L_4;
 		L_4 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_5;
@@ -18131,11 +18132,11 @@ IL_0022:
 		int32_t L_6;
 		L_6 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_4, L_5, NULL);
 		V_0 = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3270>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3270>
 		String_t* L_7;
 		L_7 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		V_1 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3272>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3272>
 		int32_t L_8;
 		L_8 = TMP_InputField_get_selectionFocusPosition_m64C9DB19CDB18E29B7CB02DCC84B5F05ACDB473E(__this, NULL);
 		int32_t L_9;
@@ -18148,9 +18149,9 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3275>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3275>
 		__this->___m_HasTextBeenRemoved = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3277>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3277>
 		bool L_11 = __this->___m_isRichTextEditingAllowed;
 		if (L_11)
 		{
@@ -18178,7 +18179,7 @@ IL_006e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3280>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3280>
 		int32_t L_14 = __this->___m_StringPosition;
 		int32_t L_15 = __this->___m_StringSelectPosition;
 		V_6 = (bool)((((int32_t)L_14) < ((int32_t)L_15))? 1 : 0);
@@ -18189,7 +18190,7 @@ IL_006e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3281>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3281>
 		String_t* L_17;
 		L_17 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_18 = __this->___m_StringPosition;
@@ -18204,7 +18205,7 @@ IL_006e:
 
 IL_00aa:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3283>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3283>
 		String_t* L_22;
 		L_22 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_23 = __this->___m_StringSelectPosition;
@@ -18223,7 +18224,7 @@ IL_00c9:
 
 IL_00cf:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3287>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3287>
 		int32_t L_27 = __this->___m_CaretPosition;
 		int32_t L_28 = __this->___m_CaretSelectPosition;
 		V_7 = (bool)((((int32_t)L_27) < ((int32_t)L_28))? 1 : 0);
@@ -18234,7 +18235,7 @@ IL_00cf:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3289>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3289>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_30 = __this->___m_TextComponent;
 		NullCheck(L_30);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_31;
@@ -18245,7 +18246,7 @@ IL_00cf:
 		NullCheck(L_32);
 		int32_t L_34 = ((L_32)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_33)))->___index;
 		__this->___m_StringPosition = L_34;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3290>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3290>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_35 = __this->___m_TextComponent;
 		NullCheck(L_35);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_36;
@@ -18265,7 +18266,7 @@ IL_00cf:
 		NullCheck(L_42);
 		int32_t L_44 = ((L_42)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_43, 1)))))->___stringLength;
 		__this->___m_StringSelectPosition = ((int32_t)il2cpp_codegen_add(L_39, L_44));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3292>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3292>
 		String_t* L_45;
 		L_45 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_46 = __this->___m_StringPosition;
@@ -18280,7 +18281,7 @@ IL_00cf:
 
 IL_017e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3296>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3296>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_50 = __this->___m_TextComponent;
 		NullCheck(L_50);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_51;
@@ -18300,7 +18301,7 @@ IL_017e:
 		NullCheck(L_57);
 		int32_t L_59 = ((L_57)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_58, 1)))))->___stringLength;
 		__this->___m_StringPosition = ((int32_t)il2cpp_codegen_add(L_54, L_59));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3297>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3297>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_60 = __this->___m_TextComponent;
 		NullCheck(L_60);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_61;
@@ -18311,7 +18312,7 @@ IL_017e:
 		NullCheck(L_62);
 		int32_t L_64 = ((L_62)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_63)))->___index;
 		__this->___m_StringSelectPosition = L_64;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3299>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3299>
 		String_t* L_65;
 		L_65 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_66 = __this->___m_StringSelectPosition;
@@ -18333,7 +18334,7 @@ IL_0211:
 
 IL_0212:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3304>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3304>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_70;
 		L_70 = TMP_InputField_get_onValidateInput_mF293BE6DE7AAA1F8E37E20B73418A639A8963A7D(__this, NULL);
 		V_8 = (bool)((!(((RuntimeObject*)(OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530*)L_70) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18344,7 +18345,7 @@ IL_0212:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3306>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3306>
 		OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* L_72;
 		L_72 = TMP_InputField_get_onValidateInput_mF293BE6DE7AAA1F8E37E20B73418A639A8963A7D(__this, NULL);
 		String_t* L_73 = V_1;
@@ -18359,7 +18360,7 @@ IL_0212:
 
 IL_0235:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3308>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3308>
 		int32_t L_77;
 		L_77 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_9 = (bool)((((int32_t)L_77) == ((int32_t)8))? 1 : 0);
@@ -18370,14 +18371,14 @@ IL_0235:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3310>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3310>
 		String_t* L_79 = V_1;
 		int32_t L_80 = V_0;
 		Il2CppChar L_81 = ___0_input;
 		Il2CppChar L_82;
 		L_82 = TMP_InputField_Validate_m76212763DA49DFD7C152C65F8AF6CC056EE69979(__this, L_79, L_80, L_81, NULL);
 		___0_input = L_82;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3312>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3312>
 		Il2CppChar L_83 = ___0_input;
 		V_10 = (bool)((((int32_t)L_83) == ((int32_t)0))? 1 : 0);
 		bool L_84 = V_10;
@@ -18387,13 +18388,13 @@ IL_0235:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3312>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3312>
 		goto IL_02c4;
 	}
 
 IL_025c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3314>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3314>
 		Il2CppChar L_85 = ___0_input;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_86;
@@ -18406,7 +18407,7 @@ IL_025c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3315>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3315>
 		int32_t L_88 = __this->___m_CaretPosition;
 		int32_t L_89 = ((int32_t)il2cpp_codegen_add(L_88, 1));
 		V_12 = L_89;
@@ -18417,17 +18418,17 @@ IL_025c:
 
 IL_0284:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3317>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3317>
 		TMP_InputField_SendOnValueChanged_m9138A30966454771476FF25A71ED03DDAF6EC0C7(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3318>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3318>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3320>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3320>
 		goto IL_02c4;
 	}
 
 IL_0294:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3322>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3322>
 		int32_t L_91;
 		L_91 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_13 = (bool)((!(((uint32_t)L_91) <= ((uint32_t)0)))? 1 : 0);
@@ -18438,7 +18439,7 @@ IL_0294:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3324>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3324>
 		String_t* L_93 = V_1;
 		int32_t L_94 = V_0;
 		Il2CppChar L_95 = ___0_input;
@@ -18449,7 +18450,7 @@ IL_0294:
 
 IL_02b0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3328>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3328>
 		Il2CppChar L_97 = ___0_input;
 		V_14 = (bool)((((int32_t)L_97) == ((int32_t)0))? 1 : 0);
 		bool L_98 = V_14;
@@ -18459,24 +18460,24 @@ IL_02b0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3329>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3329>
 		goto IL_02c4;
 	}
 
 IL_02bc:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3332>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3332>
 		Il2CppChar L_99 = ___0_input;
 		TMP_InputField_Insert_mD8773951E82B4743AF137BE4EDA14915EC704907(__this, L_99, NULL);
 	}
 
 IL_02c4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3333>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3333>
 		return;
 	}
 }
-// Method Definition Index: 100497
+// Method Definition Index: 100753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Insert_mD8773951E82B4743AF137BE4EDA14915EC704907 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Il2CppChar ___0_c, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
@@ -18486,7 +18487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Insert_mD8773951E82B4743A
 	int32_t V_4 = 0;
 	int32_t G_B5_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3339>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3339>
 		bool L_0 = __this->___m_ReadOnly;
 		V_1 = L_0;
 		bool L_1 = V_1;
@@ -18496,20 +18497,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Insert_mD8773951E82B4743A
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3340>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3340>
 		goto IL_00ac;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3344>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3344>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		String_t* L_2;
 		L_2 = Char_ToString_m2A308731F9577C06AF3C0901234E2EAC8327410C((&___0_c), NULL);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3345>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3345>
 		TMP_InputField_Delete_mD817C69CFF25B762DF673A1FD31DAF0E2F761784(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3348>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3348>
 		int32_t L_3;
 		L_3 = TMP_InputField_get_characterLimit_m59833E0A22BACBDF3EDA6A70A30B87272FBAA409(__this, NULL);
 		if ((((int32_t)L_3) <= ((int32_t)0)))
@@ -18544,13 +18545,13 @@ IL_0041:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3349>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3349>
 		goto IL_00ac;
 	}
 
 IL_0047:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3351>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3351>
 		String_t* L_8;
 		L_8 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_9 = __this->___m_StringPosition;
@@ -18560,7 +18561,7 @@ IL_0047:
 		L_11 = String_Insert_mA279E748F06514A6D0B9B680D651D6A6C6BB561A(L_8, L_9, L_10, NULL);
 		__this->___m_Text = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_11);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3353>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3353>
 		Il2CppChar L_12 = ___0_c;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_13;
@@ -18573,7 +18574,7 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3354>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3354>
 		int32_t L_15 = __this->___m_CaretPosition;
 		int32_t L_16 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 		V_4 = L_16;
@@ -18584,32 +18585,32 @@ IL_0047:
 
 IL_0085:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3356>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3356>
 		int32_t L_18 = __this->___m_StringPosition;
 		int32_t L_19 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 		V_4 = L_19;
 		__this->___m_StringPosition = L_19;
 		int32_t L_20 = V_4;
 		__this->___m_StringSelectPosition = L_20;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3358>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3358>
 		TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3359>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3359>
 		TMP_InputField_SendOnValueChanged_m9138A30966454771476FF25A71ED03DDAF6EC0C7(__this, NULL);
 	}
 
 IL_00ac:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3364>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3364>
 		return;
 	}
 }
-// Method Definition Index: 100498
+// Method Definition Index: 100754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateTouchKeyboardFromEditChanges_m05E63AC0F9D593BB8584E97AC236646C05E22B12 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3370>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3370>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_0 = __this->___m_SoftKeyboard;
 		if (!L_0)
 		{
@@ -18638,7 +18639,7 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3372>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3372>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_3 = __this->___m_SoftKeyboard;
 		String_t* L_4 = __this->___m_Text;
 		NullCheck(L_3);
@@ -18647,23 +18648,23 @@ IL_0012:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3374>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3374>
 		return;
 	}
 }
-// Method Definition Index: 100499
+// Method Definition Index: 100755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnValueChangedAndUpdateLabel_m9A56A0E7406E3E3362400445749CE33C20C7BC64 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3378>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3378>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3379>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3379>
 		TMP_InputField_SendOnValueChanged_m9138A30966454771476FF25A71ED03DDAF6EC0C7(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3380>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3380>
 		return;
 	}
 }
-// Method Definition Index: 100500
+// Method Definition Index: 100756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnValueChanged_m9138A30966454771476FF25A71ED03DDAF6EC0C7 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18674,7 +18675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnValueChanged_m9138A
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3384>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3384>
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* L_0;
 		L_0 = TMP_InputField_get_onValueChanged_m407B5F5BFD1F4B04032F6B90B06F5072F5993407(__this, NULL);
 		V_0 = (bool)((!(((RuntimeObject*)(OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18685,7 +18686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnValueChanged_m9138A
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3385>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3385>
 		OnChangeEvent_tDBB13012ABF81899E4DFDD82258EB7E9BB7A9F1D* L_2;
 		L_2 = TMP_InputField_get_onValueChanged_m407B5F5BFD1F4B04032F6B90B06F5072F5993407(__this, NULL);
 		String_t* L_3;
@@ -18696,11 +18697,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnValueChanged_m9138A
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3386>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3386>
 		return;
 	}
 }
-// Method Definition Index: 100501
+// Method Definition Index: 100757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndEdit_mBE399B126786848BC400A04B165A6C9BD6757CD1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18711,7 +18712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndEdit_mBE399B1267
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3394>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3394>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_0;
 		L_0 = TMP_InputField_get_onEndEdit_m0CE9718C71A834CC279430E20DC7FF4F42114FD3(__this, NULL);
 		V_0 = (bool)((!(((RuntimeObject*)(SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18722,7 +18723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndEdit_mBE399B1267
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3395>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3395>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_2;
 		L_2 = TMP_InputField_get_onEndEdit_m0CE9718C71A834CC279430E20DC7FF4F42114FD3(__this, NULL);
 		String_t* L_3 = __this->___m_Text;
@@ -18732,11 +18733,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndEdit_mBE399B1267
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3396>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3396>
 		return;
 	}
 }
-// Method Definition Index: 100502
+// Method Definition Index: 100758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnSubmit_m3993BECBCAB4632CD5C564C0BC38486FC2320D14 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18747,7 +18748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnSubmit_m3993BECBCAB
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3400>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3400>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_0;
 		L_0 = TMP_InputField_get_onSubmit_mAA494FA0B3CFFB2916B399BD5D87C2E1AA637B90(__this, NULL);
 		V_0 = (bool)((!(((RuntimeObject*)(SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18758,7 +18759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnSubmit_m3993BECBCAB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3401>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3401>
 		SubmitEvent_tF7E2843B6A79D94B8EEEA259707F77BD1773B500* L_2;
 		L_2 = TMP_InputField_get_onSubmit_mAA494FA0B3CFFB2916B399BD5D87C2E1AA637B90(__this, NULL);
 		String_t* L_3 = __this->___m_Text;
@@ -18768,11 +18769,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnSubmit_m3993BECBCAB
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3402>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3402>
 		return;
 	}
 }
-// Method Definition Index: 100503
+// Method Definition Index: 100759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocus_m306B75E91484337E9A090AB1A45D971133ACF7C8 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18783,7 +18784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocus_m306B75E91484
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3406>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3406>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_0;
 		L_0 = TMP_InputField_get_onSelect_m6762226148A4B3265EE5FD70ED894BBE8DE86AF0(__this, NULL);
 		V_0 = (bool)((!(((RuntimeObject*)(SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18794,7 +18795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocus_m306B75E91484
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3407>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3407>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_2;
 		L_2 = TMP_InputField_get_onSelect_m6762226148A4B3265EE5FD70ED894BBE8DE86AF0(__this, NULL);
 		String_t* L_3 = __this->___m_Text;
@@ -18804,11 +18805,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocus_m306B75E91484
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3408>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3408>
 		return;
 	}
 }
-// Method Definition Index: 100504
+// Method Definition Index: 100760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocusLost_m0BC85C3C362617A4E81F9E9360207EFC0D2882FF (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18819,7 +18820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocusLost_m0BC85C3C
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3412>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3412>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_0;
 		L_0 = TMP_InputField_get_onDeselect_mC9429495032728AEE8FCB818D61EDFB5DC7F9B0A(__this, NULL);
 		V_0 = (bool)((!(((RuntimeObject*)(SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18830,7 +18831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocusLost_m0BC85C3C
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3413>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3413>
 		SelectionEvent_t8FC75B869F70C9F0BF13390AD0237AD310511119* L_2;
 		L_2 = TMP_InputField_get_onDeselect_mC9429495032728AEE8FCB818D61EDFB5DC7F9B0A(__this, NULL);
 		String_t* L_3 = __this->___m_Text;
@@ -18840,11 +18841,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnFocusLost_m0BC85C3C
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3414>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3414>
 		return;
 	}
 }
-// Method Definition Index: 100505
+// Method Definition Index: 100761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnTextSelection_m301880AB4201417DFE7FEB6CC22A323DF0935ADC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18855,9 +18856,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnTextSelection_m3018
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3418>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3418>
 		__this->___m_isSelected = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3420>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3420>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_0;
 		L_0 = TMP_InputField_get_onTextSelection_mEBA14AF8E2BAF100DE885B78385F510A8E978A33(__this, NULL);
 		V_0 = (bool)((!(((RuntimeObject*)(TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18868,7 +18869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnTextSelection_m3018
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3421>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3421>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_2;
 		L_2 = TMP_InputField_get_onTextSelection_mEBA14AF8E2BAF100DE885B78385F510A8E978A33(__this, NULL);
 		String_t* L_3 = __this->___m_Text;
@@ -18882,11 +18883,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnTextSelection_m3018
 
 IL_0033:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3422>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3422>
 		return;
 	}
 }
-// Method Definition Index: 100506
+// Method Definition Index: 100762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndTextSelection_m5142CBC7340FC8E2B0457DDD1F257C1A19DE01D0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18898,7 +18899,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndTextSelection_m5
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3426>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3426>
 		bool L_0 = __this->___m_isSelected;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -18908,13 +18909,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendOnEndTextSelection_m5
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3426>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3426>
 		goto IL_0042;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3428>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3428>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_2;
 		L_2 = TMP_InputField_get_onEndTextSelection_mB01ED58A536B3DCC323A974C27C50337EAC7CAD5(__this, NULL);
 		V_1 = (bool)((!(((RuntimeObject*)(TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401*)L_2) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
@@ -18925,7 +18926,7 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3429>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3429>
 		TextSelectionEvent_t6C496DAA6DAF01754C27C58A94A5FBA562BA9401* L_4;
 		L_4 = TMP_InputField_get_onEndTextSelection_mB01ED58A536B3DCC323A974C27C50337EAC7CAD5(__this, NULL);
 		String_t* L_5 = __this->___m_Text;
@@ -18939,17 +18940,17 @@ IL_0010:
 
 IL_003b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3431>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3431>
 		__this->___m_isSelected = (bool)0;
 	}
 
 IL_0042:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3432>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3432>
 		return;
 	}
 }
-// Method Definition Index: 100507
+// Method Definition Index: 100763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendTouchScreenKeyboardStatusChanged_mF0F1E86DFF3023EA6167004879DAE86E1D2C3AEB (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18961,7 +18962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SendTouchScreenKeyboardSt
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3436>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3436>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_0 = __this->___m_SoftKeyboard;
 		if (!L_0)
 		{
@@ -18990,7 +18991,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3437>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3437>
 		TouchScreenKeyboardEvent_tB9BEBEF5D6F2B52547EF3861FF437AC25BC06AF1* L_3;
 		L_3 = TMP_InputField_get_onTouchScreenKeyboardStatusChanged_mF14075CDC1B4C99F300FCAD70350CDF144CB4818(__this, NULL);
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_4 = __this->___m_SoftKeyboard;
@@ -19003,11 +19004,11 @@ IL_0015:
 
 IL_0030:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3438>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3438>
 		return;
 	}
 }
-// Method Definition Index: 100508
+// Method Definition Index: 100764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19045,7 +19046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateLabel_mC40048ECFCF1
 	int32_t G_B40_0 = 0;
 	int32_t G_B42_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3447>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3447>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19089,9 +19090,9 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3450>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3450>
 		__this->___m_PreventCallback = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3453>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3453>
 		int32_t L_7;
 		L_7 = TMP_InputField_get_compositionLength_m444E57B7F68C9AECE1CDEBF4732FAD66EBA4937F(__this, NULL);
 		if ((((int32_t)L_7) <= ((int32_t)0)))
@@ -19120,9 +19121,9 @@ IL_0052:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3458>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3458>
 		TMP_InputField_Delete_mD817C69CFF25B762DF673A1FD31DAF0E2F761784(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3460>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3460>
 		bool L_10 = __this->___m_RichText;
 		V_5 = L_10;
 		bool L_11 = V_5;
@@ -19132,7 +19133,7 @@ IL_0052:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3461>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3461>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = L_12;
 		String_t* L_14;
@@ -19171,7 +19172,7 @@ IL_0052:
 
 IL_00bf:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3463>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3463>
 		String_t* L_26;
 		L_26 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		int32_t L_27 = __this->___m_StringPosition;
@@ -19193,26 +19194,26 @@ IL_00bf:
 
 IL_00ee:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3465>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3465>
 		__this->___m_IsCompositionActive = (bool)1;
 		goto IL_010f;
 	}
 
 IL_00f8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3471>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3471>
 		String_t* L_34;
 		L_34 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		V_1 = L_34;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3472>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3472>
 		__this->___m_IsCompositionActive = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3473>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3473>
 		__this->___m_ShouldUpdateIMEWindowPosition = (bool)1;
 	}
 
 IL_010f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3480>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3480>
 		int32_t L_35;
 		L_35 = TMP_InputField_get_inputType_m93A6CC8FF76412F46471D91952323CE4C63B7D34(__this, NULL);
 		V_6 = (bool)((((int32_t)L_35) == ((int32_t)2))? 1 : 0);
@@ -19223,7 +19224,7 @@ IL_010f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3481>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3481>
 		Il2CppChar L_37;
 		L_37 = TMP_InputField_get_asteriskChar_m3D3F22537749D339A3DB36BE6C56015D0B06A38E(__this, NULL);
 		String_t* L_38 = V_1;
@@ -19238,19 +19239,19 @@ IL_010f:
 
 IL_0132:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3483>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3483>
 		String_t* L_41 = V_1;
 		V_2 = L_41;
 	}
 
 IL_0134:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3485>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3485>
 		String_t* L_42 = V_1;
 		bool L_43;
 		L_43 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_42, NULL);
 		V_3 = L_43;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3487>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3487>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_44 = __this->___m_Placeholder;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_45;
@@ -19263,7 +19264,7 @@ IL_0134:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3488>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3488>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_47 = __this->___m_Placeholder;
 		bool L_48 = V_3;
 		NullCheck(L_47);
@@ -19272,7 +19273,7 @@ IL_0134:
 
 IL_015a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3490>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3490>
 		bool L_49 = V_3;
 		if (L_49)
 		{
@@ -19300,20 +19301,20 @@ IL_0169:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3492>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3492>
 		TMP_InputField_SetCaretVisible_m1D8A496EA7137B9CCEFD1785B1D5BFA3A3325194(__this, NULL);
 	}
 
 IL_0178:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3495>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3495>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_52 = __this->___m_TextComponent;
 		String_t* L_53 = V_2;
 		String_t* L_54;
 		L_54 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_53, _stringLiteral22BE618ADF9DAFBF84F27DD4CA2D8D34F67B1103, NULL);
 		NullCheck(L_52);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_52, L_54);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3498>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3498>
 		bool L_55 = __this->___m_IsDrivenByLayoutComponents;
 		V_9 = L_55;
 		bool L_56 = V_9;
@@ -19323,7 +19324,7 @@ IL_0178:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3499>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3499>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_57 = __this->___m_RectTransform;
 		il2cpp_codegen_runtime_class_init_inline(LayoutRebuilder_tD2269CCD93BD5A8C4A92188C66E212B976FA6564_il2cpp_TypeInfo_var);
 		LayoutRebuilder_MarkLayoutForRebuild_m37F415D59609E9D18D49423D9C33E7EA6D859EBD(L_57, NULL);
@@ -19331,7 +19332,7 @@ IL_0178:
 
 IL_01a7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3502>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3502>
 		int32_t L_58 = __this->___m_LineLimit;
 		V_10 = (bool)((((int32_t)L_58) > ((int32_t)0))? 1 : 0);
 		bool L_59 = V_10;
@@ -19341,17 +19342,17 @@ IL_01a7:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3504>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3504>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_60 = __this->___m_TextComponent;
 		NullCheck(L_60);
 		VirtualActionInvoker2< bool, bool >::Invoke(106, L_60, (bool)0, (bool)0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3506>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3506>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_61 = __this->___m_TextComponent;
 		NullCheck(L_61);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_62;
 		L_62 = TMP_Text_get_textInfo_mA24C606B8EA51436E4AA3B9D6DCDFA7A8995E10E(L_61, NULL);
 		V_11 = L_62;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3509>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3509>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_63 = V_11;
 		if (!L_63)
 		{
@@ -19382,7 +19383,7 @@ IL_01eb:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3511>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3511>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_68 = V_11;
 		NullCheck(L_68);
 		TMP_LineInfoU5BU5D_tE485ECF6A7A96441C72B53D75E7A5A5461A2CA0E* L_69 = L_68->___lineInfo;
@@ -19390,7 +19391,7 @@ IL_01eb:
 		NullCheck(L_69);
 		int32_t L_71 = ((L_69)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_70, 1)))))->___lastCharacterIndex;
 		V_13 = L_71;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3512>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3512>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_72 = V_11;
 		NullCheck(L_72);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_73 = L_72->___characterInfo;
@@ -19404,7 +19405,7 @@ IL_01eb:
 		NullCheck(L_77);
 		int32_t L_79 = ((L_77)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_78)))->___stringLength;
 		V_14 = ((int32_t)il2cpp_codegen_add(L_75, L_79));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3513>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3513>
 		String_t* L_80 = V_2;
 		int32_t L_81 = V_14;
 		String_t* L_82 = V_2;
@@ -19416,7 +19417,7 @@ IL_01eb:
 		String_t* L_85;
 		L_85 = String_Remove_m4D7A58E2124F8D0D8AE3EEDE74B6AD6A863ABA68(L_80, L_81, ((int32_t)il2cpp_codegen_subtract(L_83, L_84)), NULL);
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(__this, L_85, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3514>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3514>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_86 = __this->___m_TextComponent;
 		String_t* L_87;
 		L_87 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
@@ -19432,7 +19433,7 @@ IL_026b:
 
 IL_026c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3518>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3518>
 		bool L_89 = __this->___m_IsTextComponentUpdateRequired;
 		if (L_89)
 		{
@@ -19499,9 +19500,9 @@ IL_029b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3520>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3520>
 		__this->___m_IsTextComponentUpdateRequired = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3521>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3521>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_95 = __this->___m_TextComponent;
 		NullCheck(L_95);
 		VirtualActionInvoker2< bool, bool >::Invoke(106, L_95, (bool)0, (bool)0);
@@ -19509,19 +19510,19 @@ IL_029b:
 
 IL_02b8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3524>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3524>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3526>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3526>
 		__this->___m_PreventCallback = (bool)0;
 	}
 
 IL_02c7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3528>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3528>
 		return;
 	}
 }
-// Method Definition Index: 100509
+// Method Definition Index: 100765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateScrollbar_m61D071BE0C6F2D5C8FD3F75AF4B6A256685429C9 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19535,7 +19536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateScrollbar_m61D071BE
 	memset((&V_1), 0, sizeof(V_1));
 	float V_2 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3534>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3534>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_0 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19548,13 +19549,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateScrollbar_m61D071BE
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3536>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3536>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3 = __this->___m_TextViewport;
 		NullCheck(L_3);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_4;
 		L_4 = RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488(L_3, NULL);
 		V_1 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3538>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3538>
 		float L_5;
 		L_5 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_1), NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___m_TextComponent;
@@ -19562,12 +19563,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateScrollbar_m61D071BE
 		float L_7;
 		L_7 = VirtualFuncInvoker0< float >::Invoke(85, L_6);
 		V_2 = ((float)(L_5/L_7));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3540>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3540>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_8 = __this->___m_VerticalScrollbar;
 		float L_9 = V_2;
 		NullCheck(L_8);
 		Scrollbar_set_size_m5376982465D6013425FAB0CA8EFC620C3E1458FB(L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3542>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3542>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_10 = __this->___m_VerticalScrollbar;
 		float L_11;
 		L_11 = TMP_InputField_GetScrollPositionRelativeToViewport_mE320B683741E2E7403D1F2ADCD65F44B68FA4158(__this, NULL);
@@ -19577,17 +19578,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateScrollbar_m61D071BE
 
 IL_0051:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3546>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3546>
 		return;
 	}
 }
-// Method Definition Index: 100510
+// Method Definition Index: 100766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnScrollbarValueChange_mD38291A7EBF4EDA6C308DF090261355519C10E03 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3561>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3561>
 		float L_0 = ___0_value;
 		if ((((float)L_0) < ((float)(0.0f))))
 		{
@@ -19615,35 +19616,35 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3561>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3561>
 		goto IL_0029;
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3563>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3563>
 		float L_3 = ___0_value;
 		TMP_InputField_AdjustTextPositionRelativeToViewport_m7EC3FED9FB3F4F5450E60552FE36F0D79E48592C(__this, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3565>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3565>
 		float L_4 = ___0_value;
 		__this->___m_ScrollPosition = L_4;
 	}
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3568>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3568>
 		return;
 	}
 }
-// Method Definition Index: 100511
+// Method Definition Index: 100767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateMaskRegions_mD22E32D41A5E6EDAC8A7547194CA34A4DE918343 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3598>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3598>
 		return;
 	}
 }
-// Method Definition Index: 100512
+// Method Definition Index: 100768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AdjustTextPositionRelativeToViewport_m7EC3FED9FB3F4F5450E60552FE36F0D79E48592C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, float ___0_relativePosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19665,7 +19666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AdjustTextPositionRelativ
 	memset((&V_8), 0, sizeof(V_8));
 	int32_t G_B7_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3606>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3606>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___m_TextViewport;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19678,19 +19679,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AdjustTextPositionRelativ
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3607>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3607>
 		goto IL_0151;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3609>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3609>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___m_TextComponent;
 		NullCheck(L_3);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_4;
 		L_4 = TMP_Text_get_textInfo_mA24C606B8EA51436E4AA3B9D6DCDFA7A8995E10E(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3612>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3612>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_5 = V_0;
 		if (!L_5)
 		{
@@ -19742,21 +19743,21 @@ IL_0048:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3612>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3612>
 		goto IL_0151;
 	}
 
 IL_0053:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3614>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3614>
 		V_1 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3615>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3615>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_15 = __this->___m_TextComponent;
 		NullCheck(L_15);
 		float L_16;
 		L_16 = VirtualFuncInvoker0< float >::Invoke(85, L_15);
 		V_2 = L_16;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3617>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3617>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_17 = __this->___m_TextComponent;
 		NullCheck(L_17);
 		int32_t L_18;
@@ -19843,39 +19844,39 @@ IL_00b6:
 
 IL_00c1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3620>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3620>
 		V_1 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3621>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3621>
 		goto IL_0105;
 	}
 
 IL_00c9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3623>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3623>
 		V_1 = (0.5f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3624>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3624>
 		goto IL_0105;
 	}
 
 IL_00d1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3626>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3626>
 		V_1 = (1.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3627>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3627>
 		goto IL_0105;
 	}
 
 IL_00d9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3629>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3629>
 		goto IL_0105;
 	}
 
 IL_00db:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3631>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3631>
 		V_1 = (0.5f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3632>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3632>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_27 = __this->___m_TextComponent;
 		NullCheck(L_27);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_28;
@@ -19885,21 +19886,21 @@ IL_00db:
 		L_29 = Bounds_get_size_m0699A53A55A78B3201D7270D6F338DFA91B6FAD4_inline((&V_7), NULL);
 		float L_30 = L_29.___y;
 		V_2 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3633>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3633>
 		goto IL_0105;
 	}
 
 IL_00fd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3635>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3635>
 		V_1 = (0.5f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3636>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3636>
 		goto IL_0105;
 	}
 
 IL_0105:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3639>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3639>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_31 = __this->___m_TextComponent;
 		NullCheck(L_31);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_32;
@@ -19927,17 +19928,17 @@ IL_0105:
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_43), L_36, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_37, L_40)), ((float)il2cpp_codegen_subtract(L_41, L_42)))), NULL);
 		NullCheck(L_32);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_32, L_43, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3641>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3641>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
 IL_0151:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3644>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3644>
 		return;
 	}
 }
-// Method Definition Index: 100513
+// Method Definition Index: 100769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetCaretPositionFromStringIndex_m24E11A6B461D41DAD8CA4DC96F0AB263175DE283 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_stringIndex, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -19946,7 +19947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetCaretPositionFromSt
 	int32_t V_3 = 0;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3649>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3649>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
@@ -19954,14 +19955,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetCaretPositionFromSt
 		NullCheck(L_1);
 		int32_t L_2 = L_1->___characterCount;
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3651>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3651>
 		V_1 = 0;
 		goto IL_0045;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3653>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3653>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___m_TextComponent;
 		NullCheck(L_3);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_4;
@@ -19980,7 +19981,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3654>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3654>
 		int32_t L_10 = V_1;
 		V_3 = L_10;
 		goto IL_0053;
@@ -19988,14 +19989,14 @@ IL_0016:
 
 IL_0040:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3651>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3651>
 		int32_t L_11 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3651>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3651>
 		int32_t L_12 = V_1;
 		int32_t L_13 = V_0;
 		V_4 = (bool)((((int32_t)L_12) < ((int32_t)L_13))? 1 : 0);
@@ -20006,7 +20007,7 @@ IL_0045:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3657>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3657>
 		int32_t L_15 = V_0;
 		V_3 = L_15;
 		goto IL_0053;
@@ -20014,12 +20015,12 @@ IL_0045:
 
 IL_0053:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3658>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3658>
 		int32_t L_16 = V_3;
 		return L_16;
 	}
 }
-// Method Definition Index: 100514
+// Method Definition Index: 100770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetMinCaretPositionFromStringIndex_mF22329EB6607A83C8791B9DE0A1FB4B8B53575AC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_stringIndex, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20028,7 +20029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetMinCaretPositionFro
 	int32_t V_3 = 0;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3667>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3667>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
@@ -20036,14 +20037,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetMinCaretPositionFro
 		NullCheck(L_1);
 		int32_t L_2 = L_1->___characterCount;
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3669>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3669>
 		V_1 = 0;
 		goto IL_005e;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3671>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3671>
 		int32_t L_3 = ___0_stringIndex;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___m_TextComponent;
 		NullCheck(L_4);
@@ -20071,7 +20072,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3672>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3672>
 		int32_t L_15 = V_1;
 		V_3 = L_15;
 		goto IL_006c;
@@ -20079,14 +20080,14 @@ IL_0016:
 
 IL_0059:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3669>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3669>
 		int32_t L_16 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_16, 1));
 	}
 
 IL_005e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3669>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3669>
 		int32_t L_17 = V_1;
 		int32_t L_18 = V_0;
 		V_4 = (bool)((((int32_t)L_17) < ((int32_t)L_18))? 1 : 0);
@@ -20097,7 +20098,7 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3675>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3675>
 		int32_t L_20 = V_0;
 		V_3 = L_20;
 		goto IL_006c;
@@ -20105,12 +20106,12 @@ IL_005e:
 
 IL_006c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3676>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3676>
 		int32_t L_21 = V_3;
 		return L_21;
 	}
 }
-// Method Definition Index: 100515
+// Method Definition Index: 100771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetMaxCaretPositionFromStringIndex_m5A2C033C4018D10695C8E3CA0A53EA7E5F6F5B01 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_stringIndex, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20119,7 +20120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetMaxCaretPositionFro
 	int32_t V_3 = 0;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3685>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3685>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
@@ -20127,14 +20128,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetMaxCaretPositionFro
 		NullCheck(L_1);
 		int32_t L_2 = L_1->___characterCount;
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3687>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3687>
 		V_1 = 0;
 		goto IL_0045;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3689>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3689>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___m_TextComponent;
 		NullCheck(L_3);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_4;
@@ -20153,7 +20154,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3690>
 		int32_t L_10 = V_1;
 		V_3 = L_10;
 		goto IL_0053;
@@ -20161,14 +20162,14 @@ IL_0016:
 
 IL_0040:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3687>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3687>
 		int32_t L_11 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3687>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3687>
 		int32_t L_12 = V_1;
 		int32_t L_13 = V_0;
 		V_4 = (bool)((((int32_t)L_12) < ((int32_t)L_13))? 1 : 0);
@@ -20179,7 +20180,7 @@ IL_0045:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3693>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3693>
 		int32_t L_15 = V_0;
 		V_3 = L_15;
 		goto IL_0053;
@@ -20187,19 +20188,19 @@ IL_0045:
 
 IL_0053:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3694>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3694>
 		int32_t L_16 = V_3;
 		return L_16;
 	}
 }
-// Method Definition Index: 100516
+// Method Definition Index: 100772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_caretPosition, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3699>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3699>
 		TMP_InputField_ClampCaretPos_m24F8EDB52862BA470A2CD5FD3D2A62AA86A00FC1(__this, (&___0_caretPosition), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3701>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3701>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
@@ -20215,64 +20216,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_GetStringIndexFromCare
 
 IL_0028:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3702>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3702>
 		int32_t L_5 = V_0;
 		return L_5;
 	}
 }
-// Method Definition Index: 100517
+// Method Definition Index: 100773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateStringIndexFromCaretPosition_m8D3E94E9EDF597A60FBEF486E005DB87E8450EAB (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3706>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3706>
 		int32_t L_0 = __this->___m_CaretPosition;
 		int32_t L_1;
 		L_1 = TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59(__this, L_0, NULL);
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3707>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3707>
 		int32_t L_2 = __this->___m_CaretSelectPosition;
 		int32_t L_3;
 		L_3 = TMP_InputField_GetStringIndexFromCaretPosition_mE8952E126639234C711E6DA723C272AA6C22FB59(__this, L_2, NULL);
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3708>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3708>
 		__this->___m_IsStringPositionDirty = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3709>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3709>
 		return;
 	}
 }
-// Method Definition Index: 100518
+// Method Definition Index: 100774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateCaretPositionFromStringIndex_mC5C4A5C506805EEB1B32577969B126E257246D2C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3713>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3713>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_1;
 		L_1 = TMP_InputField_GetCaretPositionFromStringIndex_m24E11A6B461D41DAD8CA4DC96F0AB263175DE283(__this, L_0, NULL);
 		TMP_InputField_set_caretPositionInternal_mEC3488328558F5257115078785242BE6C59BA1BF(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3714>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3714>
 		int32_t L_2;
 		L_2 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_3;
 		L_3 = TMP_InputField_GetCaretPositionFromStringIndex_m24E11A6B461D41DAD8CA4DC96F0AB263175DE283(__this, L_2, NULL);
 		TMP_InputField_set_caretSelectPositionInternal_m2AA6FD295A4E6D7236ABFE88B4CF49EDDA566191(__this, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3715>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3715>
 		__this->___m_IsCaretPositionDirty = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3716>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3716>
 		return;
 	}
 }
-// Method Definition Index: 100519
+// Method Definition Index: 100775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ForceLabelUpdate_m06F01A5D3EF44553E23404EC82D65B405A842C11 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3721>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3721>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3722>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3722>
 		return;
 	}
 }
-// Method Definition Index: 100520
+// Method Definition Index: 100776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20282,20 +20283,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_MarkGeometryAsDirty_m3FD8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3731>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3731>
 		il2cpp_codegen_runtime_class_init_inline(CanvasUpdateRegistry_t7A4CC63D880F418DCDE83152B6FDB3259DF14DD1_il2cpp_TypeInfo_var);
 		CanvasUpdateRegistry_RegisterCanvasElementForGraphicRebuild_mEBBD04C3B001E80801966E3347E70A35FCEBE8B1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3732>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3732>
 		return;
 	}
 }
-// Method Definition Index: 100521
+// Method Definition Index: 100777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Rebuild_mA714C05AB0AAF3BDB56E2534622E978943AC2317 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_update, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3736>
 		int32_t L_0 = ___0_update;
 		V_1 = L_0;
 		int32_t L_1 = V_1;
@@ -20312,35 +20313,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_Rebuild_mA714C05AB0AAF3BD
 
 IL_000b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3739>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3739>
 		TMP_InputField_UpdateGeometry_m44637D3DF51E919CE2F702A61B49A2F4FEFCEAFB(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3740>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3740>
 		goto IL_0014;
 	}
 
 IL_0014:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3742>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3742>
 		return;
 	}
 }
-// Method Definition Index: 100522
+// Method Definition Index: 100778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_LayoutComplete_m3C78365E6DFF603628C61A7321EEE5AA1FBCDA67 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3745>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3745>
 		return;
 	}
 }
-// Method Definition Index: 100523
+// Method Definition Index: 100779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_GraphicUpdateComplete_m5FE6F033C3688FD16CE1D52A0CABE075699C568E (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3748>
 		return;
 	}
 }
-// Method Definition Index: 100524
+// Method Definition Index: 100780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateGeometry_m44637D3DF51E919CE2F702A61B49A2F4FEFCEAFB (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20353,7 +20354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_UpdateGeometry_m44637D3DF
 	bool V_1 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3758>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3758>
 		bool L_0;
 		L_0 = TMP_InputField_InPlaceEditing_m2FEE000FC40DAF7CAE8B2DA4FF5D364E30873FC1(__this, NULL);
 		if (L_0)
@@ -20383,13 +20384,13 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3759>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3759>
 		goto IL_004c;
 	}
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3761>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3761>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_3 = __this->___m_CachedInputRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -20402,17 +20403,17 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3762>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3762>
 		goto IL_004c;
 	}
 
 IL_002d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3764>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3764>
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_6;
 		L_6 = TMP_InputField_get_mesh_m200F4FCC0738B54A3DFED98FF430660DB52E3E00(__this, NULL);
 		TMP_InputField_OnFillVBO_m4F9AEEB359EABEA669C3E3587ECF4B1262067E6A(__this, L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3766>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3766>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_7 = __this->___m_CachedInputRenderer;
 		Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_8;
 		L_8 = TMP_InputField_get_mesh_m200F4FCC0738B54A3DFED98FF430660DB52E3E00(__this, NULL);
@@ -20422,11 +20423,11 @@ IL_002d:
 
 IL_004c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3767>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3767>
 		return;
 	}
 }
-// Method Definition Index: 100525
+// Method Definition Index: 100781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20439,15 +20440,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AssignPositioningIfNeeded
 	int32_t G_B11_0 = 0;
 	int32_t G_B13_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3775>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3776>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3777>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3778>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3779>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3780>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3781>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3782>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3783>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3775>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3776>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3777>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3778>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3779>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3780>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3781>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3782>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3783>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -20644,7 +20645,7 @@ IL_0143:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3785>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3785>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_53 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_54 = __this->___m_TextComponent;
 		NullCheck(L_54);
@@ -20655,7 +20656,7 @@ IL_0143:
 		L_56 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_55, NULL);
 		NullCheck(L_53);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_53, L_56, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3786>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3786>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_57 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_58 = __this->___m_TextComponent;
 		NullCheck(L_58);
@@ -20666,7 +20667,7 @@ IL_0143:
 		L_60 = Transform_get_localRotation_mD53D37611A5DAE93EC6C7BBCAC337408C5CACA77(L_59, NULL);
 		NullCheck(L_57);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_57, L_60, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3787>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3787>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_61 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_62 = __this->___m_TextComponent;
 		NullCheck(L_62);
@@ -20677,7 +20678,7 @@ IL_0143:
 		L_64 = Transform_get_localScale_m804A002A53A645CDFCD15BB0F37209162720363F(L_63, NULL);
 		NullCheck(L_61);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_61, L_64, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3788>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3788>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_65 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_66 = __this->___m_TextComponent;
 		NullCheck(L_66);
@@ -20688,7 +20689,7 @@ IL_0143:
 		L_68 = RectTransform_get_anchorMin_mD85363930BE38EC188F933B9F4D58320CAB72F03(L_67, NULL);
 		NullCheck(L_65);
 		RectTransform_set_anchorMin_m931442ABE3368D6D4309F43DF1D64AB64B0F52E3(L_65, L_68, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3789>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3789>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_69 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_70 = __this->___m_TextComponent;
 		NullCheck(L_70);
@@ -20699,7 +20700,7 @@ IL_0143:
 		L_72 = RectTransform_get_anchorMax_mEF870BE2A134CEB9C2326930A71D3961271297DB(L_71, NULL);
 		NullCheck(L_69);
 		RectTransform_set_anchorMax_m52829ABEDD229ABD3DA20BCA676FA1DCA4A39B7D(L_69, L_72, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3790>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3790>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_73 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_74 = __this->___m_TextComponent;
 		NullCheck(L_74);
@@ -20710,7 +20711,7 @@ IL_0143:
 		L_76 = RectTransform_get_anchoredPosition_m38F25A4253B0905BB058BE73DBF43C7172CE0680(L_75, NULL);
 		NullCheck(L_73);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_73, L_76, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3791>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3791>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_77 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_78 = __this->___m_TextComponent;
 		NullCheck(L_78);
@@ -20721,7 +20722,7 @@ IL_0143:
 		L_80 = RectTransform_get_sizeDelta_m822A8493F2035677384F1540A2E9E5ACE63010BB(L_79, NULL);
 		NullCheck(L_77);
 		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_77, L_80, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3792>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3792>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_81 = __this->___caretRectTrans;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_82 = __this->___m_TextComponent;
 		NullCheck(L_82);
@@ -20736,11 +20737,11 @@ IL_0143:
 
 IL_022c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3794>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3794>
 		return;
 	}
 }
-// Method Definition Index: 100526
+// Method Definition Index: 100782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnFillVBO_m4F9AEEB359EABEA669C3E3587ECF4B1262067E6A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___0_vbo, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20757,7 +20758,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnFillVBO_m4F9AEEB359EABE
 	bool V_4 = false;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3799>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3799>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_0 = (VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE*)il2cpp_codegen_object_new(VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE_il2cpp_TypeInfo_var);
 		VertexHelper__ctor_mE8DE438637116EA7AF8180E10E7641FD00DB64A5(L_0, NULL);
 		V_0 = L_0;
@@ -20790,7 +20791,7 @@ IL_009f:
 		try
 		{
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3801>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3801>
 				bool L_3;
 				L_3 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 				if (L_3)
@@ -20819,18 +20820,18 @@ IL_001c_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3803>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3803>
 				VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_6 = V_0;
 				Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_7 = ___0_vbo;
 				NullCheck(L_6);
 				VertexHelper_FillMesh_m524F00287F0A0C7683E2CC7768A77B5755544A0E(L_6, L_7, NULL);
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3804>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3804>
 				goto IL_00a0;
 			}
 
 IL_002b_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3807>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3807>
 				bool L_8 = __this->___m_IsStringPositionDirty;
 				V_2 = L_8;
 				bool L_9 = V_2;
@@ -20840,13 +20841,13 @@ IL_002b_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3808>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3808>
 				TMP_InputField_UpdateStringIndexFromCaretPosition_m8D3E94E9EDF597A60FBEF486E005DB87E8450EAB(__this, NULL);
 			}
 
 IL_003c_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3810>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3810>
 				bool L_10 = __this->___m_IsCaretPositionDirty;
 				V_3 = L_10;
 				bool L_11 = V_3;
@@ -20856,13 +20857,13 @@ IL_003c_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3811>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3811>
 				TMP_InputField_UpdateCaretPositionFromStringIndex_mC5C4A5C506805EEB1B32577969B126E257246D2C(__this, NULL);
 			}
 
 IL_004d_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3813>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3813>
 				bool L_12;
 				L_12 = TMP_InputField_get_hasSelection_mA2CF23CC43AD3EE9F66C67A5995407EBB2F59565(__this, NULL);
 				V_4 = (bool)((((int32_t)L_12) == ((int32_t)0))? 1 : 0);
@@ -20873,30 +20874,30 @@ IL_004d_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3815>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3815>
 				VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_14 = V_0;
 				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_15;
 				L_15 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 				TMP_InputField_GenerateCaret_m6020296CC782C426A13349E6B8885C029DBEBB72(__this, L_14, L_15, NULL);
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3816>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3816>
 				TMP_InputField_SendOnEndTextSelection_m5142CBC7340FC8E2B0457DDD1F257C1A19DE01D0(__this, NULL);
 				goto IL_008a_1;
 			}
 
 IL_0074_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3820>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3820>
 				VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_16 = V_0;
 				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17;
 				L_17 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 				TMP_InputField_GenerateHighlight_m13A9F4C6BB6CD42E0C56C0D06A837BD8CCC97EAF(__this, L_16, L_17, NULL);
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3821>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3821>
 				TMP_InputField_SendOnTextSelection_m301880AB4201417DFE7FEB6CC22A323DF0935ADC(__this, NULL);
 			}
 
 IL_008a_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3824>
+				//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3824>
 				VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_18 = V_0;
 				Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* L_19 = ___0_vbo;
 				NullCheck(L_18);
@@ -20912,11 +20913,11 @@ IL_008a_1:
 
 IL_00a0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3826>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3826>
 		return;
 	}
 }
-// Method Definition Index: 100527
+// Method Definition Index: 100783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_GenerateCaret_m6020296CC782C426A13349E6B8885C029DBEBB72 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* ___0_vbo, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_roundingOffset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20967,7 +20968,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_GenerateCaret_m6020296CC7
 	int32_t G_B39_0 = 0;
 	int32_t G_B44_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3831>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3831>
 		bool L_0 = __this->___m_CaretVisible;
 		if (!L_0)
 		{
@@ -21008,13 +21009,13 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3832>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3832>
 		goto IL_04d7;
 	}
 
 IL_0030:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3834>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3834>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_6 = __this->___m_CursorVerts;
 		V_10 = (bool)((((RuntimeObject*)(UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F*)L_6) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
 		bool L_7 = V_10;
@@ -21024,19 +21025,19 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3836>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3836>
 		TMP_InputField_CreateCursorVerts_mAD2D8B4DD0331646AA852C4BFF7595CC76D27836(__this, NULL);
 	}
 
 IL_0048:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3841>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3841>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
 		L_8 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		V_0 = L_8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3842>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3842>
 		V_1 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3846>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3846>
 		int32_t L_9;
 		L_9 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_10 = __this->___m_TextComponent;
@@ -21073,13 +21074,13 @@ IL_007a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3847>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3847>
 		goto IL_04d7;
 	}
 
 IL_0085:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3849>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3849>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_15 = __this->___m_TextComponent;
 		NullCheck(L_15);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_16;
@@ -21091,7 +21092,7 @@ IL_0085:
 		NullCheck(L_17);
 		int32_t L_19 = ((L_17)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_18)))->___lineNumber;
 		V_3 = L_19;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3852>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3852>
 		int32_t L_20;
 		L_20 = TMP_InputField_get_caretPositionInternal_m21C9BFCD70C944B374E5C916C7E7E67B75B831EA(__this, NULL);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_21 = __this->___m_TextComponent;
@@ -21111,7 +21112,7 @@ IL_0085:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3854>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3854>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_27 = __this->___m_TextComponent;
 		NullCheck(L_27);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_28;
@@ -21124,13 +21125,13 @@ IL_0085:
 		int32_t L_31 = L_30;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_32 = (L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
 		V_2 = L_32;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3855>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3855>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_33 = V_2;
 		float L_34 = L_33.___ascender;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_35 = V_2;
 		float L_36 = L_35.___descender;
 		V_1 = ((float)il2cpp_codegen_subtract(L_34, L_36));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3857>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3857>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_37 = __this->___m_TextComponent;
 		NullCheck(L_37);
 		int32_t L_38;
@@ -21143,7 +21144,7 @@ IL_0085:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3858>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3858>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_40 = V_2;
 		float L_41 = L_40.___origin;
 		float L_42 = V_1;
@@ -21153,7 +21154,7 @@ IL_0085:
 
 IL_012e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3860>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3860>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_43 = V_2;
 		float L_44 = L_43.___origin;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_45 = V_2;
@@ -21168,7 +21169,7 @@ IL_0141:
 
 IL_0144:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3864>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3864>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_47 = __this->___m_TextComponent;
 		NullCheck(L_47);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_48;
@@ -21181,13 +21182,13 @@ IL_0144:
 		int32_t L_51 = ((int32_t)il2cpp_codegen_subtract(L_50, 1));
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_52 = (L_49)->GetAt(static_cast<il2cpp_array_size_t>(L_51));
 		V_2 = L_52;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3865>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3865>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_53 = V_2;
 		float L_54 = L_53.___ascender;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_55 = V_2;
 		float L_56 = L_55.___descender;
 		V_1 = ((float)il2cpp_codegen_subtract(L_54, L_56));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3867>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3867>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_57 = __this->___m_TextComponent;
 		NullCheck(L_57);
 		int32_t L_58;
@@ -21200,7 +21201,7 @@ IL_0144:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3868>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3868>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_60 = V_2;
 		float L_61 = L_60.___xAdvance;
 		float L_62 = V_1;
@@ -21210,7 +21211,7 @@ IL_0144:
 
 IL_01a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3870>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3870>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_63 = V_2;
 		float L_64 = L_63.___xAdvance;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_65 = V_2;
@@ -21224,7 +21225,7 @@ IL_01b8:
 
 IL_01b9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3874>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3874>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_67 = __this->___m_SoftKeyboard;
 		if (!L_67)
 		{
@@ -21253,10 +21254,10 @@ IL_01cd:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3876>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3876>
 		int32_t L_70 = __this->___m_StringPosition;
 		V_16 = L_70;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3877>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3877>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_71 = __this->___m_SoftKeyboard;
 		NullCheck(L_71);
 		String_t* L_72;
@@ -21286,7 +21287,7 @@ IL_01fb:
 IL_01fc:
 	{
 		V_17 = G_B29_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3879>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3879>
 		int32_t L_76 = V_16;
 		V_18 = (bool)((((int32_t)L_76) < ((int32_t)0))? 1 : 0);
 		bool L_77 = V_18;
@@ -21296,13 +21297,13 @@ IL_01fc:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3880>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3880>
 		V_16 = 0;
 	}
 
 IL_020c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3882>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3882>
 		int32_t L_78 = V_16;
 		int32_t L_79 = V_17;
 		V_19 = (bool)((((int32_t)L_78) > ((int32_t)L_79))? 1 : 0);
@@ -21313,14 +21314,14 @@ IL_020c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3883>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3883>
 		int32_t L_81 = V_17;
 		V_16 = L_81;
 	}
 
 IL_021c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3885>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3885>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_82 = __this->___m_SoftKeyboard;
 		int32_t L_83 = V_16;
 		RangeInt_tDFBE4FD13857C11F21F7C3DA6B60D05341B67268 L_84;
@@ -21332,7 +21333,7 @@ IL_021c:
 
 IL_0231:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3889>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3889>
 		bool L_85;
 		L_85 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		if (!L_85)
@@ -21380,7 +21381,7 @@ IL_0258:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3890>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3890>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_92 = V_0;
 		float L_93 = V_1;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_94 = V_2;
@@ -21390,25 +21391,25 @@ IL_0258:
 
 IL_026d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3892>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3892>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_96 = V_0;
 		__this->___m_LastPosition = L_96;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3895>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3895>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_97 = V_0;
 		float L_98 = L_97.___y;
 		float L_99 = V_1;
 		V_4 = ((float)il2cpp_codegen_add(L_98, L_99));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3896>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3896>
 		float L_100 = V_4;
 		float L_101 = V_1;
 		V_5 = ((float)il2cpp_codegen_subtract(L_100, L_101));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3900>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3900>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_102 = __this->___m_TextComponent;
 		NullCheck(L_102);
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_103;
 		L_103 = TMP_Text_get_font_m1F5E907B9181A54212FBD8123242583C1CA4BE2A(L_102, NULL);
 		V_6 = L_103;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3901>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3901>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_104 = __this->___m_TextComponent;
 		NullCheck(L_104);
 		float L_105;
@@ -21424,7 +21425,7 @@ IL_026d:
 		float L_111;
 		L_111 = FaceInfo_get_scale_mC475A572AD4956B47D8B9F8D90DC69BBBB102FCD(L_110, NULL);
 		V_7 = ((float)il2cpp_codegen_multiply(((float)(L_105/L_108)), L_111));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3902>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3902>
 		int32_t L_112 = __this->___m_CaretWidth;
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_113 = V_6;
 		NullCheck(L_113);
@@ -21435,12 +21436,12 @@ IL_026d:
 		L_115 = FaceInfo_get_lineHeight_m528B4A822181FCECF3D4FF1045DF288E5872AB9D((&V_21), NULL);
 		float L_116 = V_7;
 		V_8 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)L_112), L_115)), L_116)), (0.0500000007f)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3903>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3903>
 		float L_117 = V_8;
 		float L_118;
 		L_118 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_117, (1.0f), NULL);
 		V_8 = L_118;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3905>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3905>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_119 = __this->___m_CursorVerts;
 		NullCheck(L_119);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_120 = V_0;
@@ -21450,7 +21451,7 @@ IL_026d:
 		memset((&L_123), 0, sizeof(L_123));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_123), L_121, L_122, (0.0f), NULL);
 		((L_119)->GetAddressAt(static_cast<il2cpp_array_size_t>(0)))->___position = L_123;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3906>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3906>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_124 = __this->___m_CursorVerts;
 		NullCheck(L_124);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_125 = V_0;
@@ -21460,7 +21461,7 @@ IL_026d:
 		memset((&L_128), 0, sizeof(L_128));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_128), L_126, L_127, (0.0f), NULL);
 		((L_124)->GetAddressAt(static_cast<il2cpp_array_size_t>(1)))->___position = L_128;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3907>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3907>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_129 = __this->___m_CursorVerts;
 		NullCheck(L_129);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_130 = V_0;
@@ -21471,7 +21472,7 @@ IL_026d:
 		memset((&L_134), 0, sizeof(L_134));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_134), ((float)il2cpp_codegen_add(L_131, L_132)), L_133, (0.0f), NULL);
 		((L_129)->GetAddressAt(static_cast<il2cpp_array_size_t>(2)))->___position = L_134;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3908>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3908>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_135 = __this->___m_CursorVerts;
 		NullCheck(L_135);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_136 = V_0;
@@ -21482,7 +21483,7 @@ IL_026d:
 		memset((&L_140), 0, sizeof(L_140));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_140), ((float)il2cpp_codegen_add(L_137, L_138)), L_139, (0.0f), NULL);
 		((L_135)->GetAddressAt(static_cast<il2cpp_array_size_t>(3)))->___position = L_140;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3911>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3911>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_141 = __this->___m_CursorVerts;
 		NullCheck(L_141);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_142;
@@ -21490,7 +21491,7 @@ IL_026d:
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_143;
 		L_143 = Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline(L_142, NULL);
 		((L_141)->GetAddressAt(static_cast<il2cpp_array_size_t>(0)))->___color = L_143;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3912>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3912>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_144 = __this->___m_CursorVerts;
 		NullCheck(L_144);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_145;
@@ -21498,7 +21499,7 @@ IL_026d:
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_146;
 		L_146 = Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline(L_145, NULL);
 		((L_144)->GetAddressAt(static_cast<il2cpp_array_size_t>(1)))->___color = L_146;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3913>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3913>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_147 = __this->___m_CursorVerts;
 		NullCheck(L_147);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_148;
@@ -21506,7 +21507,7 @@ IL_026d:
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_149;
 		L_149 = Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline(L_148, NULL);
 		((L_147)->GetAddressAt(static_cast<il2cpp_array_size_t>(2)))->___color = L_149;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3914>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3914>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_150 = __this->___m_CursorVerts;
 		NullCheck(L_150);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_151;
@@ -21514,12 +21515,12 @@ IL_026d:
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_152;
 		L_152 = Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline(L_151, NULL);
 		((L_150)->GetAddressAt(static_cast<il2cpp_array_size_t>(3)))->___color = L_152;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3916>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3916>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_153 = ___0_vbo;
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_154 = __this->___m_CursorVerts;
 		NullCheck(L_153);
 		VertexHelper_AddUIVertexQuad_m6AC21081F2A5A48D22BC3497E527D0A9AB8278B0(L_153, L_154, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3919>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3919>
 		bool L_155 = __this->___m_ShouldUpdateIMEWindowPosition;
 		if (L_155)
 		{
@@ -21548,12 +21549,12 @@ IL_040f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3921>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3921>
 		__this->___m_ShouldUpdateIMEWindowPosition = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3922>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3922>
 		int32_t L_159 = V_3;
 		__this->___m_PreviousIMEInsertionLine = L_159;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3926>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3926>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_160 = __this->___m_TextComponent;
 		NullCheck(L_160);
 		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_161;
@@ -21569,14 +21570,14 @@ IL_040f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3927>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3927>
 		V_23 = (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184*)NULL;
 		goto IL_046e;
 	}
 
 IL_0445:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3930>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3930>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_164 = __this->___m_TextComponent;
 		NullCheck(L_164);
 		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_165;
@@ -21585,7 +21586,7 @@ IL_0445:
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_166;
 		L_166 = Canvas_get_worldCamera_mD2FDE13B61A5213F4E64B40008EB0A8D2D07B853(L_165, NULL);
 		V_23 = L_166;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3932>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3932>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_167 = V_23;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_168;
@@ -21598,7 +21599,7 @@ IL_0445:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3933>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3933>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_170;
 		L_170 = Camera_get_current_m25217A02CB09E3BD50E3E0327879E870AD58C6C3(NULL);
 		V_23 = L_170;
@@ -21610,7 +21611,7 @@ IL_046d:
 
 IL_046e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3936>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3936>
 		CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* L_171 = __this->___m_CachedInputRenderer;
 		NullCheck(L_171);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_172;
@@ -21625,20 +21626,20 @@ IL_046e:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_176;
 		L_176 = Transform_TransformPoint_m05BFF013DB830D7BFE44A007703694AE1062EE44(L_173, L_175, NULL);
 		V_24 = L_176;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3937>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3937>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_177 = V_23;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_178 = V_24;
 		il2cpp_codegen_runtime_class_init_inline(RectTransformUtility_t65C00A84A72F17D78B81F2E7D88C2AA98AB61244_il2cpp_TypeInfo_var);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_179;
 		L_179 = RectTransformUtility_WorldToScreenPoint_mC8701032E223BA296C43799F4AEE98626686238F(L_177, L_178, NULL);
 		V_25 = L_179;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3938>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3938>
 		int32_t L_180;
 		L_180 = Screen_get_height_m01A3102DE71EE1FBEA51D09D6B0261CF864FE8F9(NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_181 = V_25;
 		float L_182 = L_181.___y;
 		(&V_25)->___y = ((float)il2cpp_codegen_subtract(((float)L_180), L_182));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3940>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3940>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_183;
 		L_183 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -21652,7 +21653,7 @@ IL_046e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3941>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3941>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_186;
 		L_186 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_187 = V_25;
@@ -21666,11 +21667,11 @@ IL_04d6:
 
 IL_04d7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3949>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3949>
 		return;
 	}
 }
-// Method Definition Index: 100528
+// Method Definition Index: 100784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_CreateCursorVerts_mAD2D8B4DD0331646AA852C4BFF7595CC76D27836 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21683,25 +21684,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_CreateCursorVerts_mAD2D8B
 	int32_t V_0 = 0;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3954>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3954>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_0 = (UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F*)(UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F*)SZArrayNew(UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F_il2cpp_TypeInfo_var, (uint32_t)4);
 		__this->___m_CursorVerts = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_CursorVerts), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3956>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3956>
 		V_0 = 0;
 		goto IL_0043;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3958>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3958>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_1 = __this->___m_CursorVerts;
 		int32_t L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_il2cpp_TypeInfo_var);
 		UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 L_3 = ((UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_StaticFields*)il2cpp_codegen_static_fields_for(UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_il2cpp_TypeInfo_var))->___simpleVert;
 		NullCheck(L_1);
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(L_2), (UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207)L_3);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3959>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3959>
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_4 = __this->___m_CursorVerts;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -21710,14 +21711,14 @@ IL_0011:
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_7;
 		L_7 = Vector4_op_Implicit_mB193CD8DA20DEB9E9F95CFEB5A2B1B9B3B7ECFEB_inline(L_6, NULL);
 		((L_4)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_5)))->___uv0 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3956>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3956>
 		int32_t L_8 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0043:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3956>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3956>
 		int32_t L_9 = V_0;
 		UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F* L_10 = __this->___m_CursorVerts;
 		NullCheck(L_10);
@@ -21729,11 +21730,11 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3961>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3961>
 		return;
 	}
 }
-// Method Definition Index: 100529
+// Method Definition Index: 100785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_GenerateHighlight_m13A9F4C6BB6CD42E0C56C0D06A837BD8CCC97EAF (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* ___0_vbo, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_roundingOffset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21780,15 +21781,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_GenerateHighlight_m13A9F4
 	int32_t G_B27_0 = 0;
 	int32_t G_B36_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3967>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3967>
 		TMP_InputField_UpdateMaskRegions_mD22E32D41A5E6EDAC8A7547194CA34A4DE918343(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3973>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3973>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		NullCheck(L_0);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_1;
 		L_1 = TMP_Text_get_textInfo_mA24C606B8EA51436E4AA3B9D6DCDFA7A8995E10E(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3976>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3976>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_2 = V_0;
 		NullCheck(L_2);
 		int32_t L_3 = L_2->___characterCount;
@@ -21800,25 +21801,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_GenerateHighlight_m13A9F4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3977>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3977>
 		goto IL_043a;
 	}
 
 IL_0028:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3979>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3979>
 		int32_t L_5;
 		L_5 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_6;
 		L_6 = TMP_InputField_GetCaretPositionFromStringIndex_m24E11A6B461D41DAD8CA4DC96F0AB263175DE283(__this, L_5, NULL);
 		__this->___m_CaretPosition = L_6;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3980>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3980>
 		int32_t L_7;
 		L_7 = TMP_InputField_get_stringSelectPositionInternal_m8FE3D7533D67501DFDC1EA83B3FD72F8C1E0A79D(__this, NULL);
 		int32_t L_8;
 		L_8 = TMP_InputField_GetCaretPositionFromStringIndex_m24E11A6B461D41DAD8CA4DC96F0AB263175DE283(__this, L_7, NULL);
 		__this->___m_CaretSelectPosition = L_8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3982>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3982>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_9 = __this->___m_SoftKeyboard;
 		if (!L_9)
 		{
@@ -21847,7 +21848,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3984>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3984>
 		int32_t L_12 = __this->___m_CaretPosition;
 		int32_t L_13 = __this->___m_CaretSelectPosition;
 		if ((((int32_t)L_12) < ((int32_t)L_13)))
@@ -21880,7 +21881,7 @@ IL_008d:
 IL_00a3:
 	{
 		V_11 = G_B9_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3985>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3985>
 		int32_t L_22 = __this->___m_CaretPosition;
 		int32_t L_23 = __this->___m_CaretSelectPosition;
 		if ((((int32_t)L_22) < ((int32_t)L_23)))
@@ -21907,7 +21908,7 @@ IL_00be:
 IL_00c7:
 	{
 		V_12 = G_B12_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3986>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3986>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_28 = __this->___m_SoftKeyboard;
 		int32_t L_29 = V_11;
 		int32_t L_30 = V_12;
@@ -21920,9 +21921,9 @@ IL_00c7:
 
 IL_00df:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3991>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3991>
 		V_2 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3992>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3992>
 		int32_t L_32 = __this->___m_CaretSelectPosition;
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_33 = V_0;
 		NullCheck(L_33);
@@ -21935,7 +21936,7 @@ IL_00df:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3994>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3994>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_36 = V_0;
 		NullCheck(L_36);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_37 = L_36->___characterInfo;
@@ -21949,7 +21950,7 @@ IL_00df:
 		NullCheck(L_41);
 		float L_43 = ((L_41)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_42)))->___descender;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_1), L_39, L_43, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3995>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3995>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_44 = V_0;
 		NullCheck(L_44);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_45 = L_44->___characterInfo;
@@ -21968,7 +21969,7 @@ IL_00df:
 
 IL_015e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:3999>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:3999>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_52 = V_0;
 		NullCheck(L_52);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_53 = L_52->___characterInfo;
@@ -21982,7 +21983,7 @@ IL_015e:
 		NullCheck(L_57);
 		float L_59 = ((L_57)->GetAddressAt(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_subtract(L_58, 1)))))->___descender;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_1), L_55, L_59, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4000>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4000>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_60 = V_0;
 		NullCheck(L_60);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_61 = L_60->___characterInfo;
@@ -22000,21 +22001,21 @@ IL_015e:
 
 IL_01c9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4005>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4005>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_68 = V_1;
 		float L_69 = V_2;
 		TMP_InputField_AdjustRectTransformRelativeToViewport_m58C2AAE39A4A6EE2309BAACBDFBAA22A885CF479(__this, L_68, L_69, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4007>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4007>
 		int32_t L_70 = __this->___m_CaretPosition;
 		int32_t L_71;
 		L_71 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_70, NULL);
 		V_3 = L_71;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4008>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4008>
 		int32_t L_72 = __this->___m_CaretSelectPosition;
 		int32_t L_73;
 		L_73 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, L_72, NULL);
 		V_4 = L_73;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4011>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4011>
 		int32_t L_74 = V_3;
 		int32_t L_75 = V_4;
 		V_14 = (bool)((((int32_t)L_74) > ((int32_t)L_75))? 1 : 0);
@@ -22025,23 +22026,23 @@ IL_01c9:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4013>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4013>
 		int32_t L_77 = V_3;
 		V_15 = L_77;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4014>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4014>
 		int32_t L_78 = V_4;
 		V_3 = L_78;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4015>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4015>
 		int32_t L_79 = V_15;
 		V_4 = L_79;
 	}
 
 IL_0205:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4018>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4018>
 		int32_t L_80 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_subtract(L_80, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4023>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4023>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_81 = V_0;
 		NullCheck(L_81);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_82 = L_81->___characterInfo;
@@ -22049,7 +22050,7 @@ IL_0205:
 		NullCheck(L_82);
 		int32_t L_84 = ((L_82)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_83)))->___lineNumber;
 		V_5 = L_84;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4024>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4024>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_85 = V_0;
 		NullCheck(L_85);
 		TMP_LineInfoU5BU5D_tE485ECF6A7A96441C72B53D75E7A5A5461A2CA0E* L_86 = L_85->___lineInfo;
@@ -22057,23 +22058,23 @@ IL_0205:
 		NullCheck(L_86);
 		int32_t L_88 = ((L_86)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_87)))->___lastCharacterIndex;
 		V_6 = L_88;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4026>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4026>
 		il2cpp_codegen_runtime_class_init_inline(UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_il2cpp_TypeInfo_var);
 		UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 L_89 = ((UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_StaticFields*)il2cpp_codegen_static_fields_for(UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_il2cpp_TypeInfo_var))->___simpleVert;
 		V_7 = L_89;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4027>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4027>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_90;
 		L_90 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_91;
 		L_91 = Vector4_op_Implicit_mB193CD8DA20DEB9E9F95CFEB5A2B1B9B3B7ECFEB_inline(L_90, NULL);
 		(&V_7)->___uv0 = L_91;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4028>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4028>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_92;
 		L_92 = TMP_InputField_get_selectionColor_m99D5B9FBC11FEAA170C113FB238120A73429F5BB(__this, NULL);
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_93;
 		L_93 = Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline(L_92, NULL);
 		(&V_7)->___color = L_93;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4030>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4030>
 		int32_t L_94 = V_3;
 		V_8 = L_94;
 		goto IL_041e;
@@ -22081,7 +22082,7 @@ IL_0205:
 
 IL_0264:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4033>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4033>
 		int32_t L_95 = V_8;
 		int32_t L_96 = V_6;
 		if ((((int32_t)L_95) == ((int32_t)L_96)))
@@ -22111,7 +22112,7 @@ IL_0274:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4035>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4035>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_100 = V_0;
 		NullCheck(L_100);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_101 = L_100->___characterInfo;
@@ -22120,7 +22121,7 @@ IL_0274:
 		int32_t L_103 = L_102;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_104 = (L_101)->GetAt(static_cast<il2cpp_array_size_t>(L_103));
 		V_17 = L_104;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4036>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4036>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_105 = V_0;
 		NullCheck(L_105);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_106 = L_105->___characterInfo;
@@ -22129,7 +22130,7 @@ IL_0274:
 		int32_t L_108 = L_107;
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_109 = (L_106)->GetAt(static_cast<il2cpp_array_size_t>(L_108));
 		V_18 = L_109;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4039>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4039>
 		int32_t L_110 = V_8;
 		if ((((int32_t)L_110) <= ((int32_t)0)))
 		{
@@ -22170,7 +22171,7 @@ IL_02c6:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4040>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4040>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_118 = V_0;
 		NullCheck(L_118);
 		TMP_CharacterInfoU5BU5D_t297D56FCF66DAA99D8FEA7C30F9F3926902C5B99* L_119 = L_118->___characterInfo;
@@ -22183,7 +22184,7 @@ IL_02c6:
 
 IL_02dd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4042>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4042>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_123 = V_17;
 		float L_124 = L_123.___origin;
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_125 = V_0;
@@ -22193,7 +22194,7 @@ IL_02dd:
 		NullCheck(L_126);
 		float L_128 = ((L_126)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_127)))->___ascender;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_19), L_124, L_128, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4043>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4043>
 		TMP_CharacterInfo_t8B8FF32D6AACE251F2E7835AA5BC6608D535D9F8 L_129 = V_18;
 		float L_130 = L_129.___xAdvance;
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_131 = V_0;
@@ -22203,13 +22204,13 @@ IL_02dd:
 		NullCheck(L_132);
 		float L_134 = ((L_132)->GetAddressAt(static_cast<il2cpp_array_size_t>(L_133)))->___descender;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_20), L_130, L_134, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4045>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4045>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_135 = ___0_vbo;
 		NullCheck(L_135);
 		int32_t L_136;
 		L_136 = VertexHelper_get_currentVertCount_m45BFEBD6FCB7DF3BF9F76946D6002BDC58B173A4(L_135, NULL);
 		V_21 = L_136;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4046>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4046>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_137 = V_19;
 		float L_138 = L_137.___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_139 = V_20;
@@ -22218,12 +22219,12 @@ IL_02dd:
 		memset((&L_141), 0, sizeof(L_141));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_141), L_138, L_140, (0.0f), NULL);
 		(&V_7)->___position = L_141;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4047>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4047>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_142 = ___0_vbo;
 		UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 L_143 = V_7;
 		NullCheck(L_142);
 		VertexHelper_AddVert_mB65D778E8E3C6916CDFF5382208890882C3031BA(L_142, L_143, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4049>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4049>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_144 = V_20;
 		float L_145 = L_144.___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_146 = V_20;
@@ -22232,12 +22233,12 @@ IL_02dd:
 		memset((&L_148), 0, sizeof(L_148));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_148), L_145, L_147, (0.0f), NULL);
 		(&V_7)->___position = L_148;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4050>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4050>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_149 = ___0_vbo;
 		UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 L_150 = V_7;
 		NullCheck(L_149);
 		VertexHelper_AddVert_mB65D778E8E3C6916CDFF5382208890882C3031BA(L_149, L_150, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4052>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4052>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_151 = V_20;
 		float L_152 = L_151.___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_153 = V_19;
@@ -22246,12 +22247,12 @@ IL_02dd:
 		memset((&L_155), 0, sizeof(L_155));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_155), L_152, L_154, (0.0f), NULL);
 		(&V_7)->___position = L_155;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4053>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4053>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_156 = ___0_vbo;
 		UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 L_157 = V_7;
 		NullCheck(L_156);
 		VertexHelper_AddVert_mB65D778E8E3C6916CDFF5382208890882C3031BA(L_156, L_157, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4055>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4055>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_158 = V_19;
 		float L_159 = L_158.___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_160 = V_19;
@@ -22260,32 +22261,32 @@ IL_02dd:
 		memset((&L_162), 0, sizeof(L_162));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_162), L_159, L_161, (0.0f), NULL);
 		(&V_7)->___position = L_162;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4056>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4056>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_163 = ___0_vbo;
 		UIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207 L_164 = V_7;
 		NullCheck(L_163);
 		VertexHelper_AddVert_mB65D778E8E3C6916CDFF5382208890882C3031BA(L_163, L_164, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4058>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4058>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_165 = ___0_vbo;
 		int32_t L_166 = V_21;
 		int32_t L_167 = V_21;
 		int32_t L_168 = V_21;
 		NullCheck(L_165);
 		VertexHelper_AddTriangle_mBA2504734E550C672A33168BE119D76D92C788A4(L_165, L_166, ((int32_t)il2cpp_codegen_add(L_167, 1)), ((int32_t)il2cpp_codegen_add(L_168, 2)), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4059>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4059>
 		VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* L_169 = ___0_vbo;
 		int32_t L_170 = V_21;
 		int32_t L_171 = V_21;
 		int32_t L_172 = V_21;
 		NullCheck(L_169);
 		VertexHelper_AddTriangle_mBA2504734E550C672A33168BE119D76D92C788A4(L_169, ((int32_t)il2cpp_codegen_add(L_170, 2)), ((int32_t)il2cpp_codegen_add(L_171, 3)), L_172, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4061>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4061>
 		int32_t L_173 = V_8;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_173, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4062>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4062>
 		int32_t L_174 = V_5;
 		V_5 = ((int32_t)il2cpp_codegen_add(L_174, 1));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4064>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4064>
 		int32_t L_175 = V_5;
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_176 = V_0;
 		NullCheck(L_176);
@@ -22298,7 +22299,7 @@ IL_02dd:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4065>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4065>
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_179 = V_0;
 		NullCheck(L_179);
 		TMP_LineInfoU5BU5D_tE485ECF6A7A96441C72B53D75E7A5A5461A2CA0E* L_180 = L_179->___lineInfo;
@@ -22314,14 +22315,14 @@ IL_0416:
 
 IL_0417:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4067>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4067>
 		int32_t L_183 = V_8;
 		V_8 = ((int32_t)il2cpp_codegen_add(L_183, 1));
 	}
 
 IL_041e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4031>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4031>
 		int32_t L_184 = V_8;
 		int32_t L_185 = V_4;
 		if ((((int32_t)L_184) > ((int32_t)L_185)))
@@ -22355,11 +22356,11 @@ IL_0431:
 
 IL_043a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4073>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4073>
 		return;
 	}
 }
-// Method Definition Index: 100530
+// Method Definition Index: 100786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AdjustRectTransformRelativeToViewport_m58C2AAE39A4A6EE2309BAACBDFBAA22A885CF479 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_startPosition, float ___1_height, bool ___2_isCharVisible, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22406,7 +22407,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AdjustRectTransformRelati
 	int32_t G_B21_0 = 0;
 	int32_t G_B28_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4086>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4086>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___m_TextViewport;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -22419,20 +22420,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_AdjustRectTransformRelati
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4087>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4087>
 		goto IL_0422;
 	}
 
 IL_0018:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4089>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4089>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
 		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_3);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		L_4 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4090>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4090>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___m_TextComponent;
 		NullCheck(L_5);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_6;
@@ -22441,19 +22442,19 @@ IL_0018:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
 		L_7 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_6, NULL);
 		V_1 = L_7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4091>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4091>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = __this->___m_TextViewport;
 		NullCheck(L_8);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
 		L_9 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_8, NULL);
 		V_2 = L_9;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4092>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4092>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_10 = __this->___m_TextViewport;
 		NullCheck(L_10);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_11;
 		L_11 = RectTransform_get_rect_mC82A60F8C3805ED9833508CCC233689641207488(L_10, NULL);
 		V_3 = L_11;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4094>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4094>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = ___0_startPosition;
 		float L_13 = L_12.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_1;
@@ -22471,7 +22472,7 @@ IL_0018:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = V_0;
 		float L_27 = L_26.___y;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_4), ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_13, L_15)), L_17)), L_19)), ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_21, L_23)), L_25)), L_27)), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4095>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4095>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = V_0;
 		float L_29 = L_28.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = V_2;
@@ -22489,7 +22490,7 @@ IL_0018:
 		float L_39;
 		L_39 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_3), NULL);
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline((&V_5), ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_29, L_31)), L_32)), ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_34, L_36)), L_37)), L_38, L_39, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4098>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4098>
 		float L_40;
 		L_40 = Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F_inline((&V_5), NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_41 = V_4;
@@ -22501,7 +22502,7 @@ IL_0018:
 		float L_45 = L_44.___z;
 		int32_t L_46 = __this->___m_CaretWidth;
 		V_6 = ((float)il2cpp_codegen_subtract(L_40, ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_42, L_45)), ((float)L_46)))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4099>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4099>
 		float L_47 = V_6;
 		V_9 = (bool)((((float)L_47) < ((float)(0.0f)))? 1 : 0);
 		bool L_48 = V_9;
@@ -22511,7 +22512,7 @@ IL_0018:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4101>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4101>
 		bool L_49;
 		L_49 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		if (!L_49)
@@ -22542,7 +22543,7 @@ IL_0116:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4104>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4104>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_53 = __this->___m_TextComponent;
 		NullCheck(L_53);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_54;
@@ -22559,7 +22560,7 @@ IL_0116:
 		L_59 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_56, L_58, NULL);
 		NullCheck(L_55);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_55, L_59, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4106>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4106>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
@@ -22569,7 +22570,7 @@ IL_014d:
 
 IL_014e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4110>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4110>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_60 = V_4;
 		float L_61 = L_60.___x;
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_62 = __this->___m_TextComponent;
@@ -22580,7 +22581,7 @@ IL_014e:
 		float L_65;
 		L_65 = Rect_get_xMin_mE89C40702926D016A633399E20DB9501E251630D_inline((&V_5), NULL);
 		V_7 = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(L_61, L_64)), L_65));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4111>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4111>
 		float L_66 = V_7;
 		V_11 = (bool)((((float)L_66) < ((float)(0.0f)))? 1 : 0);
 		bool L_67 = V_11;
@@ -22590,7 +22591,7 @@ IL_014e:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4114>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4114>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_68 = __this->___m_TextComponent;
 		NullCheck(L_68);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_69;
@@ -22607,13 +22608,13 @@ IL_014e:
 		L_74 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_71, L_73, NULL);
 		NullCheck(L_70);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_70, L_74, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4115>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4115>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
 IL_01b1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4119>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4119>
 		int32_t L_75 = __this->___m_LineType;
 		V_12 = (bool)((!(((uint32_t)L_75) <= ((uint32_t)0)))? 1 : 0);
 		bool L_76 = V_12;
@@ -22623,14 +22624,14 @@ IL_01b1:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4121>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4121>
 		float L_77;
 		L_77 = Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E_inline((&V_5), NULL);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_78 = V_4;
 		float L_79 = L_78.___y;
 		float L_80 = ___1_height;
 		V_13 = ((float)il2cpp_codegen_subtract(L_77, ((float)il2cpp_codegen_add(L_79, L_80))));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4122>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4122>
 		float L_81 = V_13;
 		V_15 = (bool)((((float)L_81) < ((float)(-9.99999975E-05f)))? 1 : 0);
 		bool L_82 = V_15;
@@ -22640,7 +22641,7 @@ IL_01b1:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4125>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4125>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_83 = __this->___m_TextComponent;
 		NullCheck(L_83);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_84;
@@ -22657,19 +22658,19 @@ IL_01b1:
 		L_89 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_86, L_88, NULL);
 		NullCheck(L_85);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_85, L_89, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4126>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4126>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
 IL_0217:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4129>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4129>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_90 = V_4;
 		float L_91 = L_90.___y;
 		float L_92;
 		L_92 = Rect_get_yMin_mB19848FB25DE61EDF958F7A22CFDD86DE103062F_inline((&V_5), NULL);
 		V_14 = ((float)il2cpp_codegen_subtract(L_91, L_92));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4130>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4130>
 		float L_93 = V_14;
 		V_16 = (bool)((((float)L_93) < ((float)(0.0f)))? 1 : 0);
 		bool L_94 = V_16;
@@ -22679,7 +22680,7 @@ IL_0217:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4133>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4133>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_95 = __this->___m_TextComponent;
 		NullCheck(L_95);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_96;
@@ -22696,7 +22697,7 @@ IL_0217:
 		L_101 = Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline(L_98, L_100, NULL);
 		NullCheck(L_97);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_97, L_101, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4134>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4134>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
@@ -22706,7 +22707,7 @@ IL_0268:
 
 IL_0269:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4139>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4139>
 		bool L_102 = __this->___m_HasTextBeenRemoved;
 		V_17 = L_102;
 		bool L_103 = V_17;
@@ -22716,7 +22717,7 @@ IL_0269:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4141>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4141>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_104 = __this->___m_TextComponent;
 		NullCheck(L_104);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_105;
@@ -22726,7 +22727,7 @@ IL_0269:
 		L_106 = RectTransform_get_anchoredPosition_m38F25A4253B0905BB058BE73DBF43C7172CE0680(L_105, NULL);
 		float L_107 = L_106.___x;
 		V_18 = L_107;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4143>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4143>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_108 = V_0;
 		float L_109 = L_108.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_110 = V_2;
@@ -22747,7 +22748,7 @@ IL_0269:
 		L_119 = VirtualFuncInvoker0< Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 >::Invoke(73, L_118);
 		float L_120 = L_119.___x;
 		V_19 = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_109, L_111)), L_113)), L_117)), L_120));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4144>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4144>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_121 = __this->___m_TextComponent;
 		NullCheck(L_121);
 		TMP_TextInfo_t09A8E906329422C3F0C059876801DD695B8D524D* L_122;
@@ -22757,7 +22758,7 @@ IL_0269:
 		int32_t L_124;
 		L_124 = TMP_InputField_ClampArrayIndex_mFD46E1F200092DC5CD5BB8BE57E2D550F0DE21C0(__this, ((int32_t)il2cpp_codegen_subtract(L_123, 1)), NULL);
 		V_20 = L_124;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4145>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4145>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_125 = V_0;
 		float L_126 = L_125.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_127 = V_2;
@@ -22780,7 +22781,7 @@ IL_0269:
 		float L_138 = L_137.___z;
 		int32_t L_139 = __this->___m_CaretWidth;
 		V_21 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_126, L_128)), L_130)), L_135)), L_138)), ((float)L_139)));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4147>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4147>
 		float L_140 = V_18;
 		if ((!(((float)L_140) > ((float)(9.99999975E-05f)))))
 		{
@@ -22810,12 +22811,12 @@ IL_0350:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4149>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4149>
 		float L_144;
 		L_144 = Rect_get_xMin_mE89C40702926D016A633399E20DB9501E251630D_inline((&V_5), NULL);
 		float L_145 = V_19;
 		V_23 = ((float)il2cpp_codegen_subtract(L_144, L_145));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4151>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4151>
 		float L_146 = V_18;
 		float L_147 = V_23;
 		V_24 = (bool)((((float)L_146) < ((float)((-L_147))))? 1 : 0);
@@ -22826,14 +22827,14 @@ IL_0350:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4152>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4152>
 		float L_149 = V_18;
 		V_23 = ((-L_149));
 	}
 
 IL_0375:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4154>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4154>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_150 = __this->___m_TextComponent;
 		NullCheck(L_150);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_151;
@@ -22850,14 +22851,14 @@ IL_0375:
 		L_156 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_153, L_155, NULL);
 		NullCheck(L_152);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_152, L_156, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4155>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4155>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 		goto IL_0413;
 	}
 
 IL_03a7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4157>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4157>
 		float L_157 = V_18;
 		if ((!(((float)L_157) < ((float)(-9.99999975E-05f)))))
 		{
@@ -22887,12 +22888,12 @@ IL_03be:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4159>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4159>
 		float L_161;
 		L_161 = Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F_inline((&V_5), NULL);
 		float L_162 = V_21;
 		V_26 = ((float)il2cpp_codegen_subtract(L_161, L_162));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4161>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4161>
 		float L_163 = V_18;
 		float L_164 = V_26;
 		V_27 = (bool)((((float)((-L_163))) < ((float)L_164))? 1 : 0);
@@ -22903,14 +22904,14 @@ IL_03be:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4162>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4162>
 		float L_166 = V_18;
 		V_26 = ((-L_166));
 	}
 
 IL_03e3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4164>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4164>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_167 = __this->___m_TextComponent;
 		NullCheck(L_167);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_168;
@@ -22927,29 +22928,29 @@ IL_03e3:
 		L_173 = Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline(L_170, L_172, NULL);
 		NullCheck(L_169);
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(L_169, L_173, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4165>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4165>
 		TMP_InputField_AssignPositioningIfNeeded_m3CA56BB25376EF783C8E1218AA2643FACEB924E1(__this, NULL);
 	}
 
 IL_0413:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4168>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4168>
 		__this->___m_HasTextBeenRemoved = (bool)0;
 	}
 
 IL_041b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4171>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4171>
 		__this->___m_forceRectTransformAdjustment = (bool)0;
 	}
 
 IL_0422:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4172>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4172>
 		return;
 	}
 }
-// Method Definition Index: 100531
+// Method Definition Index: 100787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar TMP_InputField_Validate_m76212763DA49DFD7C152C65F8AF6CC056EE69979 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, String_t* ___0_text, int32_t ___1_pos, Il2CppChar ___2_ch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23041,7 +23042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar TMP_InputField_Validate_m76212763D
 	int32_t G_B170_0 = 0;
 	int32_t G_B173_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4180>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4180>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		if (!L_0)
@@ -23071,7 +23072,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4181>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4181>
 		Il2CppChar L_3 = ___2_ch;
 		V_1 = L_3;
 		goto IL_059e;
@@ -23079,7 +23080,7 @@ IL_0015:
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4183>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4183>
 		int32_t L_4;
 		L_4 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		if ((((int32_t)L_4) == ((int32_t)2)))
@@ -23109,7 +23110,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4186>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4186>
 		int32_t L_7 = ___1_pos;
 		if (L_7)
 		{
@@ -23143,7 +23144,7 @@ IL_0056:
 IL_0057:
 	{
 		V_3 = (bool)G_B13_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4187>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4187>
 		int32_t L_12;
 		L_12 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		if (!L_12)
@@ -23166,7 +23167,7 @@ IL_006b:
 IL_006c:
 	{
 		V_4 = (bool)G_B16_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4188>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4188>
 		bool L_14 = V_3;
 		V_5 = (bool)((((int32_t)L_14) == ((int32_t)0))? 1 : 0);
 		bool L_15 = V_5;
@@ -23176,7 +23177,7 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4190>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4190>
 		Il2CppChar L_16 = ___2_ch;
 		if ((((int32_t)L_16) < ((int32_t)((int32_t)48))))
 		{
@@ -23204,7 +23205,7 @@ IL_008c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4190>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4190>
 		Il2CppChar L_19 = ___2_ch;
 		V_1 = L_19;
 		goto IL_059e;
@@ -23212,7 +23213,7 @@ IL_008c:
 
 IL_0099:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4191>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4191>
 		Il2CppChar L_20 = ___2_ch;
 		if ((!(((uint32_t)L_20) == ((uint32_t)((int32_t)45)))))
 		{
@@ -23251,7 +23252,7 @@ IL_00b5:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4191>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4191>
 		Il2CppChar L_26 = ___2_ch;
 		V_1 = L_26;
 		goto IL_059e;
@@ -23259,7 +23260,7 @@ IL_00b5:
 
 IL_00c2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4193>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4193>
 		Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* L_27;
 		L_27 = Thread_get_CurrentThread_m6D4719F4993DB9200490531FF02D4076FF9CA9BD(NULL);
 		NullCheck(L_27);
@@ -23272,7 +23273,7 @@ IL_00c2:
 		String_t* L_30;
 		L_30 = NumberFormatInfo_get_NumberDecimalSeparator_m7413FA8739F3FA6F5D61B54331DBF3232FC6BFC7_inline(L_29, NULL);
 		V_6 = L_30;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4194>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4194>
 		Il2CppChar L_31 = ___2_ch;
 		String_t* L_32 = V_6;
 		il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
@@ -23316,7 +23317,7 @@ IL_00f9:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4194>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4194>
 		Il2CppChar L_39 = ___2_ch;
 		V_1 = L_39;
 		goto IL_059e;
@@ -23324,7 +23325,7 @@ IL_00f9:
 
 IL_0106:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4197>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4197>
 		int32_t L_40;
 		L_40 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		if ((!(((uint32_t)L_40) == ((uint32_t)2))))
@@ -23371,7 +23372,7 @@ IL_012b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4197>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4197>
 		V_1 = ((int32_t)45);
 		goto IL_059e;
 	}
@@ -23387,7 +23388,7 @@ IL_013a:
 
 IL_0140:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4201>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4201>
 		int32_t L_47;
 		L_47 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_11 = (bool)((((int32_t)L_47) == ((int32_t)1))? 1 : 0);
@@ -23398,7 +23399,7 @@ IL_0140:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4203>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4203>
 		Il2CppChar L_49 = ___2_ch;
 		if ((((int32_t)L_49) < ((int32_t)((int32_t)48))))
 		{
@@ -23426,7 +23427,7 @@ IL_0160:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4203>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4203>
 		Il2CppChar L_52 = ___2_ch;
 		V_1 = L_52;
 		goto IL_059e;
@@ -23439,7 +23440,7 @@ IL_016d:
 
 IL_0173:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4205>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4205>
 		int32_t L_53;
 		L_53 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_13 = (bool)((((int32_t)L_53) == ((int32_t)4))? 1 : 0);
@@ -23450,7 +23451,7 @@ IL_0173:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4208>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4208>
 		Il2CppChar L_55 = ___2_ch;
 		if ((((int32_t)L_55) < ((int32_t)((int32_t)65))))
 		{
@@ -23478,7 +23479,7 @@ IL_0193:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4208>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4208>
 		Il2CppChar L_58 = ___2_ch;
 		V_1 = L_58;
 		goto IL_059e;
@@ -23486,7 +23487,7 @@ IL_0193:
 
 IL_01a0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4209>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4209>
 		Il2CppChar L_59 = ___2_ch;
 		if ((((int32_t)L_59) < ((int32_t)((int32_t)97))))
 		{
@@ -23514,7 +23515,7 @@ IL_01b0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4209>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4209>
 		Il2CppChar L_62 = ___2_ch;
 		V_1 = L_62;
 		goto IL_059e;
@@ -23522,7 +23523,7 @@ IL_01b0:
 
 IL_01bd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4210>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4210>
 		Il2CppChar L_63 = ___2_ch;
 		if ((((int32_t)L_63) < ((int32_t)((int32_t)48))))
 		{
@@ -23550,7 +23551,7 @@ IL_01cd:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4210>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4210>
 		Il2CppChar L_66 = ___2_ch;
 		V_1 = L_66;
 		goto IL_059e;
@@ -23563,7 +23564,7 @@ IL_01da:
 
 IL_01e0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4212>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4212>
 		int32_t L_67;
 		L_67 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_17 = (bool)((((int32_t)L_67) == ((int32_t)5))? 1 : 0);
@@ -23574,7 +23575,7 @@ IL_01e0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4214>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4214>
 		String_t* L_69 = ___0_text;
 		NullCheck(L_69);
 		int32_t L_70;
@@ -23608,7 +23609,7 @@ IL_0200:
 IL_0217:
 	{
 		V_18 = G_B71_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4215>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4215>
 		String_t* L_77 = ___0_text;
 		NullCheck(L_77);
 		int32_t L_78;
@@ -23642,7 +23643,7 @@ IL_0226:
 IL_023b:
 	{
 		V_19 = G_B74_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4216>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4216>
 		String_t* L_85 = ___0_text;
 		NullCheck(L_85);
 		int32_t L_86;
@@ -23676,7 +23677,7 @@ IL_024a:
 IL_0261:
 	{
 		V_20 = G_B77_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4218>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4218>
 		Il2CppChar L_93 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_94;
@@ -23689,7 +23690,7 @@ IL_0261:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4221>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4221>
 		Il2CppChar L_96 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_97;
@@ -23720,7 +23721,7 @@ IL_0282:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4222>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4222>
 		Il2CppChar L_100 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		Il2CppChar L_101;
@@ -23731,7 +23732,7 @@ IL_0282:
 
 IL_0294:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4225>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4225>
 		Il2CppChar L_102 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_103;
@@ -23780,7 +23781,7 @@ IL_02ae:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4226>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4226>
 		Il2CppChar L_107 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		Il2CppChar L_108;
@@ -23791,7 +23792,7 @@ IL_02ae:
 
 IL_02c0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4229>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4229>
 		Il2CppChar L_109 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_110;
@@ -23853,7 +23854,7 @@ IL_02eb:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4230>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4230>
 		Il2CppChar L_118 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		Il2CppChar L_119;
@@ -23864,7 +23865,7 @@ IL_02eb:
 
 IL_02fd:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4233>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4233>
 		Il2CppChar L_120 = ___2_ch;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_121;
@@ -23898,14 +23899,14 @@ IL_030f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4234>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4234>
 		V_1 = 0;
 		goto IL_059e;
 	}
 
 IL_031c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4238>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4238>
 		Il2CppChar L_125 = ___2_ch;
 		V_1 = L_125;
 		goto IL_059e;
@@ -23913,7 +23914,7 @@ IL_031c:
 
 IL_0323:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4240>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4240>
 		Il2CppChar L_126 = ___2_ch;
 		V_26 = (bool)((((int32_t)L_126) == ((int32_t)((int32_t)39)))? 1 : 0);
 		bool L_127 = V_26;
@@ -23923,7 +23924,7 @@ IL_0323:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4243>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4243>
 		Il2CppChar L_128 = V_19;
 		if ((((int32_t)L_128) == ((int32_t)((int32_t)32))))
 		{
@@ -23968,7 +23969,7 @@ IL_0352:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4244>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4244>
 		Il2CppChar L_134 = ___2_ch;
 		V_1 = L_134;
 		goto IL_059e;
@@ -23980,7 +23981,7 @@ IL_035f:
 
 IL_0360:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4248>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4248>
 		Il2CppChar L_135 = V_18;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		bool L_136;
@@ -24018,7 +24019,7 @@ IL_037a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4250>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4250>
 		Il2CppChar L_140 = ___2_ch;
 		V_1 = L_140;
 		goto IL_059e;
@@ -24026,7 +24027,7 @@ IL_037a:
 
 IL_0388:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4253>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4253>
 		Il2CppChar L_141 = ___2_ch;
 		if ((((int32_t)L_141) == ((int32_t)((int32_t)32))))
 		{
@@ -24063,9 +24064,9 @@ IL_0399:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4256>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4257>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4258>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4256>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4257>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4258>
 		Il2CppChar L_145 = V_18;
 		if ((((int32_t)L_145) == ((int32_t)((int32_t)32))))
 		{
@@ -24142,7 +24143,7 @@ IL_03dc:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4259>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4259>
 		Il2CppChar L_155 = ___2_ch;
 		V_1 = L_155;
 		goto IL_059e;
@@ -24159,7 +24160,7 @@ IL_03ea:
 
 IL_03f0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4262>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4262>
 		int32_t L_156;
 		L_156 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_31 = (bool)((((int32_t)L_156) == ((int32_t)7))? 1 : 0);
@@ -24170,7 +24171,7 @@ IL_03f0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4271>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4271>
 		Il2CppChar L_158 = ___2_ch;
 		if ((((int32_t)L_158) < ((int32_t)((int32_t)65))))
 		{
@@ -24198,7 +24199,7 @@ IL_0413:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4271>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4271>
 		Il2CppChar L_161 = ___2_ch;
 		V_1 = L_161;
 		goto IL_059e;
@@ -24206,7 +24207,7 @@ IL_0413:
 
 IL_0420:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4272>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4272>
 		Il2CppChar L_162 = ___2_ch;
 		if ((((int32_t)L_162) < ((int32_t)((int32_t)97))))
 		{
@@ -24234,7 +24235,7 @@ IL_0430:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4272>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4272>
 		Il2CppChar L_165 = ___2_ch;
 		V_1 = L_165;
 		goto IL_059e;
@@ -24242,7 +24243,7 @@ IL_0430:
 
 IL_043d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4273>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4273>
 		Il2CppChar L_166 = ___2_ch;
 		if ((((int32_t)L_166) < ((int32_t)((int32_t)48))))
 		{
@@ -24270,7 +24271,7 @@ IL_044d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4273>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4273>
 		Il2CppChar L_169 = ___2_ch;
 		V_1 = L_169;
 		goto IL_059e;
@@ -24278,7 +24279,7 @@ IL_044d:
 
 IL_045a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4274>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4274>
 		Il2CppChar L_170 = ___2_ch;
 		if ((!(((uint32_t)L_170) == ((uint32_t)((int32_t)64)))))
 		{
@@ -24309,7 +24310,7 @@ IL_046d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4274>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4274>
 		Il2CppChar L_174 = ___2_ch;
 		V_1 = L_174;
 		goto IL_059e;
@@ -24317,7 +24318,7 @@ IL_046d:
 
 IL_047a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4275>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4275>
 		Il2CppChar L_175 = ___2_ch;
 		NullCheck(_stringLiteralE6B64CE518F361B6EA86E4CD975D0780802C6790);
 		int32_t L_176;
@@ -24330,7 +24331,7 @@ IL_047a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4275>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4275>
 		Il2CppChar L_178 = ___2_ch;
 		V_1 = L_178;
 		goto IL_059e;
@@ -24338,7 +24339,7 @@ IL_047a:
 
 IL_0498:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4276>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4276>
 		Il2CppChar L_179 = ___2_ch;
 		V_37 = (bool)((((int32_t)L_179) == ((int32_t)((int32_t)46)))? 1 : 0);
 		bool L_180 = V_37;
@@ -24348,7 +24349,7 @@ IL_0498:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4278>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4278>
 		String_t* L_181 = ___0_text;
 		NullCheck(L_181);
 		int32_t L_182;
@@ -24382,7 +24383,7 @@ IL_04b1:
 IL_04c6:
 	{
 		V_38 = G_B167_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4279>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4279>
 		String_t* L_189 = ___0_text;
 		NullCheck(L_189);
 		int32_t L_190;
@@ -24416,7 +24417,7 @@ IL_04d5:
 IL_04ec:
 	{
 		V_39 = G_B170_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4280>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4280>
 		Il2CppChar L_197 = V_38;
 		if ((((int32_t)L_197) == ((int32_t)((int32_t)46))))
 		{
@@ -24444,7 +24445,7 @@ IL_0500:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4281>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4281>
 		Il2CppChar L_200 = ___2_ch;
 		V_1 = L_200;
 		goto IL_059e;
@@ -24461,7 +24462,7 @@ IL_050e:
 
 IL_0514:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4284>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4284>
 		int32_t L_201;
 		L_201 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_41 = (bool)((((int32_t)L_201) == ((int32_t)6))? 1 : 0);
@@ -24472,7 +24473,7 @@ IL_0514:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4287>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4287>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.char_class);
 		String_t* L_203;
 		L_203 = Char_ToString_m2A308731F9577C06AF3C0901234E2EAC8327410C((&___2_ch), NULL);
@@ -24488,7 +24489,7 @@ IL_0514:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4289>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4289>
 		Il2CppChar L_207 = ___2_ch;
 		V_1 = L_207;
 		goto IL_059e;
@@ -24501,7 +24502,7 @@ IL_0541:
 
 IL_0544:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4292>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4292>
 		int32_t L_208;
 		L_208 = TMP_InputField_get_characterValidation_m57E36C62FC9E23DB17F440BA4325A314EF0B0679(__this, NULL);
 		V_43 = (bool)((((int32_t)L_208) == ((int32_t)8))? 1 : 0);
@@ -24512,7 +24513,7 @@ IL_0544:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4294>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4294>
 		TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* L_210 = __this->___m_InputValidator;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_211;
@@ -24525,25 +24526,25 @@ IL_0544:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4296>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4296>
 		TMP_InputValidator_t3429AF61284AE19180C3FB81C0C7D2F90165EA98* L_213 = __this->___m_InputValidator;
 		Il2CppChar L_214 = ___2_ch;
 		NullCheck(L_213);
 		Il2CppChar L_215;
 		L_215 = VirtualFuncInvoker3< Il2CppChar, String_t**, int32_t*, Il2CppChar >::Invoke(4, L_213, (&___0_text), (&___1_pos), L_214);
 		V_45 = L_215;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4297>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4297>
 		String_t* L_216 = ___0_text;
 		__this->___m_Text = L_216;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Text), (void*)L_216);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4298>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4298>
 		int32_t L_217 = ___1_pos;
 		int32_t L_218 = L_217;
 		V_46 = L_218;
 		TMP_InputField_set_stringPositionInternal_m0C190ABB9829A8F93268F669655D6AF29E25E265(__this, L_218, NULL);
 		int32_t L_219 = V_46;
 		TMP_InputField_set_stringSelectPositionInternal_mCBA385B30788D514E2306703B370F6350E1B9997(__this, L_219, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4299>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4299>
 		Il2CppChar L_220 = V_45;
 		V_1 = L_220;
 		goto IL_059e;
@@ -24555,19 +24556,19 @@ IL_0599:
 
 IL_059a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4302>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4302>
 		V_1 = 0;
 		goto IL_059e;
 	}
 
 IL_059e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4303>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4303>
 		Il2CppChar L_221 = V_1;
 		return L_221;
 	}
 }
-// Method Definition Index: 100532
+// Method Definition Index: 100788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ActivateInputField_m9471012A606F201DF838539F5400D072A827914F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24582,7 +24583,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ActivateInputField_m94710
 	int32_t G_B5_0 = 0;
 	int32_t G_B11_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4307>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4307>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -24635,13 +24636,13 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4308>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4308>
 		goto IL_008d;
 	}
 
 IL_003c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4310>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4310>
 		bool L_8;
 		L_8 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		V_1 = L_8;
@@ -24652,7 +24653,7 @@ IL_003c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4312>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4312>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_10 = __this->___m_SoftKeyboard;
 		if (!L_10)
 		{
@@ -24683,11 +24684,11 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4314>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4314>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_14 = __this->___m_SoftKeyboard;
 		NullCheck(L_14);
 		TouchScreenKeyboard_set_active_m4382D57F87E4C86B59864E86BE93A8A2A474B7C2(L_14, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4315>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4315>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_15 = __this->___m_SoftKeyboard;
 		String_t* L_16 = __this->___m_Text;
 		NullCheck(L_15);
@@ -24700,17 +24701,17 @@ IL_0085:
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4319>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4319>
 		__this->___m_ShouldActivateNextUpdate = (bool)1;
 	}
 
 IL_008d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4320>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4320>
 		return;
 	}
 }
-// Method Definition Index: 100533
+// Method Definition Index: 100789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ActivateInputFieldInternal_m95B34ECC08F02FF048EFC2272CE07648657627BC (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24748,7 +24749,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ActivateInputFieldInterna
 	TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* G_B30_1 = NULL;
 	int32_t G_B37_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4324>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4324>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_0;
 		L_0 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -24763,13 +24764,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ActivateInputFieldInterna
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4325>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4325>
 		goto IL_0203;
 	}
 
 IL_0015:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4327>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4327>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_3;
 		L_3 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -24789,7 +24790,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4328>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4328>
 		il2cpp_codegen_runtime_class_init_inline(EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var);
 		EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* L_8;
 		L_8 = EventSystem_get_current_mC87C69FB418563DC2A571A10E2F9DB59A6785016(NULL);
@@ -24801,7 +24802,7 @@ IL_0015:
 
 IL_003f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4332>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4332>
 		il2cpp_codegen_runtime_class_init_inline(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var);
 		bool L_10 = ((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDevice;
 		if (L_10)
@@ -24829,7 +24830,7 @@ IL_004f:
 	{
 		NullCheck(G_B7_1);
 		G_B7_1->___m_TouchKeyboardAllowsInPlaceEditing = (bool)G_B7_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4334>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4334>
 		bool L_12;
 		L_12 = TMP_InputField_TouchScreenKeyboardShouldBeUsed_m8806A4066DDEDF4266EF3D5DE493F246BCE482F3(__this, NULL);
 		if (!L_12)
@@ -24859,7 +24860,7 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4336>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4336>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_15;
 		L_15 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -24895,7 +24896,7 @@ IL_008c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4338>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4338>
 		bool L_20;
 		L_20 = TMP_InputField_get_shouldHideMobileInput_mB40438A3E4172E95CE11F03FD2484E954CDB1F1B(__this, NULL);
 		TouchScreenKeyboard_set_hideInput_m8FDDB21FB7E9B06B791649BBE369E4EA0F5F5299(L_20, NULL);
@@ -24903,7 +24904,7 @@ IL_008c:
 
 IL_009e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4341>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4341>
 		bool L_21;
 		L_21 = TMP_InputField_get_shouldHideSoftKeyboard_m08F3F6AB9DC9A89029B6A41E26F42B7222535790(__this, NULL);
 		if (L_21)
@@ -24932,9 +24933,9 @@ IL_00b2:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4343>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4344>
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4345>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4343>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4344>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4345>
 		int32_t L_24;
 		L_24 = TMP_InputField_get_inputType_m93A6CC8FF76412F46471D91952323CE4C63B7D34(__this, NULL);
 		if ((((int32_t)L_24) == ((int32_t)2)))
@@ -24983,9 +24984,9 @@ IL_0124:
 		NullCheck(G_B23_1);
 		G_B23_1->___m_SoftKeyboard = G_B23_0;
 		Il2CppCodeGenWriteBarrier((void**)(&G_B23_1->___m_SoftKeyboard), (void*)G_B23_0);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4347>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4347>
 		TMP_InputField_OnFocus_mBDC52EE4DF24C43E6C4C272B09FDAE6F7CB5970F(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4351>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4351>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_38 = __this->___m_SoftKeyboard;
 		V_5 = (bool)((!(((RuntimeObject*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)L_38) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_39 = V_5;
@@ -24995,7 +24996,7 @@ IL_0124:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4353>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4353>
 		int32_t L_40;
 		L_40 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
 		int32_t L_41;
@@ -25026,7 +25027,7 @@ IL_015d:
 IL_016a:
 	{
 		V_6 = G_B27_0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4354>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4354>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_46 = __this->___m_SoftKeyboard;
 		int32_t L_47;
 		L_47 = TMP_InputField_get_stringPositionInternal_mBDA10D8ED51D01C973FB6CFDD1096DD29CA5D214(__this, NULL);
@@ -25076,7 +25077,7 @@ IL_019d:
 
 IL_01a0:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4361>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4361>
 		bool L_53;
 		L_53 = TMP_InputField_TouchScreenKeyboardShouldBeUsed_m8806A4066DDEDF4266EF3D5DE493F246BCE482F3(__this, NULL);
 		if (L_53)
@@ -25116,7 +25117,7 @@ IL_01c0:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4362>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4362>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_58;
 		L_58 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		NullCheck(L_58);
@@ -25125,44 +25126,44 @@ IL_01c0:
 
 IL_01d3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4364>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4364>
 		TMP_InputField_OnFocus_mBDC52EE4DF24C43E6C4C272B09FDAE6F7CB5970F(__this, NULL);
 	}
 
 IL_01db:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4367>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4367>
 		__this->___m_AllowInput = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4368>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4368>
 		String_t* L_59;
 		L_59 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A(__this, NULL);
 		__this->___m_OriginalText = L_59;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_OriginalText), (void*)L_59);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4369>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4369>
 		__this->___m_WasCanceled = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4370>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4370>
 		TMP_InputField_SetCaretVisible_m1D8A496EA7137B9CCEFD1785B1D5BFA3A3325194(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4371>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4371>
 		TMP_InputField_UpdateLabel_mC40048ECFCF13981FE38993C7251024EC2477ED2(__this, NULL);
 	}
 
 IL_0203:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4372>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4372>
 		return;
 	}
 }
-// Method Definition Index: 100534
+// Method Definition Index: 100790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnSelect_m586B40BE0FAFFDA515B1AF7A391094F076B2036F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4378>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4378>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_0 = ___0_eventData;
 		Selectable_OnSelect_m50BA6D8F185CEA3211F9DEFE68AB6439AF685242(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4379>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4379>
 		TMP_InputField_SendOnFocus_m306B75E91484337E9A090AB1A45D971133ACF7C8(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4381>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4381>
 		bool L_1;
 		L_1 = VirtualFuncInvoker0< bool >::Invoke(62, __this);
 		V_0 = L_1;
@@ -25173,22 +25174,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnSelect_m586B40BE0FAFFDA
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4382>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4382>
 		TMP_InputField_ActivateInputField_m9471012A606F201DF838539F5400D072A827914F(__this, NULL);
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4383>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4383>
 		return;
 	}
 }
-// Method Definition Index: 100535
+// Method Definition Index: 100791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnPointerClick_m2A6F2110D5AD4EF8C3FBA29166BC76921C469C55 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4389>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4389>
 		PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -25201,52 +25202,52 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnPointerClick_m2A6F2110D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4390>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4390>
 		goto IL_0017;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4392>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4392>
 		TMP_InputField_ActivateInputField_m9471012A606F201DF838539F5400D072A827914F(__this, NULL);
 	}
 
 IL_0017:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4393>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4393>
 		return;
 	}
 }
-// Method Definition Index: 100536
+// Method Definition Index: 100792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnControlClick_m5E418EA29EFE5180655F904E5727AE8210B6EC21 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4398>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4398>
 		return;
 	}
 }
-// Method Definition Index: 100537
+// Method Definition Index: 100793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_ReleaseSelection_mC70F802822362452CFDD9FE095F5147E6BB5020F (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4402>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4402>
 		__this->___m_SelectionStillActive = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4403>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4403>
 		__this->___m_ReleaseSelection = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4404>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4404>
 		__this->___m_PreviouslySelectedObject = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_PreviouslySelectedObject), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4406>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4406>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4408>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4408>
 		TMP_InputField_SendOnEndEdit_mBE399B126786848BC400A04B165A6C9BD6757CD1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4409>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4409>
 		TMP_InputField_SendOnEndTextSelection_m5142CBC7340FC8E2B0457DDD1F257C1A19DE01D0(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4410>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4410>
 		return;
 	}
 }
-// Method Definition Index: 100538
+// Method Definition Index: 100794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, bool ___0_clearSelection, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25267,7 +25268,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DeactivateInputField_m1C8
 	int32_t G_B12_0 = 0;
 	int32_t G_B19_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4417>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4417>
 		bool L_0 = __this->___m_AllowInput;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -25277,17 +25278,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DeactivateInputField_m1C8
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4418>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4418>
 		goto IL_0122;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4420>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4420>
 		__this->___m_HasDoneFocusTransition = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4421>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4421>
 		__this->___m_AllowInput = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4423>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4423>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_2 = __this->___m_Placeholder;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -25300,7 +25301,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4424>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4424>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_5 = __this->___m_Placeholder;
 		String_t* L_6 = __this->___m_Text;
 		bool L_7;
@@ -25311,7 +25312,7 @@ IL_0013:
 
 IL_0048:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4426>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4426>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -25343,7 +25344,7 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4428>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4428>
 		bool L_12 = __this->___m_WasCanceled;
 		if (!L_12)
 		{
@@ -25378,14 +25379,14 @@ IL_0083:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4429>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4429>
 		String_t* L_16 = __this->___m_OriginalText;
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(__this, L_16, NULL);
 	}
 
 IL_0094:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4431>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4431>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_17 = __this->___m_SoftKeyboard;
 		V_4 = (bool)((!(((RuntimeObject*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)L_17) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 		bool L_18 = V_4;
@@ -25395,20 +25396,20 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4433>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4433>
 		TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A* L_19 = __this->___m_SoftKeyboard;
 		NullCheck(L_19);
 		TouchScreenKeyboard_set_active_m4382D57F87E4C86B59864E86BE93A8A2A474B7C2(L_19, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4434>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4434>
 		__this->___m_SoftKeyboard = (TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_SoftKeyboard), (void*)(TouchScreenKeyboard_tE87B78A3DAED69816B44C99270A734682E093E7A*)NULL);
 	}
 
 IL_00b9:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4437>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4437>
 		__this->___m_SelectionStillActive = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4439>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4439>
 		bool L_20 = __this->___m_ResetOnDeActivation;
 		if (L_20)
 		{
@@ -25437,7 +25438,7 @@ IL_00d1:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4445>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4445>
 		Scrollbar_t7CDC9B956698D9385A11E4C12964CD51477072C3* L_24 = __this->___m_VerticalScrollbar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -25450,7 +25451,7 @@ IL_00d1:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4446>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4446>
 		TMP_InputField_ReleaseSelection_mC70F802822362452CFDD9FE095F5147E6BB5020F(__this, NULL);
 	}
 
@@ -25460,7 +25461,7 @@ IL_00f3:
 
 IL_00f4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4449>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4449>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_27;
 		L_27 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -25474,7 +25475,7 @@ IL_00f4:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4450>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4450>
 		BaseInput_t69C46B0AA3C24F1CA842A0D03CACACC4EC788622* L_30;
 		L_30 = TMP_InputField_get_inputSystem_mB89A77F46D53CCD05D9F57E03F4586B90265A55A(__this, NULL);
 		NullCheck(L_30);
@@ -25483,45 +25484,45 @@ IL_00f4:
 
 IL_0113:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4452>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4452>
 		__this->___m_IsKeyboardBeingClosedInHoloLens = (bool)0;
 	}
 
 IL_011b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4455>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4455>
 		TMP_InputField_MarkGeometryAsDirty_m3FD825DDE67FAA8CFBF12EE92C65463823402138(__this, NULL);
 	}
 
 IL_0122:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4456>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4456>
 		return;
 	}
 }
-// Method Definition Index: 100539
+// Method Definition Index: 100795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnDeselect_m19AA85C6A6FAB27850293318B1D92908B82F99AF (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4460>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4460>
 		TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D(__this, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4462>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4462>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_0 = ___0_eventData;
 		Selectable_OnDeselect_m43A2F451FC100ACAFA88D67331CD4537994B8262(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4463>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4463>
 		TMP_InputField_SendOnFocusLost_m0BC85C3C362617A4E81F9E9360207EFC0D2882FF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4464>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4464>
 		return;
 	}
 }
-// Method Definition Index: 100540
+// Method Definition Index: 100796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnSubmit_m52BE7037E939A81A0EF41FCB4DA55D77C5970039 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4470>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4470>
 		bool L_0;
 		L_0 = VirtualFuncInvoker0< bool >::Invoke(9, __this);
 		if (!L_0)
@@ -25551,13 +25552,13 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4471>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4471>
 		goto IL_004a;
 	}
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4473>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4473>
 		bool L_3;
 		L_3 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		V_1 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
@@ -25568,17 +25569,17 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4474>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4474>
 		__this->___m_ShouldActivateNextUpdate = (bool)1;
 	}
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4476>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4476>
 		TMP_InputField_SendOnSubmit_m3993BECBCAB4632CD5C564C0BC38486FC2320D14(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4477>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4477>
 		TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D(__this, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4478>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4478>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_5 = ___0_eventData;
 		if (L_5)
 		{
@@ -25598,18 +25599,18 @@ IL_0043:
 
 IL_004a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4479>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4479>
 		return;
 	}
 }
-// Method Definition Index: 100541
+// Method Definition Index: 100797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnCancel_m686143EF204ADB7CE0C8C3C6B5D4838A05F8CC4C (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4483>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4483>
 		bool L_0;
 		L_0 = VirtualFuncInvoker0< bool >::Invoke(9, __this);
 		if (!L_0)
@@ -25639,13 +25640,13 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4484>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4484>
 		goto IL_0045;
 	}
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4486>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4486>
 		bool L_3;
 		L_3 = TMP_InputField_get_isFocused_m7FD1AA3B92404C30596FF6EE5F644757A2F060DE(__this, NULL);
 		V_1 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
@@ -25656,17 +25657,17 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4487>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4487>
 		__this->___m_ShouldActivateNextUpdate = (bool)1;
 	}
 
 IL_002f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4489>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4489>
 		__this->___m_WasCanceled = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4490>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4490>
 		TMP_InputField_DeactivateInputField_m1C829676E9DC0D3E5DAE85D1869D26FBF748184D(__this, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4491>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4491>
 		BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* L_5 = ___0_eventData;
 		NullCheck(L_5);
 		VirtualActionInvoker0::Invoke(5, L_5);
@@ -25674,16 +25675,16 @@ IL_002f:
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4492>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4492>
 		return;
 	}
 }
-// Method Definition Index: 100542
+// Method Definition Index: 100798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnMove_mB63ECADCE8AC698AA2F3F1C1442B8D3482F96D28 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938* ___0_eventData, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4497>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4497>
 		bool L_0 = __this->___m_AllowInput;
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 		bool L_1 = V_0;
@@ -25693,24 +25694,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_OnMove_mB63ECADCE8AC698AA
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4498>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4498>
 		AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938* L_2 = ___0_eventData;
 		Selectable_OnMove_m0801D5433615BD3163659A17B1DB2B23886AF05A(__this, L_2, NULL);
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4499>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4499>
 		return;
 	}
 }
-// Method Definition Index: 100543
+// Method Definition Index: 100799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_EnforceContentType_m4D5F42FD6E04B3B3B541E978C9C603B7696E7AB2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4509>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4509>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_contentType_m32EEDFC275E9CB6C759A4F117EBAA40336B9030D(__this, NULL);
 		V_1 = L_0;
@@ -25763,141 +25764,141 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_EnforceContentType_m4D5F4
 
 IL_0039:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4514>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4514>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4515>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4515>
 		__this->___m_KeyboardType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4516>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4516>
 		__this->___m_CharacterValidation = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4517>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4517>
 		goto IL_0151;
 	}
 
 IL_0054:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4522>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4522>
 		__this->___m_InputType = 1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4523>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4523>
 		__this->___m_KeyboardType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4524>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4524>
 		__this->___m_CharacterValidation = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4525>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4525>
 		goto IL_0151;
 	}
 
 IL_006f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4529>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4529>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4530>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4530>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4531>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4531>
 		__this->___m_KeyboardType = 2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4532>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4532>
 		__this->___m_CharacterValidation = 2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4533>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4533>
 		goto IL_0151;
 	}
 
 IL_0091:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4537>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4537>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4538>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4538>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4539>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4539>
 		__this->___m_KeyboardType = 2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4540>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4540>
 		__this->___m_CharacterValidation = 3;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4541>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4541>
 		goto IL_0151;
 	}
 
 IL_00b3:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4545>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4545>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4546>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4546>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4547>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4547>
 		__this->___m_KeyboardType = 1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4548>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4548>
 		__this->___m_CharacterValidation = 4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4549>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4549>
 		goto IL_0151;
 	}
 
 IL_00d2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4553>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4553>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4554>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4554>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4555>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4555>
 		__this->___m_KeyboardType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4556>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4556>
 		__this->___m_CharacterValidation = 5;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4557>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4557>
 		goto IL_0151;
 	}
 
 IL_00f1:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4561>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4561>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4562>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4562>
 		__this->___m_InputType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4563>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4563>
 		__this->___m_KeyboardType = 7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4564>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4564>
 		__this->___m_CharacterValidation = 7;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4565>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4565>
 		goto IL_0151;
 	}
 
 IL_0110:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4569>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4569>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4570>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4570>
 		__this->___m_InputType = 2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4571>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4571>
 		__this->___m_KeyboardType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4572>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4572>
 		__this->___m_CharacterValidation = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4573>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4573>
 		goto IL_0151;
 	}
 
 IL_012f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4577>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4577>
 		__this->___m_LineType = 0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4578>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4578>
 		__this->___m_InputType = 2;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4579>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4579>
 		__this->___m_KeyboardType = 4;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4580>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4580>
 		__this->___m_CharacterValidation = 1;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4581>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4581>
 		goto IL_0151;
 	}
 
 IL_014e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4586>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4586>
 		goto IL_0151;
 	}
 
 IL_0151:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4590>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4590>
 		TMP_InputField_SetTextComponentWrapMode_m9CF72ADC54A79451A8B35A85FFF2232F1D6A79ED(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4591>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4591>
 		return;
 	}
 }
-// Method Definition Index: 100544
+// Method Definition Index: 100800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextComponentWrapMode_m9CF72ADC54A79451A8B35A85FFF2232F1D6A79ED (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25909,7 +25910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextComponentWrapMode_
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4595>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4595>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -25922,13 +25923,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextComponentWrapMode_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4596>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4596>
 		goto IL_0039;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4598>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4598>
 		bool L_3;
 		L_3 = TMP_InputField_get_multiLine_m3000150A39B90BCFFAFD41E0F49F479323F045B7(__this, NULL);
 		V_1 = L_3;
@@ -25939,7 +25940,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4599>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4599>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = __this->___m_TextComponent;
 		NullCheck(L_5);
 		TMP_Text_set_textWrappingMode_mBD3A313CC85C9BB85F924D589A33A500E21DCA3D(L_5, 1, NULL);
@@ -25948,7 +25949,7 @@ IL_0013:
 
 IL_002c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4601>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4601>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6 = __this->___m_TextComponent;
 		NullCheck(L_6);
 		TMP_Text_set_textWrappingMode_mBD3A313CC85C9BB85F924D589A33A500E21DCA3D(L_6, 3, NULL);
@@ -25956,11 +25957,11 @@ IL_002c:
 
 IL_0039:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4602>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4602>
 		return;
 	}
 }
-// Method Definition Index: 100545
+// Method Definition Index: 100801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextComponentRichTextMode_mAA7F99B2DFD5DD46007BF0247B37A8CA008F1947 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25971,7 +25972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextComponentRichTextM
 	}
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4607>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4607>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0 = __this->___m_TextComponent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -25984,13 +25985,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetTextComponentRichTextM
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4608>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4608>
 		goto IL_0025;
 	}
 
 IL_0013:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4610>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4610>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_3 = __this->___m_TextComponent;
 		bool L_4 = __this->___m_RichText;
 		NullCheck(L_3);
@@ -25999,11 +26000,11 @@ IL_0013:
 
 IL_0025:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4611>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4611>
 		return;
 	}
 }
-// Method Definition Index: 100546
+// Method Definition Index: 100802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustomIfContentTypeIsNot_mB9AC8BE6A15C7DC926F5064C49A0F2199CC6B14D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39* ___0_allowedContentTypes, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -26011,7 +26012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustomIfContentTypeI
 	bool V_2 = false;
 	bool V_3 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4615>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4615>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_contentType_m32EEDFC275E9CB6C759A4F117EBAA40336B9030D(__this, NULL);
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)9)))? 1 : 0);
@@ -26022,20 +26023,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustomIfContentTypeI
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4616>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4616>
 		goto IL_003d;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4618>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4618>
 		V_1 = 0;
 		goto IL_002a;
 	}
 
 IL_0015:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4619>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4619>
 		int32_t L_2;
 		L_2 = TMP_InputField_get_contentType_m32EEDFC275E9CB6C759A4F117EBAA40336B9030D(__this, NULL);
 		ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39* L_3 = ___0_allowedContentTypes;
@@ -26051,20 +26052,20 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4620>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4620>
 		goto IL_003d;
 	}
 
 IL_0026:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4618>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4618>
 		int32_t L_8 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4618>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4618>
 		int32_t L_9 = V_1;
 		ContentTypeU5BU5D_t9CD28BD8595DADB2BF0E1020E0E5701C95E80B39* L_10 = ___0_allowedContentTypes;
 		NullCheck(L_10);
@@ -26076,22 +26077,22 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4622>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4622>
 		TMP_InputField_set_contentType_mB9BCF78B6868FBB3CDE671DDF008E3716D3ADC91(__this, ((int32_t)9), NULL);
 	}
 
 IL_003d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4623>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4623>
 		return;
 	}
 }
-// Method Definition Index: 100547
+// Method Definition Index: 100803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustom_m798A8846432794AA8687F6020551B512357D2CF0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4627>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4627>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_contentType_m32EEDFC275E9CB6C759A4F117EBAA40336B9030D(__this, NULL);
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)9)))? 1 : 0);
@@ -26102,28 +26103,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustom_m798A88464327
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4628>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4628>
 		goto IL_001a;
 	}
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4630>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4630>
 		TMP_InputField_set_contentType_mB9BCF78B6868FBB3CDE671DDF008E3716D3ADC91(__this, ((int32_t)9), NULL);
 	}
 
 IL_001a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4631>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4631>
 		return;
 	}
 }
-// Method Definition Index: 100548
+// Method Definition Index: 100804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustom_mB668A3AB0C1900F2B2618DB9C1288C805DD21D58 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_characterValidation, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4635>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4635>
 		int32_t L_0;
 		L_0 = TMP_InputField_get_contentType_m32EEDFC275E9CB6C759A4F117EBAA40336B9030D(__this, NULL);
 		V_0 = (bool)((((int32_t)L_0) == ((int32_t)((int32_t)9)))? 1 : 0);
@@ -26134,33 +26135,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetToCustom_mB668A3AB0C19
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4637>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4637>
 		___0_characterValidation = 8;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4638>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4638>
 		goto IL_0021;
 	}
 
 IL_0015:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4641>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4641>
 		TMP_InputField_set_contentType_mB9BCF78B6868FBB3CDE671DDF008E3716D3ADC91(__this, ((int32_t)9), NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4642>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4642>
 		___0_characterValidation = 8;
 	}
 
 IL_0021:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4643>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4643>
 		return;
 	}
 }
-// Method Definition Index: 100549
+// Method Definition Index: 100805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DoStateTransition_mB9F4AAD269179A5EBE7A31DDC64D8832C403F260 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, int32_t ___0_state, bool ___1_instant, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4648>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4648>
 		bool L_0 = __this->___m_HasDoneFocusTransition;
 		V_0 = L_0;
 		bool L_1 = V_0;
@@ -26170,14 +26171,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_DoStateTransition_mB9F4AA
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4649>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4649>
 		___0_state = 3;
 		goto IL_001f;
 	}
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4650>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4650>
 		int32_t L_2 = ___0_state;
 		V_1 = (bool)((((int32_t)L_2) == ((int32_t)2))? 1 : 0);
 		bool L_3 = V_1;
@@ -26187,54 +26188,54 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4651>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4651>
 		__this->___m_HasDoneFocusTransition = (bool)1;
 	}
 
 IL_001f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4653>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4653>
 		int32_t L_4 = ___0_state;
 		bool L_5 = ___1_instant;
 		Selectable_DoStateTransition_mE74A03CC2A2DBCA9C07559B168FA6A77FFE57942(__this, L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4654>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4654>
 		return;
 	}
 }
-// Method Definition Index: 100550
+// Method Definition Index: 100806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_CalculateLayoutInputHorizontal_m46CEB3041DFCF55FF496A01B186965E0846BDAA0 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4661>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4661>
 		return;
 	}
 }
-// Method Definition Index: 100551
+// Method Definition Index: 100807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_CalculateLayoutInputVertical_m89664390EDA3B835EF3540E85A65978247884577 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4667>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4667>
 		return;
 	}
 }
-// Method Definition Index: 100552
+// Method Definition Index: 100808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_minWidth_m2A2D1042C5D78373A2AD8BBF514157D83C3A706A (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4672>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4672>
 		V_0 = (0.0f);
 		goto IL_0009;
 	}
 
 IL_0009:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4672>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4672>
 		float L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 100553
+// Method Definition Index: 100809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_preferredWidth_m7B67921BC7BD2A2FDD53C93FC9AB63B04A00C753 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26249,7 +26250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_preferredWidth_m7B67
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4681>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4681>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0;
 		L_0 = TMP_InputField_get_textComponent_m85C4BC3F4C18206B3B942F03DB0B953B028EE1CE(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -26263,16 +26264,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_preferredWidth_m7B67
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4682>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4682>
 		V_2 = (0.0f);
 		goto IL_0087;
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4684>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4684>
 		V_0 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4686>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4686>
 		LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* L_3 = __this->___m_LayoutGroup;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -26285,7 +26286,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4687>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4687>
 		LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* L_6 = __this->___m_LayoutGroup;
 		NullCheck(L_6);
 		RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* L_7;
@@ -26298,7 +26299,7 @@ IL_0019:
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4689>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4689>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9 = __this->___m_TextViewport;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -26311,7 +26312,7 @@ IL_0041:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4690>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4690>
 		float L_12 = V_0;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_13 = __this->___m_TextViewport;
 		NullCheck(L_13);
@@ -26328,7 +26329,7 @@ IL_0041:
 
 IL_0077:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4692>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4692>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_19 = __this->___m_TextComponent;
 		NullCheck(L_19);
 		float L_20;
@@ -26340,46 +26341,46 @@ IL_0077:
 
 IL_0087:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4693>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4693>
 		float L_22 = V_2;
 		return L_22;
 	}
 }
-// Method Definition Index: 100554
+// Method Definition Index: 100810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_flexibleWidth_m8E903250C848B81530D7A757513C98FD7DB4E3CB (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4699>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4699>
 		V_0 = (-1.0f);
 		goto IL_0009;
 	}
 
 IL_0009:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4699>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4699>
 		float L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 100555
+// Method Definition Index: 100811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_minHeight_m5B9B113BDB4FA8562DE935A377CA0734F7ADE7B1 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4704>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4704>
 		V_0 = (0.0f);
 		goto IL_0009;
 	}
 
 IL_0009:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4704>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4704>
 		float L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 100556
+// Method Definition Index: 100812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_preferredHeight_mF8468DD1FB5F87870379277710E1D5C3DDCFFC1D (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26394,7 +26395,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_preferredHeight_mF84
 	bool V_3 = false;
 	bool V_4 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4713>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4713>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_0;
 		L_0 = TMP_InputField_get_textComponent_m85C4BC3F4C18206B3B942F03DB0B953B028EE1CE(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -26408,16 +26409,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_preferredHeight_mF84
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4714>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4714>
 		V_2 = (0.0f);
 		goto IL_0087;
 	}
 
 IL_0019:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4716>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4716>
 		V_0 = (0.0f);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4718>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4718>
 		LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* L_3 = __this->___m_LayoutGroup;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -26430,7 +26431,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4719>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4719>
 		LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* L_6 = __this->___m_LayoutGroup;
 		NullCheck(L_6);
 		RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* L_7;
@@ -26443,7 +26444,7 @@ IL_0019:
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4721>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4721>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9 = __this->___m_TextViewport;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -26456,7 +26457,7 @@ IL_0041:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4722>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4722>
 		float L_12 = V_0;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_13 = __this->___m_TextViewport;
 		NullCheck(L_13);
@@ -26473,7 +26474,7 @@ IL_0041:
 
 IL_0077:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4724>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4724>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_19 = __this->___m_TextComponent;
 		NullCheck(L_19);
 		float L_20;
@@ -26485,46 +26486,46 @@ IL_0077:
 
 IL_0087:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4725>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4725>
 		float L_22 = V_2;
 		return L_22;
 	}
 }
-// Method Definition Index: 100557
+// Method Definition Index: 100813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TMP_InputField_get_flexibleHeight_m3293370FBA374E6FCDBC1E7BF9EF975C1D00DEC3 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4731>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4731>
 		V_0 = (-1.0f);
 		goto IL_0009;
 	}
 
 IL_0009:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4731>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4731>
 		float L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 100558
+// Method Definition Index: 100814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TMP_InputField_get_layoutPriority_m29F413DB25AC2A615265C1C2820D89AC60816DF2 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4736>
 		V_0 = 1;
 		goto IL_0005;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4736>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4736>
 		int32_t L_0 = V_0;
 		return L_0;
 	}
 }
-// Method Definition Index: 100559
+// Method Definition Index: 100815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalPointSize_m3FFB4ADB49E9D601673A53AEA78839B964D32A81 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, float ___0_pointSize, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26537,10 +26538,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalPointSize_m3FFB4
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* V_0 = NULL;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4745>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4745>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_0 = __this->___m_Placeholder;
 		V_0 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)IsInstClass((RuntimeObject*)L_0, TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4747>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4747>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -26553,7 +26554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalPointSize_m3FFB4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4748>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4748>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = V_0;
 		float L_5 = ___0_pointSize;
 		NullCheck(L_4);
@@ -26562,17 +26563,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalPointSize_m3FFB4
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4750>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4750>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6;
 		L_6 = TMP_InputField_get_textComponent_m85C4BC3F4C18206B3B942F03DB0B953B028EE1CE(__this, NULL);
 		float L_7 = ___0_pointSize;
 		NullCheck(L_6);
 		TMP_Text_set_fontSize_m1C3A3BA2BC88E5E1D89375FD35A0AA91E75D3AAD(L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4751>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4751>
 		return;
 	}
 }
-// Method Definition Index: 100560
+// Method Definition Index: 100816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalFontAsset_m4AD28DDE68A928EA340F360105C99A1EBC789201 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* ___0_fontAsset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26585,10 +26586,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalFontAsset_m4AD28
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* V_0 = NULL;
 	bool V_1 = false;
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4759>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4759>
 		Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* L_0 = __this->___m_Placeholder;
 		V_0 = ((TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9*)IsInstClass((RuntimeObject*)L_0, TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_il2cpp_TypeInfo_var));
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4761>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4761>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -26601,7 +26602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalFontAsset_m4AD28
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4762>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4762>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = V_0;
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_5 = ___0_fontAsset;
 		NullCheck(L_4);
@@ -26610,17 +26611,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_SetGlobalFontAsset_m4AD28
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4764>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4764>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_6;
 		L_6 = TMP_InputField_get_textComponent_m85C4BC3F4C18206B3B942F03DB0B953B028EE1CE(__this, NULL);
 		TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* L_7 = ___0_fontAsset;
 		NullCheck(L_6);
 		TMP_Text_set_font_mC55E4A8C1C09595031384B35F2C2FB2FC3479E83(L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:4765>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:4765>
 		return;
 	}
 }
-// Method Definition Index: 100561
+// Method Definition Index: 100817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField__cctor_mEFAAE367E78CED0A26A678556C750E8045A5AC37 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26632,21 +26633,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField__cctor_mEFAAE367E78CED0A2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:100>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:100>
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_0 = (CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB*)SZArrayNew(CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB_il2cpp_TypeInfo_var, (uint32_t)6);
 		CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB* L_1 = L_0;
 		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t04635BCB4D7C7C21D10547072BD307E80F347DD3____1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
 		((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___kSeparators = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___kSeparators), (void*)L_1);
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:103>
 		((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDeviceEvaluated = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/TMP/TMP_InputField.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/TMP/TMP_InputField.cs:106>
 		((TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_StaticFields*)il2cpp_codegen_static_fields_for(TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F_il2cpp_TypeInfo_var))->___s_IsQuestDevice = (bool)0;
 		return;
 	}
 }
-// Method Definition Index: 100562
+// Method Definition Index: 100818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* TMP_InputField_UnityEngine_UI_ICanvasElement_get_transform_m54CD226342494A37D5AF311CC975A634588AE1AF (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26658,7 +26659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 697
+// Method Definition Index: 698
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26666,7 +26667,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 80039
+// Method Definition Index: 85101
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -26681,7 +26682,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 80294
+// Method Definition Index: 85356
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -26718,7 +26719,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 80291
+// Method Definition Index: 85353
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Abs_mD945EDDEA0D62D21BFDBAB7B1C0F18DFF1CEC905_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26743,31 +26744,31 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 100564
+// Method Definition Index: 100820
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppChar OnValidateInput_Invoke_m1CDDA220BF2691F42200A098F57AE10FDE383E49_inline (OnValidateInput_t88ECDC5C12A807AF2A5761369563B0FAA6A25530* __this, String_t* ___0_text, int32_t ___1_charIndex, Il2CppChar ___2_addedChar, const RuntimeMethod* method) 
 {
 	typedef Il2CppChar (*FunctionPointerType) (RuntimeObject*, String_t*, int32_t, Il2CppChar, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_text, ___1_charIndex, ___2_addedChar, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 118298
+// Method Definition Index: 118559
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PointerEventData_get_button_mA8CBDAF2E16927E6952BC60040D56630BCC95B0B_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:194>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:194>
 		int32_t L_0 = __this->___U3CbuttonU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118278
+// Method Definition Index: 118539
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:117>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->___U3CpositionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 80366
+// Method Definition Index: 85428
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26790,7 +26791,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 78512
+// Method Definition Index: 83574
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -26806,16 +26807,16 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 118292
+// Method Definition Index: 118553
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_scrollDelta_m38C419C3E84811D17D1A42973AF7B3A457B316EA_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:176>
+		//<source_info:./Library/PackageCache/com.unity.ugui@dda977a1d52f/Runtime/UGUI/EventSystem/EventData/PointerEventData.cs:176>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->___U3CscrollDeltaU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 80313
+// Method Definition Index: 85375
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -26863,7 +26864,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 78522
+// Method Definition Index: 83584
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_yMax_mBC37BEE1CD632AADD8B9EAF9FE3BA143F79CAF8E_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -26880,7 +26881,7 @@ IL_0011:
 		return L_2;
 	}
 }
-// Method Definition Index: 80297
+// Method Definition Index: 85359
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -26917,7 +26918,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78440
+// Method Definition Index: 83502
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Bounds_get_max_m6446F2AB97C1E57CA89467B9DE52D4EB61F1CB09_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26939,7 +26940,7 @@ IL_0015:
 		return L_3;
 	}
 }
-// Method Definition Index: 80336
+// Method Definition Index: 85398
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -26950,7 +26951,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 80355
+// Method Definition Index: 85417
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -26977,7 +26978,7 @@ IL_0023:
 		return L_9;
 	}
 }
-// Method Definition Index: 78438
+// Method Definition Index: 83500
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Bounds_get_min_m465AC9BBE1DE5D8E8AD95AC19B9899068FEEBB13_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26999,7 +27000,7 @@ IL_0015:
 		return L_3;
 	}
 }
-// Method Definition Index: 78518
+// Method Definition Index: 83580
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_yMin_mB19848FB25DE61EDF958F7A22CFDD86DE103062F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27015,7 +27016,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78434
+// Method Definition Index: 83496
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Bounds_get_size_m0699A53A55A78B3201D7270D6F338DFA91B6FAD4_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27034,7 +27035,7 @@ IL_0014:
 		return L_2;
 	}
 }
-// Method Definition Index: 80224
+// Method Definition Index: 85286
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27053,7 +27054,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 80247
+// Method Definition Index: 85309
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Inequality_m4EC1EF263D0E42432A301F85CB52028D2973F5DA_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27072,7 +27073,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 80364
+// Method Definition Index: 85426
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_lhs, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_rhs, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27091,7 +27092,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 80367
+// Method Definition Index: 85429
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27114,7 +27115,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 80295
+// Method Definition Index: 85357
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27151,7 +27152,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 80183
+// Method Definition Index: 85245
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -27164,7 +27165,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 80076
+// Method Definition Index: 85138
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_c, const RuntimeMethod* method) 
 {
 	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B V_0;
@@ -27207,7 +27208,7 @@ IL_0065:
 		return L_17;
 	}
 }
-// Method Definition Index: 80458
+// Method Definition Index: 85520
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Implicit_mB193CD8DA20DEB9E9F95CFEB5A2B1B9B3B7ECFEB_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -27230,7 +27231,7 @@ IL_001f:
 		return L_5;
 	}
 }
-// Method Definition Index: 78499
+// Method Definition Index: 83561
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_x_mB267B718E0D067F2BAE31BA477647FBF964916EB_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27246,7 +27247,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78501
+// Method Definition Index: 83563
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27262,7 +27263,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78510
+// Method Definition Index: 83572
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27278,7 +27279,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78494
+// Method Definition Index: 83556
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -27293,7 +27294,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 78520
+// Method Definition Index: 83582
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_xMax_m2339C7D2FCDA98A9B007F815F6E2059BA6BE425F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27310,7 +27311,7 @@ IL_0011:
 		return L_2;
 	}
 }
-// Method Definition Index: 78516
+// Method Definition Index: 83578
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_xMin_mE89C40702926D016A633399E20DB9501E251630D_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27326,7 +27327,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 80356
+// Method Definition Index: 85418
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -27353,7 +27354,7 @@ IL_0023:
 		return L_9;
 	}
 }
-// Method Definition Index: 10340
+// Method Definition Index: 10352
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* NumberFormatInfo_get_NumberDecimalSeparator_m7413FA8739F3FA6F5D61B54331DBF3232FC6BFC7_inline (NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27361,7 +27362,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* NumberFormatInfo_get_Nu
 		return L_0;
 	}
 }
-// Method Definition Index: 80312
+// Method Definition Index: 85374
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27412,7 +27413,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 78432
+// Method Definition Index: 83494
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27429,7 +27430,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 78436
+// Method Definition Index: 83498
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Bounds_get_extents_mFE6DC407FCE2341BE2C750CB554055D211281D25_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3* __this, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27446,7 +27447,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 80217
+// Method Definition Index: 85279
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27477,7 +27478,7 @@ IL_0030:
 		return L_13;
 	}
 }
-// Method Definition Index: 80218
+// Method Definition Index: 85280
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27508,7 +27509,7 @@ IL_0030:
 		return L_13;
 	}
 }
-// Method Definition Index: 80220
+// Method Definition Index: 85282
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27536,7 +27537,7 @@ IL_0021:
 		return L_10;
 	}
 }
-// Method Definition Index: 80223
+// Method Definition Index: 85285
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27578,7 +27579,7 @@ IL_0043:
 		return L_19;
 	}
 }
-// Method Definition Index: 80246
+// Method Definition Index: 85308
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Equality_mE6F6B56FCED8478552BE02BBAF18C70B969217F9_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27599,7 +27600,7 @@ IL_0010:
 		return L_4;
 	}
 }
-// Method Definition Index: 80363
+// Method Definition Index: 85425
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Equality_m6F2E069A50E787D131261E5CB25FC9E03F95B5E1_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_lhs, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27630,7 +27631,7 @@ IL_002e:
 		return L_12;
 	}
 }
-// Method Definition Index: 80075
+// Method Definition Index: 85137
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7CA3F8B174158B2AF6F05E18EAC4E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* __this, uint8_t ___0_r, uint8_t ___1_g, uint8_t ___2_b, uint8_t ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -27646,7 +27647,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color32__ctor_mC9C6B443F0C7C
 		return;
 	}
 }
-// Method Definition Index: 80431
+// Method Definition Index: 85493
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B271F513AF0BDC2EABD58E4DBC813_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* __this, float ___0_x, float ___1_y, float ___2_z, float ___3_w, const RuntimeMethod* method) 
 {
 	{
@@ -27661,7 +27662,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B2
 		return;
 	}
 }
-// Method Definition Index: 80248
+// Method Definition Index: 85310
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_mF9D3BE33940A47979DADA7E81650AEB356D5D12B_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27692,7 +27693,7 @@ IL_003b:
 		return L_16;
 	}
 }
-// Method Definition Index: 80245
+// Method Definition Index: 85307
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m9C672201C918C2D1E739F559DBE4406F95997CBD_inline (float ___0_dot, const RuntimeMethod* method) 
 {
 	bool V_0 = false;

@@ -27,6 +27,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Newtonsoft_Json_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Oculus_Interaction_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Oculus_Interaction_OVR_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Oculus_Interaction_Samples_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Oculus_LipSync_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Oculus_Platform_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Oculus_VR_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_CodeGenModule;
@@ -100,7 +101,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_meta_xr_mrutilitykit_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_soupday_cc3_unity_tools_project_runtime_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[84] = 
+const Il2CppCodeGenModule* g_CodeGenModules[85] = 
 {
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_Meta_XR_Audio_CodeGenModule),
@@ -114,6 +115,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[84] =
 	(&g_Oculus_Interaction_CodeGenModule),
 	(&g_Oculus_Interaction_OVR_CodeGenModule),
 	(&g_Oculus_Interaction_Samples_CodeGenModule),
+	(&g_Oculus_LipSync_CodeGenModule),
 	(&g_Oculus_Platform_CodeGenModule),
 	(&g_Oculus_VR_CodeGenModule),
 	(&g_System_CodeGenModule),
@@ -192,20 +194,20 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	54,
 	g_ReversePInvokeWrapperPointers,
-	179657,
+	179861,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	36206,
+	36276,
 	g_Il2CppInvokerPointers,
-	5769,
+	5776,
 	g_UnresolvedVirtualMethodPointers,
 	g_UnresolvedInstanceMethodPointers,
 	g_UnresolvedStaticMethodPointers,
-	1625,
+	1624,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	84,
+	85,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

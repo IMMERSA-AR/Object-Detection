@@ -1399,7 +1399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Argument_t48F3B2DE4FDD992AA80C1DFBAC9C5FCDB49
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 29168
+// Method Definition Index: 29207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Layer_tF12B2F87C397A2BE4A2F04768753EA2B6867C039* LayerModelLoader_DeserializeLayer_m6A1F55666A90D1E7477E298231359DF16A527006 (String_t* ___0_kernelName, Chain_tA7420781D03CE0268AA17EB04D33ED70711681D9 ___1_chain, ExecutionPlan_tDB179066AB651AA7AE8CF463F21CDFA7E06B6A36 ___2_executionPlan, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5627,7 +5627,7 @@ IL_13a0:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 29169
+// Method Definition Index: 29208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FunctionalLayer_InferPartial_mBF9D08C7756E342A9777E4CF9133118CCB1779E3 (String_t* ___0_target, ArgumentU5BU5D_tF675E63FDFDE4A41F15F7BE0759141EFE09AB603* ___1_args, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21196,7 +21196,7 @@ IL_43f9:
 		return L_3652;
 	}
 }
-// Method Definition Index: 29170
+// Method Definition Index: 29209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Celu_m605C5B110C0A5A0C7AC2D2FDEA838961D503B0B1 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21238,7 +21238,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29171
+// Method Definition Index: 29210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Elu_m06D138F2A88D909DD4D41BC44E623AF837D5C1D5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21280,7 +21280,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29172
+// Method Definition Index: 29211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Gelu_mC2208478D4A1E5B9ED6A44F0C588957F8AD94618 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21315,7 +21315,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29173
+// Method Definition Index: 29212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GeluFast_m53DD127701CD2E1C05AED373CF6DF01A2512C6C1 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21350,7 +21350,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29174
+// Method Definition Index: 29213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Erf_m90790466EA163B3C9FB3BB8E74B01A304F4D7577 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21385,7 +21385,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29175
+// Method Definition Index: 29214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Hardmax_m86245AF5BA08952575683F47B4E4DBCA89CF5715 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21427,7 +21427,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29176
+// Method Definition Index: 29215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_HardSigmoid_mBE82921E6A22EA88B3E1F9E76AE1B9791C407324 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, float ___2_beta, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21476,7 +21476,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29177
+// Method Definition Index: 29216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_HardSwish_m29DF886F7A4BB14FD2DBF7F7BC3AACD821FCCA1A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21511,7 +21511,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29178
+// Method Definition Index: 29217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_HardTanh_m1FA64D70C7575B5FCD2784268EF6A64DC9E1299E (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_minVal, float ___2_maxVal, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21560,7 +21560,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29179
+// Method Definition Index: 29218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_LeakyRelu_m796212AEBA5A723D3CDDC50798D51AD32D58863A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21602,7 +21602,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29180
+// Method Definition Index: 29219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Mish_m88CEAA741F3F52F4F8AE0E9B4774A41DA22DEA01 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21637,7 +21637,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29181
+// Method Definition Index: 29220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_PRelu_mEFC02A485F5C21E8EDA02B26569DD56930611EE3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_slope, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21679,7 +21679,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29182
+// Method Definition Index: 29221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Relu_m7B19B75DB9845454CE0C4DC2E17518F56729276F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21714,7 +21714,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29183
+// Method Definition Index: 29222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Relu6_mBCFFC3A955BEB5B396F87B318DD63C2B6BE9A6A9 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21749,7 +21749,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29184
+// Method Definition Index: 29223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Selu_mBE37F712065520C1601D9219F32C981242977400 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, float ___2_gamma, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21798,7 +21798,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29185
+// Method Definition Index: 29224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Sigmoid_m20266C8F7A43B2AF44D4B1AEB5DBC5339A33BDB2 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21833,7 +21833,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29186
+// Method Definition Index: 29225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Softplus_mB88D4CB2098FE83F4BA5DF5EE18D4F48C60579F8 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21868,7 +21868,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29187
+// Method Definition Index: 29226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Softsign_mDA6AC8AB3D0CDAEE777DCAA635AABFC359DC13DF (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21903,7 +21903,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29188
+// Method Definition Index: 29227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Swish_m8797255F2D8285894A245DF09F277CA7E0E485BD (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21945,7 +21945,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29189
+// Method Definition Index: 29228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Tanh_m2BBE8575D2E9DF1E53ACE64F0196755C28012DD8 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21980,7 +21980,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29190
+// Method Definition Index: 29229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ThresholdedRelu_mB7295DD884E1380F7B26457B2D6C8AD4C94607BE (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22022,7 +22022,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29191
+// Method Definition Index: 29230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_LogSoftmax_m9DE3CFE82ECDA4A87364D2C50C2C6C4DDD995CE5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22064,7 +22064,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29192
+// Method Definition Index: 29231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Softmax_m1A533D82EA18DC94C03670D9FC9692F12689C405 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22106,7 +22106,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29193
+// Method Definition Index: 29232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Conv_mE5D8FC9589DC5B35269E4A4A03ED53BECA2EB8B8 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_X, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_W, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_B, int32_t ___3_autoPad, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___4_dilations, int32_t ___5_group, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___6_pads, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___7_strides, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___8_kernelShape, int32_t ___9_fusedActivation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22204,7 +22204,7 @@ IL_0078:
 		return L_34;
 	}
 }
-// Method Definition Index: 29194
+// Method Definition Index: 29233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ConvTranspose_mAB4C7EC78E951F4B2FF1907BF11DE5848A3AA1E4 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_kernel, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, int32_t ___3_autoPad, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___4_dilations, int32_t ___5_group, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___6_outputPadding, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___7_pads, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___8_strides, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___9_kernelShape, int32_t ___10_fusedActivation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22309,7 +22309,7 @@ IL_0083:
 		return L_37;
 	}
 }
-// Method Definition Index: 29195
+// Method Definition Index: 29234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BroadcastArgs_m3136DC737CAF28926E31823D13FBB1A5195F2CF1 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22351,7 +22351,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29196
+// Method Definition Index: 29235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Shape_mBCCDAF4468DBD9FAD2A6FCA9AA08C7E9B5DFE84F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_start, int32_t ___2_end, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22400,7 +22400,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29197
+// Method Definition Index: 29236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Size_m605FD70696E77DDF38009F4303EAF97B8B2E3443 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22435,7 +22435,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29198
+// Method Definition Index: 29237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ConstantOfShape_mB948C80C576C15740337364F2DFA8223903FC094 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_dataType, float ___2_floatValue, int32_t ___3_intValue, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22491,7 +22491,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29199
+// Method Definition Index: 29238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_OneHot_mBA13D624804F30B21E65100CA35C99BC42928B34 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_indices, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_depth, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_values, int32_t ___3_axis, bool ___4_allowNegativeIndexes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22554,7 +22554,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29200
+// Method Definition Index: 29239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Range_m0B53D747528164A856B1E6D8295FC6B2C9E09E14 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_start, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_limit, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_delta, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22603,7 +22603,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29201
+// Method Definition Index: 29240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ArgMax_m9BFC84B03BF0463EB7EDF2CD9ADA95EE1D50DEE5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_axis, bool ___2_keepdims, bool ___3_selectLastIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22659,7 +22659,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29202
+// Method Definition Index: 29241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ArgMin_mDEC0A60010A1E7484F4ABC2BEAE5F533B9B4D223 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_axis, bool ___2_keepdims, bool ___3_selectLastIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22715,7 +22715,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29203
+// Method Definition Index: 29242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Gather_m7B12AE2E8ED3336F26A14E3C80D061097CDD532B (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_indices, int32_t ___2_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22764,7 +22764,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29204
+// Method Definition Index: 29243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GatherElements_m3FA2412BDBA327F89374A3507A9C64D69EC54D4B (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_indices, int32_t ___2_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22813,7 +22813,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29205
+// Method Definition Index: 29244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GatherND_mE1D39434D3D217DEAB3889EBA0EC5E428A047E3E (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_indices, int32_t ___2_batchDims, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22862,7 +22862,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29206
+// Method Definition Index: 29245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_NonZero_m8AD80F5E8D58AF9605DB11E3A7E5673E3B2DB534 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22897,7 +22897,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29207
+// Method Definition Index: 29246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ScatterElements_m71029FF9F4225695349DFE3E6FB92FE3548C4257 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_indices, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_updates, int32_t ___3_axis, int32_t ___4_reduction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22960,7 +22960,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29208
+// Method Definition Index: 29247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ScatterND_m7376A84AF4CDDC34006E0E902B96F324A68D726E (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_indices, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_updates, int32_t ___3_reduction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23016,7 +23016,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29209
+// Method Definition Index: 29248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensorU5BU5D_tDD49747F6403FDB4D7353C508D7830004212AE27* FunctionalLayer_TopK_m03953CD1C648FE9A675CBEE333D51E663EB2984D (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_k, int32_t ___2_axis, bool ___3_largest, bool ___4_sorted, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23076,7 +23076,7 @@ IL_0042:
 		return L_17;
 	}
 }
-// Method Definition Index: 29210
+// Method Definition Index: 29249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_And_mC5D11AEA02D27F4053DDD12F01D1AC2406770BA9 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23118,7 +23118,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29211
+// Method Definition Index: 29250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Compress_m0BF082ED953BE74F498DE62667080826CE18D4E7 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_condition, bool ___2_hasAxis, int32_t ___3_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23174,7 +23174,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29212
+// Method Definition Index: 29251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Equal_m8A275482A622729FCB771F9F36934DC6E1329760 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23216,7 +23216,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29213
+// Method Definition Index: 29252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Greater_m37A26548AE1005D74FD9C9186AFE5D4717489C1D (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23258,7 +23258,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29214
+// Method Definition Index: 29253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GreaterOrEqual_mD93F94F7DDEDC1C958BAB807C3EDD66ED88E8464 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23300,7 +23300,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29215
+// Method Definition Index: 29254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_IsInf_mF70EBADABB922BC9A96B56933BBD9744FE73D95D (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, bool ___1_detectNegative, bool ___2_detectPositive, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23349,7 +23349,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29216
+// Method Definition Index: 29255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_IsNaN_mFC88A788CD5C6BE600DA772998A1D2336EA84330 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23384,7 +23384,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29217
+// Method Definition Index: 29256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Less_m386938760639C7521E68B580150CB5A65AFB42F1 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23426,7 +23426,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29218
+// Method Definition Index: 29257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_LessOrEqual_m06EB13384A2743ECDD126B8D86532F6943CCA1A5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23468,7 +23468,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29219
+// Method Definition Index: 29258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Not_m3AAFEDAB5A14749DB82ABD362226F533F86D3CC8 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23503,7 +23503,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29220
+// Method Definition Index: 29259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_NotEqual_mE65DBBE82D4EB6BA0E4EB60732F42684B0D1B9B2 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23545,7 +23545,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29221
+// Method Definition Index: 29260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Or_m0CCB54F443849967E199A9BBD2A7ED3F5102F8CB (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23587,7 +23587,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29222
+// Method Definition Index: 29261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Xor_m121017F265D3AC88E6C829F7D17BE9439C39AC9F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23629,7 +23629,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29223
+// Method Definition Index: 29262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Where_m1765CDB008AEEA2972C8AFF8D00EF4BA0A95096A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_condition, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_input1, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_input2, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23678,7 +23678,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29224
+// Method Definition Index: 29263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Abs_m1617F1368A152A2DEA2A6514F19E1D806C50BD11 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23713,7 +23713,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29225
+// Method Definition Index: 29264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Add_m9943062E17E5B1CD171086DFA3FBCD1D293B1CFD (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23755,7 +23755,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29226
+// Method Definition Index: 29265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Atan2_m0EEAF66A3562F16665D8E1D35B0A293FF32B3223 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_y, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_x, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23797,7 +23797,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29227
+// Method Definition Index: 29266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BitwiseAnd_mB855FED5C91804966AC00D178B92072683843B68 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23839,7 +23839,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29228
+// Method Definition Index: 29267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BitwiseNot_m6686D32503FAF2C855F180B6C2104F63AD5AD3B3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23874,7 +23874,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29229
+// Method Definition Index: 29268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BitwiseOr_m9BAE3EF29B4AD8C07C5A81E25B9A7F8C580BF9A3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23916,7 +23916,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29230
+// Method Definition Index: 29269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BitwiseXor_m4B14DE8681ED695A31C4C7F2209E3C214ABE2C9E (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23958,7 +23958,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29231
+// Method Definition Index: 29270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Ceil_m6B1B6DCC12CB8E94CE4814DB6E99AB9C12BC67F5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23993,7 +23993,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29232
+// Method Definition Index: 29271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Clip_m813ED8A3376557845AE81080CDDFAD91B75DD724 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_min, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_max, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24042,7 +24042,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29233
+// Method Definition Index: 29272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_CumSum_mE648833E6B699B05DED6CF954F7125387D130E3D (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axis, bool ___2_reverse, bool ___3_exclusive, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24098,7 +24098,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29234
+// Method Definition Index: 29273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Dense_mCC2930ABDFACC94B1D5477EC987FBF84728B2377 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_weights, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, int32_t ___3_fusedActivation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24154,7 +24154,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29235
+// Method Definition Index: 29274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_DenseBatched_mE7EC697217E41B94E84D0BD6B1C6553125946809 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_weights, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, int32_t ___3_fusedActivation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24210,7 +24210,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29236
+// Method Definition Index: 29275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Div_mC724DBA5B9B26B85E00E0ED0650043B704317E07 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24252,7 +24252,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29237
+// Method Definition Index: 29276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Einsum_m9620240F1B050C958D34EE5340228BD4C3E54A2C (FunctionalTensorU5BU5D_tDD49747F6403FDB4D7353C508D7830004212AE27* ___0_inputs, String_t* ___1_equation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24294,7 +24294,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29238
+// Method Definition Index: 29277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Exp_m159916F3DA1DD074FE875D38D94904F0B354B6EC (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24329,7 +24329,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29239
+// Method Definition Index: 29278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Expm1_m675A3A227CB1BFE05E6464AC7E29114836E18A99 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24364,7 +24364,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29240
+// Method Definition Index: 29279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Floor_m760B374DCAC31544A512F34DF2E0136CB6029B49 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24399,7 +24399,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29241
+// Method Definition Index: 29280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_FloorDiv_m8EF2141F42B5D647F191DA13E844877C8DF5605A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24441,7 +24441,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29242
+// Method Definition Index: 29281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Log_m0BC9F7FB7901C8CBFB0EDB739B1F169BD8AE8685 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24476,7 +24476,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29243
+// Method Definition Index: 29282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Log10_m5084B1A2B3D7A96D353C2BAF8F90FD51ED1414A4 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24511,7 +24511,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29244
+// Method Definition Index: 29283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Log1p_mA444C8D43DFC3DAC184BFBF33F96909718BE3223 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24546,7 +24546,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29245
+// Method Definition Index: 29284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Log2_m73F843780274924F611E6366C50926DFE294D683 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24581,7 +24581,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29246
+// Method Definition Index: 29285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_MatMul_m5F48D1F7248A53CBACFFAFA34DCD833DCE7A3AB3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input0, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_input1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24623,7 +24623,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29247
+// Method Definition Index: 29286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_MatMul2D_mECC6CA53522F3984F52F39F3EC550808B25607CB (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input0, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_input1, bool ___2_transposeA, bool ___3_transposeB, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24679,7 +24679,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29248
+// Method Definition Index: 29287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Min_m7B8A05157701DA655D9E88D30109CF4679422B87 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24721,7 +24721,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29249
+// Method Definition Index: 29288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Max_m1CF6CE9FB51957DB165E493D69248574C70A9F58 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24763,7 +24763,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29250
+// Method Definition Index: 29289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Mod_m73D97B5BA1153C80FAB9E1F8BEA1F290BAD24000 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, bool ___2_fmod, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24812,7 +24812,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29251
+// Method Definition Index: 29290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Mul_mC08A26EDB27BC1E72E1D660E3A1D97F8F5009F75 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24854,7 +24854,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29252
+// Method Definition Index: 29291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Neg_mE9E5FF33D9D9CF82E6B2C761B316A625FD1CC7F3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24889,7 +24889,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29253
+// Method Definition Index: 29292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Pow_m13EBDE3E393059D38148050DCBE625D14EAF9BF5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24931,7 +24931,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29254
+// Method Definition Index: 29293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Reciprocal_m47C02B5D3D259A7C602170AD8369B3F935DF3E71 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24966,7 +24966,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29255
+// Method Definition Index: 29294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Round_mA2D11674F40F7A5CB60DFC17882BA70274EAA486 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25001,7 +25001,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29256
+// Method Definition Index: 29295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ScalarMad_m467195C5097D08F3E2D6B8220EBB4535B13E849A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_dataType, float ___2_sFloat, float ___3_bFloat, int32_t ___4_sInt, int32_t ___5_bInt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25071,7 +25071,7 @@ IL_004e:
 		return L_22;
 	}
 }
-// Method Definition Index: 29257
+// Method Definition Index: 29296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Shrink_m082F7A18973AA06CD8CEEB24F1096150E283BB7F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_bias, float ___2_lambd, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25120,7 +25120,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29258
+// Method Definition Index: 29297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Sign_m9B16E615933CBDF592275A6AD49044B4E805062B (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25155,7 +25155,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29259
+// Method Definition Index: 29298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Rsqrt_mAB14346ED71A9D035BC39B1A986C8EC32050AA51 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25190,7 +25190,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29260
+// Method Definition Index: 29299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Sqrt_mD9C0F70BAE1763D7A8BD193F594C4B4BF1B4010A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25225,7 +25225,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29261
+// Method Definition Index: 29300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Square_m615636E406136B710C4F1354F67A65462B5A0BA3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25260,7 +25260,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29262
+// Method Definition Index: 29301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Sub_m8049E81A7634973E4C060A4C5E27AB4C16815AD9 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25302,7 +25302,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29263
+// Method Definition Index: 29302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Trunc_mBD655540BC2FDED34B76F60EB18585B7E46907FB (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25337,7 +25337,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29264
+// Method Definition Index: 29303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_TruncDiv_m37D04B94A1FF28382889907E68661DADF75741DE (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_a, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25379,7 +25379,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29265
+// Method Definition Index: 29304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ScaleBias_m669E5DFA7548ED81EA05D6AD98E54948BC159C5C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scale, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25428,7 +25428,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29266
+// Method Definition Index: 29305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_InstanceNormalization_m7B99410DAE9C6D23C86A050070EB820FCBF4D922 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scale, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, float ___3_epsilon, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25484,7 +25484,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29267
+// Method Definition Index: 29306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_LayerNormalization_mEC7FB9BDE5C32164BD9A4A2F6F6DB7E013C8FD71 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scale, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, float ___3_epsilon, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25540,7 +25540,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29268
+// Method Definition Index: 29307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_RMSNormalization_m8F643D9BEB1D575331282BC520DCF4CF4C008925 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scale, float ___2_epsilon, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25589,7 +25589,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29269
+// Method Definition Index: 29308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BatchNormalization_mF64BADDCB58FE742F8D4BD009E52AD7448CAC74C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scale, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_bias, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_mean, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_variance, float ___5_epsilon, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25659,7 +25659,7 @@ IL_004e:
 		return L_22;
 	}
 }
-// Method Definition Index: 29270
+// Method Definition Index: 29309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_LRN_mB8E3D3BD23C5308AFE277BCDF142104AEF25661F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_alpha, float ___2_beta, float ___3_bias, int32_t ___4_count, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25722,7 +25722,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29271
+// Method Definition Index: 29310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_NonMaxSuppression_m66064AD99330593ABC2ACB0AE8EF2C637C1D0A14 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_boxes, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scores, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_maxOutputBoxesPerClass, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_iouThreshold, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_scoreThreshold, int32_t ___5_centerPointBox, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25792,7 +25792,7 @@ IL_004e:
 		return L_22;
 	}
 }
-// Method Definition Index: 29272
+// Method Definition Index: 29311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_RoiAlign_mBC95CB5E9E55C21A32AE5C1C35F3FA29DAFE0981 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_X, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_rois, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_batchIndices, int32_t ___3_mode, int32_t ___4_outputHeight, int32_t ___5_outputWidth, int32_t ___6_samplingRatio, float ___7_spatialScale, int32_t ___8_coordinateTransformationMode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25883,7 +25883,7 @@ IL_006d:
 		return L_31;
 	}
 }
-// Method Definition Index: 29273
+// Method Definition Index: 29312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_AveragePool_m988F7F2F24DF5ABDBCEE052D72EFFA5254B7A6C0 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_kernelShape, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_strides, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___3_pads, int32_t ___4_autopad, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25946,7 +25946,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29274
+// Method Definition Index: 29313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GlobalAveragePool_m36A6AD3FBCAA9BDC408972C913CFF2DA325DF55C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25981,7 +25981,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29275
+// Method Definition Index: 29314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GlobalMaxPool_m9ED234040E26373182E9B7D44E9F1E2EF0D93686 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26016,7 +26016,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29276
+// Method Definition Index: 29315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_MaxPool_mF378CD9F9EDE27E07B9AB3527082EE770DAC838A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_kernelShape, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_strides, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___3_pads, int32_t ___4_autopad, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26079,7 +26079,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29277
+// Method Definition Index: 29316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_DequantizeUint8_m09C502862A86434619CDB5FF01D9C79F2F3C74A8 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_scale, uint8_t ___2_zeroPoint, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26128,7 +26128,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29278
+// Method Definition Index: 29317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_RandomNormal_mB78AA73517D4A801955FCDF8103F5391532AD8F6 (float ___0_mean, float ___1_scale, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_shape, bool ___3_hasSeed, int32_t ___4_seed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26191,7 +26191,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29279
+// Method Definition Index: 29318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_RandomNormalLike_mB660BFE0DB6C6010B230D182A7093C1490C544B4 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_mean, float ___2_scale, bool ___3_hasSeed, int32_t ___4_seed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26254,7 +26254,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29280
+// Method Definition Index: 29319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_RandomUniform_m914EAFF5DB264AF26CE2CE52C4714B33339F826F (float ___0_low, float ___1_high, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_shape, bool ___3_hasSeed, int32_t ___4_seed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26317,7 +26317,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29281
+// Method Definition Index: 29320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_RandomUniformLike_m4DA7A927250C1463453880C231E453FF15C0199A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, float ___1_low, float ___2_high, bool ___3_hasSeed, int32_t ___4_seed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26380,7 +26380,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29282
+// Method Definition Index: 29321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Bernoulli_m0ADEEF6AC7C018D5C01C745A8F1A8B970DCA3B91 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_dataType, bool ___2_hasSeed, int32_t ___3_seed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26436,7 +26436,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29283
+// Method Definition Index: 29322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Multinomial_mC656C2E2E395C59B7AFDE7558A5916C72F5B9F86 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_count, bool ___2_hasSeed, int32_t ___3_seed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26492,7 +26492,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29284
+// Method Definition Index: 29323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensorU5BU5D_tDD49747F6403FDB4D7353C508D7830004212AE27* FunctionalLayer_LSTM_m2E2971E6EB3C39FA9C90424B1E10310A188AF30C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_X, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_W, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_R, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_B, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_sequenceLens, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___5_initialH, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___6_initialC, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___7_P, int32_t ___8_hiddenSize, int32_t ___9_direction, RnnActivationU5BU5D_t0CF122D90D5F2241FD2C9AA7AF8435FFC039F5BC* ___10_activations, SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___11_activationAlpha, SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* ___12_activationBeta, float ___13_clip, bool ___14_inputForget, int32_t ___15_layout, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26629,7 +26629,7 @@ IL_00b8:
 		return L_50;
 	}
 }
-// Method Definition Index: 29285
+// Method Definition Index: 29324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceL1_mA7AAACF035E8EE03B96DB1F2DB146AA7F398BB07 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26685,7 +26685,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29286
+// Method Definition Index: 29325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceL2_m130BE0475EDE14FBFDF85033103094C38DE5FF8C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26741,7 +26741,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29287
+// Method Definition Index: 29326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceLogSum_mC4C65A99ED7DBA606394C5191DE1AF31956DE0F5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26797,7 +26797,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29288
+// Method Definition Index: 29327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceLogSumExp_mFE7F325CE251DDE049ABC72F12E1578643BD350C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26853,7 +26853,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29289
+// Method Definition Index: 29328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceMax_m15F214D6DC821A7BF1349F36F9F7BAA72988414D (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26909,7 +26909,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29290
+// Method Definition Index: 29329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceMean_mF7F59A0CAAF9034BE9EFFC43B1C2E9A725C1F7BC (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26965,7 +26965,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29291
+// Method Definition Index: 29330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceMin_m11F6E7C8E67D61D37A4BA84A39315AF4C08A786E (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27021,7 +27021,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29292
+// Method Definition Index: 29331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceProd_mFDCAA8CF24D0304DFC0BAEE5BF5107B4189E9C77 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27077,7 +27077,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29293
+// Method Definition Index: 29332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceSum_mE6D6E143ACC23D9A7C66CB859B610F267D64E77C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27133,7 +27133,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29294
+// Method Definition Index: 29333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceSumSquare_m92927DE69B2A5D4D86F3F4401D0604908528E3F9 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27189,7 +27189,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29295
+// Method Definition Index: 29334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_ReduceVariance_m575A05FAC0385A270F0021849A10901A38339E83 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, bool ___2_keepdims, bool ___3_noopWithEmptyAxes, float ___4_correction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27252,7 +27252,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29296
+// Method Definition Index: 29335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_BlackmanWindow_m799B7AFFC96171390DCFF2FE85822A3C6FFCC94D (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_size, bool ___1_periodic, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27294,7 +27294,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29297
+// Method Definition Index: 29336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_DFT_m82BE2BEA4263E2D509510987FE9FB2790A25AA98 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_dftLength, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_axis, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_dftMatrix, bool ___4_inverse, bool ___5_onesided, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27364,7 +27364,7 @@ IL_004e:
 		return L_22;
 	}
 }
-// Method Definition Index: 29298
+// Method Definition Index: 29337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_HammingWindow_mB98FC30E9BF6AA03DD1DB93D57E5F1DBFB9AF588 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_size, bool ___1_periodic, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27406,7 +27406,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29299
+// Method Definition Index: 29338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_HannWindow_m20B0F50EAC6ADD1D9E78934D73F5447C08FEA050 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_size, bool ___1_periodic, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27448,7 +27448,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29300
+// Method Definition Index: 29339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_MelWeightMatrix_m08416C5CB78555CAF5CB5BFA0149BBC0F1186C49 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_numMelBins, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_dftLength, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_sampleRate, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_lowerEdgeHertz, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_upperEdgeHertz, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27511,7 +27511,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29301
+// Method Definition Index: 29340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_STFT_m56AB04F92A2261731DC889CF92C18A71FB28E1ED (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_signal, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_frameStep, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_window, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_frameLength, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_windowedDFTMatrix, bool ___5_onesided, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27581,7 +27581,7 @@ IL_004e:
 		return L_22;
 	}
 }
-// Method Definition Index: 29302
+// Method Definition Index: 29341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_AsStrided_mABABF0D5AB954B5EB6113C135EF4C34E9B288480 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_shape, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_strides, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_offset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27637,7 +27637,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29303
+// Method Definition Index: 29342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Cast_m05494504BF8B2BB3D1D1B2AFA5848511FF9E7891 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_toType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27679,7 +27679,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29304
+// Method Definition Index: 29343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_CastLike_m742FB16C91FC02B8AE2EF67CCEEE03A4D34935F8 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_targetType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27721,7 +27721,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29305
+// Method Definition Index: 29344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Concat_m5C493DEAC372A842E559859D4D5ABEECAB0BEBE3 (FunctionalTensorU5BU5D_tDD49747F6403FDB4D7353C508D7830004212AE27* ___0_inputs, int32_t ___1_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27763,7 +27763,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29306
+// Method Definition Index: 29345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_DepthToSpace_m4FB0EC00A20B59F906851CDEA3664F0A370E1C49 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_blocksize, int32_t ___2_mode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27812,7 +27812,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29307
+// Method Definition Index: 29346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Diagonal_m664A88B0E75F64638B511608EB00E0589620A6A9 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_offset, int32_t ___2_dim1, int32_t ___3_dim2, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27868,7 +27868,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29308
+// Method Definition Index: 29347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Expand_mB9E1B4F3E885F17930C9795AE23AC0DE609B8848 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_shape, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27910,7 +27910,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29309
+// Method Definition Index: 29348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Flatten_mA26A7A48CD090D2923F700BE3E5DFCAABFCE795B (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_axis, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27952,7 +27952,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29310
+// Method Definition Index: 29349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_GridSample_m3D327BDD0C91A3B890BE56D81FC020F904124DC3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_grid, int32_t ___2_mode, int32_t ___3_paddingMode, bool ___4_alignCorners, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28015,7 +28015,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29311
+// Method Definition Index: 29350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Identity_m5A38097CDB914DABB74A27343106375DEA73879F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28050,7 +28050,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29312
+// Method Definition Index: 29351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_MoveDim_m6A55194243F5DA299EC3438994A8634E15C9B01F (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_source, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_destination, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28099,7 +28099,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29313
+// Method Definition Index: 29352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Narrow_mF13A0C85033635D0AE288E66AAC65725622632B3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_dim, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_start, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_length, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28155,7 +28155,7 @@ IL_003a:
 		return L_16;
 	}
 }
-// Method Definition Index: 29314
+// Method Definition Index: 29353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Pad_m99DAFD77F4B9CF389FFF679182803C3034EA5236 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_data, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_pads, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_constantValue, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_axes, int32_t ___4_padMode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28218,7 +28218,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29315
+// Method Definition Index: 29354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Reshape_mF51AC8667B85C63BA507BB420F5DF015E06DCF52 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_shape, bool ___2_allowZero, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28267,7 +28267,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29316
+// Method Definition Index: 29355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Resize_mB23C5A556CCD7E309D357F1F7C512BB7110EC85C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_scalesOrSizes, int32_t ___2_scaleMode, int32_t ___3_coordTransformMode, int32_t ___4_mode, int32_t ___5_nearestMode, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___6_axes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28344,7 +28344,7 @@ IL_0058:
 		return L_25;
 	}
 }
-// Method Definition Index: 29317
+// Method Definition Index: 29356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Select_mC76B8350ED4845D9F1C2481F26B29B6B63161892 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_dim, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_selectIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28393,7 +28393,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29318
+// Method Definition Index: 29357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Slice_m176AA3C634B3CEF5261434F20824099A376F19A4 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_starts, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_ends, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_axes, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_steps, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28456,7 +28456,7 @@ IL_0044:
 		return L_19;
 	}
 }
-// Method Definition Index: 29319
+// Method Definition Index: 29358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_SliceSet_m5491751064BFE50C279DD0667045935D8CCCA364 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_values, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___2_starts, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___3_ends, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___4_axes, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___5_steps, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28526,7 +28526,7 @@ IL_004e:
 		return L_22;
 	}
 }
-// Method Definition Index: 29320
+// Method Definition Index: 29359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_SpaceToDepth_m6DAA0D48B3D40FEDCDCE72EAE2979713101BF1C2 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, int32_t ___1_blocksize, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28568,7 +28568,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29321
+// Method Definition Index: 29360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensorU5BU5D_tDD49747F6403FDB4D7353C508D7830004212AE27* FunctionalLayer_Split_mE313456020748381772EF67DEE6978B2649239D5 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_split, int32_t ___2_axis, int32_t ___3_numOutputs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28621,7 +28621,7 @@ IL_0038:
 		return L_14;
 	}
 }
-// Method Definition Index: 29322
+// Method Definition Index: 29361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Squeeze_m8543DAD47CF3D943E1D21D1DF13F40FEF06D2B99 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28663,7 +28663,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29323
+// Method Definition Index: 29362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Tile_m1EC04C99F4D668B43C68AA5CFA96066F4A8F9BC3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_repeats, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28705,7 +28705,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29324
+// Method Definition Index: 29363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Transpose_m82DEFB1672EF0E6A774F1C3B78CD10C1E606BCAD (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_permutations, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28747,7 +28747,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29325
+// Method Definition Index: 29364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Trilu_m6A926D6D018BD0062A44D942310509D368AD4620 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_k, int32_t ___2_mode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28796,7 +28796,7 @@ IL_0031:
 		return L_13;
 	}
 }
-// Method Definition Index: 29326
+// Method Definition Index: 29365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Unsqueeze_m2881B6BBA10854C75E9F16061A02B0055BF1CA54 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___1_axes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28838,7 +28838,7 @@ IL_0028:
 		return L_10;
 	}
 }
-// Method Definition Index: 29327
+// Method Definition Index: 29366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Acos_m4B77616D633368BC7949EB78D41E48FDEA3D107C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28873,7 +28873,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29328
+// Method Definition Index: 29367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Acosh_m3EAD0BAA6A82093652913216AAEDDBA3BA6001AE (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28908,7 +28908,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29329
+// Method Definition Index: 29368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Asin_mFE9CA6084849D3CB24BEA12D4DCAE98AB8ACD647 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28943,7 +28943,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29330
+// Method Definition Index: 29369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Asinh_mA717FB009EB5CFD8EBAD0F9E26BC36965081B954 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28978,7 +28978,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29331
+// Method Definition Index: 29370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Atan_mE4FB09E71CD4796038A31B3CEE4DC40207BE843B (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29013,7 +29013,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29332
+// Method Definition Index: 29371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Atanh_m970C3C8EA4F7D6409D93521487F279A3AFD6274C (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29048,7 +29048,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29333
+// Method Definition Index: 29372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Cos_mD9671B2F27E3259E7988B5FE2EE997078764E089 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29083,7 +29083,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29334
+// Method Definition Index: 29373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Cosh_m8C146F58580E4EDF019FE14833B672CBF63E0B6E (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29118,7 +29118,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29335
+// Method Definition Index: 29374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Sin_mAE8431094830397A1C8889974AD6707459369817 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29153,7 +29153,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29336
+// Method Definition Index: 29375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Sinh_mBE86A360E135284932699A7D3031ADB9ACFCF39A (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29188,7 +29188,7 @@ IL_001f:
 		return L_7;
 	}
 }
-// Method Definition Index: 29337
+// Method Definition Index: 29376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* FunctionalLayer_Tan_m50A370B85B9018378C617735C84EC4E159B7F6A3 (FunctionalTensor_t52B888EAC80B38DAF13DF1A93C729DBE09F1E1BD* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
