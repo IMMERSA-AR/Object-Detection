@@ -482,6 +482,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: fd5682b0efe9dcd4ca5baf90575c7c69, type: 2}
     - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+    - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5dc84fd122d862a43902b5016ab65fa0, type: 2}
@@ -853,7 +857,7 @@ MonoBehaviour:
   moveSpeed: 1.5
   stoppingDistance: 0.6
   rotationSpeed: 8
-  seatHeightOffset: 0
+  seatHeightOffset: -0.45
   seatForwardOffset: 0
 --- !u!4 &627146613400150513 stripped
 Transform:
