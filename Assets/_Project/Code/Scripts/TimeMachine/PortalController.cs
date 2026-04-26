@@ -4,7 +4,7 @@ using System.Collections;
 public class SH_PortalController : MonoBehaviour
 {
     public float openSpeed = 2f;
-    public Vector3 targetScale = new Vector3(1.25f, 1.25f, 1f);
+    public Vector3 targetScale = new Vector3(25f, 25f, 1f);
 
     void Start()
     {

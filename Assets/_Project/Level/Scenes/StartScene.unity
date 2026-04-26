@@ -9141,7 +9141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SH_PortalController
   openSpeed: 2
-  targetScale: {x: 1.25, y: 1.25, z: 1}
+  targetScale: {x: 25, y: 25, z: 1}
 --- !u!1 &1539265438
 GameObject:
   m_ObjectHideFlags: 0
