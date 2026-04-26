@@ -28891,10 +28891,14 @@ IL_0021:
 	}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Method Definition Index: 132008
 =======
 // Method Definition Index: 132478
 >>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
+=======
+// Method Definition Index: 132500
+>>>>>>> 482d80b377c42bed67001683499b702557e24f5d
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool EnvironmentDepthManager_get_IsDepthAvailable_m46C6D9DCA227381A3840DBE6B41083EFB8FD132C_inline (EnvironmentDepthManager_t66B25129AB8791DEB056A5AFAB14151358AAA631* __this, const RuntimeMethod* method) 
 {
 	{

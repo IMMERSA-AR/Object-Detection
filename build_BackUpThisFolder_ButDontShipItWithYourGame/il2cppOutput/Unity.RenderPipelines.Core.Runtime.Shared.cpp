@@ -226,10 +226,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CameraCaptureBridge_GetCachedC
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Method Definition Index: 132563
 =======
 // Method Definition Index: 133034
 >>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
+=======
+// Method Definition Index: 133056
+>>>>>>> 482d80b377c42bed67001683499b702557e24f5d
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t82B1EDB2E75C6D415B8D03B486672468ACF9471A UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m586E7B58DA433D6C284C4C29185006F170A6B633 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -273,10 +277,14 @@ IL_0057:
 	}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Method Definition Index: 132564
 =======
 // Method Definition Index: 133035
 >>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
+=======
+// Method Definition Index: 133057
+>>>>>>> 482d80b377c42bed67001683499b702557e24f5d
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mC16F012056158B3BD5187FB0B498F4B4AC67F058 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t21637E60B4727FCC74DBA2662FABA55B062650DA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -363,10 +371,14 @@ IL2CPP_EXTERN_C void MonoScriptData_t82B1EDB2E75C6D415B8D03B486672468ACF9471A_ma
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Method Definition Index: 132565
 =======
 // Method Definition Index: 133036
 >>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
+=======
+// Method Definition Index: 133058
+>>>>>>> 482d80b377c42bed67001683499b702557e24f5d
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CameraCaptureBridge_GetCachedCaptureActionsEnumerator_m5AF96FFFE623D93E1ABDE12DF9E17A420A69C498 (Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___0_camera, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

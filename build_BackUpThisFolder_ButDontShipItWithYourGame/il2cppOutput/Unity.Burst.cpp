@@ -51638,10 +51638,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t* NumberBuffer_GetDigitsPo
 	}
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Method Definition Index: 132518
 =======
 // Method Definition Index: 132989
 >>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
+=======
+// Method Definition Index: 133011
+>>>>>>> 482d80b377c42bed67001683499b702557e24f5d
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Unsafe_CopyBlock_mEE549E5B722DBA08465F585E64B08C6F0851C63A_inline (void* ___0_destination, void* ___1_source, uint32_t ___2_byteCount, const RuntimeMethod* method) 
 {
 	{
