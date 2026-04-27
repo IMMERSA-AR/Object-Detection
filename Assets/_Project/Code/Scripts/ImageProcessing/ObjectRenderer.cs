@@ -37,25 +37,16 @@ public class ObjectRenderer : MonoBehaviour
 
     public void RenderDetections(Unity.InferenceEngine.Tensor<float> coords, Unity.InferenceEngine.Tensor<int> labelIDs, Unity.InferenceEngine.Tensor<float> confidences = null)
     {
-        if (coords == null || labelIDs == null) return;
-
         ObjectStamper stamper = GetComponent<ObjectStamper>();
 
-        // --- NEW: UI DISPLAY LOGIC ---
+        // If Murad is already sitting, ignore the AI data completely
         if (stamper != null && stamper.HasSpawned)
         {
-            // 1. Hide the "Search for chair" screen text immediately
-            if (searchUIObject != null) searchUIObject.SetActive(false);
-
-            // 2. Wipe any existing 3D markers and stop running detection
-            ClearPreviousMarkers();
             return;
         }
-        else
-        {
-            // Show the instruction while we are still searching
-            if (searchUIObject != null) searchUIObject.SetActive(true);
-        }
+
+        // Basic safety checks
+        if (coords == null || labelIDs == null) return;
 
         if (!_cameraAccess || !_envRaycastManager)
         {
@@ -139,40 +130,52 @@ public class ObjectRenderer : MonoBehaviour
             {
                 continue;
             }
-            // ... inside your detection loop ...
-            string labelName = detectedLabel.ToString();
+            // ── Anchor detection driven by ExperienceConfig ──────────
+            // Read the active anchor label from ExperienceManager.
+            // Falls back to "chair" if no experience is selected yet.
+            ExperienceConfig activeCfg = ExperienceManager.Instance != null
+                ? ExperienceManager.Instance.ActiveConfig : null;
 
-            if (labelName.ToLower().Contains("chair"))
+            // Determine which label we are hunting for
+            string anchorLabelName = activeCfg != null
+                ? activeCfg.anchorLabel.ToString().ToLower()
+                : "chair";
+
+            string detectedLabelLower = detectedLabel.ToString().ToLower();
+
+            Debug.Log($"[ObjectRenderer] Detected: {detectedLabel} | Hunting for: {anchorLabelName}");
+
+            if (detectedLabelLower.Contains(anchorLabelName) ||
+                anchorLabelName.Contains(detectedLabelLower))
             {
-                chairCountThisFrame++; // Increase the chair count by 1
-
-                // 1. FIRST: Check confidence (Move this up so we don't process "weak" chairs)
-                var chairConfidence = GetConfidence(coords, confidences, i);
-                if (chairConfidence < minConfidence) continue;
-
-                // 2. SECOND: Aspect Ratio Check
-                // A chair is usually tall or square. A table is wide.
-                float aspectRatio = detectedWidth / detectedHeight;
-
-                // If the width is 20% larger than the height (1.2), it's likely a table
-                if (aspectRatio > 1.2f)
+                // 1. Confidence check
+                float requiredConf = activeCfg != null ? activeCfg.minConfidence : minConfidence;
+                var anchorConfidence = GetConfidence(coords, confidences, i);
+                if (anchorConfidence < requiredConf)
                 {
-                    // Debug.Log($"[Chair Tracker] Ignored wide object. AR: {aspectRatio:F2}");
+                    Debug.Log($"[ObjectRenderer] {detectedLabel} rejected — confidence {anchorConfidence:F2} < {requiredConf:F2}");
                     continue;
                 }
 
-                // 3. THIRD: If it passed the tests, count it!
                 chairCountThisFrame++;
 
-                float distanceToChair = Vector3.Distance(_mainCamera.transform.position, markerWorldPos);
+                float distanceToAnchor = Vector3.Distance(
+                    _mainCamera.transform.position, markerWorldPos);
 
-                if (distanceToChair < minDistance)
+                float maxDist = activeCfg != null ? activeCfg.maxAnchorDistance : 3f;
+                if (distanceToAnchor > maxDist)
                 {
-                    minDistance = distanceToChair;
-                    closestChairPos = markerWorldPos;
-                    foundChairThisFrame = true;
+                    Debug.Log($"[ObjectRenderer] {detectedLabel} too far: {distanceToAnchor:F2}m > {maxDist}m");
+                    continue;
                 }
 
+                if (distanceToAnchor < minDistance)
+                {
+                    minDistance = distanceToAnchor;
+                    closestChairPos = markerWorldPos;
+                    foundChairThisFrame = true;
+                    Debug.Log($"[ObjectRenderer] Anchor candidate: {detectedLabel} at {distanceToAnchor:F2}m");
+                }
             }
             Vector3 directionToPlayer = _mainCamera.transform.position - markerWorldPos;
             var markerRotation = Quaternion.LookRotation(_mainCamera.transform.position - markerWorldPos, Vector3.up);
@@ -186,7 +189,7 @@ public class ObjectRenderer : MonoBehaviour
 
 
             //var labelWithConfidence = confidence >= 0f ? $"{dictionaryKey} ({confidence * 100f:F0}%)": dictionaryKey;
-            var labelWithConfidence = "Search for chair...";
+            var labelWithConfidence = $"{dictionaryKey}";
 
             var lookupKey = dictionaryKey;
             if (_activeMarkers.TryGetValue(lookupKey, out MarkerController existingMarker))
@@ -275,29 +278,6 @@ public class ObjectRenderer : MonoBehaviour
         // to ensure the Y axis is flipped for Unity Viewport space.
         return new Vector2(Mathf.Clamp01(normalizedX), Mathf.Clamp01(1f - normalizedY));
     }
-    // private Vector2 DetectionToViewport(float normalizedX, float normalizedY)
-    // {
-    //     var resolution = (Vector2)_cameraAccess.CurrentResolution;
-    //     if (resolution == Vector2.zero)
-    //     {
-    //         resolution = (Vector2)_cameraAccess.Intrinsics.SensorResolution;
-    //     }
-    //     if (resolution == Vector2.zero)
-    //     {
-    //         return new Vector2(Mathf.Clamp01(normalizedX), Mathf.Clamp01(1f - normalizedY));
-    //     }
-
-    //     var scaledX = Mathf.Clamp01(normalizedX) * ModelInputSize;
-    //     var scaledY = Mathf.Clamp01(normalizedY) * ModelInputSize;
-
-    //     var actualPixel = new Vector2(
-    //         scaledX * (resolution.x / ModelInputSize),
-    //         scaledY * (resolution.y / ModelInputSize));
-
-    //     return new Vector2(
-    //         Mathf.Clamp01(actualPixel.x / resolution.x),
-    //         Mathf.Clamp01(1f - actualPixel.y / resolution.y));
-    // }
 
     private static float GetConfidence(Unity.InferenceEngine.Tensor<float> coords, Unity.InferenceEngine.Tensor<float> confidenceTensor, int index)
     {
@@ -375,5 +355,29 @@ public class ObjectRenderer : MonoBehaviour
         }
 
         return fallbackNormal;
+    }
+    private void Update()
+    {
+        ObjectStamper stamper = GetComponent<ObjectStamper>();
+
+        if (stamper != null && searchUIObject != null)
+        {
+            if (stamper.HasSpawned)
+            {
+                if (searchUIObject.activeSelf)
+                {
+                    searchUIObject.SetActive(false);
+                    ClearPreviousMarkers();
+                }
+            }
+            // Only show search UI if an experience has actually been selected
+            // Don't show it during the main menu phase
+            else if (ExperienceManager.Instance != null &&
+                     ExperienceManager.Instance.ActiveConfig != null)
+            {
+                if (!searchUIObject.activeSelf)
+                    searchUIObject.SetActive(true);
+            }
+        }
     }
 }

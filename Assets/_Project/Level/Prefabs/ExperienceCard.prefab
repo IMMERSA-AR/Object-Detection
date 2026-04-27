@@ -231,6 +231,9 @@ MonoBehaviour:
   titleText: {fileID: 4501983513288898292}
   descriptionText: {fileID: 465925723435938799}
   selectButton: {fileID: 9026674724205598633}
+  buttonLabelText: {fileID: 475753118678971937}
+  normalColor: {r: 0.05, g: 0.11, b: 0.18, a: 0.9}
+  hoveredColor: {r: 0.2, g: 0.15, b: 0.05, a: 0.95}
 --- !u!1 &2991592591147022735
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +491,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4251609094905959033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8184053197350608535}
+        m_TargetAssemblyTypeName: ExperienceCard, Assembly-CSharp
+        m_MethodName: OnCardSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8120282957132876009
 GameObject:
   m_ObjectHideFlags: 0

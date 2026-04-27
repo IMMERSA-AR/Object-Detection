@@ -4,15 +4,18 @@ using UnityEngine;
 public class ExperienceConfig : ScriptableObject
 {
     [Header("Display")]
-    [Tooltip("Name shown on the menu card button")]
+    [Tooltip("Name shown as the card title")]
     public string experienceName = "New Experience";
 
     [Tooltip("Short description shown on the card")]
     [TextArea(2, 3)]
     public string description = "Description here.";
 
+    [Tooltip("Text on the button — make it immersive! e.g. 'Enter the Hall'")]
+    public string buttonLabel = "Begin";
+
     [Header("Anchor Detection")]
-    [Tooltip("Which YOLO label to detect as the anchor")]
+    [Tooltip("Which YOLO label to detect as the anchor object")]
     public YOLOv9Labels anchorLabel = YOLOv9Labels.chair;
 
     [Tooltip("Minimum YOLO confidence to accept this anchor (0-1)")]
