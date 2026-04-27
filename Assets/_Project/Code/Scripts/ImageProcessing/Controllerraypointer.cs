@@ -13,17 +13,17 @@ public class ControllerRayPointer : MonoBehaviour
 {
     [Header("Ray Settings")]
     public float rayLength = 10f;
-    public Color rayColor  = new Color(1f, 0.85f, 0.3f, 1f);
-    public float rayWidth  = 0.003f;
+    public Color rayColor = new Color(1f, 0.85f, 0.3f, 1f);
+    public float rayWidth = 0.003f;
 
     [Header("References — drag in Inspector")]
-    public Canvas    targetCanvas;
+    public Canvas targetCanvas;
     public Transform trackingSpace;
 
     private LineRenderer _line;
-    private EventSystem  _eventSystem;
-    private GameObject   _currentHovered;
-    private Vector3      _lastHitPoint = Vector3.zero;
+    private EventSystem _eventSystem;
+    private GameObject _currentHovered;
+    private Vector3 _lastHitPoint = Vector3.zero;
 
     private float _lastLogTime = -999f;
     private void TLog(string msg)
@@ -37,13 +37,13 @@ public class ControllerRayPointer : MonoBehaviour
         Debug.Log("[RayPointer] Start()");
 
         _line = gameObject.AddComponent<LineRenderer>();
-        _line.positionCount  = 2;
-        _line.startWidth     = rayWidth;
-        _line.endWidth       = rayWidth * 0.2f;
-        _line.useWorldSpace  = true;
-        _line.material       = new Material(Shader.Find("Unlit/Color"));
+        _line.positionCount = 2;
+        _line.startWidth = rayWidth;
+        _line.endWidth = rayWidth * 0.2f;
+        _line.useWorldSpace = true;
+        _line.material = new Material(Shader.Find("Unlit/Color"));
         _line.material.color = rayColor;
-        _line.enabled        = false;
+        _line.enabled = false;
 
         _eventSystem = EventSystem.current;
 
@@ -74,10 +74,10 @@ public class ControllerRayPointer : MonoBehaviour
         }
 
         // Build world-space ray from right controller
-        Vector3    lp = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
+        Vector3 lp = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
         Quaternion lr = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch);
-        Vector3    wp = trackingSpace != null ? trackingSpace.TransformPoint(lp) : lp;
-        Quaternion wr = trackingSpace != null ? trackingSpace.rotation * lr      : lr;
+        Vector3 wp = trackingSpace != null ? trackingSpace.TransformPoint(lp) : lp;
+        Quaternion wr = trackingSpace != null ? trackingSpace.rotation * lr : lr;
 
         Vector3 dir = wr * Vector3.forward;
         Ray ray = new Ray(wp, dir);
@@ -138,7 +138,7 @@ public class ControllerRayPointer : MonoBehaviour
         RectTransform canvasRect = targetCanvas.GetComponent<RectTransform>();
 
         // Step 1: intersect ray with canvas plane (try both normals)
-        bool    found    = false;
+        bool found = false;
         Vector3 hitWorld = Vector3.zero;
 
         foreach (var normal in new[] { -targetCanvas.transform.forward, targetCanvas.transform.forward })
@@ -147,13 +147,13 @@ public class ControllerRayPointer : MonoBehaviour
             float enter;
             if (!plane.Raycast(ray, out enter) || enter < 0.01f) continue;
 
-            Vector3 hp  = ray.GetPoint(enter);
+            Vector3 hp = ray.GetPoint(enter);
             Vector3 lp3 = canvasRect.InverseTransformPoint(hp);
 
             if (canvasRect.rect.Contains(new Vector2(lp3.x, lp3.y)))
             {
                 hitWorld = hp;
-                found    = true;
+                found = true;
                 break;
             }
         }
@@ -170,8 +170,8 @@ public class ControllerRayPointer : MonoBehaviour
         Button[] buttons = targetCanvas.GetComponentsInChildren<Button>(false);
         TLog($"[RayPointer] Canvas hit. Checking {buttons.Length} buttons.");
 
-        Button   bestButton   = null;
-        float    bestDistance = float.MaxValue;
+        Button bestButton = null;
+        float bestDistance = float.MaxValue;
 
         foreach (Button btn in buttons)
         {
@@ -183,7 +183,7 @@ public class ControllerRayPointer : MonoBehaviour
 
             // Convert world hit point to this button's local space
             Vector3 localPt3 = rt.InverseTransformPoint(hitWorld);
-            Vector2 localPt  = new Vector2(localPt3.x, localPt3.y);
+            Vector2 localPt = new Vector2(localPt3.x, localPt3.y);
 
             // Check if inside (rect is in local space, unaffected by scale)
             if (rt.rect.Contains(localPt))
@@ -193,7 +193,7 @@ public class ControllerRayPointer : MonoBehaviour
                 if (dist < bestDistance)
                 {
                     bestDistance = dist;
-                    bestButton   = btn;
+                    bestButton = btn;
                 }
                 Debug.Log($"[RayPointer] HIT button: {btn.name} localPt={localPt} rect={rt.rect}");
             }

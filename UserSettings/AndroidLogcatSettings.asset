@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 21094,
+        "processId": 28289,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -1477,6 +1477,36 @@
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 21094,
             "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23601,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 25045,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 26702,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27779,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 28289,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -1533,7 +1563,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "[y",
+        "m_Filter": "[",
         "m_UseRegularExpressions": false,
         "m_MatchCase": false
     },
