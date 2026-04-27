@@ -22447,7 +22447,7 @@ void OVRTouchpadCallback_1_Invoke_mAE76AAE46DA40A4ED0A5EC31E421F8CEA24CA4B7_Open
 	typedef void (*FunctionPointerType) (int32_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_arg, method);
 }
-// Method Definition Index: 131266
+// Method Definition Index: 131282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1__ctor_m77087364212F8E45881647668ADBA51D1991473A_gshared (OVRTouchpadCallback_1_t94EF76587988890CD79446DC5E225B7DFD53079F* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -22476,13 +22476,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1__ctor_m77087364212
 	}
 	__this->___extra_arg = (intptr_t)&OVRTouchpadCallback_1_Invoke_mAE76AAE46DA40A4ED0A5EC31E421F8CEA24CA4B7_Multicast;
 }
-// Method Definition Index: 131267
+// Method Definition Index: 131283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1_Invoke_mAE76AAE46DA40A4ED0A5EC31E421F8CEA24CA4B7_gshared (OVRTouchpadCallback_1_t94EF76587988890CD79446DC5E225B7DFD53079F* __this, int32_t ___0_arg, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 131268
+// Method Definition Index: 131284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OVRTouchpadCallback_1_BeginInvoke_m1261F3D1C9DFDA00800F99FEB270B1E5CBC978C5_gshared (OVRTouchpadCallback_1_t94EF76587988890CD79446DC5E225B7DFD53079F* __this, int32_t ___0_arg, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22495,7 +22495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OVRTouchpadCallback_1_BeginInv
 	__d_args[0] = Box(Int32Enum_tCBAC8BA2BFF3A845FA599F303093BBBA374B6F0C_il2cpp_TypeInfo_var, &___0_arg);
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
 }
-// Method Definition Index: 131269
+// Method Definition Index: 131285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1_EndInvoke_mCCE30DBBA1BC094E03E34D427C9E4DE9982837DD_gshared (OVRTouchpadCallback_1_t94EF76587988890CD79446DC5E225B7DFD53079F* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
@@ -22556,7 +22556,7 @@ void OVRTouchpadCallback_1_Invoke_mD769903E2272E6B028085F0E8562FE5461598C6A_Open
 	NullCheck(___0_arg);
 	GenericInterfaceActionInvoker0Invoker::Invoke(method, (RuntimeObject*)___0_arg);
 }
-// Method Definition Index: 131266
+// Method Definition Index: 131282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1__ctor_m55DFE01A672D62C6F208A2A6A53253AEBB0A352B_gshared (OVRTouchpadCallback_1_tAD6389361C8E706C605BCEFFA83BBD42385D033A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -22605,13 +22605,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1__ctor_m55DFE01A672
 	}
 	__this->___extra_arg = (intptr_t)&OVRTouchpadCallback_1_Invoke_mD769903E2272E6B028085F0E8562FE5461598C6A_Multicast;
 }
-// Method Definition Index: 131267
+// Method Definition Index: 131283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1_Invoke_mD769903E2272E6B028085F0E8562FE5461598C6A_gshared (OVRTouchpadCallback_1_tAD6389361C8E706C605BCEFFA83BBD42385D033A* __this, Il2CppFullySharedGenericAny ___0_arg, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, Il2CppFullySharedGenericAny, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 131268
+// Method Definition Index: 131284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OVRTouchpadCallback_1_BeginInvoke_mF421239344D36F8AD2C8D311A858F02B234E05A1_gshared (OVRTouchpadCallback_1_tAD6389361C8E706C605BCEFFA83BBD42385D033A* __this, Il2CppFullySharedGenericAny ___0_arg, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
 {
 	void *__d_args[2] = {0};
@@ -22619,7 +22619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OVRTouchpadCallback_1_BeginInv
 	__d_args[0] = (il2cpp_codegen_class_is_value_type(___0_arg_klass) ? Box(___0_arg_klass, ___0_arg) : (void*)___0_arg);
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
 }
-// Method Definition Index: 131269
+// Method Definition Index: 131285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRTouchpadCallback_1_EndInvoke_m19CB66064A431E5E49D82FC5A7E59926B9EE2D49_gshared (OVRTouchpadCallback_1_tAD6389361C8E706C605BCEFFA83BBD42385D033A* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);

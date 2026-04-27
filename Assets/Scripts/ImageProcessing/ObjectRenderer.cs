@@ -130,40 +130,52 @@ public class ObjectRenderer : MonoBehaviour
             {
                 continue;
             }
-            // ... inside your detection loop ...
-            string labelName = detectedLabel.ToString();
+            // ── Anchor detection driven by ExperienceConfig ──────────
+            // Read the active anchor label from ExperienceManager.
+            // Falls back to "chair" if no experience is selected yet.
+            ExperienceConfig activeCfg = ExperienceManager.Instance != null
+                ? ExperienceManager.Instance.ActiveConfig : null;
 
-            if (labelName.ToLower().Contains("chair"))
+            // Determine which label we are hunting for
+            string anchorLabelName = activeCfg != null
+                ? activeCfg.anchorLabel.ToString().ToLower()
+                : "chair";
+
+            string detectedLabelLower = detectedLabel.ToString().ToLower();
+
+            Debug.Log($"[ObjectRenderer] Detected: {detectedLabel} | Hunting for: {anchorLabelName}");
+
+            if (detectedLabelLower.Contains(anchorLabelName) ||
+                anchorLabelName.Contains(detectedLabelLower))
             {
-                chairCountThisFrame++; // Increase the chair count by 1
-
-                // 1. FIRST: Check confidence (Move this up so we don't process "weak" chairs)
-                var chairConfidence = GetConfidence(coords, confidences, i);
-                if (chairConfidence < minConfidence) continue;
-
-                // 2. SECOND: Aspect Ratio Check
-                // A chair is usually tall or square. A table is wide.
-                float aspectRatio = detectedWidth / detectedHeight;
-
-                // If the width is 20% larger than the height (1.2), it's likely a table
-                if (aspectRatio > 1.2f)
+                // 1. Confidence check
+                float requiredConf = activeCfg != null ? activeCfg.minConfidence : minConfidence;
+                var anchorConfidence = GetConfidence(coords, confidences, i);
+                if (anchorConfidence < requiredConf)
                 {
-                    // Debug.Log($"[Chair Tracker] Ignored wide object. AR: {aspectRatio:F2}");
+                    Debug.Log($"[ObjectRenderer] {detectedLabel} rejected — confidence {anchorConfidence:F2} < {requiredConf:F2}");
                     continue;
                 }
 
-                // 3. THIRD: If it passed the tests, count it!
                 chairCountThisFrame++;
 
-                float distanceToChair = Vector3.Distance(_mainCamera.transform.position, markerWorldPos);
+                float distanceToAnchor = Vector3.Distance(
+                    _mainCamera.transform.position, markerWorldPos);
 
-                if (distanceToChair < minDistance)
+                float maxDist = activeCfg != null ? activeCfg.maxAnchorDistance : 3f;
+                if (distanceToAnchor > maxDist)
                 {
-                    minDistance = distanceToChair;
-                    closestChairPos = markerWorldPos;
-                    foundChairThisFrame = true;
+                    Debug.Log($"[ObjectRenderer] {detectedLabel} too far: {distanceToAnchor:F2}m > {maxDist}m");
+                    continue;
                 }
 
+                if (distanceToAnchor < minDistance)
+                {
+                    minDistance = distanceToAnchor;
+                    closestChairPos = markerWorldPos;
+                    foundChairThisFrame = true;
+                    Debug.Log($"[ObjectRenderer] Anchor candidate: {detectedLabel} at {distanceToAnchor:F2}m");
+                }
             }
             Vector3 directionToPlayer = _mainCamera.transform.position - markerWorldPos;
             var markerRotation = Quaternion.LookRotation(_mainCamera.transform.position - markerWorldPos, Vector3.up);
@@ -348,25 +360,23 @@ public class ObjectRenderer : MonoBehaviour
     {
         ObjectStamper stamper = GetComponent<ObjectStamper>();
 
-        // This runs every single frame, making it 100% guaranteed to turn off
         if (stamper != null && searchUIObject != null)
         {
             if (stamper.HasSpawned)
             {
-                // Murad is sitting -> Force text off
                 if (searchUIObject.activeSelf)
                 {
                     searchUIObject.SetActive(false);
-                    ClearPreviousMarkers(); // Wipe any stuck green boxes
+                    ClearPreviousMarkers();
                 }
             }
-            else
+            // Only show search UI if an experience has actually been selected
+            // Don't show it during the main menu phase
+            else if (ExperienceManager.Instance != null &&
+                     ExperienceManager.Instance.ActiveConfig != null)
             {
-                // Murad is not here yet -> Force text on
                 if (!searchUIObject.activeSelf)
-                {
                     searchUIObject.SetActive(true);
-                }
             }
         }
     }

@@ -39535,15 +39535,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t OVRRuntimeSettings_get_Ha
 		return L_0;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132215
-=======
-// Method Definition Index: 132685
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132707
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132723
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRLoader_t80B1B1934C40561C5352ABC95D567DC2A7C9C976* XRManagerSettings_get_activeLoader_mFB3B679005792D3DF871EAA7120DD86DCA1D5DEA_inline (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) 
 {
 	{

@@ -18404,15 +18404,7 @@ IL_00a3:
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132378
-=======
-// Method Definition Index: 132850
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132872
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AssetBundle_LoadAsset_TisRuntimeObject_m7F36E1C08FC32ADB47C34513522D958FA6E09C47_gshared (AssetBundle_tB38418819A49060CD738CB21541649340F082943* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

@@ -1,55 +1,76 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 /// <summary>
 /// Attached to the ExperienceCard prefab ROOT.
-/// ExperienceManager calls Setup() on each spawned card to fill it with data.
 ///
-/// PREFAB STRUCTURE REQUIRED:
-///   ExperienceCard (root)
-///   ├── Image component          ← card background
-///   ├── Button component         ← makes whole card clickable  
-///   ├── ExperienceCard script    ← this script
-///   ├── TitleText                ← TextMeshProUGUI
-///   ├── DescriptionText          ← TextMeshProUGUI
-///   └── SelectButton             ← Button (optional separate button)
-///       └── Text (TMP)           ← says "Select" or "Begin"
+/// PREFAB STRUCTURE:
+///   ExperienceCard  (Image + Button + ExperienceCard script)
+///   ├── TitleText        (TextMeshProUGUI)
+///   ├── DescriptionText  (TextMeshProUGUI)
+///   └── SelectButton     (Button)
+///       └── ButtonLabel  (TextMeshProUGUI) ← shows config.buttonLabel
 /// </summary>
-public class ExperienceCard : MonoBehaviour
+public class ExperienceCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [Header("Wire these to children in the Prefab")]
+    [Header("Wire these in the Prefab Inspector")]
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
-
-    [Tooltip("The clickable button. Can be the card root Button or a child SelectButton.")]
     public Button selectButton;
 
+    [Tooltip("The TMP text inside the SelectButton that shows the action label")]
+    public TextMeshProUGUI buttonLabelText;
+
+    [Header("Hover Style")]
+    public Color normalColor = new Color(0.05f, 0.11f, 0.18f, 0.9f);
+    public Color hoveredColor = new Color(0.20f, 0.15f, 0.05f, 0.95f);
+
+    private Image _cardImage;
     private ExperienceConfig _config;
     private ExperienceManager _manager;
 
+    private void Awake()
+    {
+        _cardImage = GetComponent<Image>();
+    }
+
     /// <summary>
     /// Called by ExperienceManager right after Instantiating this card.
-    /// Fills the UI with the config's data and wires the button.
     /// </summary>
     public void Setup(ExperienceConfig config, ExperienceManager manager)
     {
         _config = config;
         _manager = manager;
 
-        // Fill title
+        // ── Title ──────────────────────────────────────────────────
         if (titleText != null)
             titleText.text = config.experienceName;
         else
-            Debug.LogWarning($"[ExperienceCard] titleText is not assigned on the prefab! Card for '{config.experienceName}' won't show a title.");
+            Debug.LogWarning($"[ExperienceCard] titleText not assigned for '{config.experienceName}'");
 
-        // Fill description
+        // ── Description ────────────────────────────────────────────
         if (descriptionText != null)
             descriptionText.text = config.description;
         else
-            Debug.LogWarning($"[ExperienceCard] descriptionText is not assigned on the prefab!");
+            Debug.LogWarning($"[ExperienceCard] descriptionText not assigned for '{config.experienceName}'");
 
-        // Wire button — try assigned button first, fall back to Button on this root GameObject
+        // ── Button label (immersive text from config) ──────────────
+        if (buttonLabelText != null)
+            buttonLabelText.text = config.buttonLabel;   // e.g. "Enter the Hall"
+        else
+        {
+            // Fallback: try to find TMP inside the button automatically
+            if (selectButton != null)
+            {
+                var tmp = selectButton.GetComponentInChildren<TextMeshProUGUI>();
+                if (tmp != null) tmp.text = config.buttonLabel;
+            }
+        }
+
+        // ── Wire button ────────────────────────────────────────────
+        // Prefer assigned selectButton, fall back to Button on this root object
         if (selectButton == null)
             selectButton = GetComponent<Button>();
 
@@ -57,18 +78,38 @@ public class ExperienceCard : MonoBehaviour
         {
             selectButton.onClick.RemoveAllListeners();
             selectButton.onClick.AddListener(OnCardSelected);
-            Debug.Log($"[ExperienceCard] Button wired for '{config.experienceName}'");
+            Debug.Log($"[ExperienceCard] Button '{config.buttonLabel}' wired for '{config.experienceName}'");
         }
         else
         {
-            Debug.LogError($"[ExperienceCard] No Button found on card for '{config.experienceName}'! " +
-                           "Add a Button component to the prefab root or assign selectButton in the Inspector.");
+            Debug.LogError($"[ExperienceCard] No Button found for '{config.experienceName}'! " +
+                           "Add a Button component to the prefab root or assign selectButton.");
         }
+
+        // Reset card color
+        if (_cardImage != null)
+            _cardImage.color = normalColor;
     }
 
-    private void OnCardSelected()
+    // ── Button click ──────────────────────────────────────────────
+
+    public void OnCardSelected()
     {
-        Debug.Log($"[ExperienceCard] '{_config.experienceName}' selected!");
+        Debug.Log($"[ExperienceCard] '{_config.experienceName}' selected — starting experience.");
         _manager.SelectExperience(_config);
+    }
+
+    // ── Hover highlight (works with Quest controller pointer) ─────
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (_cardImage != null)
+            _cardImage.color = hoveredColor;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (_cardImage != null)
+            _cardImage.color = normalColor;
     }
 }

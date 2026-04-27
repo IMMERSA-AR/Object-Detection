@@ -1000,15 +1000,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132455
-=======
-// Method Definition Index: 132926
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132948
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t61FCF22609DA540EF2D3EFE53E0CAC5F8E97132B UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m0BB65C4D76D0C5F88D7B198A7C9BC96E4FB0D121 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1051,15 +1043,7 @@ IL_005d:
 		return L_7;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132456
-=======
-// Method Definition Index: 132927
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132949
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m0E107CBDD614DFDAA4162E7D798BEB1F17B54D31 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t7DE1CD68D9CF1A5E837F036B7E903B86D21F0A79* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1145,15 +1129,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t61FCF22609DA540EF2D3EFE53E0CAC5F8E97132B_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132457
-=======
-// Method Definition Index: 132928
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132950
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventBaseExtensionsBridge_SetPropagation_mEB3730972CD98AC34D92AC5DE23E4DD31E5072A8 (EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C* ___0_evt, int32_t ___1_propagation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1176,15 +1152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventBaseExtensionsBridge_SetPropagation
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132458
-=======
-// Method Definition Index: 132929
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132951
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t EventBaseExtensionsBridge_GetPropagation_m7FBE7738343E7FAB37B4517941FA2D50B0B39E4F (EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C* ___0_evt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1213,15 +1181,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132459
-=======
-// Method Definition Index: 132930
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132952
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventBaseExtensionsBridge__cctor_m7CF564C931511165190F8D69C06A0ADBAEC6120E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1264,15 +1224,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventBaseExtensionsBridge__cctor_m7CF564
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132460
-=======
-// Method Definition Index: 132931
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132953
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Focusable_t39F2BAF0AF6CA465BC2BEDAF9B5B2CF379B846D0* FocusControllerExtensionsBridge_FocusNextInDirection_mEA1EE26A03CAF78FBB8DE90B1F4BC1F3F168F447 (FocusController_t5D2E45F2CCBE3B7082DE4088EE03C2E8F736011A* ___0_controller, Focusable_t39F2BAF0AF6CA465BC2BEDAF9B5B2CF379B846D0* ___1_currentFocusable, FocusChangeDirection_t95F4784CF68331792EB9077AEAB01E17822991EF* ___2_direction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1314,15 +1266,7 @@ IL_0022:
 		return L_8;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132461
-=======
-// Method Definition Index: 132932
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132954
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FocusControllerExtensionsBridge__cctor_m5B49B397C00C971BDD211D64A2659312A9DC0DD5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1356,15 +1300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FocusControllerExtensionsBridge__cctor_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132462
-=======
-// Method Definition Index: 132933
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132955
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PanelSettings_t0621207D5DD3BB89DB587440E8F9E07234283DEC* PanelExtensionsBridge_GetPanelSettings_mABC1484A2BE8370E11C0F0D8F588468437FEDF6A (RuntimeObject* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1431,15 +1367,7 @@ IL_0029:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132463
-=======
-// Method Definition Index: 132934
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132956
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerMoveEventExtensionsBridge_SetIsHandledByDraggable_m82E772FC6D4C7D8AB9D73A71C9ED20B85D7CCE1B (PointerMoveEvent_t2C1E2E20A07034638F48C3EB94B8520549D770C3* ___0_evt, bool ___1_val, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1462,15 +1390,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerMoveEventExtensionsBridge_SetIsHa
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132464
-=======
-// Method Definition Index: 132935
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132957
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PointerMoveEventExtensionsBridge_GetIsHandledByDraggable_m1CDD475BB9E3CBB7C0ACC0A1DABC516D44515CEC (PointerMoveEvent_t2C1E2E20A07034638F48C3EB94B8520549D770C3* ___0_evt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1499,15 +1419,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132465
-=======
-// Method Definition Index: 132936
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132958
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerMoveEventExtensionsBridge__cctor_mADA8758CCC6904FD59A3E92B0834A3B07F7AE0F7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1542,15 +1454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PointerMoveEventExtensionsBridge__cctor_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132466
-=======
-// Method Definition Index: 132937
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132959
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueAnimationExtensionsBridge_IsRecycled_m402B45A420499E3267FC88242FBB521A5893214C (ValueAnimation_1_t6A16ABB31C53F67B498FDD1527DD8E8E866579EB* ___0_animation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1579,15 +1483,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132467
-=======
-// Method Definition Index: 132938
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132960
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueAnimationExtensionsBridge__cctor_mC647237061B45AB31148D99CDFA6A45C2024F998 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1629,15 +1525,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueAnimationExtensionsBridge__cctor_mC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132468
-=======
-// Method Definition Index: 132939
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132961
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetPseudoStates_mCF37E226FA2FDB7E0DBEDCD8737926BF02370016 (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, int32_t ___1_pseudoStates, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1660,15 +1548,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetPseudoS
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132469
-=======
-// Method Definition Index: 132940
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132962
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t VisualElementExtensionsBridge_GetPseudoStates_m44D3FE15094B6110018520BA3DC8D97BD3042830 (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1697,15 +1577,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132470
-=======
-// Method Definition Index: 132941
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132963
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D VisualElementExtensionsBridge_GetWorldBoundingBox_mB321D165223442C8B07F2AA03EE7290E41678C0F (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1736,15 +1608,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132471
-=======
-// Method Definition Index: 132942
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132964
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetIsCompositeRoot_mB26B975C697A8A65C35A2DF1080942D8E18DFD6F (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, bool ___1_isCompositeRoot, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1767,15 +1631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetIsCompo
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132472
-=======
-// Method Definition Index: 132943
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132965
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VisualElementExtensionsBridge_GetIsCompositeRoot_mAE7361D0D7839F7F01CB07CE0A114F4E8CE1E337 (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1804,15 +1660,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132473
-=======
-// Method Definition Index: 132944
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132966
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetExcludeFromFocusRing_mFA8C05137AEDB7355D2C5FBE18029725733A10F7 (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, bool ___1_excludeFromFocusRing, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1835,15 +1683,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetExclude
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132474
-=======
-// Method Definition Index: 132945
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132967
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VisualElementExtensionsBridge_GetExcludeFromFocusRing_mD20E646915FF72EB5E10A92B75EAD17D42C79A4F (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1872,15 +1712,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132475
-=======
-// Method Definition Index: 132946
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132968
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetDisableClipping_mBAF548987E36BE57ABE60077E16A0764D994CD3C (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, bool ___1_disableClipping, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1903,15 +1735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge_SetDisable
 		return;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132476
-=======
-// Method Definition Index: 132947
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132969
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VisualElementExtensionsBridge_GetDisableClipping_mF02CAF21B2EDEF8C73CFF5F09E6198C811B9D9BC (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1940,15 +1764,7 @@ IL_0014:
 		return L_3;
 	}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Method Definition Index: 132477
-=======
-// Method Definition Index: 132948
->>>>>>> 5397efb18a0f365e16f19e3fa81b6c27acf30b08
-=======
-// Method Definition Index: 132970
->>>>>>> 482d80b377c42bed67001683499b702557e24f5d
+// Method Definition Index: 132986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualElementExtensionsBridge__cctor_m463544A52631A3A64384FE737522E1F48AB9B7C2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
