@@ -23493,7 +23493,7 @@ IL2CPP_EXTERN_C  void EValue_Val_TisIl2CppFullySharedGenericStruct_mCA7A47C8F604
 	EValue_Val_TisIl2CppFullySharedGenericStruct_mCA7A47C8F604B38839129EA5724E5A1FF1A86237(_thisAdjusted, il2cppRetVal, method);
 	return;
 }
-// Method Definition Index: 131234
+// Method Definition Index: 131250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EnableSwitch_SetActive_TisRuntimeObject_m7E6A9CC36C618418DAC797BF8E92F028ED5417EB_gshared (EnableSwitch_t919DA896C2F64F20244C2AB3F4C0EC69C03FC9D8* __this, int32_t ___0_target, const RuntimeMethod* method) 
 {
 	if (!il2cpp_rgctx_is_initialized(method))

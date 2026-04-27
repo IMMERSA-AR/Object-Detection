@@ -25855,7 +25855,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NetworkAdapter_set_NetworkMe
 		return;
 	}
 }
-// Method Definition Index: 128630
+// Method Definition Index: 128747
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityEvent_2_t8BD8B2D552DBAC71219AB8986931168387484C85* SpatialAnchorCoreBuildingBlock_get_OnAnchorCreateCompleted_mD4EB0E9AB1E3E21FFE4A9D95A08A7B1CA15E7D6C_inline (SpatialAnchorCoreBuildingBlock_tCA657382824F34BC3401DD717A2F15F80ECA65B7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25896,7 +25896,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 128601
+// Method Definition Index: 128718
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityEvent_2_tB173A6D4C4CE87F18453AA2364F1661D7D8A06F0* SharedSpatialAnchorCore_get_OnSharedSpatialAnchorsLoadCompleted_m762CEDE50938B890FEF82EF266D9BC091AEA9A26_inline (SharedSpatialAnchorCore_t9CCBFB36FC728AC3B6E5907275460B1CEA08FE96* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25905,7 +25905,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityEvent_2_tB173A6D4C4CE87F1845
 		return L_0;
 	}
 }
-// Method Definition Index: 128599
+// Method Definition Index: 128716
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityEvent_2_t846304867740220F4B3BB878680907D84C9B041D* SharedSpatialAnchorCore_get_OnSpatialAnchorsShareToGroupCompleted_mE6F7907C0E7913550E7864E36ABD1DDBE83867E6_inline (SharedSpatialAnchorCore_t9CCBFB36FC728AC3B6E5907275460B1CEA08FE96* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25914,7 +25914,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityEvent_2_t846304867740220F4B3
 		return L_0;
 	}
 }
-// Method Definition Index: 128597
+// Method Definition Index: 128714
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR UnityEvent_2_tB173A6D4C4CE87F18453AA2364F1661D7D8A06F0* SharedSpatialAnchorCore_get_OnSpatialAnchorsShareCompleted_m54D563D9453DC71364BA9A07BC871B3600980F02_inline (SharedSpatialAnchorCore_t9CCBFB36FC728AC3B6E5907275460B1CEA08FE96* __this, const RuntimeMethod* method) 
 {
 	{

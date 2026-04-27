@@ -133,6 +133,30 @@ public class ExperienceManager : MonoBehaviour
         Debug.Log("[ExperienceManager] Menu visible.");
     }
 
+    // private void PositionMenuInFrontOfPlayer()
+    // {
+    //     if (Camera.main == null)
+    //     {
+    //         Debug.LogWarning("[ExperienceManager] No main camera found.");
+    //         return;
+    //     }
+
+    //     Transform cam = Camera.main.transform;
+
+    //     // Flatten forward so menu doesn't tilt with head pitch
+    //     Vector3 flatForward = new Vector3(cam.forward.x, 0f, cam.forward.z);
+    //     if (flatForward.sqrMagnitude < 0.001f)
+    //         flatForward = Vector3.forward;
+    //     flatForward.Normalize();
+
+    //     // Place in front of player at eye level
+    //     Vector3 menuPos = cam.position
+    //         + flatForward * menuDistance
+    //         + Vector3.up * menuHeightOffset;
+
+    //     menuCanvas.transform.position = menuPos;
+    // }
+
     private void PositionMenuInFrontOfPlayer()
     {
         if (Camera.main == null)
@@ -143,29 +167,27 @@ public class ExperienceManager : MonoBehaviour
 
         Transform cam = Camera.main.transform;
 
-        // Flatten forward so menu doesn't tilt with head pitch
+        // Flatten camera forward — ignore head tilt up/down
         Vector3 flatForward = new Vector3(cam.forward.x, 0f, cam.forward.z);
         if (flatForward.sqrMagnitude < 0.001f)
             flatForward = Vector3.forward;
         flatForward.Normalize();
 
-        // Place in front of player at eye level
+        // Position the menu in front of the player
         Vector3 menuPos = cam.position
             + flatForward * menuDistance
             + Vector3.up * menuHeightOffset;
 
         menuCanvas.transform.position = menuPos;
 
-        // Face the canvas TOWARD the camera so it's always head-on
-        // We point the canvas Z-axis back at the player
-        Vector3 dirToCamera = cam.position - menuPos;
-        dirToCamera.y = 0f;
-        if (dirToCamera.sqrMagnitude > 0.001f)
-            menuCanvas.transform.rotation = Quaternion.LookRotation(dirToCamera.normalized);
-        else
-            menuCanvas.transform.rotation = Quaternion.LookRotation(-flatForward);
+        // ROTATION FIX:
+        // We do NOT touch rotation here at all.
+        // Instead, set MenusCanvas Rotation Y = 180 in the Inspector.
+        // That makes text read left-to-right and faces the canvas toward you.
+        // All we do here is align the canvas YAW to match where you are looking.
+        float yaw = Mathf.Atan2(flatForward.x, flatForward.z) * Mathf.Rad2Deg;
+        menuCanvas.transform.rotation = Quaternion.Euler(0f, yaw + 180f, 0f);
     }
-
     // ── Called by ExperienceCard button ─────────────────────────────
 
     public void SelectExperience(ExperienceConfig config)
@@ -208,4 +230,5 @@ public class ExperienceManager : MonoBehaviour
         if (scanningUI != null) scanningUI.SetActive(false);
         ShowMenu();
     }
+
 }

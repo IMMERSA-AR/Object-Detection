@@ -59,7 +59,7 @@ public class MarkerController : MonoBehaviour
         }
 
         // Standard auto-hide logic resumes only AFTER the chair task is done
-        if (gameObject.activeSelf && Time.time - lastUpdateTime > 5f)
+        if (gameObject.activeSelf && Time.time - lastUpdateTime > 0f)
         {
             gameObject.SetActive(false);
         }
