@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ad77b93144e2a4e8d663e4a5ff97ef, type: 3}
   m_Name: LectureRoom
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
+  experienceType: 1
   experienceName: Lecture Hall
-  description: Description here.
-  menuIcon: {fileID: 0}
+  description: 'Location Requirement: 7th floor, Omara Building. Please stand directly
+    in front of the room before starting'
+  buttonLabel: Begin
   anchorLabel: 56
   minConfidence: 0.5
   maxAnchorDistance: 3
@@ -22,3 +24,18 @@ MonoBehaviour:
   standBesideOffset: 0.5
   heightOffset: 0
   forwardOffset: 0
+  introAudioClip: {fileID: 8300000, guid: 7feee7b51f4d3954cb458b11b3123ae0, type: 3}
+  lectureAudioClip: {fileID: 8300000, guid: e1fe7e69c64307641b4187a9c1904247, type: 3}
+  mainMuradPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
+  studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
+  studentPrefabVariants:
+  - prefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
+    sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+  - prefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
+    sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
+  - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
+    sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
+  studentSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+  doctorPrefab: {fileID: 435031843943507312, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
+  studentRows: 2
+  studentsPerRow: 3

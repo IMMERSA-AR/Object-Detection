@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ad77b93144e2a4e8d663e4a5ff97ef, type: 3}
   m_Name: Obelisk
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
+  experienceType: 0
   experienceName: Obelisk
-  description: Description here.
-  menuIcon: {fileID: 0}
+  description: 'Location Requirement:  Please stand directly in front of the obelisk
+    before starting'
+  buttonLabel: Begin
   anchorLabel: 9
   minConfidence: 0.5
   maxAnchorDistance: 3
@@ -22,3 +24,8 @@ MonoBehaviour:
   standBesideOffset: 0.5
   heightOffset: 0
   forwardOffset: 0
+  lectureAudioClip: {fileID: 0}
+  studentPrefab: {fileID: 0}
+  doctorPrefab: {fileID: 0}
+  studentRows: 2
+  studentsPerRow: 3

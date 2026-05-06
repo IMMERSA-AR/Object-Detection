@@ -19,7 +19,7 @@
     <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="false" />
     <meta-data android:name="com.oculus.ossplash.background" android:value="passthrough-contextual" />
     <meta-data android:name="com.oculus.telemetry.project_guid" android:value="3eb5f8a5-13e7-43e2-8b5e-39783212d81a" />
-    <meta-data android:name="com.oculus.supportedDevices" android:value="quest2|questpro|quest3|quest3s" />
+    <meta-data android:name="com.oculus.supportedDevices" android:value="quest2|questpro|quest3|quest3s" tools:replace="android:value" />
     <meta-data android:name="com.oculus.ossplash" android:value="passthrough_contextual" />
     <meta-data android:name="com.oculus.handtracking.frequency" android:value="LOW" />
   </application>
