@@ -244,7 +244,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -256,6 +256,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#pragma multi_compile_fragment _ _REFLECTION_PROBE_BOX_PROJECTION
 			#pragma multi_compile_fragment _ _REFLECTION_PROBE_ATLAS
 			#pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
+			#pragma multi_compile_fragment _ _SCREEN_SPACE_IRRADIANCE
 			#pragma multi_compile_fragment _ _DBUFFER_MRT1 _DBUFFER_MRT2 _DBUFFER_MRT3
 			#pragma multi_compile _ _LIGHT_LAYERS
 			#pragma multi_compile_fragment _ _LIGHT_COOKIES
@@ -266,6 +267,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#pragma multi_compile _ DIRLIGHTMAP_COMBINED
 			#pragma multi_compile _ LIGHTMAP_ON
 			#pragma multi_compile_fragment _ LIGHTMAP_BICUBIC_SAMPLING
+			#pragma multi_compile_fragment _ REFLECTION_PROBE_ROTATION
 			#pragma multi_compile _ DYNAMICLIGHTMAP_ON
 			#pragma multi_compile _ USE_LEGACY_LIGHTMAPS
 
@@ -812,7 +814,9 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 					float3 SH = input.lightmapUVOrVertexSH.xyz;
 				#endif
 
-				#if defined(DYNAMICLIGHTMAP_ON)
+				#if defined(_SCREEN_SPACE_IRRADIANCE)
+					inputData.bakedGI = SAMPLE_GI(_ScreenSpaceIrradiance, input.positionCS.xy);
+				#elif defined(DYNAMICLIGHTMAP_ON)
 					inputData.bakedGI = SAMPLE_GI(input.lightmapUVOrVertexSH.xy, input.dynamicLightmapUV.xy, SH, inputData.normalWS);
 					inputData.shadowMask = SAMPLE_SHADOWMASK(input.lightmapUVOrVertexSH.xy);
 				#elif !defined(LIGHTMAP_ON) && (defined(PROBE_VOLUMES_L1) || defined(PROBE_VOLUMES_L2))
@@ -1025,7 +1029,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -1364,7 +1368,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -1675,7 +1679,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 			#pragma shader_feature EDITOR_VISUALIZATION
@@ -2107,7 +2111,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -2505,7 +2509,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -2907,21 +2911,20 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
 			// Deferred Rendering Path does not support the OpenGL-based graphics API:
 			// Desktop OpenGL, OpenGL ES 3.0, WebGL 2.0.
-			#pragma exclude_renderers glcore gles3 webgpu 
+			#pragma exclude_renderers glcore gles3 switch2 webgpu 
 
 			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
-			#if ( UNITY_VERSION >= 60000206 )
 			#pragma multi_compile _ EVALUATE_SH_MIXED EVALUATE_SH_VERTEX
-			#endif
 			#pragma multi_compile_fragment _ _REFLECTION_PROBE_BLENDING
 			#pragma multi_compile_fragment _ _REFLECTION_PROBE_BOX_PROJECTION
 			#pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
+			#pragma multi_compile_fragment _ _SCREEN_SPACE_IRRADIANCE
 			#pragma multi_compile_fragment _ _DBUFFER_MRT1 _DBUFFER_MRT2 _DBUFFER_MRT3
 			#pragma multi_compile_fragment _ _GBUFFER_NORMALS_OCT
 			#pragma multi_compile_fragment _ _RENDER_PASS_ENABLED
@@ -2934,6 +2937,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#pragma multi_compile _ USE_LEGACY_LIGHTMAPS
 			#pragma multi_compile _ LIGHTMAP_ON
 			#pragma multi_compile_fragment _ LIGHTMAP_BICUBIC_SAMPLING
+			#pragma multi_compile_fragment _ REFLECTION_PROBE_ROTATION
 			#pragma multi_compile _ DYNAMICLIGHTMAP_ON
 
 			#pragma vertex vert
@@ -3467,7 +3471,9 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 					float3 SH = input.lightmapUVOrVertexSH.xyz;
 				#endif
 
-				#if defined(DYNAMICLIGHTMAP_ON)
+				#if defined(_SCREEN_SPACE_IRRADIANCE)
+					inputData.bakedGI = SAMPLE_GI(_ScreenSpaceIrradiance, input.positionCS.xy);
+				#elif defined(DYNAMICLIGHTMAP_ON)
 					inputData.bakedGI = SAMPLE_GI(input.lightmapUVOrVertexSH.xy, input.dynamicLightmapUV.xy, SH, inputData.normalWS);
 					inputData.shadowMask = SAMPLE_SHADOWMASK(input.lightmapUVOrVertexSH.xy);
 				#elif !defined(LIGHTMAP_ON) && (defined(PROBE_VOLUMES_L1) || defined(PROBE_VOLUMES_L2))
@@ -3558,7 +3564,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -3867,7 +3873,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -4176,7 +4182,7 @@ Shader "Reallusion/Amplify/RL5_CorneaShaderParallax_URP"
 			#define _EMISSION
 			#define _NORMALMAP 1
 			#define ASE_VERSION 19908
-			#define ASE_SRP_VERSION 170200
+			#define ASE_SRP_VERSION 170300
 			#define ASE_USING_SAMPLING_MACROS 1
 
 
@@ -4876,4 +4882,4 @@ WireConnection;503;4;513;0
 WireConnection;503;5;514;0
 WireConnection;503;2;510;0
 ASEEND*/
-//CHKSM=0F820ED192521ADB24B6F36DD42ADA320C385C85
+//CHKSM=15F4A9704E736D644A41FBFBFE6C76820FE89E12

@@ -29,7 +29,7 @@ Material:
     - _AtmosphereThickness: 1.1
     - _BottomCurve: 1
     - _BottomRange: 0.25
-    - _Exposure: 0.35
+    - _Exposure: 0.5
     - _Intensity: 1
     - _SunDisk: 2
     - _SunSize: 0.04

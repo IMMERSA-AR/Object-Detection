@@ -40,6 +40,59 @@ public class ObjectStamper : MonoBehaviour
         Debug.Log($"[ObjectStamper] Reset for: {(config != null ? config.experienceName : "null")}");
     }
 
+    /// <summary>
+    /// Called after the lecture ends — spawns Murad beside the player automatically,
+    /// no YOLO chair detection needed.
+    /// </summary>
+    public void SpawnMuradAtPlayerSide(ExperienceConfig config)
+    {
+        if (_hasSpawnedGlobal) return;
+
+        _activeConfig = config;
+
+        if (characterPrefab == null)
+        {
+            Debug.LogError("[ObjectStamper] characterPrefab is not assigned — drag Murad prefab here.");
+            return;
+        }
+
+        Transform cam = Camera.main.transform;
+
+        // Spawn 1.2 m to the player's right, on the floor
+        Vector3 flatRight = new Vector3(cam.right.x, 0f, cam.right.z).normalized;
+        Vector3 spawnPos = cam.position + flatRight * 1.2f;
+        spawnPos.y = FindRealFloorY(spawnPos, cam.position.y);
+
+        // Face Murad toward the player
+        Vector3 toPlayer = cam.position - spawnPos;
+        toPlayer.y = 0f;
+        Quaternion rot = toPlayer.sqrMagnitude > 0.001f
+            ? Quaternion.LookRotation(toPlayer)
+            : Quaternion.identity;
+
+        GameObject character = Instantiate(characterPrefab, spawnPos, rot);
+        character.name = "Murad";
+
+        MuradController muradScript = character.GetComponent<MuradController>();
+        if (muradScript == null)
+        {
+            Debug.LogError("[ObjectStamper] Murad prefab is missing MuradController! Add it to the prefab.");
+            return;
+        }
+
+        if (config != null)
+            muradScript.ApplyConfig(config);
+
+        muradScript.StandUp();
+
+        _hasSpawnedGlobal = true;
+
+        if (ExperienceManager.Instance != null)
+            ExperienceManager.Instance.OnMuradPlaced();
+
+        Debug.Log($"[ObjectStamper] Murad spawned beside player at {spawnPos}");
+    }
+
     public void PlacePermanentCharacter(Vector3 anchorPos, Quaternion rotation)
     {
         if (_hasSpawnedGlobal) return;

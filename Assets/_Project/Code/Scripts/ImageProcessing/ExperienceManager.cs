@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -40,6 +42,21 @@ public class ExperienceManager : MonoBehaviour
     [Tooltip("Optional scanning UI shown while AI hunts for the anchor")]
     public GameObject scanningUI;
 
+    [Header("Lecture Hall")]
+    [Tooltip("Drag the LectureHallManager GameObject here for lecture hall experiences")]
+    public LectureHallManager lectureHallManager;
+
+    [Tooltip("PRIMARY: Drag the ChairMeshDetector GameObject here.\n" +
+             "Queries MRUK Scene Mesh for horizontal surfaces — no user interaction needed.")]
+    public ChairMeshDetector chairMeshDetector;
+
+    [Tooltip("FALLBACK: Drag the ChairYOLODetector GameObject here.\n" +
+             "Used only when MRUK returns zero chairs (asks the user to look at chairs).")]
+    public ChairYOLODetector chairYOLODetector;
+
+    [Tooltip("Text shown on the scanningUI while chair scan is running")]
+    public TMPro.TextMeshProUGUI chairScanLabel;
+
     public ExperienceConfig ActiveConfig { get; private set; }
 
     private void Awake()
@@ -58,7 +75,38 @@ public class ExperienceManager : MonoBehaviour
         if (scanningUI != null)
             scanningUI.SetActive(false);
 
+        // Hide the canvas immediately — ShowMenuDelayed will re-enable it
+        // once head-tracking is stable (avoids the menu appearing at origin).
+        if (menuCanvas != null)
+            menuCanvas.gameObject.SetActive(false);
+
         if (!ValidateReferences()) return;
+
+        StartCoroutine(ShowMenuDelayed());
+    }
+
+    /// <summary>
+    /// Waits until the camera has a valid tracked position before showing the menu.
+    /// On Meta Quest the first frame may still be at the default (0,0,0) origin.
+    /// </summary>
+    private IEnumerator ShowMenuDelayed()
+    {
+        // Wait for camera tracking to produce a non-origin position.
+        // Timeout after 3 s so the menu always appears even if tracking is slow.
+        float timeout = 3f;
+        float elapsed = 0f;
+
+        while (elapsed < timeout)
+        {
+            yield return null;   // wait one frame
+            elapsed += Time.deltaTime;
+
+            if (Camera.main != null && Camera.main.transform.position.sqrMagnitude > 0.01f)
+                break;   // tracking has kicked in
+        }
+
+        // One extra frame for stability
+        yield return null;
 
         ShowMenu();
     }
@@ -173,20 +221,24 @@ public class ExperienceManager : MonoBehaviour
             flatForward = Vector3.forward;
         flatForward.Normalize();
 
-        // Position the menu in front of the player
-        Vector3 menuPos = cam.position
-            + flatForward * menuDistance
-            + Vector3.up * menuHeightOffset;
+        // Position the menu in front of the player.
+        // X and Z: directly in front along the flat forward direction.
+        // Y: locked to camera eye height + menuHeightOffset.
+        //    menuHeightOffset = 0   → menu centre at exact eye level
+        //    menuHeightOffset = -0.2 → menu centre 20 cm below eye level (comfortable gaze angle)
+        Vector3 menuPos = new Vector3(
+            cam.position.x + flatForward.x * menuDistance,
+            cam.position.y + menuHeightOffset,
+            cam.position.z + flatForward.z * menuDistance
+        );
 
         menuCanvas.transform.position = menuPos;
 
-        // ROTATION FIX:
-        // We do NOT touch rotation here at all.
-        // Instead, set MenusCanvas Rotation Y = 180 in the Inspector.
-        // That makes text read left-to-right and faces the canvas toward you.
-        // All we do here is align the canvas YAW to match where you are looking.
+        // Canvas rotation: local +Z must match the camera's flat forward direction.
+        // This places the canvas's readable face (-Z side) toward the user.
+        // DO NOT add 180° — that flips the canvas away, making text appear mirrored.
         float yaw = Mathf.Atan2(flatForward.x, flatForward.z) * Mathf.Rad2Deg;
-        menuCanvas.transform.rotation = Quaternion.Euler(0f, yaw + 180f, 0f);
+        menuCanvas.transform.rotation = Quaternion.Euler(0f, yaw, 0f);
     }
     // ── Called by ExperienceCard button ─────────────────────────────
 
@@ -197,6 +249,162 @@ public class ExperienceManager : MonoBehaviour
 
         menuCanvas.gameObject.SetActive(false);
 
+        // ── Lecture Hall path ────────────────────────────────────────
+        if (config.experienceType == ExperienceType.LectureHall)
+        {
+            if (lectureHallManager == null)
+            {
+                Debug.LogError("[ExperienceManager] lectureHallManager not assigned!");
+                return;
+            }
+
+            StartCoroutine(BeginLectureHallSequence(config));
+            return;
+        }
+
+        // ── Standard character-placement path ────────────────────────
+        StartMuradDetectionPhase(config);
+    }
+
+    /// <summary>
+    /// Plays the optional intro audio (if assigned), waits for it to finish,
+    /// then kicks off the chair-detection pipeline. Reuses the
+    /// LectureHallManager's existing AudioSource so no extra setup is needed.
+    /// </summary>
+    private IEnumerator BeginLectureHallSequence(ExperienceConfig config)
+    {
+        // ── 1. Intro audio ──────────────────────────────────────────
+        AudioSource src = lectureHallManager != null ? lectureHallManager.lectureAudioSource : null;
+        if (config.introAudioClip != null)
+        {
+            if (src != null)
+            {
+                src.Stop();
+                src.clip = config.introAudioClip;
+                src.Play();
+                Debug.Log($"[ExperienceManager] Playing intro audio: '{config.introAudioClip.name}' " +
+                          $"({config.introAudioClip.length:F1}s) — chair detection will start when it ends.");
+
+                // Wait for the clip to actually finish playing (handles pause/scale)
+                while (src.isPlaying) yield return null;
+
+                Debug.Log("[ExperienceManager] Intro audio finished.");
+            }
+            else
+            {
+                Debug.LogWarning("[ExperienceManager] introAudioClip set but lectureHallManager.lectureAudioSource is null — skipping.");
+            }
+        }
+
+        // ── 2. Chair detection pipeline ─────────────────────────────
+        if (chairMeshDetector != null)
+        {
+            if (scanningUI != null) scanningUI.SetActive(true);
+            if (chairScanLabel != null)
+                chairScanLabel.text = "Reading room data…";
+
+            Debug.Log("[ExperienceManager] Starting MRUK scene-mesh chair detection (primary).");
+            chairMeshDetector.DetectChairs(
+                chairs => OnMeshChairsReady(chairs, config),
+                status => { if (chairScanLabel != null) chairScanLabel.text = status; },
+                pos    => lectureHallManager.SpawnStudentAtChair(pos, config));
+        }
+        else if (chairYOLODetector != null)
+        {
+            if (scanningUI != null) scanningUI.SetActive(true);
+            if (chairScanLabel != null)
+                chairScanLabel.text = "Look at the chairs and hold still for a few seconds…";
+
+            Debug.Log("[ExperienceManager] chairMeshDetector not assigned — using YOLO directly.");
+            chairYOLODetector.DetectChairs(chairs => OnChairsReady(chairs, config));
+        }
+        else
+        {
+            Debug.LogWarning("[ExperienceManager] No chair detector assigned — using grid spawn.");
+            lectureHallManager.StartLecture(config, OnLectureComplete);
+        }
+    }
+
+    /// <summary>
+    /// Called when the PRIMARY MRUK mesh detector finishes.
+    /// If it found chairs → start lecture immediately.
+    /// If it found nothing → try YOLO fallback (asks user to look at chairs).
+    /// If YOLO is also absent → grid spawn.
+    /// </summary>
+    private void OnMeshChairsReady(List<Vector3> chairs, ExperienceConfig config)
+    {
+        if (chairs != null && chairs.Count > 0)
+        {
+            // SUCCESS — hide UI and start straight away.
+            if (scanningUI != null) scanningUI.SetActive(false);
+            if (chairScanLabel != null) chairScanLabel.text = string.Empty;
+
+            Debug.Log($"[ExperienceManager] MRUK mesh found {chairs.Count} chair(s) — starting lecture.");
+            lectureHallManager.StartLectureWithChairs(chairs, config, OnLectureComplete);
+            return;
+        }
+
+        // MRUK returned nothing — try YOLO fallback.
+        Debug.LogWarning("[ExperienceManager] MRUK mesh returned 0 chairs — trying YOLO fallback.");
+
+        if (chairYOLODetector != null)
+        {
+            if (chairScanLabel != null)
+                chairScanLabel.text = "Look at the chairs and hold still for a few seconds…";
+
+            Debug.Log("[ExperienceManager] Starting YOLO chair scan (fallback).");
+            chairYOLODetector.DetectChairs(yoloChairs => OnChairsReady(yoloChairs, config));
+        }
+        else
+        {
+            // Neither detector found chairs — hide UI and use grid.
+            if (scanningUI != null) scanningUI.SetActive(false);
+            if (chairScanLabel != null) chairScanLabel.text = string.Empty;
+
+            Debug.LogWarning("[ExperienceManager] No YOLO detector assigned either — using grid spawn.");
+            lectureHallManager.StartLecture(config, OnLectureComplete);
+        }
+    }
+
+    /// <summary>
+    /// Called when the YOLO fallback detector finishes.
+    /// </summary>
+    private void OnChairsReady(List<Vector3> chairs, ExperienceConfig config)
+    {
+        // Hide scanning UI regardless of result
+        if (scanningUI != null) scanningUI.SetActive(false);
+        if (chairScanLabel != null) chairScanLabel.text = string.Empty;
+
+        if (chairs != null && chairs.Count > 0)
+        {
+            Debug.Log($"[ExperienceManager] YOLO found {chairs.Count} chair(s) — starting lecture.");
+            lectureHallManager.StartLectureWithChairs(chairs, config, OnLectureComplete);
+        }
+        else
+        {
+            Debug.LogWarning("[ExperienceManager] YOLO also found nothing — falling back to grid spawn.");
+            lectureHallManager.StartLecture(config, OnLectureComplete);
+        }
+    }
+
+    // Called when the lecture audio finishes — spawns Murad beside the player for Q&A.
+    private void OnLectureComplete()
+    {
+        Debug.Log("[ExperienceManager] Lecture complete — spawning Murad for Q&A.");
+
+        if (objectStamper != null)
+        {
+            objectStamper.ResetForNewExperience(ActiveConfig);
+            objectStamper.SpawnMuradAtPlayerSide(ActiveConfig);
+        }
+        else
+        {
+            Debug.LogWarning("[ExperienceManager] objectStamper not assigned — Murad won't appear.");
+        }
+    }
+
+    private void StartMuradDetectionPhase(ExperienceConfig config)
+    {
         if (scanningUI != null)
             scanningUI.SetActive(true);
 
@@ -228,6 +436,7 @@ public class ExperienceManager : MonoBehaviour
         if (objectDetector != null) objectDetector.enabled = false;
         if (objectStamper != null) objectStamper.ResetForNewExperience(null);
         if (scanningUI != null) scanningUI.SetActive(false);
+        if (lectureHallManager != null) lectureHallManager.ClearScene();
         ShowMenu();
     }
 
