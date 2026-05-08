@@ -339,6 +339,10 @@ public class ExperienceManager : MonoBehaviour
         }
 
         // ── 2. Chair detection pipeline ─────────────────────────────
+        // Start the detection-phase audio — it loops until the doctor appears,
+        // at which point LectureHallManager stops it automatically.
+        lectureHallManager.PlayDetectionAudio(config.chairDetectionAudioClip);
+
         if (chairMeshDetector != null)
         {
             if (scanningUI != null) scanningUI.SetActive(true);
