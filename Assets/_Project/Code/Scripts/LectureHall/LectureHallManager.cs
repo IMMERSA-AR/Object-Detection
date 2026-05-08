@@ -275,13 +275,8 @@ public class LectureHallManager : MonoBehaviour
             PromoteClosestStudentToMainMurad(config);
         }
 
-        // Flip students whose chair orientation was mis-detected.
-        // Murad is EXCLUDED — his orientation comes purely from EstimateChairForward
-        // and the optional flipMuradFacing toggle.  Including him in the consensus
-        // check can incorrectly flip him when the majority of MRUK anchors happen
-        // to point the wrong way.
-        CorrectStudentOrientations();
-
+        // Orientation is corrected INSIDE SpawnDoctorAt once the doctor position is
+        // known — that gives us a reliable ground-truth direction instead of consensus.
         SpawnDoctorAt(doctorPos, chairCentroid, config);               // doctor faces chairs
 
         if (lectureUI != null)
@@ -643,16 +638,36 @@ public class LectureHallManager : MonoBehaviour
         _spawnedNPCs.Add(doctor);
         Debug.Log($"[LectureHall] Doctor spawned at {pos}, facing {facingTarget}.");
 
-        // Now that the doctor position is known, redirect every student's
-        // head look-at target from the user toward the doctor.
+        // Now that the doctor position is known:
+        //   1. Correct body orientation — any student facing more than 90° away
+        //      from the doctor gets flipped 180°.  Using the doctor as ground truth
+        //      is far more reliable than the MRUK anchor data or consensus heuristics.
+        //   2. Redirect head look-at target to the doctor.
+        int flipped = 0;
         foreach (var npc in _spawnedNPCs)
         {
             if (npc == null || npc == doctor) continue;
             var studentCtrl = npc.GetComponent<HistoricalNPCController>();
-            if (studentCtrl != null && studentCtrl.Role == NPCRole.Student)
-                studentCtrl.SetHeadLookTarget(pos);
+            if (studentCtrl == null || studentCtrl.Role != NPCRole.Student) continue;
+
+            // ── Body orientation ──────────────────────────────────
+            Vector3 toDoc = pos - npc.transform.position; toDoc.y = 0f;
+            if (toDoc.sqrMagnitude > 0.001f)
+            {
+                Vector3 fwd = npc.transform.forward; fwd.y = 0f;
+                if (Vector3.Dot(fwd.normalized, toDoc.normalized) < 0f)
+                {
+                    npc.transform.rotation *= Quaternion.Euler(0f, 180f, 0f);
+                    flipped++;
+                    Debug.Log($"[LectureHall] Orientation fix: flipped '{npc.name}' to face doctor.");
+                }
+            }
+
+            // ── Head look-at ──────────────────────────────────────
+            studentCtrl.SetHeadLookTarget(pos);
         }
-        Debug.Log($"[LectureHall] Updated {_spawnedNPCs.Count - 1} student(s) to look at doctor.");
+        Debug.Log($"[LectureHall] SpawnDoctorAt: {flipped} student(s) flipped to face doctor. " +
+                  $"All {_spawnedNPCs.Count - 1} student(s) now track doctor.");
     }
 
     public void ClearScene()
@@ -1122,63 +1137,6 @@ public class LectureHallManager : MonoBehaviour
         return result;
     }
 
-    /// <summary>
-    /// After all students (including Murad) are spawned, computes the consensus
-    /// forward direction and flips any student that faces more than 90° away from
-    /// the majority. Handles both mis-detected chairs and the promoted Murad.
-    /// Must be called BEFORE SpawnDoctorAt so that head look-at is correct.
-    /// </summary>
-    private void CorrectStudentOrientations()
-    {
-        // Collect forward vectors for all seated students EXCEPT main Murad.
-        // Murad is excluded so a bad majority can never incorrectly flip him —
-        // his orientation is owned by EstimateChairForward + flipMuradFacing.
-        var forwards = new List<Vector3>();
-        foreach (var npc in _spawnedNPCs)
-        {
-            if (npc == null) continue;
-            if (npc == _mainMuradInstance) continue;          // ← exclude Murad
-            var ctrl = npc.GetComponent<HistoricalNPCController>();
-            if (ctrl == null || ctrl.Role != NPCRole.Student) continue;
-            Vector3 f = npc.transform.forward; f.y = 0f;
-            if (f.sqrMagnitude > 0.01f) forwards.Add(f.normalized);
-        }
-
-        if (forwards.Count < 2) return;   // need at least 2 to have a consensus
-
-        // Average forward direction (consensus).
-        Vector3 avg = Vector3.zero;
-        foreach (var f in forwards) avg += f;
-        avg.y = 0f;
-        if (avg.sqrMagnitude < 0.001f) return;
-        avg.Normalize();
-
-        // Flip any student (never Murad) whose forward deviates > 90° from consensus.
-        int corrected = 0;
-        foreach (var npc in _spawnedNPCs)
-        {
-            if (npc == null) continue;
-            if (npc == _mainMuradInstance) continue;          // ← exclude Murad
-            var ctrl = npc.GetComponent<HistoricalNPCController>();
-            if (ctrl == null || ctrl.Role != NPCRole.Student) continue;
-
-            Vector3 f = npc.transform.forward; f.y = 0f;
-            if (f.sqrMagnitude < 0.01f) continue;
-
-            if (Vector3.Dot(f.normalized, avg) < 0f)   // facing opposite the majority
-            {
-                npc.transform.rotation *= Quaternion.Euler(0f, 180f, 0f);
-                corrected++;
-                Debug.Log($"[LectureHall] CorrectStudentOrientations: flipped '{npc.name}' " +
-                          $"(was facing away from consensus {avg}).");
-            }
-        }
-
-        if (corrected > 0)
-            Debug.Log($"[LectureHall] CorrectStudentOrientations: fixed {corrected} student(s).");
-        else
-            Debug.Log("[LectureHall] CorrectStudentOrientations: all students face correct direction.");
-    }
 
     // ── Screen / desk detection helpers ──────────────────────────
 
