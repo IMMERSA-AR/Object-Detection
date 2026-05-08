@@ -31,8 +31,23 @@ public class MuradController : MonoBehaviour
 
     void Start()
     {
+        // Search root and all children — Animator may not be on the root object.
         if (animator == null)
-            animator = GetComponent<Animator>();
+            animator = GetComponentInChildren<Animator>();
+
+        if (animator == null)
+        {
+            Debug.LogError("[MuradController] No Animator found on " + gameObject.name +
+                           " or its children. Disabling MuradController.");
+            enabled = false;
+            return;
+        }
+
+        // Only drive the standing idle state when this component is actively running
+        // (i.e. NOT when LectureHallManager has disabled it for the seated phase).
+        // Calling SetBool here was overriding the IsSitting = true that
+        // LectureHallManager sets right after Instantiate, making Murad T-pose.
+        if (!enabled) return;
 
         animator.SetBool("IsStanding", true);
         animator.SetBool("IsWalking", false);
@@ -41,6 +56,8 @@ public class MuradController : MonoBehaviour
 
     void Update()
     {
+        if (animator == null) return;
+
         if (_isStandingAtAnchor)
         {
             transform.position = _lockedStandPosition;
@@ -88,12 +105,11 @@ public class MuradController : MonoBehaviour
         animator.SetBool("IsStanding", false);
         animator.SetBool("IsSitting", true);
 
-        if (Camera.main != null)
-        {
-            Vector3 lookAtUser = Camera.main.transform.position - transform.position;
-            lookAtUser.y = 0;
-            transform.rotation = Quaternion.LookRotation(lookAtUser);
-        }
+        // Do NOT rotate toward the user here — the chair orientation is already
+        // set by LectureHallManager at spawn time and must be preserved.
+        // Murad faces the front of the room (away from the user) while seated,
+        // exactly like the other students. He turns to face the user only when
+        // he stands up and walks over after the lecture ends.
 
         transform.position = new Vector3(
             _targetPosition.x,

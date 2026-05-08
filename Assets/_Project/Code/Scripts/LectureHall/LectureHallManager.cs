@@ -69,8 +69,37 @@ public class LectureHallManager : MonoBehaviour
              "  Use this only if your animation's root is already at hip/seat height.")]
     public bool spawnAtSeatSurface = false;
 
+    [Header("Chair Orientation")]
+    [Tooltip("Flip the estimated chair-forward direction. Enable this if students consistently end up sitting backwards on their chairs.")]
+    public bool flipChairForward = false;
+
+    [Tooltip("Apply a 180° facing correction to the main Murad prefab.\n" +
+             "Enable this if Murad sits with his back to the chair back while all other students face correctly.\n" +
+             "Caused by the Murad prefab model facing the opposite axis (-Z) to the student prefabs (+Z).")]
+    public bool flipMuradFacing = false;
+
+    [Tooltip("Local-space position offset applied to Murad when he is seated.\n" +
+             "X = left/right,  Y = up/down,  Z = forward/backward in Murad's facing direction.\n" +
+             "Negative Z moves him BACKWARD toward the chair backrest.\n" +
+             "Start with Z = -0.1 and adjust until his back rests against the chair.")]
+    public Vector3 muradSeatOffset = new Vector3(0f, 0f, -0.1f);
+
+    [Tooltip("How far (m) a detected chair position may be from an MRUK COUCH/OTHER anchor and still be matched to it for orientation.")]
+    public float chairAnchorMatchRadius = 0.5f;
+
+    [Tooltip("Vertical offset above the floor at which the backrest-detection raycast scan is performed (m). 0.75 m hits typical chair backrests.")]
+    public float chairBackrestProbeHeight = 0.75f;
+
     [Header("Audio")]
     public AudioSource lectureAudioSource;
+
+    [Tooltip("Looping ambient audio bed that plays throughout the entire lecture.\n" +
+             "Assign the AudioSource that holds your AmbientBed_1918 clip.\n" +
+             "It fades in when the scene starts and fades out when Murad approaches.")]
+    public AudioSource ambientAudioSource;
+
+    [Tooltip("How many seconds the ambient bed takes to fade in / out (seconds).")]
+    public float ambientFadeDuration = 2.0f;
 
     [Header("UI")]
     public GameObject lectureUI;
@@ -248,6 +277,13 @@ public class LectureHallManager : MonoBehaviour
             PromoteClosestStudentToMainMurad(config);
         }
 
+        // Flip students whose chair orientation was mis-detected.
+        // Murad is EXCLUDED — his orientation comes purely from EstimateChairForward
+        // and the optional flipMuradFacing toggle.  Including him in the consensus
+        // check can incorrectly flip him when the majority of MRUK anchors happen
+        // to point the wrong way.
+        CorrectStudentOrientations();
+
         SpawnDoctorAt(doctorPos, chairCentroid, config);               // doctor faces chairs
 
         if (lectureUI != null)
@@ -263,9 +299,10 @@ public class LectureHallManager : MonoBehaviour
 
         foreach (Vector3 pos in chairPositions)
         {
-            Vector3 dirToTarget = lookTarget - pos;
-            dirToTarget.y = 0;
-            Quaternion rot = dirToTarget != Vector3.zero ? Quaternion.LookRotation(dirToTarget) : Quaternion.identity;
+            // Per-chair facing — rotate to match the real chair, not toward a shared point.
+            Vector3 chairForward = EstimateChairForward(pos);
+            Quaternion rot = Quaternion.LookRotation(chairForward);
+            Vector3 perChairLookTarget = pos + chairForward * 2f;
 
             GameObject prefabToSpawn;
             AnimationClip variantClip = null;
@@ -287,7 +324,13 @@ public class LectureHallManager : MonoBehaviour
 
             if (prefabToSpawn == null) continue;
 
-            GameObject spawned = Instantiate(prefabToSpawn, pos, rot);
+            // Main Murad prefab may have its model root facing the opposite
+            // axis to the student prefabs — flip 180° around Y to correct.
+            Quaternion spawnRot = (isMainMurad && flipMuradFacing)
+                ? rot * Quaternion.Euler(0f, 180f, 0f)
+                : rot;
+
+            GameObject spawned = Instantiate(prefabToSpawn, pos, spawnRot);
             EnsureBlockerCollider(spawned);
             _spawnedNPCs.Add(spawned);
 
@@ -295,25 +338,43 @@ public class LectureHallManager : MonoBehaviour
             {
                 _mainMuradInstance = spawned;
 
-                // Disable his standard AI script temporarily so he doesn't wander off
-                MonoBehaviour muradAI = spawned.GetComponent("MuradController") as MonoBehaviour;
+                // Disable his wandering AI so he stays seated during the lecture.
+                // Use the concrete type — string-based GetComponent can silently return null.
+                MuradController muradAI = spawned.GetComponent<MuradController>();
                 if (muradAI != null) muradAI.enabled = false;
 
-                // Force him to sit initially
+                // Drive animation via Animator Controller booleans
                 Animator anim = spawned.GetComponentInChildren<Animator>();
                 if (anim != null)
                 {
+                    anim.applyRootMotion = false;
                     anim.SetBool("IsStanding", false);
                     anim.SetBool("IsWalking", false);
                     anim.SetBool("IsSitting", true);
                 }
+
+                // Add head look-at so Murad tracks the doctor just like every other student.
+                // InitHeadLookOnly sets up the bone tracking WITHOUT overriding transform.rotation,
+                // so the flipMuradFacing correction applied at Instantiate is preserved.
+                // Do NOT pass a sitting clip here — Murad's Animator Controller drives his
+                // sitting animation.  Forcing a student clip via PlayableGraph on Murad's
+                // different rig produces a broken/twisted pose.
+                HistoricalNPCController muradCtrl = spawned.GetComponent<HistoricalNPCController>();
+                if (muradCtrl == null) muradCtrl = spawned.AddComponent<HistoricalNPCController>();
+                muradCtrl.InitHeadLookOnly(perChairLookTarget);
+                // SpawnDoctorAt() will call SetHeadLookTarget(doctorPos) on him
+                // because he is in _spawnedNPCs and has NPCRole.Student
+                Debug.Log($"[LectureHall] Murad seated at {pos}  euler={spawnRot.eulerAngles}  " +
+                          $"world_fwd={spawned.transform.forward:F2}  " +
+                          $"(flipMuradFacing={flipMuradFacing}).");
             }
             else
             {
                 // Normal historical NPC setup — auto-attaches controller and assigns
                 // the per-variant clip (or shared fallback) so each character sits
-                // with its own animation.
-                InitSeatedStudent(spawned, currentConfig, lookTarget, variantClip);
+                // with its own animation. Look target is per-chair so seated head
+                // tracking matches the chair's facing direction, not a shared point.
+                InitSeatedStudent(spawned, currentConfig, perChairLookTarget, variantClip);
             }
         }
     }
@@ -330,11 +391,22 @@ public class LectureHallManager : MonoBehaviour
             Debug.LogWarning("[LectureHall] PromoteClosestStudentToMainMurad: mainMuradPrefab not assigned.");
             return;
         }
-        if (Camera.main == null || _spawnedNPCs.Count == 0) return;
+        if (_spawnedNPCs.Count == 0) return;
 
-        Vector3 camXZ = new Vector3(
-            Camera.main.transform.position.x, 0f,
-            Camera.main.transform.position.z);
+        // Compute the centroid of all spawned students (XZ only).
+        // Murad is promoted to the student CLOSEST TO THE CENTROID so he appears
+        // at the natural "lead" position in the group — not right in the user's face.
+        Vector3 centroidXZ = Vector3.zero;
+        int validCount = 0;
+        for (int i = 0; i < _spawnedNPCs.Count; i++)
+        {
+            if (_spawnedNPCs[i] == null) continue;
+            Vector3 p = _spawnedNPCs[i].transform.position; p.y = 0f;
+            centroidXZ += p;
+            validCount++;
+        }
+        if (validCount == 0) return;
+        centroidXZ /= validCount;
 
         int bestIdx = -1;
         float bestD2 = float.MaxValue;
@@ -343,37 +415,65 @@ public class LectureHallManager : MonoBehaviour
             GameObject npc = _spawnedNPCs[i];
             if (npc == null) continue;
             Vector3 p = npc.transform.position; p.y = 0f;
-            float d2 = (p - camXZ).sqrMagnitude;
+            float d2 = (p - centroidXZ).sqrMagnitude;
             if (d2 < bestD2) { bestD2 = d2; bestIdx = i; }
         }
         if (bestIdx < 0) return;
 
         GameObject toReplace = _spawnedNPCs[bestIdx];
         Vector3 pos = toReplace.transform.position;
-        Quaternion rot = toReplace.transform.rotation;
+        Quaternion rot = toReplace.transform.rotation;   // inherit the chair's detected rotation
 
         _spawnedNPCs.RemoveAt(bestIdx);
         Destroy(toReplace);
 
-        GameObject murad = Instantiate(config.mainMuradPrefab, pos, rot);
+        // Use the replaced student's chair rotation.
+        // CorrectStudentOrientations() (called by StartLectureWithChairs right after)
+        // will flip Murad 180° if his chair was mis-detected — same safety net used
+        // for all other students.
+        Quaternion muradRot = flipMuradFacing
+            ? rot * Quaternion.Euler(0f, 180f, 0f)
+            : rot;
+
+        // Apply seat offset in Murad's local space so his back reaches the chair backrest.
+        // muradSeatOffset.z < 0 shifts him backward (toward the backrest).
+        Vector3 spawnPos = pos + muradRot * muradSeatOffset;
+
+        GameObject murad = Instantiate(config.mainMuradPrefab, spawnPos, muradRot);
         murad.name = "MainMurad_Seated";
+
+        // Disable AI immediately (same frame as Instantiate, before Start() fires).
+        // Use the concrete type — string-based GetComponent can silently return null.
+        MuradController muradAI = murad.GetComponent<MuradController>();
+        if (muradAI != null) muradAI.enabled = false;
+
         EnsureBlockerCollider(murad);
         _spawnedNPCs.Add(murad);
         _mainMuradInstance = murad;
 
-        // Keep him seated until the lecture audio ends.
-        MonoBehaviour muradAI = murad.GetComponent("MuradController") as MonoBehaviour;
-        if (muradAI != null) muradAI.enabled = false;
-
         Animator anim = murad.GetComponentInChildren<Animator>();
         if (anim != null)
         {
+            anim.applyRootMotion = false;
             anim.SetBool("IsStanding", false);
             anim.SetBool("IsWalking", false);
             anim.SetBool("IsSitting", true);
         }
 
-        Debug.Log($"[LectureHall] Promoted student at {pos} to main Murad (seated).");
+        // Add head look-at so promoted Murad also looks toward the doctor.
+        // No sitting clip passed — Murad's Animator Controller drives his animation.
+        // Forcing a student clip via PlayableGraph on his different rig breaks the pose.
+        HistoricalNPCController muradCtrl = murad.GetComponent<HistoricalNPCController>();
+        if (muradCtrl == null) muradCtrl = murad.AddComponent<HistoricalNPCController>();
+        muradCtrl.InitHeadLookOnly(murad.transform.position + murad.transform.forward * 2f);
+        // SpawnDoctorAt() runs next and will redirect his look target to the doctor
+
+        // Log Murad's world-space forward so orientation can be verified in logcat.
+        // "Murad world fwd" should point toward the front of the room (doctor side).
+        // If it points the wrong way, enable flipMuradFacing in the Inspector.
+        Debug.Log($"[LectureHall] Murad seated at {spawnPos}  euler={muradRot.eulerAngles}  " +
+                  $"world_fwd={murad.transform.forward:F2}  " +
+                  $"(flipMuradFacing={flipMuradFacing}).");
     }
 
     /// <summary>
@@ -499,21 +599,15 @@ public class LectureHallManager : MonoBehaviour
             ? chairPos.y + sittingYOffset
             : FindFloorY(chairPos, camY) + sittingYOffset;
 
-        // ── Facing: away from user, toward the chair ──────────────
-        // This is independent of the doctor position — students simply
-        // face the natural "forward" direction of the room (away from viewer).
-        Vector3 camXZ = Camera.main != null
-            ? new Vector3(Camera.main.transform.position.x, 0f, Camera.main.transform.position.z)
-            : Vector3.zero;
-        Vector3 chairXZ = new Vector3(chairPos.x, 0f, chairPos.z);
-        Vector3 faceDir = (camXZ - chairXZ);
-        if (faceDir.sqrMagnitude < 0.001f) faceDir = Vector3.forward;
-        faceDir.Normalize();
+        // ── Facing: derive from the real chair's orientation ──────
+        // Resolution order: nearest MRUK anchor → backrest raycast scan
+        // → fallback (away from user). See EstimateChairForward.
+        Vector3 chairForward = EstimateChairForward(chairPos);
 
         // lookAt target slightly in front of the student (used by NPC controller)
-        Vector3 lookTarget = spawnPos + faceDir * 2f;
+        Vector3 lookTarget = spawnPos + chairForward * 2f;
 
-        GameObject npc = Instantiate(variant.prefab, spawnPos, Quaternion.LookRotation(faceDir));
+        GameObject npc = Instantiate(variant.prefab, spawnPos, Quaternion.LookRotation(chairForward));
         npc.name = $"Student_{_spawnedNPCs.Count}";
 
         InitSeatedStudent(npc, config, lookTarget, variant.sittingClip);
@@ -521,7 +615,7 @@ public class LectureHallManager : MonoBehaviour
         EnsureBlockerCollider(npc);
 
         _spawnedNPCs.Add(npc);
-        Debug.Log($"[LectureHall] Student spawned at chair {spawnPos}  facing {faceDir}.");
+        Debug.Log($"[LectureHall] Student spawned at chair {spawnPos}  facing {chairForward}.");
     }
 
     /// <param name="facingTarget">World position the doctor should face — pass actual chair centroid.</param>
@@ -550,6 +644,17 @@ public class LectureHallManager : MonoBehaviour
 
         _spawnedNPCs.Add(doctor);
         Debug.Log($"[LectureHall] Doctor spawned at {pos}, facing {facingTarget}.");
+
+        // Now that the doctor position is known, redirect every student's
+        // head look-at target from the user toward the doctor.
+        foreach (var npc in _spawnedNPCs)
+        {
+            if (npc == null || npc == doctor) continue;
+            var studentCtrl = npc.GetComponent<HistoricalNPCController>();
+            if (studentCtrl != null && studentCtrl.Role == NPCRole.Student)
+                studentCtrl.SetHeadLookTarget(pos);
+        }
+        Debug.Log($"[LectureHall] Updated {_spawnedNPCs.Count - 1} student(s) to look at doctor.");
     }
 
     public void ClearScene()
@@ -572,6 +677,11 @@ public class LectureHallManager : MonoBehaviour
         _studentsSpawnedProgressively = false;
         _shuffledStudentVariants = null;
         _variantCursor = 0;
+
+        // Stop ambient bed immediately on scene clear (no fade needed on full reset)
+        if (ambientAudioSource != null && ambientAudioSource.isPlaying)
+            ambientAudioSource.Stop();
+
         Debug.Log("[LectureHall] Scene cleared.");
     }
 
@@ -614,11 +724,47 @@ public class LectureHallManager : MonoBehaviour
         Debug.Log($"[LectureHall] Spawned {rows * cols} students facing the user/doctor.");
     }
 
-    // ── Lecture sequence ──────────────────────────────────────────
+    // ── Ambient audio helpers ─────────────────────────────────────
+
+    /// <summary>Fades the ambient bed in from silence over ambientFadeDuration seconds.</summary>
+    private IEnumerator FadeAmbientIn()
+    {
+        if (ambientAudioSource == null) yield break;
+        float target = ambientAudioSource.volume;   // target = whatever was set in Inspector
+        ambientAudioSource.volume = 0f;
+        ambientAudioSource.Play();
+        float elapsed = 0f;
+        while (elapsed < ambientFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            ambientAudioSource.volume = Mathf.Lerp(0f, target, elapsed / ambientFadeDuration);
+            yield return null;
+        }
+        ambientAudioSource.volume = target;
+    }
+
+    /// <summary>Fades the ambient bed out to silence over ambientFadeDuration seconds, then stops it.</summary>
+    private IEnumerator FadeAmbientOut()
+    {
+        if (ambientAudioSource == null || !ambientAudioSource.isPlaying) yield break;
+        float startVol = ambientAudioSource.volume;
+        float elapsed  = 0f;
+        while (elapsed < ambientFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            ambientAudioSource.volume = Mathf.Lerp(startVol, 0f, elapsed / ambientFadeDuration);
+            yield return null;
+        }
+        ambientAudioSource.Stop();
+        ambientAudioSource.volume = startVol;   // restore so next play starts at the right level
+    }
 
     // ── Lecture sequence ──────────────────────────────────────────
     private IEnumerator RunLectureSequence(ExperienceConfig config)
     {
+        // Fade the ambient bed in while the scene is settling
+        StartCoroutine(FadeAmbientIn());
+
         // Wait a brief moment before starting
         yield return new WaitForSeconds(1.0f);
 
@@ -669,6 +815,9 @@ public class LectureHallManager : MonoBehaviour
 
     private IEnumerator MainMuradApproachUser()
     {
+        // Fade ambient bed out so Murad's voice is clear during Q&A
+        StartCoroutine(FadeAmbientOut());
+
         Animator anim = _mainMuradInstance.GetComponentInChildren<Animator>();
 
         if (anim != null)
@@ -681,6 +830,18 @@ public class LectureHallManager : MonoBehaviour
             // 1. Stand up
             anim.SetBool("IsSitting", false);
             anim.SetBool("IsStanding", true);
+        }
+
+        // Release the head look-at so the bone returns to its animated pose.
+        // Without this the head would keep twisting toward the doctor while
+        // the body turns to face the user.
+        // Also stop the seated PlayableGraph so the Animator Controller regains
+        // full control for the stand-up and walk animations.
+        var muradCtrl = _mainMuradInstance.GetComponent<HistoricalNPCController>();
+        if (muradCtrl != null)
+        {
+            muradCtrl.ClearHeadLookTarget();
+            muradCtrl.StopPlayableGraph();
         }
 
         Transform camTransform = Camera.main.transform;
@@ -858,6 +1019,114 @@ public class LectureHallManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Estimates which way a chair faces, so the seated student can be rotated to
+    /// match the real chair instead of always pointing at the user.
+    /// Resolution order:
+    ///   1. Closest MRUK COUCH/OTHER anchor within chairAnchorMatchRadius — uses anchor.transform.forward.
+    ///   2. Backrest detection — fires horizontal rays around the chair at backrestProbe height
+    ///      and returns the OPPOSITE of the nearest near-vertical hit (the back of the chair).
+    ///   3. Fallback — the direction from user to chair (chair faces away from viewer).
+    /// Returned vector is unit-length and flat (Y = 0).
+    /// </summary>
+    private Vector3 EstimateChairForward(Vector3 chairPos)
+    {
+        // ── Fallback: chair faces away from the user ─────────────
+        Vector3 fallback;
+        if (Camera.main != null)
+        {
+            Vector3 camXZ   = new Vector3(Camera.main.transform.position.x, 0f, Camera.main.transform.position.z);
+            Vector3 chairXZ = new Vector3(chairPos.x, 0f, chairPos.z);
+            Vector3 awayFromUser = chairXZ - camXZ;
+            fallback = awayFromUser.sqrMagnitude > 0.0001f ? awayFromUser.normalized : Vector3.forward;
+        }
+        else fallback = Vector3.forward;
+
+        // ── Level 1: nearest MRUK COUCH/OTHER anchor ─────────────
+        try
+        {
+            if (MRUK.Instance != null)
+            {
+                MRUKRoom room = MRUK.Instance.GetCurrentRoom();
+                if (room != null)
+                {
+                    MRUKAnchor best = null;
+                    float bestDist = chairAnchorMatchRadius;
+                    foreach (MRUKAnchor anchor in room.Anchors)
+                    {
+                        if (!anchor.HasLabel("COUCH") && !anchor.HasLabel("OTHER")) continue;
+                        Vector3 ap = anchor.transform.position;
+                        float dx = ap.x - chairPos.x, dz = ap.z - chairPos.z;
+                        float d  = Mathf.Sqrt(dx * dx + dz * dz);
+                        if (d < bestDist) { bestDist = d; best = anchor; }
+                    }
+                    if (best != null)
+                    {
+                        Vector3 fwd = best.transform.forward;
+                        fwd.y = 0f;
+                        if (fwd.sqrMagnitude > 0.0001f)
+                        {
+                            Vector3 r = fwd.normalized;
+                            if (flipChairForward) r = -r;
+                            Debug.Log($"[LectureHall] Chair @ ({chairPos.x:F2},{chairPos.z:F2}): forward from MRUK anchor '{best.gameObject.name}' = {r}");
+                            return r;
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"[LectureHall] EstimateChairForward MRUK error: {ex.Message}");
+        }
+
+        // ── Level 2: backrest detection via raycast scan ─────────
+        if (_envRaycast != null)
+        {
+            float camY   = Camera.main != null ? Camera.main.transform.position.y : 1.7f;
+            float floorY = FindFloorY(chairPos, camY);
+            float probeY = floorY + chairBackrestProbeHeight;
+            Vector3 origin = new Vector3(chairPos.x, probeY, chairPos.z);
+
+            const int   numRays      = 16;
+            const float searchRadius = 0.40f;   // chair backrest ≤ ~0.4 m from seat centre
+
+            float closest = searchRadius;
+            Vector3 backDir = Vector3.zero;
+
+            for (int i = 0; i < numRays; i++)
+            {
+                float angle = (i / (float)numRays) * 2f * Mathf.PI;
+                Vector3 dir = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
+
+                if (_envRaycast.Raycast(new Ray(origin, dir), out var hit, searchRadius))
+                {
+                    // EnvironmentRaycastHit doesn't expose distance — derive it.
+                    float dist = Vector3.Distance(origin, hit.point);
+                    // Want a near-vertical surface (a backrest, not the floor or ceiling).
+                    if (Mathf.Abs(hit.normal.y) < 0.4f && dist < closest)
+                    {
+                        closest = dist;
+                        backDir = dir;
+                    }
+                }
+            }
+
+            if (backDir != Vector3.zero)
+            {
+                Vector3 r = (-backDir).normalized;
+                if (flipChairForward) r = -r;
+                Debug.Log($"[LectureHall] Chair @ ({chairPos.x:F2},{chairPos.z:F2}): forward from backrest scan = {r} (back at {closest:F2}m)");
+                return r;
+            }
+        }
+
+        // ── Level 3: fallback ────────────────────────────────────
+        Vector3 fb = flipChairForward ? -fallback : fallback;
+        Debug.Log($"[LectureHall] Chair @ ({chairPos.x:F2},{chairPos.z:F2}): no orientation info — fallback (away from user) = {fb}");
+        return fb;
+    }
+
+    /// <summary>
     /// Returns only chairs that are in front of the user (positive dot product with forward).
     /// Uses a wide 120° cone so chairs slightly off to the sides are still included.
     /// </summary>
@@ -873,6 +1142,64 @@ public class LectureHallManager : MonoBehaviour
                 result.Add(pos);
         }
         return result;
+    }
+
+    /// <summary>
+    /// After all students (including Murad) are spawned, computes the consensus
+    /// forward direction and flips any student that faces more than 90° away from
+    /// the majority. Handles both mis-detected chairs and the promoted Murad.
+    /// Must be called BEFORE SpawnDoctorAt so that head look-at is correct.
+    /// </summary>
+    private void CorrectStudentOrientations()
+    {
+        // Collect forward vectors for all seated students EXCEPT main Murad.
+        // Murad is excluded so a bad majority can never incorrectly flip him —
+        // his orientation is owned by EstimateChairForward + flipMuradFacing.
+        var forwards = new List<Vector3>();
+        foreach (var npc in _spawnedNPCs)
+        {
+            if (npc == null) continue;
+            if (npc == _mainMuradInstance) continue;          // ← exclude Murad
+            var ctrl = npc.GetComponent<HistoricalNPCController>();
+            if (ctrl == null || ctrl.Role != NPCRole.Student) continue;
+            Vector3 f = npc.transform.forward; f.y = 0f;
+            if (f.sqrMagnitude > 0.01f) forwards.Add(f.normalized);
+        }
+
+        if (forwards.Count < 2) return;   // need at least 2 to have a consensus
+
+        // Average forward direction (consensus).
+        Vector3 avg = Vector3.zero;
+        foreach (var f in forwards) avg += f;
+        avg.y = 0f;
+        if (avg.sqrMagnitude < 0.001f) return;
+        avg.Normalize();
+
+        // Flip any student (never Murad) whose forward deviates > 90° from consensus.
+        int corrected = 0;
+        foreach (var npc in _spawnedNPCs)
+        {
+            if (npc == null) continue;
+            if (npc == _mainMuradInstance) continue;          // ← exclude Murad
+            var ctrl = npc.GetComponent<HistoricalNPCController>();
+            if (ctrl == null || ctrl.Role != NPCRole.Student) continue;
+
+            Vector3 f = npc.transform.forward; f.y = 0f;
+            if (f.sqrMagnitude < 0.01f) continue;
+
+            if (Vector3.Dot(f.normalized, avg) < 0f)   // facing opposite the majority
+            {
+                npc.transform.rotation *= Quaternion.Euler(0f, 180f, 0f);
+                corrected++;
+                Debug.Log($"[LectureHall] CorrectStudentOrientations: flipped '{npc.name}' " +
+                          $"(was facing away from consensus {avg}).");
+            }
+        }
+
+        if (corrected > 0)
+            Debug.Log($"[LectureHall] CorrectStudentOrientations: fixed {corrected} student(s).");
+        else
+            Debug.Log("[LectureHall] CorrectStudentOrientations: all students face correct direction.");
     }
 
     // ── Screen / desk detection helpers ──────────────────────────

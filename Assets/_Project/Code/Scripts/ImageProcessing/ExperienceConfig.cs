@@ -72,6 +72,12 @@ public class ExperienceConfig : ScriptableObject
              "the prefab itself supplies one. Drag a Mixamo 'Sitting Idle' clip here.")]
     public AnimationClip studentSittingClip;
 
+    [Tooltip("Sitting clip played on the MAIN Murad while he is seated during the lecture.\n" +
+             "Drag the same Mixamo 'Sitting Idle' clip you use for students, or a separate one.\n" +
+             "If left empty, falls back to studentSittingClip. If both are empty, the\n" +
+             "Animator Controller's IsSitting bool is used instead (may look different).")]
+    public AnimationClip muradSittingClip;
+
     [Tooltip("Prefab for the 1918 doctor/professor NPC (must have HistoricalNPCController)")]
     public GameObject doctorPrefab;
 

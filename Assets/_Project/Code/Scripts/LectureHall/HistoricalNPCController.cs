@@ -33,6 +33,26 @@ public class HistoricalNPCController : MonoBehaviour
     [Tooltip("Students always face player. Doctor uses this angle limit.")]
     public float maxLookAngle = 45f;
 
+    [Header("Head Look-At (Students only)")]
+    [Tooltip("Exact name of the head bone in the character rig.\n" +
+             "CC4 characters: CC_Base_Head\nMixamo characters: mixamorig:Head")]
+    public string headBoneName = "CC_Base_Head";
+
+    [Tooltip("Exact name of the neck bone in the character rig.\n" +
+             "CC4 characters: CC_Base_NeckTwist01\nMixamo characters: mixamorig:Neck")]
+    public string neckBoneName = "CC_Base_NeckTwist01";
+
+    [Tooltip("How strongly the head turns toward the doctor.\n0 = no turn, 1 = full rotation override.")]
+    [Range(0f, 1f)]
+    public float headLookWeight = 0.7f;
+
+    [Tooltip("Maximum angle from the body's forward direction the head will turn (degrees).\n" +
+             "Beyond this the head stays in its animated pose.")]
+    public float headMaxAngle = 70f;
+
+    [Tooltip("Speed at which the head smoothly tracks the target.")]
+    public float headLookSpeed = 4f;
+
     // ── private ───────────────────────────────────────────────────
     private Animator _animator;
     private bool _isLecturing;
@@ -41,11 +61,21 @@ public class HistoricalNPCController : MonoBehaviour
     private Vector3 _paceRight;
     private float _pacePhase;
     private Vector3 _doctorLookAtPoint; // world-space center of student area
+#pragma warning disable 0414          // assigned by Init but kept for future doctor look-at use
     private bool _hasLookAtPoint;
+#pragma warning restore 0414
 
     private PlayableGraph _graph;
     private AnimationClipPlayable _activePlayable;
     private AnimationClip _activeClip;
+
+    // Head bone IK
+    private Transform _headBone;
+    private Transform _neckBone;
+    private Vector3 _headLookTarget;
+    private bool _hasHeadLookTarget;
+    private Quaternion _headSmoothRot;
+    private bool _headInitialized;
 
     public NPCRole Role => role;
 
@@ -69,6 +99,32 @@ public class HistoricalNPCController : MonoBehaviour
             dir.y = 0;
             if (dir.sqrMagnitude > 0.001f)
                 transform.rotation = Quaternion.LookRotation(dir);
+
+            // Cache head & neck bones for LateUpdate look-at
+            _headBone = FindDeepChild(transform, headBoneName);
+            _neckBone = FindDeepChild(transform, neckBoneName);
+
+            if (_headBone == null)
+            {
+                // Print every bone name so you can find the correct one
+                var sb = new System.Text.StringBuilder();
+                sb.AppendLine($"[NPC] {gameObject.name}: 'Head' bone not found. All bones in rig:");
+                foreach (Transform t in GetComponentsInChildren<Transform>())
+                    sb.AppendLine($"  {t.name}");
+                Debug.LogWarning(sb.ToString());
+            }
+            else
+            {
+                Debug.Log($"[NPC] {gameObject.name}: Head bone = '{_headBone.name}'  " +
+                          $"Neck bone = '{(_neckBone != null ? _neckBone.name : "NOT FOUND")}'");
+            }
+
+            // Store the doctor position as the look-at target
+            if (facingTarget.HasValue)
+            {
+                _headLookTarget = facingTarget.Value;
+                _hasHeadLookTarget = true;
+            }
         }
         else if (role == NPCRole.Doctor)
         {
@@ -178,6 +234,165 @@ public class HistoricalNPCController : MonoBehaviour
         transform.position = new Vector3(newPos.x, _paceOrigin.y, newPos.z);
     }
 
+
+    // ── Head look-at (runs AFTER animation to override bone rotation) ──
+
+    private void LateUpdate()
+    {
+        if (role != NPCRole.Student) return;
+        if (!_hasHeadLookTarget || _headBone == null) return;
+
+        // Initialise smoothed rotation to the bone's current animated pose
+        if (!_headInitialized)
+        {
+            _headSmoothRot = _headBone.rotation;
+            _headInitialized = true;
+        }
+
+        ApplyHeadLookAt();
+    }
+
+    private void ApplyHeadLookAt()
+    {
+        // Look at doctor's eye level (same Y as head) — avoids looking down
+        // because the doctor's stored position is at floor height.
+        Vector3 eyeLevelTarget = new Vector3(
+            _headLookTarget.x,
+            _headBone.position.y,
+            _headLookTarget.z);
+
+        Vector3 toTarget = eyeLevelTarget - _headBone.position;
+        if (toTarget.sqrMagnitude < 0.001f) return;
+
+        Vector3 toTargetFlat = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
+        Vector3 bodyFwd = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
+
+        // Signed horizontal angle from body forward to target direction.
+        // SignedAngle returns [-180, 180] — safe for any orientation, no flip risk.
+        float angleY = Vector3.SignedAngle(bodyFwd, toTargetFlat, Vector3.up);
+
+        // Clamp to headMaxAngle so students facing sideways/away only turn
+        // their head as far as is natural, never snapping backwards.
+        float clampedAngle = Mathf.Clamp(angleY, -headMaxAngle, headMaxAngle);
+
+        // Capture the animation's bone rotation this frame (before our override).
+        Quaternion animRot = _headBone.rotation;
+
+        // Apply a pure world-Y rotation on top of the animated rotation.
+        // AngleAxis(angle, up) never produces flips — it is just a horizontal pivot.
+        Quaternion desired = Quaternion.AngleAxis(clampedAngle, Vector3.up) * animRot;
+
+        // Smooth toward desired over time
+        _headSmoothRot = Quaternion.Slerp(_headSmoothRot, desired,
+                                          Time.deltaTime * headLookSpeed);
+
+        // Blend between pure animation and look-at
+        _headBone.rotation = Quaternion.Slerp(animRot, _headSmoothRot, headLookWeight);
+
+        // Neck gets 30% of the turn for a natural two-joint look
+        if (_neckBone != null)
+            _neckBone.rotation = Quaternion.Slerp(_neckBone.rotation,
+                                                   _headSmoothRot,
+                                                   headLookWeight * 0.4f);
+    }
+
+    // ── Bone search helper ────────────────────────────────────────
+
+    /// <summary>
+    /// Searches the entire child hierarchy for a Transform whose name
+    /// contains <paramref name="boneName"/> (case-insensitive).
+    /// Mixamo rigs typically name bones "mixamorig:Head", "mixamorig:Neck", etc.
+    /// </summary>
+    private Transform FindDeepChild(Transform parent, string boneName)
+    {
+        foreach (Transform child in parent.GetComponentsInChildren<Transform>())
+        {
+            // Exact match first (handles CC4 names like CC_Base_NeckTwist01)
+            if (string.Equals(child.name, boneName, System.StringComparison.OrdinalIgnoreCase))
+                return child;
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// Updates the head look-at target after spawn.
+    /// Call this once the doctor's world position is known so students
+    /// turn their heads toward the doctor rather than the user.
+    /// </summary>
+    /// <summary>
+    /// Sets up the head look-at system WITHOUT modifying transform.rotation.
+    /// Use this when the caller has already set the correct world rotation
+    /// (e.g. the main Murad prefab, whose flip is applied at Instantiate time).
+    /// <para>
+    /// If <paramref name="sittingClip"/> is supplied, it is played immediately via
+    /// PlayableGraph — giving Murad the same animation as the other students while
+    /// his Animator Controller is kept intact for the stand-up / walk phase later.
+    /// When <paramref name="sittingClip"/> is null the Animator Controller drives
+    /// the animation (IsSitting bool must be set on it by the caller).
+    /// </para>
+    /// </summary>
+    public void InitHeadLookOnly(Vector3 initialLookTarget, AnimationClip sittingClip = null)
+    {
+        role = NPCRole.Student;          // enables LateUpdate head look-at
+        _playerCamera = Camera.main?.transform;
+        _animator = GetComponent<Animator>();
+
+        _headBone = FindDeepChild(transform, headBoneName);
+        _neckBone = FindDeepChild(transform, neckBoneName);
+
+        if (_headBone == null)
+            Debug.LogWarning($"[NPC] {gameObject.name}: head bone '{headBoneName}' not found — head look-at disabled.");
+        else
+            Debug.Log($"[NPC] {gameObject.name} (head-look-only): Head='{_headBone.name}'  " +
+                      $"Neck='{(_neckBone != null ? _neckBone.name : "NOT FOUND")}'");
+
+        _headLookTarget = initialLookTarget;
+        _hasHeadLookTarget = true;
+        _headInitialized = false;
+
+        // If a sitting clip was provided, drive it via PlayableGraph so Murad
+        // looks identical to the other students while seated.
+        // When no clip is provided, the Animator Controller handles animation.
+        if (sittingClip != null)
+        {
+            idleClip = sittingClip;
+            PlayClip(sittingClip);
+            Debug.Log($"[NPC] {gameObject.name} (head-look-only): playing sitting clip '{sittingClip.name}' via PlayableGraph.");
+        }
+    }
+
+    /// <summary>
+    /// Stops and destroys the PlayableGraph so the Animator Controller can take
+    /// over again. Call this before re-enabling the Animator Controller on Murad
+    /// (e.g. when he stands up and the MuradController / walk animation begins).
+    /// No-op if no graph is currently running.
+    /// </summary>
+    public void StopPlayableGraph()
+    {
+        if (_graph.IsValid())
+        {
+            _graph.Destroy();
+            Debug.Log($"[NPC] {gameObject.name}: PlayableGraph stopped — Animator Controller takes over.");
+        }
+    }
+
+    public void SetHeadLookTarget(Vector3 worldPos)
+    {
+        _headLookTarget = worldPos;
+        _hasHeadLookTarget = true;
+        // Reset smooth rotation so it re-initialises toward the new target
+        _headInitialized = false;
+    }
+
+    /// <summary>
+    /// Disables the head look-at override so the bone returns to its animated pose.
+    /// Call this when the character stands up or no longer needs to track a target.
+    /// </summary>
+    public void ClearHeadLookTarget()
+    {
+        _hasHeadLookTarget = false;
+        _headInitialized = false;
+    }
 
     private void OnDestroy()
     {
