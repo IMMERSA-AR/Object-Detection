@@ -93,6 +93,12 @@ public class LectureHallManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource lectureAudioSource;
 
+    [Tooltip("AudioSource used for the chair-detection phase audio.\n" +
+             "Add a second AudioSource component to this GameObject, set Loop = ON and\n" +
+             "Play On Awake = OFF, then drag it here. The clip is assigned at runtime\n" +
+             "from ExperienceConfig.chairDetectionAudioClip.")]
+    public AudioSource detectionAudioSource;
+
     [Header("UI")]
     public GameObject lectureUI;
 
@@ -659,6 +665,9 @@ public class LectureHallManager : MonoBehaviour
         if (lectureAudioSource != null)
             lectureAudioSource.Stop();
 
+        if (detectionAudioSource != null)
+            detectionAudioSource.Stop();
+
         if (lectureUI != null)
             lectureUI.SetActive(false);
 
@@ -712,9 +721,31 @@ public class LectureHallManager : MonoBehaviour
         Debug.Log($"[LectureHall] Spawned {rows * cols} students facing the user/doctor.");
     }
 
+    // ── Detection audio ───────────────────────────────────────────
+
+    /// <summary>
+    /// Starts the chair-detection phase audio (looping).
+    /// Called by ExperienceManager as soon as chair scanning begins.
+    /// </summary>
+    public void PlayDetectionAudio(AudioClip clip)
+    {
+        if (detectionAudioSource == null || clip == null) return;
+        detectionAudioSource.clip  = clip;
+        detectionAudioSource.loop  = true;
+        detectionAudioSource.Play();
+        Debug.Log($"[LectureHall] Detection audio started: {clip.name}");
+    }
+
     // ── Lecture sequence ──────────────────────────────────────────
     private IEnumerator RunLectureSequence(ExperienceConfig config)
     {
+        // Doctor has just appeared — stop the detection audio before lecture begins.
+        if (detectionAudioSource != null && detectionAudioSource.isPlaying)
+        {
+            detectionAudioSource.Stop();
+            Debug.Log("[LectureHall] Detection audio stopped — lecture starting.");
+        }
+
         // Wait a brief moment before starting
         yield return new WaitForSeconds(1.0f);
 

@@ -48,6 +48,11 @@ public class ExperienceConfig : ScriptableObject
              "Leave empty to start chair detection immediately.")]
     public AudioClip introAudioClip;
 
+    [Tooltip("Audio that loops during the chair-detection phase (while students are being placed).\n" +
+             "Stops automatically the moment the doctor appears and the lecture is ready.\n" +
+             "Leave empty for silence during detection.")]
+    public AudioClip chairDetectionAudioClip;
+
     [Tooltip("The pre-recorded lecture audio script")]
     public AudioClip lectureAudioClip;
 
