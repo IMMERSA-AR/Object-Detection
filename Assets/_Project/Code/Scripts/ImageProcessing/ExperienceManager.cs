@@ -82,7 +82,46 @@ public class ExperienceManager : MonoBehaviour
 
         if (!ValidateReferences()) return;
 
+        // Hide MRUK room-mesh visualization (the blue overlay). The GlobalMeshAnchor
+        // is created at runtime by MRUK — subscribe to the room-created event so we
+        // can disable its MeshRenderer as soon as it appears.
+        StartCoroutine(HideMRUKVisualizationWhenReady());
+
         StartCoroutine(ShowMenuDelayed());
+    }
+
+    /// <summary>
+    /// Waits for MRUK to finish loading the room, then disables every MeshRenderer
+    /// that belongs to MRUK-spawned anchors (GlobalMeshAnchor, room walls, etc.).
+    /// This removes the blue room-mesh overlay without affecting scene understanding data.
+    /// </summary>
+    private IEnumerator HideMRUKVisualizationWhenReady()
+    {
+        // Wait until MRUK has a valid room (can take a few frames on-device).
+        float timeout = 10f;
+        float elapsed = 0f;
+        while (elapsed < timeout)
+        {
+            yield return null;
+            elapsed += Time.deltaTime;
+
+            if (Meta.XR.MRUtilityKit.MRUK.Instance != null &&
+                Meta.XR.MRUtilityKit.MRUK.Instance.GetCurrentRoom() != null)
+                break;
+        }
+
+        if (Meta.XR.MRUtilityKit.MRUK.Instance == null) yield break;
+
+        // Disable MeshRenderers on the MRUK root and all its runtime children.
+        // This covers GlobalMeshAnchor, EffectMesh, and any room-wall visualizers.
+        Meta.XR.MRUtilityKit.MRUK mruk = Meta.XR.MRUtilityKit.MRUK.Instance;
+        foreach (MeshRenderer mr in mruk.GetComponentsInChildren<MeshRenderer>(includeInactive: true))
+        {
+            mr.enabled = false;
+            Debug.Log($"[ExperienceManager] Hid MRUK mesh renderer: {mr.gameObject.name}");
+        }
+
+        Debug.Log("[ExperienceManager] MRUK visualization hidden.");
     }
 
     /// <summary>
