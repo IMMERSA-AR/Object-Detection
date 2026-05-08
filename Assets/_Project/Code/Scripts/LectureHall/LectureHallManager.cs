@@ -93,14 +93,6 @@ public class LectureHallManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource lectureAudioSource;
 
-    [Tooltip("Looping ambient audio bed that plays throughout the entire lecture.\n" +
-             "Assign the AudioSource that holds your AmbientBed_1918 clip.\n" +
-             "It fades in when the scene starts and fades out when Murad approaches.")]
-    public AudioSource ambientAudioSource;
-
-    [Tooltip("How many seconds the ambient bed takes to fade in / out (seconds).")]
-    public float ambientFadeDuration = 2.0f;
-
     [Header("UI")]
     public GameObject lectureUI;
 
@@ -678,10 +670,6 @@ public class LectureHallManager : MonoBehaviour
         _shuffledStudentVariants = null;
         _variantCursor = 0;
 
-        // Stop ambient bed immediately on scene clear (no fade needed on full reset)
-        if (ambientAudioSource != null && ambientAudioSource.isPlaying)
-            ambientAudioSource.Stop();
-
         Debug.Log("[LectureHall] Scene cleared.");
     }
 
@@ -724,47 +712,9 @@ public class LectureHallManager : MonoBehaviour
         Debug.Log($"[LectureHall] Spawned {rows * cols} students facing the user/doctor.");
     }
 
-    // ── Ambient audio helpers ─────────────────────────────────────
-
-    /// <summary>Fades the ambient bed in from silence over ambientFadeDuration seconds.</summary>
-    private IEnumerator FadeAmbientIn()
-    {
-        if (ambientAudioSource == null) yield break;
-        float target = ambientAudioSource.volume;   // target = whatever was set in Inspector
-        ambientAudioSource.volume = 0f;
-        ambientAudioSource.Play();
-        float elapsed = 0f;
-        while (elapsed < ambientFadeDuration)
-        {
-            elapsed += Time.deltaTime;
-            ambientAudioSource.volume = Mathf.Lerp(0f, target, elapsed / ambientFadeDuration);
-            yield return null;
-        }
-        ambientAudioSource.volume = target;
-    }
-
-    /// <summary>Fades the ambient bed out to silence over ambientFadeDuration seconds, then stops it.</summary>
-    private IEnumerator FadeAmbientOut()
-    {
-        if (ambientAudioSource == null || !ambientAudioSource.isPlaying) yield break;
-        float startVol = ambientAudioSource.volume;
-        float elapsed  = 0f;
-        while (elapsed < ambientFadeDuration)
-        {
-            elapsed += Time.deltaTime;
-            ambientAudioSource.volume = Mathf.Lerp(startVol, 0f, elapsed / ambientFadeDuration);
-            yield return null;
-        }
-        ambientAudioSource.Stop();
-        ambientAudioSource.volume = startVol;   // restore so next play starts at the right level
-    }
-
     // ── Lecture sequence ──────────────────────────────────────────
     private IEnumerator RunLectureSequence(ExperienceConfig config)
     {
-        // Fade the ambient bed in while the scene is settling
-        StartCoroutine(FadeAmbientIn());
-
         // Wait a brief moment before starting
         yield return new WaitForSeconds(1.0f);
 
@@ -815,9 +765,6 @@ public class LectureHallManager : MonoBehaviour
 
     private IEnumerator MainMuradApproachUser()
     {
-        // Fade ambient bed out so Murad's voice is clear during Q&A
-        StartCoroutine(FadeAmbientOut());
-
         Animator anim = _mainMuradInstance.GetComponentInChildren<Animator>();
 
         if (anim != null)

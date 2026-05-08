@@ -318,15 +318,18 @@ public class ExperienceManager : MonoBehaviour
         {
             if (src != null)
             {
+                src.loop = false;   // safety — never loop the intro clip
                 src.Stop();
                 src.clip = config.introAudioClip;
                 src.Play();
                 Debug.Log($"[ExperienceManager] Playing intro audio: '{config.introAudioClip.name}' " +
                           $"({config.introAudioClip.length:F1}s) — chair detection will start when it ends.");
 
-                // Wait for the clip to actually finish playing (handles pause/scale)
-                while (src.isPlaying) yield return null;
+                // Wait exactly the clip's duration — safe even if the AudioSource
+                // has Loop accidentally enabled in the Inspector.
+                yield return new WaitForSeconds(config.introAudioClip.length);
 
+                src.Stop();   // ensure it's stopped before detection starts
                 Debug.Log("[ExperienceManager] Intro audio finished.");
             }
             else

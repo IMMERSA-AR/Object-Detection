@@ -9293,9 +9293,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: ff77e739bb1c6ad4a91a2dddbdcf1148, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9407,7 +9407,8 @@ MonoBehaviour:
   deskMinHits: 6
   spawnAtSeatSurface: 0
   flipChairForward: 0
-  flipMuradFacing: 1
+  flipMuradFacing: 0
+  muradSeatOffset: {x: 0, y: 0, z: -0.1}
   chairAnchorMatchRadius: 0.5
   chairBackrestProbeHeight: 0.75
   lectureAudioSource: {fileID: 2112026627}
