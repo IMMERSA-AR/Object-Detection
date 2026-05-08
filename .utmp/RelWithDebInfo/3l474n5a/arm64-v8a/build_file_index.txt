@@ -1,2 +1,0 @@
-D:\uni\Semester 9\GP-1\Demo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
-D:\uni\Semester 9\GP-1\Demo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
