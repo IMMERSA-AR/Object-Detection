@@ -90,6 +90,13 @@ public class LectureHallManager : MonoBehaviour
     [Tooltip("Vertical offset above the floor at which the backrest-detection raycast scan is performed (m). 0.75 m hits typical chair backrests.")]
     public float chairBackrestProbeHeight = 0.75f;
 
+    [Header("Lighting")]
+    [Tooltip("Parent GameObject that holds all 1918 lamp Point Lights.\n" +
+             "Create an empty GameObject called 'LectureLights', parent your Point Lights\n" +
+             "under it, then drag it here. Lights turn on when the scene spawns and\n" +
+             "turn off when ClearScene() is called.")]
+    public GameObject lectureLightsRoot;
+
     [Header("Audio")]
     public AudioSource lectureAudioSource;
 
@@ -121,6 +128,10 @@ public class LectureHallManager : MonoBehaviour
     private void Awake()
     {
         _envRaycast = FindAnyObjectByType<EnvironmentRaycastManager>();
+
+        // Lights start OFF — turned on by StartLecture / StartLectureWithChairs
+        if (lectureLightsRoot != null)
+            lectureLightsRoot.SetActive(false);
     }
 
     // ── Public API ────────────────────────────────────────────────
@@ -128,6 +139,7 @@ public class LectureHallManager : MonoBehaviour
     public void StartLecture(ExperienceConfig config, Action onComplete)
     {
         _onLectureComplete = onComplete;
+        if (lectureLightsRoot != null) lectureLightsRoot.SetActive(true);
 
         Vector3 forward = GetPlayerFlatForward();
         Vector3 anchor = ComputeSceneAnchor(forward);   // student area centre
@@ -159,6 +171,7 @@ public class LectureHallManager : MonoBehaviour
     public void StartLectureWithChairs(List<Vector3> chairPositions, ExperienceConfig config, Action onComplete)
     {
         _onLectureComplete = onComplete;
+        if (lectureLightsRoot != null) lectureLightsRoot.SetActive(true);
 
         if (chairPositions == null || chairPositions.Count == 0)
         {
@@ -638,6 +651,12 @@ public class LectureHallManager : MonoBehaviour
         _spawnedNPCs.Add(doctor);
         Debug.Log($"[LectureHall] Doctor spawned at {pos}, facing {facingTarget}.");
 
+        // Spawn era props now that both doctor position and chair centroid are known.
+        float floorY = FindFloorY(pos, Camera.main != null ? Camera.main.transform.position.y : 1.7f);
+        var props = GetComponent<LectureHallProps>();
+        if (props != null)
+            props.SpawnProps(pos, rot, facingTarget, floorY);
+
         // Now that the doctor position is known:
         //   1. Correct body orientation — any student facing more than 90° away
         //      from the doctor gets flipped 180°.  Using the doctor as ground truth
@@ -683,6 +702,9 @@ public class LectureHallManager : MonoBehaviour
         if (detectionAudioSource != null)
             detectionAudioSource.Stop();
 
+        if (lectureLightsRoot != null)
+            lectureLightsRoot.SetActive(false);
+
         if (lectureUI != null)
             lectureUI.SetActive(false);
 
@@ -693,6 +715,9 @@ public class LectureHallManager : MonoBehaviour
         _studentsSpawnedProgressively = false;
         _shuffledStudentVariants = null;
         _variantCursor = 0;
+
+        var props = GetComponent<LectureHallProps>();
+        if (props != null) props.ClearProps();
 
         Debug.Log("[LectureHall] Scene cleared.");
     }
