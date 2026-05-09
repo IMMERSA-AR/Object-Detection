@@ -1,0 +1,2725 @@
+fileFormatVersion: 2
+guid: a09baa0ee4d7c274b97c1aba711011cc
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chandelier metal
+    second: {fileID: 2100000, guid: 619698c6dc46e1e4184b16ce44640794, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 3a85540ed48f2c24e8c7d92c316c87b1, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: chandelier_sketchfab(Clone)
+      parentName: 
+      position: {x: -0.0000009346008, y: 0.34299034, z: -0.000000057220458}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl group
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: -0.0031200664, y: 0.002804353, z: 0.21824837}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.873267, y: 0.873267, z: 0.873267}
+    - name: top curl007
+      parentName: top curl group
+      position: {x: 0.31470093, y: -0.102206364, z: 0.01167633}
+      rotation: {x: -0, y: 0, z: 0.92387944, w: -0.3826836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box054
+      parentName: top curl007
+      position: {x: -0.15766785, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line046
+      parentName: top curl007
+      position: {x: 0.1515509, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl006
+      parentName: top curl group
+      position: {x: -0.095421016, y: -0.3143384, z: 0.01167633}
+      rotation: {x: 0, y: 0, z: 0.92387956, w: 0.3826833}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box053
+      parentName: top curl006
+      position: {x: -0.15766783, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320359}
+    - name: Line045
+      parentName: top curl006
+      position: {x: 0.15155092, y: -0.1722424, z: -0.011676254}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl005
+      parentName: top curl group
+      position: {x: -0.30755302, y: 0.095783524, z: 0.01167633}
+      rotation: {x: 0, y: 0, z: 0.3826836, w: 0.9238795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box052
+      parentName: top curl005
+      position: {x: -0.15766785, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line044
+      parentName: top curl005
+      position: {x: 0.1515509, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl004
+      parentName: top curl group
+      position: {x: 0.10256887, y: 0.30791557, z: 0.01167633}
+      rotation: {x: 0, y: 0, z: -0.38268337, w: 0.92387956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box051
+      parentName: top curl004
+      position: {x: -0.15766785, y: -0.1722424, z: -0.01167633}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line043
+      parentName: top curl004
+      position: {x: 0.1515509, y: -0.1722424, z: -0.01167633}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl003
+      parentName: top curl group
+      position: {x: 0.29357395, y: 0.1467886, z: 0.01167633}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box050
+      parentName: top curl003
+      position: {x: -0.15766786, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line042
+      parentName: top curl003
+      position: {x: 0.1515509, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -3.140185e-16, y: -0.70710677, z: -3.1401849e-16, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl002
+      parentName: top curl group
+      position: {x: 0.15357392, y: -0.29321143, z: 0.01167633}
+      rotation: {x: -0, y: 0, z: 1, w: -0.00000040133926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box049
+      parentName: top curl002
+      position: {x: -0.15766783, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line041
+      parentName: top curl002
+      position: {x: 0.1515509, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl001
+      parentName: top curl group
+      position: {x: -0.28642607, y: -0.1532114, z: 0.01167633}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box048
+      parentName: top curl001
+      position: {x: -0.15766785, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line040
+      parentName: top curl001
+      position: {x: 0.1515509, y: -0.17224243, z: -0.011676254}
+      rotation: {x: 5.024296e-15, y: -0.70710677, z: 5.0242958e-15, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl
+      parentName: top curl group
+      position: {x: -0.14642608, y: 0.2867886, z: 0.01167633}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Box047
+      parentName: top curl
+      position: {x: -0.15766785, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0.5, y: 0.50000006, z: -0.49999997, w: 0.5}
+      scale: {x: 1, y: 1, z: 1.320358}
+    - name: Line039
+      parentName: top curl
+      position: {x: 0.1515509, y: -0.17224243, z: -0.011676254}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top cap spike crystals
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009348364, y: -0.000000057174578, z: 0.13334785}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.981017, y: 0.981017, z: 0.981017}
+    - name: Group072
+      parentName: top cap spike crystals
+      position: {x: -0.03300003, y: 0.00000032186503, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal042
+      parentName: Group072
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector004
+      parentName: Group072
+      position: {x: -0.0000006866455, y: 0, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector005
+      parentName: Group072
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group074
+      parentName: top cap spike crystals
+      position: {x: 0.032999992, y: 0.00000032424927, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal043
+      parentName: Group074
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector006
+      parentName: Group074
+      position: {x: -0.0000006866456, y: 0, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector007
+      parentName: Group074
+      position: {x: -0.0000006866456, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group070
+      parentName: top cap spike crystals
+      position: {x: 0.0000003433228, y: 0.033, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal041
+      parentName: Group070
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector002
+      parentName: Group070
+      position: {x: -0.0000006866455, y: 0, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector003
+      parentName: Group070
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group093
+      parentName: top cap spike crystals
+      position: {x: 0.030487938, y: 0.012628811, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8314696, w: 0.55557036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal056
+      parentName: Group093
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector032
+      parentName: Group093
+      position: {x: -0.0000006866455, y: 0, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector033
+      parentName: Group093
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group089
+      parentName: top cap spike crystals
+      position: {x: 0.030487938, y: -0.012628834, z: 0}
+      rotation: {x: 0, y: 0, z: -0.83146966, w: 0.5555702}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal053
+      parentName: Group089
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector026
+      parentName: Group089
+      position: {x: -0.0000006854534, y: 0, z: 0.025122909}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector027
+      parentName: Group089
+      position: {x: -0.0000006854534, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group077
+      parentName: top cap spike crystals
+      position: {x: 0.023334311, y: 0.023334753, z: 0}
+      rotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal047
+      parentName: Group077
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector012
+      parentName: Group077
+      position: {x: -0.0000006878376, y: 0.0000000023841857, z: 0.025122909}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector013
+      parentName: Group077
+      position: {x: -0.0000006878376, y: 0.0000000023841857, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group080
+      parentName: top cap spike crystals
+      position: {x: -0.023334311, y: 0.023334753, z: 0}
+      rotation: {x: 0, y: 0, z: 0.38268337, w: 0.92387956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal045
+      parentName: Group080
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector014
+      parentName: Group080
+      position: {x: -0.0000006866455, y: 0, z: 0.025122909}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector015
+      parentName: Group080
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794965, z: 0.13794969, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group081
+      parentName: top cap spike crystals
+      position: {x: 0.01262886, y: 0.030487908, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19509038, w: 0.9807853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal048
+      parentName: Group081
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector016
+      parentName: Group081
+      position: {x: -0.0000006866455, y: -0.0000000023841857, z: 0.025122909}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector017
+      parentName: Group081
+      position: {x: -0.0000006866455, y: -0.0000000023841857, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group090
+      parentName: top cap spike crystals
+      position: {x: -0.0126288235, y: 0.030487914, z: 0}
+      rotation: {x: -0, y: 0, z: 0.9807853, w: -0.19509022}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal054
+      parentName: Group090
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector028
+      parentName: Group090
+      position: {x: -0.0000006866455, y: -0.0000000023841857, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector029
+      parentName: Group090
+      position: {x: -0.0000006866455, y: -0.0000000023841857, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group084
+      parentName: top cap spike crystals
+      position: {x: 0.012628898, y: 0.03048793, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19509038, w: 0.9807853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal050
+      parentName: Group084
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector020
+      parentName: Group084
+      position: {x: -0.0000006854534, y: 0, z: 0.025122909}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector021
+      parentName: Group084
+      position: {x: -0.0000006854534, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group087
+      parentName: top cap spike crystals
+      position: {x: -0.03048813, y: 0.012628271, z: 0}
+      rotation: {x: 0, y: 0, z: -0.83146966, w: 0.5555702}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal052
+      parentName: Group087
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector024
+      parentName: Group087
+      position: {x: -0.0000006866455, y: -0.0000000023841857, z: 0.025122909}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector025
+      parentName: Group087
+      position: {x: -0.0000006866455, y: -0.0000000023841857, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group069
+      parentName: top cap spike crystals
+      position: {x: 0.0000003433228, y: -0.033, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal023
+      parentName: Group069
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector001
+      parentName: Group069
+      position: {x: -0.0000006866455, y: 0, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector
+      parentName: Group069
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group095
+      parentName: top cap spike crystals
+      position: {x: -0.03048813, y: -0.012628276, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8314696, w: 0.55557036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal057
+      parentName: Group095
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector034
+      parentName: Group095
+      position: {x: -0.0000006854534, y: 0, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector035
+      parentName: Group095
+      position: {x: -0.0000006854534, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group075
+      parentName: top cap spike crystals
+      position: {x: -0.02333477, y: -0.02333429, z: 0}
+      rotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector008
+      parentName: Group075
+      position: {x: -0.0000006878376, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector011
+      parentName: Group075
+      position: {x: -0.0000006878376, y: 0, z: 0.025122909}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: spike crystal044
+      parentName: Group075
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group078
+      parentName: top cap spike crystals
+      position: {x: 0.02333477, y: -0.02333429, z: 0}
+      rotation: {x: 0, y: 0, z: 0.38268337, w: 0.92387956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector009
+      parentName: Group078
+      position: {x: -0.0000006878376, y: 0, z: 0.025122909}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector010
+      parentName: Group078
+      position: {x: -0.0000006878376, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794965, z: 0.13794969, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: spike crystal046
+      parentName: Group078
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group083
+      parentName: top cap spike crystals
+      position: {x: -0.012628251, y: -0.030488143, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19509038, w: 0.9807853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal049
+      parentName: Group083
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector018
+      parentName: Group083
+      position: {x: -0.0000006866455, y: 0, z: 0.025122909}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector019
+      parentName: Group083
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group092
+      parentName: top cap spike crystals
+      position: {x: 0.012628288, y: -0.030488143, z: 0}
+      rotation: {x: -0, y: 0, z: 0.9807853, w: -0.19509022}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal055
+      parentName: Group092
+      position: {x: -0, y: 0, z: -0.014938278}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector030
+      parentName: Group092
+      position: {x: -0.0000006854534, y: -0.0000000023841857, z: 0.025122872}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector031
+      parentName: Group092
+      position: {x: -0.0000006854534, y: -0.0000000023841857, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: Group086
+      parentName: top cap spike crystals
+      position: {x: -0.012628212, y: -0.030488117, z: 0}
+      rotation: {x: 0, y: 0, z: -0.19509038, w: 0.9807853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spike crystal051
+      parentName: Group086
+      position: {x: -0, y: 0, z: -0.01493824}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector022
+      parentName: Group086
+      position: {x: -0.0000006866455, y: 0, z: 0.025122909}
+      rotation: {x: 0.3928475, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: connector023
+      parentName: Group086
+      position: {x: -0.0000006866455, y: 0, z: 0.020202866}
+      rotation: {x: 0.69352, y: -0.13794966, z: 0.13794968, w: 0.6935199}
+      scale: {x: 0.863222, y: 0.863222, z: 0.863222}
+    - name: curl arms candle
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: -0.045562133, y: 0.045679778, z: -0.1554158}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: curl base candle001
+      parentName: curl arms candle
+      position: {x: 0.18662307, y: 0.13227016, z: -0.07571463}
+      rotation: {x: 0, y: 0, z: 1, w: 0.00000040133926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Line050
+      parentName: curl base candle001
+      position: {x: -0.022030571, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: candle connector002
+      parentName: curl base candle001
+      position: {x: -0.062016077, y: 0.17783399, z: 0.104569115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass002
+      parentName: curl base candle001
+      position: {x: -0.062016077, y: 0.17783399, z: 0.09893867}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal002
+      parentName: curl base candle001
+      position: {x: -0.062016077, y: 0.17783399, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: curl connector002
+      parentName: curl base candle001
+      position: {x: 0.088800564, y: 0.17794728, z: 0.073115185}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: top curl box004
+      parentName: curl base candle001
+      position: {x: 0.077981055, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.5000001, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: curl base candle006
+      parentName: curl arms candle
+      position: {x: 0.27113622, y: -0.019594248, z: -0.07571463}
+      rotation: {x: 0, y: 0, z: 0.9238795, w: 0.38268355}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl box009
+      parentName: curl base candle006
+      position: {x: 0.07798106, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.50000006, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: candle connector007
+      parentName: curl base candle006
+      position: {x: -0.062016077, y: 0.17783399, z: 0.104569115}
+      rotation: {x: 0, y: 0, z: 0.000000015581058, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass007
+      parentName: curl base candle006
+      position: {x: -0.062016077, y: 0.17783399, z: 0.09893867}
+      rotation: {x: 0, y: 0, z: 0.000000016387013, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal007
+      parentName: curl base candle006
+      position: {x: -0.062016077, y: 0.17783399, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: Line055
+      parentName: curl base candle006
+      position: {x: -0.022030553, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: curl connector007
+      parentName: curl base candle006
+      position: {x: 0.088800564, y: 0.17794728, z: 0.073115185}
+      rotation: {x: -0.000000014512478, y: -0.70710677, z: -0.000000014512477, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: curl base candle004
+      parentName: curl arms candle
+      position: {x: 0.019478826, y: 0.17989461, z: -0.07571463}
+      rotation: {x: -0, y: 0, z: 0.92387956, w: -0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl box007
+      parentName: curl base candle004
+      position: {x: 0.07798105, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.50000006, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: candle connector005
+      parentName: curl base candle004
+      position: {x: -0.062016055, y: 0.17783397, z: 0.104569115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass005
+      parentName: curl base candle004
+      position: {x: -0.062016055, y: 0.17783397, z: 0.09893867}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal005
+      parentName: curl base candle004
+      position: {x: -0.062016055, y: 0.17783397, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: Line053
+      parentName: curl base candle004
+      position: {x: -0.022030571, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: curl connector005
+      parentName: curl base candle004
+      position: {x: 0.088800564, y: 0.17794727, z: 0.073115185}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: curl base candle007
+      parentName: curl arms candle
+      position: {x: -0.18001005, y: -0.07176267, z: -0.07571463}
+      rotation: {x: 0, y: 0, z: -0.3826837, w: 0.92387944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl box010
+      parentName: curl base candle007
+      position: {x: 0.07798106, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.50000006, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: Line056
+      parentName: curl base candle007
+      position: {x: -0.022030553, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: candle connector008
+      parentName: curl base candle007
+      position: {x: -0.062016055, y: 0.177834, z: 0.104569115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass008
+      parentName: curl base candle007
+      position: {x: -0.062016055, y: 0.177834, z: 0.09893867}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal008
+      parentName: curl base candle007
+      position: {x: -0.062016055, y: 0.177834, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: curl connector008
+      parentName: curl base candle007
+      position: {x: 0.088800564, y: 0.17794728, z: 0.073115185}
+      rotation: {x: -0.000000014512477, y: -0.70710677, z: -0.000000014512476, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: curl base candle
+      parentName: curl arms candle
+      position: {x: -0.095496826, y: -0.22362712, z: -0.07571463}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: candle connector
+      parentName: curl base candle
+      position: {x: -0.062016066, y: 0.17783399, z: 0.104569115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: top curl box002
+      parentName: curl base candle
+      position: {x: 0.077981055, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.5000001, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: candle holder glass
+      parentName: curl base candle
+      position: {x: -0.062016066, y: 0.17783399, z: 0.09893867}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal
+      parentName: curl base candle
+      position: {x: -0.062016066, y: 0.17783399, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: Line048
+      parentName: curl base candle
+      position: {x: -0.022030562, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: curl connector
+      parentName: curl base candle
+      position: {x: 0.088800564, y: 0.17794728, z: 0.073115185}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: curl base candle005
+      parentName: curl arms candle
+      position: {x: 0.07164734, y: -0.27125162, z: -0.07571463}
+      rotation: {x: 0, y: 0, z: 0.38268328, w: 0.9238796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl box008
+      parentName: curl base candle005
+      position: {x: 0.077981055, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.50000006, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: Line054
+      parentName: curl base candle005
+      position: {x: -0.022030571, y: 0.17820446, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: candle connector006
+      parentName: curl base candle005
+      position: {x: -0.062016077, y: 0.17783397, z: 0.104569115}
+      rotation: {x: 0, y: 0, z: 0.000000015581058, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass006
+      parentName: curl base candle005
+      position: {x: -0.062016077, y: 0.17783397, z: 0.09893867}
+      rotation: {x: 0, y: 0, z: 0.000000016387014, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal006
+      parentName: curl base candle005
+      position: {x: -0.062016077, y: 0.17783397, z: 0.123958156}
+      rotation: {x: 0, y: 0, z: 0.000000025470776, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: curl connector006
+      parentName: curl base candle005
+      position: {x: 0.08880055, y: 0.17794728, z: 0.073115185}
+      rotation: {x: 0.000000014512478, y: -0.70710677, z: 0.000000014512477, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: curl base candle003
+      parentName: curl arms candle
+      position: {x: 0.22351173, y: -0.18673845, z: -0.07571463}
+      rotation: {x: 0, y: 0, z: 0.7071065, w: 0.7071072}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl box006
+      parentName: curl base candle003
+      position: {x: 0.077981055, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.5000001, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: Line052
+      parentName: curl base candle003
+      position: {x: -0.022030562, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: candle connector004
+      parentName: curl base candle003
+      position: {x: -0.062016066, y: 0.17783399, z: 0.104569115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass004
+      parentName: curl base candle003
+      position: {x: -0.062016066, y: 0.17783399, z: 0.09893867}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal004
+      parentName: curl base candle003
+      position: {x: -0.062016066, y: 0.17783399, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: curl connector004
+      parentName: curl base candle003
+      position: {x: 0.088800564, y: 0.17794728, z: 0.073115185}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: curl base candle002
+      parentName: curl arms candle
+      position: {x: -0.13238555, y: 0.095381446, z: -0.07571463}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top curl box005
+      parentName: curl base candle002
+      position: {x: 0.077981055, y: 0.17820448, z: 0.07571463}
+      rotation: {x: 0.5000001, y: -0.4999999, z: 0.5000001, w: 0.49999994}
+      scale: {x: 1.036568, y: 1.036568, z: 1.630193}
+    - name: candle connector003
+      parentName: curl base candle002
+      position: {x: -0.062016077, y: 0.17783399, z: 0.104569115}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.478182, y: 0.478182, z: 0.478182}
+    - name: candle holder glass003
+      parentName: curl base candle002
+      position: {x: -0.062016077, y: 0.17783399, z: 0.09893867}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.818655, y: 1.818655, z: 1.818655}
+    - name: candle holder metal003
+      parentName: curl base candle002
+      position: {x: -0.062016077, y: 0.17783399, z: 0.123958156}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.58503, y: 0.58503, z: 0.58503}
+    - name: Line051
+      parentName: curl base candle002
+      position: {x: -0.022030571, y: 0.17820448, z: 0.07468585}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.299925, y: 1.299925, z: 1.299925}
+    - name: curl connector003
+      parentName: curl base candle002
+      position: {x: 0.088800564, y: 0.17794728, z: 0.073115185}
+      rotation: {x: -0, y: -0.70710677, z: 0, w: 0.7071068}
+      scale: {x: 0.726045, y: 0.726045, z: 0.726045}
+    - name: crystal drops top curl
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: -0.00079018116, y: -0.000000057220458, z: 0.15546447}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain001
+      parentName: crystal drops top curl
+      position: {x: 0.00002111569, y: -0.11643999, z: 0.028683929}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector041
+      parentName: crystal drops top curl
+      position: {x: 0.000017028302, y: -0.120048426, z: 0.042277448}
+      rotation: {x: 0.13794982, y: 0.6935199, z: 0.69352, w: -0.13794942}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector042
+      parentName: crystal drops top curl
+      position: {x: 0.000017028302, y: -0.120048426, z: 0.03846092}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: teardrop crystal005
+      parentName: crystal drops top curl
+      position: {x: -0.079662144, y: -0.079691015, z: -0.031536102}
+      rotation: {x: 0.69352007, y: -0.13794969, z: -0.39284754, w: 0.5879377}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector110
+      parentName: crystal drops top curl
+      position: {x: -0.084875315, y: -0.08489838, z: 0.0016577911}
+      rotation: {x: -0.1379497, y: 0.69352007, z: 0.5879377, w: -0.39284736}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain047
+      parentName: crystal drops top curl
+      position: {x: -0.08300453, y: -0.08303337, z: 0.010241088}
+      rotation: {x: 0.69352, y: -0.13794968, z: -0.39284754, w: 0.5879377}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector111
+      parentName: crystal drops top curl
+      position: {x: -0.084875315, y: -0.08489838, z: 0.01767723}
+      rotation: {x: -0.1379497, y: 0.69352007, z: 0.5879377, w: -0.39284736}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector112
+      parentName: crystal drops top curl
+      position: {x: 0.08487682, y: 0.08489992, z: 0.0016577911}
+      rotation: {x: 0.69352007, y: 0.13794957, z: 0.3928474, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain048
+      parentName: crystal drops top curl
+      position: {x: 0.083007164, y: 0.08303606, z: 0.010241088}
+      rotation: {x: 0.13794997, y: 0.69352, z: 0.58793753, w: 0.3928477}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal006
+      parentName: crystal drops top curl
+      position: {x: 0.079662554, y: 0.07969143, z: -0.031536102}
+      rotation: {x: 0.13794994, y: 0.69352, z: 0.5879375, w: 0.39284775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector113
+      parentName: crystal drops top curl
+      position: {x: 0.08487682, y: 0.08489992, z: 0.01767723}
+      rotation: {x: 0.69352007, y: 0.13794957, z: 0.3928474, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: teardrop crystal007
+      parentName: crystal drops top curl
+      position: {x: 0.07969242, y: -0.07966215, z: -0.031536102}
+      rotation: {x: 0.5879379, y: 0.3928475, z: 0.13794951, w: 0.6935199}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector114
+      parentName: crystal drops top curl
+      position: {x: 0.084899805, y: -0.08487531, z: 0.0016577911}
+      rotation: {x: 0.587938, y: -0.3928475, z: -0.13794962, w: 0.6935197}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain049
+      parentName: crystal drops top curl
+      position: {x: 0.08303478, y: -0.08300451, z: 0.010241088}
+      rotation: {x: 0.58793795, y: 0.39284748, z: 0.13794945, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector115
+      parentName: crystal drops top curl
+      position: {x: 0.084899805, y: -0.08487531, z: 0.01767723}
+      rotation: {x: 0.587938, y: -0.3928475, z: -0.13794962, w: 0.6935197}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector116
+      parentName: crystal drops top curl
+      position: {x: -0.08489851, y: 0.08487684, z: 0.0016577911}
+      rotation: {x: 0.39284766, y: 0.5879378, z: 0.69351983, w: 0.13794975}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain050
+      parentName: crystal drops top curl
+      position: {x: -0.08303465, y: 0.08300718, z: 0.010241088}
+      rotation: {x: -0.39284733, y: 0.587938, z: 0.6935199, w: -0.13794932}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal008
+      parentName: crystal drops top curl
+      position: {x: -0.07969001, y: 0.07966256, z: -0.031536102}
+      rotation: {x: -0.39284748, y: 0.5879379, z: 0.6935199, w: -0.13794947}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector117
+      parentName: crystal drops top curl
+      position: {x: -0.08489851, y: 0.08487684, z: 0.01767723}
+      rotation: {x: 0.39284766, y: 0.5879378, z: 0.69351983, w: 0.13794975}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector106
+      parentName: crystal drops top curl
+      position: {x: -0.120048426, y: -0.000015611648, z: 0.0016577911}
+      rotation: {x: 0.13794988, y: 0.69352007, z: 0.6935198, w: -0.13794956}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain045
+      parentName: crystal drops top curl
+      position: {x: -0.11740681, y: -0.000019693374, z: 0.010241088}
+      rotation: {x: 0.5879379, y: -0.39284766, z: -0.5879378, w: 0.39284718}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal003
+      parentName: crystal drops top curl
+      position: {x: -0.112679996, y: -0.000019693374, z: -0.031536102}
+      rotation: {x: 0.58793795, y: -0.3928475, z: -0.58793783, w: 0.3928473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector107
+      parentName: crystal drops top curl
+      position: {x: -0.120048426, y: -0.000015611648, z: 0.01767723}
+      rotation: {x: 0.13794988, y: 0.69352007, z: 0.6935198, w: -0.13794956}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector108
+      parentName: crystal drops top curl
+      position: {x: 0.120050006, y: 0.000017023087, z: 0.0016577911}
+      rotation: {x: 0.69352, y: -0.13794978, z: 0.13794969, w: 0.69351983}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain046
+      parentName: crystal drops top curl
+      position: {x: 0.11741001, y: 0.000021114349, z: 0.010241088}
+      rotation: {x: 0.39284778, y: 0.5879377, z: 0.39284712, w: 0.5879381}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal004
+      parentName: crystal drops top curl
+      position: {x: 0.112679996, y: 0.000021114349, z: -0.031536102}
+      rotation: {x: 0.39284778, y: 0.58793765, z: 0.3928471, w: 0.587938}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector109
+      parentName: crystal drops top curl
+      position: {x: 0.120050006, y: 0.000017023087, z: 0.01767723}
+      rotation: {x: 0.69352, y: -0.13794978, z: 0.13794969, w: 0.69351983}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector103
+      parentName: crystal drops top curl
+      position: {x: 0.000017028302, y: -0.120048426, z: 0.0016577911}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain043
+      parentName: crystal drops top curl
+      position: {x: 0.00002111569, y: -0.11740681, z: 0.010241088}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal001
+      parentName: crystal drops top curl
+      position: {x: 0.00002111569, y: -0.112679996, z: -0.031536102}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector102
+      parentName: crystal drops top curl
+      position: {x: 0.000017028302, y: -0.120048426, z: 0.01767723}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector104
+      parentName: crystal drops top curl
+      position: {x: -0.000015616417, y: 0.120050006, z: 0.0016577911}
+      rotation: {x: 0.5879379, y: 0.3928475, z: 0.5879378, w: 0.39284736}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain044
+      parentName: crystal drops top curl
+      position: {x: -0.000019709021, y: 0.11741001, z: 0.010241088}
+      rotation: {x: -0.13794939, y: 0.69352007, z: 0.69351983, w: 0.13795014}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal002
+      parentName: crystal drops top curl
+      position: {x: -0.000019709467, y: 0.112679996, z: -0.031536102}
+      rotation: {x: -0.13794947, y: 0.69352007, z: 0.69351983, w: 0.13795005}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector105
+      parentName: crystal drops top curl
+      position: {x: -0.000015616417, y: 0.120050006, z: 0.01767723}
+      rotation: {x: 0.5879379, y: 0.3928475, z: 0.5879378, w: 0.39284736}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain021
+      parentName: crystal drops top curl
+      position: {x: -0.11642294, y: -0.0000008395314, z: 0.028683929}
+      rotation: {x: 0.58793795, y: -0.3928475, z: -0.58793783, w: 0.3928473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector085
+      parentName: crystal drops top curl
+      position: {x: -0.12003137, y: 0.0000032480061, z: 0.0409317}
+      rotation: {x: 0, y: 0, z: 1, w: 0.00000028212997}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector086
+      parentName: connector085
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector087
+      parentName: connector085
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: octagon bead chain023
+      parentName: crystal drops top curl
+      position: {x: -0.082319714, y: 0.08233652, z: 0.028683929}
+      rotation: {x: -0.39284754, y: 0.58793795, z: 0.69351983, w: -0.13794953}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector091
+      parentName: crystal drops top curl
+      position: {x: -0.08486837, y: 0.084890954, z: 0.0409317}
+      rotation: {x: 0, y: 0, z: 0.92387944, w: 0.38268363}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector092
+      parentName: connector091
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284757, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector093
+      parentName: connector091
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector079
+      parentName: crystal drops top curl
+      position: {x: 0.000020299702, y: 0.12005163, z: 0.0409317}
+      rotation: {x: 0, y: 0, z: 0.70710653, w: 0.70710707}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector080
+      parentName: connector079
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector081
+      parentName: connector079
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: octagon bead chain019
+      parentName: crystal drops top curl
+      position: {x: 0.000016208738, y: 0.116443194, z: 0.028683929}
+      rotation: {x: -0.13794936, y: 0.6935201, z: 0.6935198, w: 0.13795017}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain025
+      parentName: crystal drops top curl
+      position: {x: 0.08235357, y: 0.08233995, z: 0.028683929}
+      rotation: {x: 0.13794975, y: 0.69352007, z: 0.5879376, w: 0.39284757}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector097
+      parentName: crystal drops top curl
+      position: {x: 0.08490801, y: 0.08488861, z: 0.0409317}
+      rotation: {x: 0, y: 0, z: 0.38268337, w: 0.92387956}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector098
+      parentName: connector097
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector099
+      parentName: connector097
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794966, z: 0.13794972, w: 0.6935198}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: octagon bead chain020
+      parentName: crystal drops top curl
+      position: {x: 0.11646024, y: 0.0000040552018, z: 0.028683929}
+      rotation: {x: 0.39284775, y: 0.5879377, z: 0.39284712, w: 0.58793795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector082
+      parentName: crystal drops top curl
+      position: {x: 0.120068684, y: -0.000000035762785, z: 0.0409317}
+      rotation: {x: 0, y: 0, z: -0.0000005046553, w: 1}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector083
+      parentName: connector082
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector084
+      parentName: connector082
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: octagon bead chain022
+      parentName: crystal drops top curl
+      position: {x: 0.08235704, y: -0.08233331, z: 0.028683929}
+      rotation: {x: 0.58793795, y: 0.39284757, z: 0.1379495, w: 0.6935199}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector088
+      parentName: crystal drops top curl
+      position: {x: 0.0849057, y: -0.08488775, z: 0.0409317}
+      rotation: {x: 0, y: 0, z: -0.38268363, w: 0.92387944}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector089
+      parentName: connector088
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284757, y: -0.5879378, z: -0.3928475, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector090
+      parentName: connector088
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: octagon bead chain024
+      parentName: crystal drops top curl
+      position: {x: -0.082316265, y: -0.082336746, z: 0.028683929}
+      rotation: {x: 0.69352, y: -0.13794985, z: -0.39284766, w: 0.5879376}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector094
+      parentName: crystal drops top curl
+      position: {x: -0.084870696, y: -0.0848854, z: 0.0409317}
+      rotation: {x: -0, y: 0, z: 0.9238797, w: -0.3826831}
+      scale: {x: 0.790735, y: 0.790735, z: 0.790735}
+    - name: connector095
+      parentName: connector094
+      position: {x: -0, y: 0, z: 0.001701889}
+      rotation: {x: 0.39284757, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: connector096
+      parentName: connector094
+      position: {x: -0, y: 0, z: -0.0031246948}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.1379497, w: 0.69351983}
+      scale: {x: 0.846836, y: 0.846836, z: 0.846836}
+    - name: bead chains main
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: -0, y: -0.000000019073486, z: 0.0026789855}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bead chain001
+      parentName: bead chains main
+      position: {x: 0.16406092, y: 0.25757167, z: 0.011120529}
+      rotation: {x: 0, y: 0, z: 1, w: 0.00000063975784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Line060
+      parentName: bead chain001
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: small bead067
+      parentName: bead chain001
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain
+      parentName: bead chains main
+      position: {x: -0.16406083, y: -0.25757173, z: 0.011120529}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead043
+      parentName: bead chain
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line059
+      parentName: bead chain
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain004
+      parentName: bead chains main
+      position: {x: -0.066122174, y: 0.29813915, z: 0.011120529}
+      rotation: {x: -0, y: 0, z: 0.92387956, w: -0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead070
+      parentName: bead chain004
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line063
+      parentName: bead chain004
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain005
+      parentName: bead chains main
+      position: {x: 0.0661221, y: -0.2981393, z: 0.011120529}
+      rotation: {x: 0, y: 0, z: 0.38268328, w: 0.9238796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead071
+      parentName: bead chain005
+      position: {x: 0.056121502, y: 0.25757167, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0.000000020479025, z: 0.000000020479023, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line064
+      parentName: bead chain005
+      position: {x: 0.056121502, y: 0.25757167, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0.000000020479025, z: 0.000000020479023, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain006
+      parentName: bead chains main
+      position: {x: 0.29813924, y: 0.06612207, z: 0.011120529}
+      rotation: {x: 0, y: 0, z: 0.9238795, w: 0.38268355}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead072
+      parentName: bead chain006
+      position: {x: 0.056121483, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0.000000020479025, z: 0.000000020479023, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line065
+      parentName: bead chain006
+      position: {x: 0.056121483, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0.000000020479025, z: 0.000000020479023, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain007
+      parentName: bead chains main
+      position: {x: -0.29813924, y: -0.06612211, z: 0.011120529}
+      rotation: {x: 0, y: 0, z: -0.3826837, w: 0.92387944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead073
+      parentName: bead chain007
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: -0.000000020479021, z: -0.000000020479018, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line066
+      parentName: bead chain007
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: -0.000000020479021, z: -0.000000020479018, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain003
+      parentName: bead chains main
+      position: {x: 0.25757167, y: -0.164061, z: 0.011120529}
+      rotation: {x: 0, y: 0, z: 0.7071065, w: 0.7071072}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead069
+      parentName: bead chain003
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line062
+      parentName: bead chain003
+      position: {x: 0.056121502, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: bead chain002
+      parentName: bead chains main
+      position: {x: -0.2575717, y: 0.1640608, z: 0.011120529}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead068
+      parentName: bead chain002
+      position: {x: 0.05612149, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: Line061
+      parentName: bead chain002
+      position: {x: 0.05612149, y: 0.2575717, z: -0.011120529}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1.029025, y: 1.029025, z: 1.029025}
+    - name: crystal drops base inner
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0005953598, y: 0.0000019550323, z: -0.2553961}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: crystal drop base inner004
+      parentName: crystal drops base inner
+      position: {x: 0.08361, y: 0.082769364, z: -0.0044223974}
+      rotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal014
+      parentName: crystal drop base inner004
+      position: {x: 0.0000000047683715, y: 0.007221899, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector164
+      parentName: crystal drop base inner004
+      position: {x: -0.0000041151047, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector165
+      parentName: crystal drop base inner004
+      position: {x: -0.0000041151047, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector166
+      parentName: crystal drop base inner004
+      position: {x: -0.0000041151047, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector167
+      parentName: crystal drop base inner004
+      position: {x: -0.0000041151047, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector168
+      parentName: crystal drop base inner004
+      position: {x: -0.0000041151047, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain073
+      parentName: crystal drop base inner004
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain074
+      parentName: crystal drop base inner004
+      position: {x: 0.0000000047683715, y: 0.0024950695, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain075
+      parentName: crystal drop base inner004
+      position: {x: 0.0000000047683715, y: 0.0024950695, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drop base inner005
+      parentName: crystal drops base inner
+      position: {x: -0.08361, y: -0.082769364, z: -0.0044223974}
+      rotation: {x: 0, y: 0, z: -0.38268328, w: 0.9238796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal015
+      parentName: crystal drop base inner005
+      position: {x: -0.0000000047683715, y: 0.007221899, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794972, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector169
+      parentName: crystal drop base inner005
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector170
+      parentName: crystal drop base inner005
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector171
+      parentName: crystal drop base inner005
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector172
+      parentName: crystal drop base inner005
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector173
+      parentName: crystal drop base inner005
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain076
+      parentName: crystal drop base inner005
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794972, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain077
+      parentName: crystal drop base inner005
+      position: {x: -0.000000009536743, y: 0.0024950695, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794972, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain078
+      parentName: crystal drop base inner005
+      position: {x: -0.000000009536743, y: 0.0024950695, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794972, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drop base inner006
+      parentName: crystal drops base inner
+      position: {x: 0.082769364, y: -0.08361, z: -0.0044223974}
+      rotation: {x: 0, y: 0, z: 0.38268337, w: 0.92387956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal016
+      parentName: crystal drop base inner006
+      position: {x: -0, y: 0.007221889, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector174
+      parentName: crystal drop base inner006
+      position: {x: -0.0000041198728, y: -0.00014655113, z: 0.054730263}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector175
+      parentName: crystal drop base inner006
+      position: {x: -0.0000041198728, y: -0.00014655113, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector176
+      parentName: crystal drop base inner006
+      position: {x: -0.0000041198728, y: -0.00014655113, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector177
+      parentName: crystal drop base inner006
+      position: {x: -0.0000041198728, y: -0.00014655113, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector178
+      parentName: crystal drop base inner006
+      position: {x: -0.0000041198728, y: -0.00014655113, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain079
+      parentName: crystal drop base inner006
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain080
+      parentName: crystal drop base inner006
+      position: {x: 0.0000000047683715, y: 0.0024950504, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain081
+      parentName: crystal drop base inner006
+      position: {x: 0.0000000047683715, y: 0.0024950504, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drop base inner007
+      parentName: crystal drops base inner
+      position: {x: -0.082769364, y: 0.08361, z: -0.0044223974}
+      rotation: {x: -0, y: 0, z: 0.92387944, w: -0.38268363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal017
+      parentName: crystal drop base inner007
+      position: {x: -0, y: 0.007221889, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector179
+      parentName: crystal drop base inner007
+      position: {x: -0.0000041246412, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector180
+      parentName: crystal drop base inner007
+      position: {x: -0.0000041246412, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284757, y: -0.58793795, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector181
+      parentName: crystal drop base inner007
+      position: {x: -0.0000041246412, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284757, y: -0.58793795, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector182
+      parentName: crystal drop base inner007
+      position: {x: -0.0000041246412, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284757, y: -0.58793795, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector183
+      parentName: crystal drop base inner007
+      position: {x: -0.0000041246412, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284757, y: -0.58793795, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain082
+      parentName: crystal drop base inner007
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain083
+      parentName: crystal drop base inner007
+      position: {x: -0.000000009536743, y: 0.00249506, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794972, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain084
+      parentName: crystal drop base inner007
+      position: {x: -0.000000009536743, y: 0.00249506, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794972, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drop base inner
+      parentName: crystal drops base inner
+      position: {x: -0.0005944252, y: -0.117647976, z: -0.0044223974}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector144
+      parentName: crystal drop base inner
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector145
+      parentName: crystal drop base inner
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector146
+      parentName: crystal drop base inner
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector147
+      parentName: crystal drop base inner
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector148
+      parentName: crystal drop base inner
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain061
+      parentName: crystal drop base inner
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain062
+      parentName: crystal drop base inner
+      position: {x: -0, y: 0.00249506, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain063
+      parentName: crystal drop base inner
+      position: {x: -0, y: 0.00249506, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal010
+      parentName: crystal drop base inner
+      position: {x: -0, y: 0.007221889, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: crystal drop base inner002
+      parentName: crystal drops base inner
+      position: {x: 0.117647976, y: -0.0005944252, z: -0.0044223974}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal012
+      parentName: crystal drop base inner002
+      position: {x: -3.7252902e-11, y: 0.007221889, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector154
+      parentName: crystal drop base inner002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector155
+      parentName: crystal drop base inner002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector156
+      parentName: crystal drop base inner002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector157
+      parentName: crystal drop base inner002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector158
+      parentName: crystal drop base inner002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain067
+      parentName: crystal drop base inner002
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain068
+      parentName: crystal drop base inner002
+      position: {x: -0, y: 0.00249506, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain069
+      parentName: crystal drop base inner002
+      position: {x: -0, y: 0.00249506, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drop base inner001
+      parentName: crystal drops base inner
+      position: {x: 0.0005944225, y: 0.117647976, z: -0.0044223974}
+      rotation: {x: -0, y: 0, z: 1, w: -0.00000016292068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal011
+      parentName: crystal drop base inner001
+      position: {x: -0, y: 0.007221889, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector149
+      parentName: crystal drop base inner001
+      position: {x: -0.0000041197986, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector150
+      parentName: crystal drop base inner001
+      position: {x: -0.0000041197986, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector151
+      parentName: crystal drop base inner001
+      position: {x: -0.0000041197986, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector152
+      parentName: crystal drop base inner001
+      position: {x: -0.0000041197986, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector153
+      parentName: crystal drop base inner001
+      position: {x: -0.0000041197986, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain064
+      parentName: crystal drop base inner001
+      position: {x: 7.4505804e-11, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain065
+      parentName: crystal drop base inner001
+      position: {x: -0, y: 0.00249506, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain066
+      parentName: crystal drop base inner001
+      position: {x: -0, y: 0.00249506, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drop base inner003
+      parentName: crystal drops base inner
+      position: {x: -0.117647976, y: 0.0005944252, z: -0.0044223974}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal013
+      parentName: crystal drop base inner003
+      position: {x: -0, y: 0.007221889, z: -0.035144117}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector159
+      parentName: crystal drop base inner003
+      position: {x: -0.00000411991, y: -0.0001465416, z: 0.054730263}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector160
+      parentName: crystal drop base inner003
+      position: {x: -0.00000411991, y: -0.0001465416, z: 0.050913732}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector161
+      parentName: crystal drop base inner003
+      position: {x: -0.00000411991, y: -0.0001465416, z: 0.0140692135}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector162
+      parentName: crystal drop base inner003
+      position: {x: -0.00000411991, y: -0.0001465416, z: -0.0019502258}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector163
+      parentName: crystal drop base inner003
+      position: {x: -0.00000411991, y: -0.0001465416, z: 0.034903117}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain070
+      parentName: crystal drop base inner003
+      position: {x: -0, y: 0.0034618948, z: 0.025075912}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain071
+      parentName: crystal drop base inner003
+      position: {x: -3.7252902e-11, y: 0.00249506, z: 0.0066330717}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: octagon bead chain072
+      parentName: crystal drop base inner003
+      position: {x: -3.7252902e-11, y: 0.00249506, z: 0.043486405}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: crystal drops base outer
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.00042466162, y: -0.000035057066, z: -0.19431111}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: crystal drop base outer004
+      parentName: crystal drops base outer
+      position: {x: 0.14326781, y: -0.14386706, z: -0.0108412355}
+      rotation: {x: 0, y: 0, z: 0.38268328, w: 0.9238796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain098
+      parentName: crystal drop base outer004
+      position: {x: 0.000000019073486, y: 0.002495041, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794975, z: -0.13794975, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal021
+      parentName: crystal drop base outer004
+      position: {x: 0.000000009536743, y: 0.007221889, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794975, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector212
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.046909466}
+      rotation: {x: 0.3928475, y: -0.587938, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector213
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.010064945}
+      rotation: {x: 0.3928475, y: -0.587938, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector214
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: -0.0059544942}
+      rotation: {x: 0.3928475, y: -0.587938, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain099
+      parentName: crystal drop base outer004
+      position: {x: -0, y: 0.003461876, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794975, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector215
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.030898856}
+      rotation: {x: 0.3928475, y: -0.587938, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain100
+      parentName: crystal drop base outer004
+      position: {x: 0.000000019073486, y: 0.002495041, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794975, z: -0.13794975, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector216
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.06385311}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector217
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.06003658}
+      rotation: {x: 0.3928475, y: -0.587938, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector218
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.07157221}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector219
+      parentName: crystal drop base outer004
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.06775568}
+      rotation: {x: 0.3928475, y: -0.587938, z: -0.39284733, w: 0.5879377}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain101
+      parentName: crystal drop base outer004
+      position: {x: -0, y: 0.0018699645, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer005
+      parentName: crystal drops base outer
+      position: {x: -0.14326783, y: 0.143867, z: -0.0108412355}
+      rotation: {x: -0, y: 0, z: 0.92387956, w: -0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal022
+      parentName: crystal drop base outer005
+      position: {x: -0.000000009536743, y: 0.007221889, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector220
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector221
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector222
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain102
+      parentName: crystal drop base outer005
+      position: {x: -0, y: 0.003461876, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain103
+      parentName: crystal drop base outer005
+      position: {x: -0, y: 0.002495079, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector223
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain104
+      parentName: crystal drop base outer005
+      position: {x: -0, y: 0.002495079, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector224
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.06385311}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector225
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector226
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.07157221}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector227
+      parentName: crystal drop base outer005
+      position: {x: -0.0000041198728, y: -0.00014656066, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain105
+      parentName: crystal drop base outer005
+      position: {x: -0.000000009536743, y: 0.0018699836, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer006
+      parentName: crystal drops base outer
+      position: {x: 0.14386703, y: 0.1432678, z: -0.0108412355}
+      rotation: {x: 0, y: 0, z: 0.92387944, w: 0.38268363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal023
+      parentName: crystal drop base outer006
+      position: {x: -0, y: 0.00722187, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector228
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector229
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector230
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain106
+      parentName: crystal drop base outer006
+      position: {x: -0, y: 0.0034618948, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain107
+      parentName: crystal drop base outer006
+      position: {x: -0, y: 0.00249506, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794975, z: -0.13794975, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector231
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain108
+      parentName: crystal drop base outer006
+      position: {x: -0, y: 0.00249506, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794975, z: -0.13794975, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector232
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06385311}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector233
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector234
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.07157221}
+      rotation: {x: 0.13794996, y: 0.6935199, z: 0.69352, w: -0.13794929}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector235
+      parentName: crystal drop base outer006
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain109
+      parentName: crystal drop base outer006
+      position: {x: -0, y: 0.0018699836, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer007
+      parentName: crystal drops base outer
+      position: {x: -0.14386705, y: -0.1432678, z: -0.0108412355}
+      rotation: {x: 0, y: 0, z: -0.3826834, w: 0.92387956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal024
+      parentName: crystal drop base outer007
+      position: {x: -0, y: 0.0072219083, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector236
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector237
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector238
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain110
+      parentName: crystal drop base outer007
+      position: {x: -0, y: 0.003461914, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain111
+      parentName: crystal drop base outer007
+      position: {x: -0, y: 0.002495079, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector239
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain112
+      parentName: crystal drop base outer007
+      position: {x: -0, y: 0.002495079, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794978, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector240
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.06385311}
+      rotation: {x: 0.13794997, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector241
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector242
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.07157221}
+      rotation: {x: 0.13794997, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector243
+      parentName: crystal drop base outer007
+      position: {x: -0.0000041198728, y: -0.00014652252, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain113
+      parentName: crystal drop base outer007
+      position: {x: -0, y: 0.0018700027, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794976, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer001
+      parentName: crystal drops base outer
+      position: {x: 0.0004236844, y: 0.20303498, z: -0.0108412355}
+      rotation: {x: 0, y: 0, z: 1, w: 0.00000016292068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal018
+      parentName: crystal drop base outer001
+      position: {x: -0, y: 0.007221889, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector188
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector189
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector190
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain086
+      parentName: crystal drop base outer001
+      position: {x: -0, y: 0.0034618948, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain087
+      parentName: crystal drop base outer001
+      position: {x: -0, y: 0.00249506, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector191
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain088
+      parentName: crystal drop base outer001
+      position: {x: -0, y: 0.00249506, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector192
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.06385311}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector193
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector194
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.07157221}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector195
+      parentName: crystal drop base outer001
+      position: {x: -0.0000041199473, y: -0.0001465416, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain089
+      parentName: crystal drop base outer001
+      position: {x: -0, y: 0.0018699836, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer002
+      parentName: crystal drops base outer
+      position: {x: 0.20303501, y: -0.0004237175, z: -0.0108412355}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain090
+      parentName: crystal drop base outer002
+      position: {x: -0, y: 0.00249506, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal019
+      parentName: crystal drop base outer002
+      position: {x: -0, y: 0.007221889, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector196
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector197
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector198
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain091
+      parentName: crystal drop base outer002
+      position: {x: -0, y: 0.0034618948, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector199
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain092
+      parentName: crystal drop base outer002
+      position: {x: -0, y: 0.00249506, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector200
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06385311}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector201
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector202
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.07157221}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector203
+      parentName: crystal drop base outer002
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain093
+      parentName: crystal drop base outer002
+      position: {x: 3.7252902e-11, y: 0.0018699836, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer
+      parentName: crystal drops base outer
+      position: {x: -0.00042372703, y: -0.20303498, z: -0.0108412355}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector119
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector141
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector142
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain051
+      parentName: crystal drop base outer
+      position: {x: -0, y: 0.0034618948, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain059
+      parentName: crystal drop base outer
+      position: {x: -0, y: 0.00249506, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: teardrop crystal009
+      parentName: crystal drop base outer
+      position: {x: -0, y: 0.007221889, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector143
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain060
+      parentName: crystal drop base outer
+      position: {x: -0, y: 0.00249506, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector184
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06385311}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector185
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector186
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.07157221}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector187
+      parentName: crystal drop base outer
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain085
+      parentName: crystal drop base outer
+      position: {x: -0, y: 0.0018699836, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: crystal drop base outer003
+      parentName: crystal drops base outer
+      position: {x: -0.20303501, y: 0.00042367933, z: -0.0108412355}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teardrop crystal020
+      parentName: crystal drop base outer003
+      position: {x: -3.7252902e-11, y: 0.007221889, z: -0.039148387}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector204
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.046909466}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector205
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.010064945}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector206
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: -0.0059544942}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain094
+      parentName: crystal drop base outer003
+      position: {x: -0, y: 0.0034618948, z: 0.021071643}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: octagon bead chain095
+      parentName: crystal drop base outer003
+      position: {x: -0, y: 0.00249506, z: 0.0026288033}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector207
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.030898856}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain096
+      parentName: crystal drop base outer003
+      position: {x: -0, y: 0.00249506, z: 0.039482135}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.70992, y: 0.70992, z: 0.70992}
+    - name: connector208
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06385311}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector209
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06003658}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector210
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.07157221}
+      rotation: {x: 0.13794999, y: 0.6935199, z: 0.69352, w: -0.13794927}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: connector211
+      parentName: crystal drop base outer003
+      position: {x: -0.0000041198728, y: -0.0001465416, z: 0.06775568}
+      rotation: {x: 0.39284754, y: -0.58793795, z: -0.39284733, w: 0.58793765}
+      scale: {x: 0.669623, y: 0.669623, z: 0.669623}
+    - name: octagon bead chain097
+      parentName: crystal drop base outer003
+      position: {x: -0, y: 0.0018699836, z: 0.054063376}
+      rotation: {x: 0.69352, y: 0.13794973, z: -0.13794976, w: 0.69351983}
+      scale: {x: 0.538114, y: 0.538114, z: 0.538114}
+    - name: join hider top
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009346008, y: -0.000000057220458, z: 0.16666557}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ceiling connector
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009346008, y: -0.000000057220458, z: 0.27272215}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ceiling connector
+      parentName: ceiling connector
+      position: {x: -5.555762e-10, y: -2.9895503e-10, z: 0.06890625}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.865951, y: 0.865951, z: 0.865951}
+    - name: Cylinder073
+      parentName: ceiling connector
+      position: {x: -0, y: 0, z: 0.01892479}
+      rotation: {x: -0, y: 0, z: 0.86602545, w: -0.49999997}
+      scale: {x: 1.201228, y: 1.201228, z: 1.032919}
+    - name: ceiling connector edge2
+      parentName: ceiling connector
+      position: {x: -0, y: 0, z: 0.011199493}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem top glass001
+      parentName: ceiling connector
+      position: {x: -0, y: 0, z: -0.045667037}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.725408, y: 0.725408, z: 0.725408}
+    - name: ceiling connector edge
+      parentName: ceiling connector
+      position: {x: -0, y: 0, z: -0.046348035}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ceiling connector edge3
+      parentName: ceiling connector
+      position: {x: -0, y: 0, z: 0.05163246}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ceiling chain
+      parentName: ceiling connector
+      position: {x: -0, y: 2.9802322e-10, z: -0.037748564}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: connector248
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: -0.029790267}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector247
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: -0.011634979}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector245
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: -0.048239972}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector246
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: -0.06639526}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector249
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: 0.024704209}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector250
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: 0.0065488433}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector252
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: 0.042887878}
+      rotation: {x: 0.69352007, y: -0.13794969, z: 0.13794972, w: 0.6935198}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: connector251
+      parentName: ceiling chain
+      position: {x: 1.4623484e-10, y: -8.1391e-11, z: 0.061043166}
+      rotation: {x: 0.39284754, y: -0.5879378, z: -0.39284754, w: 0.5879378}
+      scale: {x: 3.18537, y: 3.18537, z: 3.18537}
+    - name: top cap leaves
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009346008, y: -0.000000057220458, z: 0.16730537}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top leaf  large
+      parentName: top cap leaves
+      position: {x: -0, y: 0, z: 0.0010188293}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group060
+      parentName: top leaf  large
+      position: {x: -0.0000000011920929, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top leaf
+      parentName: Group060
+      position: {x: 0.0000000011920929, y: -0.036, z: -0.004314499}
+      rotation: {x: 0.64278764, y: 0, z: -0, w: 0.76604444}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf001
+      parentName: Group060
+      position: {x: 0.0000000011920929, y: 0.036, z: -0.004314499}
+      rotation: {x: -0.000000104723405, y: 0.64278764, z: 0.76604444, w: -0.00000012480449}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf006
+      parentName: top leaf  large
+      position: {x: 0.025455842, y: 0.025455842, z: -0.004314499}
+      rotation: {x: 0.24598427, y: 0.5938582, z: 0.7077328, w: 0.29315266}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf003
+      parentName: top leaf  large
+      position: {x: 0.036, y: 0, z: -0.004314499}
+      rotation: {x: 0.45451942, y: 0.45451948, z: 0.54167527, w: 0.5416752}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf005
+      parentName: top leaf  large
+      position: {x: 0.025455842, y: -0.025455844, z: -0.004314499}
+      rotation: {x: 0.59385836, y: 0.24598412, z: 0.29315245, w: 0.7077328}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf007
+      parentName: top leaf  large
+      position: {x: -0.025455842, y: -0.025455842, z: -0.004314499}
+      rotation: {x: 0.59385836, y: -0.24598418, z: -0.2931525, w: 0.70773274}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf002
+      parentName: top leaf  large
+      position: {x: -0.036, y: 0, z: -0.004314499}
+      rotation: {x: 0.45451942, y: -0.4545195, z: -0.54167527, w: 0.5416752}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf004
+      parentName: top leaf  large
+      position: {x: -0.025455842, y: 0.025455844, z: -0.004314499}
+      rotation: {x: -0.24598415, y: 0.5938584, z: 0.70773274, w: -0.29315254}
+      scale: {x: 1.031071, y: 1.031071, z: 1.031071}
+    - name: top leaf small
+      parentName: top cap leaves
+      position: {x: -0.000000009536743, y: 0.0000000047683715, z: 0.0039134216}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top leaf014
+      parentName: top leaf small
+      position: {x: 0.033259656, y: 0.013776612, z: -0.003223114}
+      rotation: {x: 0.3571136, y: 0.5344586, z: 0.6369427, w: 0.42559135}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf015
+      parentName: top leaf small
+      position: {x: -0.033259664, y: -0.013776598, z: -0.003223114}
+      rotation: {x: 0.53445864, y: -0.35711342, z: -0.4255911, w: 0.63694286}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf012
+      parentName: top leaf small
+      position: {x: 0.033259667, y: -0.013776598, z: -0.003223114}
+      rotation: {x: 0.5344584, y: 0.35711366, z: 0.42559144, w: 0.6369427}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf013
+      parentName: top leaf small
+      position: {x: -0.033259653, y: 0.01377661, z: -0.003223114}
+      rotation: {x: -0.35711384, y: 0.5344582, z: 0.6369425, w: -0.42559177}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf010
+      parentName: top leaf small
+      position: {x: 0.013776614, y: -0.033259664, z: -0.003223114}
+      rotation: {x: 0.63043666, y: 0.12540168, z: 0.1494479, w: 0.7513251}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf011
+      parentName: top leaf small
+      position: {x: -0.013776592, y: 0.03325966, z: -0.003223114}
+      rotation: {x: -0.12540202, y: 0.63043666, z: 0.75132495, w: -0.14944826}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf008
+      parentName: top leaf small
+      position: {x: -0.013776594, y: -0.03325967, z: -0.003223114}
+      rotation: {x: 0.6304367, y: -0.12540166, z: -0.14944786, w: 0.7513251}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: top leaf009
+      parentName: top leaf small
+      position: {x: 0.013776614, y: 0.033259653, z: -0.003223114}
+      rotation: {x: 0.12540142, y: 0.6304369, z: 0.7513251, w: 0.14944752}
+      scale: {x: 0.770246, y: 0.770246, z: 0.770246}
+    - name: join hider leaves
+      parentName: top cap leaves
+      position: {x: -0, y: 0, z: -0.0008760071}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: top cap
+      parentName: top cap leaves
+      position: {x: -0, y: 0, z: -0.0059516905}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem main glass
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009334087, y: -0.000000056028366, z: -0.042591322}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem main glass
+      parentName: stem main glass
+      position: {x: 0.0000000011920929, y: -0.0000000011920929, z: -0.018535422}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem glass ball
+      parentName: stem main glass
+      position: {x: 0.0000000011920929, y: -0.0000000011920929, z: -0.038726196}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.09675, y: 1.09675, z: 1.09675}
+    - name: stem main glass001
+      parentName: stem main glass
+      position: {x: 0.0000000011920929, y: -0.0000000011920929, z: -0.05900978}
+      rotation: {x: 1, y: -0, z: 0, w: -0.00000016292068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bead chains base
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0009474468, y: -0.0000402832, z: -0.15181269}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bead chain base
+      parentName: bead chains base
+      position: {x: -0.03187401, y: -0.118797354, z: -0.07049496}
+      rotation: {x: -0, y: 0, z: 1, w: -0.00000016292068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead074
+      parentName: bead chain base
+      position: {x: 0.03999689, y: 0.054947175, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795005, z: -0.13794982, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line009
+      parentName: bead chain base
+      position: {x: 0.03999689, y: 0.054947175, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004163, y: 4.381207, z: 4.004163}
+    - name: bead chain base001
+      parentName: bead chains base
+      position: {x: 0.11856326, y: -0.031877343, z: -0.07049496}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead075
+      parentName: bead chain base001
+      position: {x: 0.03999687, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795006, z: -0.13794981, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line067
+      parentName: bead chain base001
+      position: {x: 0.03999687, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004163, y: 4.381207, z: 4.004163}
+    - name: bead chain base002
+      parentName: bead chains base
+      position: {x: 0.030996775, y: 0.11916533, z: -0.07049496}
+      rotation: {x: 0, y: 0, z: -0.00000008742278, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead076
+      parentName: bead chain base002
+      position: {x: 0.039996874, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795006, z: -0.13794981, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line068
+      parentName: bead chain base002
+      position: {x: 0.039996874, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004163, y: 4.381207, z: 4.004163}
+    - name: bead chain base003
+      parentName: bead chains base
+      position: {x: -0.11863239, y: 0.031558707, z: -0.07049496}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead077
+      parentName: bead chain base003
+      position: {x: 0.039996874, y: 0.054947175, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795006, z: -0.13794981, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line069
+      parentName: bead chain base003
+      position: {x: 0.039996874, y: 0.054947175, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004163, y: 4.381207, z: 4.004163}
+    - name: bead chain base004
+      parentName: bead chains base
+      position: {x: -0.061796565, y: 0.10673103, z: -0.07049496}
+      rotation: {x: 0, y: 0, z: 0.38268328, w: 0.9238796}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead078
+      parentName: bead chain base004
+      position: {x: 0.039996862, y: 0.054947156, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.1379501, z: -0.13794982, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line070
+      parentName: bead chain base004
+      position: {x: 0.039996862, y: 0.054947156, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794997, z: -0.13794976, w: 0.69351995}
+      scale: {x: 4.004163, y: 4.381207, z: 4.004163}
+    - name: bead chain base005
+      parentName: bead chains base
+      position: {x: 0.10618582, y: 0.06179268, z: -0.07049496}
+      rotation: {x: 0, y: 0, z: -0.38268346, w: 0.92387956}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead079
+      parentName: bead chain base005
+      position: {x: 0.03999687, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795005, z: -0.1379498, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line071
+      parentName: bead chain base005
+      position: {x: 0.03999687, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004162, y: 4.381207, z: 4.004162}
+    - name: bead chain base006
+      parentName: bead chains base
+      position: {x: 0.061110206, y: -0.10673103, z: -0.07049496}
+      rotation: {x: -0, y: 0, z: 0.92387956, w: -0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead080
+      parentName: bead chain base006
+      position: {x: 0.039996866, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795005, z: -0.1379498, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line072
+      parentName: bead chain base006
+      position: {x: 0.039996866, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004162, y: 4.381207, z: 4.004162}
+    - name: bead chain base007
+      parentName: bead chains base
+      position: {x: -0.10618582, y: -0.06117384, z: -0.07049496}
+      rotation: {x: 0, y: 0, z: 0.92387956, w: 0.38268346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: small bead081
+      parentName: bead chain base007
+      position: {x: 0.039996885, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.6935199, y: -0.13795006, z: -0.13794984, w: 0.6935199}
+      scale: {x: 0.726724, y: 0.795155, z: 0.726724}
+    - name: Line073
+      parentName: bead chain base007
+      position: {x: 0.039996885, y: 0.054947164, z: 0.07052696}
+      rotation: {x: 0.69351983, y: -0.13794996, z: -0.13794975, w: 0.69351995}
+      scale: {x: 4.004162, y: 4.381207, z: 4.004162}
+    - name: crystal drop sphere
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009346008, y: -0.000000056028366, z: -0.3085763}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: crystal sphere beads
+      parentName: crystal drop sphere
+      position: {x: -0, y: -0.0000000011920929, z: -0.024828877}
+      rotation: {x: -0.3928472, y: 0.58793795, z: 0.5879379, w: -0.39284742}
+      scale: {x: 0.972107, y: 1.063643, z: 0.972107}
+    - name: crystal sphere thread
+      parentName: crystal drop sphere
+      position: {x: -0, y: -0.0000000011920929, z: -0.028044442}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: crystal sphere
+      parentName: crystal drop sphere
+      position: {x: -0, y: -0.0000000011920929, z: -0.052764066}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem main base
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009322166, y: -0.000000059604645, z: -0.18979676}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem main base
+      parentName: stem main base
+      position: {x: 0.0000000023841857, y: 0.0000000023841857, z: 0.021360856}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: join hider base
+      parentName: stem main base
+      position: {x: 0.0000000023841857, y: 0.0000000023841857, z: 0.0397995}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem centre
+      parentName: chandelier_sketchfab(Clone)
+      position: {x: 0.0000009346008, y: -0.000000057220458, z: -0.0077698515}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem centre
+      parentName: stem centre
+      position: {x: -0, y: 0, z: 0.09355087}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.934108, y: 0.934108, z: 0.934108}
+    - name: stem cap
+      parentName: stem centre
+      position: {x: -0, y: 0, z: 0.098478235}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem cap
+      parentName: stem cap
+      position: {x: -0, y: 0, z: 0.0017620086}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem cap2
+      parentName: stem cap
+      position: {x: -0, y: 0, z: 0.00075798034}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem cap3
+      parentName: stem cap
+      position: {x: -0, y: 0, z: 0.000278244}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stem join
+      parentName: stem centre
+      position: {x: -0, y: -1.2203777e-12, z: 0.049672697}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
