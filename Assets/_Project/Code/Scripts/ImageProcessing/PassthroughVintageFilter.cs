@@ -18,25 +18,25 @@ public class PassthroughVintageFilter : MonoBehaviour
     [Header("Tone — desaturation / brightness / contrast")]
 
     [Tooltip("-1 = pure grayscale  •  0 = original colours.\n" +
-             "-0.75 is a strong 'old photograph' starting point. Slide back toward 0 if it feels too washed out.")]
-    [Range(-1f, 1f)] public float saturation = -0.90f;
+             "-0.55 gives a warm faded-photo feel without going full B&W.")]
+    [Range(-1f, 1f)] public float saturation = -0.55f;
 
-    [Tooltip("Brightness offset.  -0.10 dims the room a little, as if it were lit by gas lamps.")]
-    [Range(-1f, 1f)] public float brightness = -0.20f;
+    [Tooltip("Brightness offset. -0.10 dims the scene slightly like gas-lamp lighting.")]
+    [Range(-1f, 1f)] public float brightness = -0.10f;
 
-    [Tooltip("Contrast.  Slight positive (~0.10) gives the high-contrast feel of old film.")]
-    [Range(-1f, 1f)] public float contrast = 0.20f;
+    [Tooltip("Contrast. 0.15 gives the slightly harsh feel of old film/glass plates.")]
+    [Range(-1f, 1f)] public float contrast = 0.15f;
 
     [Header("Warm Sepia Tint (multiplied after the tone pass)")]
 
     [Tooltip("Red channel multiplier — push above 1.0 for warmth.")]
-    [Range(0f, 2f)] public float redScale = 1.15f;
+    [Range(0f, 2f)] public float redScale = 1.20f;
 
     [Tooltip("Green channel multiplier.")]
-    [Range(0f, 2f)] public float greenScale = 0.95f;
+    [Range(0f, 2f)] public float greenScale = 1.00f;
 
     [Tooltip("Blue channel multiplier — drop below 1.0 for sepia.")]
-    [Range(0f, 2f)] public float blueScale = 0.65f;
+    [Range(0f, 2f)] public float blueScale = 0.60f;
 
     [Header("Runtime")]
     [Tooltip("If on, any Inspector change is pushed to the passthrough layer next frame. Turn off if you want to lock the look.")]

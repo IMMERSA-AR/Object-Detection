@@ -46,6 +46,10 @@ public class ExperienceManager : MonoBehaviour
     [Tooltip("Drag the LectureHallManager GameObject here for lecture hall experiences")]
     public LectureHallManager lectureHallManager;
 
+    [Header("Obelisk")]
+    [Tooltip("Drag the ObeliskManager GameObject here for obelisk experiences")]
+    public ObeliskManager obeliskManager;
+
     [Tooltip("PRIMARY: Drag the ChairMeshDetector GameObject here.\n" +
              "Queries MRUK Scene Mesh for horizontal surfaces — no user interaction needed.")]
     public ChairMeshDetector chairMeshDetector;
@@ -424,6 +428,20 @@ public class ExperienceManager : MonoBehaviour
             return;
         }
 
+        // ── Obelisk path ─────────────────────────────────────────────
+        if (config.experienceType == ExperienceType.Obelisk)
+        {
+            if (obeliskManager == null)
+            {
+                Debug.LogError("[ExperienceManager] obeliskManager not assigned! " +
+                               "Drag the ObeliskManager GameObject into the Inspector.");
+                return;
+            }
+
+            obeliskManager.StartExperience(config, OnObeliskComplete);
+            return;
+        }
+
         // ── Standard character-placement path ────────────────────────
         StartMuradDetectionPhase(config);
     }
@@ -556,6 +574,16 @@ public class ExperienceManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called by ObeliskManager once the obelisk is confirmed and characters are spawned.
+    /// Add any post-detection logic here (e.g. start voice Q&A, show a return button).
+    /// </summary>
+    private void OnObeliskComplete()
+    {
+        Debug.Log("[ExperienceManager] Obelisk experience complete — characters are placed.");
+        // You can add more logic here later, e.g. start a narration audio.
+    }
+
     // Called when the lecture audio finishes — spawns Murad beside the player for Q&A.
     private void OnLectureComplete()
     {
@@ -606,6 +634,7 @@ public class ExperienceManager : MonoBehaviour
         if (objectStamper != null) objectStamper.ResetForNewExperience(null);
         if (scanningUI != null) scanningUI.SetActive(false);
         if (lectureHallManager != null) lectureHallManager.ClearScene();
+        if (obeliskManager != null) obeliskManager.ClearScene();
         ShowMenu();
     }
 
