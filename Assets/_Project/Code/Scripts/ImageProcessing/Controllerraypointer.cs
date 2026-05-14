@@ -66,31 +66,64 @@ public class ControllerRayPointer : MonoBehaviour
     // ── Update ─────────────────────────────────────────────────────
     void Update()
     {
-        if (!OVRInput.GetControllerPositionTracked(OVRInput.Controller.RTouch))
+        bool rightTracked = OVRInput.GetControllerPositionTracked(OVRInput.Controller.RTouch);
+        bool leftTracked  = OVRInput.GetControllerPositionTracked(OVRInput.Controller.LTouch);
+
+        if (!rightTracked && !leftTracked)
         {
             _line.enabled = false;
             ClearHover();
             return;
         }
 
-        // Build world-space ray from right controller
-        Vector3 lp = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
-        Quaternion lr = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch);
-        Vector3 wp = trackingSpace != null ? trackingSpace.TransformPoint(lp) : lp;
-        Quaternion wr = trackingSpace != null ? trackingSpace.rotation * lr : lr;
+        // Build a ray for each tracked controller
+        Ray rightRay = BuildRay(OVRInput.Controller.RTouch);
+        Ray leftRay  = BuildRay(OVRInput.Controller.LTouch);
 
-        Vector3 dir = wr * Vector3.forward;
-        Ray ray = new Ray(wp, dir);
+        // Test both rays against canvas buttons
+        Button rightHit = rightTracked ? FindHitButton(rightRay) : null;
+        Button leftHit  = leftTracked  ? FindHitButton(leftRay)  : null;
 
+        // Prefer the controller that is hitting a button.
+        // If both hit, prefer right. If neither hits, prefer right (or left if only left tracked).
+        Ray    activeRay;
+        Button hitButton;
+        OVRInput.Controller activeController;
+
+        if (rightHit != null)
+        {
+            activeRay        = rightRay;
+            hitButton        = rightHit;
+            activeController = OVRInput.Controller.RTouch;
+        }
+        else if (leftHit != null)
+        {
+            activeRay        = leftRay;
+            hitButton        = leftHit;
+            activeController = OVRInput.Controller.LTouch;
+        }
+        else if (rightTracked)
+        {
+            // Neither hits a button — show right ray by default
+            activeRay        = rightRay;
+            hitButton        = null;
+            activeController = OVRInput.Controller.RTouch;
+        }
+        else
+        {
+            activeRay        = leftRay;
+            hitButton        = null;
+            activeController = OVRInput.Controller.LTouch;
+        }
+
+        // Draw ray
         _line.enabled = true;
-        _line.SetPosition(0, wp);
-        _line.SetPosition(1, wp + dir * rayLength);
+        _line.SetPosition(0, activeRay.origin);
+        _line.SetPosition(1, activeRay.origin + activeRay.direction * rayLength);
 
-        // Direct hit test — no GraphicRaycaster, no screen coords
-        Button hitButton = FindHitButton(ray);
         GameObject hitObj = hitButton != null ? hitButton.gameObject : null;
 
-        // Hover
+        // Hover highlight
         if (hitObj != _currentHovered)
         {
             if (_currentHovered != null)
@@ -101,7 +134,6 @@ public class ControllerRayPointer : MonoBehaviour
             }
             if (hitObj != null)
             {
-                // Highlight the button visually
                 hitButton.targetGraphic?.CrossFadeColor(
                     hitButton.colors.highlightedColor, 0.1f, true, true);
                 Debug.Log($"[RayPointer] Hover: {hitObj.name}");
@@ -112,10 +144,15 @@ public class ControllerRayPointer : MonoBehaviour
         if (hitObj != null && _lastHitPoint != Vector3.zero)
             _line.SetPosition(1, _lastHitPoint);
 
-        // Trigger = click
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+        // Trigger on EITHER controller = click
+        bool triggered =
+            OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch) ||
+            OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
+
+        if (triggered)
         {
-            Debug.Log($"[RayPointer] TRIGGER. Button={hitButton?.name ?? "NONE"}");
+            Debug.Log($"[RayPointer] TRIGGER ({activeController}). " +
+                      $"Button={hitButton?.name ?? "NONE"}");
 
             if (hitButton != null && hitButton.interactable)
             {
@@ -123,6 +160,16 @@ public class ControllerRayPointer : MonoBehaviour
                 hitButton.onClick.Invoke();
             }
         }
+    }
+
+    // ── Build world-space ray from a controller ────────────────────
+    private Ray BuildRay(OVRInput.Controller controller)
+    {
+        Vector3    lp = OVRInput.GetLocalControllerPosition(controller);
+        Quaternion lr = OVRInput.GetLocalControllerRotation(controller);
+        Vector3    wp = trackingSpace != null ? trackingSpace.TransformPoint(lp) : lp;
+        Quaternion wr = trackingSpace != null ? trackingSpace.rotation * lr : lr;
+        return new Ray(wp, wr * Vector3.forward);
     }
 
     // ── Direct button hit test ─────────────────────────────────────

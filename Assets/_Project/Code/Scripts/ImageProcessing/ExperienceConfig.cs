@@ -91,6 +91,18 @@ public class ExperienceConfig : ScriptableObject
 
     [Tooltip("Number of seats per row")]
     public int studentsPerRow = 3;
+
+    [Header("Obelisk (ExperienceType = Obelisk only)")]
+    [Tooltip("Audio clip played on loop while scanning for the obelisk.\n" +
+             "Leave empty for silence during detection.")]
+    public AudioClip obeliskScanningAudioClip;
+
+    [Tooltip("Audio clip played once when the obelisk is confirmed detected.")]
+    public AudioClip obeliskDetectedAudioClip;
+
+    [Tooltip("Text shown on the scanning UI while looking for the obelisk.\n" +
+             "e.g. 'Point the camera at the obelisk…'")]
+    public string obeliskGuidanceText = "Point the camera at the obelisk…";
 }
 
 public enum MuradBehaviour
@@ -102,7 +114,8 @@ public enum MuradBehaviour
 public enum ExperienceType
 {
     CharacterPlacement, // YOLO detects anchor → Murad walks to it
-    LectureHall         // Constant 1918 scene → lecture audio → Murad Q&A
+    LectureHall,        // Constant 1918 scene → lecture audio → Murad Q&A
+    Obelisk             // Classical IP detects obelisk → characters spawn around it
 }
 
 /// <summary>
