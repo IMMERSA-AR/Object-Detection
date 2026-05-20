@@ -509,6 +509,11 @@ public class LectureHallManager : MonoBehaviour
                              "and no shared studentSittingClip — character will T-pose.");
 
         ctrl.Init(NPCRole.Student, lookTarget);
+
+        // Add breathing + hand rest procedurally — no prefab editing required.
+        // NPCHandRest auto-creates its own lap targets at runtime using the hip bone.
+        if (npc.GetComponent<NPCHandRest>() == null)
+            npc.AddComponent<NPCHandRest>();
     }
 
     /// <summary>

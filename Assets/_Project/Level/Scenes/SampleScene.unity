@@ -372,6 +372,8 @@ GameObject:
   m_Component:
   - component: {fileID: 56200035}
   - component: {fileID: 56200034}
+  - component: {fileID: 56200036}
+  - component: {fileID: 56200037}
   m_Layer: 0
   m_Name: ExperienceManager
   m_TagString: Untagged
@@ -422,6 +424,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56200036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56200033}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b16f28079a142e4c8aa628cc1396ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VintageScreenOverlay
+  vignetteStrength: 0.82
+  vignetteRadius: 0.6
+  grainStrength: 0.07
+  grainResolution: 80
+  flickerStrength: 0.04
+  flickerSpeed: 7
+  overlayDistance: 0.31
+  liveTweak: 1
+--- !u!114 &56200037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56200033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b9267eb9b08c44c832ca70646abd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DustParticles
+  spawnRadius: 3.5
+  spawnHeight: 2.5
+  minSize: 0.003
+  maxSize: 0.009
+  dustColor: {r: 1, g: 0.92, b: 0.78, a: 0.55}
+  maxParticles: 80
+  emissionRate: 12
+  lifetime: 14
+  turbulenceStrength: 0.08
+  riseSpeed: 0.012
 --- !u!1 &60975854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,7 +2601,6 @@ GameObject:
   - component: {fileID: 533660653}
   - component: {fileID: 533660655}
   - component: {fileID: 533660657}
-  - component: {fileID: 533660656}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -2683,25 +2726,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &533660656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533660651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PassthroughVintageFilter
-  saturation: -0.9
-  brightness: -0.2
-  contrast: 0.2
-  redScale: 1.15
-  greenScale: 0.95
-  blueScale: 0.65
-  liveTweak: 1
 --- !u!114 &533660657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3263,17 +3287,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605083116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PassthroughVintageFilter
-  saturation: -0.55
-  brightness: -0.1
-  contrast: 0.15
-  redScale: 1.2
+  saturation: -0.35
+  brightness: -0.15
+  contrast: 0.2
+  redScale: 1.35
   greenScale: 1
-  blueScale: 0.6
+  blueScale: 0.45
   liveTweak: 1
 --- !u!1 &606640898
 GameObject:
@@ -8662,9 +8686,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LectureHallProps
   podiumPrefab: {fileID: 0}
   chalkboardPrefab: {fileID: 0}
-  chandelierPrefab: {fileID: 919132149155446097, guid: a09baa0ee4d7c274b97c1aba711011cc, type: 3}
+  chandelierPrefab: {fileID: 0}
   portraitPrefab: {fileID: 0}
-  clockPrefab: {fileID: 919132149155446097, guid: da644e9f01c1fa94a87fcf3db60ed106, type: 3}
+  clockPrefab: {fileID: 0}
   podiumForwardOffset: 0.6
   podiumYOffset: 0
   chalkboardBehindOffset: 0.2

@@ -191,6 +191,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8073208967046029820}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2884395998291593901}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -230,6 +233,37 @@ MonoBehaviour:
   paceSpeed: 0.5
   lookSpeed: 1.2
   maxLookAngle: 45
+  spineBoneName: CC_Base_Spine01
+  breathDepth: 1.2
+  breathRate: 13
+  breathPhaseOffset: 0
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  headLookWeight: 0.7
+  headMaxAngle: 70
+  headLookSpeed: 4
+--- !u!114 &2884395998291593901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503e0666b07b311498843e46ec55f353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCHandRest
+  leftForeArmBone: CC_Base_L_Forearm
+  rightForeArmBone: CC_Base_R_Forearm
+  leftHandBone: CC_Base_L_Hand
+  rightHandBone: CC_Base_R_Hand
+  hipBoneName: CC_Base_Waist
+  lapForward: 0.05
+  lapDown: -0.15
+  lapSideOffset: 0.12
+  restWeight: 0.45
+  smoothSpeed: 5
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

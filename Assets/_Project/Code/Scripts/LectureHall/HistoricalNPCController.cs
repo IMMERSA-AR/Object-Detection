@@ -33,6 +33,20 @@ public class HistoricalNPCController : MonoBehaviour
     [Tooltip("Students always face player. Doctor uses this angle limit.")]
     public float maxLookAngle = 45f;
 
+    [Header("Breathing (Students only)")]
+    [Tooltip("Exact name of the spine/chest bone to drive breathing.\n" +
+             "CC4 characters: CC_Base_Spine01\nMixamo characters: mixamorig:Spine")]
+    public string spineBoneName = "mixamorig:Spine";
+
+    [Tooltip("How much the spine rocks forward/back while breathing (degrees).")]
+    [Range(0f, 3f)] public float breathDepth = 1.2f;
+
+    [Tooltip("Breaths per minute — 12 is natural resting, 16 is slightly alert.")]
+    [Range(8f, 20f)] public float breathRate = 13f;
+
+    [Tooltip("Random offset so all students don't breathe in sync.")]
+    [Range(0f, 6.28f)] public float breathPhaseOffset = 0f;
+
     [Header("Head Look-At (Students only)")]
     [Tooltip("Exact name of the head bone in the character rig.\n" +
              "CC4 characters: CC_Base_Head\nMixamo characters: mixamorig:Head")]
@@ -69,6 +83,9 @@ public class HistoricalNPCController : MonoBehaviour
     private AnimationClipPlayable _activePlayable;
     private AnimationClip _activeClip;
 
+    // Breathing
+    private Transform _spineBone;
+
     // Head bone IK
     private Transform _headBone;
     private Transform _neckBone;
@@ -100,9 +117,13 @@ public class HistoricalNPCController : MonoBehaviour
             if (dir.sqrMagnitude > 0.001f)
                 transform.rotation = Quaternion.LookRotation(dir);
 
-            // Cache head & neck bones for LateUpdate look-at
-            _headBone = FindDeepChild(transform, headBoneName);
-            _neckBone = FindDeepChild(transform, neckBoneName);
+            // Cache spine, head & neck bones for LateUpdate breathing + look-at
+            _spineBone = FindDeepChild(transform, spineBoneName);
+            _headBone  = FindDeepChild(transform, headBoneName);
+            _neckBone  = FindDeepChild(transform, neckBoneName);
+
+            // Randomise breath phase so all students don't breathe in sync
+            breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
 
             if (_headBone == null)
             {
@@ -240,9 +261,13 @@ public class HistoricalNPCController : MonoBehaviour
     private void LateUpdate()
     {
         if (role != NPCRole.Student) return;
+
+        // ── Breathing ─────────────────────────────────────────────
+        ApplyBreathing();
+
+        // ── Head look-at ──────────────────────────────────────────
         if (!_hasHeadLookTarget || _headBone == null) return;
 
-        // Initialise smoothed rotation to the bone's current animated pose
         if (!_headInitialized)
         {
             _headSmoothRot = _headBone.rotation;
@@ -250,6 +275,21 @@ public class HistoricalNPCController : MonoBehaviour
         }
 
         ApplyHeadLookAt();
+    }
+
+    private void ApplyBreathing()
+    {
+        if (_spineBone == null) return;
+
+        // Sine wave: breathRate breaths/min → cycles per second = breathRate/60
+        float cyclesPerSecond = breathRate / 60f;
+        float breath = Mathf.Sin(Time.time * cyclesPerSecond * Mathf.PI * 2f + breathPhaseOffset);
+
+        // Tilt spine slightly forward on inhale, back on exhale
+        float tiltX = breath * breathDepth;
+
+        // Apply on top of the animation's current bone rotation
+        _spineBone.localRotation *= Quaternion.Euler(tiltX, 0f, 0f);
     }
 
     private void ApplyHeadLookAt()
@@ -337,8 +377,11 @@ public class HistoricalNPCController : MonoBehaviour
         _playerCamera = Camera.main?.transform;
         _animator = GetComponent<Animator>();
 
-        _headBone = FindDeepChild(transform, headBoneName);
-        _neckBone = FindDeepChild(transform, neckBoneName);
+        _spineBone = FindDeepChild(transform, spineBoneName);
+        _headBone  = FindDeepChild(transform, headBoneName);
+        _neckBone  = FindDeepChild(transform, neckBoneName);
+
+        breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
 
         if (_headBone == null)
             Debug.LogWarning($"[NPC] {gameObject.name}: head bone '{headBoneName}' not found — head look-at disabled.");
