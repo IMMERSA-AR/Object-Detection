@@ -525,6 +525,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 453738675172203686}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 30779773708188026}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6047319904845741997}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -658,7 +664,7 @@ MonoBehaviour:
   role: mohandeskhana-student
   statusText: {fileID: 0}
   karimAnimator: {fileID: 0}
-  lipSyncContext: {fileID: 3817760665193589425}
+  customLipSyncContext: {fileID: 30779773708188026}
   rightController: {fileID: 0}
   npcCollider: {fileID: 579598021935221838}
   laserPointer: {fileID: 4496558182744473187}
@@ -671,10 +677,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContext
   audioSource: {fileID: 7268987348757653705}
   provider: 1
@@ -697,13 +703,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContextMorphTarget
   skinnedMeshRenderer: {fileID: 5518425087734892745}
-  visemeToBlendTargets: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
+  visemeToBlendTargets: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   enableVisemeTestKeys: 0
   mouthExaggeration: 1.5
   visemeTestKeys: 600000000900000071000000770000006500000072000000740000007900000075000000690000006f000000700000005b0000005d0000005c000000
@@ -711,7 +717,7 @@ MonoBehaviour:
   laughterBlendTarget: 15
   laughterThreshold: 0.639
   laughterMultiplier: 2.11
-  smoothAmount: 73
+  smoothAmount: 41
 --- !u!65 &579598021935221838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -861,6 +867,52 @@ MonoBehaviour:
   rotationSpeed: 8
   seatHeightOffset: -0.45
   seatForwardOffset: 0
+--- !u!114 &30779773708188026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
+  modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
+  backendType: 512
+  smoothing: 0.55
+  logTimings: 1
+--- !u!114 &-6047319904845741997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c944a6cc0b5a854b995908f1f44d29a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
+  faceMesh: {fileID: 5518425087734892745}
+  mouthExaggeration: 0.8
+  visemeBlendShapeNames:
+  - V_None
+  - V_Explosive
+  - V_Dental_Lip
+  - V_Lip_Open
+  - V_Open
+  - Merged_Open_Mouth
+  - V_Affricate
+  - V_Lip_Open
+  - V_Lip_Open
+  - V_Lip_Open
+  - Merged_Open_Mouth
+  - Mouth_Drop_Lower
+  - Mouth_Drop_Lower
+  - V_Tight_O
+  - V_Tight
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

@@ -72,6 +72,7 @@ public class ObjectStamper : MonoBehaviour
 
         GameObject character = Instantiate(characterPrefab, spawnPos, rot);
         character.name = "Murad";
+        character.AddComponent<CharacterLightingStabilizer>();
 
         MuradController muradScript = character.GetComponent<MuradController>();
         if (muradScript == null)
@@ -118,6 +119,7 @@ public class ObjectStamper : MonoBehaviour
         // 3. Spawn Murad
         GameObject character = Instantiate(characterPrefab, spawnPos, Quaternion.identity);
         character.name = "Murad";
+        character.AddComponent<CharacterLightingStabilizer>();
 
         Debug.Log($"[ObjectStamper] Murad spawned at {spawnPos}");
 
