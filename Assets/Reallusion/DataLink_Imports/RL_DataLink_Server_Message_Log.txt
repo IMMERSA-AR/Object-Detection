@@ -1,0 +1,18 @@
+HELLO 4/27/2026 12:48:41 PM VALID
+{
+  "Application": "Character Creator",
+  "Version": [
+    5,
+    6,
+    1410
+  ],
+  "Path": "C:\\Users\\ayaha\\Documents\\Reallusion\\DataLink",
+  "Plugin": "2.2.3",
+  "Exe": "C:\\Program Files\\Reallusion\\Character Creator 5\\Bin64\\CharacterCreator.exe"
+}
+
+NOTIFY 4/27/2026 12:48:41 PM VALID
+{
+  "message": "Connected"
+}
+

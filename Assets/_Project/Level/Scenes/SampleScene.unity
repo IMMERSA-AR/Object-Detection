@@ -1685,7 +1685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &408878143
 Transform:
   m_ObjectHideFlags: 0
@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b251e1148ff2942ad634e2d40088e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObeliskDetectionClient
-  serverIP: 192.168.1.5
+  serverIP: 172.20.10.9
   serverPort: 5000
   detectionInterval: 1
   confirmFrames: 3
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a1ef6c14cc0754fb3b4b82b61b9bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObeliskManager
-  detectionClient: {fileID: 408878145}
+  detectionClient: {fileID: 0}
   audioSource: {fileID: 408878144}
   scanningPanel: {fileID: 0}
   guidanceText: {fileID: 0}
@@ -2690,7 +2690,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533660651}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
   m_Name: 
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605083116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
   m_Name: 
@@ -7000,6 +7000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monoscopic: 0
   _sharpenType: 0
+  _disableRecording: 0
   _enableDynamicResolution: 1
   minDynamicResolutionScale: 1
   maxDynamicResolutionScale: 1
@@ -7071,6 +7072,10 @@ MonoBehaviour:
   SimultaneousHandsAndControllersEnabled: 0
   _readOnlyWideMotionModeHandPosesEnabled: 0
   wideMotionModeHandPosesEnabled: 0
+  _readOnlyFastMotionModeHandPosesEnabled: 0
+  fastMotionModeHandPosesEnabled: 0
+  _readOnlyWideMotionMode2HandPosesEnabled: 0
+  wideMotionMode2HandPosesEnabled: 0
   dynamicResolutionVersion: 1
 --- !u!114 &1719443098
 MonoBehaviour:

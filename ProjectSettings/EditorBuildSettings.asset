@@ -23,6 +23,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/StartScene/StartScene.unity
     guid: 69e1b31c45bac42f88f75017ee404de1
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/Obelisk.unity
+    guid: 575cc58427adbd3498ea130cc167d8cb
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/StartScene.unity
+    guid: 8c660bb31e436794584a3d89d1caddea
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/Nada_Shaimaa.unity
+    guid: 36b566d6a4b628d4ba2a3435307ae5c3
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/Tawfik_Saad.unity
+    guid: 129fd0d5266e40849aeffff2d2017f1b
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/TimeMachine.unity
+    guid: a35fb59c47d32024890fd0b9dd485b78
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2c94dd94e98578646833ef3c291dd324, type: 2}
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

@@ -19,8 +19,8 @@ public class ObeliskManager : MonoBehaviour
     // ── Inspector references ──────────────────────────────────────────
 
     [Header("Detection")]
-    [Tooltip("The ObeliskDetectionClient that sends frames to the Python server.")]
-    public ObeliskDetectionClient detectionClient;
+    [Tooltip("The ObeliskYOLODetector that runs on-device inference.")]
+    public ObeliskYOLODetector detectionClient;
 
     [Header("Audio")]
     [Tooltip("AudioSource used for scanning and detected sounds.\n" +
