@@ -697,6 +697,15 @@ MonoBehaviour:
   paceSpeed: 0.5
   lookSpeed: 1.2
   maxLookAngle: 45
+  spineBoneName: mixamorig:Spine
+  breathDepth: 1.2
+  breathRate: 13
+  breathPhaseOffset: 0
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  headLookWeight: 0.7
+  headMaxAngle: 70
+  headLookSpeed: 4
 --- !u!82 &3741039624004264798
 AudioSource:
   m_ObjectHideFlags: 0
@@ -708,7 +717,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e1fe7e69c64307641b4187a9c1904247, type: 3}
+  m_Resource: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

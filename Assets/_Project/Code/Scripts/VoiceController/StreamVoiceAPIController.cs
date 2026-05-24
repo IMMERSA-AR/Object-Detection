@@ -52,6 +52,10 @@ public class VoiceAPIController : MonoBehaviour
     // Audio Queue for playing incoming mini-chunks smoothly
     private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
     private readonly Queue<Action> mainThreadActions = new Queue<Action>();
+
+    // True from first tts_audio_chunk until tts_done — prevents IsTalking
+    // flickering off between chunks when the queue is briefly empty.
+    private bool _ttsActive = false;
     void Start()
     {
         if (statusText == null)
@@ -60,7 +64,7 @@ public class VoiceAPIController : MonoBehaviour
 
             if (statusText != null)
             {
-                statusText.text = "Hello!";
+                statusText.text = "";
                 statusText.color = Color.white;
             }
             else
@@ -112,6 +116,17 @@ public class VoiceAPIController : MonoBehaviour
         else
             Debug.LogWarning("OVRLipSyncContext not found! Lip sync will not work.");
 
+        // Auto-find the Animator on this prefab if not assigned in the Inspector.
+        // This is needed when Murad is spawned at runtime (not placed in the scene).
+        if (karimAnimator == null)
+        {
+            karimAnimator = GetComponentInChildren<Animator>();
+            if (karimAnimator != null)
+                Debug.Log($"[VoiceAPI] Animator auto-found: {karimAnimator.gameObject.name}");
+            else
+                Debug.LogWarning("[VoiceAPI] No Animator found on Murad — talking animation won't play.");
+        }
+
         if (Microphone.devices.Length > 0)
         {
             micDevice = Microphone.devices[0];
@@ -141,9 +156,8 @@ public class VoiceAPIController : MonoBehaviour
             AudioClip clip = audioQueue.Dequeue();
             Debug.Log($"▶️ Playing chunk | length={clip.length}s");
 
-            // --- SOURCE 1: MOURAD'S LIPS (MUTED) ---
-            // This feeds the audio to Meta's tollbooth to move the mouth.
-            // We mute it so it doesn't accidentally output glitchy/silent audio.
+            // --- SOURCE 1: MOURAD'S LIPS ---
+            // This feeds the audio to Meta's lip sync to move the mouth.
             audioSource.Stop();
             audioSource.loop = false;
             audioSource.clip = clip;
@@ -159,11 +173,26 @@ public class VoiceAPIController : MonoBehaviour
                 speakerSource.loop = false;
                 speakerSource.clip = clip;
                 speakerSource.mute = false;
-                speakerSource.spatialBlend = 1f; // Set to 1 so the voice comes FROM Mourad
+                speakerSource.spatialBlend = 1f;
                 speakerSource.Play();
             }
 
-            if (karimAnimator != null) karimAnimator.SetBool("IsTalking", true);
+            // Start talking animation
+            if (karimAnimator != null)
+            {
+                karimAnimator.SetBool("IsTalking", true);
+                karimAnimator.SetBool("IsStanding", false);
+            }
+        }
+        else if (!_ttsActive && audioQueue.Count == 0 && !audioSource.isPlaying)
+        {
+            // tts_done received AND queue drained AND nothing playing — stop animation
+            if (karimAnimator != null && karimAnimator.GetBool("IsTalking"))
+            {
+                karimAnimator.SetBool("IsTalking", false);
+                karimAnimator.SetBool("IsStanding", true);
+                Debug.Log("🎤 Murad finished talking — returning to idle.");
+            }
         }
 
 
@@ -302,6 +331,12 @@ public class VoiceAPIController : MonoBehaviour
                 if (response.type == "tts_done")
                 {
                     Debug.Log($"🏁 TTS done! Total audio chunks received: {audioChunksReceived}");
+                    // Signal Update() that all chunks have arrived — it will turn off
+                    // IsTalking only after the queue is fully drained and audio stops.
+                    lock (mainThreadActions)
+                    {
+                        mainThreadActions.Enqueue(() => _ttsActive = false);
+                    }
                     break;
                 }
 
@@ -320,7 +355,13 @@ public class VoiceAPIController : MonoBehaviour
 
                     lock (mainThreadActions)
                     {
-                        mainThreadActions.Enqueue(() => ProcessReceivedWav(audioBytes));
+                        // Mark TTS as active on first chunk so IsTalking stays true
+                        // even when the queue is briefly empty between chunks.
+                        mainThreadActions.Enqueue(() =>
+                        {
+                            _ttsActive = true;
+                            ProcessReceivedWav(audioBytes);
+                        });
                     }
                 }
                 else

@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/_Project/Level/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/CameraToWorld/CameraToWorld.unity
     guid: 756785b371a4f49438b7e2148816e892
@@ -23,6 +20,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/StartScene/StartScene.unity
     guid: 69e1b31c45bac42f88f75017ee404de1
+  - enabled: 0
+    path: Assets/StaticMouradScene.unity
+    guid: 70c0865fe9c80954b85f456fd175d527
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/IntroScene.unity
+    guid: 2389bb8cddc7e18429cca8e2e674891a
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/MenuScene.unity
+    guid: a84ef04421c48c84d8b1a051d13c5ed0
+  - enabled: 1
+    path: Assets/_Project/Level/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2c94dd94e98578646833ef3c291dd324, type: 2}
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}

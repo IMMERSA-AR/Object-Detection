@@ -104,7 +104,9 @@ public class HistoricalNPCController : MonoBehaviour
     {
         role = assignedRole;
         _playerCamera = Camera.main?.transform;
-        _animator = GetComponent<Animator>();
+        // Search root first, then children — Mixamo/CC4 characters put Animator on the root,
+        // but some rigs nest it one level down (e.g. an armature child object).
+        _animator = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
         _paceOrigin = transform.position;
         _paceRight = transform.right;
 
@@ -375,7 +377,8 @@ public class HistoricalNPCController : MonoBehaviour
     {
         role = NPCRole.Student;          // enables LateUpdate head look-at
         _playerCamera = Camera.main?.transform;
-        _animator = GetComponent<Animator>();
+        // Search root first, then children (same approach as Init).
+        _animator = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
 
         _spineBone = FindDeepChild(transform, spineBoneName);
         _headBone  = FindDeepChild(transform, headBoneName);
@@ -417,6 +420,47 @@ public class HistoricalNPCController : MonoBehaviour
             _graph.Destroy();
             Debug.Log($"[NPC] {gameObject.name}: PlayableGraph stopped — Animator Controller takes over.");
         }
+    }
+
+    /// <summary>
+    /// Freezes the currently playing clip at the given normalised time (0–1).
+    /// Use this to hold Murad in his fully-seated pose during the lecture when
+    /// the clip contains both a sit-down AND a stand-up section.
+    /// Call ResumePlayableGraph() when the lecture ends to continue the animation.
+    /// </summary>
+    /// <param name="holdNormalised">0 = clip start, 1 = clip end.
+    /// 0.5 = halfway through. Set to the frame where the character is fully seated.</param>
+    public void FreezePlayableGraph(float holdNormalised = 0f)
+    {
+        if (!_graph.IsValid() || _activeClip == null) return;
+        float holdTime = holdNormalised * _activeClip.length;
+        _activePlayable.SetTime(holdTime);
+        _activePlayable.SetSpeed(0f);   // freeze — no further playback
+        Debug.Log($"[NPC] {gameObject.name}: PlayableGraph frozen at {holdNormalised:P0} ({holdTime:F2}s).");
+    }
+
+    /// <summary>
+    /// Resumes a frozen PlayableGraph at normal speed so the stand-up portion plays.
+    /// Call this when the lecture ends and Murad should begin standing up.
+    /// </summary>
+    public void ResumePlayableGraph()
+    {
+        if (!_graph.IsValid()) return;
+        _activePlayable.SetSpeed(1f);
+        Debug.Log($"[NPC] {gameObject.name}: PlayableGraph resumed — stand-up animation playing.");
+    }
+
+    /// <summary>
+    /// Returns how many seconds remain in the active clip after the frozen hold point.
+    /// Used by LectureHallManager to wait exactly long enough for the stand-up to finish.
+    /// Returns 0 if no graph is running or clip is unknown.
+    /// </summary>
+    public float GetRemainingPlayableTime(float holdNormalised)
+    {
+        if (!_graph.IsValid() || _activeClip == null) return 0f;
+        float elapsed  = holdNormalised * _activeClip.length;
+        float remaining = _activeClip.length - elapsed;
+        return Mathf.Max(0f, remaining);
     }
 
     public void SetHeadLookTarget(Vector3 worldPos)

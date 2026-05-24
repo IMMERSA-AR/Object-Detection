@@ -26,18 +26,21 @@ MonoBehaviour:
   forwardOffset: 0
   introAudioClip: {fileID: 8300000, guid: d14616d3252587f46a0e70c982c4d5cb, type: 3}
   chairDetectionAudioClip: {fileID: 8300000, guid: f602bb128f9ae2042bb53905e235ea1c, type: 3}
-  lectureAudioClip: {fileID: 8300000, guid: e1fe7e69c64307641b4187a9c1904247, type: 3}
+  lectureAudioClip: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
   mainMuradPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
   studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
   studentPrefabVariants:
-  - prefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
+  - prefab: {fileID: 7928455528523659242, guid: 2cd4dec2657352b4591c25eb0d6a40a4, type: 3}
     sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
   - prefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
     sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
   - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
     sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
   studentSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
-  muradSittingClip: {fileID: 0}
+  muradSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
   doctorPrefab: {fileID: 435031843943507312, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
   studentRows: 2
   studentsPerRow: 3
+  obeliskScanningAudioClip: {fileID: 0}
+  obeliskDetectedAudioClip: {fileID: 0}
+  obeliskGuidanceText: "Point the camera at the obelisk\u2026"

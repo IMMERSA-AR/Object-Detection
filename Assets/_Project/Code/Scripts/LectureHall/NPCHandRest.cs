@@ -2,50 +2,38 @@ using UnityEngine;
 
 /// <summary>
 /// Gently pulls the character's wrists toward a lap resting position
-/// after the animation has played. Fully automatic — no target GameObjects
-/// needed in the scene or prefab. The script locates the hip bone at runtime
-/// and creates its own lap targets as children.
+/// after the animation has played.
 ///
-/// Attach to the same GameObject as HistoricalNPCController.
-/// Only needs bone names set correctly in the Inspector.
+/// Bone detection order:
+///   1. Humanoid Avatar via Animator.GetBoneTransform  (works on any rig)
+///   2. Mixamo name search  (mixamorig:LeftForeArm …)
+///   3. CC4 name search     (CC_Base_L_ForearmTwist01 …)
+///   4. Generic name search (LeftForeArm, RightForeArm …)
+///
+/// If no bones are found at all the component disables itself and logs
+/// every bone name in the rig so you can identify the correct names.
 /// </summary>
 public class NPCHandRest : MonoBehaviour
 {
-    [Header("Bone Names — Mixamo defaults")]
-    [Tooltip("Mixamo: mixamorig:LeftForeArm   CC4: CC_Base_L_ForearmTwist01")]
-    public string leftForeArmBone  = "mixamorig:LeftForeArm";
-
-    [Tooltip("Mixamo: mixamorig:RightForeArm  CC4: CC_Base_R_ForearmTwist01")]
-    public string rightForeArmBone = "mixamorig:RightForeArm";
-
-    [Tooltip("Mixamo: mixamorig:LeftHand   CC4: CC_Base_L_Hand")]
-    public string leftHandBone  = "mixamorig:LeftHand";
-
-    [Tooltip("Mixamo: mixamorig:RightHand  CC4: CC_Base_R_Hand")]
-    public string rightHandBone = "mixamorig:RightHand";
-
-    [Tooltip("Mixamo: mixamorig:Hips   CC4: CC_Base_Hip")]
-    public string hipBoneName = "mixamorig:Hips";
-
     [Header("Lap Offset (relative to hip bone)")]
-    [Tooltip("How far forward from the hip the hands rest (metres).\n" +
-             "Positive = in front of the character.")]
-    public float lapForward = 0.05f;
+    [Tooltip("How far forward (+) or backward (-) from the hip the hands rest.")]
+    public float lapForward    = 0.05f;
 
-    [Tooltip("How far down from the hip the hands rest (metres).\n" +
-             "Negative = below the hip.")]
-    public float lapDown = -0.15f;
+    [Tooltip("How far down from the hip the hands rest. Negative = below hip.")]
+    public float lapDown       = -0.15f;
 
-    [Tooltip("How far left/right from centre each hand rests (metres).")]
+    [Tooltip("How far left / right from centre each hand rests.")]
     public float lapSideOffset = 0.12f;
 
     [Header("Blend")]
-    [Tooltip("0 = full animation, 1 = hands locked to lap.\n" +
-             "0.45 gives a natural settled look without overriding the animation.")]
-    [Range(0f, 1f)] public float restWeight = 0.45f;
+    [Tooltip("0 = pure animation pose.  1 = hands fully locked to lap target.\n" +
+             "0.6 overrides a badly-posed animation without looking robotic.")]
+    [Range(0f, 1f)]
+    public float restWeight  = 0.6f;
 
-    [Tooltip("Speed at which hands move toward rest position.")]
-    [Range(1f, 20f)] public float smoothSpeed = 5f;
+    [Tooltip("Speed at which hands move toward the rest position.")]
+    [Range(1f, 20f)]
+    public float smoothSpeed = 6f;
 
     // ── private ───────────────────────────────────────────────────
     private Transform _leftForeArm;
@@ -54,58 +42,119 @@ public class NPCHandRest : MonoBehaviour
     private Transform _rightHand;
     private Transform _hipBone;
 
-    // Auto-created lap target transforms (children of this GameObject)
     private Transform _leftTarget;
     private Transform _rightTarget;
 
-    // Per-hand smooth rotations
     private Quaternion _leftSmooth;
     private Quaternion _rightSmooth;
     private bool _initialized;
 
+    // ── Bone name fallback lists ──────────────────────────────────
+    private static readonly string[] HipNames = {
+        "mixamorig:Hips", "CC_Base_Hip", "Hips", "Hip", "pelvis", "Pelvis"
+    };
+    private static readonly string[] LeftForeArmNames = {
+        "mixamorig:LeftForeArm", "CC_Base_L_ForearmTwist01",
+        "LeftForeArm", "Left ForeArm", "ForeArmL", "lForeArm"
+    };
+    private static readonly string[] RightForeArmNames = {
+        "mixamorig:RightForeArm", "CC_Base_R_ForearmTwist01",
+        "RightForeArm", "Right ForeArm", "ForeArmR", "rForeArm"
+    };
+    private static readonly string[] LeftHandNames = {
+        "mixamorig:LeftHand", "CC_Base_L_Hand",
+        "LeftHand", "Left Hand", "HandL", "lHand"
+    };
+    private static readonly string[] RightHandNames = {
+        "mixamorig:RightHand", "CC_Base_R_Hand",
+        "RightHand", "Right Hand", "HandR", "rHand"
+    };
+
+    // ─────────────────────────────────────────────────────────────
+
     private void Start()
     {
-        // Find bones
-        foreach (Transform t in GetComponentsInChildren<Transform>())
-        {
-            string n = t.name;
-            if (n == leftForeArmBone)  _leftForeArm  = t;
-            if (n == rightForeArmBone) _rightForeArm = t;
-            if (n == leftHandBone)     _leftHand      = t;
-            if (n == rightHandBone)    _rightHand     = t;
-            if (n == hipBoneName)      _hipBone       = t;
-        }
+        FindBones();
 
         if (_hipBone == null)
         {
-            Debug.LogWarning($"[NPCHandRest] {gameObject.name}: hip bone '{hipBoneName}' not found. " +
-                             "Hand rest disabled. Check bone name in Inspector.");
+            // Print every bone in the rig so the user can identify correct names
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine($"[NPCHandRest] {gameObject.name}: could not find hip bone. All bones:");
+            foreach (Transform t in GetComponentsInChildren<Transform>())
+                sb.AppendLine($"  '{t.name}'");
+            Debug.LogWarning(sb.ToString());
+
             enabled = false;
             return;
         }
 
-        // Create lap target transforms as children — they follow the hip bone
+        // Log which bones were found for debugging
+        Debug.Log($"[NPCHandRest] {gameObject.name}: " +
+                  $"Hip={_hipBone?.name}  " +
+                  $"LForeArm={_leftForeArm?.name}  RForeArm={_rightForeArm?.name}  " +
+                  $"LHand={_leftHand?.name}  RHand={_rightHand?.name}");
+
         _leftTarget  = CreateLapTarget("_LeftLapTarget",  -lapSideOffset);
         _rightTarget = CreateLapTarget("_RightLapTarget",  lapSideOffset);
     }
 
-    /// <summary>
-    /// Creates an empty child transform positioned at lap height
-    /// relative to the hip bone.
-    /// </summary>
+    // ── Bone Detection ────────────────────────────────────────────
+
+    private void FindBones()
+    {
+        // ── Method 1: Humanoid Avatar (most reliable, rig-agnostic) ──
+        Animator anim = GetComponentInChildren<Animator>();
+        if (anim != null && anim.isHuman)
+        {
+            _leftForeArm  = anim.GetBoneTransform(HumanBodyBones.LeftLowerArm);
+            _rightForeArm = anim.GetBoneTransform(HumanBodyBones.RightLowerArm);
+            _leftHand     = anim.GetBoneTransform(HumanBodyBones.LeftHand);
+            _rightHand    = anim.GetBoneTransform(HumanBodyBones.RightHand);
+            _hipBone      = anim.GetBoneTransform(HumanBodyBones.Hips);
+
+            if (_hipBone != null)
+            {
+                Debug.Log($"[NPCHandRest] {gameObject.name}: bones found via Humanoid Avatar.");
+                return;
+            }
+        }
+
+        // ── Method 2: Name-based search (Mixamo / CC4 / generic) ──
+        Transform[] all = GetComponentsInChildren<Transform>();
+
+        _hipBone      = FindByNames(all, HipNames);
+        _leftForeArm  = FindByNames(all, LeftForeArmNames);
+        _rightForeArm = FindByNames(all, RightForeArmNames);
+        _leftHand     = FindByNames(all, LeftHandNames);
+        _rightHand    = FindByNames(all, RightHandNames);
+
+        if (_hipBone != null)
+            Debug.Log($"[NPCHandRest] {gameObject.name}: bones found via name search.");
+    }
+
+    /// Returns the first Transform whose name matches any entry in <paramref name="names"/>.
+    private static Transform FindByNames(Transform[] all, string[] names)
+    {
+        foreach (string candidate in names)
+            foreach (Transform t in all)
+                if (string.Equals(t.name, candidate, System.StringComparison.OrdinalIgnoreCase))
+                    return t;
+        return null;
+    }
+
+    // ── Lap Target Creation ───────────────────────────────────────
+
     private Transform CreateLapTarget(string targetName, float sideOffset)
     {
         GameObject go = new GameObject(targetName);
-
-        // Parent to hip bone so the target follows the seated character
         go.transform.SetParent(_hipBone, worldPositionStays: false);
-
-        // Local position: forward, down, and to the side
         go.transform.localPosition = new Vector3(sideOffset, lapDown, lapForward);
         go.transform.localRotation = Quaternion.identity;
-
         return go.transform;
     }
+
+    // ── LateUpdate ────────────────────────────────────────────────
 
     private void LateUpdate()
     {
@@ -120,12 +169,8 @@ public class NPCHandRest : MonoBehaviour
         PullArm(_rightForeArm, _rightHand, _rightTarget, ref _rightSmooth);
     }
 
-    /// <summary>
-    /// Rotates the forearm so the wrist moves toward the lap target,
-    /// then blends with the animated rotation using restWeight.
-    /// </summary>
     private void PullArm(Transform foreArm, Transform hand,
-                         Transform target, ref Quaternion smoothRot)
+                         Transform target,  ref Quaternion smoothRot)
     {
         if (foreArm == null || hand == null || target == null) return;
 
@@ -137,10 +182,7 @@ public class NPCHandRest : MonoBehaviour
         Quaternion animRot    = foreArm.rotation;
         Quaternion desiredRot = Quaternion.FromToRotation(elbowToWrist, elbowToTarget) * animRot;
 
-        // Smooth toward desired
-        smoothRot = Quaternion.Slerp(smoothRot, desiredRot, Time.deltaTime * smoothSpeed);
-
-        // Blend between animation and smoothed target
-        foreArm.rotation = Quaternion.Slerp(animRot, smoothRot, restWeight);
+        smoothRot        = Quaternion.Slerp(smoothRot, desiredRot, Time.deltaTime * smoothSpeed);
+        foreArm.rotation = Quaternion.Slerp(animRot,  smoothRot,  restWeight);
     }
 }

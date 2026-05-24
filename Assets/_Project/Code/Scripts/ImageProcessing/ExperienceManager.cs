@@ -408,8 +408,19 @@ public class ExperienceManager : MonoBehaviour
     }
     // ── Called by ExperienceCard button ─────────────────────────────
 
+    // Guard flag — prevents double-firing when multiple ExperienceCards
+    // or duplicate event subscriptions call SelectExperience simultaneously.
+    private bool _experienceRunning = false;
+
     public void SelectExperience(ExperienceConfig config)
     {
+        if (_experienceRunning)
+        {
+            Debug.LogWarning($"[ExperienceManager] SelectExperience called again for '{config.experienceName}' — ignored (already running).");
+            return;
+        }
+        _experienceRunning = true;
+
         ActiveConfig = config;
         Debug.Log($"[ExperienceManager] Experience selected: '{config.experienceName}'");
 
@@ -587,6 +598,7 @@ public class ExperienceManager : MonoBehaviour
     // Called when the lecture audio finishes — spawns Murad beside the player for Q&A.
     private void OnLectureComplete()
     {
+        _experienceRunning = false;   // allow a new experience to be selected after this one ends
         Debug.Log("[ExperienceManager] Lecture complete — spawning Murad for Q&A.");
 
         if (objectStamper != null)
