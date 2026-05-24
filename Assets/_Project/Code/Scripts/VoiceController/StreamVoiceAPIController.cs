@@ -24,9 +24,9 @@ public class VoiceAPIController : MonoBehaviour
     public TMP_Text statusText;
     public Animator karimAnimator;
 
-    [Header("OVR Lip Sync Integration")]
-    [Tooltip("Drag the GameObject with OVRLipSyncContext here, or leave empty if it's on this same GameObject.")]
-    public OVRLipSyncContext lipSyncContext;
+    [Header("Custom Lip Sync Integration")]
+    [Tooltip("Drag the GameObject that has CustomLipSyncContext attached (usually the NPC root).")]
+    public LipSync.CustomLipSyncContext customLipSyncContext;
 
     [Header("Quest AR/VR Interaction")]
     [Tooltip("Drag the RightControllerAnchor from your OVRCameraRig here")]
@@ -104,13 +104,13 @@ public class VoiceAPIController : MonoBehaviour
 
         // Remove the PlayOneShot test sound line entirely
 
-        if (lipSyncContext == null)
-            lipSyncContext = GetComponent<OVRLipSyncContext>();
+        // Auto-find CustomLipSyncContext on this GameObject if not assigned
+        if (customLipSyncContext == null)
+            customLipSyncContext = GetComponent<LipSync.CustomLipSyncContext>();
 
-        if (lipSyncContext != null)
-            lipSyncContext.audioSource = audioSource;
-        else
-            Debug.LogWarning("OVRLipSyncContext not found! Lip sync will not work.");
+        if (customLipSyncContext == null)
+            Debug.LogWarning("[VoiceAPI] CustomLipSyncContext not found! " +
+                             "Drag the NPC root (with CustomLipSyncContext) into the Inspector.");
 
         if (Microphone.devices.Length > 0)
         {
@@ -353,6 +353,9 @@ public class VoiceAPIController : MonoBehaviour
         // This stops Unity from breaking if a chunk is missing its header
         AudioClip clip = AudioClip.Create("AI_Chunk", samples.Length, 1, 44100, false);
         clip.SetData(samples, 0);
+
+        // Pre-compute MFCC viseme timeline BEFORE enqueuing so it's ready when playback starts
+        customLipSyncContext?.FeedAudioClip(clip);
 
         audioQueue.Enqueue(clip);
     }
