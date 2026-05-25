@@ -921,7 +921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3666640379394126817, guid: 5190b692202d1b44fa8e552df81c29ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3666640379394126817, guid: 5190b692202d1b44fa8e552df81c29ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1974,60 +1974,6 @@ AnimatorOverrideController:
   m_Name: --Temp-CCiC-Override-Controller
   m_Controller: {fileID: 0}
   m_Clips: []
---- !u!1 &148015098
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 148015100}
-  - component: {fileID: 148015099}
-  m_Layer: 0
-  m_Name: ObeliskStatutsHUD
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &148015099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148015098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 425c1f740a91ef54eaaa0b3b3a30dda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObeliskStatusHUD
-  distance: 1.6
-  verticalOffset: -0.15
-  followLag: 0.85
-  panelSize: {x: 0.55, y: 0.13}
-  backgroundColor: {r: 0.04, g: 0.06, b: 0.1, a: 0.88}
-  scanningAccent: {r: 0.3, g: 0.65, b: 1, a: 1}
-  foundAccent: {r: 0.35, g: 0.9, b: 0.55, a: 1}
-  pipEmptyColor: {r: 1, g: 1, b: 1, a: 0.18}
-  scanningMessage: DETECTING OBELISK
-  foundMessage: OBELISK FOUND
---- !u!4 &148015100
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148015098}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28729, y: 0, z: 0.17257}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &171015548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6218,7 +6164,6 @@ MonoBehaviour:
   scanningUI: {fileID: 0}
   detectedUI: {fileID: 0}
   diagnosticUI: {fileID: 0}
-  statusHUD: {fileID: 148015099}
   dumpInputFrames: 0
   dumpEveryNFrames: 120
 --- !u!4 &445009760
@@ -6322,7 +6267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 761ea0f48000d1742a3b4d14f0ea0568, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 761ea0f48000d1742a3b4d14f0ea0568, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10048,7 +9993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3847444950900519078, guid: 77fc657043d35574db647c0136667700, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3847444950900519078, guid: 77fc657043d35574db647c0136667700, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13602,7 +13547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 328862877267031707, guid: f16551fa53f6cc140b421bfef826d5de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 328862877267031707, guid: f16551fa53f6cc140b421bfef826d5de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19108,4 +19053,3 @@ SceneRoots:
   - {fileID: 866937826}
   - {fileID: 2060659935}
   - {fileID: 445009760}
-  - {fileID: 148015100}

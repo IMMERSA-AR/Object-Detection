@@ -41,12 +41,17 @@ public class ObeliskYOLODetector : MonoBehaviour
 
     [Header("Time Machine")]
     [SerializeField] private GameObject timeMachine;
-    [SerializeField] private float timeMachineSideOffset = 2.0f;
+    [Tooltip("Distance (metres) to the right of the user the time machine spawns.")]
+    [SerializeField] private float timeMachineSideOffset = 1.0f;
 
     [Header("UI")]
     [SerializeField] private GameObject scanningUI;
     [SerializeField] private GameObject detectedUI;
     [SerializeField] private YOLODiagnosticUI diagnosticUI;
+
+    [Tooltip("Optional polished status HUD that floats in front of the user. " +
+             "Drag in the GameObject that has the ObeliskStatusHUD component.")]
+    [SerializeField] private ObeliskStatusHUD statusHUD;
 
     [Header("Debug")]
     [SerializeField] private bool dumpInputFrames = false;
@@ -134,6 +139,8 @@ public class ObeliskYOLODetector : MonoBehaviour
         if (detectedUI != null)
             detectedUI.SetActive(false);
 
+        if (statusHUD != null) statusHUD.ShowScanning(confirmFrames);
+
         StartCoroutine(DetectionLoop());
 
         Debug.Log("[ObeliskYOLO] Detection started.");
@@ -156,6 +163,8 @@ public class ObeliskYOLODetector : MonoBehaviour
 
         if (characterRoot != null)
             characterRoot.gameObject.SetActive(false);
+
+        if (statusHUD != null) statusHUD.Hide();
 
         _consecutiveHits = 0;
         _spawned = false;
@@ -412,11 +421,13 @@ public class ObeliskYOLODetector : MonoBehaviour
         if (bestConf < confidenceThreshold)
         {
             _consecutiveHits = 0;
+            if (statusHUD != null) statusHUD.SetProgress(0, confirmFrames);
             Debug.Log($"[ObeliskYOLO] No valid detection this frame.");
             yield break;
         }
 
         _consecutiveHits++;
+        if (statusHUD != null) statusHUD.SetProgress(_consecutiveHits, confirmFrames);
 
         _lastCX = (_consecutiveHits == 1) ? bestCx : Mathf.Lerp(_lastCX, bestCx, 0.3f);
         _lastCY = (_consecutiveHits == 1) ? bestCy : Mathf.Lerp(_lastCY, bestCy, 0.3f);
@@ -476,6 +487,8 @@ public class ObeliskYOLODetector : MonoBehaviour
 
         if (detectedUI != null)
             detectedUI.SetActive(true);
+
+        if (statusHUD != null) statusHUD.ShowFound();
 
         _obeliskBase = FindObeliskBase();
 
@@ -552,17 +565,21 @@ public class ObeliskYOLODetector : MonoBehaviour
         if (Camera.main == null)
             return obeliskBase;
 
-        // Direction from camera to obelisk, flattened to XZ plane
-        Vector3 toObelisk = obeliskBase - Camera.main.transform.position;
-        toObelisk.y = 0f;
+        // Spawn the time machine `timeMachineSideOffset` metres to the
+        // RIGHT OF THE USER (the camera), at the floor height determined
+        // from the obelisk-base raycast.
+        Vector3 camPos   = Camera.main.transform.position;
+        Vector3 camRight = Camera.main.transform.right;
 
-        // Perpendicular direction (to the right of the camera-to-obelisk vector)
-        Vector3 sideDir = Vector3.Cross(Vector3.up, toObelisk.normalized);
+        // Flatten the right vector to the XZ plane so the time machine sits
+        // upright at floor level regardless of how the user's head is tilted.
+        camRight.y = 0f;
+        camRight.Normalize();
 
         return new Vector3(
-            obeliskBase.x + sideDir.x * timeMachineSideOffset,
+            camPos.x + camRight.x * timeMachineSideOffset,
             obeliskBase.y,
-            obeliskBase.z + sideDir.z * timeMachineSideOffset);
+            camPos.z + camRight.z * timeMachineSideOffset);
     }
 
     private float GetFloorY(Vector3 xzPos)

@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 11046,
+        "processId": 27347,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -199,6 +199,12 @@
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 11046,
             "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27347,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -255,7 +261,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "",
+        "m_Filter": "yolo",
         "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },
