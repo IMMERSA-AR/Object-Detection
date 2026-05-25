@@ -237,17 +237,19 @@ public class ObeliskYOLODetector : MonoBehaviour
 
         if (schedule == null)
         {
-            _engine.Schedule(_inputTensor);
+            // Don't fall back to the blocking _engine.Schedule(_inputTensor) —
+            // that runs the whole model on the main thread and causes Android ANR.
+            // Skip this frame; the next tick will try again.
+            Debug.LogError("[ObeliskYOLO] ScheduleIterable returned null — skipping this frame to avoid main-thread stall.");
+            yield break;
         }
-        else
+
+        int counter = 0;
+        while (schedule.MoveNext())
         {
-            int counter = 0;
-            while (schedule.MoveNext())
-            {
-                counter++;
-                if (counter % layersPerFrame == 0)
-                    yield return null;
-            }
+            counter++;
+            if (counter % layersPerFrame == 0)
+                yield return null;
         }
 
         Tensor<float> output = _engine.PeekOutput(_model.outputs[0].name) as Tensor<float>;
@@ -258,7 +260,11 @@ public class ObeliskYOLODetector : MonoBehaviour
             yield break;
         }
 
-        output.CompleteAllPendingOperations();
+        // Non-blocking readback: queue the GPU→CPU copy, then yield each frame
+        // until it completes. This keeps Unity rendering during inference
+        // instead of freezing the main thread (the cause of the ANR dialog).
+        output.ReadbackRequest();
+        while (!output.IsReadbackRequestDone()) yield return null;
 
         Tensor<float> cpu = output.ReadbackAndClone() as Tensor<float>;
 
