@@ -377,6 +377,7 @@ public class LectureHallManager : MonoBehaviour
             if (isMainMurad)
             {
                 _mainMuradInstance = spawned;
+                spawned.AddComponent<CharacterLightingStabilizer>();
 
                 // Disable his wandering AI so he stays seated during the lecture.
                 // Use the concrete type — string-based GetComponent can silently return null.
@@ -603,6 +604,7 @@ public class LectureHallManager : MonoBehaviour
 
         GameObject murad = Instantiate(config.mainMuradPrefab, spawnPos, muradRot);
         murad.name = "MainMurad_Seated";
+        murad.AddComponent<CharacterLightingStabilizer>();
 
         // Disable AI immediately (same frame as Instantiate, before Start() fires).
         MuradController muradAI = murad.GetComponent<MuradController>();
