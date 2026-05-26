@@ -641,6 +641,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: ec378f03df775d541bf08d0395e649ec, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 99dcc7301819c5c47a612ffaaa38e049, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -689,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b38578f7960e24bb159fb07808ee90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
-  role: 0
+  role: 1
   idleClip: {fileID: 7400000, guid: 7c48fc0884cb3ac41833ea4e863f50fe, type: 2}
   talkingClip: {fileID: 0}
   walkingClip: {fileID: 0}
@@ -697,13 +701,13 @@ MonoBehaviour:
   paceSpeed: 0.5
   lookSpeed: 1.2
   maxLookAngle: 45
-  spineBoneName: mixamorig:Spine
+  spineBoneName: CC_Base_Spine01
   breathDepth: 1.2
   breathRate: 13
   breathPhaseOffset: 0
   headBoneName: CC_Base_Head
   neckBoneName: CC_Base_NeckTwist01
-  headLookWeight: 0.7
+  headLookWeight: 0
   headMaxAngle: 70
   headLookSpeed: 4
 --- !u!82 &3741039624004264798
@@ -717,8 +721,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

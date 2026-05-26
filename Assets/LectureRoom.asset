@@ -37,7 +37,7 @@ MonoBehaviour:
   - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
     sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
   studentSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
-  muradSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+  muradSittingClip: {fileID: 7400000, guid: 7ced6a7f375978e41b1d3b4dcff0b35c, type: 2}
   doctorPrefab: {fileID: 435031843943507312, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
   studentRows: 2
   studentsPerRow: 3

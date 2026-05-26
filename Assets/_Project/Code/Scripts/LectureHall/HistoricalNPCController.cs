@@ -408,6 +408,19 @@ public class HistoricalNPCController : MonoBehaviour
     }
 
     /// <summary>
+    /// Switches the active PlayableGraph to play a different clip immediately.
+    /// Destroys the current graph (if any) and creates a new one with <paramref name="clip"/>.
+    /// Use this to transition Murad between sitting / standing / walking clips without
+    /// touching the Animator Controller.
+    /// Pass null to stop the current graph and release the Animator back to its controller.
+    /// </summary>
+    public void SwitchToClip(AnimationClip clip)
+    {
+        if (clip == null) { StopPlayableGraph(); return; }
+        PlayClip(clip);   // PlayClip already destroys the previous graph first
+    }
+
+    /// <summary>
     /// Stops and destroys the PlayableGraph so the Animator Controller can take
     /// over again. Call this before re-enabling the Animator Controller on Murad
     /// (e.g. when he stands up and the MuradController / walk animation begins).
