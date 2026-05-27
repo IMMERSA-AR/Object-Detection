@@ -131,6 +131,11 @@ public class LectureHallManager : MonoBehaviour
     // Add this near your other private variables
     private GameObject _mainMuradInstance;
 
+    // Drives the correct Humanoid sitting pose via SampleAnimation each LateUpdate,
+    // overriding any Generic-clip T-pose the Animator Controller might produce.
+    // Created by RunLectureSequence, destroyed by MainMuradApproachUser.
+    private MuradSittingPoseDriver _sittingDriver;
+
     // Shuffled queue of student prefab variants. Lazily built on first pick,
     // refilled (and re-shuffled) when exhausted. Reset by ClearScene.
     private List<StudentVariant> _shuffledStudentVariants;
@@ -392,6 +397,15 @@ public class LectureHallManager : MonoBehaviour
                     batchVoiceCtrl.enabled = false;
                     Debug.Log("[LectureHall] VoiceAPIController disabled on Murad (batch path) — re-enabled at Q&A.");
                 }
+                // Disable CustomLipSyncContext — it runs independently of VoiceAPIController
+                // and opens Murad's mouth during the lecture whenever any audio plays.
+                // Re-enabled in MainMuradApproachUser just before Q&A starts.
+                var batchLipSync = spawned.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+                if (batchLipSync != null)
+                {
+                    batchLipSync.enabled = false;
+                    Debug.Log("[LectureHall] CustomLipSyncContext disabled on Murad (batch path) — re-enabled at Q&A.");
+                }
                 // Clear any default status text and hide UI canvases on the prefab.
                 // While VoiceAPIController is disabled, Start() is deferred, so the prefab's
                 // default TMP_Text value stays visible. Clear it now.
@@ -410,20 +424,11 @@ public class LectureHallManager : MonoBehaviour
                     anim.SetBool("IsSitting", true);
                 }
 
-                // Add head look-at so Murad tracks the doctor just like every other student.
-                // Pass a sitting clip via PlayableGraph — same approach as the progressive paths.
-                // Fallback chain: muradSittingClip → studentSittingClip → null (Animator Controller).
-                // Using PlayableGraph is more reliable than the Animator Controller because it does
-                // not depend on MuradController.controller being correctly configured.
-                HistoricalNPCController muradCtrl = spawned.GetComponent<HistoricalNPCController>();
-                if (muradCtrl == null) muradCtrl = spawned.AddComponent<HistoricalNPCController>();
-                AnimationClip batchSitClip = currentConfig != null
-                    ? (currentConfig.muradSittingClip ?? currentConfig.studentSittingClip)
-                    : null;
-                muradCtrl.InitHeadLookOnly(perChairLookTarget, batchSitClip);
-                muradCtrl.headLookWeight = 0f;
+                // Murad animation is driven purely by the Animator Controller (MuradController.controller).
+                // IsSitting=true (set above) keeps the Animator in its default Sitting Idle state.
+                // RunLectureSequence() will inject the Humanoid muradSittingClip via
+                // AnimatorOverrideController to fix T-pose from the Generic clip in the asset.
                 // SpawnDoctorAt() will call SetHeadLookTarget(doctorPos) on him
-                // because he is in _spawnedNPCs and has NPCRole.Student
                 Debug.Log($"[LectureHall] Murad seated at {pos}  euler={spawnRot.eulerAngles}  " +
                           $"world_fwd={spawned.transform.forward:F2}  " +
                           $"(flipMuradFacing={flipMuradFacing}).");
@@ -483,6 +488,13 @@ public class LectureHallManager : MonoBehaviour
                 rVoiceCtrl.enabled = false;
                 Debug.Log("[LectureHall] VoiceAPIController disabled on Murad — will re-enable at Q&A time.");
             }
+            // Disable CustomLipSyncContext — runs independently, opens Murad's mouth during lecture.
+            var rLipSync = rMurad.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+            if (rLipSync != null)
+            {
+                rLipSync.enabled = false;
+                Debug.Log("[LectureHall] CustomLipSyncContext disabled on Murad (reserved-chair path).");
+            }
             // Clear any status text shown by the Murad prefab before VoiceAPIController.Start()
             // could run. While the component is disabled Start() is deferred, so the prefab's
             // default TMP_Text value stays visible throughout the lecture. Clear it now.
@@ -505,18 +517,9 @@ public class LectureHallManager : MonoBehaviour
                 rAnim.SetBool("IsSitting",  true);
             }
 
-            HistoricalNPCController rMuradCtrl = rMurad.GetComponent<HistoricalNPCController>();
-            if (rMuradCtrl == null) rMuradCtrl = rMurad.AddComponent<HistoricalNPCController>();
-            // Use muradSittingClip if assigned; fall back to studentSittingClip.
-            // Both are Humanoid clips and retarget correctly to any Humanoid avatar.
-            // muradSittingClip = Amin_Motion_Imported_Relax_Sit only works if it was
-            // imported as Humanoid (not Generic). studentSittingClip (Mixamo Sitting Idle)
-            // is always Humanoid and is the safe fallback — this is what the obelisk commit used.
-            AnimationClip rSitClip = config.muradSittingClip ?? config.studentSittingClip;
-            rMuradCtrl.InitHeadLookOnly(rLookTarget, rSitClip);
-            rMuradCtrl.headLookWeight = 0f;
-            if (muradSitHoldNormalised > 0f)
-                rMuradCtrl.FreezePlayableGraph(muradSitHoldNormalised);
+            // Murad animation is driven purely by the Animator Controller.
+            // IsSitting=true (set above) keeps the Animator in Sitting Idle.
+            // RunLectureSequence() injects muradSittingClip via AnimatorOverrideController.
 
             _reservedMuradChairPos = null;
 
@@ -535,7 +538,7 @@ public class LectureHallManager : MonoBehaviour
             // ── Visibility diagnostics (split into separate Debug.Log calls  ─
             // so Android logcat line-length limits do NOT truncate the output) ─
             Debug.Log($"[LectureHall] *** MURAD SPAWN *** pos={rPos}  rot={rRot.eulerAngles}  prefab={config.mainMuradPrefab.name}");
-            Debug.Log($"[LectureHall] MURAD: Animator={rAnim != null}  SitClip={(rSitClip != null ? rSitClip.name : "NULL-no clip!")}  Renderers enabled={rendererCount}");
+            Debug.Log($"[LectureHall] MURAD: Animator={rAnim != null}  SitAnim=AnimatorController(IsSitting=true)  Renderers enabled={rendererCount}");
 
             SkinnedMeshRenderer[] smrs = rMurad.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true);
             if (smrs.Length == 0)
@@ -548,8 +551,11 @@ public class LectureHallManager : MonoBehaviour
             else
             {
                 foreach (var smr in smrs)
+                {
+                    smr.updateWhenOffscreen = true;   // prevent hands/feet culling during sitting animation
                     Debug.Log($"[LectureHall] MURAD SMR: '{smr.name}' enabled={smr.enabled}  " +
                               $"bounds.center={smr.bounds.center}  go.active={smr.gameObject.activeSelf}");
+                }
             }
             return;
         }
@@ -617,6 +623,13 @@ public class LectureHallManager : MonoBehaviour
             voiceCtrlSeat.enabled = false;
             Debug.Log("[LectureHall] VoiceAPIController disabled on Murad (promote path) — re-enabled at Q&A.");
         }
+        // Disable CustomLipSyncContext — runs independently, opens Murad's mouth during lecture.
+        var promoteLipSync = murad.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+        if (promoteLipSync != null)
+        {
+            promoteLipSync.enabled = false;
+            Debug.Log("[LectureHall] CustomLipSyncContext disabled on Murad (promote path).");
+        }
         // Clear any default text / hide canvas panels on the Murad prefab (same as reserved-chair path).
         foreach (var tmp in murad.GetComponentsInChildren<TMPro.TMP_Text>(includeInactive: true))
             tmp.text = "";
@@ -636,17 +649,9 @@ public class LectureHallManager : MonoBehaviour
             anim.SetBool("IsSitting", true);
         }
 
-        // Add head look-at so promoted Murad also looks toward the doctor.
-        // Use muradSittingClip if assigned, fall back to studentSittingClip (obelisk approach).
-        HistoricalNPCController muradCtrl = murad.GetComponent<HistoricalNPCController>();
-        if (muradCtrl == null) muradCtrl = murad.AddComponent<HistoricalNPCController>();
-        AnimationClip sitClip = config != null
-            ? (config.muradSittingClip ?? config.studentSittingClip)
-            : null;
-        muradCtrl.InitHeadLookOnly(murad.transform.position + murad.transform.forward * 2f, sitClip);
-        muradCtrl.headLookWeight = 0f;
-        if (muradSitHoldNormalised > 0f)
-            muradCtrl.FreezePlayableGraph(muradSitHoldNormalised);
+        // Murad animation is driven purely by the Animator Controller.
+        // IsSitting=true (set above) keeps the Animator in Sitting Idle.
+        // RunLectureSequence() injects muradSittingClip via AnimatorOverrideController.
         // SpawnDoctorAt() runs next and will redirect his look target to the doctor
 
         // Force-enable ALL renderers (same fix as the reserved-chair path).
@@ -654,6 +659,9 @@ public class LectureHallManager : MonoBehaviour
             r.enabled = true;
         foreach (Transform child in murad.GetComponentsInChildren<Transform>(includeInactive: true))
             child.gameObject.SetActive(true);
+        // Prevent hand/foot culling during sitting animation (bounds computed from T-pose at import).
+        foreach (var smr in murad.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true))
+            smr.updateWhenOffscreen = true;
 
         // Log Murad's world-space forward so orientation can be verified in logcat.
         // "Murad world fwd" should point toward the front of the room (doctor side).
@@ -691,11 +699,26 @@ public class LectureHallManager : MonoBehaviour
 
         ctrl.Init(NPCRole.Student, lookTarget);
 
-        // NPCHandRest now auto-detects bones via Humanoid Avatar first,
-        // then falls back to Mixamo / CC4 / generic name search.
-        // Works on any rig without manual bone name setup.
-        if (npc.GetComponent<NPCHandRest>() == null)
-            npc.AddComponent<NPCHandRest>();
+        // updateWhenOffscreen: sitting animations move the hands/feet outside the
+        // SkinnedMeshRenderer's import-time bounds (computed from the T-pose).
+        // Without this flag Unity culls the mesh as "off-screen" → hands appear cut off.
+        var studentSMRs = npc.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true);
+        foreach (var smr in studentSMRs)
+        {
+            smr.updateWhenOffscreen = true;
+            Debug.Log($"[LectureHall] STUDENT SMR '{npc.name}/{smr.name}' " +
+                      $"enabled={smr.enabled}  updateWhenOffscreen=true  " +
+                      $"bounds.center={smr.bounds.center}  go.active={smr.gameObject.activeSelf}");
+        }
+        if (studentSMRs.Length == 0)
+            Debug.LogWarning($"[LectureHall] STUDENT '{npc.name}' has NO SkinnedMeshRenderers — check prefab setup.");
+
+        // ── NPCHandRest is intentionally NOT added here ───────────────────────
+        // NPCHandRest pulls forearms toward hip-relative "lap targets" in LateUpdate.
+        // For CC4 characters in a sitting pose those targets land inside the thigh mesh,
+        // so the hands disappear into the geometry.  The sitting animation clip already
+        // poses the hands correctly — adding the script makes things worse, not better.
+        // (updateWhenOffscreen above handles the only real culling issue.)
     }
 
     /// <summary>
@@ -894,6 +917,12 @@ public class LectureHallManager : MonoBehaviour
         HistoricalNPCController ctrl = doctor.GetComponent<HistoricalNPCController>();
         if (ctrl != null) ctrl.Init(NPCRole.Doctor, facingTarget);
 
+        // Prevent arm/hand culling during the lecture animation.
+        // The doctor's talking clip moves arms outside the T-pose import bounds;
+        // without this flag Unity culls the SMR as "off-screen" → hands disappear.
+        foreach (var smr in doctor.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true))
+            smr.updateWhenOffscreen = true;
+
         EnsureBlockerCollider(doctor);
 
         _spawnedNPCs.Add(doctor);
@@ -933,7 +962,28 @@ public class LectureHallManager : MonoBehaviour
             // ── Head look-at ──────────────────────────────────────
             studentCtrl.SetHeadLookTarget(pos);
         }
-        Debug.Log($"[LectureHall] SpawnDoctorAt: {flipped} student(s) flipped to face doctor. " +
+        // ── Murad orientation fix ─────────────────────────────────
+        // Murad has no HistoricalNPCController so the student loop above
+        // skips him. Apply the same body-flip logic here so he faces the
+        // doctor instead of facing away from the front of the room.
+        if (_mainMuradInstance != null)
+        {
+            Vector3 muradToDoc = pos - _mainMuradInstance.transform.position;
+            muradToDoc.y = 0f;
+            if (muradToDoc.sqrMagnitude > 0.001f)
+            {
+                Vector3 muradFwd = _mainMuradInstance.transform.forward;
+                muradFwd.y = 0f;
+                if (Vector3.Dot(muradFwd.normalized, muradToDoc.normalized) < 0f)
+                {
+                    _mainMuradInstance.transform.rotation *= Quaternion.Euler(0f, 180f, 0f);
+                    flipped++;
+                    Debug.Log("[LectureHall] Orientation fix: flipped Murad to face doctor.");
+                }
+            }
+        }
+
+        Debug.Log($"[LectureHall] SpawnDoctorAt: {flipped} student(s)/Murad flipped to face doctor. " +
                   $"All {_spawnedNPCs.Count - 1} student(s) now track doctor.");
     }
 
@@ -975,6 +1025,7 @@ public class LectureHallManager : MonoBehaviour
         _variantCursor = 0;
         _reservedMuradChairPos = null;
         _lectureActive = false;
+        _sittingDriver = null;   // GameObject is destroyed above; null the ref so GC can collect it
 
         var props = GetComponent<LectureHallProps>();
         if (props != null) props.ClearProps();
@@ -1044,6 +1095,38 @@ public class LectureHallManager : MonoBehaviour
         {
             detectionAudioSource.Stop();
             Debug.Log("[LectureHall] Detection audio stopped — lecture starting.");
+        }
+
+        // ── Fix Murad T-pose during seated phase ─────────────────────────────
+        // MuradSittingPoseDriver (below) calls SampleAnimation(muradSittingClip)
+        // every LateUpdate, writing the correct Humanoid bone transforms after the
+        // Animator runs. This is sufficient — no AnimatorOverrideController needed.
+        //
+        // WHY AnimatorOverrideController was removed:
+        //   muradAnim.runtimeAnimatorController = overrideCtrl resets ALL Animator
+        //   parameters to their defaults and corrupts the state machine on Quest at
+        //   runtime: subsequent CrossFade() and IsName() calls are silently ignored
+        //   (stateHash stays constant, normTime stays 0.00 forever) → stand-up and
+        //   walk animations never play. The SittingPoseDriver alone handles the T-pose
+        //   fix without touching the Animator's state machine.
+        yield return null;
+
+        // ── SittingPoseDriver: correct Humanoid sitting pose via SampleAnimation ──
+        // this component calls SampleAnimation(muradSittingClip) in LateUpdate —
+        // AFTER the Animator has run — directly writing the correct Humanoid bone
+        // transforms onto Murad's skeleton. No name matching required.
+        if (_mainMuradInstance != null && config?.muradSittingClip != null)
+        {
+            _sittingDriver = _mainMuradInstance.AddComponent<MuradSittingPoseDriver>();
+            _sittingDriver.clip = config.muradSittingClip;
+            Debug.Log($"[LectureHall] ✓ MuradSittingPoseDriver started — " +
+                      $"clip='{config.muradSittingClip.name}'  length={config.muradSittingClip.length:F2}s  " +
+                      $"isHumanMotion={config.muradSittingClip.humanMotion}");
+        }
+        else if (config?.muradSittingClip == null)
+        {
+            Debug.LogError("[LectureHall] ✗ config.muradSittingClip is NULL — Murad will T-pose during lecture. " +
+                           "Assign a Humanoid sitting animation clip to ExperienceConfig.muradSittingClip in the Inspector.");
         }
 
         // Wait a brief moment before starting
@@ -1195,122 +1278,165 @@ public class LectureHallManager : MonoBehaviour
 
     private IEnumerator MainMuradApproachUser()
     {
-        Animator anim = _mainMuradInstance.GetComponentInChildren<Animator>();
-
-        if (anim != null)
+        // ── Stop the sitting-pose override BEFORE triggering stand-up ────────
+        if (_sittingDriver != null)
         {
-            // Don't let Mixamo / Reallusion root motion drive the transform —
-            // we drive it ourselves via CharacterController. Mixing the two
-            // produces the "twitching" the user described.
-            anim.applyRootMotion = false;
-
-            // 1. Stand up
-            anim.SetBool("IsSitting", false);
-            anim.SetBool("IsStanding", true);
+            Destroy(_sittingDriver);
+            _sittingDriver = null;
+            Debug.Log("[LectureHall] MuradSittingPoseDriver destroyed — Animator takes over for stand-up.");
         }
 
-        // ── Animation clip strategy ───────────────────────────────────────────
-        // PRIMARY (preferred): use PlayableGraph for ALL post-sit phases.
-        //   Assign muradStandingClip + muradWalkingClip in ExperienceConfig.
-        //   SwitchToClip() seamlessly swaps clips without touching the Animator
-        //   Controller — the same reliable system that already drives sitting.
-        // FALLBACK: Animator Controller booleans (IsStanding / IsWalking).
-        //   Works only when the Animator Controller has proper states & transitions.
-        AnimationClip muradStandClip = currentConfig?.muradStandingClip;
-        AnimationClip muradWalkClip  = currentConfig?.muradWalkingClip;
-        bool useGraphAnim = muradStandClip != null;
+        // ── DIAGNOSTICS: decode known state name hashes ──────────────────────
+        Debug.Log($"[LectureHall] Expected hashes — " +
+                  $"SittingIdle={Animator.StringToHash("Sitting Idle")}  " +
+                  $"StandingIdle={Animator.StringToHash("Standing Idle")}  " +
+                  $"Walk={Animator.StringToHash("Amin_Motion_Imported_Walk Relaxed_2Loop")}  " +
+                  $"Talk={Animator.StringToHash("Amin_Motion_Imported_Talk Serious")}");
 
-        // Release the head look-at so the bone returns to its animated pose.
-        HistoricalNPCController muradCtrl = _mainMuradInstance.GetComponent<HistoricalNPCController>();
-        if (muradCtrl != null)
+        // ── DIAGNOSTICS: log every Animator on Murad so we know which one is used ──
+        Animator[] allAnims = _mainMuradInstance.GetComponentsInChildren<Animator>(true);
+        Debug.Log($"[LectureHall] Murad Animator count = {allAnims.Length}");
+        for (int i = 0; i < allAnims.Length; i++)
         {
-            muradCtrl.ClearHeadLookTarget();
+            var a = allAnims[i];
+            Debug.Log($"[LectureHall]   anim[{i}] on '{a.gameObject.name}'  " +
+                      $"enabled={a.enabled}  ctrl={(a.runtimeAnimatorController != null ? a.runtimeAnimatorController.name : "NULL")}  " +
+                      $"paramCount={a.parameterCount}");
+        }
 
-            // If the sitting clip has a stand-up section (muradSitHoldNormalised > 0),
-            // resume the frozen graph so the stand-up animation plays first.
-            if (muradSitHoldNormalised > 0f)
-            {
-                muradCtrl.ResumePlayableGraph();
-                float remaining = muradCtrl.GetRemainingPlayableTime(muradSitHoldNormalised);
-                if (remaining > 0f)
-                    yield return new WaitForSeconds(remaining);
-            }
+        // Use the Animator that has parameters (is connected to MuradController.controller).
+        Animator anim = null;
+        foreach (var a in allAnims)
+        {
+            if (a.runtimeAnimatorController != null && a.parameterCount > 0)
+            { anim = a; break; }
+        }
+        if (anim == null && allAnims.Length > 0) anim = allAnims[0]; // fallback
 
-            if (useGraphAnim)
+        Debug.Log($"[LectureHall] Selected Animator: {(anim != null ? anim.gameObject.name : "NULL")}  " +
+                  $"ctrl={(anim?.runtimeAnimatorController != null ? anim.runtimeAnimatorController.name : "NULL")}");
+
+        // ── DIAGNOSTICS: log all animator parameters ──────────────────────────
+        if (anim != null)
+        {
+            string pList = "";
+            for (int i = 0; i < anim.parameterCount; i++)
+                pList += anim.parameters[i].name + " ";
+            Debug.Log($"[LectureHall] Animator parameters: [{pList.Trim()}]");
+        }
+
+        // ── Stop any PlayableGraph (HistoricalNPCController head-look) ──────
+        // IMPORTANT: must be done BEFORE any SetBool/Play calls, because an active
+        // PlayableGraph overrides the Animator Controller's output AND silently
+        // causes anim.Play() to be ignored on Quest.
+        var muradHNPC = _mainMuradInstance.GetComponent<HistoricalNPCController>();
+        if (muradHNPC != null)
+        {
+            Debug.Log($"[LectureHall] Found HistoricalNPCController on Murad — stopping PlayableGraph.");
+            muradHNPC.ClearHeadLookTarget();
+            muradHNPC.StopPlayableGraph();
+        }
+        else
+        {
+            Debug.Log("[LectureHall] No HistoricalNPCController on Murad root — checking children...");
+            var muradHNPCChild = _mainMuradInstance.GetComponentInChildren<HistoricalNPCController>(true);
+            if (muradHNPCChild != null)
             {
-                // ── PRIMARY: switch sitting PlayableGraph → standing PlayableGraph ──
-                // SwitchToClip destroys the sitting graph and starts a new one with
-                // the standing idle clip. HistoricalNPCController.Update() loops it.
-                // The Animator Controller is NOT involved — no state machine issues.
-                muradCtrl.SwitchToClip(muradStandClip);
-                Debug.Log($"[LectureHall] Murad → stand clip '{muradStandClip.name}' (PlayableGraph).");
+                Debug.Log($"[LectureHall] Found HistoricalNPCController on child '{muradHNPCChild.gameObject.name}' — stopping.");
+                muradHNPCChild.ClearHeadLookTarget();
+                muradHNPCChild.StopPlayableGraph();
             }
             else
             {
-                // ── FALLBACK: hand off to the Animator Controller ─────────────────
-                // Rebind() resets the state machine to Entry so it evaluates the
-                // correct booleans immediately instead of resuming in Sitting state.
-                muradCtrl.StopPlayableGraph();
-                if (anim != null)
-                {
-                    anim.Rebind();
-                    anim.applyRootMotion = false;
-                    anim.SetBool("IsSitting",  false);
-                    anim.SetBool("IsStanding", true);
-                    anim.SetBool("IsWalking",  false);
-                    anim.Update(0f);
-                }
-                muradCtrl.enabled = false;
-                MuradController muradWalkAI = _mainMuradInstance.GetComponent<MuradController>();
-                if (muradWalkAI != null) muradWalkAI.enabled = true;
+                Debug.Log("[LectureHall] No HistoricalNPCController found anywhere on Murad.");
             }
+        }
+
+        // Wait TWO frames so Destroy(sittingDriver) fully completes and any
+        // pending PlayableGraph output is flushed before we touch the Animator.
+        yield return null;
+        yield return null;
+
+        if (anim != null)
+        {
+            anim.enabled = true;
+            anim.applyRootMotion = false;
+
+            // ── CRITICAL: Always Animate prevents Quest from freezing bones when
+            // Murad is considered "off-screen" (culled) during the walk.
+            // "Cull Update Transforms" (the prefab default) stops bone updates the
+            // moment the character is outside the frustum — causing the sitting-pose
+            // freeze even when the Animator state machine has moved to Walk.
+            anim.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+
+            // Log state BEFORE we do anything
+            var before = anim.GetCurrentAnimatorStateInfo(0);
+            Debug.Log($"[LectureHall] State BEFORE stand-up: hash={before.shortNameHash}  time={before.normalizedTime:F2}  " +
+                      $"IsSitting={anim.GetBool("IsSitting")}  IsStanding={anim.GetBool("IsStanding")}  IsWalking={anim.GetBool("IsWalking")}");
+
+            // Force Standing Idle directly — bypass transition conditions entirely.
+            anim.Play("Standing Idle", 0, 0f);
+
+            anim.SetBool("IsSitting",  false);
+            anim.SetBool("IsStanding", true);
+            anim.SetBool("IsWalking",  false);
+            Debug.Log("[LectureHall] Murad: forced Standing Idle + IsSitting=false IsStanding=true.  cullingMode=AlwaysAnimate");
         }
 
         Transform camTransform = Camera.main.transform;
         float rotSpeed = 6f;
 
-        // ── Phase 1: stand up AND smoothly turn to face the user ─────
-        // Previously he just stood for 2 s with his back to the user. Now
-        // we rotate during those 2 s so he greets the user instead of
-        // moonwalking out of his chair.
+        // ── Phase 1: stand-up phase (2 s) — rotate Murad to face the user ────
         float standTimer = 0f;
         while (standTimer < 2.0f)
         {
             standTimer += Time.deltaTime;
-            Quaternion target = FaceTowards(_mainMuradInstance.transform.position, camTransform.position);
-            _mainMuradInstance.transform.rotation = Quaternion.Slerp(
-                _mainMuradInstance.transform.rotation, target, rotSpeed * Time.deltaTime);
+            if (_mainMuradInstance != null && camTransform != null)
+            {
+                Quaternion target = FaceTowards(
+                    _mainMuradInstance.transform.position, camTransform.position);
+                _mainMuradInstance.transform.rotation = Quaternion.Slerp(
+                    _mainMuradInstance.transform.rotation, target, rotSpeed * Time.deltaTime);
+            }
             yield return null;
         }
 
-        // Switch to walking clip (or set Animator bool in fallback mode).
-        if (useGraphAnim && muradCtrl != null)
+        // ── Phase 2: start walking ─────────────────────────────────────────────
+        if (anim != null)
         {
-            AnimationClip walkTarget = muradWalkClip ?? muradStandClip; // glide on stand if no walk clip
-            muradCtrl.SwitchToClip(walkTarget);
-            Debug.Log($"[LectureHall] Murad → walk clip '{walkTarget.name}' (PlayableGraph).");
-        }
-        else if (anim != null)
-        {
-            anim.SetBool("IsWalking", true);
+            // Log state after stand-up phase
+            var mid = anim.GetCurrentAnimatorStateInfo(0);
+            Debug.Log($"[LectureHall] State after stand-up phase: hash={mid.shortNameHash}  time={mid.normalizedTime:F2}  " +
+                      $"IsSitting={anim.GetBool("IsSitting")}  IsStanding={anim.GetBool("IsStanding")}  IsWalking={anim.GetBool("IsWalking")}");
+
+            // Force Walk state directly — no transition conditions needed.
+            anim.SetBool("IsStanding", false);
+            anim.SetBool("IsWalking",  true);
+            anim.Play("Amin_Motion_Imported_Walk Relaxed_2Loop", 0, 0f);
+
+            yield return null;  // one frame — let Play() take effect
+            if (anim != null)
+            {
+                var wi = anim.GetCurrentAnimatorStateInfo(0);
+                // IsName needs the FULL layer-prefixed path, e.g. "Base Layer.StateName".
+                // shortNameHash == StringToHash("StateName") is the reliable way to check.
+                int expectedWalkHash = Animator.StringToHash("Amin_Motion_Imported_Walk Relaxed_2Loop");
+                bool isWalkByHash   = wi.shortNameHash == expectedWalkHash;
+                bool isWalkByName   = wi.IsName("Base Layer.Amin_Motion_Imported_Walk Relaxed_2Loop");
+                Debug.Log($"[LectureHall] Walk state: hash={wi.shortNameHash}  expectedWalkHash={expectedWalkHash}  " +
+                          $"IsWalkByHash={isWalkByHash}  IsWalkByName={isWalkByName}  time={wi.normalizedTime:F2}  " +
+                          $"IsSitting={anim.GetBool("IsSitting")}  IsStanding={anim.GetBool("IsStanding")}  IsWalking={anim.GetBool("IsWalking")}");
+            }
         }
 
-        // ── Snap him to the real floor Y BEFORE walking ─────────────
-        // He may have been seated at floor-level OR at the chair seat surface
-        // depending on spawnAtSeatSurface. Either way, when he stands up he
-        // should be on the floor — not floating, not sunk.
+        // ── Snap to floor Y before walking ────────────────────────────────────
         float camY = camTransform != null ? camTransform.position.y : 1.7f;
         float floorY = FindFloorY(_mainMuradInstance.transform.position, camY);
-
         Vector3 startPos = _mainMuradInstance.transform.position;
         startPos.y = floorY;
         _mainMuradInstance.transform.position = startPos;
 
-        // 2. Initial target — compute the REAL camera-forward target BEFORE the
-        //    while loop so the first iteration's distance check isn't 0.
-        //    (If we used Murad's position as the placeholder, the condition
-        //     "Distance(murad, target) > ARRIVE_DIST" would be false on frame 0
-        //     and the loop would exit immediately without him ever walking.)
+        // Compute the stop-point in front of the user.
         Vector3 camFwdInit = camTransform.forward;
         camFwdInit.y = 0f;
         if (camFwdInit.sqrMagnitude > 0.001f) camFwdInit.Normalize(); else camFwdInit = Vector3.forward;
@@ -1318,26 +1444,26 @@ public class LectureHallManager : MonoBehaviour
                           + camFwdInit * Mathf.Max(0.6f, muradFinalDistance);
         targetPos.y = floorY;
 
-        // Remove any blocker CapsuleCollider that was added at spawn — it conflicts
-        // with movement and is no longer needed now that Murad is standing up.
+        // Disable sitting blocker collider; attach CharacterController for
+        // obstacle-aware movement (matches the working "add obelisk code" approach).
         var sittingCol = _mainMuradInstance.GetComponent<CapsuleCollider>();
-        if (sittingCol != null) Destroy(sittingCol);
+        if (sittingCol != null) sittingCol.enabled = false;
 
-        // Also destroy any CharacterController left from a previous attempt.
-        var oldCC = _mainMuradInstance.GetComponent<CharacterController>();
-        if (oldCC != null) Destroy(oldCC);
+        CharacterController cc = _mainMuradInstance.GetComponent<CharacterController>();
+        if (cc == null)
+        {
+            cc = _mainMuradInstance.AddComponent<CharacterController>();
+            cc.center     = new Vector3(0f, 0.9f, 0f);
+            cc.radius     = 0.28f;
+            cc.height     = 1.75f;
+            cc.skinWidth  = 0.04f;
+            cc.stepOffset = 0.25f;
+        }
 
         float walkSpeed = 1.2f;
 
-        // 3. Walk towards the user using direct transform movement.
-        // CharacterController was removed — it conflicted with the CapsuleCollider added
-        // by EnsureBlockerCollider and threw per-frame physics exceptions.
-        // Simple transform movement is sufficient in AR.
-        //
-        // Arrival condition: Murad stops when his horizontal distance to the camera
-        // equals muradFinalDistance (typically 1.2 m), so he stands in front of the
-        // user rather than on top of them.
-        const float ARRIVE_TOLERANCE = 0.15f;   // metres of precision at target point
+        // ── Walk loop ──────────────────────────────────────────────────────────
+        const float ARRIVE_TOLERANCE = 0.2f;
 
         Debug.Log($"[LectureHall] Murad starting walk from {_mainMuradInstance.transform.position} " +
                   $"toward user at {camTransform.position}  goal={muradFinalDistance:F1}m away");
@@ -1381,16 +1507,9 @@ public class LectureHallManager : MonoBehaviour
         Debug.Log($"[LectureHall] Murad arrived at {_mainMuradInstance.transform.position}  " +
                   $"(camera={camTransform.position})");
 
-        // 4. Arrived! Switch back to standing clip (or clear walking bool).
-        if (useGraphAnim && muradCtrl != null)
-        {
-            muradCtrl.SwitchToClip(muradStandClip);
-            Debug.Log("[LectureHall] Murad arrived — standing clip (PlayableGraph).");
-        }
-        else if (anim != null)
-        {
+        // 4. Arrived! Clear IsWalking → Animator Controller transitions to Standing Idle.
+        if (anim != null)
             anim.SetBool("IsWalking", false);
-        }
 
         float faceTimer = 0f;
         while (faceTimer < 1f)
@@ -1402,31 +1521,49 @@ public class LectureHallManager : MonoBehaviour
             yield return null;
         }
 
-        // ── Stop PlayableGraph before Q&A so VoiceAPIController can drive ──
-        // ── the Animator Controller for speaking / idle animations.        ──
-        if (useGraphAnim && muradCtrl != null)
-        {
-            muradCtrl.StopPlayableGraph();
-            if (anim != null)
-            {
-                anim.Rebind();
-                anim.applyRootMotion = false;
-                anim.SetBool("IsSitting",  false);
-                anim.SetBool("IsStanding", true);
-                anim.SetBool("IsWalking",  false);
-                anim.Update(0f);
-            }
-            // Re-enable MuradController so it manages the Animator during Q&A.
-            MuradController muradQAAI = _mainMuradInstance.GetComponent<MuradController>();
-            if (muradQAAI != null) muradQAAI.enabled = true;
-        }
+        // ── Q&A phase: Animator Controller is already in Standing Idle ──────
+        // VoiceAPIController.Update() will set IsTalking=true when audio plays
+        // and IsTalking=false when done — the Animator Controller handles the
+        // Talk Serious ↔ Standing Idle transitions automatically.
+        // Re-enable MuradController now that its Start() can run safely
+        // (MuradController.Start() sets IsStanding=true which matches current state).
+        MuradController muradQAAI = _mainMuradInstance?.GetComponent<MuradController>();
+        if (muradQAAI != null) muradQAAI.enabled = true;
 
-        // ── Re-enable VoiceAPIController now that Q&A is actually starting ──
-        // It was disabled at spawn to prevent T-pose and early voice input.
-        // Re-enabling here gives VoiceAPIController time to initialise before
-        // the greeting audio plays, so lip-sync works from the first word.
+        // ── Re-enable VoiceAPIController + CustomLipSyncContext for Q&A ────────
+        // Both were disabled at spawn to keep Murad silent and still during lecture.
+        // Re-enabling here so lips move correctly from the very first greeting word.
         if (_mainMuradInstance != null)
         {
+            // ── Locate the CustomLipSyncContext ───────────────────────────────
+            // GetComponentInChildren(includeInactive:true) searches inactive child GOs
+            // too.  If the component's GO was inactive at instantiation, Awake() never
+            // ran and _predictor is null.  We fix this by:
+            //   1. Activating the child GO so Unity's lifecycle can proceed.
+            //   2. Calling EnsureInitialized() to bootstrap predictor + AudioSource
+            //      without relying on Awake/Start timing.
+            var qaLipSync = _mainMuradInstance.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+            if (qaLipSync != null)
+            {
+                // Ensure the GO the component lives on is active.
+                if (!qaLipSync.gameObject.activeSelf)
+                {
+                    qaLipSync.gameObject.SetActive(true);
+                    Debug.Log("[LectureHall] CustomLipSyncContext GO was inactive — activated for Q&A.");
+                }
+
+                qaLipSync.enabled = true;
+
+                // Bootstrap predictor in case Awake() never ran (inactive GO at spawn).
+                qaLipSync.EnsureInitialized();
+
+                Debug.Log("[LectureHall] CustomLipSyncContext re-enabled + initialized for Q&A.");
+            }
+            else
+            {
+                Debug.LogWarning("[LectureHall] CustomLipSyncContext NOT FOUND on Murad — lip sync will be silent.");
+            }
+
             VoiceAPIController qaVoice = _mainMuradInstance.GetComponent<VoiceAPIController>();
             if (qaVoice != null)
             {
@@ -1453,6 +1590,27 @@ public class LectureHallManager : MonoBehaviour
 
             if (voiceCtrl != null)
             {
+                // Pre-compute the viseme timeline for the greeting clip BEFORE playback.
+                // CustomLipSyncContext.Update() looks up the timeline by AudioClip instance;
+                // if FeedAudioClip is not called first, it finds nothing → lips never move.
+                //
+                // voiceCtrl.customLipSyncContext is an Inspector-wired field; if it is null
+                // (not assigned), fall back to finding the component ourselves.
+                var lipCtx = voiceCtrl.customLipSyncContext
+                          ?? _mainMuradInstance.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+
+                if (lipCtx != null)
+                {
+                    lipCtx.EnsureInitialized();       // idempotent — safe if already ready
+                    lipCtx.FeedAudioClip(greetingAudioClip);
+                    Debug.Log("[LectureHall] Greeting: FeedAudioClip called on CustomLipSyncContext.");
+                }
+                else
+                {
+                    Debug.LogWarning("[LectureHall] Greeting: No CustomLipSyncContext found — " +
+                                     "lip sync will not play for greeting.");
+                }
+
                 // --- Lip source (moves the mouth) ---
                 if (voiceCtrl.audioSource != null)
                 {
@@ -1927,6 +2085,132 @@ public class LectureHallManager : MonoBehaviour
 
         // ── 3. Hard fallback ─────────────────────────────────────
         return cameraY - 1.7f;
+    }
+
+    // ── Murad sitting pose driver ─────────────────────────────────────────────
+    /// <summary>
+    /// Temporary MonoBehaviour added to Murad's root GameObject during the
+    /// seated lecture phase.
+    ///
+    /// WHY IT EXISTS:
+    ///   MuradController.controller's "Sitting Idle" state references an FBX-embedded
+    ///   Generic animation (import type = Generic). Playing a Generic clip on Murad's
+    ///   Humanoid CC4 avatar retargets to nothing → T-pose.
+    ///
+    ///   This component calls <see cref="AnimationClip.SampleAnimation"/> every
+    ///   LateUpdate — AFTER the Animator has written its Generic-clip pose — to
+    ///   overwrite the bone transforms with the correct Humanoid sitting pose.
+    ///   No clip-name matching or AnimatorOverrideController slot lookup needed.
+    ///
+    /// LIFETIME:
+    ///   Added  → end of RunLectureSequence (right after the Animator override attempt)
+    ///   Removed → start of MainMuradApproachUser (before IsSitting=false fires)
+    /// </summary>
+    private class MuradSittingPoseDriver : MonoBehaviour
+    {
+        /// <summary>
+        /// Humanoid sitting animation clip (e.g. a Mixamo "Sitting Idle" .anim
+        /// imported with Rig = Humanoid). Must NOT be null.
+        /// </summary>
+        public AnimationClip clip;
+
+        private float _t = 0f;
+
+        // ── Facial protection (blend shapes + jaw bone) ──────────────────────
+        // clip.SampleAnimation() on a Humanoid clip writes BOTH:
+        //   (a) blend-shape tracks baked into the clip  → CC4 viseme morphs
+        //   (b) the Humanoid Jaw muscle → the physical CC4_Base_JawRoot bone
+        // Both paths can make Murad's mouth appear open during the lecture.
+        // Fix: snapshot blend shapes AND the jaw bone before SampleAnimation,
+        // then restore them after, so the sitting-idle clip drives the body pose
+        // only and can never touch the face.
+        private SkinnedMeshRenderer _faceMesh;
+        private float[]             _savedWeights;
+        private Transform           _jawBone;
+        private Quaternion          _savedJawRot;
+
+        void Awake()
+        {
+            // ── Blend shapes: find mesh with most blend shapes (= CC4 face/body) ──
+            var smrs = GetComponentsInChildren<SkinnedMeshRenderer>(true);
+            int maxBS = 0;
+            foreach (var smr in smrs)
+            {
+                if (smr.sharedMesh == null) continue;
+                int count = smr.sharedMesh.blendShapeCount;
+                if (count > maxBS) { maxBS = count; _faceMesh = smr; }
+            }
+            if (_faceMesh != null)
+            {
+                _savedWeights = new float[maxBS];
+                Debug.Log($"[MuradSittingPoseDriver] Face mesh = '{_faceMesh.name}'  " +
+                          $"blend shapes to protect = {maxBS}");
+            }
+            else
+            {
+                Debug.LogWarning("[MuradSittingPoseDriver] No SkinnedMeshRenderer with " +
+                                 "blend shapes found — blend-shape mouth protection inactive.");
+            }
+
+            // ── Jaw bone: Humanoid rig maps jaw via HumanBodyBones.Jaw muscle ──
+            var anim = GetComponentInChildren<Animator>();
+            if (anim != null && anim.isHuman)
+            {
+                _jawBone = anim.GetBoneTransform(HumanBodyBones.Jaw);
+                if (_jawBone != null)
+                {
+                    _savedJawRot = _jawBone.localRotation;   // rest pose = closed mouth
+                    Debug.Log($"[MuradSittingPoseDriver] Jaw bone = '{_jawBone.name}'  " +
+                              $"restRot={_savedJawRot.eulerAngles}");
+                }
+                else
+                {
+                    Debug.Log("[MuradSittingPoseDriver] HumanBodyBones.Jaw not mapped in avatar — " +
+                              "jaw-bone mouth protection inactive (blend-shape protection still active).");
+                }
+            }
+        }
+
+        void LateUpdate()
+        {
+            if (clip == null) return;
+
+            // Save root transform BEFORE SampleAnimation.
+            // For Humanoid clips SampleAnimation applies root-motion, which would slide
+            // Murad off his chair every frame.  We want body bone poses only, not root.
+            Vector3    savedPos = transform.position;
+            Quaternion savedRot = transform.rotation;
+
+            // Save facial state so the sitting clip cannot open the mouth.
+            if (_faceMesh != null && _savedWeights != null)
+                for (int i = 0; i < _savedWeights.Length; i++)
+                    _savedWeights[i] = _faceMesh.GetBlendShapeWeight(i);
+
+            // Save jaw bone rotation (Humanoid muscle path).
+            // We save it every frame so other systems (e.g. CustomLipSyncMorphTarget)
+            // can update it — we just prevent the sitting-idle clip from overriding it.
+            Quaternion jawBefore = _jawBone != null ? _jawBone.localRotation : Quaternion.identity;
+
+            // SampleAnimation writes directly to the skeleton using Humanoid retargeting.
+            clip.SampleAnimation(gameObject, _t);
+
+            // Restore root position/rotation.
+            transform.position = savedPos;
+            transform.rotation = savedRot;
+
+            // Restore blend shapes — undoes any jaw/mouth blend-shape curves in the clip.
+            if (_faceMesh != null && _savedWeights != null)
+                for (int i = 0; i < _savedWeights.Length; i++)
+                    _faceMesh.SetBlendShapeWeight(i, _savedWeights[i]);
+
+            // Restore jaw bone — undoes the Humanoid Jaw muscle applied by the clip.
+            if (_jawBone != null)
+                _jawBone.localRotation = jawBefore;
+
+            // Advance time and loop.
+            _t += Time.deltaTime;
+            if (_t > clip.length) _t %= clip.length;
+        }
     }
 
     // ── Lip-sync audio bridge ─────────────────────────────────────────────────

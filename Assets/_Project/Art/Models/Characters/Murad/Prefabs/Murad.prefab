@@ -499,6 +499,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5dc84fd122d862a43902b5016ab65fa0, type: 2}
+    - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -688,7 +696,7 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContext
   audioSource: {fileID: 7268987348757653705}
   provider: 1
@@ -714,7 +722,7 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContextMorphTarget
   skinnedMeshRenderer: {fileID: 5518425087734892745}
   visemeToBlendTargets: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -885,11 +893,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
   modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
   backendType: 512
   smoothing: 0.55
+  ppRescueBlend: 0.35
+  ppRescueThreshold: 0.12
   logTimings: 1
 --- !u!114 &-6047319904845741997
 MonoBehaviour:
@@ -901,10 +911,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c944a6cc0b5a854b995908f1f44d29a, type: 3}
-  m_Name:
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
   faceMesh: {fileID: 5518425087734892745}
   mouthExaggeration: 0.8
+  perVisemeMultiplier:
+  - 1
+  - 2
+  - 1.5
+  - 1
+  - 1
+  - 1
+  - 1.2
+  - 1
+  - 1
+  - 1
+  - 1.2
+  - 1
+  - 1
+  - 1.8
+  - 1.5
+  ppClosureThreshold: 0.25
+  ppFastSmoothing: 0.15
   visemeBlendShapeNames:
   - V_None
   - V_Explosive
@@ -921,6 +949,7 @@ MonoBehaviour:
   - Mouth_Drop_Lower
   - V_Tight_O
   - V_Tight
+  showDebugOverlay: 1
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

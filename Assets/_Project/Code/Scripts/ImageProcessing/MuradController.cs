@@ -37,8 +37,13 @@ public class MuradController : MonoBehaviour
 
         if (animator == null)
         {
-            Debug.LogError("[MuradController] No Animator found on " + gameObject.name +
-                           " or its children. Disabling MuradController.");
+            // LogWarning (not LogError) — this fires on scene-placed Manager objects
+            // that don't own an Animator.  MuradController is only meaningful on
+            // Murad's prefab; placing it elsewhere is harmless but generates noise.
+            // Remove this component from any non-Murad scene object to silence this.
+            Debug.LogWarning("[MuradController] No Animator found on '" + gameObject.name +
+                             "' or its children — MuradController disabled on this object. " +
+                             "If this is a Manager/LectureHallManager, remove the MuradController component from it in the Inspector.");
             enabled = false;
             return;
         }
