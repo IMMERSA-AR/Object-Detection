@@ -62392,9 +62392,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3c5e4f3924d98a4c899278b1ae8c271, type: 3}
       insertIndex: 1
       addedObject: {fileID: 509241505171074175}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3c5e4f3924d98a4c899278b1ae8c271, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8763148860887209515}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: d3c5e4f3924d98a4c899278b1ae8c271, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3716809234058229017}
@@ -62800,28 +62797,6 @@ MonoBehaviour:
   magicaClothMeshes: []
   settings: []
   characterGUID: d3c5e4f3924d98a4c899278b1ae8c271
---- !u!114 &8763148860887209515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3381418713629169961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 503e0666b07b311498843e46ec55f353, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCHandRest
-  leftForeArmBone: CC_Base_L_Forearm
-  rightForeArmBone: CC_Base_R_Forearm
-  leftHandBone: CC_Base_L_Hand
-  rightHandBone: CC_Base_R_Hand
-  hipBoneName: CC_Base_Waist
-  lapForward: 0.05
-  lapDown: -0.15
-  lapSideOffset: 0.12
-  restWeight: 0.45
-  smoothSpeed: 5
 --- !u!4 &3504442882978664721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7886340013906823831, guid: d3c5e4f3924d98a4c899278b1ae8c271, type: 3}

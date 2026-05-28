@@ -17,7 +17,7 @@ public class NPCBlinking : MonoBehaviour
     public float minInterval  = 2.5f;
     public float maxInterval  = 6.0f;
     [Tooltip("Total duration of one blink (close + open), seconds. Human avg ≈ 0.14 s.")]
-    public float blinkDuration = 0.14f;
+    public float blinkDuration = 0.09f;
 
     [Header("Blend-shape name override (leave empty = auto-detect)")]
     [Tooltip("Left-eye blink blend shape name. Auto-filled on first run.")]
