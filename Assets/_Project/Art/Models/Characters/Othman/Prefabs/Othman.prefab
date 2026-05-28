@@ -255,10 +255,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4300000, guid: d5682ae868e3aa24c8591cfad2dfedd4, type: 2}
     - target: {fileID: -6797724186838214649, guid: 5696a2d04396313459987521de2d8ca0, type: 3}
-      propertyPath: m_LightProbeUsage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6797724186838214649, guid: 5696a2d04396313459987521de2d8ca0, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
       objectReference: {fileID: 0}
