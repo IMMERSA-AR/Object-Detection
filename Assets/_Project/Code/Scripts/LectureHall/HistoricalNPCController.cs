@@ -21,6 +21,10 @@ public class HistoricalNPCController : MonoBehaviour
     [Tooltip("Doctor only: the talking/lecturing animation clip")]
     public AnimationClip talkingClip;
 
+    [Tooltip("Doctor only: standing idle clip played AFTER the lecture ends.\n" +
+             "If left empty, falls back to idleClip.")]
+    public AnimationClip standingAfterLectureClip;
+
     [Tooltip("Doctor only: walking/pacing clip")]
     public AnimationClip walkingClip;
 
@@ -165,6 +169,10 @@ public class HistoricalNPCController : MonoBehaviour
             }
         }
 
+        // ── Auto-add blinking if not already present ──────────────
+        if (GetComponent<NPCBlinking>() == null)
+            gameObject.AddComponent<NPCBlinking>();
+
         PlayClip(idleClip);
         Debug.Log($"[NPC] {gameObject.name} initialized as {role}");
     }
@@ -209,11 +217,8 @@ public class HistoricalNPCController : MonoBehaviour
     {
         LoopActiveClip();
 
-        if (role == NPCRole.Doctor && _isLecturing)
-        {
-            UpdateDoctorPacing();
-        }
-        // Doctor rotation is locked at spawn — never updated toward the user
+        // Doctor stands in place — no positional pacing.
+        // The Talk Serious clip handles all visible motion.
     }
 
     // Keep current animation looping — PlayableGraph plays once by default
@@ -242,8 +247,9 @@ public class HistoricalNPCController : MonoBehaviour
         }
         else
         {
-            transform.position = _paceOrigin;
-            PlayClip(idleClip);
+            AnimationClip standClip = standingAfterLectureClip != null ? standingAfterLectureClip : idleClip;
+            PlayClip(standClip);
+            Debug.Log($"[NPC] Doctor lecture ended — playing stand idle: {standClip?.name}");
         }
     }
 

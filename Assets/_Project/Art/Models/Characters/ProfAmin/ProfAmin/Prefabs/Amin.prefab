@@ -694,8 +694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
   role: 1
-  idleClip: {fileID: 7400000, guid: 7c48fc0884cb3ac41833ea4e863f50fe, type: 2}
-  talkingClip: {fileID: 0}
+  idleClip: {fileID: 7400000, guid: 58be8b94b354b714bb832cf3d27902e6, type: 2}
+  talkingClip: {fileID: 7400000, guid: 7c48fc0884cb3ac41833ea4e863f50fe, type: 2}
+  standingAfterLectureClip: {fileID: 7400000, guid: 58be8b94b354b714bb832cf3d27902e6, type: 2}
   walkingClip: {fileID: 0}
   paceDistance: 0.6
   paceSpeed: 0.5

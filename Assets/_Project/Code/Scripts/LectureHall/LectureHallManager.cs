@@ -699,26 +699,33 @@ public class LectureHallManager : MonoBehaviour
 
         ctrl.Init(NPCRole.Student, lookTarget);
 
-        // updateWhenOffscreen: sitting animations move the hands/feet outside the
-        // SkinnedMeshRenderer's import-time bounds (computed from the T-pose).
-        // Without this flag Unity culls the mesh as "off-screen" → hands appear cut off.
+        // updateWhenOffscreen + expanded localBounds:
+        // Sitting animations move hands/feet outside the import-time T-pose bounds.
+        // updateWhenOffscreen alone is not enough — Unity still uses localBounds for
+        // per-mesh frustum culling, so parts outside the box get clipped even when
+        // the character is on-screen.  We expand the local bounds to a generous box
+        // (2 m half-extents) so no limb is ever culled regardless of pose.
         var studentSMRs = npc.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true);
+        Bounds expandedBounds = new Bounds(Vector3.zero, Vector3.one * 4f); // 4 m cube centred on root
         foreach (var smr in studentSMRs)
         {
             smr.updateWhenOffscreen = true;
-            Debug.Log($"[LectureHall] STUDENT SMR '{npc.name}/{smr.name}' " +
-                      $"enabled={smr.enabled}  updateWhenOffscreen=true  " +
-                      $"bounds.center={smr.bounds.center}  go.active={smr.gameObject.activeSelf}");
+            smr.localBounds = expandedBounds;
         }
         if (studentSMRs.Length == 0)
             Debug.LogWarning($"[LectureHall] STUDENT '{npc.name}' has NO SkinnedMeshRenderers — check prefab setup.");
 
-        // ── NPCHandRest is intentionally NOT added here ───────────────────────
+        // ── Disable NPCHandRest if the prefab has it ─────────────────────────
         // NPCHandRest pulls forearms toward hip-relative "lap targets" in LateUpdate.
-        // For CC4 characters in a sitting pose those targets land inside the thigh mesh,
-        // so the hands disappear into the geometry.  The sitting animation clip already
-        // poses the hands correctly — adding the script makes things worse, not better.
-        // (updateWhenOffscreen above handles the only real culling issue.)
+        // For CC4 characters in a sitting pose those targets land inside the thigh mesh
+        // → hands disappear into the geometry.  The sitting animation clip poses the
+        // hands correctly on its own — NPCHandRest makes things worse, not better.
+        var handRest = npc.GetComponent<NPCHandRest>();
+        if (handRest != null)
+        {
+            handRest.enabled = false;
+            Debug.Log($"[LectureHall] NPCHandRest disabled on seated student '{npc.name}' — prevents hands from sinking into thighs.");
+        }
     }
 
     /// <summary>
@@ -1122,6 +1129,28 @@ public class LectureHallManager : MonoBehaviour
             Debug.Log($"[LectureHall] ✓ MuradSittingPoseDriver started — " +
                       $"clip='{config.muradSittingClip.name}'  length={config.muradSittingClip.length:F2}s  " +
                       $"isHumanMotion={config.muradSittingClip.humanMotion}");
+
+            // ── Wire head look-at toward the doctor ───────────────────────────
+            // Search _spawnedNPCs for the Doctor role — the doctor may not be in
+            // the list yet on the very first frame (RunLectureSequence yields once
+            // before this block), but SpawnDoctorAt is called before RunLectureSequence
+            // is started, so the doctor is always present by the time we reach here.
+            foreach (var npc in _spawnedNPCs)
+            {
+                if (npc == null) continue;
+                var ctrl = npc.GetComponent<HistoricalNPCController>();
+                if (ctrl != null && ctrl.Role == NPCRole.Doctor)
+                {
+                    // Aim at approximately the doctor's eye level (1.5 m above his floor position).
+                    _sittingDriver.headLookTarget    = npc.transform.position + Vector3.up * 1.5f;
+                    _sittingDriver.hasHeadLookTarget = true;
+                    Debug.Log($"[LectureHall] MuradSittingPoseDriver: head look-at wired to doctor '{npc.name}' " +
+                              $"at {_sittingDriver.headLookTarget:F2}");
+                    break;
+                }
+            }
+            if (!_sittingDriver.hasHeadLookTarget)
+                Debug.LogWarning("[LectureHall] MuradSittingPoseDriver: doctor not found in _spawnedNPCs — Murad head look-at inactive.");
         }
         else if (config?.muradSittingClip == null)
         {
@@ -1131,6 +1160,9 @@ public class LectureHallManager : MonoBehaviour
 
         // Wait a brief moment before starting
         yield return new WaitForSeconds(1.0f);
+
+        // Tell the doctor to switch to his talking animation now that the lecture begins.
+        NotifyDoctorLecturing(true);
 
         if (config.lectureAudioClip == null)
         {
@@ -1243,7 +1275,9 @@ public class LectureHallManager : MonoBehaviour
 
         Debug.Log("[LectureHall] Lecture audio finished.");
 
-        // Stop doctor talking animation if you have one
+        // Switch doctor back to standing idle — stops talking animation and pacing.
+        NotifyDoctorLecturing(false);
+
         if (lectureUI != null) lectureUI.SetActive(false);
 
         // TRIGGER MAIN MURAD TO STAND UP AND WALK TO USER
@@ -2116,6 +2150,20 @@ public class LectureHallManager : MonoBehaviour
 
         private float _t = 0f;
 
+        // ── Head look-at toward the doctor ───────────────────────────────────
+        /// <summary>World-space position of the doctor. Set by LectureHallManager.</summary>
+        public Vector3 headLookTarget;
+        public bool    hasHeadLookTarget = false;
+
+        [Range(0f, 1f)] public float headLookWeight = 0.65f;
+        public float headMaxAngle  = 60f;
+        public float headLookSpeed = 4f;
+
+        private Transform  _headBone;
+        private Transform  _neckBone;
+        private Quaternion _headSmoothRot;
+        private bool       _headInitialized;
+
         // ── Facial protection (blend shapes + jaw bone) ──────────────────────
         // clip.SampleAnimation() on a Humanoid clip writes BOTH:
         //   (a) blend-shape tracks baked into the clip  → CC4 viseme morphs
@@ -2168,6 +2216,15 @@ public class LectureHallManager : MonoBehaviour
                     Debug.Log("[MuradSittingPoseDriver] HumanBodyBones.Jaw not mapped in avatar — " +
                               "jaw-bone mouth protection inactive (blend-shape protection still active).");
                 }
+
+                // ── Head / neck bones for look-at ─────────────────────────
+                _headBone = anim.GetBoneTransform(HumanBodyBones.Head);
+                _neckBone = anim.GetBoneTransform(HumanBodyBones.Neck);
+                if (_headBone != null)
+                    Debug.Log($"[MuradSittingPoseDriver] Head bone = '{_headBone.name}'  " +
+                              $"Neck = '{(_neckBone != null ? _neckBone.name : "not found")}'");
+                else
+                    Debug.LogWarning("[MuradSittingPoseDriver] Head bone not found — head look-at inactive.");
             }
         }
 
@@ -2210,6 +2267,49 @@ public class LectureHallManager : MonoBehaviour
             // Advance time and loop.
             _t += Time.deltaTime;
             if (_t > clip.length) _t %= clip.length;
+
+            // ── Head look-at toward doctor (applied LAST, overrides sit-pose) ──
+            if (hasHeadLookTarget && _headBone != null)
+                ApplyHeadLookAt();
+        }
+
+        private void ApplyHeadLookAt()
+        {
+            // Lock Y to head height so Murad doesn't tilt his head up/down awkwardly.
+            Vector3 eyeLevelTarget = new Vector3(headLookTarget.x,
+                                                  _headBone.position.y,
+                                                  headLookTarget.z);
+
+            Vector3 toTarget = eyeLevelTarget - _headBone.position;
+            if (toTarget.sqrMagnitude < 0.001f) return;
+
+            // Horizontal angle from body-forward to doctor direction.
+            Vector3 toFlat  = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
+            Vector3 bodyFwd = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
+            float angleY    = Vector3.SignedAngle(bodyFwd, toFlat, Vector3.up);
+            float clamped   = Mathf.Clamp(angleY, -headMaxAngle, headMaxAngle);
+
+            // Smooth initialise on first frame.
+            if (!_headInitialized)
+            {
+                _headSmoothRot   = _headBone.rotation;
+                _headInitialized = true;
+            }
+
+            // Apply a pure world-Y rotation on top of the sit-pose bone rotation.
+            Quaternion animRot = _headBone.rotation;
+            Quaternion desired = Quaternion.AngleAxis(clamped, Vector3.up) * animRot;
+            _headSmoothRot     = Quaternion.Slerp(_headSmoothRot, desired,
+                                                    Time.deltaTime * headLookSpeed);
+
+            // Blend head rotation.
+            _headBone.rotation = Quaternion.Slerp(animRot, _headSmoothRot, headLookWeight);
+
+            // Neck gets ~40 % of the turn for a natural two-joint look.
+            if (_neckBone != null)
+                _neckBone.rotation = Quaternion.Slerp(_neckBone.rotation,
+                                                       _headSmoothRot,
+                                                       headLookWeight * 0.4f);
         }
     }
 

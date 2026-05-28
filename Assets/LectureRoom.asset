@@ -31,13 +31,13 @@ MonoBehaviour:
   studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
   studentPrefabVariants:
   - prefab: {fileID: 7928455528523659242, guid: 2cd4dec2657352b4591c25eb0d6a40a4, type: 3}
-    sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+    sittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
   - prefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
-    sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
+    sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
   - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
-    sittingClip: {fileID: -203655887218126122, guid: 9bfd89300aa3e9644b77849d5534c6ef, type: 3}
-  studentSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
-  muradSittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+    sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
+  studentSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
+  muradSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
   muradStandingClip: {fileID: 0}
   muradWalkingClip: {fileID: 0}
   doctorPrefab: {fileID: 435031843943507312, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
