@@ -30,13 +30,13 @@ EditorBuildSettings:
     path: Assets/_Project/Level/Scenes/StartScene.unity
     guid: 8c660bb31e436794584a3d89d1caddea
   - enabled: 0
-    path: Assets/_Project/Level/Scenes/Nada_Shaimaa.unity
+    path: Assets/_Project/Level/Scenes/Test/Nada_Shaimaa.unity
     guid: 36b566d6a4b628d4ba2a3435307ae5c3
   - enabled: 0
-    path: Assets/_Project/Level/Scenes/Tawfik_Saad.unity
+    path: Assets/_Project/Level/Scenes/Test/Tawfik_Saad.unity
     guid: 129fd0d5266e40849aeffff2d2017f1b
   - enabled: 0
-    path: Assets/_Project/Level/Scenes/TimeMachine.unity
+    path: Assets/_Project/Level/Scenes/Test/TimeMachine.unity
     guid: a35fb59c47d32024890fd0b9dd485b78
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2c94dd94e98578646833ef3c291dd324, type: 2}

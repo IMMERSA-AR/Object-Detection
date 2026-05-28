@@ -90,6 +90,7 @@ Material:
     - _SmoothnessRear: 0
     - _TeethBrightness: 0.659
     - _TeethSaturation: 1
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2086def5ac45df54399acc1d44c2ede7, type: 2}
+    - target: {fileID: 3230203076670083041, guid: 99dcc7301819c5c47a612ffaaa38e049, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5197118176682910397, guid: 99dcc7301819c5c47a612ffaaa38e049, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -650,6 +654,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99dcc7301819c5c47a612ffaaa38e049, type: 3}
       insertIndex: -1
       addedObject: {fileID: 948049442608946469}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99dcc7301819c5c47a612ffaaa38e049, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 677312205154623391}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 99dcc7301819c5c47a612ffaaa38e049, type: 3}
       insertIndex: -1
@@ -697,6 +704,11 @@ MonoBehaviour:
   paceSpeed: 0.5
   lookSpeed: 1.2
   maxLookAngle: 45
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  headLookWeight: 0.7
+  headMaxAngle: 70
+  headLookSpeed: 4
 --- !u!82 &3741039624004264798
 AudioSource:
   m_ObjectHideFlags: 0
@@ -934,7 +946,6 @@ MonoBehaviour:
     ExpressionsByBone:
     - BoneName: CC_Base_JawRoot
       BoneTransform: {fileID: 501673549432132516}
-      BoneMatch: 2
       RefPositionArr:
       - -0.018510742
       - 0.0236573
@@ -1099,7 +1110,6 @@ MonoBehaviour:
         Rotation: {x: -0.00001590001, y: 0.0000119388405, z: -0.0000198175, w: 1}
     - BoneName: CC_Base_Head
       BoneTransform: {fileID: 2745821849726883776}
-      BoneMatch: 6
       RefPositionArr:
       - -0.0000041801536
       - 0.039941557
@@ -1204,7 +1214,6 @@ MonoBehaviour:
         Rotation: {x: -0.0000004991889, y: 0, z: 0, w: 0.99999994}
     - BoneName: CC_Base_L_Eye
       BoneTransform: {fileID: 2124915413069002409}
-      BoneMatch: 1
       RefPositionArr:
       - -0.078417204
       - 0.07812436
@@ -1249,7 +1258,6 @@ MonoBehaviour:
         Rotation: {x: -0.0000016988815, y: 0, z: -0.00000061481114, w: 1}
     - BoneName: CC_Base_R_Eye
       BoneTransform: {fileID: 7756651817863760946}
-      BoneMatch: 1
       RefPositionArr:
       - -0.078940734
       - 0.07980426
@@ -4141,9 +4149,77 @@ MonoBehaviour:
     - 0
     - 0
     - 0
-  driveEyes: 1
-  driveJaw: 1
-  driveNeck: 1
-  driveTongue: 1
-  driveTeeth: 1
-  driveHead: 0
+--- !u!1001 &1075501187844438132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 955426696243986378}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.019981384
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2550197
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.854718
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+      propertyPath: m_Name
+      value: tarbouch v3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+--- !u!4 &677312205154623391 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9bb593893fa57bf459817995d34ecffb, type: 3}
+  m_PrefabInstance: {fileID: 1075501187844438132}
+  m_PrefabAsset: {fileID: 0}

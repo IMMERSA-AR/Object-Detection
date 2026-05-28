@@ -102,6 +102,7 @@ Material:
     - _ShadowTopMin: 0.2624
     - _ShadowTopMinContrast: 0
     - _ShowBlurRange: 0
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _BlurColor: {r: 1, g: 0.78741235, b: 0.78741235, a: 1}
     - _ShadowColor: {r: 0.21404114, g: 0.21404114, b: 0.21404114, a: 1}
