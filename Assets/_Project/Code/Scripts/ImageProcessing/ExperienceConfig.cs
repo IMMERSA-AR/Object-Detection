@@ -42,10 +42,10 @@ public class ExperienceConfig : ScriptableObject
     [Tooltip("Forward/backward offset from anchor center")]
     public float forwardOffset = 0f;
 
-[Header("Lecture Hall (ExperienceType = LectureHall only)")]
+    [Header("Lecture Hall (ExperienceType = LectureHall only)")]
     [Tooltip("Optional intro audio clip played the moment the user clicks Begin.\n" +
-             "Chair detection waits until this clip finishes before starting.\n" +
-             "Leave empty to start chair detection immediately.")]
+                 "Chair detection waits until this clip finishes before starting.\n" +
+                 "Leave empty to start chair detection immediately.")]
     public AudioClip introAudioClip;
 
     [Tooltip("Audio that loops during the chair-detection phase (while students are being placed).\n" +

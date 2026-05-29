@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+using Meta.XR;
 
 /// <summary>
 /// Sends camera frames to the Python obelisk detection server and
@@ -12,34 +13,36 @@ using UnityEngine.Networking;
 ///  2. Set ServerIP to your PC's IPv4 address (run ipconfig in CMD).
 ///  3. Attach this script to a GameObject in the Obelisk scene.
 ///  4. Assign characterPrefab and characterSpawnRoot in Inspector.
+///  5. Ensure a PassthroughCameraAccess component exists in the scene
+///     (added automatically by the [BuildingBlock] Passthrough building block).
 /// </summary>
 public class ObeliskDetectionClient : MonoBehaviour
 {
     [Header("Server")]
     [Tooltip("Your PC's IPv4 address — run 'ipconfig' in CMD to find it.")]
-    public string serverIP   = "192.168.1.5";
-    public int    serverPort = 5000;
+    public string serverIP = "192.168.1.5";
+    public int serverPort = 5000;
 
     [Header("Detection")]
     [Tooltip("Send a frame every N seconds. Lower = more responsive but more CPU.")]
-    public float  detectionInterval  = 1.0f;
+    public float detectionInterval = 1.0f;
 
     [Tooltip("How many consecutive detections needed before spawning characters.\n" +
              "Higher = more robust, less twitchy.")]
-    public int    confirmFrames = 3;
+    public int confirmFrames = 3;
 
     [Tooltip("Minimum detection confidence — reject if bbox height < this fraction of frame.")]
-    public float  minObeliskHeightFraction = 0.3f;
+    public float minObeliskHeightFraction = 0.3f;
 
     [Header("Character Spawning")]
     [Tooltip("How far from the camera the characters are placed (metres) when the obelisk is detected.")]
-    public float  spawnDistance = 3.0f;
+    public float spawnDistance = 3.0f;
 
     [Tooltip("Prefabs to spawn around the detected obelisk.")]
     public GameObject[] characterPrefabs;
 
     [Tooltip("Parent transform for spawned characters (optional).")]
-    public Transform    spawnRoot;
+    public Transform spawnRoot;
 
     [Header("UI Feedback")]
     [Tooltip("Optional UI shown while scanning.")]
@@ -56,14 +59,28 @@ public class ObeliskDetectionClient : MonoBehaviour
     public System.Action OnObeliskConfirmed;
 
     // ── private ───────────────────────────────────────────────
-    private string  _serverUrl;
-    private bool    _running        = false;
-    private bool    _spawned        = false;
-    private int     _consecutiveHits = 0;
+    private string _serverUrl;
+    private bool _running = false;
+    private bool _spawned = false;
+    private int _consecutiveHits = 0;
 
     // Last confirmed detection data
-    private float   _lastCX, _lastCY;   // normalized center (0-1)
-    private float   _lastHeight;         // normalized height
+    private float _lastCX, _lastCY;   // normalized center (0-1)
+    private float _lastHeight;         // normalized height
+
+    // Passthrough camera (Meta XR) — provides the real-world camera feed on Quest.
+    // The virtual Camera.main render does NOT include passthrough (it's a compositor
+    // overlay), so we need this to send frames the server can actually detect from.
+    private PassthroughCameraAccess _cameraAccess;
+
+    // ── Awake ──────────────────────────────────────────────────
+    private void Awake()
+    {
+        _cameraAccess = FindAnyObjectByType<PassthroughCameraAccess>();
+        if (_cameraAccess == null)
+            Debug.LogWarning("[ObeliskClient] PassthroughCameraAccess not found in scene — " +
+                             "will use virtual camera fallback (editor/testing only).");
+    }
 
     // ── Start ──────────────────────────────────────────────────
     private void Start()
@@ -71,8 +88,8 @@ public class ObeliskDetectionClient : MonoBehaviour
         _serverUrl = $"http://{serverIP}:{serverPort}";
         Debug.Log($"[ObeliskClient] Server URL: {_serverUrl}");
 
-        if (scanningUI  != null) scanningUI.SetActive(false);
-        if (detectedUI  != null) detectedUI.SetActive(false);
+        if (scanningUI != null) scanningUI.SetActive(false);
+        if (detectedUI != null) detectedUI.SetActive(false);
     }
 
     // ── Public API ─────────────────────────────────────────────
@@ -81,8 +98,8 @@ public class ObeliskDetectionClient : MonoBehaviour
     public void StartDetection()
     {
         if (_running) return;
-        _running         = true;
-        _spawned         = false;
+        _running = true;
+        _spawned = false;
         _consecutiveHits = 0;
 
         if (scanningUI != null) scanningUI.SetActive(true);
@@ -106,7 +123,7 @@ public class ObeliskDetectionClient : MonoBehaviour
             foreach (Transform child in spawnRoot)
                 Destroy(child.gameObject);
 
-        _spawned         = false;
+        _spawned = false;
         _consecutiveHits = 0;
         Debug.Log("[ObeliskClient] Detection stopped.");
     }
@@ -116,6 +133,21 @@ public class ObeliskDetectionClient : MonoBehaviour
     {
         // First, ping the server to confirm it's reachable
         yield return StartCoroutine(PingServer());
+
+        // Wait for the passthrough camera to produce its first frame
+        if (_cameraAccess != null)
+        {
+            float waited = 0f;
+            while (!_cameraAccess.IsPlaying && waited < 5f)
+            {
+                yield return new WaitForSeconds(0.2f);
+                waited += 0.2f;
+            }
+            if (!_cameraAccess.IsPlaying)
+                Debug.LogWarning("[ObeliskClient] Passthrough camera not ready after 5 s — falling back to virtual camera.");
+            else
+                Debug.Log("[ObeliskClient] Passthrough camera ready.");
+        }
 
         while (_running && !_spawned)
         {
@@ -151,7 +183,7 @@ public class ObeliskDetectionClient : MonoBehaviour
 
         // ── Send to server ─────────────────────────────────────
         using var req = new UnityWebRequest($"{_serverUrl}/detect", "POST");
-        req.uploadHandler   = new UploadHandlerRaw(jpegBytes);
+        req.uploadHandler = new UploadHandlerRaw(jpegBytes);
         req.downloadHandler = new DownloadHandlerBuffer();
         req.SetRequestHeader("Content-Type", "application/octet-stream");
         req.timeout = 10;
@@ -189,8 +221,8 @@ public class ObeliskDetectionClient : MonoBehaviour
 
         // ── Confirmed detection ────────────────────────────────
         _consecutiveHits++;
-        _lastCX     = result.bbox.cx;
-        _lastCY     = result.bbox.cy;
+        _lastCX = result.bbox.cx;
+        _lastCY = result.bbox.cy;
         _lastHeight = result.bbox.height;
 
         Debug.Log($"[ObeliskClient] Detection hit {_consecutiveHits}/{confirmFrames}  " +
@@ -208,33 +240,55 @@ public class ObeliskDetectionClient : MonoBehaviour
 
     private byte[] CaptureFrameAsJpeg()
     {
-        // Capture whatever the camera currently sees via a RenderTexture snapshot.
-        // Resolution 640x480 is enough for detection and keeps network traffic low.
-        int capW = 640, capH = 480;
+        const int capW = 640, capH = 480;
 
-        RenderTexture rt = RenderTexture.GetTemporary(capW, capH, 0);
+        // Primary path: passthrough camera gives the real-world feed on Quest.
+        // Camera.main renders only virtual objects — passthrough is a compositor
+        // overlay and never appears in a Camera.main render.
+        if (_cameraAccess != null && _cameraAccess.IsPlaying)
+        {
+            Texture camTex = _cameraAccess.GetTexture();
+            if (camTex != null)
+            {
+                RenderTexture rt = RenderTexture.GetTemporary(capW, capH, 0, RenderTextureFormat.ARGB32);
+                Graphics.Blit(camTex, rt);
+
+                RenderTexture.active = rt;
+                Texture2D tex = new Texture2D(capW, capH, TextureFormat.RGB24, false);
+                tex.ReadPixels(new Rect(0, 0, capW, capH), 0, 0);
+                tex.Apply();
+                RenderTexture.active = null;
+                RenderTexture.ReleaseTemporary(rt);
+
+                byte[] jpg = tex.EncodeToJPG(75);
+                Destroy(tex);
+                return jpg;
+            }
+        }
+
+        // Fallback: virtual camera render — useful in the Unity Editor only.
         Camera cam = Camera.main;
         if (cam == null)
         {
-            RenderTexture.ReleaseTemporary(rt);
-            Debug.LogWarning("[ObeliskClient] No main camera found.");
+            Debug.LogWarning("[ObeliskClient] No passthrough camera and no main camera found.");
             return null;
         }
 
-        cam.targetTexture = rt;
+        RenderTexture fallbackRt = RenderTexture.GetTemporary(capW, capH, 0);
+        cam.targetTexture = fallbackRt;
         cam.Render();
         cam.targetTexture = null;
 
-        RenderTexture.active = rt;
-        Texture2D tex = new Texture2D(capW, capH, TextureFormat.RGB24, false);
-        tex.ReadPixels(new Rect(0, 0, capW, capH), 0, 0);
-        tex.Apply();
+        RenderTexture.active = fallbackRt;
+        Texture2D fallbackTex = new Texture2D(capW, capH, TextureFormat.RGB24, false);
+        fallbackTex.ReadPixels(new Rect(0, 0, capW, capH), 0, 0);
+        fallbackTex.Apply();
         RenderTexture.active = null;
-        RenderTexture.ReleaseTemporary(rt);
+        RenderTexture.ReleaseTemporary(fallbackRt);
 
-        byte[] jpg = tex.EncodeToJPG(75);
-        Destroy(tex);
-        return jpg;
+        byte[] fallbackJpg = fallbackTex.EncodeToJPG(75);
+        Destroy(fallbackTex);
+        return fallbackJpg;
     }
 
     // ── Spawn characters around the obelisk ───────────────────
@@ -271,7 +325,7 @@ public class ObeliskDetectionClient : MonoBehaviour
         {
             if (characterPrefabs[i] == null) continue;
 
-            float angle  = i * (360f / count);
+            float angle = i * (360f / count);
             float radius = 1.5f;
             Vector3 offset = Quaternion.Euler(0, angle, 0) * Vector3.forward * radius;
             Vector3 spawnPos = worldCenter + offset;
@@ -292,9 +346,9 @@ public class ObeliskDetectionClient : MonoBehaviour
     [Serializable]
     private class DetectionResult
     {
-        public bool   detected;
+        public bool detected;
         public string reason;
-        public BBox   bbox;
+        public BBox bbox;
     }
 
     [Serializable]

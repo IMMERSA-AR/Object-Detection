@@ -234,11 +234,11 @@ public class ExperienceManager : MonoBehaviour
             while (t != null && !isMRUK)
             {
                 string n = t.gameObject.name;
-                if (n.Contains("MRUK")         || n.Contains("GlobalMesh")   ||
-                    n.Contains("EffectMesh")    || n.Contains("SceneMesh")    ||
-                    n.Contains("RoomMesh")      || n.Contains("OVRScene")     ||
+                if (n.Contains("MRUK") || n.Contains("GlobalMesh") ||
+                    n.Contains("EffectMesh") || n.Contains("SceneMesh") ||
+                    n.Contains("RoomMesh") || n.Contains("OVRScene") ||
                     n.Contains("OVRGlobalMesh") || n.Contains("SceneCapture") ||
-                    n.Contains("MRUKRoom")      || n.Contains("RoomModel"))
+                    n.Contains("MRUKRoom") || n.Contains("RoomModel"))
                     isMRUK = true;
                 t = t.parent;
             }
@@ -505,7 +505,7 @@ public class ExperienceManager : MonoBehaviour
             chairMeshDetector.DetectChairs(
                 chairs => OnMeshChairsReady(chairs, config),
                 status => { if (chairScanLabel != null) chairScanLabel.text = status; },
-                pos    => lectureHallManager.SpawnStudentAtChair(pos, config));
+                pos => lectureHallManager.SpawnStudentAtChair(pos, config));
         }
         else if (chairYOLODetector != null)
         {

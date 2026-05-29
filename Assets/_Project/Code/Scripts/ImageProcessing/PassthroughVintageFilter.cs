@@ -10,21 +10,21 @@ public class PassthroughVintageFilter : MonoBehaviour
 {
     [Header("Tone")]
     [Range(-1f, 1f)] public float saturation = 0f;
-    [Range(-1f, 1f)] public float brightness  = 0f;
-    [Range(-1f, 1f)] public float contrast    = 0f;
+    [Range(-1f, 1f)] public float brightness = 0f;
+    [Range(-1f, 1f)] public float contrast = 0f;
 
     [Header("Color Tint")]
-    [Range(0f, 2f)] public float redScale   = 1f;
+    [Range(0f, 2f)] public float redScale = 1f;
     [Range(0f, 2f)] public float greenScale = 1f;
-    [Range(0f, 2f)] public float blueScale  = 1f;
+    [Range(0f, 2f)] public float blueScale = 1f;
 
     private OVRPassthroughLayer _layer;
 
-    private void Awake()  => _layer = GetComponent<OVRPassthroughLayer>();
-    private void Start()  => Apply();
+    private void Awake() => _layer = GetComponent<OVRPassthroughLayer>();
+    private void Start() => Apply();
     private void OnDisable() => ResetPassthrough();
 
-    private void Update()  => Apply();
+    private void Update() => Apply();
 
     [ContextMenu("Apply Now")]
     public void Apply()
@@ -32,7 +32,7 @@ public class PassthroughVintageFilter : MonoBehaviour
         if (_layer == null) _layer = GetComponent<OVRPassthroughLayer>();
         if (_layer == null) return;
         _layer.SetBrightnessContrastSaturation(brightness, contrast, saturation);
-        _layer.colorScale  = new Vector4(redScale, greenScale, blueScale, 1f);
+        _layer.colorScale = new Vector4(redScale, greenScale, blueScale, 1f);
         _layer.colorOffset = Vector4.zero;
     }
 
@@ -42,7 +42,7 @@ public class PassthroughVintageFilter : MonoBehaviour
         if (_layer == null) _layer = GetComponent<OVRPassthroughLayer>();
         if (_layer == null) return;
         _layer.DisableColorMap();
-        _layer.colorScale  = Vector4.one;
+        _layer.colorScale = Vector4.one;
         _layer.colorOffset = Vector4.zero;
     }
 }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
+    path: Assets/_Project/Level/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
     path: Assets/PassthroughCameraApiSamples/CameraToWorld/CameraToWorld.unity
     guid: 756785b371a4f49438b7e2148816e892
   - enabled: 0

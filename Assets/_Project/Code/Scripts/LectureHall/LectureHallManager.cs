@@ -364,7 +364,7 @@ public class LectureHallManager : MonoBehaviour
                 StudentVariant variant = PickStudentVariant(currentConfig);
                 if (variant == null) continue;
                 prefabToSpawn = variant.prefab;
-                variantClip   = variant.sittingClip;
+                variantClip = variant.sittingClip;
             }
 
             if (prefabToSpawn == null) continue;
@@ -513,8 +513,8 @@ public class LectureHallManager : MonoBehaviour
             {
                 rAnim.applyRootMotion = false;
                 rAnim.SetBool("IsStanding", false);
-                rAnim.SetBool("IsWalking",  false);
-                rAnim.SetBool("IsSitting",  true);
+                rAnim.SetBool("IsWalking", false);
+                rAnim.SetBool("IsSitting", true);
             }
 
             // Murad animation is driven purely by the Animator Controller.
@@ -827,9 +827,9 @@ public class LectureHallManager : MonoBehaviour
         if (npc.GetComponent<CapsuleCollider>() != null) return;
 
         var cap = npc.AddComponent<CapsuleCollider>();
-        cap.center    = new Vector3(0f, 0.9f, 0f);
-        cap.radius    = 0.30f;
-        cap.height    = 1.75f;
+        cap.center = new Vector3(0f, 0.9f, 0f);
+        cap.radius = 0.30f;
+        cap.height = 1.75f;
         cap.direction = 1; // Y-axis
     }
 
@@ -1088,8 +1088,8 @@ public class LectureHallManager : MonoBehaviour
     public void PlayDetectionAudio(AudioClip clip)
     {
         if (detectionAudioSource == null || clip == null) return;
-        detectionAudioSource.clip  = clip;
-        detectionAudioSource.loop  = true;
+        detectionAudioSource.clip = clip;
+        detectionAudioSource.loop = true;
         detectionAudioSource.Play();
         Debug.Log($"[LectureHall] Detection audio started: {clip.name}");
     }
@@ -1142,7 +1142,7 @@ public class LectureHallManager : MonoBehaviour
                 if (ctrl != null && ctrl.Role == NPCRole.Doctor)
                 {
                     // Aim at approximately the doctor's eye level (1.5 m above his floor position).
-                    _sittingDriver.headLookTarget    = npc.transform.position + Vector3.up * 1.5f;
+                    _sittingDriver.headLookTarget = npc.transform.position + Vector3.up * 1.5f;
                     _sittingDriver.hasHeadLookTarget = true;
                     Debug.Log($"[LectureHall] MuradSittingPoseDriver: head look-at wired to doctor '{npc.name}' " +
                               $"at {_sittingDriver.headLookTarget:F2}");
@@ -1180,11 +1180,11 @@ public class LectureHallManager : MonoBehaviour
             if (lectureAudioSource != null)
             {
                 lectureAudioSource.outputAudioMixerGroup = null;  // bypass any muted mixer group
-                lectureAudioSource.spatialBlend          = 0f;    // 2D — always heard at full volume
-                lectureAudioSource.volume                = 1f;
-                lectureAudioSource.mute                  = false;
-                lectureAudioSource.loop                  = false;
-                lectureAudioSource.clip                  = config.lectureAudioClip;
+                lectureAudioSource.spatialBlend = 0f;    // 2D — always heard at full volume
+                lectureAudioSource.volume = 1f;
+                lectureAudioSource.mute = false;
+                lectureAudioSource.loop = false;
+                lectureAudioSource.clip = config.lectureAudioClip;
                 lectureAudioSource.Play();
                 Debug.Log($"[LectureHall] Playing lecture audio: {config.lectureAudioClip.name}  " +
                           $"length={config.lectureAudioClip.length:F1}s");
@@ -1232,10 +1232,10 @@ public class LectureHallManager : MonoBehaviour
                     if (doctorLipSyncAudio != null)
                     {
                         doctorLipSyncAudio.outputAudioMixerGroup = null;
-                        doctorLipSyncAudio.clip         = config.lectureAudioClip;
-                        doctorLipSyncAudio.loop         = false;
-                        doctorLipSyncAudio.mute         = false; // must NOT be muted
-                        doctorLipSyncAudio.volume       = 1f;    // must be > 0 for PCM to reach OnAudioFilterRead
+                        doctorLipSyncAudio.clip = config.lectureAudioClip;
+                        doctorLipSyncAudio.loop = false;
+                        doctorLipSyncAudio.mute = false; // must NOT be muted
+                        doctorLipSyncAudio.volume = 1f;    // must be > 0 for PCM to reach OnAudioFilterRead
                         doctorLipSyncAudio.spatialBlend = 0f;
                         doctorLipSyncAudio.Play();
                         // PostprocessAudioSamples zeros this buffer → inaudible to user.
@@ -1411,9 +1411,9 @@ public class LectureHallManager : MonoBehaviour
             // Force Standing Idle directly — bypass transition conditions entirely.
             anim.Play("Standing Idle", 0, 0f);
 
-            anim.SetBool("IsSitting",  false);
+            anim.SetBool("IsSitting", false);
             anim.SetBool("IsStanding", true);
-            anim.SetBool("IsWalking",  false);
+            anim.SetBool("IsWalking", false);
             Debug.Log("[LectureHall] Murad: forced Standing Idle + IsSitting=false IsStanding=true.  cullingMode=AlwaysAnimate");
         }
 
@@ -1445,7 +1445,7 @@ public class LectureHallManager : MonoBehaviour
 
             // Force Walk state directly — no transition conditions needed.
             anim.SetBool("IsStanding", false);
-            anim.SetBool("IsWalking",  true);
+            anim.SetBool("IsWalking", true);
             anim.Play("Amin_Motion_Imported_Walk Relaxed_2Loop", 0, 0f);
 
             yield return null;  // one frame — let Play() take effect
@@ -1455,8 +1455,8 @@ public class LectureHallManager : MonoBehaviour
                 // IsName needs the FULL layer-prefixed path, e.g. "Base Layer.StateName".
                 // shortNameHash == StringToHash("StateName") is the reliable way to check.
                 int expectedWalkHash = Animator.StringToHash("Amin_Motion_Imported_Walk Relaxed_2Loop");
-                bool isWalkByHash   = wi.shortNameHash == expectedWalkHash;
-                bool isWalkByName   = wi.IsName("Base Layer.Amin_Motion_Imported_Walk Relaxed_2Loop");
+                bool isWalkByHash = wi.shortNameHash == expectedWalkHash;
+                bool isWalkByName = wi.IsName("Base Layer.Amin_Motion_Imported_Walk Relaxed_2Loop");
                 Debug.Log($"[LectureHall] Walk state: hash={wi.shortNameHash}  expectedWalkHash={expectedWalkHash}  " +
                           $"IsWalkByHash={isWalkByHash}  IsWalkByName={isWalkByName}  time={wi.normalizedTime:F2}  " +
                           $"IsSitting={anim.GetBool("IsSitting")}  IsStanding={anim.GetBool("IsStanding")}  IsWalking={anim.GetBool("IsWalking")}");
@@ -1487,10 +1487,10 @@ public class LectureHallManager : MonoBehaviour
         if (cc == null)
         {
             cc = _mainMuradInstance.AddComponent<CharacterController>();
-            cc.center     = new Vector3(0f, 0.9f, 0f);
-            cc.radius     = 0.28f;
-            cc.height     = 1.75f;
-            cc.skinWidth  = 0.04f;
+            cc.center = new Vector3(0f, 0.9f, 0f);
+            cc.radius = 0.28f;
+            cc.height = 1.75f;
+            cc.skinWidth = 0.04f;
             cc.stepOffset = 0.25f;
         }
 
@@ -1649,10 +1649,10 @@ public class LectureHallManager : MonoBehaviour
                 if (voiceCtrl.audioSource != null)
                 {
                     voiceCtrl.audioSource.Stop();
-                    voiceCtrl.audioSource.clip        = greetingAudioClip;
-                    voiceCtrl.audioSource.loop        = false;
-                    voiceCtrl.audioSource.mute        = false;
-                    voiceCtrl.audioSource.volume      = 1f;
+                    voiceCtrl.audioSource.clip = greetingAudioClip;
+                    voiceCtrl.audioSource.loop = false;
+                    voiceCtrl.audioSource.mute = false;
+                    voiceCtrl.audioSource.volume = 1f;
                     voiceCtrl.audioSource.spatialBlend = 1f;
                     voiceCtrl.audioSource.Play();
                 }
@@ -1661,10 +1661,10 @@ public class LectureHallManager : MonoBehaviour
                 if (voiceCtrl.speakerSource != null)
                 {
                     voiceCtrl.speakerSource.Stop();
-                    voiceCtrl.speakerSource.clip        = greetingAudioClip;
-                    voiceCtrl.speakerSource.loop        = false;
-                    voiceCtrl.speakerSource.mute        = false;
-                    voiceCtrl.speakerSource.volume      = 1f;
+                    voiceCtrl.speakerSource.clip = greetingAudioClip;
+                    voiceCtrl.speakerSource.loop = false;
+                    voiceCtrl.speakerSource.mute = false;
+                    voiceCtrl.speakerSource.volume = 1f;
                     voiceCtrl.speakerSource.spatialBlend = 1f;
                     voiceCtrl.speakerSource.Play();
                 }
@@ -1685,10 +1685,10 @@ public class LectureHallManager : MonoBehaviour
                     muradAudio = _mainMuradInstance.AddComponent<AudioSource>();
 
                 muradAudio.spatialBlend = 1f;
-                muradAudio.loop         = false;
-                muradAudio.mute         = false;
-                muradAudio.volume       = 1f;
-                muradAudio.clip         = greetingAudioClip;
+                muradAudio.loop = false;
+                muradAudio.mute = false;
+                muradAudio.volume = 1f;
+                muradAudio.clip = greetingAudioClip;
                 muradAudio.Play();
                 Debug.Log("[LectureHallManager] Playing Murad greeting audio via fallback AudioSource.");
             }
@@ -1747,7 +1747,7 @@ public class LectureHallManager : MonoBehaviour
         Vector3 fallback;
         if (Camera.main != null)
         {
-            Vector3 camXZ   = new Vector3(Camera.main.transform.position.x, 0f, Camera.main.transform.position.z);
+            Vector3 camXZ = new Vector3(Camera.main.transform.position.x, 0f, Camera.main.transform.position.z);
             Vector3 chairXZ = new Vector3(chairPos.x, 0f, chairPos.z);
             Vector3 awayFromUser = chairXZ - camXZ;
             fallback = awayFromUser.sqrMagnitude > 0.0001f ? awayFromUser.normalized : Vector3.forward;
@@ -1769,7 +1769,7 @@ public class LectureHallManager : MonoBehaviour
                         if (!anchor.HasLabel("COUCH") && !anchor.HasLabel("OTHER")) continue;
                         Vector3 ap = anchor.transform.position;
                         float dx = ap.x - chairPos.x, dz = ap.z - chairPos.z;
-                        float d  = Mathf.Sqrt(dx * dx + dz * dz);
+                        float d = Mathf.Sqrt(dx * dx + dz * dz);
                         if (d < bestDist) { bestDist = d; best = anchor; }
                     }
                     if (best != null)
@@ -1795,12 +1795,12 @@ public class LectureHallManager : MonoBehaviour
         // ── Level 2: backrest detection via raycast scan ─────────
         if (_envRaycast != null)
         {
-            float camY   = Camera.main != null ? Camera.main.transform.position.y : 1.7f;
+            float camY = Camera.main != null ? Camera.main.transform.position.y : 1.7f;
             float floorY = FindFloorY(chairPos, camY);
             float probeY = floorY + chairBackrestProbeHeight;
             Vector3 origin = new Vector3(chairPos.x, probeY, chairPos.z);
 
-            const int   numRays      = 16;
+            const int numRays = 16;
             const float searchRadius = 0.40f;   // chair backrest ≤ ~0.4 m from seat centre
 
             float closest = searchRadius;
@@ -2153,16 +2153,16 @@ public class LectureHallManager : MonoBehaviour
         // ── Head look-at toward the doctor ───────────────────────────────────
         /// <summary>World-space position of the doctor. Set by LectureHallManager.</summary>
         public Vector3 headLookTarget;
-        public bool    hasHeadLookTarget = false;
+        public bool hasHeadLookTarget = false;
 
         [Range(0f, 1f)] public float headLookWeight = 0.65f;
-        public float headMaxAngle  = 60f;
+        public float headMaxAngle = 60f;
         public float headLookSpeed = 4f;
 
-        private Transform  _headBone;
-        private Transform  _neckBone;
+        private Transform _headBone;
+        private Transform _neckBone;
         private Quaternion _headSmoothRot;
-        private bool       _headInitialized;
+        private bool _headInitialized;
 
         // ── Facial protection (blend shapes + jaw bone) ──────────────────────
         // clip.SampleAnimation() on a Humanoid clip writes BOTH:
@@ -2173,9 +2173,9 @@ public class LectureHallManager : MonoBehaviour
         // then restore them after, so the sitting-idle clip drives the body pose
         // only and can never touch the face.
         private SkinnedMeshRenderer _faceMesh;
-        private float[]             _savedWeights;
-        private Transform           _jawBone;
-        private Quaternion          _savedJawRot;
+        private float[] _savedWeights;
+        private Transform _jawBone;
+        private Quaternion _savedJawRot;
 
         void Awake()
         {
@@ -2235,7 +2235,7 @@ public class LectureHallManager : MonoBehaviour
             // Save root transform BEFORE SampleAnimation.
             // For Humanoid clips SampleAnimation applies root-motion, which would slide
             // Murad off his chair every frame.  We want body bone poses only, not root.
-            Vector3    savedPos = transform.position;
+            Vector3 savedPos = transform.position;
             Quaternion savedRot = transform.rotation;
 
             // Save facial state so the sitting clip cannot open the mouth.
@@ -2284,22 +2284,22 @@ public class LectureHallManager : MonoBehaviour
             if (toTarget.sqrMagnitude < 0.001f) return;
 
             // Horizontal angle from body-forward to doctor direction.
-            Vector3 toFlat  = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
+            Vector3 toFlat = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
             Vector3 bodyFwd = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
-            float angleY    = Vector3.SignedAngle(bodyFwd, toFlat, Vector3.up);
-            float clamped   = Mathf.Clamp(angleY, -headMaxAngle, headMaxAngle);
+            float angleY = Vector3.SignedAngle(bodyFwd, toFlat, Vector3.up);
+            float clamped = Mathf.Clamp(angleY, -headMaxAngle, headMaxAngle);
 
             // Smooth initialise on first frame.
             if (!_headInitialized)
             {
-                _headSmoothRot   = _headBone.rotation;
+                _headSmoothRot = _headBone.rotation;
                 _headInitialized = true;
             }
 
             // Apply a pure world-Y rotation on top of the sit-pose bone rotation.
             Quaternion animRot = _headBone.rotation;
             Quaternion desired = Quaternion.AngleAxis(clamped, Vector3.up) * animRot;
-            _headSmoothRot     = Quaternion.Slerp(_headSmoothRot, desired,
+            _headSmoothRot = Quaternion.Slerp(_headSmoothRot, desired,
                                                     Time.deltaTime * headLookSpeed);
 
             // Blend head rotation.

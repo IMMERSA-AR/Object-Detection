@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: de51889e96419be4c9e67099a8c06b20
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\04849602ed744889b033ffa5222068fb_RGB_Board_Board_Display_wood_diffuse.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\04849602ed744889b033ffa5222068fb_RGB_Board_Board_Display_wood_diffuse.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\19e3fe381286410eb89d2884eb293bcd_N_Board_BoardDecor_wood_normalmap.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\19e3fe381286410eb89d2884eb293bcd_N_Board_BoardDecor_wood_normalmap.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\64448abc9a054d3c961eeccf03b330ba_RGB_Board_BoardDecor_wood_diffuse.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\64448abc9a054d3c961eeccf03b330ba_RGB_Board_BoardDecor_wood_diffuse.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\6739aec29c03410f91c0f2f51e2ecbe3_RGB_Board_Board_Body_wood_diffuse.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\6739aec29c03410f91c0f2f51e2ecbe3_RGB_Board_Board_Body_wood_diffuse.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\6dd56d4ce4874a0d881c37fba0545951_N_Board_Board_Display_wood_normalmap.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\6dd56d4ce4874a0d881c37fba0545951_N_Board_Board_Display_wood_normalmap.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\c14e65e704154c6d99386f80b2facfeb_R_Board_BoardDecor_wood_roughness.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\c14e65e704154c6d99386f80b2facfeb_R_Board_BoardDecor_wood_roughness.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\d352b9590bdb4bd988c111ea61d4548f_N_Board_Board_Body_wood_normalmap.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\d352b9590bdb4bd988c111ea61d4548f_N_Board_Board_Body_wood_normalmap.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\dc96819442214e7fba727e3709689d1a_R_Board_Board_Display_wood_roughness.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\dc96819442214e7fba727e3709689d1a_R_Board_Board_Display_wood_roughness.png
+  - type: 1
+    originalUri: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\fb9c26bddb2742ddb58900bed586ea51_R_Board_Board_Body_wood_roughness.png
+    assetPath: Assets\_Project\Art\Models\HeroObjects\ChalkBoardWood\fb9c26bddb2742ddb58900bed586ea51_R_Board_Board_Body_wood_roughness.png
+  reportItems:
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []

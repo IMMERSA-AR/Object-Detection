@@ -19,8 +19,8 @@ public class ObeliskManager : MonoBehaviour
     // ── Inspector references ──────────────────────────────────────────
 
     [Header("Detection")]
-    [Tooltip("The ObeliskDetectionClient that sends frames to the Python server.")]
-    public ObeliskDetectionClient detectionClient;
+    [Tooltip("The ObeliskYOLODetector that runs on-device inference.")]
+    public ObeliskYOLODetector detectionClient;
 
     [Header("Audio")]
     [Tooltip("AudioSource used for scanning and detected sounds.\n" +
@@ -41,8 +41,8 @@ public class ObeliskManager : MonoBehaviour
     // ── Private state ─────────────────────────────────────────────────
 
     private ExperienceConfig _config;
-    private System.Action    _onComplete;
-    private bool             _started;
+    private System.Action _onComplete;
+    private bool _started;
 
     // ── Public API ────────────────────────────────────────────────────
 
@@ -57,9 +57,9 @@ public class ObeliskManager : MonoBehaviour
             return;
         }
 
-        _config     = config;
+        _config = config;
         _onComplete = onComplete;
-        _started    = true;
+        _started = true;
 
         Debug.Log("[ObeliskManager] Starting obelisk experience.");
 
@@ -81,8 +81,8 @@ public class ObeliskManager : MonoBehaviour
         SetScanningUI(false);
         SetDetectedUI(false);
 
-        _started    = false;
-        _config     = null;
+        _started = false;
+        _config = null;
         _onComplete = null;
 
         Debug.Log("[ObeliskManager] Scene cleared.");
@@ -163,8 +163,8 @@ public class ObeliskManager : MonoBehaviour
     {
         if (audioSource == null || clip == null) return;
         audioSource.Stop();
-        audioSource.clip   = clip;
-        audioSource.loop   = loop;
+        audioSource.clip = clip;
+        audioSource.loop = loop;
         audioSource.Play();
     }
 

@@ -125,8 +125,8 @@ public class HistoricalNPCController : MonoBehaviour
 
             // Cache spine, head & neck bones for LateUpdate breathing + look-at
             _spineBone = FindDeepChild(transform, spineBoneName);
-            _headBone  = FindDeepChild(transform, headBoneName);
-            _neckBone  = FindDeepChild(transform, neckBoneName);
+            _headBone = FindDeepChild(transform, headBoneName);
+            _neckBone = FindDeepChild(transform, neckBoneName);
 
             // Randomise breath phase so all students don't breathe in sync
             breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
@@ -387,8 +387,8 @@ public class HistoricalNPCController : MonoBehaviour
         _animator = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
 
         _spineBone = FindDeepChild(transform, spineBoneName);
-        _headBone  = FindDeepChild(transform, headBoneName);
-        _neckBone  = FindDeepChild(transform, neckBoneName);
+        _headBone = FindDeepChild(transform, headBoneName);
+        _neckBone = FindDeepChild(transform, neckBoneName);
 
         breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
 
@@ -477,7 +477,7 @@ public class HistoricalNPCController : MonoBehaviour
     public float GetRemainingPlayableTime(float holdNormalised)
     {
         if (!_graph.IsValid() || _activeClip == null) return 0f;
-        float elapsed  = holdNormalised * _activeClip.length;
+        float elapsed = holdNormalised * _activeClip.length;
         float remaining = _activeClip.length - elapsed;
         return Mathf.Max(0f, remaining);
     }
