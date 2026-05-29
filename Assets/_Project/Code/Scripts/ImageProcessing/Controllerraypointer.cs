@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using TMPro;
 
 /// <summary>
 /// Quest World Space UI ray pointer.
@@ -144,6 +145,9 @@ public class ControllerRayPointer : MonoBehaviour
         if (hitObj != null && _lastHitPoint != Vector3.zero)
             _line.SetPosition(1, _lastHitPoint);
 
+        // Also test for TMP_InputField under the ray
+        TMP_InputField hitInputField = hitButton == null ? FindHitInputField(activeRay) : null;
+
         // Trigger on EITHER controller = click
         bool triggered =
             OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch) ||
@@ -152,12 +156,19 @@ public class ControllerRayPointer : MonoBehaviour
         if (triggered)
         {
             Debug.Log($"[RayPointer] TRIGGER ({activeController}). " +
-                      $"Button={hitButton?.name ?? "NONE"}");
+                      $"Button={hitButton?.name ?? "NONE"} " +
+                      $"InputField={hitInputField?.name ?? "NONE"}");
 
             if (hitButton != null && hitButton.interactable)
             {
                 Debug.Log($"[RayPointer] CLICKING: {hitButton.name}");
                 hitButton.onClick.Invoke();
+            }
+            else if (hitInputField != null && hitInputField.interactable)
+            {
+                Debug.Log($"[RayPointer] FOCUSING input field: {hitInputField.name}");
+                hitInputField.Select();
+                hitInputField.ActivateInputField();
             }
         }
     }
@@ -251,6 +262,55 @@ public class ControllerRayPointer : MonoBehaviour
         }
 
         return bestButton;
+    }
+
+    /// <summary>
+    /// Same plane-intersection logic as FindHitButton but tests TMP_InputField rects.
+    /// Enables ray-clicking a search field to open the virtual keyboard on-device.
+    /// </summary>
+    private TMP_InputField FindHitInputField(Ray ray)
+    {
+        if (targetCanvas == null) return null;
+
+        RectTransform canvasRect = targetCanvas.GetComponent<RectTransform>();
+
+        Vector3 hitWorld = Vector3.zero;
+        bool found = false;
+
+        foreach (var normal in new[] { -targetCanvas.transform.forward, targetCanvas.transform.forward })
+        {
+            Plane plane = new Plane(normal, targetCanvas.transform.position);
+            float enter;
+            if (!plane.Raycast(ray, out enter) || enter < 0.01f) continue;
+
+            Vector3 hp = ray.GetPoint(enter);
+            Vector3 lp3 = canvasRect.InverseTransformPoint(hp);
+
+            if (canvasRect.rect.Contains(new Vector2(lp3.x, lp3.y)))
+            {
+                hitWorld = hp;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) return null;
+
+        TMP_InputField[] fields = targetCanvas.GetComponentsInChildren<TMP_InputField>(false);
+
+        foreach (TMP_InputField field in fields)
+        {
+            if (!field.gameObject.activeInHierarchy || !field.interactable) continue;
+
+            RectTransform rt = field.GetComponent<RectTransform>();
+            if (rt == null) continue;
+
+            Vector3 localPt3 = rt.InverseTransformPoint(hitWorld);
+            if (rt.rect.Contains(new Vector2(localPt3.x, localPt3.y)))
+                return field;
+        }
+
+        return null;
     }
 
     private void ClearHover()

@@ -314,17 +314,30 @@ public class ExperienceManager : MonoBehaviour
 
     public void ShowMenu()
     {
-        // Clear any previously spawned cards
+        BuildCards(experiences);
+        PositionMenuInFrontOfPlayer();
+        menuCanvas.gameObject.SetActive(true);
+        Debug.Log("[ExperienceManager] Menu visible.");
+    }
+
+    /// <summary>
+    /// Clears and rebuilds the card container from the supplied config list.
+    /// Called by SceneSearchController with a filtered subset.
+    /// </summary>
+    public void BuildCards(ExperienceConfig[] configs)
+    {
         foreach (Transform child in cardContainer)
             Destroy(child.gameObject);
 
-        Debug.Log($"[ExperienceManager] Building menu with {experiences.Length} experience(s)...");
+        if (configs == null) return;
 
-        foreach (var config in experiences)
+        Debug.Log($"[ExperienceManager] Building {configs.Length} card(s).");
+
+        foreach (var config in configs)
         {
             if (config == null)
             {
-                Debug.LogWarning("[ExperienceManager] One entry in experiences array is null — skipping.");
+                Debug.LogWarning("[ExperienceManager] Null entry in configs array — skipping.");
                 continue;
             }
 
@@ -333,18 +346,13 @@ public class ExperienceManager : MonoBehaviour
 
             if (card == null)
             {
-                Debug.LogError("[ExperienceManager] cardPrefab has no ExperienceCard component! Add the ExperienceCard script to the prefab root.");
+                Debug.LogError("[ExperienceManager] cardPrefab has no ExperienceCard component!");
                 Destroy(cardGO);
                 continue;
             }
 
             card.Setup(config, this);
-            Debug.Log($"[ExperienceManager] Card spawned for '{config.experienceName}'");
         }
-
-        PositionMenuInFrontOfPlayer();
-        menuCanvas.gameObject.SetActive(true);
-        Debug.Log("[ExperienceManager] Menu visible.");
     }
 
     // private void PositionMenuInFrontOfPlayer()
