@@ -3,22 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    // This allows you to type the exact target scene name in the Inspector for each button
-    [Header("Scene Configuration")]
-    [SerializeField] private string sceneToLoad;
+    // 1. Define your exact available scenes here
+    public enum TargetScene
+    {
+        ObeliskScene,
+        LectureHallScene
+    }
 
-    // This public method can be called by your button's OnClick event
+    [Header("Scene Selection")]
+    [Tooltip("Pick your destination from the dropdown list.")]
+    [SerializeField] private TargetScene sceneToLoad;
+
     public void LoadTargetScene(bool isOn)
     {
-        // Only load the scene when the toggle is being switched to TRUE (clicked on)
-        if (isOn && !string.IsNullOrEmpty(sceneToLoad))
-        {
-            Debug.Log($"Loading Scene: {sceneToLoad}");
-            SceneManager.LoadScene(sceneToLoad);
-        }
-        else
-        {
-            Debug.LogWarning($"No scene name assigned on {gameObject.name}!");
-        }
+        if (!isOn) return;
+
+        // Convert the chosen enum value directly into a text string
+        string finalSceneName = sceneToLoad.ToString();
+
+        Debug.Log($"Loading Scene: {finalSceneName}");
+        SceneManager.LoadScene(finalSceneName);
     }
 }
