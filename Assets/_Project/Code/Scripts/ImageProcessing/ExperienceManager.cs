@@ -320,6 +320,23 @@ public class ExperienceManager : MonoBehaviour
 
         Debug.Log($"[ExperienceManager] Building menu with {experiences.Length} experience(s)...");
 
+        // ── Ensure cardContainer has a layout group so cards don't overlap ──
+        // If a VerticalLayoutGroup already exists (added in the Editor) this is a no-op.
+        // If it is missing, we add one at runtime so cards are stacked vertically.
+        var layoutGroup = cardContainer.GetComponent<VerticalLayoutGroup>();
+        if (layoutGroup == null)
+        {
+            layoutGroup                       = cardContainer.gameObject.AddComponent<VerticalLayoutGroup>();
+            layoutGroup.spacing               = 20f;
+            layoutGroup.childAlignment        = TextAnchor.UpperCenter;
+            layoutGroup.childControlWidth     = true;
+            layoutGroup.childControlHeight    = false;
+            layoutGroup.childForceExpandWidth = true;
+            layoutGroup.childForceExpandHeight= false;
+            Debug.Log("[ExperienceManager] VerticalLayoutGroup added to cardContainer at runtime. " +
+                      "For cleaner setup, add it in the Editor instead.");
+        }
+
         foreach (var config in experiences)
         {
             if (config == null)

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ad77b93144e2a4e8d663e4a5ff97ef, type: 3}
+  m_Name: LectureRoom
+  m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
+  experienceType: 1
+  experienceName: Lecture Hall
+  description: 'Location Requirement: 7th floor, Omara Building. Please stand directly
+    in front of the room before starting'
+  buttonLabel: Begin
+  anchorLabel: 56
+  minConfidence: 0.5
+  maxAnchorDistance: 3
+  muradBehaviour: 0
+  standBesideOffset: 0.5
+  heightOffset: 0
+  forwardOffset: 0
+  introAudioClip: {fileID: 8300000, guid: d14616d3252587f46a0e70c982c4d5cb, type: 3}
+  chairDetectionAudioClip: {fileID: 8300000, guid: f602bb128f9ae2042bb53905e235ea1c, type: 3}
+  lectureAudioClip: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
+  mainMuradPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
+  studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
+  studentPrefabVariants:
+  - prefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
+    sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
+  - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
+    sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
+  studentSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
+  muradSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
+  muradStandingClip: {fileID: 0}
+  muradWalkingClip: {fileID: 0}
+  doctorPrefab: {fileID: 435031843943507312, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
+  studentRows: 2
+  studentsPerRow: 3
+  obeliskScanningAudioClip: {fileID: 0}
+  obeliskDetectedAudioClip: {fileID: 0}
+  obeliskGuidanceText: "Point the camera at the obelisk\u2026"
