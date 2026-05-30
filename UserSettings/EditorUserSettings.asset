@@ -5,9 +5,6 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
-    GraphicsSettingsInspector_UserSettings:
-      value: 18134705175a055722080a3115371d4a0d55006876786860616b0471b8b07a68ffab74f9ee2a3a30300cea1a11320d0beb1a0c25f7060f494b4cc80018eb09361fc211cb1f862d19c51d19dcc413d6ade0d8ddfcddf9f4d9d29195fcfde6ebeae6f0a9c9afa6f8c5b89ff7a1aacececac4eba4d7c9d28bda
-      flags: 0
     QuickInstaller_com.unity.purchasing_installRecorded:
       value: 2550581500
       flags: 0
@@ -15,34 +12,37 @@ EditorUserSettings:
       value: 2550581500
       flags: 0
     RecentlyUsedSceneGuid-0:
-      value: 560601050600510f5f590d2612270c444f4f1d2b7d7b76332e784b64e6b8373a
+      value: 5607035707005d5d5a5e0e7047770744404e4c2f7a79233379781e61b3e46d6c
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 070007035102080f5c5b5c7348755b444e164f2b2d797e3574704931e1e1326f
+      value: 57055105510450095d0f54214620594412164c7e7a2e27357b7c1964b4b7603b
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 5a00575457075e0f555f0f71417707444215417a7b7a75677a7e4835b4b0626b
+      value: 500404575254085809085b7442200f4444161b2f2e7922667d7a1e66b0b73660
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 500202025000590c085d0e72467b0c44474f4f79747975642c7d4d6bb1e6326c
+      value: 5a08505f030d51580f5b547543735c4410151b2f792c7f68787b4932bab2613c
       flags: 0
     RecentlyUsedSceneGuid-4:
-      value: 51020c5f07575158090a0f7515720744444e1b292d702362287f4a67bab96539
+      value: 0157005651530c5f0f590d7b13730a4443164d2b2f797760747a4f60b2e1366b
       flags: 0
     RecentlyUsedSceneGuid-5:
-      value: 5508550400060f5d5b5c097a43770644154e1a7378797731287d4f6ab1b6656d
+      value: 5b03505552035903595f5d2345205d44124f4d737f7e7165752a1932b5e2373e
       flags: 0
     RecentlyUsedSceneGuid-6:
-      value: 5350035f04560c0f085f592640720f44404f4f2b797b75347b791e60bbb1666e
+      value: 53020c5050015c5d0f0a587547700c444f4f1a2b2f797068792a4531e3b0636d
       flags: 0
     RecentlyUsedSceneGuid-7:
-      value: 0209000303055d0f5f5f0f7648200744124f1a7b2d78736129784e30b7e53068
+      value: 5508550400060f5d5b5c097a43770644154e1a7378797731287d4f6ab1b6656d
       flags: 0
     RecentlyUsedSceneGuid-8:
       value: 5a08575f5207595a0f5d59741173094444164f7d7d2a23317c7a4465bbe1646d
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 5b52025055570b085c0b587146740644434f4c2b7f2c7e6929781e32e6e43139
+      flags: 0
+    lightmappingBakingProfile:
+      value: 51
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
