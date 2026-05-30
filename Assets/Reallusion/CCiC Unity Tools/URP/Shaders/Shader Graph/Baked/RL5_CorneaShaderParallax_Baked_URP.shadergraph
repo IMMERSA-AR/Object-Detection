@@ -557,20 +557,6 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "8915c621023346028a16fa34fcb538aa"
-                },
-                "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "17c81432e6c44d4ba9fc45454d9ac580"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
                     "m_Id": "fde463ac739d4df887b4c018fb506378"
                 },
                 "m_SlotId": 1
@@ -1680,6 +1666,20 @@
                     "m_Id": "a1f341c16c794242a30f81f4dd208b2b"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "df78833f54f94d47abe56ac31551751e"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "8915c621023346028a16fa34fcb538aa"
+                },
+                "m_SlotId": 1
             }
         },
         {
@@ -2975,10 +2975,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -5072.00048828125,
-            "y": 1197.0,
+            "x": -5101.0,
+            "y": 1307.0,
             "width": 145.0,
-            "height": 128.0
+            "height": 130.0
         }
     },
     "m_Slots": [
@@ -3590,7 +3590,7 @@
     "m_ObjectId": "260f876af383497cb77549927da21c65",
     "m_Title": "Left Eye UV",
     "m_Position": {
-        "x": -5097.00048828125,
+        "x": -5126.0,
         "y": 1081.0
     }
 }
@@ -10845,8 +10845,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -5055.00048828125,
-            "y": 1325.0,
+            "x": -5084.0,
+            "y": 1195.0,
             "width": 128.0,
             "height": 101.0
         }

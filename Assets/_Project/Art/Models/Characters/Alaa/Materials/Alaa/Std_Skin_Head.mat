@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6118905077389570409
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
-  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -53,19 +40,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _CFULCMask:
-        m_Texture: {fileID: 2800000, guid: 7ce9bbd65de130548ad4d7ed481122ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9a03da04965961a4ab16cd1f34c0c1d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CavityMap:
-        m_Texture: {fileID: 2800000, guid: 13ff3419848e10d4d874a3404dd08a7c, type: 3}
+        m_Texture: {fileID: 2800000, guid: d191df9ef5b70c8429aa61671f56d767, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlendMap:
-        m_Texture: {fileID: 2800000, guid: da73d270803b68341853682c705423a7, type: 3}
+        m_Texture: {fileID: 2800000, guid: b057636a90358ea4fa3ed0ea4cc2c617, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 8904c62117a1dfe4ab839c289f555936, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f8a27feebb285647a111875aff893e8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementMap:
@@ -73,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EarNeckMask:
-        m_Texture: {fileID: 2800000, guid: 46dcc00bd21dce8408578b1a8bda4549, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0ee04e0c37e65af459e12dad281fe273, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -81,39 +68,39 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MNAOMap:
-        m_Texture: {fileID: 2800000, guid: 33ac76aa6b8670843ac2a8cdf83c6f0a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 19cfb2217312aad40be3f6fd055bdf5e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: b6fa8913075721f44b81bc00af40afba, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5b541090d1986d34e80c09c77c7cf96b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MicroNormalMap:
-        m_Texture: {fileID: 2800000, guid: 266d82b03792d0441b11e7daa4f7b14f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5a3ddbbdbecee67468fb22adc0fa2ab7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalBlendMap:
-        m_Texture: {fileID: 2800000, guid: 2917a435abf3a5a4b8987a81286fef10, type: 3}
+        m_Texture: {fileID: 2800000, guid: f6bcc46bfc1912b478d272de6bb29fde, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: ae02389c79663e74f8aeea353423c48c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 17a4d31216ea8494f9ef583bb6ee11ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGBAMask:
-        m_Texture: {fileID: 2800000, guid: ce2953a291edd90488c5cf6940a64e54, type: 3}
+        m_Texture: {fileID: 2800000, guid: d813bf840e1d77642b02182f6f32bb9e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSThicknessPack:
-        m_Texture: {fileID: 2800000, guid: cbef34c3908113d49a95083c9fe15642, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50e5908d71721bf479cba2d696614181, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceBlurMap:
-        m_Texture: {fileID: 2800000, guid: 48dada5f0fdc67c458cb6fd9cb1b0e1c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7d141e43a3cd20b4885164a8231d8553, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDiffuseArray:
-        m_Texture: {fileID: 18700000, guid: afdbb098ce971f44ca6fc81a87c534b1, type: 2}
+        m_Texture: {fileID: 18700000, guid: 461dd4fbc3284574d89555a3c5ba1fd2, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDisplacementPack:
@@ -121,7 +108,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleFlowPack:
-        m_Texture: {fileID: 2800000, guid: 5b1a16a86e6a13e4bb0b294730512f19, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8217b7b06a6591641a3e7dbb54550e37, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleMaskSetArray:
@@ -129,11 +116,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleNormalArray:
-        m_Texture: {fileID: 18700000, guid: 193297706a8112e49800dd9e9aaddecd, type: 2}
+        m_Texture: {fileID: 18700000, guid: d8b0e683e9a848e4e992f327a889cecf, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleRoughnessPack:
-        m_Texture: {fileID: 2800000, guid: a643d38fa4d41c04388259f13d743a7d, type: 3}
+        m_Texture: {fileID: 2800000, guid: da3d13d41dc1f3148a4ce6c7a9aa3820, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -188,7 +175,7 @@ Material:
     - _QueueOffset: 0
     - _RScatterScale: 1
     - _RSmoothnessMod: 0.008
-    - _SSSBlend: 0.35
+    - _SSSBlend: 0.6
     - _SSSDistortion: 0.5
     - _SSSTransmission: 5
     - _SmoothnessContrast: 1.35
@@ -222,3 +209,16 @@ Material:
     - _WrinkleValueSetBCCB: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!114 &4957789067603180265
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10

@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2977886512966910670
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
-  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -62,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 363e4de396326384eae335ca906189ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3965e8bb754ae7e489835cea45190bb2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementMap:
@@ -82,11 +69,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: a08194b5f8acc204a815a60cf97a9f0c, type: 3}
+        m_Texture: {fileID: 2800000, guid: aa7ac67aca5f3074cab2ff8edc02df8d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MicroNormalMap:
-        m_Texture: {fileID: 2800000, guid: 02d74fe49de92754883c844b0191475e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9aabdbfab96434a4296d3f63f01986ae, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalBlendMap:
@@ -94,19 +81,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 64caa22716738ad43bf73594a728d055, type: 3}
+        m_Texture: {fileID: 2800000, guid: b3f7885902c552848895c1b8d58f97d1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGBAMask:
-        m_Texture: {fileID: 2800000, guid: cbc2038414e14fd49a8dd797cdc72df5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 361bf4bfcb9761d4091757f67e3d4678, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSThicknessPack:
-        m_Texture: {fileID: 2800000, guid: 5d4657c6aa8fd31459fb2cef6591d819, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5104f03b65da72146a5d60ece2107860, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceBlurMap:
-        m_Texture: {fileID: 2800000, guid: f559998b3769cdb4bb0140a76e7f0464, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0eeeb24892cbc0c4bb4a3b6ad01a227c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDiffuseArray:
@@ -185,7 +172,7 @@ Material:
     - _QueueOffset: 0
     - _RScatterScale: 1
     - _RSmoothnessMod: 0
-    - _SSSBlend: 0.35
+    - _SSSBlend: 0.6
     - _SSSDistortion: 0.5
     - _SSSTransmission: 5
     - _SmoothnessContrast: 1.35
@@ -220,3 +207,16 @@ Material:
     - _WrinkleValueSetBCCB: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!114 &2682650334187635170
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10

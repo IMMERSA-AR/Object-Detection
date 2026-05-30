@@ -36,11 +36,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorBlendMap:
-        m_Texture: {fileID: 2800000, guid: c400d9dc4d96879488b10983e6e8516a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 74e6b0797697c9b4a901af77e18fb4f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CorneaDiffuseMap:
-        m_Texture: {fileID: 2800000, guid: da1eb87efe30824428cf05a0913bf829, type: 3}
+        m_Texture: {fileID: 2800000, guid: 342e9b0df1e56144086492d5581c3e14, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,15 +48,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 42350e2976b0c9c4296a0e58309290d7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 918642e5c836dfb4586631c5e947a9c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScleraDiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 416799681b5219f498d2c39183ffecfb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 64c1bf94ab4be4a4cb096ad32c59a705, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScleraNormalMap:
-        m_Texture: {fileID: 2800000, guid: 98751d0ca2e2a1841a2bdd252dead586, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2bd0d8af35d6fa845b9d96beda520e13, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -109,7 +109,7 @@ Material:
     - _LimbusColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &673249290961792218
+--- !u!114 &7476911465866832151
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

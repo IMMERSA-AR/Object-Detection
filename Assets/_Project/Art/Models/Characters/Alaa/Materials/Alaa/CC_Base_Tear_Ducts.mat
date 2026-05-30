@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4630632896058971107
+--- !u!114 &-4813548259651280835
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: f026c682ad35f0d49a70db2eca4d14cf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7eb95a159fc8a9e40b0ea598183d3c38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementMap:
@@ -109,11 +109,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceBlurMap:
-        m_Texture: {fileID: 2800000, guid: 41dfe8570b91433479ebc999934b0359, type: 3}
+        m_Texture: {fileID: 2800000, guid: 77fe25a2a5381b94783ccf0d3ac3728e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDiffuseArray:
-        m_Texture: {fileID: 18700000, guid: fc04b760df9300347b1d367c51289fbc, type: 2}
+        m_Texture: {fileID: 18700000, guid: ddbe0c6c45e44914bb8f85e901c5002a, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDisplacementPack:
@@ -121,7 +121,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleFlowPack:
-        m_Texture: {fileID: 2800000, guid: 47e226d33f26f134d888060361f78b59, type: 3}
+        m_Texture: {fileID: 2800000, guid: 88d8b42d9e193af4e8b5ffac9c26a0b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleMaskSetArray:
@@ -129,11 +129,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleNormalArray:
-        m_Texture: {fileID: 18700000, guid: 4cd02a3bcd69d4b4885313d9f1780c17, type: 2}
+        m_Texture: {fileID: 18700000, guid: 0f65e529a2fd7734cbc929cf6dea5926, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleRoughnessPack:
-        m_Texture: {fileID: 2800000, guid: dcd12cd9b0bf6bb46bd9c4dc35b66e90, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9f950bcb4eee486409a95cd1ae9386c6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -188,7 +188,7 @@ Material:
     - _QueueOffset: 0
     - _RScatterScale: 1
     - _RSmoothnessMod: 0.008
-    - _SSSBlend: 0.35
+    - _SSSBlend: 0.6
     - _SSSDistortion: 0.5
     - _SSSTransmission: 5
     - _SmoothnessContrast: 1.35

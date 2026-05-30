@@ -27,11 +27,11 @@ EditorBuildSettings:
     path: Assets/_Project/Level/Scenes/LectureHallScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_Project/Level/Scenes/Test/Obelisk.unity
-    guid: 575cc58427adbd3498ea130cc167d8cb
-  - enabled: 0
     path: Assets/_Project/Level/Scenes/ObeliskScene.unity
     guid: 8c660bb31e436794584a3d89d1caddea
+  - enabled: 0
+    path: Assets/_Project/Level/Scenes/Test/Obelisk.unity
+    guid: 575cc58427adbd3498ea130cc167d8cb
   - enabled: 0
     path: Assets/_Project/Level/Scenes/Test/Nada_Shaimaa.unity
     guid: 36b566d6a4b628d4ba2a3435307ae5c3
