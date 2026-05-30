@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 9d8ede95652183942856f8178b1c2c2e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50e75dc3f123c114db1306dd802b6318, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,15 +48,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlowMap:
-        m_Texture: {fileID: 2800000, guid: bcd6b51d5140c3349b005b6bd33cb35d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2b7faa9c0e140e64aa7a31e1e55e8761, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IDMap:
-        m_Texture: {fileID: 2800000, guid: 9e67ed6564b4e5a42a5fb1bdebfe6167, type: 3}
+        m_Texture: {fileID: 2800000, guid: 39ab255113e18f6498bd268f431dfde7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: df2d7bcddf31a1940acf30538be2bb44, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RootMap:
-        m_Texture: {fileID: 2800000, guid: ee99a71c5603b454585e4bc7af1b63bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: b7f56c230fcd0ea468bce591ee9445eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -132,7 +132,7 @@ Material:
     - _VertexBaseColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1539450687761179253
+--- !u!114 &7148596127733338634
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

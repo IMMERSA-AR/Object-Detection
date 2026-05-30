@@ -26,9 +26,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Newtonsoft.Json;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 namespace Reallusion.Runtime
 {
@@ -36,37 +33,31 @@ namespace Reallusion.Runtime
     public class BoneDriver : MonoBehaviour
     {
         #region Vars
-        [SerializeField][HideInInspector] private SkinnedMeshRenderer baseBodySmr;
-        [SerializeField] public ExpressionGlossary glossary;
-        [SerializeField][HideInInspector] private List<UpdateConstraint> constraintList;
-        [SerializeField][HideInInspector] private List<UpdateConstraint> limitList;
-        [SerializeField][HideInInspector] private List<int> constraintTargets;
-        [SerializeField][HideInInspector] private List<SkinnedMeshRenderer> blendShapeTargets;
-        [SerializeField][HideInInspector] private int blendShapeCount = 0;
-        [SerializeField][HideInInspector] private BlendShapeIndex[] atlas;
-        [SerializeField][HideInInspector] private string glossaryString;
-        [SerializeField][HideInInspector] private string constraintString;
-        [SerializeField][HideInInspector] private bool bonesSetup;
-        [SerializeField][HideInInspector] private bool expressionsSetup;
-        [SerializeField][HideInInspector] private bool constraintSetup;
-        [SerializeField][HideInInspector] public bool bones;
-        [SerializeField][HideInInspector] public bool expressions;
-        [SerializeField][HideInInspector] public bool constraint;
-        [SerializeField][HideInInspector] public bool amplify = false;
-        [SerializeField][HideInInspector] public float visemePower = 1f;
-        [SerializeField][HideInInspector] public float visemeScale = 1f;
-        [SerializeField][HideInInspector] private VisemeByRenderer[] visemesByRenderer;
-        [SerializeField][HideInInspector] public bool driveEyes = true;
-        [SerializeField][HideInInspector] public bool driveJaw = true;
-        [SerializeField][HideInInspector] public bool driveNeck = true;
-        [SerializeField][HideInInspector] public bool driveTongue = true;
-        [SerializeField][HideInInspector] public bool driveTeeth = true;
-        [SerializeField][HideInInspector] public bool driveHead = true;
+        [SerializeField] private SkinnedMeshRenderer baseBodySmr;
+        [SerializeField] private ExpressionGlossary glossary;
+        [SerializeField] private List<UpdateConstraint> constraintList;
+        [SerializeField] private List<UpdateConstraint> limitList;
+        [SerializeField] private List<int> constraintTargets;
+        [SerializeField] private List<SkinnedMeshRenderer> blendShapeTargets;
+        [SerializeField] private int blendShapeCount = 0;
+        [SerializeField] private BlendShapeIndex[] atlas;
+        [SerializeField] private string glossaryString;
+        [SerializeField] private string constraintString;
+        [SerializeField] private bool bonesSetup;
+        [SerializeField] private bool expressionsSetup;
+        [SerializeField] private bool constraintSetup;
+        [SerializeField] public bool bones;
+        [SerializeField] public bool expressions;
+        [SerializeField] public bool constraint;
+        [SerializeField] public bool amplify = false;
+        [SerializeField] public float visemePower = 1f;
+        [SerializeField] public float visemeScale = 1f;
+        [SerializeField] private VisemeByRenderer[] visemesByRenderer;
 
         #endregion Vars
 
         #region Setup
-        public void SetupFromJson(string glossarySetupString, string constraintSetupString, bool bonesEnable, bool expressionsEnable, bool constraintEnable, bool driveHeadBone)
+        public void SetupFromJson(string glossarySetupString, string constraintSetupString, bool bonesEnable, bool expressionsEnable, bool constraintEnable)
         {
             glossaryString = glossarySetupString;
             constraintString = constraintSetupString;
@@ -79,18 +70,9 @@ namespace Reallusion.Runtime
             expressions = expressionsEnable;
             constraint = constraintEnable;
 
-            driveEyes = true;
-            driveJaw = true;
-            driveNeck = true;
-            driveTongue = true;
-            driveTeeth = true;
-            driveHead = driveHeadBone;
-
             try
             {
                 glossary = JsonConvert.DeserializeObject<ExpressionGlossary>(glossarySetupString);
-                constraintList = new List<UpdateConstraint>();
-                limitList = new List<UpdateConstraint>();
                 if (constraintEnable)
                 {
                     //Debug.Log("Deserializing Constraints");
@@ -137,7 +119,7 @@ namespace Reallusion.Runtime
             visemeScale = 1f;
             bones = bonesSetup;
             expressions = expressionsSetup;
-            SetupFromJson(glossaryString, constraintString, bonesSetup, expressionsSetup, constraintSetup, driveHead);
+            SetupFromJson(glossaryString, constraintString, bonesSetup, expressionsSetup, constraintSetup);
         }
 
         public void TestLogGlossary()
@@ -168,7 +150,7 @@ namespace Reallusion.Runtime
                     ebb.BoneTransform = go.transform;
                 */
                 ebb.BoneTransform = FindTransformInThisHierarchy(ebb.BoneName);
-                ebb.BoneMatch = GetBoneMatch(ebb.BoneName);
+
                 ebb.RefPosition = ebb.GetRefPosition();
                 ebb.RefRotation = ebb.GetRefRotaion();
 
@@ -202,17 +184,6 @@ namespace Reallusion.Runtime
             }
             Debug.LogWarning($"Unable to find Transform {name} in hierarchy.");
             return null;
-        }
-
-        BoneMatch GetBoneMatch(string boneName)
-        {
-            if (boneName.ToLower().Contains("jaw") || boneName.ToLower().Contains("mouth")) return BoneMatch.Jaw;
-            if (boneName.ToLower().Contains("eye")) return BoneMatch.Eye;
-            //if (boneName.ToLower().Contains("neck")) return BoneMatch.Neck;
-            if (boneName.ToLower().Contains("tongue")) return BoneMatch.Tongue;
-            if (boneName.ToLower().Contains("teeth")) return BoneMatch.Teeth;
-            if (boneName.ToLower().Contains("head") || boneName.ToLower().Contains("neck")) return BoneMatch.Head;
-            return BoneMatch.None;
         }
 
         public string[] RetrieveBoneArray()
@@ -423,16 +394,6 @@ namespace Reallusion.Runtime
 
         private void LateUpdate()
         {
-            if (baseBodySmr == null) return;
-
-            bool isVisible = false;
-            if (Camera.main) isVisible = GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), baseBodySmr.bounds);
-#if UNITY_EDITOR
-            if (SceneView.lastActiveSceneView) isVisible |= GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(SceneView.lastActiveSceneView.camera), baseBodySmr.bounds);
-#endif
-            isVisible &= baseBodySmr.isVisible;
-            if (!isVisible) return;
-
 #if BENCHMARK
             animatorEnd = Time.realtimeSinceStartup;
             float elapsed = animatorEnd - animatorStart;
@@ -559,56 +520,7 @@ namespace Reallusion.Runtime
 
             foreach (ExpressionByBone ebb in glossary.ExpressionsByBone)
             {
-                bool drive = false;
                 if (ebb.BoneTransform != null)
-                {
-                    switch (ebb.BoneMatch)
-                    {
-                        case BoneMatch.None:
-                            {
-                                drive = true;
-                                break;
-                            }
-                        case BoneMatch.Eye:
-                            {
-                                drive = driveEyes;
-                                break;
-                            }
-                        case BoneMatch.Jaw:
-                            {
-                                drive = driveJaw;
-                                break;
-                            }
-                        case BoneMatch.Neck:
-                            {
-                                drive = driveNeck;
-                                break;
-                            }
-                        case BoneMatch.Tongue:
-                            {
-                                drive = driveTongue;
-                                break;
-                            }
-                        case BoneMatch.Teeth:
-                            {
-                                drive = driveTeeth;
-                                break;
-                            }
-                        case BoneMatch.Head:
-                            {
-                                drive = driveHead;
-                                break;
-                            }
-                        default:
-                            {
-                                drive = true;
-                                break;
-                            }
-                    }
-                }
-
-
-                if (drive)
                 {
                     Vector3 positionDelta = ebb.RefPosition;
                     Quaternion rotationDelta = ebb.RefRotation;
@@ -630,7 +542,6 @@ namespace Reallusion.Runtime
                 }
             }
         }
-
 
         public static Quaternion Scale(Quaternion q, float scalar)
         {
@@ -760,8 +671,6 @@ namespace Reallusion.Runtime
             public string BoneName;
             [JsonIgnore]
             public Transform BoneTransform;
-            [JsonIgnore]
-            public BoneMatch BoneMatch;
 
             // bind pose data from skeleton avatar.humanDescription.skeleton
             public float[] RefPositionArr;
@@ -828,18 +737,6 @@ namespace Reallusion.Runtime
             {
                 return new Quaternion(RotationArr[0], RotationArr[1], RotationArr[2], RotationArr[3]);
             }
-        }
-
-        [Serializable]
-        public enum BoneMatch
-        {
-            None,  //  when none (i.e. created before this was introduced and the bonedriver has yet to be rebuilt), ignore the driver flags and drive the bone  
-            Eye,
-            Jaw,
-            Neck,
-            Tongue,
-            Teeth,
-            Head,
         }
 
         [Serializable]

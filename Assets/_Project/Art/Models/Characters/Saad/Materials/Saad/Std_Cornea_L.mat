@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2383439197350072832
+--- !u!114 &-1492932115336181351
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,11 +49,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorBlendMap:
-        m_Texture: {fileID: 2800000, guid: 019e69b3df9beb6428c083fe781cdeb0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2fb39f6aad9b1814db1c718ef6a7a7ba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CorneaDiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 5902a472e3f484d4d82f3fbc2a0a174f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 89df5bb339d252b46be7ee60368a6999, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -61,15 +61,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: ead605b4b9a164241a92db562032ca7b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7f5d5fd7d25c22a47b5f9a87e3adc24d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScleraDiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 29cd022407948974999f7145b2a0c291, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9d8d4b869a012944c8809ed5505e8a86, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScleraNormalMap:
-        m_Texture: {fileID: 2800000, guid: 1674f76c2ca204f4eafb08dc51ae526f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 758d67d264262544789d08f12573f8a3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:

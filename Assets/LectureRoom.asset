@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
   experienceType: 1
   experienceName: Lecture Hall
-  description: 'Location Requirement: 7th floor, Omara Building. Please stand directly
-    in front of the room before starting'
+  description: 'Location Requirement: 7th floor, Architecture Building. Please stand
+    directly in front of the room before starting'
   buttonLabel: Begin
   anchorLabel: 56
   minConfidence: 0.5
@@ -38,7 +38,7 @@ MonoBehaviour:
   muradSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
   muradStandingClip: {fileID: 0}
   muradWalkingClip: {fileID: 0}
-  doctorPrefab: {fileID: 435031843943507312, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
+  doctorPrefab: {fileID: 1589601983855728114, guid: 4d51e960bdee08146928083f482b5c94, type: 3}
   studentRows: 2
   studentsPerRow: 3
   obeliskScanningAudioClip: {fileID: 0}
