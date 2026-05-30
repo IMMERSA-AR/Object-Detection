@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d509886dbc26024eb5ac3d97774952d
+guid: 4084d8e4714c4a047ac0c225940c5286
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -111,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

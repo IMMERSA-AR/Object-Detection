@@ -42,10 +42,10 @@ public class ExperienceConfig : ScriptableObject
     [Tooltip("Forward/backward offset from anchor center")]
     public float forwardOffset = 0f;
 
-[Header("Lecture Hall (ExperienceType = LectureHall only)")]
+    [Header("Lecture Hall (ExperienceType = LectureHall only)")]
     [Tooltip("Optional intro audio clip played the moment the user clicks Begin.\n" +
-             "Chair detection waits until this clip finishes before starting.\n" +
-             "Leave empty to start chair detection immediately.")]
+                 "Chair detection waits until this clip finishes before starting.\n" +
+                 "Leave empty to start chair detection immediately.")]
     public AudioClip introAudioClip;
 
     [Tooltip("Audio that loops during the chair-detection phase (while students are being placed).\n" +
@@ -80,8 +80,21 @@ public class ExperienceConfig : ScriptableObject
     [Tooltip("Sitting clip played on the MAIN Murad while he is seated during the lecture.\n" +
              "Drag the same Mixamo 'Sitting Idle' clip you use for students, or a separate one.\n" +
              "If left empty, falls back to studentSittingClip. If both are empty, the\n" +
-             "Animator Controller's IsSitting bool is used instead (may look different).")]
+             "Animator Controller's IsSitting bool is used instead (may look different).\n" +
+             "IMPORTANT: the FBX must be imported as Humanoid (Rig tab → Animation Type → Humanoid).")]
     public AnimationClip muradSittingClip;
+
+    [Tooltip("Standing idle clip played while Murad stands up and during Q&A after the lecture.\n" +
+             "Download 'Standing Idle' or 'Breathing Idle' from Mixamo, set Rig → Humanoid, drag here.\n" +
+             "If empty, the Animator Controller (IsStanding bool) handles standing — requires the\n" +
+             "Animator Controller to have a proper Standing Idle state.")]
+    public AnimationClip muradStandingClip;
+
+    [Tooltip("Walking clip played while Murad walks toward the user after the lecture.\n" +
+             "Download 'Walking' from Mixamo, set Rig → Humanoid, drag here.\n" +
+             "If empty AND muradStandingClip is set, Murad glides (standing idle while moving).\n" +
+             "If both are empty, the Animator Controller (IsWalking bool) handles walking.")]
+    public AnimationClip muradWalkingClip;
 
     [Tooltip("Prefab for the 1918 doctor/professor NPC (must have HistoricalNPCController)")]
     public GameObject doctorPrefab;

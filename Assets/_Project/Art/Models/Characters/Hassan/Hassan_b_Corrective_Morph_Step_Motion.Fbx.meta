@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8525ad45dfd352444b6bff71d743ad50
+guid: 1c1f0d9f9e8145946a7e906ad00a58a8
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,11 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'b Corrective Morph Step' has import animation
-      warnings that might lower retargeting quality:\n\t'CC_Base_JawRoot' has translation
-      animation that will be discarded.\n\t'CC_Base_R_Eye' has translation animation
-      that will be discarded.\n\t'CC_Base_L_Eye' has translation animation that will
-      be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -115,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

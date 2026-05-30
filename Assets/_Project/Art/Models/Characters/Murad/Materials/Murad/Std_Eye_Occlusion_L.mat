@@ -84,6 +84,7 @@ Material:
     - _TopCurve: 1
     - _TopMax: 1
     - _TopMin: 0.27
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _OcclusionColor: {r: 0.044490766, g: 0.0045583863, b: 0.0022004247, a: 1}
   m_BuildTextureStacks: []

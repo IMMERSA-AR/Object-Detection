@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5776846779646043237
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -36,11 +49,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorBlendMap:
-        m_Texture: {fileID: 2800000, guid: 292b573884c07cc418f6a35b7eb3154a, type: 3}
+        m_Texture: {fileID: 2800000, guid: d094289722360aa42839ca0ed846a776, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CorneaDiffuseMap:
-        m_Texture: {fileID: 2800000, guid: f42003ee20aa64e4c8b619ef354d8b4c, type: 3}
+        m_Texture: {fileID: 2800000, guid: a5d306ccbd01dcc41a4ef4ebe986e7e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,15 +61,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: d985230ffe7a06c4892374e65cecb711, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0ff5065dea3233447b9f766971ab80e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScleraDiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 14b95737b4e4fe64f897d2d927ff3b0c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3cfab2242ec89ae41986650694367596, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScleraNormalMap:
-        m_Texture: {fileID: 2800000, guid: c9f35ece14952c94b82d7481d9c233e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: a1bac082c8782274f960c9a651c49bf6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -101,6 +114,7 @@ Material:
     - _ShadowHardness: 0.3
     - _ShadowRadius: 0.57
     - _UseDepth: 1
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _CornerShadowColor: {r: 0.7530592, g: 0.71966153, b: 0.68692935, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
@@ -109,16 +123,3 @@ Material:
     - _LimbusColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &5400552454835991667
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
-  version: 10

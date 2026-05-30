@@ -20,29 +20,29 @@ public class ObeliskDetectionClient : MonoBehaviour
 {
     [Header("Server")]
     [Tooltip("Your PC's IPv4 address — run 'ipconfig' in CMD to find it.")]
-    public string serverIP   = "192.168.1.5";
-    public int    serverPort = 5000;
+    public string serverIP = "192.168.1.5";
+    public int serverPort = 5000;
 
     [Header("Detection")]
     [Tooltip("Send a frame every N seconds. Lower = more responsive but more CPU.")]
-    public float  detectionInterval  = 1.0f;
+    public float detectionInterval = 1.0f;
 
     [Tooltip("How many consecutive detections needed before spawning characters.\n" +
              "Higher = more robust, less twitchy.")]
-    public int    confirmFrames = 3;
+    public int confirmFrames = 3;
 
     [Tooltip("Minimum detection confidence — reject if bbox height < this fraction of frame.")]
-    public float  minObeliskHeightFraction = 0.3f;
+    public float minObeliskHeightFraction = 0.3f;
 
     [Header("Character Spawning")]
     [Tooltip("How far from the camera the characters are placed (metres) when the obelisk is detected.")]
-    public float  spawnDistance = 3.0f;
+    public float spawnDistance = 3.0f;
 
     [Tooltip("Prefabs to spawn around the detected obelisk.")]
     public GameObject[] characterPrefabs;
 
     [Tooltip("Parent transform for spawned characters (optional).")]
-    public Transform    spawnRoot;
+    public Transform spawnRoot;
 
     [Header("UI Feedback")]
     [Tooltip("Optional UI shown while scanning.")]
@@ -59,14 +59,14 @@ public class ObeliskDetectionClient : MonoBehaviour
     public System.Action OnObeliskConfirmed;
 
     // ── private ───────────────────────────────────────────────
-    private string  _serverUrl;
-    private bool    _running        = false;
-    private bool    _spawned        = false;
-    private int     _consecutiveHits = 0;
+    private string _serverUrl;
+    private bool _running = false;
+    private bool _spawned = false;
+    private int _consecutiveHits = 0;
 
     // Last confirmed detection data
-    private float   _lastCX, _lastCY;   // normalized center (0-1)
-    private float   _lastHeight;         // normalized height
+    private float _lastCX, _lastCY;   // normalized center (0-1)
+    private float _lastHeight;         // normalized height
 
     // Passthrough camera (Meta XR) — provides the real-world camera feed on Quest.
     // The virtual Camera.main render does NOT include passthrough (it's a compositor
@@ -88,8 +88,8 @@ public class ObeliskDetectionClient : MonoBehaviour
         _serverUrl = $"http://{serverIP}:{serverPort}";
         Debug.Log($"[ObeliskClient] Server URL: {_serverUrl}");
 
-        if (scanningUI  != null) scanningUI.SetActive(false);
-        if (detectedUI  != null) detectedUI.SetActive(false);
+        if (scanningUI != null) scanningUI.SetActive(false);
+        if (detectedUI != null) detectedUI.SetActive(false);
     }
 
     // ── Public API ─────────────────────────────────────────────
@@ -98,8 +98,8 @@ public class ObeliskDetectionClient : MonoBehaviour
     public void StartDetection()
     {
         if (_running) return;
-        _running         = true;
-        _spawned         = false;
+        _running = true;
+        _spawned = false;
         _consecutiveHits = 0;
 
         if (scanningUI != null) scanningUI.SetActive(true);
@@ -123,7 +123,7 @@ public class ObeliskDetectionClient : MonoBehaviour
             foreach (Transform child in spawnRoot)
                 Destroy(child.gameObject);
 
-        _spawned         = false;
+        _spawned = false;
         _consecutiveHits = 0;
         Debug.Log("[ObeliskClient] Detection stopped.");
     }
@@ -183,7 +183,7 @@ public class ObeliskDetectionClient : MonoBehaviour
 
         // ── Send to server ─────────────────────────────────────
         using var req = new UnityWebRequest($"{_serverUrl}/detect", "POST");
-        req.uploadHandler   = new UploadHandlerRaw(jpegBytes);
+        req.uploadHandler = new UploadHandlerRaw(jpegBytes);
         req.downloadHandler = new DownloadHandlerBuffer();
         req.SetRequestHeader("Content-Type", "application/octet-stream");
         req.timeout = 10;
@@ -221,8 +221,8 @@ public class ObeliskDetectionClient : MonoBehaviour
 
         // ── Confirmed detection ────────────────────────────────
         _consecutiveHits++;
-        _lastCX     = result.bbox.cx;
-        _lastCY     = result.bbox.cy;
+        _lastCX = result.bbox.cx;
+        _lastCY = result.bbox.cy;
         _lastHeight = result.bbox.height;
 
         Debug.Log($"[ObeliskClient] Detection hit {_consecutiveHits}/{confirmFrames}  " +
@@ -325,7 +325,7 @@ public class ObeliskDetectionClient : MonoBehaviour
         {
             if (characterPrefabs[i] == null) continue;
 
-            float angle  = i * (360f / count);
+            float angle = i * (360f / count);
             float radius = 1.5f;
             Vector3 offset = Quaternion.Euler(0, angle, 0) * Vector3.forward * radius;
             Vector3 spawnPos = worldCenter + offset;
@@ -346,9 +346,9 @@ public class ObeliskDetectionClient : MonoBehaviour
     [Serializable]
     private class DetectionResult
     {
-        public bool   detected;
+        public bool detected;
         public string reason;
-        public BBox   bbox;
+        public BBox bbox;
     }
 
     [Serializable]

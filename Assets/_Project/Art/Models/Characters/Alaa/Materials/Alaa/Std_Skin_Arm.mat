@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CavityMap:
-        m_Texture: {fileID: 2800000, guid: 583490d810ea66048ad64e34d0d00ab6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 821c797b0f5d514498f6af258f18535a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorBlendMap:
@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 4f7d799d02003c346a95877d9a31dbc2, type: 3}
+        m_Texture: {fileID: 2800000, guid: da38870fc616c4d47b355b8adb0194bc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementMap:
@@ -69,11 +69,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 7e791bbfa141f0646b74e3e8ebed446e, type: 3}
+        m_Texture: {fileID: 2800000, guid: fd7644978d55deb468099c00b942bb30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MicroNormalMap:
-        m_Texture: {fileID: 2800000, guid: 050d68f966a2d1348b99ecc1869eec9e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 266d82b03792d0441b11e7daa4f7b14f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalBlendMap:
@@ -81,19 +81,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: a62cc43ba8c70854f954ea3c4a972462, type: 3}
+        m_Texture: {fileID: 2800000, guid: 24035c029906cd349b62f32fd42bb07c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RGBAMask:
-        m_Texture: {fileID: 2800000, guid: e846345318397bc4babc525d926b6fbe, type: 3}
+        m_Texture: {fileID: 2800000, guid: c5a149641fa70144fa72374cc2fbb2ca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SSSThicknessPack:
-        m_Texture: {fileID: 2800000, guid: b13ec6a121a27614087344897a57cb93, type: 3}
+        m_Texture: {fileID: 2800000, guid: 587acf3d3150922439eca37291315606, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SubsurfaceBlurMap:
-        m_Texture: {fileID: 2800000, guid: 4ff7804fc7a28ae459975425512d056e, type: 3}
+        m_Texture: {fileID: 2800000, guid: b3b406b72087b0c4aa116f1a7f26a6ce, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _WrinkleDiffuseArray:
@@ -172,7 +172,7 @@ Material:
     - _QueueOffset: 0
     - _RScatterScale: 1
     - _RSmoothnessMod: 0
-    - _SSSBlend: 0.6
+    - _SSSBlend: 0.35
     - _SSSDistortion: 0.5
     - _SSSTransmission: 5
     - _SmoothnessContrast: 1.35
@@ -188,6 +188,7 @@ Material:
     - _UseBlend: 0
     - _UseCavity: 1
     - _WrinkleDisplacementStrength: 1
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
@@ -206,7 +207,7 @@ Material:
     - _WrinkleValueSetBCCB: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2601229978612220192
+--- !u!114 &449629651791285461
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

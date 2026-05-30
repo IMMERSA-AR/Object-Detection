@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7bc900826838944fb618bf11bab661a
+guid: 6338e95e4704a3d44bef1be2c84a0b17
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,9 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Walk Bump Object' has import animation warnings
-      that might lower retargeting quality:\n\t'CC_Base_NeckTwist02' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -113,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

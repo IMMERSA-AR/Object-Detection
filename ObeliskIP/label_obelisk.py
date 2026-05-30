@@ -7,6 +7,7 @@ INPUT_FOLDER  = "photos"
 OUTPUT_FOLDER = "labels"
 CLASS_ID      = 0
 
+MIN_ASPECT_RATIO = 3.0
 MIN_AREA_RATIO   = 0.005
 DEBUG_FOLDER     = "debug"
 STEPS_FOLDER     = "steps"   # saves one image per processing step
@@ -81,8 +82,11 @@ for filename in image_files:
     for cnt in contours:
         x, y, cw, ch = cv2.boundingRect(cnt)
         area         = cw * ch
+        aspect_ratio = ch / max(cw, 1)
         area_ratio   = area / (w * h)
 
+        if aspect_ratio < MIN_ASPECT_RATIO:
+            continue
         if area_ratio < MIN_AREA_RATIO:
             continue
 
@@ -129,6 +133,7 @@ for filename in image_files:
         cv2.imwrite(os.path.join(DEBUG_FOLDER, filename), debug_img)
         print(f"  Step 7 saved: FINAL RESULT — obelisk detected ✅")
         print(f"    Box: x={x} y={y} w={bw} h={bh}")
+        print(f"    Aspect ratio: {bh/max(bw,1):.2f}  (need > {MIN_ASPECT_RATIO})")
         print(f"    Area ratio:   {best_area/(w*h):.4f} (need > {MIN_AREA_RATIO})")
         print(f"    YOLO label:   {CLASS_ID} {x_center:.4f} {y_center:.4f} {norm_w:.4f} {norm_h:.4f}")
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d5be59aaaadf68849b4daf3921526e0e
+guid: 56e61a89d9e9a694a8a5c25f3ecc6266
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,11 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'a Range Of Expression_M' has import animation
-      warnings that might lower retargeting quality:\n\t'CC_Base_JawRoot' has translation
-      animation that will be discarded.\n\t'CC_Base_R_Eye' has translation animation
-      that will be discarded.\n\t'CC_Base_L_Eye' has translation animation that will
-      be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -115,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

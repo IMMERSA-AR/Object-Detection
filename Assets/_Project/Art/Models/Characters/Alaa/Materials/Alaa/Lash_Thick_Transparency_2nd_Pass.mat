@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 39c19cd1437c21748a40887485872291, type: 3}
+        m_Texture: {fileID: 2800000, guid: 96c01a0fc88490f40be72599327bc648, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,15 +48,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlowMap:
-        m_Texture: {fileID: 2800000, guid: 3f5d36b2cb5ee9f4dbf4ffc12e82ffba, type: 3}
+        m_Texture: {fileID: 2800000, guid: 46920385223a5e94b9d757d57fde0922, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IDMap:
-        m_Texture: {fileID: 2800000, guid: d8908bf40c8631b49880f55fac8f1583, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9c38b1c5191581c4da96c5d62c0258cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 0f6ce1c5f34456547847cd8d5ccdbfd1, type: 3}
+        m_Texture: {fileID: 2800000, guid: e7979b9ef4ac7114da86315a475c4585, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RootMap:
-        m_Texture: {fileID: 2800000, guid: 7c2ba2094c5f75c429bffd4f90ea5533, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3d4ee78d814725d44a84897ea8ce1e6d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -118,6 +118,7 @@ Material:
     - _UseAnisotropic: 1
     - _UseDisplacement: 1
     - _VertexColorStrength: 1
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
@@ -131,7 +132,7 @@ Material:
     - _VertexBaseColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &7727883313243942519
+--- !u!114 &5859243686165277983
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

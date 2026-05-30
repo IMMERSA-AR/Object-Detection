@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8149a7b89e197084aa5559a8378fd134
+guid: fd95a54e10a474f47a6078f9e307fdaf
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,9 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Breathe_1' has import animation warnings that
-      might lower retargeting quality:\n\t'CC_Base_NeckTwist02' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -113,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

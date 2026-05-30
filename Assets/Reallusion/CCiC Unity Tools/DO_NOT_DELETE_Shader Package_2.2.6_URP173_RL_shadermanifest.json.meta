@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:Assets/Reallusion/CCiC Unity Tools/DO_NOT_DELETE_Shader Package_2.2.6_URP173_RL_shadermanifest.json.meta
-guid: 02d669b5c15fbad48a237eeee878448a
-========
-guid: 616812b09e8a27e2c837f4a6c4884b59
->>>>>>>> Stashed changes:Assets/Reallusion/CCiC Unity Tools/DO_NOT_DELETE_Runtime Package_2.2.3_RL_runtimemanifest.json.meta
+guid: dd74682f92be90f4cbddd8e747ab3119
 TextScriptImporter:
   externalObjects: {}
   userData: 

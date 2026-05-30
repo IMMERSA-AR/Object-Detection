@@ -11,7 +11,8 @@ Shader "Custom/SH_Glow"
     {
         // "IgnoreProjector" is good practice for VR transparents
         Tags { "RenderType"="Transparent" "Queue"="Transparent" "IgnoreProjector"="True" }
-     
+        
+        // Additive Blending (Adds light to the background)
         Blend One One 
         ZWrite Off
         Cull Off

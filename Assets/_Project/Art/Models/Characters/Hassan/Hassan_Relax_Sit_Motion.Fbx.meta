@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d475da6e5b1481146b8efa6b5a03a4ae
+guid: 8acea0587def0cc44a19d6ba120da1f8
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,9 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Relax_Sit' has import animation warnings that
-      might lower retargeting quality:\n\t'CC_Base_NeckTwist02' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -113,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

@@ -234,11 +234,11 @@ public class ExperienceManager : MonoBehaviour
             while (t != null && !isMRUK)
             {
                 string n = t.gameObject.name;
-                if (n.Contains("MRUK")         || n.Contains("GlobalMesh")   ||
-                    n.Contains("EffectMesh")    || n.Contains("SceneMesh")    ||
-                    n.Contains("RoomMesh")      || n.Contains("OVRScene")     ||
+                if (n.Contains("MRUK") || n.Contains("GlobalMesh") ||
+                    n.Contains("EffectMesh") || n.Contains("SceneMesh") ||
+                    n.Contains("RoomMesh") || n.Contains("OVRScene") ||
                     n.Contains("OVRGlobalMesh") || n.Contains("SceneCapture") ||
-                    n.Contains("MRUKRoom")      || n.Contains("RoomModel"))
+                    n.Contains("MRUKRoom") || n.Contains("RoomModel"))
                     isMRUK = true;
                 t = t.parent;
             }
@@ -329,11 +329,26 @@ public class ExperienceManager : MonoBehaviour
         foreach (Transform child in cardContainer)
             Destroy(child.gameObject);
 
-        if (configs == null) return;
+        Debug.Log($"[ExperienceManager] Building menu with {experiences.Length} experience(s)...");
 
-        Debug.Log($"[ExperienceManager] Building {configs.Length} card(s).");
+        // ── Ensure cardContainer has a layout group so cards don't overlap ──
+        // If a VerticalLayoutGroup already exists (added in the Editor) this is a no-op.
+        // If it is missing, we add one at runtime so cards are stacked vertically.
+        var layoutGroup = cardContainer.GetComponent<VerticalLayoutGroup>();
+        if (layoutGroup == null)
+        {
+            layoutGroup = cardContainer.gameObject.AddComponent<VerticalLayoutGroup>();
+            layoutGroup.spacing = 20f;
+            layoutGroup.childAlignment = TextAnchor.UpperCenter;
+            layoutGroup.childControlWidth = true;
+            layoutGroup.childControlHeight = false;
+            layoutGroup.childForceExpandWidth = true;
+            layoutGroup.childForceExpandHeight = false;
+            Debug.Log("[ExperienceManager] VerticalLayoutGroup added to cardContainer at runtime. " +
+                      "For cleaner setup, add it in the Editor instead.");
+        }
 
-        foreach (var config in configs)
+        foreach (var config in experiences)
         {
             if (config == null)
             {
@@ -416,8 +431,19 @@ public class ExperienceManager : MonoBehaviour
     }
     // ── Called by ExperienceCard button ─────────────────────────────
 
+    // Guard flag — prevents double-firing when multiple ExperienceCards
+    // or duplicate event subscriptions call SelectExperience simultaneously.
+    private bool _experienceRunning = false;
+
     public void SelectExperience(ExperienceConfig config)
     {
+        if (_experienceRunning)
+        {
+            Debug.LogWarning($"[ExperienceManager] SelectExperience called again for '{config.experienceName}' — ignored (already running).");
+            return;
+        }
+        _experienceRunning = true;
+
         ActiveConfig = config;
         Debug.Log($"[ExperienceManager] Experience selected: '{config.experienceName}'");
 
@@ -502,7 +528,7 @@ public class ExperienceManager : MonoBehaviour
             chairMeshDetector.DetectChairs(
                 chairs => OnMeshChairsReady(chairs, config),
                 status => { if (chairScanLabel != null) chairScanLabel.text = status; },
-                pos    => lectureHallManager.SpawnStudentAtChair(pos, config));
+                pos => lectureHallManager.SpawnStudentAtChair(pos, config));
         }
         else if (chairYOLODetector != null)
         {
@@ -595,6 +621,7 @@ public class ExperienceManager : MonoBehaviour
     // Called when the lecture audio finishes — spawns Murad beside the player for Q&A.
     private void OnLectureComplete()
     {
+        _experienceRunning = false;   // allow a new experience to be selected after this one ends
         Debug.Log("[ExperienceManager] Lecture complete — spawning Murad for Q&A.");
 
         if (objectStamper != null)

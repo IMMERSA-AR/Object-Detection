@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3368713099287328644
+--- !u!114 &-1585242054554167081
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 38bca5e68437f0f439dc7f9248d87fc2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 325c414ab55cbca479b27aff8a535673, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -61,15 +61,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlowMap:
-        m_Texture: {fileID: 2800000, guid: 83b74b2b98e97a24e99831078bea9990, type: 3}
+        m_Texture: {fileID: 2800000, guid: 081d2950972e463458f4c7a89a1de209, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IDMap:
-        m_Texture: {fileID: 2800000, guid: 32f520dd9909d64468c778b6ef7380a9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 93f2696b209f00942ba4ae67d17e6762, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 53767ad90e5652f4197ef1aad3e1cb06, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5302d6b90ead8bb46987b27e9abbe5e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -77,7 +77,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RootMap:
-        m_Texture: {fileID: 2800000, guid: f4aca5e921fbd424daf5da2613140a62, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37dd227717d03134fba27c4cc193f62a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -131,6 +131,7 @@ Material:
     - _UseAnisotropic: 1
     - _UseDisplacement: 1
     - _VertexColorStrength: 1
+    - _XRMotionVectorsPass: 1
     m_Colors:
     - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}

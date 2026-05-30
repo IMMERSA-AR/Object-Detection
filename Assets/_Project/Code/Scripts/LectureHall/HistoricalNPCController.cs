@@ -21,6 +21,10 @@ public class HistoricalNPCController : MonoBehaviour
     [Tooltip("Doctor only: the talking/lecturing animation clip")]
     public AnimationClip talkingClip;
 
+    [Tooltip("Doctor only: standing idle clip played AFTER the lecture ends.\n" +
+             "If left empty, falls back to idleClip.")]
+    public AnimationClip standingAfterLectureClip;
+
     [Tooltip("Doctor only: walking/pacing clip")]
     public AnimationClip walkingClip;
 
@@ -32,6 +36,20 @@ public class HistoricalNPCController : MonoBehaviour
     public float lookSpeed = 1.2f;
     [Tooltip("Students always face player. Doctor uses this angle limit.")]
     public float maxLookAngle = 45f;
+
+    [Header("Breathing (Students only)")]
+    [Tooltip("Exact name of the spine/chest bone to drive breathing.\n" +
+             "CC4 characters: CC_Base_Spine01\nMixamo characters: mixamorig:Spine")]
+    public string spineBoneName = "mixamorig:Spine";
+
+    [Tooltip("How much the spine rocks forward/back while breathing (degrees).")]
+    [Range(0f, 3f)] public float breathDepth = 1.2f;
+
+    [Tooltip("Breaths per minute — 12 is natural resting, 16 is slightly alert.")]
+    [Range(8f, 20f)] public float breathRate = 13f;
+
+    [Tooltip("Random offset so all students don't breathe in sync.")]
+    [Range(0f, 6.28f)] public float breathPhaseOffset = 0f;
 
     [Header("Head Look-At (Students only)")]
     [Tooltip("Exact name of the head bone in the character rig.\n" +
@@ -69,6 +87,9 @@ public class HistoricalNPCController : MonoBehaviour
     private AnimationClipPlayable _activePlayable;
     private AnimationClip _activeClip;
 
+    // Breathing
+    private Transform _spineBone;
+
     // Head bone IK
     private Transform _headBone;
     private Transform _neckBone;
@@ -87,7 +108,9 @@ public class HistoricalNPCController : MonoBehaviour
     {
         role = assignedRole;
         _playerCamera = Camera.main?.transform;
-        _animator = GetComponent<Animator>();
+        // Search root first, then children — Mixamo/CC4 characters put Animator on the root,
+        // but some rigs nest it one level down (e.g. an armature child object).
+        _animator = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
         _paceOrigin = transform.position;
         _paceRight = transform.right;
 
@@ -100,9 +123,13 @@ public class HistoricalNPCController : MonoBehaviour
             if (dir.sqrMagnitude > 0.001f)
                 transform.rotation = Quaternion.LookRotation(dir);
 
-            // Cache head & neck bones for LateUpdate look-at
+            // Cache spine, head & neck bones for LateUpdate breathing + look-at
+            _spineBone = FindDeepChild(transform, spineBoneName);
             _headBone = FindDeepChild(transform, headBoneName);
             _neckBone = FindDeepChild(transform, neckBoneName);
+
+            // Randomise breath phase so all students don't breathe in sync
+            breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
 
             if (_headBone == null)
             {
@@ -141,6 +168,10 @@ public class HistoricalNPCController : MonoBehaviour
                     transform.rotation = Quaternion.LookRotation(dir);
             }
         }
+
+        // ── Auto-add blinking if not already present ──────────────
+        if (GetComponent<NPCBlinking>() == null)
+            gameObject.AddComponent<NPCBlinking>();
 
         PlayClip(idleClip);
         Debug.Log($"[NPC] {gameObject.name} initialized as {role}");
@@ -186,11 +217,8 @@ public class HistoricalNPCController : MonoBehaviour
     {
         LoopActiveClip();
 
-        if (role == NPCRole.Doctor && _isLecturing)
-        {
-            UpdateDoctorPacing();
-        }
-        // Doctor rotation is locked at spawn — never updated toward the user
+        // Doctor stands in place — no positional pacing.
+        // The Talk Serious clip handles all visible motion.
     }
 
     // Keep current animation looping — PlayableGraph plays once by default
@@ -219,8 +247,9 @@ public class HistoricalNPCController : MonoBehaviour
         }
         else
         {
-            transform.position = _paceOrigin;
-            PlayClip(idleClip);
+            AnimationClip standClip = standingAfterLectureClip != null ? standingAfterLectureClip : idleClip;
+            PlayClip(standClip);
+            Debug.Log($"[NPC] Doctor lecture ended — playing stand idle: {standClip?.name}");
         }
     }
 
@@ -240,9 +269,13 @@ public class HistoricalNPCController : MonoBehaviour
     private void LateUpdate()
     {
         if (role != NPCRole.Student) return;
+
+        // ── Breathing ─────────────────────────────────────────────
+        ApplyBreathing();
+
+        // ── Head look-at ──────────────────────────────────────────
         if (!_hasHeadLookTarget || _headBone == null) return;
 
-        // Initialise smoothed rotation to the bone's current animated pose
         if (!_headInitialized)
         {
             _headSmoothRot = _headBone.rotation;
@@ -250,6 +283,21 @@ public class HistoricalNPCController : MonoBehaviour
         }
 
         ApplyHeadLookAt();
+    }
+
+    private void ApplyBreathing()
+    {
+        if (_spineBone == null) return;
+
+        // Sine wave: breathRate breaths/min → cycles per second = breathRate/60
+        float cyclesPerSecond = breathRate / 60f;
+        float breath = Mathf.Sin(Time.time * cyclesPerSecond * Mathf.PI * 2f + breathPhaseOffset);
+
+        // Tilt spine slightly forward on inhale, back on exhale
+        float tiltX = breath * breathDepth;
+
+        // Apply on top of the animation's current bone rotation
+        _spineBone.localRotation *= Quaternion.Euler(tiltX, 0f, 0f);
     }
 
     private void ApplyHeadLookAt()
@@ -335,10 +383,14 @@ public class HistoricalNPCController : MonoBehaviour
     {
         role = NPCRole.Student;          // enables LateUpdate head look-at
         _playerCamera = Camera.main?.transform;
-        _animator = GetComponent<Animator>();
+        // Search root first, then children (same approach as Init).
+        _animator = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
 
+        _spineBone = FindDeepChild(transform, spineBoneName);
         _headBone = FindDeepChild(transform, headBoneName);
         _neckBone = FindDeepChild(transform, neckBoneName);
+
+        breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
 
         if (_headBone == null)
             Debug.LogWarning($"[NPC] {gameObject.name}: head bone '{headBoneName}' not found — head look-at disabled.");
@@ -362,6 +414,19 @@ public class HistoricalNPCController : MonoBehaviour
     }
 
     /// <summary>
+    /// Switches the active PlayableGraph to play a different clip immediately.
+    /// Destroys the current graph (if any) and creates a new one with <paramref name="clip"/>.
+    /// Use this to transition Murad between sitting / standing / walking clips without
+    /// touching the Animator Controller.
+    /// Pass null to stop the current graph and release the Animator back to its controller.
+    /// </summary>
+    public void SwitchToClip(AnimationClip clip)
+    {
+        if (clip == null) { StopPlayableGraph(); return; }
+        PlayClip(clip);   // PlayClip already destroys the previous graph first
+    }
+
+    /// <summary>
     /// Stops and destroys the PlayableGraph so the Animator Controller can take
     /// over again. Call this before re-enabling the Animator Controller on Murad
     /// (e.g. when he stands up and the MuradController / walk animation begins).
@@ -374,6 +439,47 @@ public class HistoricalNPCController : MonoBehaviour
             _graph.Destroy();
             Debug.Log($"[NPC] {gameObject.name}: PlayableGraph stopped — Animator Controller takes over.");
         }
+    }
+
+    /// <summary>
+    /// Freezes the currently playing clip at the given normalised time (0–1).
+    /// Use this to hold Murad in his fully-seated pose during the lecture when
+    /// the clip contains both a sit-down AND a stand-up section.
+    /// Call ResumePlayableGraph() when the lecture ends to continue the animation.
+    /// </summary>
+    /// <param name="holdNormalised">0 = clip start, 1 = clip end.
+    /// 0.5 = halfway through. Set to the frame where the character is fully seated.</param>
+    public void FreezePlayableGraph(float holdNormalised = 0f)
+    {
+        if (!_graph.IsValid() || _activeClip == null) return;
+        float holdTime = holdNormalised * _activeClip.length;
+        _activePlayable.SetTime(holdTime);
+        _activePlayable.SetSpeed(0f);   // freeze — no further playback
+        Debug.Log($"[NPC] {gameObject.name}: PlayableGraph frozen at {holdNormalised:P0} ({holdTime:F2}s).");
+    }
+
+    /// <summary>
+    /// Resumes a frozen PlayableGraph at normal speed so the stand-up portion plays.
+    /// Call this when the lecture ends and Murad should begin standing up.
+    /// </summary>
+    public void ResumePlayableGraph()
+    {
+        if (!_graph.IsValid()) return;
+        _activePlayable.SetSpeed(1f);
+        Debug.Log($"[NPC] {gameObject.name}: PlayableGraph resumed — stand-up animation playing.");
+    }
+
+    /// <summary>
+    /// Returns how many seconds remain in the active clip after the frozen hold point.
+    /// Used by LectureHallManager to wait exactly long enough for the stand-up to finish.
+    /// Returns 0 if no graph is running or clip is unknown.
+    /// </summary>
+    public float GetRemainingPlayableTime(float holdNormalised)
+    {
+        if (!_graph.IsValid() || _activeClip == null) return 0f;
+        float elapsed = holdNormalised * _activeClip.length;
+        float remaining = _activeClip.length - elapsed;
+        return Mathf.Max(0f, remaining);
     }
 
     public void SetHeadLookTarget(Vector3 worldPos)

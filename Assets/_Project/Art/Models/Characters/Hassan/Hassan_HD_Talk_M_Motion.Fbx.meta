@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 331e0671ea43aaf48936e1f599a18843
+guid: c2782355d0e2bc74eadc58d469818d43
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,10 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'HD Talk_M' has import animation warnings that
-      might lower retargeting quality:\n\t'CC_Base_JawRoot' has translation animation
-      that will be discarded.\n\t'CC_Base_R_Eye' has translation animation that will
-      be discarded.\n\t'CC_Base_L_Eye' has translation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -114,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 375e6b455ffbd3842bd1e4166f22d017
+guid: a8f2a81a71f37b0498dfee40ee8802ed
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,12 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip '_Talk_M' has import animation warnings that
-      might lower retargeting quality:\n\t'CC_Base_NeckTwist02' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'CC_Base_JawRoot'
-      has translation animation that will be discarded.\n\t'CC_Base_R_Eye' has translation
-      animation that will be discarded.\n\t'CC_Base_L_Eye' has translation animation
-      that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -116,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0

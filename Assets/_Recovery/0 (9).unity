@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b251e1148ff2942ad634e2d40088e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObeliskDetectionClient
-  serverIP: 172.20.10.9
+  serverIP: 192.168.1.5
   serverPort: 5000
   detectionInterval: 1
   confirmFrames: 3

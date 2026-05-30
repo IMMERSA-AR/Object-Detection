@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282470184}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6cc973cf8ce57140ab9994e748d1a71, type: 3}
   m_Name: 
@@ -1685,7 +1685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &408878143
 Transform:
   m_ObjectHideFlags: 0
@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b251e1148ff2942ad634e2d40088e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObeliskDetectionClient
-  serverIP: 172.20.10.9
+  serverIP: 192.168.1.5
   serverPort: 5000
   detectionInterval: 1
   confirmFrames: 3
@@ -2557,7 +2557,6 @@ GameObject:
   - component: {fileID: 533660653}
   - component: {fileID: 533660655}
   - component: {fileID: 533660657}
-  - component: {fileID: 533660656}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -2683,25 +2682,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &533660656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533660651}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PassthroughVintageFilter
-  saturation: -0.9
-  brightness: -0.2
-  contrast: 0.2
-  redScale: 1.15
-  greenScale: 0.95
-  blueScale: 0.65
-  liveTweak: 1
 --- !u!114 &533660657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3086,6 +3066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 604623896}
   - component: {fileID: 604623897}
+  - component: {fileID: 604623898}
   m_Layer: 3
   m_Name: CardContainer
   m_TagString: Untagged
@@ -3110,7 +3091,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 460, y: 170}
+  m_SizeDelta: {x: 460, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604623897
 MonoBehaviour:
@@ -3121,23 +3102,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 604623895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
   m_Padding:
     m_Left: 0
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 1
   m_Spacing: 20
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &604623898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604623895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1 &605083116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3268,13 +3263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PassthroughVintageFilter
-  saturation: -0.55
-  brightness: -0.1
-  contrast: 0.15
-  redScale: 1.2
+  saturation: -0.35
+  brightness: -0.15
+  contrast: 0.2
+  redScale: 1.35
   greenScale: 1
-  blueScale: 0.6
-  liveTweak: 1
+  blueScale: 0.45
 --- !u!1 &606640898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,7 +4713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1006621494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5039,17 +5033,17 @@ MonoBehaviour:
   gridStep: 0.1
   minUpwardDot: 0.7
   minDistanceFromUser: 0.6
-  showDebugMarkers: 1
+  showDebugMarkers: 0
   markerColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   markerDuration: 30
   clusterRadius: 0.25
   minHitsPerCluster: 6
   maxChairs: 12
   chairDiameter: 0.45
-  targetChairCount: 5
-  scanInterval: 5
+  targetChairCount: 3
+  scanInterval: 2
   maxScanAttempts: 9
-  sceneLoadTimeout: 8
+  sceneLoadTimeout: 4
   pollInterval: 0.4
 --- !u!4 &1100049962
 Transform:
@@ -6784,8 +6778,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643082397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.473}
-  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 0.007, y: 0.007, z: 0.007}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1755438645}
@@ -6798,8 +6792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.001, y: 0.259}
-  m_SizeDelta: {x: 500, y: 380}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643082402
 MonoBehaviour:
@@ -7000,7 +6994,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monoscopic: 0
   _sharpenType: 0
-  _disableRecording: 0
   _enableDynamicResolution: 1
   minDynamicResolutionScale: 1
   maxDynamicResolutionScale: 1
@@ -7072,10 +7065,6 @@ MonoBehaviour:
   SimultaneousHandsAndControllersEnabled: 0
   _readOnlyWideMotionModeHandPosesEnabled: 0
   wideMotionModeHandPosesEnabled: 0
-  _readOnlyFastMotionModeHandPosesEnabled: 0
-  fastMotionModeHandPosesEnabled: 0
-  _readOnlyWideMotionMode2HandPosesEnabled: 0
-  wideMotionMode2HandPosesEnabled: 0
   dynamicResolutionVersion: 1
 --- !u!114 &1719443098
 MonoBehaviour:
@@ -8549,10 +8538,12 @@ MonoBehaviour:
   flipChairForward: 0
   flipMuradFacing: 0
   muradSeatOffset: {x: 0, y: 0, z: -0.1}
+  muradSitHoldNormalised: 0
   chairAnchorMatchRadius: 0.5
   chairBackrestProbeHeight: 0.75
   lectureLightsRoot: {fileID: 0}
   lectureAudioSource: {fileID: 2112026627}
+  greetingAudioClip: {fileID: 8300000, guid: 19fce4bd88db425429e85da65e354423, type: 3}
   detectionAudioSource: {fileID: 2112026629}
   lectureUI: {fileID: 0}
   muradFinalDistance: 1.2
@@ -8667,9 +8658,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LectureHallProps
   podiumPrefab: {fileID: 0}
   chalkboardPrefab: {fileID: 0}
-  chandelierPrefab: {fileID: 919132149155446097, guid: a09baa0ee4d7c274b97c1aba711011cc, type: 3}
+  chandelierPrefab: {fileID: 0}
   portraitPrefab: {fileID: 0}
-  clockPrefab: {fileID: 919132149155446097, guid: da644e9f01c1fa94a87fcf3db60ed106, type: 3}
+  clockPrefab: {fileID: 0}
   podiumForwardOffset: 0.6
   podiumYOffset: 0
   chalkboardBehindOffset: 0.2

@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DiffuseMap:
-        m_Texture: {fileID: 2800000, guid: 38bca5e68437f0f439dc7f9248d87fc2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 325c414ab55cbca479b27aff8a535673, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -48,15 +48,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FlowMap:
-        m_Texture: {fileID: 2800000, guid: 83b74b2b98e97a24e99831078bea9990, type: 3}
+        m_Texture: {fileID: 2800000, guid: 081d2950972e463458f4c7a89a1de209, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IDMap:
-        m_Texture: {fileID: 2800000, guid: 32f520dd9909d64468c778b6ef7380a9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 93f2696b209f00942ba4ae67d17e6762, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 53767ad90e5652f4197ef1aad3e1cb06, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5302d6b90ead8bb46987b27e9abbe5e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -64,7 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RootMap:
-        m_Texture: {fileID: 2800000, guid: f4aca5e921fbd424daf5da2613140a62, type: 3}
+        m_Texture: {fileID: 2800000, guid: 37dd227717d03134fba27c4cc193f62a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -84,12 +84,12 @@ Material:
     - BOOLEAN_ENABLECOLOR: 0
     - _AOOccludeAll: 0
     - _AOStrength: 0
-    - _AlphaClip2: 0
-    - _AlphaContrast: 2
-    - _AlphaStrength: 2
+    - _AlphaClip2: 0.666
+    - _AlphaContrast: 1.1
+    - _AlphaStrength: 0.8500001
     - _BaseColorStrength: 1
     - _BlendStrength: 0
-    - _DiffuseStrength: 2
+    - _DiffuseStrength: 1
     - _Displace: 0.0005
     - _ENUMCLIPQUALITY_ON: 2
     - _EndColorStrength: 1
@@ -118,8 +118,9 @@ Material:
     - _UseAnisotropic: 1
     - _UseDisplacement: 1
     - _VertexColorStrength: 1
+    - _XRMotionVectorsPass: 1
     m_Colors:
-    - _DiffuseColor: {r: 0.16078432, g: 0.098039225, b: 0.07058824, a: 1}
+    - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
     - _EndColor: {r: 0.2863614, g: 0.11070206, b: 0.049840096, a: 1}
     - _HighlightAColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
@@ -128,10 +129,10 @@ Material:
     - _HighlightBDistribution: {r: 0, g: 0.5, b: 1, a: 0}
     - _RootColor: {r: 0.16618572, g: 0.049840096, b: 0, a: 1}
     - _SpecularTint: {r: 1, g: 0.7851325, b: 0.7036741, a: 1}
-    - _VertexBaseColor: {r: 0.2509804, g: 0.21960786, b: 0.21960786, a: 1}
+    - _VertexBaseColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3631434114688202266
+--- !u!114 &5331036362278838037
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

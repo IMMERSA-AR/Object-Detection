@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7fe6a7288b2cdf4ebdf878916b551b8
+guid: dac06c07e110e9548a3fbba81ef0c183
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -17,11 +17,7 @@ ModelImporter:
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'c7 Mouth Dimple' has import animation warnings
-      that might lower retargeting quality:\n\t'CC_Base_JawRoot' has translation
-      animation that will be discarded.\n\t'CC_Base_R_Eye' has translation animation
-      that will be discarded.\n\t'CC_Base_L_Eye' has translation animation that will
-      be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -115,7 +111,7 @@ ModelImporter:
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 1
-    maxBonesPerVertex: 8
+    maxBonesPerVertex: 6
     minBoneWeight: 0.001
     optimizeBones: 1
     generateMeshLods: 0
