@@ -935,11 +935,7 @@ public class LectureHallManager : MonoBehaviour
         _spawnedNPCs.Add(doctor);
         Debug.Log($"[LectureHall] Doctor spawned at {pos}, facing {facingTarget}.");
 
-        // Spawn era props now that both doctor position and chair centroid are known.
         float floorY = FindFloorY(pos, Camera.main != null ? Camera.main.transform.position.y : 1.7f);
-        var props = GetComponent<LectureHallProps>();
-        if (props != null)
-            props.SpawnProps(pos, rot, facingTarget, floorY);
 
         // Now that the doctor position is known:
         //   1. Correct body orientation — any student facing more than 90° away
@@ -1033,9 +1029,6 @@ public class LectureHallManager : MonoBehaviour
         _reservedMuradChairPos = null;
         _lectureActive = false;
         _sittingDriver = null;   // GameObject is destroyed above; null the ref so GC can collect it
-
-        var props = GetComponent<LectureHallProps>();
-        if (props != null) props.ClearProps();
 
         Debug.Log("[LectureHall] Scene cleared.");
     }

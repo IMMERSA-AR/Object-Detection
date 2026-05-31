@@ -66,6 +66,16 @@ public class ExperienceConfig : ScriptableObject
 
     [Tooltip("Number of seats per row")]
     public int studentsPerRow = 3;
+
+    [Header("Obelisk")]
+    [Tooltip("Audio clip that loops while scanning for the obelisk.")]
+    public AudioClip obeliskScanningAudioClip;
+
+    [Tooltip("Audio clip played once when the obelisk is confirmed detected.")]
+    public AudioClip obeliskDetectedAudioClip;
+
+    [Tooltip("Guidance text shown on the scanning UI while looking for the obelisk.")]
+    public string obeliskGuidanceText = "Point the camera at the obelisk…";
 }
 
 [System.Serializable]

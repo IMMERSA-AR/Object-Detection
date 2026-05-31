@@ -658,6 +658,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
       insertIndex: -1
       addedObject: {fileID: -4593688672776935048}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840690326728849468}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6479817979587870164}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2307639929895781951}
@@ -831,7 +837,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589601983855728114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
   m_Name: 
@@ -857,7 +863,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589601983855728114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
   m_Name: 
@@ -872,6 +878,73 @@ MonoBehaviour:
   laughterThreshold: 0.5
   laughterMultiplier: 1.5
   smoothAmount: 70
+--- !u!114 &1840690326728849468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589601983855728114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
+  modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
+  backendType: 256
+  smoothing: 0.55
+  ppRescueBlend: 0.35
+  ppRescueThreshold: 0.12
+  logTimings: 0
+--- !u!114 &6479817979587870164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589601983855728114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c944a6cc0b5a854b995908f1f44d29a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
+  faceMesh: {fileID: 0}
+  mouthExaggeration: 1.5
+  perVisemeMultiplier:
+  - 1
+  - 2
+  - 1.5
+  - 1
+  - 1
+  - 1
+  - 1.2
+  - 1
+  - 1
+  - 1
+  - 1.2
+  - 1
+  - 1
+  - 1.8
+  - 1.5
+  ppClosureThreshold: 0.25
+  ppFastSmoothing: 0.15
+  visemeBlendShapeNames:
+  - V_None
+  - V_Explosive
+  - V_Dental_Lip
+  - V_Lip_Open
+  - V_Open
+  - Merged_Open_Mouth
+  - V_Affricate
+  - V_Lip_Open
+  - V_Lip_Open
+  - V_Lip_Open
+  - Merged_Open_Mouth
+  - Mouth_Drop_Lower
+  - Mouth_Drop_Lower
+  - V_Tight_O
+  - V_Tight
+  showDebugOverlay: 1
 --- !u!4 &1855299587640975382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 248074432326912181, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
