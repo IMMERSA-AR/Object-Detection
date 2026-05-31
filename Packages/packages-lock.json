@@ -88,7 +88,7 @@
       "url": "https://packages.unity.com"
     },
     "com.soupday.cc3_unity_tools": {
-      "version": "file:D:/Downloads/ccic_unity_tools-2_2_3/CCiC-Unity-Tools-2.2.3",
+      "version": "file:D:/Senior 2/GP/ccic_unity_tools-2_2_6/CCiC-Unity-Tools-2.2.6",
       "depth": 0,
       "source": "local",
       "dependencies": {

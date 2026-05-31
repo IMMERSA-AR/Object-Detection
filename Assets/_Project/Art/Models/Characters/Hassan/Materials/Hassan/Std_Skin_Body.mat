@@ -185,7 +185,7 @@ Material:
     - _QueueOffset: 0
     - _RScatterScale: 1
     - _RSmoothnessMod: 0
-    - _SSSBlend: 0.6
+    - _SSSBlend: 0.35
     - _SSSDistortion: 0.5
     - _SSSTransmission: 5
     - _SmoothnessContrast: 1.35

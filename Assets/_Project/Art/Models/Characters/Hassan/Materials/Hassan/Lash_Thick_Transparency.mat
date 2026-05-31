@@ -118,7 +118,6 @@ Material:
     - _UseAnisotropic: 1
     - _UseDisplacement: 1
     - _VertexColorStrength: 1
-    - _XRMotionVectorsPass: 1
     m_Colors:
     - _DiffuseColor: {r: 0.99999994, g: 0.99999994, b: 0.99999994, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}

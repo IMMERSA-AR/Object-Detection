@@ -3337,7 +3337,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1946235620}
   - {fileID: 66809135}
   - {fileID: 465529625}
   - {fileID: 1350676827}
@@ -3345,6 +3344,7 @@ Transform:
   - {fileID: 76791363}
   - {fileID: 589695821}
   - {fileID: 275520965}
+  - {fileID: 1946235620}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &880268950
@@ -7297,52 +7297,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8480088675531120989, guid: c689b9dd09bc62a4ebd7799eec928f76, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1946235623}
-    - targetCorrespondingSourceObject: {fileID: 8480088675531120989, guid: c689b9dd09bc62a4ebd7799eec928f76, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1946235622}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c689b9dd09bc62a4ebd7799eec928f76, type: 3}
 --- !u!4 &1946235620 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9143577265566137319, guid: c689b9dd09bc62a4ebd7799eec928f76, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1947269572227882563, guid: c689b9dd09bc62a4ebd7799eec928f76, type: 3}
   m_PrefabInstance: {fileID: 1946235619}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1946235621 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8480088675531120989, guid: c689b9dd09bc62a4ebd7799eec928f76, type: 3}
-  m_PrefabInstance: {fileID: 1946235619}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1946235622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946235621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5de9ec83d17acd34a86e93cdae448b24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
-  clip: {fileID: 7400000, guid: 9f45ab469e1986e4c9ea35cfb043af6e, type: 2}
---- !u!114 &1946235623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946235621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8ca059f79d385479fc0ff1cc2001da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnRelativeToUser
-  forwardOffset: 1
-  rightOffset: 0
-  verticalOffset: -1.7
 --- !u!1 &1991094356
 GameObject:
   m_ObjectHideFlags: 0
