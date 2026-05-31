@@ -319,19 +319,7 @@ MonoBehaviour:
   experiences:
   - {fileID: 11400000, guid: b96d3f2606bf1ab469ff623a6427994d, type: 2}
   - {fileID: 11400000, guid: b92b0bdd9e890de418e809d642bde871, type: 2}
-  menuCanvas: {fileID: 0}
-  cardContainer: {fileID: 0}
-  cardPrefab: {fileID: 2755091775681925373, guid: cc6c3c9d1353d7e4caa97c71d87ef09f, type: 3}
-  menuDistance: 1.5
-  menuHeightOffset: 0
-  objectDetector: {fileID: 282470193}
-  objectStamper: {fileID: 282470197}
-  scanningUI: {fileID: 0}
   lectureHallManager: {fileID: 2112026628}
-  obeliskManager: {fileID: 0}
-  chairMeshDetector: {fileID: 0}
-  chairYOLODetector: {fileID: 282470199}
-  chairScanLabel: {fileID: 0}
 --- !u!4 &56200035
 Transform:
   m_ObjectHideFlags: 0
@@ -1026,14 +1014,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 282470190}
-  - component: {fileID: 282470193}
-  - component: {fileID: 282470192}
   - component: {fileID: 282470191}
   - component: {fileID: 282470195}
   - component: {fileID: 282470196}
-  - component: {fileID: 282470197}
   - component: {fileID: 282470198}
-  - component: {fileID: 282470199}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1068,39 +1052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64088db068fc8824b90899e266f2d377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PassthroughHandler
---- !u!114 &282470192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282470184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae98b75915edc0f4bb705aa78a0212d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectRenderer
-  mergeThreshold: 0.2
-  markerPrefab: {fileID: 5815054177370749254, guid: 434a7f318c6ac3443845e6df317a4428, type: 3}
-  labelFilters: 
-  minConfidence: 0.5
-  searchUIObject: {fileID: 0}
---- !u!114 &282470193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282470184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baedf2fdfd2f5e647816124e786f24a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectDetector
-  sentisModel: {fileID: 5022602860645237092, guid: deeb3fcc87c15e045b5433c7cdc6f836, type: 3}
-  backend: 512
-  inferenceInterval: 0.1
-  kLayersPerFrame: 20
 --- !u!114 &282470195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,21 +1082,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: meta.xr.mrutilitykit::Meta.XR.EnvironmentRaycastManager
   CustomTrackingSpace: {fileID: 0}
---- !u!114 &282470197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282470184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dffebf828e08a2448fe717ab6278292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectStamper
-  characterPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
-  sideOffset: 0.5
-  heightOffset: 0
 --- !u!114 &282470198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,33 +1099,6 @@ MonoBehaviour:
   stoppingDistance: 0.6
   rotationSpeed: 8
   seatHeightOffset: 0
-  seatForwardOffset: 0
---- !u!114 &282470199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282470184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a158291043af804788ad32cf154dec8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChairYOLODetector
-  sentisModel: {fileID: 5022602860645237092, guid: 835356d78e78eb34287c89bb7df87b06, type: 3}
-  backend: 512
-  kLayersPerFrame: 20
-  scanDuration: 8
-  inferenceInterval: 0.5
-  confidenceThreshold: 0.4
-  iouThreshold: 0.45
-  seatSampleBias: 0.2
-  trackingRadius: 0.15
-  maxChairs: 10
-  minHitsPerChair: 3
-  stabilityDuration: 2
-  seatMinHeight: 0.2
-  seatMaxHeight: 0.7
 --- !u!1 &285639999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,6 +2614,7 @@ MonoBehaviour:
   redScale: 1.35
   greenScale: 1
   blueScale: 0.45
+  _layer: {fileID: 0}
 --- !u!1 &606640898
 GameObject:
   m_ObjectHideFlags: 0

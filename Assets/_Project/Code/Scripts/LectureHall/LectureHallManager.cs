@@ -800,15 +800,9 @@ public class LectureHallManager : MonoBehaviour
                 return null;
             }
 
-            // No Murad promotion — reshuffle and continue (repeats are acceptable).
-            _shuffledStudentVariants = new List<StudentVariant>(candidates);
-            for (int i = _shuffledStudentVariants.Count - 1; i > 0; i--)
-            {
-                int j = UnityEngine.Random.Range(0, i + 1);
-                (_shuffledStudentVariants[i], _shuffledStudentVariants[j]) =
-                    (_shuffledStudentVariants[j], _shuffledStudentVariants[i]);
-            }
-            _variantCursor = 0;
+            // Pool exhausted — always return null to prevent duplicate characters.
+            Debug.Log("[LectureHall] PickStudentVariant: pool exhausted — returning null (no duplicates).");
+            return null;
         }
 
         return _shuffledStudentVariants[_variantCursor++];
@@ -1043,33 +1037,79 @@ public class LectureHallManager : MonoBehaviour
         float halfX = (cols - 1) * seatSpacingX * 0.5f;
         float halfZ = (rows - 1) * seatSpacingZ * 0.5f;
 
+        bool mainMuradSpawned = false;
+
         for (int r = 0; r < rows; r++)
         {
             for (int c = 0; c < cols; c++)
             {
+                Vector3 offset = right * (-halfX + c * seatSpacingX)
+                               + forward * (-halfZ + r * seatSpacingZ);
+                Vector3 pos = new Vector3(anchor.x + offset.x, anchor.y + sittingYOffset, anchor.z + offset.z);
+
+                // ── First seat: always spawn Murad ───────────────────────────────
+                if (!mainMuradSpawned && config.mainMuradPrefab != null)
+                {
+                    Quaternion muradRot = flipMuradFacing
+                        ? Quaternion.Euler(0f, 180f, 0f)
+                        : Quaternion.identity;
+                    Vector3 muradPos = pos + muradRot * muradSeatOffset;
+
+                    GameObject murad = Instantiate(config.mainMuradPrefab, muradPos, muradRot);
+                    murad.name = "MainMurad_Seated";
+                    mainMuradSpawned  = true;
+                    _mainMuradInstance = murad;
+                    murad.AddComponent<CharacterLightingStabilizer>();
+
+                    // Disable AI / lip sync during seated phase — re-enabled in MainMuradApproachUser
+                    var muradAI = murad.GetComponent<MuradController>();
+                    if (muradAI != null) muradAI.enabled = false;
+
+                    var voiceCtrl = murad.GetComponent<VoiceAPIController>();
+                    if (voiceCtrl != null) voiceCtrl.enabled = false;
+
+                    var lipSync = murad.GetComponentInChildren<LipSync.CustomLipSyncContext>(true);
+                    if (lipSync != null)
+                    {
+                        lipSync.enabled = false;
+                        Debug.Log("[LectureHall] CustomLipSyncContext disabled on Murad (grid) — re-enabled at Q&A.");
+                    }
+
+                    Animator muradAnim = murad.GetComponentInChildren<Animator>();
+                    if (muradAnim != null)
+                    {
+                        muradAnim.SetBool("IsStanding", false);
+                        muradAnim.SetBool("IsWalking",  false);
+                        muradAnim.SetBool("IsSitting",  true);
+                    }
+
+                    foreach (var smr in murad.GetComponentsInChildren<SkinnedMeshRenderer>(true))
+                        smr.updateWhenOffscreen = true;
+
+                    EnsureBlockerCollider(murad);
+                    _spawnedNPCs.Add(murad);
+
+                    Debug.Log($"[LectureHall] Murad (grid) seated at {muradPos}  flipFacing={flipMuradFacing}.");
+                    continue;
+                }
+
+                // ── Remaining seats: unique student variants, no duplicates ───────
                 StudentVariant variant = PickStudentVariant(config);
                 if (variant == null || variant.prefab == null)
                 {
-                    Debug.LogWarning("[LectureHall] No studentPrefab or studentPrefabVariants assigned.");
-                    return;
+                    // Pool exhausted — skip seat rather than spawning a duplicate
+                    Debug.Log($"[LectureHall] Seat ({r},{c}) skipped — student pool exhausted, no duplicates.");
+                    continue;
                 }
-
-                Vector3 offset = right * (-halfX + c * seatSpacingX)
-                               + forward * (-halfZ + r * seatSpacingZ);
-
-                Vector3 pos = new Vector3(anchor.x + offset.x, anchor.y + sittingYOffset, anchor.z + offset.z);
 
                 GameObject npc = Instantiate(variant.prefab, pos, Quaternion.identity);
                 npc.name = $"Student_{r}_{c}";
-
-                // Students face back toward the user & doctor (lookAtTarget = camera position)
                 InitSeatedStudent(npc, config, lookAtTarget, variant.sittingClip);
-
                 _spawnedNPCs.Add(npc);
             }
         }
 
-        Debug.Log($"[LectureHall] Spawned {rows * cols} students facing the user/doctor.");
+        Debug.Log($"[LectureHall] Grid spawn done. Murad={mainMuradSpawned}  total NPCs={_spawnedNPCs.Count}.");
     }
 
     // ── Detection audio ───────────────────────────────────────────

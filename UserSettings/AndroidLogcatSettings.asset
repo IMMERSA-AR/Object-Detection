@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 3547,
+        "processId": 27346,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -295,6 +295,18 @@
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 3547,
             "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 16951,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27346,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -351,7 +363,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "yolo",
+        "m_Filter": "Lecture",
         "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },

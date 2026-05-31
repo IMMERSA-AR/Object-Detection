@@ -113,7 +113,7 @@ public class EmotionController : MonoBehaviour
                 new BlendShapeData { shapeName = "Mouth_Pucker_Down_L", targetWeight = 100f },
                 new BlendShapeData { shapeName = "Mouth_Pucker_Down_R", targetWeight = 100f },
                 new BlendShapeData { shapeName = "Jaw_Open",            targetWeight = 80f  },
-                new BlendShapeData { shapeName = "V_Lip_Open",          targetWeight = 80f  },
+                // V_Lip_Open removed — it's a viseme shape (index 8) used by lip sync
             }
         },
         new Emotion
@@ -141,87 +141,116 @@ public class EmotionController : MonoBehaviour
         },
     };
 
-    // Stores what the current target is for each facial muscle
-    private Dictionary<int, float> targetWeights = new Dictionary<int, float>();
+    // Tracks the current displayed weight for each blend shape (our own — never read from mesh)
+    private Dictionary<int, float> currentWeights = new Dictionary<int, float>();
+    // Tracks where we want to get to
+    private Dictionary<int, float> targetWeights  = new Dictionary<int, float>();
 
     void Start()
     {
-        // Try to auto-find the mesh if you forgot to drag it in
         if (faceMesh == null) faceMesh = GetComponent<SkinnedMeshRenderer>();
     }
 
-    void Update()
-    {
-        if (faceMesh == null || faceMesh.sharedMesh == null) return;
-
-        // Every frame, smoothly move all facial muscles toward their target
-        for (int i = 0; i < faceMesh.sharedMesh.blendShapeCount; i++)
-        {
-            float currentWeight = faceMesh.GetBlendShapeWeight(i);
-
-            // If the muscle is part of the current emotion, use its target. Otherwise, relax it to 0.
-            float target = targetWeights.ContainsKey(i) ? targetWeights[i] : 0f;
-
-            // Only do the math if the muscle isn't already at its destination
-            if (Mathf.Abs(currentWeight - target) > 0.1f)
-            {
-                float newWeight = Mathf.Lerp(currentWeight, target, Time.deltaTime * transitionSpeed);
-                faceMesh.SetBlendShapeWeight(i, newWeight);
-            }
-        }
-    }
-
-    // Call this function from your other scripts to change his face!
+    /// <summary>
+    /// Change Mourad's facial expression with a smooth transition.
+    /// Pass "Neutral" to relax the face back to default.
+    /// </summary>
     public void PlayEmotion(string emotionName)
     {
-        if (emotionName == "Neutral")
+        if (faceMesh == null || string.IsNullOrEmpty(emotionName)) return;
+
+        string normalised = char.ToUpper(emotionName[0]) + emotionName.Substring(1).ToLower();
+        Debug.Log($"[Emotion] Playing: {normalised}");
+
+        // Build new target weights
+        Dictionary<int, float> newTargets = new Dictionary<int, float>();
+
+        if (normalised != "Neutral")
         {
-            targetWeights.Clear(); // Clears all targets, relaxing the whole face to 0
-            return;
-        }
+            Emotion e = emotions.Find(x => x.emotionName == normalised);
+            if (e == null) { Debug.LogWarning($"[Emotion] Unknown emotion: '{normalised}'"); return; }
 
-        Emotion targetEmotion = emotions.Find(e => e.emotionName == emotionName);
-
-        if (targetEmotion != null)
-        {
-            targetWeights.Clear(); // Reset face before applying new emotion
-
-            foreach (var shape in targetEmotion.activeShapes)
+            foreach (var shape in e.activeShapes)
             {
-                int index = faceMesh.sharedMesh.GetBlendShapeIndex(shape.shapeName);
-                if (index != -1)
-                {
-                    targetWeights[index] = shape.targetWeight;
-                }
-                else
-                {
-                    Debug.LogWarning("Cannot find a facial muscle named: " + shape.shapeName);
-                }
+                int idx = faceMesh.sharedMesh.GetBlendShapeIndex(shape.shapeName);
+                if (idx >= 0) newTargets[idx] = shape.targetWeight;
+                else Debug.LogWarning($"[Emotion] Blendshape not found: '{shape.shapeName}'");
             }
         }
-        else
+        // "Neutral" leaves newTargets empty → all blend to 0
+
+        targetWeights = newTargets;
+
+        // Restart the transition coroutine
+        StopAllCoroutines();
+        StartCoroutine(TransitionCoroutine());
+    }
+
+    // Runs once per PlayEmotion call, drives all blend shapes to their targets
+    // then stops. Uses yield return null so it runs in the normal Update phase
+    // which is guaranteed to execute (no LateUpdate dependency).
+    private System.Collections.IEnumerator TransitionCoroutine()
+    {
+        if (faceMesh == null) yield break;
+
+        // Snapshot where every active blend shape currently is
+        var allIndices = new System.Collections.Generic.HashSet<int>(targetWeights.Keys);
+        foreach (int i in currentWeights.Keys) allIndices.Add(i);
+
+        var startWeights = new Dictionary<int, float>();
+        foreach (int i in allIndices)
+            startWeights[i] = currentWeights.ContainsKey(i) ? currentWeights[i] : 0f;
+
+        float elapsed = 0f;
+        float duration = 1f / Mathf.Max(transitionSpeed, 0.1f);
+
+        while (elapsed < duration)
         {
-            Debug.LogWarning("You tried to play an emotion that doesn't exist: " + emotionName);
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            foreach (int i in allIndices)
+            {
+                float from = startWeights.ContainsKey(i) ? startWeights[i] : 0f;
+                float to   = targetWeights.ContainsKey(i)  ? targetWeights[i]  : 0f;
+                float val  = Mathf.Lerp(from, to, t);
+                currentWeights[i] = val;
+                faceMesh.SetBlendShapeWeight(i, val);
+            }
+
+            yield return null;
+        }
+
+        // Snap to final values
+        foreach (int i in allIndices)
+        {
+            float final = targetWeights.ContainsKey(i) ? targetWeights[i] : 0f;
+            currentWeights[i] = final;
+            faceMesh.SetBlendShapeWeight(i, final);
         }
     }
 
-    // --- QUICK TEST BUTTONS ---
-    // You can right-click this script in the Inspector to trigger these instantly!
-    [ContextMenu("Test Angry Emotion")]
-    public void TestAngry() { PlayEmotion("Angry"); }
+    // --- QUICK TEST BUTTONS (right-click this script in Inspector) ---
+    [ContextMenu("Test Angry")]   public void TestAngry()   { PlayEmotion("Angry");   }
+    [ContextMenu("Test Happy")]   public void TestHappy()   { PlayEmotion("Happy");   }
+    [ContextMenu("Test Sad")]     public void TestSad()     { PlayEmotion("Sad");     }
+    [ContextMenu("Test Disgust")] public void TestDisgust() { PlayEmotion("Disgust"); }
+    [ContextMenu("Test Surprise")]public void TestSurprise(){ PlayEmotion("Surprise");}
+    [ContextMenu("Test Neutral")] public void TestNeutral() { PlayEmotion("Neutral"); }
 
-    [ContextMenu("Test Happy Emotion")]
-    public void TestHappy() { PlayEmotion("Happy"); }
-
-    [ContextMenu("Test Sad Emotion")]
-    public void TestSad() { PlayEmotion("Sad"); }
-
-    [ContextMenu("Test Disgust Emotion")]
-    public void TestDisgust() { PlayEmotion("Disgust"); }
-
-    [ContextMenu("Test Surprise Emotion")]
-    public void TestSurprise() { PlayEmotion("Surprise"); }
-
-    [ContextMenu("Test Neutral (Relax Face)")]
-    public void TestNeutral() { PlayEmotion("Neutral"); }
+    [ContextMenu(">>> DUMP All Blend Shape Names <<<")]
+    public void DumpBlendShapeNames()
+    {
+        if (faceMesh == null || faceMesh.sharedMesh == null)
+        {
+            Debug.LogError("[Emotion] faceMesh is not assigned! Drag the SkinnedMeshRenderer into the faceMesh field.");
+            return;
+        }
+        int count = faceMesh.sharedMesh.blendShapeCount;
+        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+        sb.AppendLine($"[Emotion] {count} blend shapes on '{faceMesh.name}':");
+        for (int i = 0; i < count; i++)
+            sb.AppendLine($"  [{i}] {faceMesh.sharedMesh.GetBlendShapeName(i)}");
+        Debug.Log(sb.ToString());
+    }
 }
