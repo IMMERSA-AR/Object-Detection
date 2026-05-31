@@ -711,7 +711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
   role: 1
   idleClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
-  talkingClip: {fileID: 7400000, guid: 7c48fc0884cb3ac41833ea4e863f50fe, type: 2}
+  talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
   standingAfterLectureClip: {fileID: 7400000, guid: 58be8b94b354b714bb832cf3d27902e6, type: 2}
   walkingClip: {fileID: 0}
   paceDistance: 0.6
@@ -3408,6 +3408,12 @@ MonoBehaviour:
     - 0
     - 0
     - 0
+  driveEyes: 1
+  driveJaw: 1
+  driveNeck: 1
+  driveTongue: 1
+  driveTeeth: 1
+  driveHead: 1
 --- !u!137 &8303812961145809174 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7634479467738841525, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
