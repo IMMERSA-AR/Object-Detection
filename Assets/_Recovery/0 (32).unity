@@ -160,7 +160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 184288628}
   - component: {fileID: 184288627}
-  - component: {fileID: 184288629}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -185,7 +184,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -248,35 +247,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &184288629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184288626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_CustomShadowLayers: 0
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-  m_RenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_ShadowRenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_Version: 4
-  m_LightLayerMask: 1
-  m_ShadowLayerMask: 1
-  m_RenderingLayers: 1
-  m_ShadowRenderingLayers: 1
 --- !u!1 &327499598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1047,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PanelSceneManager
   panelDetector: {fileID: 1908031138}
   audioSource: {fileID: 1115736908}
-  introAudioClip: {fileID: 8300000, guid: 5c411422dd9e67a488a99148372f34bc, type: 3}
   scanningAudioClip: {fileID: 0}
   detectedAudioClip: {fileID: 0}
   scanningPanel: {fileID: 0}
@@ -1787,50 +1756,32 @@ MonoBehaviour:
   layersPerFrame: 20
   panelEntries:
   - panelName: College History Text
-    characterPrefab: {fileID: 597805309522532133, guid: ec465043d706c8344bf15cb699b7a11b, type: 3}
+    characterPrefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
     narrationClip: {fileID: 8300000, guid: e8287e056ac5f864cb13ef757cd408b2, type: 3}
-    idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
-    talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
   - panelName: 
     characterPrefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
     narrationClip: {fileID: 8300000, guid: 6973b46a32435be40ab6f1a2308b35ef, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: 57877035d4bc9b9439ffea6986dbeff2, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: 2521df9d5b7820e439bed09c13968e5b, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: 57668c0bd9267fe429939a9af8d9d4bb, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: e91742cb19cce90459bca8f8c3a51302, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: 11e6602e33ade8e4ca7ca9d42d25ee60, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: cb156f1daee923f47a3c1a98b454847d, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: fdede3d4d0a2b89448cb4cc08a6bbff2, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
   autoStart: 0
   scanDuration: 10
   inferenceInterval: 0.5
@@ -1838,7 +1789,6 @@ MonoBehaviour:
   stopOnFirstConfirm: 1
   spawnSideOffset: 0.8
   spawnForwardOffset: 0.3
-  narrationOnPoint: 1
   narrationDelay: 0.5
   narrationAudioSource: {fileID: 1115736908}
 --- !u!1 &1916714816

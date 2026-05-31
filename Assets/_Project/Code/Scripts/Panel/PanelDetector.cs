@@ -74,13 +74,34 @@ public class PanelDetector : MonoBehaviour
 
     // ── Character spawn ───────────────────────────────────────────────────────
     [Header("Character Spawn")]
-    [Tooltip("How far to the RIGHT of the panel centre the character stands (metres).\n" +
-             "Negative = left side.")]
-    public float spawnSideOffset = 0.8f;
+    [Tooltip("(Unused in 'in front' mode — kept for compatibility.)")]
+    public float spawnSideOffset = 0.0f;
 
-    [Tooltip("Extra forward offset from the panel surface toward the user (metres).\n" +
-             "Prevents the character from spawning inside the wall.")]
-    public float spawnForwardOffset = 0.3f;
+    [Tooltip("How far IN FRONT of the panel (toward the user) the character stands, in metres.\n" +
+             "The character faces the user. Increase if it spawns inside the wall.")]
+    public float spawnForwardOffset = 0.8f;
+
+    [Tooltip("Vertical offset added on top of the detected floor Y.\n" +
+             "Increase if the character spawns underground (pivot is above the feet).\n" +
+             "E.g. set to 0.9 if the character's pivot is at its hip height.")]
+    public float spawnYOffset = 0f;
+
+    // ── Interaction ─────────────────────────────────────────────────────────────
+    [Header("Interaction")]
+    [Tooltip("If true, narration does NOT auto-play. Instead the spawned character waits\n" +
+             "until the user POINTS at it with the right controller, then plays the panel audio.\n" +
+             "If false, narration plays automatically on spawn (old behaviour).")]
+    public bool narrationOnPoint = true;
+
+    [Tooltip("Drag OVRCameraRig → TrackingSpace → RightControllerAnchor here.\n" +
+             "Used for the laser pointer ray direction and origin.")]
+    public Transform rightController;
+
+    [Tooltip("Drag a child GameObject of the controller that has a LineRenderer component.\n" +
+             "This is the visible laser line drawn toward the character.\n" +
+             "Create: right-click RightControllerAnchor → Create Empty → add LineRenderer,\n" +
+             "set Positions Count = 2, Width = 0.005, assign any Unlit material.")]
+    public LineRenderer laserPointer;
 
     // ── Audio ─────────────────────────────────────────────────────────────────
     [Header("Audio")]
@@ -108,6 +129,14 @@ public class PanelDetector : MonoBehaviour
     /// </summary>
     public System.Action OnNarrationFinished;
 
+    /// <summary>
+    /// Optional gate: if set, PlayNarration waits until this returns true before
+    /// starting the panel audio.  PanelSceneManager wires this to block narration
+    /// while the scene intro clip is still playing.
+    /// Leave null to start narration immediately (no gate).
+    /// </summary>
+    public System.Func<bool> IsReadyForNarration;
+
     // ── Constants ─────────────────────────────────────────────────────────────
     private const int NumClasses = 9;    // class IDs 0–8
     private const int InputSize  = 640;  // YOLO input resolution
@@ -122,8 +151,14 @@ public class PanelDetector : MonoBehaviour
     private bool    _scanning;
     private Texture _cameraTexture;
 
+    /// <summary>The most recently spawned panel character (for cleanup on rescan).</summary>
+    public GameObject LastSpawnedCharacter { get; private set; }
+
     // One hit list per class; index = classId
     private readonly List<Vector3>[] _hitsByClass = new List<Vector3>[NumClasses];
+
+    // Classes that have already been confirmed — skipped on future scans.
+    private readonly HashSet<int> _confirmedClasses = new HashSet<int>();
 
     // ── Unity lifecycle ───────────────────────────────────────────────────────
 
@@ -173,8 +208,19 @@ public class PanelDetector : MonoBehaviour
     }
 
     /// <summary>
+    /// Clears the confirmed-panel history so all panels can be detected again.
+    /// Does NOT start a new scan — call ResetDetection() or StartDetection() after this.
+    /// </summary>
+    public void ResetConfirmedPanels()
+    {
+        _confirmedClasses.Clear();
+        Debug.Log("[PanelDetector] Confirmed-panel history cleared — all panels eligible again.");
+    }
+
+    /// <summary>
     /// Clears all accumulated hit data and starts a fresh scan.
-    /// Use this to scan for the next panel after a previous detection is complete.
+    /// Already-confirmed panels are still excluded; call ResetConfirmedPanels() first
+    /// if you want to allow re-detection of all panels.
     /// </summary>
     public void ResetDetection()
     {
@@ -259,7 +305,9 @@ public class PanelDetector : MonoBehaviour
         panelPos /= hits.Count;
 
         string label = GetPanelLabel(confirmedClass);
-        Debug.Log($"[PanelDetector] Confirmed: '{label}'  pos={panelPos:F2}  ({hits.Count} hits)");
+        _confirmedClasses.Add(confirmedClass);   // exclude from all future scans
+        Debug.Log($"[PanelDetector] Confirmed: '{label}'  pos={panelPos:F2}  ({hits.Count} hits)  " +
+                  $"[{_confirmedClasses.Count} panel(s) done]");
 
         // Notify PanelSceneManager (or any listener) before spawning the character
         OnPanelConfirmed?.Invoke(confirmedClass, label);
@@ -267,12 +315,14 @@ public class PanelDetector : MonoBehaviour
         SpawnCharacterBesidePanel(panelPos, confirmedClass);
     }
 
-    // Returns the class with the most hits (at least 1); -1 if no hits at all
+    // Returns the class with the most hits (at least 1); -1 if no hits at all.
+    // Already-confirmed classes are excluded so they are never re-detected.
     private int BestClass()
     {
         int best = -1, bestCount = 0;
         for (int i = 0; i < NumClasses; i++)
         {
+            if (_confirmedClasses.Contains(i)) continue;   // skip already visited panels
             if (_hitsByClass[i].Count > bestCount)
             {
                 bestCount = _hitsByClass[i].Count;
@@ -313,11 +363,6 @@ public class PanelDetector : MonoBehaviour
 
         Transform cam = Camera.main != null ? Camera.main.transform : null;
 
-        // Right direction (flat, ignoring Y) relative to the camera
-        Vector3 right = cam != null
-            ? new Vector3(cam.right.x, 0f, cam.right.z).normalized
-            : Vector3.right;
-
         // Direction from panel toward the user (flat)
         Vector3 toUser = cam != null
             ? new Vector3(cam.position.x - panelWorldPos.x, 0f, cam.position.z - panelWorldPos.z)
@@ -327,20 +372,58 @@ public class PanelDetector : MonoBehaviour
 
         float floorY = GetFloorY(panelWorldPos, cam != null ? cam.position.y : 1.7f);
 
-        Vector3    spawnPos = new Vector3(panelWorldPos.x, floorY, panelWorldPos.z)
-                            + right  * spawnSideOffset
+        // Spawn IN FRONT of the panel — between the panel and the user — facing the user.
+        Vector3    spawnPos = new Vector3(panelWorldPos.x, floorY + spawnYOffset, panelWorldPos.z)
                             + toUser * spawnForwardOffset;
         Quaternion spawnRot = Quaternion.LookRotation(toUser);
 
         GameObject character = Instantiate(entry.characterPrefab, spawnPos, spawnRot);
         character.name = $"PanelCharacter_{classId}_{GetPanelLabel(classId)}";
+        LastSpawnedCharacter = character;
 
         Debug.Log($"[PanelDetector] Spawned character for '{GetPanelLabel(classId)}' at {spawnPos:F2}.");
 
-        if (entry.narrationClip != null)
-            StartCoroutine(PlayNarration(character, entry.narrationClip));
+        // ── Idle animation on spawn (removes T-pose) ─────────────────────────
+        // Call Init() explicitly — same timing as the lecture hall's HistoricalNPCController.
+        // If the prefab has PanelNPCController use it; otherwise fall back to PanelCharacterAnimator.
+        var panelNPCCtrl = character.GetComponent<PanelNPCController>();
+        if (panelNPCCtrl != null)
+        {
+            panelNPCCtrl.Init();
+        }
         else
+        {
+            var panelAnim = character.AddComponent<PanelCharacterAnimator>();
+            panelAnim.Init(entry.idleClip, entry.talkingClip);
+        }
+
+        if (entry.narrationClip == null)
+        {
             Debug.LogWarning($"[PanelDetector] narrationClip not set for class {classId} — skipping audio.");
+            return;
+        }
+
+        if (narrationOnPoint)
+        {
+            // Defer narration: the character waits until the user points the controller at it.
+            var interaction = character.AddComponent<PanelCharacterInteraction>();
+            interaction.Init(this, entry.narrationClip, rightController, laserPointer);
+            Debug.Log("[PanelDetector] Narration deferred — aim controller at character and pull trigger.");
+        }
+        else
+        {
+            StartCoroutine(PlayNarration(character, entry.narrationClip));
+        }
+    }
+
+    /// <summary>
+    /// Public entry point used by PanelCharacterInteraction to start narration once
+    /// the user points the controller at the spawned character.
+    /// </summary>
+    public void TriggerNarration(GameObject character, AudioClip clip)
+    {
+        if (character == null || clip == null) return;
+        StartCoroutine(PlayNarration(character, clip));
     }
 
     // ── Narration + lip sync ──────────────────────────────────────────────────
@@ -348,6 +431,23 @@ public class PanelDetector : MonoBehaviour
     private IEnumerator PlayNarration(GameObject character, AudioClip clip)
     {
         yield return new WaitForSeconds(narrationDelay);
+
+        // If PanelSceneManager set a gate (e.g. waiting for intro to finish),
+        // hold here until the gate opens.  Poll every 0.25 s to avoid busy-spin.
+        if (IsReadyForNarration != null)
+        {
+            while (!IsReadyForNarration())
+            {
+                Debug.Log("[PanelDetector] Waiting for intro to finish before starting panel narration…");
+                yield return new WaitForSeconds(0.25f);
+            }
+        }
+
+        // Switch from idle → talking for the duration of the narration.
+        var panelNPC  = character != null ? character.GetComponent<PanelNPCController>()      : null;
+        var charAnim  = character != null ? character.GetComponent<PanelCharacterAnimator>()  : null;
+        if      (panelNPC != null) panelNPC.PlayTalking();
+        else if (charAnim != null) charAnim.PlayTalking();
 
         // ── 1. CustomLipSyncContext: runs silently for timeSamples-based lip sync ──
         var lipSync = character.GetComponentInChildren<LipSync.CustomLipSyncContext>(true);
@@ -399,6 +499,10 @@ public class PanelDetector : MonoBehaviour
         if (lipSyncAudio != null) lipSyncAudio.Stop();
         narrationAudioSource.Stop();
         Debug.Log("[PanelDetector] Narration finished.");
+
+        // Return to idle now that the character has finished speaking.
+        if      (panelNPC != null) panelNPC.PlayIdle();
+        else if (charAnim != null) charAnim.PlayIdle();
 
         // Notify PanelSceneManager that narration is done (safe to rescan)
         OnNarrationFinished?.Invoke();
@@ -636,4 +740,13 @@ public class PanelEntry
 
     [Tooltip("Narration audio clip for this panel.")]
     public AudioClip narrationClip;
+
+    [Tooltip("Idle animation clip — plays on spawn and after narration ends.\n" +
+             "Drag a Mixamo/CC4 idle clip here. Removes the default T-pose.\n" +
+             "Requires an Animator component (with Avatar) on the character prefab.")]
+    public AnimationClip idleClip;
+
+    [Tooltip("Talking animation clip — plays while the narration audio is playing.\n" +
+             "Falls back to the idle clip if left empty.")]
+    public AnimationClip talkingClip;
 }

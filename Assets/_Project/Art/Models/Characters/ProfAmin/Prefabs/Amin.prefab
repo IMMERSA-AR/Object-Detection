@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
   role: 1
-  idleClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+  idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
   talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
   standingAfterLectureClip: {fileID: 7400000, guid: 58be8b94b354b714bb832cf3d27902e6, type: 2}
   walkingClip: {fileID: 0}

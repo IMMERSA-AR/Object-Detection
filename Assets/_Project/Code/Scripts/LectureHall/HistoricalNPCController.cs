@@ -111,6 +111,15 @@ public class HistoricalNPCController : MonoBehaviour
         // Search root first, then children — Mixamo/CC4 characters put Animator on the root,
         // but some rigs nest it one level down (e.g. an armature child object).
         _animator = GetComponent<Animator>() ?? GetComponentInChildren<Animator>();
+
+        // Strip any Animator Controller so it can never fight the PlayableGraph.
+        // NPCBlinking drives blendshapes directly and does not need the controller.
+        if (_animator != null && _animator.runtimeAnimatorController != null)
+        {
+            Debug.Log($"[NPC] {gameObject.name}: removing Animator Controller '{_animator.runtimeAnimatorController.name}' — PlayableGraph takes over.");
+            _animator.runtimeAnimatorController = null;
+        }
+
         _paceOrigin = transform.position;
         _paceRight = transform.right;
 
@@ -248,6 +257,12 @@ public class HistoricalNPCController : MonoBehaviour
         else
         {
             AnimationClip standClip = standingAfterLectureClip != null ? standingAfterLectureClip : idleClip;
+
+            if (standingAfterLectureClip == null)
+                Debug.LogWarning($"[NPC] {gameObject.name}: 'Standing After Lecture Clip' is not assigned — " +
+                                 "falling back to Idle Clip. If the doctor sits after the lecture, assign a " +
+                                 "STANDING idle animation to 'Standing After Lecture Clip' on HistoricalNPCController.");
+
             PlayClip(standClip);
             Debug.Log($"[NPC] Doctor lecture ended — playing stand idle: {standClip?.name}");
         }

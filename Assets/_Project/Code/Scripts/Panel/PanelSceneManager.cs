@@ -44,13 +44,19 @@ public class PanelSceneManager : MonoBehaviour
     public PanelDetector panelDetector;
 
     [Header("Audio")]
-    [Tooltip("AudioSource on this GameObject — used for scanning and detected sounds.")]
+    [Tooltip("AudioSource on this GameObject — used for the intro, scanning and detected sounds.")]
     public AudioSource audioSource;
 
-    [Tooltip("Loops while scanning for a panel. Leave empty for silence.")]
+    [Tooltip("Intro narration played ONCE the moment the scene starts, regardless of detection.\n" +
+             "Assign Assets/_Project/Audio/Panels Audio/intro.mp3 here.\n" +
+             "Detection runs in parallel and never interrupts this clip.")]
+    public AudioClip introAudioClip;
+
+    [Tooltip("Loops while scanning for a panel (used on rescans). Leave empty for silence.")]
     public AudioClip scanningAudioClip;
 
-    [Tooltip("Plays once when a panel is confirmed. Leave empty for silence.")]
+    [Tooltip("Plays once when a panel is confirmed — only if the intro has already finished.\n" +
+             "Leave empty for silence.")]
     public AudioClip detectedAudioClip;
 
     [Header("Scanning UI")]
@@ -71,24 +77,23 @@ public class PanelSceneManager : MonoBehaviour
     public TextMeshProUGUI detectedPanelNameText;
 
     [Header("Rescan")]
-    [Tooltip("If true, the Rescan button appears only after narration finishes.\n" +
-             "If false, it appears immediately after confirmation.")]
-    public bool showRescanButtonAfterNarration = true;
-
-    [Tooltip("Optional rescan button — shown when ready to scan the next panel.\n" +
+    [Tooltip("Optional rescan button — manually restarts the full experience (destroys all characters).\n" +
              "Wire its OnClick → PanelSceneManager.RescanButtonPressed().")]
     public GameObject rescanButton;
 
-    [Tooltip("Seconds to wait after narration ends before auto-rescanning.\n" +
-             "Set to 0 to require the user to press the Rescan button instead.")]
-    public float autoRescanDelay = 0f;
+    [Tooltip("Seconds to wait after narration ends before automatically scanning for the next panel.\n" +
+             "Spawned characters stay in the world. Default: 2 seconds.")]
+    public float autoRescanDelay = 2f;
 
     // ── Private state ──────────────────────────────────────────────────
 
-    private bool   _narrationDone;
-    private bool   _firstScan           = true;
-    private int    _lastConfirmedClass  = -1;
-    private string _lastConfirmedName   = "";
+    private bool _narrationDone;
+    private bool _firstScan = true;
+    private int _lastConfirmedClass = -1;
+    private string _lastConfirmedName = "";
+
+    /// <summary>True while the scene intro clip is still playing.</summary>
+    private bool _introPlaying;
 
     // Track spawned characters so we can destroy them before the next scan
     private readonly List<GameObject> _spawnedCharacters = new List<GameObject>();
@@ -108,8 +113,12 @@ public class PanelSceneManager : MonoBehaviour
         }
 
         // Wire callbacks
-        panelDetector.OnPanelConfirmed  = OnPanelDetected;
+        panelDetector.OnPanelConfirmed    = OnPanelDetected;
         panelDetector.OnNarrationFinished = OnNarrationDone;
+
+        // Gate: hold panel narration until the scene intro clip finishes.
+        // Returns true immediately if no intro is configured.
+        panelDetector.IsReadyForNarration = () => !_introPlaying;
     }
 
     private void Start()
@@ -133,9 +142,9 @@ public class PanelSceneManager : MonoBehaviour
 
     private void BeginScanning()
     {
-        _narrationDone        = false;
-        _lastConfirmedClass   = -1;
-        _lastConfirmedName    = "";
+        _narrationDone = false;
+        _lastConfirmedClass = -1;
+        _lastConfirmedName = "";
 
         SetRescanButton(false);
         SetScanningUI(true);
@@ -144,19 +153,36 @@ public class PanelSceneManager : MonoBehaviour
         if (guidanceText != null)
             guidanceText.text = scanningGuidanceText;
 
-        PlayAudio(scanningAudioClip, loop: true);
-
         // Start or restart detection
         if (panelDetector == null) return;
 
         if (_firstScan)
         {
             _firstScan = false;
-            panelDetector.StartDetection();   // first run — model already loaded in Awake
+
+            if (introAudioClip != null)
+            {
+                // Play intro first — detection starts only after the intro finishes.
+                _introPlaying = true;
+                PlayAudio(introAudioClip, loop: false);
+                StartCoroutine(StartDetectionAfterIntro(introAudioClip.length));
+            }
+            else
+            {
+                // No intro — start scanning immediately with optional ambient loop.
+                if (scanningAudioClip != null)
+                    PlayAudio(scanningAudioClip, loop: true);
+
+                panelDetector.StartDetection();
+            }
         }
         else
         {
-            panelDetector.ResetDetection();   // subsequent runs — clear hits and rescan
+            // Rescans: ambient scanning loop (intro is a one-time thing only).
+            if (scanningAudioClip != null)
+                PlayAudio(scanningAudioClip, loop: true);
+
+            panelDetector.ResetDetection();   // clear hits and rescan
         }
     }
 
@@ -164,47 +190,76 @@ public class PanelSceneManager : MonoBehaviour
     private void OnPanelDetected(int classId, string panelName)
     {
         _lastConfirmedClass = classId;
-        _lastConfirmedName  = panelName;
+        _lastConfirmedName = panelName;
 
         Debug.Log($"[PanelSceneManager] Panel confirmed: [{classId}] '{panelName}'");
 
         // Switch from scanning UI to detected UI
-        StopAudio();
         SetScanningUI(false);
+
+        // Stop ONLY the looping scanning ambience — never cut the one-shot intro,
+        // which must keep playing "regardless of the banners".
+        if (audioSource != null && audioSource.isPlaying && audioSource.loop)
+            audioSource.Stop();
 
         if (detectedPanelNameText != null)
             detectedPanelNameText.text = panelName;
         SetDetectedUI(true);
 
-        PlayAudio(detectedAudioClip, loop: false);
+        // Detected sound only if nothing is currently playing (so it never cuts the intro).
+        if (detectedAudioClip != null && (audioSource == null || !audioSource.isPlaying))
+            PlayAudio(detectedAudioClip, loop: false);
 
-        // Show rescan button now if we're not waiting for narration
-        if (!showRescanButtonAfterNarration)
-            SetRescanButton(true);
+        // Rescan button stays hidden — scanning resumes automatically after narration.
     }
 
     /// <summary>Called by PanelDetector.OnNarrationFinished.</summary>
     private void OnNarrationDone()
     {
         _narrationDone = true;
-        Debug.Log("[PanelSceneManager] Narration finished.");
-
-        if (autoRescanDelay > 0f)
-            StartCoroutine(AutoRescanAfterDelay(autoRescanDelay));
-        else
-            SetRescanButton(true);   // let the user decide when to scan next
+        Debug.Log("[PanelSceneManager] Narration finished — resuming scan for next panel.");
+        StartCoroutine(AutoRescanAfterDelay(autoRescanDelay));
     }
 
+    /// <summary>
+    /// Waits, then starts scanning for the next panel.
+    /// Spawned characters are kept in the world — only RescanButtonPressed() destroys them.
+    /// </summary>
     private IEnumerator AutoRescanAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        RescanButtonPressed();
+        Debug.Log("[PanelSceneManager] Auto-rescan starting.");
+        BeginScanning();   // keeps existing characters alive; only resets UI + detection
+    }
+
+    /// <summary>
+    /// Waits for the intro clip to finish, then:
+    ///  1. Clears _introPlaying so the narration gate opens.
+    ///  2. Starts panel detection.
+    ///  3. Optionally switches to the scanning ambient loop.
+    /// </summary>
+    private IEnumerator StartDetectionAfterIntro(float introDuration)
+    {
+        yield return new WaitForSeconds(introDuration);
+
+        _introPlaying = false;
+        Debug.Log("[PanelSceneManager] Intro finished — starting panel detection.");
+
+        if (scanningAudioClip != null)
+            PlayAudio(scanningAudioClip, loop: true);
+
+        if (panelDetector != null)
+            panelDetector.StartDetection();
     }
 
     // ── Character tracking ─────────────────────────────────────────────
 
     private void ClearSpawnedCharacters()
     {
+        // PanelDetector owns the spawn; destroy the most recent one before rescanning.
+        if (panelDetector != null && panelDetector.LastSpawnedCharacter != null)
+            Destroy(panelDetector.LastSpawnedCharacter);
+
         foreach (var go in _spawnedCharacters)
             if (go != null) Destroy(go);
         _spawnedCharacters.Clear();
@@ -236,8 +291,8 @@ public class PanelSceneManager : MonoBehaviour
     {
         if (audioSource == null || clip == null) return;
         audioSource.Stop();
-        audioSource.clip  = clip;
-        audioSource.loop  = loop;
+        audioSource.clip = clip;
+        audioSource.loop = loop;
         audioSource.Play();
     }
 

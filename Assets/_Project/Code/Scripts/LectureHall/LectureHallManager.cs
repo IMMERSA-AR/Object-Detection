@@ -1302,8 +1302,32 @@ public class LectureHallManager : MonoBehaviour
             if (lectureAudioSource != null)
                 yield return new WaitForSeconds(config.lectureAudioClip.length);
 
-            // ── Step 4: Stop doctor's lip-sync source — lips return to neutral ─
+            // ── Step 4: Stop doctor's lip-sync source and reset mouth to neutral ─
             if (doctorLipSyncAudio != null) doctorLipSyncAudio.Stop();
+
+            // Stopping the AudioSource halts new PCM buffers, but the last viseme
+            // frame stays applied to the blendshapes — mouth stays open.
+            // Zero every viseme blendshape index that OVRLipSyncContextMorphTarget
+            // drives so the doctor's mouth closes immediately.
+            if (doctorNPC != null)
+            {
+                var morphTgt = doctorNPC.GetComponentInChildren<OVRLipSyncContextMorphTarget>();
+                if (morphTgt != null
+                    && morphTgt.skinnedMeshRenderer != null
+                    && morphTgt.visemeToBlendTargets != null)
+                {
+                    int bsCount = morphTgt.skinnedMeshRenderer.sharedMesh.blendShapeCount;
+                    foreach (int idx in morphTgt.visemeToBlendTargets)
+                        if (idx >= 0 && idx < bsCount)
+                            morphTgt.skinnedMeshRenderer.SetBlendShapeWeight(idx, 0f);
+                    Debug.Log("[LectureHall] Doctor lip-sync visemes reset to neutral.");
+                }
+
+                // Disable the OVRLipSyncContext so OnAudioFilterRead is no longer
+                // called and the mouth stays closed during the post-lecture idle.
+                var lipCtx = doctorNPC.GetComponentInChildren<OVRLipSyncContext>();
+                if (lipCtx != null) lipCtx.enabled = false;
+            }
         }
 
         Debug.Log("[LectureHall] Lecture audio finished.");

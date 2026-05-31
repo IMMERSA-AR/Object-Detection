@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Name
-      value: Murad
+      value: Panel Murad
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_IsActive
@@ -547,6 +547,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6047319904845741997}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979620856531303093}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -670,7 +673,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 309ccbc9f8d2dc345bd92f6989ec306c, type: 3}
   m_Name: 
@@ -897,7 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
   modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
   backendType: 512
-  smoothing: 0.55
+  smoothing: 0.358
   ppRescueBlend: 0.35
   ppRescueThreshold: 0.12
   logTimings: 1
@@ -914,7 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
   faceMesh: {fileID: 5518425087734892745}
-  mouthExaggeration: 0.8
+  mouthExaggeration: 0.72
   perVisemeMultiplier:
   - 1
   - 2
@@ -950,6 +953,20 @@ MonoBehaviour:
   - V_Tight_O
   - V_Tight
   showDebugOverlay: 1
+--- !u!114 &1979620856531303093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78401683be0149b42948dd4b54e46531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PanelNPCController
+  idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
+  talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

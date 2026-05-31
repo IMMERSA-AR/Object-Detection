@@ -1085,7 +1085,6 @@ MonoBehaviour:
   scanningGuidanceText: "Point the camera at a panel\u2026"
   detectedPanel: {fileID: 0}
   detectedPanelNameText: {fileID: 0}
-  showRescanButtonAfterNarration: 1
   rescanButton: {fileID: 0}
   autoRescanDelay: 0
 --- !u!4 &1115736910
@@ -1838,7 +1837,10 @@ MonoBehaviour:
   stopOnFirstConfirm: 1
   spawnSideOffset: 0.8
   spawnForwardOffset: 0.3
+  spawnYOffset: 0
   narrationOnPoint: 1
+  rightController: {fileID: 0}
+  laserPointer: {fileID: 0}
   narrationDelay: 0.5
   narrationAudioSource: {fileID: 1115736908}
 --- !u!1 &1916714816
