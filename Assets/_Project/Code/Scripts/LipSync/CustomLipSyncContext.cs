@@ -96,58 +96,21 @@ namespace LipSync
         {
             _audioSource = GetComponent<AudioSource>();
             _mfcc        = new MFCCExtractor();
-
-            // ── Initialise predictor here, NOT in Start() ──────────────────
-            // When this component starts disabled (e.g. during the lecture phase),
-            // Unity defers Start() until the component is first enabled.  If we
-            // then call FeedAudioClip() on the same frame we re-enable it, Start()
-            // hasn't run yet → _predictor is null → FeedAudioClip returns early →
-            // no timeline is built → lips never move.
-            // Awake() always runs at instantiation regardless of enabled state,
-            // so initialising here guarantees _predictor is ready before the first
-            // FeedAudioClip() call no matter when we re-enable the component.
-            if (modelAsset != null)
-            {
-                try
-                {
-                    _predictor = new VisemePredictor(modelAsset, backendType);
-                    Debug.Log($"[LipSync] ✓ Predictor ready (Awake). IsReady={_predictor.IsReady}  backend={backendType}");
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError($"[LipSync] ✗ Predictor init failed in Awake: {ex.Message}\n{ex.StackTrace}");
-                }
-            }
-            else
-            {
-                Debug.LogWarning("[LipSync] modelAsset is NULL in Awake — predictor will be skipped. " +
-                                 "Drag viseme_model.onnx into the Inspector.");
-            }
         }
 
         void Start()
         {
-            // Predictor is already initialised in Awake().
-            // Start() is a no-op except for a guard-log so missing modelAsset
-            // is still surfaced if Awake somehow ran without one.
-            if (_predictor != null)
-            {
-                Debug.Log($"[LipSync] Start(): predictor already ready (initialised in Awake). IsReady={_predictor.IsReady}");
-                return;
-            }
-
             if (modelAsset == null)
             {
                 Debug.LogError("[LipSync] ✗ modelAsset is NULL — drag viseme_model.onnx into the Inspector.");
                 return;
             }
+            Debug.Log($"[LipSync] modelAsset assigned: {modelAsset.name}  backend: {backendType}");
 
-            // Fallback: init here if Awake somehow missed it (shouldn't happen).
-            Debug.LogWarning("[LipSync] Predictor was not ready in Awake — initialising in Start (fallback).");
             try
             {
                 _predictor = new VisemePredictor(modelAsset, backendType);
-                Debug.Log($"[LipSync] ✓ Predictor ready (Start fallback). IsReady={_predictor.IsReady}");
+                Debug.Log("[LipSync] ✓ Predictor ready. IsReady=" + _predictor.IsReady);
             }
             catch (Exception ex)
             {
@@ -160,44 +123,7 @@ namespace LipSync
             _predictor?.Dispose();
         }
 
-        // ── Public API (called by VoiceAPIController / LectureHallManager) ──────
-
-        /// <summary>
-        /// Guarantee that the predictor and AudioSource reference are ready, even
-        /// if this component lives on a child GameObject that was inactive at
-        /// instantiation time (which prevents Awake() from running).
-        /// Safe to call multiple times — only initialises once.
-        /// Call this BEFORE FeedAudioClip() whenever the component may have started
-        /// on an inactive GameObject.
-        /// </summary>
-        public void EnsureInitialized()
-        {
-            // Bootstrap the fields that Awake() would have set
-            if (_audioSource == null)
-                _audioSource = GetComponent<AudioSource>();
-            if (_mfcc == null)
-                _mfcc = new MFCCExtractor();
-
-            if (_predictor != null) return;   // already ready
-
-            if (modelAsset == null)
-            {
-                Debug.LogError("[LipSync] EnsureInitialized: modelAsset is NULL — " +
-                               "assign viseme_model.onnx in the Inspector.");
-                return;
-            }
-
-            try
-            {
-                _predictor = new VisemePredictor(modelAsset, backendType);
-                Debug.Log($"[LipSync] ✓ EnsureInitialized — predictor ready. " +
-                          $"IsReady={_predictor.IsReady}  backend={backendType}");
-            }
-            catch (Exception ex)
-            {
-                Debug.LogError($"[LipSync] ✗ EnsureInitialized failed: {ex.Message}\n{ex.StackTrace}");
-            }
-        }
+        // ── Public API (called by VoiceAPIController) ─────────────────────
 
         /// <summary>
         /// Pre-compute the viseme timeline for an incoming TTS AudioClip.

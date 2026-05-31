@@ -26,7 +26,7 @@ namespace LipSync
         public const int NUM_MEL     = 26;    // mel filter bank size
         public const int NUM_MFCC    = 13;    // cepstral coefficients kept
         public const int DELTA_WIN   = 2;     // ±2 frame delta window
-        public const int FEATURE_DIM = NUM_MFCC * 3; // 39 (mfcc+Δ+ΔΔ)
+        public const int FEATURE_DIM = NUM_MFCC * 3 + 1; // 40 (mfcc+Δ+ΔΔ + log-energy)
 
         // ── Pre-computed lookup tables ────────────────────────────────────
         private readonly float[]   _hamming;      // [FRAME_LEN]
@@ -66,7 +66,8 @@ namespace LipSync
 
             // 4. Per-frame processing
             int bins = FFT_SIZE / 2 + 1;
-            float[][] raw = new float[numFrames][];
+            float[][] raw      = new float[numFrames][];
+            float[]   energies = new float[numFrames];  // log RMS energy per frame
 
             for (int fi = 0; fi < numFrames; fi++)
             {
@@ -77,6 +78,13 @@ namespace LipSync
                 int copyLen = Math.Min(FRAME_LEN, e.Length - start);
                 for (int j = 0; j < copyLen; j++)
                     _fftBuf[j * 2] = e[start + j] * _hamming[j];
+
+                // Log RMS energy of the raw (unwindowed) pre-emphasised frame
+                // Formula matches train.py: log(sqrt(mean(x²) + 1e-10))
+                float sumSq = 0f;
+                for (int j = 0; j < copyLen; j++)
+                    sumSq += e[start + j] * e[start + j];
+                energies[fi] = Mathf.Log(Mathf.Sqrt(sumSq / copyLen + 1e-10f));
 
                 // In-place radix-2 FFT
                 FFT(_fftBuf, FFT_SIZE);
@@ -115,8 +123,11 @@ namespace LipSync
                 raw[fi] = mfcc;
             }
 
-            // 5. Append Δ and ΔΔ  →  39-dim output
-            return AppendDeltas(raw);
+            // 5. Append Δ and ΔΔ  →  39-dim base, then fill log energy → 40-dim
+            float[][] result = AppendDeltas(raw);
+            for (int t = 0; t < numFrames; t++)
+                result[t][FEATURE_DIM - 1] = energies[t];  // index 39
+            return result;
         }
 
         // ── Static helpers ────────────────────────────────────────────────

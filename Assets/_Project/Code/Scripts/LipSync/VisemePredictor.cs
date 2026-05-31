@@ -3,7 +3,7 @@
 //  Runs the trained ONNX lipsync model via Unity Inference Engine
 //  (com.unity.ai.inference / formerly Sentis 2.x).
 //
-//  Input tensor  : [batch, CONTEXT_FRAMES * FEATURE_DIM] = [B, 195]
+//  Input tensor  : [batch, CONTEXT_FRAMES * FEATURE_DIM] = [B, 200]
 //  Output tensor : [batch, NUM_VISEMES]  = [B, 15]  (softmax probs)
 // ============================================================
 
@@ -18,7 +18,7 @@ namespace LipSync
         // ── Constants (must match train.py) ───────────────────────────────
         public const int NUM_VISEMES    = 15;
         public const int CONTEXT_FRAMES = 5;    // ±2 frame context window
-        public const int INPUT_DIM      = MFCCExtractor.FEATURE_DIM * CONTEXT_FRAMES; // 195
+        public const int INPUT_DIM      = MFCCExtractor.FEATURE_DIM * CONTEXT_FRAMES; // 200
 
         // Model input shape: [1, T, INPUT_DIM]  (batch=1, sequence=T, features=195)
         // Works for both BiLSTM and MLP exports — export_onnx.py wraps MLP to match.
@@ -48,7 +48,7 @@ namespace LipSync
         /// Predict viseme probability distributions for every MFCC frame.
         /// All frames are batched into a single GPU dispatch — very fast.
         /// </summary>
-        /// <param name="mfccFrames">[T][39] feature vectors from MFCCExtractor</param>
+        /// <param name="mfccFrames">[T][40] feature vectors from MFCCExtractor</param>
         /// <returns>[T][15] softmax probability arrays</returns>
         public float[][] PredictBatch(float[][] mfccFrames)
         {
