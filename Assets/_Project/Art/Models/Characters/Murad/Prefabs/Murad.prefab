@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 9000000, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
     - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Controller
@@ -547,6 +547,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6047319904845741997}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8138619050359305066}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5301076498473630320}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -895,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
-  modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: 6c2df77293e16eb4d8cf817639fa2a3a, type: 3}
   backendType: 512
   smoothing: 0.55
   ppRescueBlend: 0.35
@@ -950,6 +956,53 @@ MonoBehaviour:
   - V_Tight_O
   - V_Tight
   showDebugOverlay: 1
+--- !u!114 &8138619050359305066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b38578f7960e24bb159fb07808ee90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
+  role: 0
+  idleClip: {fileID: 0}
+  talkingClip: {fileID: 0}
+  standingAfterLectureClip: {fileID: 0}
+  walkingClip: {fileID: 0}
+  sittingClipVariants:
+  - {fileID: -203655887218126122, guid: 39d11422ed3310f4d96a812bfe70234e, type: 3}
+  sittingSwitchInterval: 15
+  paceDistance: 0.6
+  paceSpeed: 0.5
+  lookSpeed: 1.2
+  maxLookAngle: 45
+  spineBoneName: mixamorig:Spine
+  breathDepth: 1.2
+  breathRate: 13
+  breathPhaseOffset: 0
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  headLookWeight: 0.7
+  headMaxAngle: 70
+  headLookSpeed: 4
+--- !u!114 &5301076498473630320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78401683be0149b42948dd4b54e46531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PanelNPCController
+  idleClip: {fileID: 0}
+  talkingClip: {fileID: 0}
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

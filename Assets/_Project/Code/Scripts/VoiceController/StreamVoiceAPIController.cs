@@ -66,7 +66,7 @@ public class VoiceAPIController : MonoBehaviour
 
             if (statusText != null)
             {
-                statusText.text = "Hello!";
+                statusText.text = "";
                 statusText.color = Color.white;
             }
             else
@@ -164,7 +164,7 @@ public class VoiceAPIController : MonoBehaviour
             Debug.Log("📨 Session ACK: " + startAck);
 
             _sessionActive = true;
-            UpdateUI("Hello!", Color.white);
+            UpdateUI("", Color.white);
             Debug.Log("✅ Session ready — WebSocket will stay open across interactions.");
         }
         catch (Exception e)
@@ -365,7 +365,7 @@ public class VoiceAPIController : MonoBehaviour
                 if (response.type == "tts_done")
                 {
                     Debug.Log($"🏁 TTS done! Chunks received: {audioChunksReceived}. WebSocket staying open.");
-                    UpdateUI("Hello!", Color.white);
+                    UpdateUI("", Color.white);
                     break; // leave WebSocket open — context preserved for next turn
                 }
 

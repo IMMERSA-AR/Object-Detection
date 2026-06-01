@@ -1085,7 +1085,6 @@ MonoBehaviour:
   scanningGuidanceText: "Point the camera at a panel\u2026"
   detectedPanel: {fileID: 0}
   detectedPanelNameText: {fileID: 0}
-  showRescanButtonAfterNarration: 1
   rescanButton: {fileID: 0}
   autoRescanDelay: 0
 --- !u!4 &1115736910
@@ -1787,20 +1786,20 @@ MonoBehaviour:
   layersPerFrame: 20
   panelEntries:
   - panelName: College History Text
-    characterPrefab: {fileID: 597805309522532133, guid: ec465043d706c8344bf15cb699b7a11b, type: 3}
+    characterPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
     narrationClip: {fileID: 8300000, guid: e8287e056ac5f864cb13ef757cd408b2, type: 3}
     idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
     talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
-  - panelName: 
-    characterPrefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
+  - panelName: Mechanical Engineering
+    characterPrefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
     narrationClip: {fileID: 8300000, guid: 6973b46a32435be40ab6f1a2308b35ef, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
-  - panelName: 
-    characterPrefab: {fileID: 0}
+    idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
+    talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
+  - panelName: Mechanical Engineering
+    characterPrefab: {fileID: 4154945946437003611, guid: 5190b692202d1b44fa8e552df81c29ea, type: 3}
     narrationClip: {fileID: 8300000, guid: 57877035d4bc9b9439ffea6986dbeff2, type: 3}
-    idleClip: {fileID: 0}
-    talkingClip: {fileID: 0}
+    idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
+    talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
   - panelName: 
     characterPrefab: {fileID: 0}
     narrationClip: {fileID: 8300000, guid: 2521df9d5b7820e439bed09c13968e5b, type: 3}
@@ -1834,11 +1833,16 @@ MonoBehaviour:
   autoStart: 0
   scanDuration: 10
   inferenceInterval: 0.5
-  minHitsToConfirm: 4
+  minHitsToConfirm: 2
   stopOnFirstConfirm: 1
   spawnSideOffset: 0.8
   spawnForwardOffset: 0.3
+  spawnYOffset: 0
+  characterScale: 1.2
   narrationOnPoint: 1
+  rightController: {fileID: 413932175}
+  leftController: {fileID: 1183832015}
+  laserPointer: {fileID: 0}
   narrationDelay: 0.5
   narrationAudioSource: {fileID: 1115736908}
 --- !u!1 &1916714816

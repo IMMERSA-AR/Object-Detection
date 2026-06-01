@@ -228,7 +228,10 @@ MonoBehaviour:
   role: 0
   idleClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
   talkingClip: {fileID: 0}
+  standingAfterLectureClip: {fileID: 0}
   walkingClip: {fileID: 0}
+  sittingClipVariants: []
+  sittingSwitchInterval: 8
   paceDistance: 0.6
   paceSpeed: 0.5
   lookSpeed: 1.2
@@ -254,11 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503e0666b07b311498843e46ec55f353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCHandRest
-  leftForeArmBone: CC_Base_L_Forearm
-  rightForeArmBone: CC_Base_R_Forearm
-  leftHandBone: CC_Base_L_Hand
-  rightHandBone: CC_Base_R_Hand
-  hipBoneName: CC_Base_Waist
   lapForward: 0.05
   lapDown: -0.15
   lapSideOffset: 0.12

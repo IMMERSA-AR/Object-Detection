@@ -726,6 +726,9 @@ public class LectureHallManager : MonoBehaviour
             handRest.enabled = false;
             Debug.Log($"[LectureHall] NPCHandRest disabled on seated student '{npc.name}' — prevents hands from sinking into thighs.");
         }
+
+        // ── Start sitting variation if variants are assigned on the prefab ────
+        ctrl.StartSittingVariation();
     }
 
     /// <summary>
@@ -916,7 +919,28 @@ public class LectureHallManager : MonoBehaviour
         doctor.name = "Doctor_1918";
 
         HistoricalNPCController ctrl = doctor.GetComponent<HistoricalNPCController>();
-        if (ctrl != null) ctrl.Init(NPCRole.Doctor, facingTarget);
+        if (ctrl != null)
+        {
+            // ── Scene-level clip injection ─────────────────────────────────────
+            // ExperienceConfig provides the animation clips so the SAME character
+            // prefab can be used across scenes (panel scene, lecture hall, etc.)
+            // without any clips baked into the prefab.
+            // Only overrides when the config field is non-null; prefab defaults
+            // are kept for any field left empty in ExperienceConfig.
+            if (config.doctorIdleClip    != null) ctrl.idleClip                 = config.doctorIdleClip;
+            if (config.doctorTalkingClip != null) ctrl.talkingClip              = config.doctorTalkingClip;
+
+            // Standing-after-lecture fallback chain:
+            //   1. config.doctorStandingAfterLectureClip  (most specific)
+            //   2. config.doctorIdleClip                  (same idle used elsewhere)
+            //   3. ctrl.standingAfterLectureClip           (whatever was on the prefab)
+            if (config.doctorStandingAfterLectureClip != null)
+                ctrl.standingAfterLectureClip = config.doctorStandingAfterLectureClip;
+            else if (config.doctorIdleClip != null && ctrl.standingAfterLectureClip == null)
+                ctrl.standingAfterLectureClip = config.doctorIdleClip;
+
+            ctrl.Init(NPCRole.Doctor, facingTarget);
+        }
 
         // Prevent arm/hand culling during the lecture animation.
         // The doctor's talking clip moves arms outside the T-pose import bounds;
@@ -1228,26 +1252,14 @@ public class LectureHallManager : MonoBehaviour
                                "to the LectureHallManager GameObject and drag it into the 'Lecture Audio Source' field.");
             }
 
-            // ── Step 2: Drive lip sync via doctor's own OVRLipSyncContext AudioSource ──
-            // This is the same technique used by Murad's VoiceAPIController during Q&A:
-            //
-            //   • OVRLipSyncContext is [RequireComponent(AudioSource)], so the doctor's
-            //     prefab already has an AudioSource on the same GO as the context.
-            //   • We assign the lecture clip to that AudioSource and play it at volume=1.
-            //     Unity's DSP calls OVRLipSyncContext.OnAudioFilterRead for every buffer
-            //     → PreprocessAudioSamples (gain) → ProcessAudioSamplesRaw (viseme FFT)
-            //     → PostprocessAudioSamples (ZEROES buffer because audioLoopback=false).
-            //   • Because PostprocessAudioSamples zeroes the buffer, the user does NOT
-            //     hear the doctor's AudioSource — they hear lectureAudioSource instead
-            //     (which has no OVRLipSyncContext and therefore no zeroing).
-            //   • OVRLipSyncContextMorphTarget reads the viseme frame each Update()
-            //     and drives the mouth blend-shapes → lips move in sync.
-            //
-            // volume MUST be > 0: Unity multiplies samples by volume BEFORE calling
-            // OnAudioFilterRead, so volume=0 → all-zero PCM → no visemes detected.
-            // mute MUST be false: Unity skips OnAudioFilterRead entirely for muted sources.
+            // ── Step 2: Drive doctor lip sync via CustomLipSyncContext ───────
+            // CustomLipSyncContext needs:
+            //   1. FeedAudioClip(clip) called before playback to pre-compute visemes.
+            //   2. Its own AudioSource playing the clip so it can read timeSamples.
+            //      We play it at volume=0 (silent) — the user hears lectureAudioSource.
             GameObject doctorNPC = null;
             AudioSource doctorLipSyncAudio = null;
+            LipSync.CustomLipSyncContext doctorLipSyncCtx = null;
 
             foreach (var npc in _spawnedNPCs)
             {
@@ -1258,39 +1270,37 @@ public class LectureHallManager : MonoBehaviour
 
             if (doctorNPC != null)
             {
-                OVRLipSyncContext lipCtx = doctorNPC.GetComponentInChildren<OVRLipSyncContext>();
-                if (lipCtx != null)
+                doctorLipSyncCtx = doctorNPC.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+                if (doctorLipSyncCtx != null)
                 {
-                    doctorLipSyncAudio = lipCtx.GetComponent<AudioSource>();
+                    doctorLipSyncCtx.enabled = true;
+
+                    // Pre-compute the viseme timeline for the lecture clip.
+                    doctorLipSyncCtx.FeedAudioClip(config.lectureAudioClip);
+
+                    // Play the clip on the context's own AudioSource at volume=0
+                    // so CustomLipSyncContext.Update() can track timeSamples.
+                    // The user hears lectureAudioSource (separate, full volume).
+                    doctorLipSyncAudio = doctorLipSyncCtx.GetComponent<AudioSource>();
                     if (doctorLipSyncAudio != null)
                     {
-                        doctorLipSyncAudio.outputAudioMixerGroup = null;
-                        doctorLipSyncAudio.clip = config.lectureAudioClip;
-                        doctorLipSyncAudio.loop = false;
-                        doctorLipSyncAudio.mute = false; // must NOT be muted
-                        doctorLipSyncAudio.volume = 1f;    // must be > 0 for PCM to reach OnAudioFilterRead
+                        doctorLipSyncAudio.clip         = config.lectureAudioClip;
+                        doctorLipSyncAudio.loop         = false;
+                        doctorLipSyncAudio.mute         = false;
+                        doctorLipSyncAudio.volume       = 0f;   // silent — user hears lectureAudioSource
                         doctorLipSyncAudio.spatialBlend = 0f;
                         doctorLipSyncAudio.Play();
-                        // PostprocessAudioSamples zeros this buffer → inaudible to user.
-                        // lectureAudioSource (no OVRLipSyncContext) provides the heard audio.
-
-                        var morphTarget = doctorNPC.GetComponentInChildren<OVRLipSyncContextMorphTarget>();
-                        if (morphTarget == null)
-                            Debug.LogWarning("[LectureHall] OVRLipSyncContextMorphTarget not found on doctor — " +
-                                             "add it to the Amin prefab and assign the face SkinnedMeshRenderer.");
-                        else
-                            Debug.Log($"[LectureHall] Doctor lip sync active: context='{lipCtx.gameObject.name}' " +
-                                      $"mesh='{(morphTarget.skinnedMeshRenderer != null ? morphTarget.skinnedMeshRenderer.name : "NULL")}'");
+                        Debug.Log("[LectureHall] Doctor CustomLipSyncContext started — mouth will animate.");
                     }
                     else
                     {
-                        Debug.LogWarning("[LectureHall] OVRLipSyncContext found but no AudioSource on same GO — lip sync skipped.");
+                        Debug.LogWarning("[LectureHall] CustomLipSyncContext found but no AudioSource on same GO.");
                     }
                 }
                 else
                 {
-                    Debug.LogWarning("[LectureHall] No OVRLipSyncContext found on doctor — " +
-                                     "lips will not move. Add OVRLipSyncContext to the Amin prefab.");
+                    Debug.LogWarning("[LectureHall] No CustomLipSyncContext found on doctor — " +
+                                     "add LipSync.CustomLipSyncContext to the doctor prefab and assign the model asset.");
                 }
             }
             else
@@ -1305,28 +1315,11 @@ public class LectureHallManager : MonoBehaviour
             // ── Step 4: Stop doctor's lip-sync source and reset mouth to neutral ─
             if (doctorLipSyncAudio != null) doctorLipSyncAudio.Stop();
 
-            // Stopping the AudioSource halts new PCM buffers, but the last viseme
-            // frame stays applied to the blendshapes — mouth stays open.
-            // Zero every viseme blendshape index that OVRLipSyncContextMorphTarget
-            // drives so the doctor's mouth closes immediately.
-            if (doctorNPC != null)
+            // Disable the context so it stops updating visemes and the mouth closes.
+            if (doctorLipSyncCtx != null)
             {
-                var morphTgt = doctorNPC.GetComponentInChildren<OVRLipSyncContextMorphTarget>();
-                if (morphTgt != null
-                    && morphTgt.skinnedMeshRenderer != null
-                    && morphTgt.visemeToBlendTargets != null)
-                {
-                    int bsCount = morphTgt.skinnedMeshRenderer.sharedMesh.blendShapeCount;
-                    foreach (int idx in morphTgt.visemeToBlendTargets)
-                        if (idx >= 0 && idx < bsCount)
-                            morphTgt.skinnedMeshRenderer.SetBlendShapeWeight(idx, 0f);
-                    Debug.Log("[LectureHall] Doctor lip-sync visemes reset to neutral.");
-                }
-
-                // Disable the OVRLipSyncContext so OnAudioFilterRead is no longer
-                // called and the mouth stays closed during the post-lecture idle.
-                var lipCtx = doctorNPC.GetComponentInChildren<OVRLipSyncContext>();
-                if (lipCtx != null) lipCtx.enabled = false;
+                doctorLipSyncCtx.enabled = false;
+                Debug.Log("[LectureHall] Doctor CustomLipSyncContext disabled — mouth reset to neutral.");
             }
         }
 

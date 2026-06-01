@@ -77,14 +77,30 @@ public class PanelDetector : MonoBehaviour
     [Tooltip("(Unused in 'in front' mode — kept for compatibility.)")]
     public float spawnSideOffset = 0.0f;
 
+    [Tooltip("When enabled, every character spawns directly in front of the CAMERA\n" +
+             "(at spawnForwardOffset metres ahead of the user's gaze), regardless of\n" +
+             "where the detected panel is on the wall.  This guarantees all characters\n" +
+             "always appear centred in the user's view — useful when panels are on\n" +
+             "side walls where the 'in-front-of-panel' logic places characters to the\n" +
+             "side. Disable if you prefer characters to appear at the actual panel location.")]
+    public bool spawnInFrontOfCamera = false;
+
     [Tooltip("How far IN FRONT of the panel (toward the user) the character stands, in metres.\n" +
-             "The character faces the user. Increase if it spawns inside the wall.")]
+             "When spawnInFrontOfCamera is enabled, this is the distance ahead of the camera\n" +
+             "instead.  Increase if it spawns inside the wall.")]
     public float spawnForwardOffset = 0.8f;
 
     [Tooltip("Vertical offset added on top of the detected floor Y.\n" +
              "Increase if the character spawns underground (pivot is above the feet).\n" +
              "E.g. set to 0.9 if the character's pivot is at its hip height.")]
     public float spawnYOffset = 0f;
+
+    [Tooltip("Uniform scale applied to every spawned panel character.\n" +
+             "Increase above 1.0 if characters appear shorter than the real-world user.\n" +
+             "Typical range: 1.0 (no change) → 1.2 (20% taller) → 1.5 (50% taller).\n" +
+             "Start at 1.2 and adjust until characters match the user's height.")]
+    [Range(0.5f, 2.0f)]
+    public float characterScale = 1.0f;
 
     // ── Interaction ─────────────────────────────────────────────────────────────
     [Header("Interaction")]
@@ -93,14 +109,17 @@ public class PanelDetector : MonoBehaviour
              "If false, narration plays automatically on spawn (old behaviour).")]
     public bool narrationOnPoint = true;
 
-    [Tooltip("Drag OVRCameraRig → TrackingSpace → RightControllerAnchor here.\n" +
-             "Used for the laser pointer ray direction and origin.")]
+    [Tooltip("Drag OVRCameraRig → TrackingSpace → RightControllerAnchor here.")]
     public Transform rightController;
 
-    [Tooltip("Drag a child GameObject of the controller that has a LineRenderer component.\n" +
-             "This is the visible laser line drawn toward the character.\n" +
-             "Create: right-click RightControllerAnchor → Create Empty → add LineRenderer,\n" +
-             "set Positions Count = 2, Width = 0.005, assign any Unlit material.")]
+    [Tooltip("Drag OVRCameraRig → TrackingSpace → LeftControllerAnchor here.\n" +
+             "Either controller can aim at and trigger a panel character.")]
+    public Transform leftController;
+
+    [Tooltip("Fallback LineRenderer for the laser — only used if the spawned character\n" +
+             "prefab does NOT already have a LineRenderer on it.\n" +
+             "Leave empty if your character prefabs carry their own LineRenderer\n" +
+             "(same setup as the Murad Q&A prefab in the lecture hall scene).")]
     public LineRenderer laserPointer;
 
     // ── Audio ─────────────────────────────────────────────────────────────────
@@ -370,31 +389,118 @@ public class PanelDetector : MonoBehaviour
         if (toUser.sqrMagnitude > 0.001f) toUser.Normalize();
         else toUser = Vector3.forward;
 
-        float floorY = GetFloorY(panelWorldPos, cam != null ? cam.position.y : 1.7f);
+        float camY = cam != null ? cam.position.y : 1.7f;
 
-        // Spawn IN FRONT of the panel — between the panel and the user — facing the user.
-        Vector3    spawnPos = new Vector3(panelWorldPos.x, floorY + spawnYOffset, panelWorldPos.z)
-                            + toUser * spawnForwardOffset;
-        Quaternion spawnRot = Quaternion.LookRotation(toUser);
+        // ── Choose spawn XZ and facing direction ─────────────────────────────
+        // Mode A (spawnInFrontOfCamera = true):
+        //   Always place the character directly in front of the camera at
+        //   spawnForwardOffset metres.  Panel XZ position is ignored, so the
+        //   character always appears centred in the user's view regardless of
+        //   which wall the panel is on.  Character faces the user.
+        //
+        // Mode B (default):
+        //   Place the character between the panel and the user (existing behaviour).
+        //   Good when the panel is directly in front of the user.
+        Vector3    spawnXZ;
+        Quaternion spawnRot;
+
+        if (spawnInFrontOfCamera && cam != null)
+        {
+            Vector3 camFwdFlat = new Vector3(cam.forward.x, 0f, cam.forward.z);
+            if (camFwdFlat.sqrMagnitude > 0.001f) camFwdFlat.Normalize();
+            else camFwdFlat = toUser;   // fall back to panel direction
+
+            spawnXZ  = new Vector3(cam.position.x + camFwdFlat.x * spawnForwardOffset,
+                                   0f,
+                                   cam.position.z + camFwdFlat.z * spawnForwardOffset);
+            spawnRot = Quaternion.LookRotation(-camFwdFlat);   // face toward user
+        }
+        else
+        {
+            // Original logic: move from the panel toward the user by spawnForwardOffset.
+            // Compute the OPEN-SPACE XZ spawn position first, then find the floor Y there.
+            // Finding floor at panelWorldPos (on the wall) causes the downward raycast to
+            // hit wall geometry instead of the floor.
+            spawnXZ  = new Vector3(panelWorldPos.x + toUser.x * spawnForwardOffset,
+                                   0f,
+                                   panelWorldPos.z + toUser.z * spawnForwardOffset);
+            spawnRot = Quaternion.LookRotation(toUser);
+        }
+
+        float floorY  = GetFloorY(spawnXZ, camY);
+        Vector3 spawnPos = new Vector3(spawnXZ.x, floorY + spawnYOffset, spawnXZ.z);
 
         GameObject character = Instantiate(entry.characterPrefab, spawnPos, spawnRot);
         character.name = $"PanelCharacter_{classId}_{GetPanelLabel(classId)}";
         LastSpawnedCharacter = character;
 
-        Debug.Log($"[PanelDetector] Spawned character for '{GetPanelLabel(classId)}' at {spawnPos:F2}.");
+        // Apply scale multiplier so characters match real-world user height.
+        if (!Mathf.Approximately(characterScale, 1f))
+            character.transform.localScale = Vector3.one * characterScale;
+
+        Debug.Log($"[PanelDetector] Spawned '{GetPanelLabel(classId)}' at {spawnPos:F2}  scale={characterScale:F2}.");
+
+        // ── Disable AI/voice components BEFORE their Start() runs ────────────
+        // MuradController.Start() re-assigns the Animator Controller, which destroys
+        // the PlayableGraph that PanelNPCController.Init() is about to create → T-pose.
+        // VoiceAPIController.Start() may also drive the Animator or start Q&A listening early.
+        // Disabling them here (same frame as Instantiate, before Start() fires) prevents
+        // both Start() and all Update/LateUpdate from running on these components.
+        // This mirrors exactly what LectureHallManager does for the seated Murad.
+        var muradAI = character.GetComponent<MuradController>();
+        if (muradAI != null)
+        {
+            muradAI.enabled = false;
+            Debug.Log("[PanelDetector] MuradController disabled — PanelNPCController owns animation.");
+        }
+
+        var voiceCtrl = character.GetComponent<VoiceAPIController>();
+        if (voiceCtrl != null)
+        {
+            voiceCtrl.enabled = false;
+            Debug.Log("[PanelDetector] VoiceAPIController disabled on panel character.");
+        }
+
+        // Also disable CustomLipSyncContext at spawn — it will be re-enabled by
+        // PlayNarration() only for the duration of the narration clip.
+        var lipSync = character.GetComponentInChildren<LipSync.CustomLipSyncContext>(includeInactive: true);
+        if (lipSync != null)
+        {
+            lipSync.enabled = false;
+            Debug.Log("[PanelDetector] CustomLipSyncContext disabled at spawn — re-enabled during narration.");
+        }
+
+        // Hide any subtitle/prompt canvases baked into the prefab (driven by VoiceAPIController).
+        foreach (var tmp in character.GetComponentsInChildren<TMPro.TMP_Text>(includeInactive: true))
+            tmp.text = "";
+        foreach (Canvas c in character.GetComponentsInChildren<Canvas>(includeInactive: true))
+            c.enabled = false;
 
         // ── Idle animation on spawn (removes T-pose) ─────────────────────────
         // Call Init() explicitly — same timing as the lecture hall's HistoricalNPCController.
-        // If the prefab has PanelNPCController use it; otherwise fall back to PanelCharacterAnimator.
+        // Now safe: MuradController is disabled so it cannot re-assign the AnimatorController
+        // and destroy our PlayableGraph.
+        // Pass entry.idleClip / entry.talkingClip so the SAME prefab can be reused across
+        // scenes: the PanelEntry (configured per-panel in the Inspector) provides the clips
+        // and they are injected at runtime — no clips need to be baked into the prefab.
         var panelNPCCtrl = character.GetComponent<PanelNPCController>();
         if (panelNPCCtrl != null)
         {
-            panelNPCCtrl.Init();
+            panelNPCCtrl.Init(entry.idleClip, entry.talkingClip);
         }
         else
         {
             var panelAnim = character.AddComponent<PanelCharacterAnimator>();
             panelAnim.Init(entry.idleClip, entry.talkingClip);
+        }
+
+        // ── Auto-blink ───────────────────────────────────────────────────────
+        // Add NPCBlinking so the character blinks naturally.
+        // NPCBlinking auto-detects eye blend shapes on Start() — no extra setup needed.
+        if (character.GetComponentInChildren<NPCBlinking>() == null)
+        {
+            character.AddComponent<NPCBlinking>();
+            Debug.Log("[PanelDetector] NPCBlinking added to panel character.");
         }
 
         if (entry.narrationClip == null)
@@ -405,10 +511,16 @@ public class PanelDetector : MonoBehaviour
 
         if (narrationOnPoint)
         {
+            // Auto-detect LineRenderer from the spawned character first.
+            // Characters that carry their own LineRenderer (same as the Murad Q&A prefab
+            // in the lecture hall scene) don't need the fallback laserPointer on PanelDetector.
+            LineRenderer lr = character.GetComponentInChildren<LineRenderer>(includeInactive: true);
+            if (lr == null) lr = laserPointer;   // fall back to PanelDetector's assigned field
+
             // Defer narration: the character waits until the user points the controller at it.
             var interaction = character.AddComponent<PanelCharacterInteraction>();
-            interaction.Init(this, entry.narrationClip, rightController, laserPointer);
-            Debug.Log("[PanelDetector] Narration deferred — aim controller at character and pull trigger.");
+            interaction.Init(this, entry.narrationClip, rightController, leftController, lr);
+            Debug.Log("[PanelDetector] Narration deferred — aim either controller at character and pull trigger.");
         }
         else
         {
@@ -499,6 +611,15 @@ public class PanelDetector : MonoBehaviour
         if (lipSyncAudio != null) lipSyncAudio.Stop();
         narrationAudioSource.Stop();
         Debug.Log("[PanelDetector] Narration finished.");
+
+        // Zero viseme weights first so the morph targets snap to neutral (mouth closed),
+        // then disable the component so CustomLipSyncMorphTarget stops reading weights.
+        if (lipSync != null)
+        {
+            lipSync.ResetVisemes();
+            lipSync.enabled = false;
+            Debug.Log("[PanelDetector] CustomLipSyncContext disabled — mouth reset to neutral.");
+        }
 
         // Return to idle now that the character has finished speaking.
         if      (panelNPC != null) panelNPC.PlayIdle();
@@ -662,9 +783,18 @@ public class PanelDetector : MonoBehaviour
 
     // ── Floor Y detection ─────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Returns the world-space floor Y at the given XZ position.
+    /// Uses the same three-tier logic as LectureHallManager.FindFloorY:
+    ///   1. MRUK FLOOR anchor (most reliable on-device).
+    ///   2. EnvironmentRaycastManager downcast from just above estimated floor
+    ///      (origin = estimatedFloor + 0.3 m, max range 0.8 m).
+    ///      Starting close to the floor avoids hitting wall/furniture geometry.
+    ///   3. Hard fallback: camera Y - 1.7 m.
+    /// </summary>
     private float GetFloorY(Vector3 nearPos, float cameraY)
     {
-        // Prefer MRUK FLOOR anchor
+        // ── 1. MRUK FLOOR anchor ─────────────────────────────────
         try
         {
             var mruk = Meta.XR.MRUtilityKit.MRUK.Instance;
@@ -679,16 +809,20 @@ public class PanelDetector : MonoBehaviour
         }
         catch { /* MRUK not present */ }
 
-        // Downward raycast fallback
+        // ── 2. Tight downward raycast from just above estimated floor ─────────
+        // Origin is only 0.3 m above the estimated floor so the ray hits the
+        // actual floor surface rather than furniture, baseboards, or wall faces.
+        // Max distance 0.8 m prevents it from shooting through the floor.
         if (_envRaycast != null)
         {
-            Vector3 origin = new Vector3(nearPos.x, cameraY - 0.5f, nearPos.z);
-            if (_envRaycast.Raycast(new Ray(origin, Vector3.down), out var hit, 2f) &&
+            float estimatedFloor = cameraY - 1.7f;
+            Vector3 origin = new Vector3(nearPos.x, estimatedFloor + 0.3f, nearPos.z);
+            if (_envRaycast.Raycast(new Ray(origin, Vector3.down), out var hit, 0.8f) &&
                 Vector3.Dot(hit.normal, Vector3.up) > 0.7f)
                 return hit.point.y;
         }
 
-        // Last resort: typical standing-height offset from camera
+        // ── 3. Hard fallback ─────────────────────────────────────
         return cameraY - 1.7f;
     }
 

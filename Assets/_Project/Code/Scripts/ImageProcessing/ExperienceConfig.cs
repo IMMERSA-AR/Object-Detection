@@ -61,6 +61,19 @@ public class ExperienceConfig : ScriptableObject
     [Tooltip("Prefab for the 1918 doctor/professor NPC (must have HistoricalNPCController)")]
     public GameObject doctorPrefab;
 
+    [Header("Doctor Animation Clips")]
+    [Tooltip("Standing idle clip played while the doctor is waiting / not lecturing.\n" +
+             "If empty, falls back to whatever idleClip is set on the prefab itself.")]
+    public AnimationClip doctorIdleClip;
+
+    [Tooltip("Talking / lecturing clip played while the lecture audio is playing.\n" +
+             "If empty, falls back to whatever talkingClip is set on the prefab itself.")]
+    public AnimationClip doctorTalkingClip;
+
+    [Tooltip("Standing idle clip played AFTER the lecture ends (doctor stops talking).\n" +
+             "If empty, falls back to doctorIdleClip, then to the prefab's standingAfterLectureClip.")]
+    public AnimationClip doctorStandingAfterLectureClip;
+
     [Tooltip("Number of student rows")]
     public int studentRows = 2;
 

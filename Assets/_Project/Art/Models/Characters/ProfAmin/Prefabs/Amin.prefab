@@ -890,7 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
-  modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: 6c2df77293e16eb4d8cf817639fa2a3a, type: 3}
   backendType: 512
   smoothing: 0.55
   ppRescueBlend: 0.791
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c944a6cc0b5a854b995908f1f44d29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
-  faceMesh: {fileID: 0}
+  faceMesh: {fileID: 5967779915097836062}
   mouthExaggeration: 0.91
   perVisemeMultiplier:
   - 1

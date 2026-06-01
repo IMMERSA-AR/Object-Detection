@@ -12,18 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ad77b93144e2a4e8d663e4a5ff97ef, type: 3}
   m_Name: LectureRoom
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
-  experienceType: 1
-  experienceName: Lecture Hall
-  description: 'Location Requirement: 7th floor, Architecture Building. Please stand
-    directly in front of the room before starting'
-  buttonLabel: Begin
-  anchorLabel: 56
-  minConfidence: 0.5
-  maxAnchorDistance: 3
-  muradBehaviour: 0
-  standBesideOffset: 0.5
-  heightOffset: 0
-  forwardOffset: 0
   introAudioClip: {fileID: 8300000, guid: d14616d3252587f46a0e70c982c4d5cb, type: 3}
   chairDetectionAudioClip: {fileID: 8300000, guid: f602bb128f9ae2042bb53905e235ea1c, type: 3}
   lectureAudioClip: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
@@ -35,12 +23,15 @@ MonoBehaviour:
   - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
     sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
   - prefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
-    sittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
+    sittingClip: {fileID: -203655887218126122, guid: cf4f9c27c2211464f9b2823873b829b6, type: 3}
   studentSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
   muradSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
   muradStandingClip: {fileID: 0}
   muradWalkingClip: {fileID: 0}
   doctorPrefab: {fileID: 1589601983855728114, guid: 4d51e960bdee08146928083f482b5c94, type: 3}
+  doctorIdleClip: {fileID: 0}
+  doctorTalkingClip: {fileID: 0}
+  doctorStandingAfterLectureClip: {fileID: 0}
   studentRows: 2
   studentsPerRow: 3
   obeliskScanningAudioClip: {fileID: 0}

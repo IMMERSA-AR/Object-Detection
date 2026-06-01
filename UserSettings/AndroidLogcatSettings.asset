@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 21864,
+        "processId": 6448,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -349,6 +349,30 @@
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 21864,
             "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 9080,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 11520,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 1133,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 6448,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -405,7 +429,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "Exper",
+        "m_Filter": "Panel",
         "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },

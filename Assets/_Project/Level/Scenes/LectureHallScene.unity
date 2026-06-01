@@ -318,7 +318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceManager
   experiences:
   - {fileID: 11400000, guid: b96d3f2606bf1ab469ff623a6427994d, type: 2}
-  - {fileID: 11400000, guid: b92b0bdd9e890de418e809d642bde871, type: 2}
   lectureHallManager: {fileID: 2112026628}
 --- !u!4 &56200035
 Transform:
