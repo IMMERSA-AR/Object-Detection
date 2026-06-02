@@ -21,6 +21,7 @@ public class PanelCharacterInteraction : MonoBehaviour
     // Filled by PanelDetector via Init()
     private PanelDetector _detector;
     private AudioClip     _clip;
+    private string        _transcript;
     private Transform     _rightController;
     private Transform     _leftController;
     private LineRenderer  _laserPointer;
@@ -29,12 +30,13 @@ public class PanelCharacterInteraction : MonoBehaviour
     // ── Public init ───────────────────────────────────────────────────────────
 
     /// <summary>Called by PanelDetector right after spawning the character.</summary>
-    public void Init(PanelDetector detector, AudioClip narrationClip,
+    public void Init(PanelDetector detector, AudioClip narrationClip, string transcript,
                      Transform rightController, Transform leftController,
                      LineRenderer laserPointer)
     {
         _detector         = detector;
         _clip             = narrationClip;
+        _transcript       = transcript;
         _rightController  = rightController;
         _leftController   = leftController;
         _laserPointer     = laserPointer;

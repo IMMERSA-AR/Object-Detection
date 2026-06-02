@@ -15,6 +15,16 @@ MonoBehaviour:
   introAudioClip: {fileID: 8300000, guid: d14616d3252587f46a0e70c982c4d5cb, type: 3}
   chairDetectionAudioClip: {fileID: 8300000, guid: f602bb128f9ae2042bb53905e235ea1c, type: 3}
   lectureAudioClip: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
+  lectureAudioTranscript: "\"Alright everyone, remember the Maclaurin series from
+    calculus? We used algebraic powers of x as base building blocks to rewrite functions
+    like e to the power of x. Now, the mathematician Joseph Fourier introduced a
+    brilliant twist, but exclusively for periodic functions\u2014waveforms that repeat
+    infinitely over a constant period, T. Instead of powers of x, Fourier's building
+    blocks are sines and cosines! And here is our golden rule for the day: integrating
+    a periodic function over any full period\u2014from 'a' to 'a plus T'\u2014yields
+    the exact same mathematical value as integrating cleanly from zero to T. With
+    that logic established, let us define the explicit mathematical structure of
+    the Fourier series itself.\"\r\n"
   mainMuradPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
   studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
   studentPrefabVariants:

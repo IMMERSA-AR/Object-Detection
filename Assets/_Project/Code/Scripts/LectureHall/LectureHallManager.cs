@@ -134,6 +134,12 @@ public class LectureHallManager : MonoBehaviour
              "Assign basic_audio_murad.mp3 here.")]
     public AudioClip greetingAudioClip;
 
+    [Tooltip("Full transcript of the greeting audio clip.\n" +
+             "Used by CustomLipSyncContext for text-guided lip sync.\n" +
+             "Leave empty to fall back to raw MFCC.")]
+    [TextArea(3, 8)]
+    public string greetingAudioTranscript;
+
     [Tooltip("AudioSource used for the chair-detection phase audio.\n" +
              "Add a second AudioSource component to this GameObject, set Loop = ON and\n" +
              "Play On Awake = OFF, then drag it here. The clip is assigned at runtime\n" +
@@ -1333,7 +1339,7 @@ public class LectureHallManager : MonoBehaviour
                     doctorLipSyncCtx.enabled = true;
 
                     // Pre-compute the viseme timeline for the lecture clip.
-                    doctorLipSyncCtx.FeedAudioClip(config.lectureAudioClip);
+                    doctorLipSyncCtx.FeedAudioClip(config.lectureAudioClip, config.lectureAudioTranscript);
 
                     // Play the clip on the context's own AudioSource at volume=0
                     // so CustomLipSyncContext.Update() can track timeSamples.
@@ -1695,10 +1701,7 @@ public class LectureHallManager : MonoBehaviour
 
                 qaLipSync.enabled = true;
 
-                // Bootstrap predictor in case Awake() never ran (inactive GO at spawn).
-                qaLipSync.EnsureInitialized();
-
-                Debug.Log("[LectureHall] CustomLipSyncContext re-enabled + initialized for Q&A.");
+                Debug.Log("[LectureHall] CustomLipSyncContext re-enabled for Q&A.");
             }
             else
             {
@@ -1742,8 +1745,7 @@ public class LectureHallManager : MonoBehaviour
 
                 if (lipCtx != null)
                 {
-                    lipCtx.EnsureInitialized();       // idempotent — safe if already ready
-                    lipCtx.FeedAudioClip(greetingAudioClip);
+                    lipCtx.FeedAudioClip(greetingAudioClip, greetingAudioTranscript);
                     Debug.Log("[LectureHall] Greeting: FeedAudioClip called on CustomLipSyncContext.");
                 }
                 else

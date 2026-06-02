@@ -654,12 +654,6 @@ PrefabInstance:
       addedObject: {fileID: 6616006081869218243}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6171536995585101943}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -4593688672776935048}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1840690326728849468}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4871345f9f5c86143a7ebff0938f8521, type: 3}
       insertIndex: -1
@@ -717,9 +711,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
   role: 1
   idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
-  talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
+  talkingClip: {fileID: 5528149604612604457, guid: ab37c3e3cdbfe524c86c3b5fca92c8e8, type: 3}
   standingAfterLectureClip: {fileID: 7400000, guid: 58be8b94b354b714bb832cf3d27902e6, type: 2}
   walkingClip: {fileID: 0}
+  sittingClipVariants: []
+  sittingSwitchInterval: 8
   paceDistance: 0.6
   paceSpeed: 0.5
   lookSpeed: 1.2
@@ -733,6 +729,7 @@ MonoBehaviour:
   headLookWeight: 0
   headMaxAngle: 70
   headLookSpeed: 4
+  crossfadeDuration: 0.25
 --- !u!82 &6616006081869218243
 AudioSource:
   m_ObjectHideFlags: 0
@@ -830,54 +827,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6171536995585101943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589601983855728114}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContext
-  audioSource: {fileID: 3741039624004264798, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
-  provider: 1
-  enableAcceleration: 1
-  enableKeyboardInput: 0
-  enableTouchInput: 0
-  audioLoopback: 0
-  loopbackKey: 108
-  showVisemes: 0
-  debugVisemesKey: 100
-  skipAudioSource: 0
-  gain: 1
-  debugLaughterKey: 104
-  showLaughter: 0
-  laughterScore: 0
---- !u!114 &-4593688672776935048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589601983855728114}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContextMorphTarget
-  skinnedMeshRenderer: {fileID: 4816385997478066844, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
-  visemeToBlendTargets: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
-  enableVisemeTestKeys: 0
-  mouthExaggeration: 1.5
-  visemeTestKeys: 600000000900000071000000770000006500000072000000740000007900000075000000690000006f000000700000005b0000005d0000005c000000
-  laughterKey: 301
-  laughterBlendTarget: 15
-  laughterThreshold: 0.5
-  laughterMultiplier: 1.5
-  smoothAmount: 70
 --- !u!114 &1840690326728849468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,6 +844,14 @@ MonoBehaviour:
   smoothing: 0.55
   ppRescueBlend: 0.791
   ppRescueThreshold: 0.394
+  useTextGuidedMFCC: 1
+  testTranscript: 
+  textGuidedStrength: 0.7
+  textGuidedSmoothWindow: 4
+  showModeLabel: 1
+  testClip: {fileID: 0}
+  playTestClipOnStart: 0
+  playbackSpeed: 1
   logTimings: 1
 --- !u!114 &6479817979587870164
 MonoBehaviour:
@@ -926,6 +883,8 @@ MonoBehaviour:
   - 1
   - 1.8
   - 1.5
+  vLipOpenScale: 1
+  mergedOpenMouthScale: 1
   ppClosureThreshold: 0.642
   ppFastSmoothing: 0.588
   visemeBlendShapeNames:

@@ -102,6 +102,17 @@ public class PanelDetector : MonoBehaviour
     [Range(0.5f, 2.0f)]
     public float characterScale = 1.0f;
 
+    [Tooltip("Minimum distance (metres) that must separate any two spawned characters.\n" +
+             "If a new character's chosen spot is closer than this to an already-spawned\n" +
+             "character, it is shifted sideways (along the wall) until it clears the gap,\n" +
+             "so characters never bunch up or appear to belong to a neighbouring panel.\n" +
+             "Typical: 1.0–1.5 m. Set to 0 to disable separation.")]
+    public float minCharacterSeparation = 1.2f;
+
+    [Tooltip("How far the character is nudged sideways on each step while resolving an\n" +
+             "overlap (metres). Smaller = finer placement but more iterations.")]
+    public float separationStep = 0.4f;
+
     // ── Interaction ─────────────────────────────────────────────────────────────
     [Header("Interaction")]
     [Tooltip("If true, narration does NOT auto-play. Instead the spawned character waits\n" +
@@ -143,10 +154,28 @@ public class PanelDetector : MonoBehaviour
     public System.Action<int, string> OnPanelConfirmed;
 
     /// <summary>
+    /// Fired the moment narration audio STARTS playing (character begins speaking).
+    /// PanelSceneManager uses this to pause detection while audio is playing.
+    /// </summary>
+    public System.Action OnNarrationStarted;
+
+    /// <summary>
     /// Fired when the narration audio finishes playing (after the character has spoken).
     /// Wire PanelSceneManager.OnNarrationDone to this.
     /// </summary>
     public System.Action OnNarrationFinished;
+
+    /// <summary>
+    /// Fired when a scan pass ends WITHOUT confirming a panel (and was not aborted).
+    /// PanelSceneManager uses this to keep scanning continuously.
+    /// </summary>
+    public System.Action OnScanCompletedNoResult;
+
+    /// <summary>Number of distinct panels confirmed so far (each spawns one character).</summary>
+    public int ConfirmedCount => _confirmedClasses.Count;
+
+    /// <summary>True while a scan coroutine is actively running.</summary>
+    public bool IsScanning => _scanning;
 
     /// <summary>
     /// Optional gate: if set, PlayNarration waits until this returns true before
@@ -168,6 +197,7 @@ public class PanelDetector : MonoBehaviour
     private Worker  _engine;
     private bool    _modelLoaded;
     private bool    _scanning;
+    private bool    _abortScan;     // set by StopDetection() to break the scan loop early
     private Texture _cameraTexture;
 
     /// <summary>The most recently spawned panel character (for cleanup on rescan).</summary>
@@ -178,6 +208,14 @@ public class PanelDetector : MonoBehaviour
 
     // Classes that have already been confirmed — skipped on future scans.
     private readonly HashSet<int> _confirmedClasses = new HashSet<int>();
+
+    // Every character spawned so far — used to keep new spawns from overlapping them.
+    private readonly List<GameObject> _spawnedCharacters = new List<GameObject>();
+
+    // Last narration context — lets PanelSceneManager replay the story on "Repeat → Yes".
+    private GameObject _lastNarrationCharacter;
+    private AudioClip  _lastNarrationClip;
+    private string     _lastNarrationTranscript;
 
     // ── Unity lifecycle ───────────────────────────────────────────────────────
 
@@ -227,6 +265,18 @@ public class PanelDetector : MonoBehaviour
     }
 
     /// <summary>
+    /// Requests the current scan to abort at its next checkpoint.
+    /// Used to pause detection while narration audio is playing.
+    /// Safe to call even when no scan is running.
+    /// </summary>
+    public void StopDetection()
+    {
+        if (_scanning)
+            Debug.Log("[PanelDetector] StopDetection requested — current scan will abort.");
+        _abortScan = true;
+    }
+
+    /// <summary>
     /// Clears the confirmed-panel history so all panels can be detected again.
     /// Does NOT start a new scan — call ResetDetection() or StartDetection() after this.
     /// </summary>
@@ -238,8 +288,9 @@ public class PanelDetector : MonoBehaviour
 
     /// <summary>
     /// Clears all accumulated hit data and starts a fresh scan.
-    /// Already-confirmed panels are still excluded; call ResetConfirmedPanels() first
-    /// if you want to allow re-detection of all panels.
+    /// Already-confirmed panels stay excluded permanently (each banner is detected
+    /// and spawns its character only ONCE). Call ResetConfirmedPanels() if you ever
+    /// need to allow re-detection of every panel from scratch.
     /// </summary>
     public void ResetDetection()
     {
@@ -257,7 +308,8 @@ public class PanelDetector : MonoBehaviour
             _hitsByClass[i].Clear();
         _scanning = true;
         StartCoroutine(ScanCoroutine());
-        Debug.Log("[PanelDetector] Detection reset — scanning for next panel.");
+        Debug.Log($"[PanelDetector] Detection reset — scanning for next panel " +
+                  $"({_confirmedClasses.Count} panel(s) already done and excluded).");
     }
 
     // ── Scan loop ─────────────────────────────────────────────────────────────
@@ -266,10 +318,13 @@ public class PanelDetector : MonoBehaviour
     {
         Debug.Log("[PanelDetector] Scan started — look at the panel.");
 
+        _abortScan = false;   // fresh scan — clear any pending stop request
+
         // Wait for passthrough camera
         float camWait = 0f;
         while (!TryEnsureCameraTexture())
         {
+            if (_abortScan) { _scanning = false; yield break; }
             yield return new WaitForSeconds(0.2f);
             camWait += 0.2f;
             if (camWait > 5f)
@@ -284,6 +339,14 @@ public class PanelDetector : MonoBehaviour
 
         while (elapsed < scanDuration)
         {
+            // Abort immediately if detection was stopped (e.g. narration started).
+            if (_abortScan)
+            {
+                _scanning = false;
+                Debug.Log("[PanelDetector] Scan aborted before a panel was confirmed.");
+                yield break;
+            }
+
             yield return new WaitForSeconds(inferenceInterval);
             elapsed += inferenceInterval;
 
@@ -309,11 +372,18 @@ public class PanelDetector : MonoBehaviour
 
         _scanning = false;
 
+        // If we were asked to stop, do not confirm/spawn anything.
+        if (_abortScan)
+        {
+            Debug.Log("[PanelDetector] Scan aborted at end of pass — no confirmation.");
+            yield break;
+        }
+
         int confirmedClass = BestClass();
         if (confirmedClass < 0 || _hitsByClass[confirmedClass].Count == 0)
         {
-            Debug.LogWarning("[PanelDetector] No panel detected — " +
-                             "check model, confidence threshold, and that panelEntries are assigned.");
+            Debug.Log("[PanelDetector] No panel detected this pass — will keep scanning.");
+            OnScanCompletedNoResult?.Invoke();   // let the manager restart the scan
             yield break;
         }
 
@@ -427,12 +497,18 @@ public class PanelDetector : MonoBehaviour
             spawnRot = Quaternion.LookRotation(toUser);
         }
 
+        // Keep the new character clear of any already-spawned ones. Nudge sideways
+        // (along the wall, perpendicular to the user→panel direction) until it no
+        // longer sits within minCharacterSeparation of an existing character.
+        spawnXZ = ResolveSeparation(spawnXZ, toUser);
+
         float floorY  = GetFloorY(spawnXZ, camY);
         Vector3 spawnPos = new Vector3(spawnXZ.x, floorY + spawnYOffset, spawnXZ.z);
 
         GameObject character = Instantiate(entry.characterPrefab, spawnPos, spawnRot);
         character.name = $"PanelCharacter_{classId}_{GetPanelLabel(classId)}";
         LastSpawnedCharacter = character;
+        _spawnedCharacters.Add(character);
 
         // Apply scale multiplier so characters match real-world user height.
         if (!Mathf.Approximately(characterScale, 1f))
@@ -522,12 +598,12 @@ public class PanelDetector : MonoBehaviour
 
             // Defer narration: the character waits until the user points the controller at it.
             var interaction = character.AddComponent<PanelCharacterInteraction>();
-            interaction.Init(this, entry.narrationClip, rightController, leftController, lr);
+            interaction.Init(this, entry.narrationClip, entry.narrationTranscript, rightController, leftController, lr);
             Debug.Log("[PanelDetector] Narration deferred — aim either controller at character and pull trigger.");
         }
         else
         {
-            StartCoroutine(PlayNarration(character, entry.narrationClip));
+            StartCoroutine(PlayNarration(character, entry.narrationClip, entry.narrationTranscript));
         }
     }
 
@@ -535,16 +611,37 @@ public class PanelDetector : MonoBehaviour
     /// Public entry point used by PanelCharacterInteraction to start narration once
     /// the user points the controller at the spawned character.
     /// </summary>
-    public void TriggerNarration(GameObject character, AudioClip clip)
+    public void TriggerNarration(GameObject character, AudioClip clip, string transcript = null)
     {
         if (character == null || clip == null) return;
-        StartCoroutine(PlayNarration(character, clip));
+        StartCoroutine(PlayNarration(character, clip, transcript));
+    }
+
+    /// <summary>
+    /// Replays the most recently played narration (same character + clip).
+    /// Used by PanelSceneManager when the user chooses "Repeat" → Yes.
+    /// Returns false if there is nothing to replay.
+    /// </summary>
+    public bool ReplayLastNarration()
+    {
+        if (_lastNarrationCharacter == null || _lastNarrationClip == null)
+        {
+            Debug.LogWarning("[PanelDetector] ReplayLastNarration: nothing to replay yet.");
+            return false;
+        }
+        StartCoroutine(PlayNarration(_lastNarrationCharacter, _lastNarrationClip, _lastNarrationTranscript));
+        return true;
     }
 
     // ── Narration + lip sync ──────────────────────────────────────────────────
 
-    private IEnumerator PlayNarration(GameObject character, AudioClip clip)
+    private IEnumerator PlayNarration(GameObject character, AudioClip clip, string transcript = null)
     {
+        // Remember context so the story can be replayed on demand.
+        _lastNarrationCharacter  = character;
+        _lastNarrationClip       = clip;
+        _lastNarrationTranscript = transcript;
+
         yield return new WaitForSeconds(narrationDelay);
 
         // If PanelSceneManager set a gate (e.g. waiting for intro to finish),
@@ -571,8 +668,7 @@ public class PanelDetector : MonoBehaviour
         if (lipSync != null)
         {
             lipSync.enabled = true;
-            lipSync.EnsureInitialized();
-            lipSync.FeedAudioClip(clip);
+            lipSync.FeedAudioClip(clip, transcript);
 
             lipSyncAudio = lipSync.GetComponent<AudioSource>();
             if (lipSyncAudio != null)
@@ -607,6 +703,10 @@ public class PanelDetector : MonoBehaviour
         narrationAudioSource.clip         = clip;
         narrationAudioSource.Play();
 
+        // Tell the manager audio has begun so it pauses panel detection while
+        // the character is speaking.
+        OnNarrationStarted?.Invoke();
+
         Debug.Log($"[PanelDetector] Narration started: '{clip.name}'  {clip.length:F1}s");
 
         yield return new WaitForSeconds(clip.length);
@@ -615,13 +715,15 @@ public class PanelDetector : MonoBehaviour
         narrationAudioSource.Stop();
         Debug.Log("[PanelDetector] Narration finished.");
 
-        // Zero viseme weights first so the morph targets snap to neutral (mouth closed),
-        // then disable the component so CustomLipSyncMorphTarget stops reading weights.
+        // Zero out all viseme weights BEFORE disabling so CustomLipSyncMorphTarget
+        // writes 0 to every blend shape and the mouth closes cleanly.
+        // Without this the last frame's visemes are frozen and the mouth
+        // stays stuck open/closed depending on what the audio ended on.
         if (lipSync != null)
         {
             lipSync.ResetVisemes();
             lipSync.enabled = false;
-            Debug.Log("[PanelDetector] CustomLipSyncContext disabled — mouth reset to neutral.");
+            Debug.Log("[PanelDetector] CustomLipSyncContext disabled.");
         }
 
         // Return to idle now that the character has finished speaking.
@@ -698,6 +800,13 @@ public class PanelDetector : MonoBehaviour
 
             if (bestCls < 0) continue;
 
+            // Skip panels that are already confirmed. This is critical: NMS below is
+            // class-agnostic, so a previously detected banner that is still in view
+            // (and usually high-confidence) would otherwise SUPPRESS the box of a new,
+            // not-yet-detected banner sitting next to it — blocking all further
+            // detections. Dropping confirmed classes here lets new banners survive NMS.
+            if (_confirmedClasses.Contains(bestCls)) continue;
+
             rawDets.Add(new RawDetection
             {
                 cx      = cpu0[0 * Elements + i],
@@ -709,9 +818,16 @@ public class PanelDetector : MonoBehaviour
             });
         }
 
-        // ── Class-agnostic NMS (high-confidence box suppresses lower ones nearby)
+        // ── Per-class NMS (only same-panel boxes suppress each other) ─────────
+        // IMPORTANT: must be per-class, NOT class-agnostic. Panels sit side-by-side
+        // on the wall and overlap in the camera frame. Class-agnostic NMS let the
+        // higher-confidence panel suppress its neighbour entirely, so the neighbour
+        // never got a hit and could never be detected — producing an order-dependent
+        // bug (a panel was detectable head-on but not when approached from an angle
+        // after its neighbours were already found). Per-class NMS lets every distinct
+        // panel survive regardless of scan order.
         List<RawDetection> kept = ApplyNMS(rawDets);
-        Debug.Log($"[PanelDetector]   {rawDets.Count} raw → {kept.Count} after NMS.");
+        Debug.Log($"[PanelDetector]   {rawDets.Count} raw → {kept.Count} after per-class NMS.");
 
         // ── Raycast each surviving detection centre to 3-D world space ────────
         foreach (var det in kept)
@@ -747,7 +863,10 @@ public class PanelDetector : MonoBehaviour
         public int   classId;
     }
 
-    // Class-agnostic NMS: sort by confidence, suppress overlapping boxes regardless of class.
+    // Per-class NMS: sort by confidence, suppress overlapping boxes ONLY when they
+    // belong to the SAME class. Boxes of different classes never suppress each other,
+    // so two adjacent panels that overlap in the camera frame both survive and can
+    // each be detected — regardless of which one the user scans first.
     private List<RawDetection> ApplyNMS(List<RawDetection> dets)
     {
         dets.Sort((a, b) => b.conf.CompareTo(a.conf));
@@ -761,7 +880,10 @@ public class PanelDetector : MonoBehaviour
             kept.Add(dets[i]);
             for (int j = i + 1; j < dets.Count; j++)
             {
-                if (!suppressed[j] && ComputeIoU(dets[i], dets[j]) > iouThreshold)
+                if (suppressed[j]) continue;
+                // Only suppress a lower-confidence box if it is the SAME panel class.
+                if (dets[j].classId == dets[i].classId &&
+                    ComputeIoU(dets[i], dets[j]) > iouThreshold)
                     suppressed[j] = true;
             }
         }
@@ -795,6 +917,61 @@ public class PanelDetector : MonoBehaviour
     ///      Starting close to the floor avoids hitting wall/furniture geometry.
     ///   3. Hard fallback: camera Y - 1.7 m.
     /// </summary>
+    /// <summary>
+    /// Returns an XZ position near <paramref name="desiredXZ"/> that is at least
+    /// minCharacterSeparation metres away from every already-spawned character.
+    /// The candidate is nudged sideways along the wall (perpendicular to the
+    /// user→panel direction), trying alternating left/right offsets of growing size.
+    /// Falls back to the desired position if no clear spot is found.
+    /// </summary>
+    private Vector3 ResolveSeparation(Vector3 desiredXZ, Vector3 toUser)
+    {
+        if (minCharacterSeparation <= 0f) return desiredXZ;
+
+        // Lateral (wall-tangent) direction on the flat plane.
+        Vector3 lateral = Vector3.Cross(Vector3.up, toUser);
+        if (lateral.sqrMagnitude < 0.0001f) lateral = Vector3.right;
+        lateral.Normalize();
+
+        float step = Mathf.Max(0.05f, separationStep);
+        const int maxSteps = 16;   // up to ±(16 * step) metres of search each side
+
+        // Try the desired spot first, then alternate sides with increasing offset.
+        for (int k = 0; k <= maxSteps; k++)
+        {
+            // offset 0 only once (k == 0); otherwise test +k and -k
+            for (int sign = (k == 0 ? 0 : 1); sign >= (k == 0 ? 0 : -1); sign -= 2)
+            {
+                Vector3 candidate = desiredXZ + lateral * (step * k * sign);
+                if (IsClearOfSpawned(candidate))
+                    return candidate;
+                if (k == 0) break;   // avoid testing the same centre twice
+            }
+        }
+
+        Debug.LogWarning("[PanelDetector] Could not find a non-overlapping spawn spot — " +
+                         "using the original position. Consider lowering minCharacterSeparation.");
+        return desiredXZ;
+    }
+
+    /// <summary>True if <paramref name="xz"/> is at least minCharacterSeparation from
+    /// every spawned character (ignores Y; destroyed entries are skipped).</summary>
+    private bool IsClearOfSpawned(Vector3 xz)
+    {
+        float minSqr = minCharacterSeparation * minCharacterSeparation;
+        for (int i = _spawnedCharacters.Count - 1; i >= 0; i--)
+        {
+            GameObject go = _spawnedCharacters[i];
+            if (go == null) { _spawnedCharacters.RemoveAt(i); continue; }
+
+            Vector3 p = go.transform.position;
+            float dx = p.x - xz.x;
+            float dz = p.z - xz.z;
+            if (dx * dx + dz * dz < minSqr) return false;
+        }
+        return true;
+    }
+
     private float GetFloorY(Vector3 nearPos, float cameraY)
     {
         // ── 1. MRUK FLOOR anchor ─────────────────────────────────
@@ -877,6 +1054,12 @@ public class PanelEntry
 
     [Tooltip("Narration audio clip for this panel.")]
     public AudioClip narrationClip;
+
+    [Tooltip("Full transcript of the narration clip.\n" +
+             "Used by CustomLipSyncContext for text-guided lip sync.\n" +
+             "Leave empty to fall back to raw MFCC.")]
+    [TextArea(3, 8)]
+    public string narrationTranscript;
 
     [Tooltip("Idle animation clip — plays on spawn and after narration ends.\n" +
              "Drag a Mixamo/CC4 idle clip here. Removes the default T-pose.\n" +

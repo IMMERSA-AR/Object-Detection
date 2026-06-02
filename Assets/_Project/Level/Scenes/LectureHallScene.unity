@@ -319,6 +319,8 @@ MonoBehaviour:
   experiences:
   - {fileID: 11400000, guid: b96d3f2606bf1ab469ff623a6427994d, type: 2}
   lectureHallManager: {fileID: 2112026628}
+  mrukWaitTimeout: 10
+  mrukFloorWaitTimeout: 5
 --- !u!4 &56200035
 Transform:
   m_ObjectHideFlags: 0
@@ -7273,6 +7275,13 @@ MonoBehaviour:
   doctorBehindDeskOffset: 0.5
   doctorInFrontOfScreenOffset: 0.8
   sittingYOffset: 0
+  chairScanMinHeight: 0.3
+  chairScanMaxHeight: 0.7
+  chairScanGridStep: 0.08
+  chairScanClusterRadius: 0.35
+  chairScanMinHits: 4
+  chairScanForwardRange: 6
+  chairScanSideRange: 4
   deskMinAboveFloor: 0.65
   deskMaxAboveFloor: 0.95
   deskGridStep: 0.1
@@ -7288,6 +7297,9 @@ MonoBehaviour:
   lectureLightsRoot: {fileID: 0}
   lectureAudioSource: {fileID: 2112026627}
   greetingAudioClip: {fileID: 8300000, guid: 19fce4bd88db425429e85da65e354423, type: 3}
+  greetingAudioTranscript: "\"Ahlan wa sahlan! I am Murad, a student here at the
+    school. It is not often we receive visitors from\u2026 another time. Please,
+    ask me anything you wish to know.\""
   detectionAudioSource: {fileID: 2112026629}
   lectureUI: {fileID: 0}
   muradFinalDistance: 1.2

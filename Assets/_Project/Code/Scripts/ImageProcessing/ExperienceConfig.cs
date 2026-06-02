@@ -18,6 +18,12 @@ public class ExperienceConfig : ScriptableObject
     [Tooltip("The pre-recorded lecture audio script")]
     public AudioClip lectureAudioClip;
 
+    [Tooltip("Full transcript of the lecture audio clip.\n" +
+             "Used by CustomLipSyncContext for text-guided lip sync.\n" +
+             "Leave empty to fall back to raw MFCC (mouth still moves, but less accurate).")]
+    [TextArea(3, 8)]
+    public string lectureAudioTranscript;
+
     [Tooltip("Prefab for the MAIN Murad (who sits, then stands up to talk)")]
     public GameObject mainMuradPrefab;
 

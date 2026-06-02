@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Project/Level/Scenes/UI/UISet.unity
     guid: 69abe3ff62e83494c9b9411ae4293615
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Level/Scenes/LectureHallScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Project/Level/Scenes/Test/TimeMachine.unity
     guid: a35fb59c47d32024890fd0b9dd485b78
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Level/Scenes/PanelScene.unity
     guid: e4fd6eba5bdf5c3448ebc91fe9b2c5bb
   m_configObjects:

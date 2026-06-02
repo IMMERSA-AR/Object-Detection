@@ -528,12 +528,6 @@ PrefabInstance:
       addedObject: {fileID: 1630863593729111506}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3817760665193589425}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5241224884953771230}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 579598021935221838}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
@@ -693,54 +687,6 @@ MonoBehaviour:
   laserPointer: {fileID: 4496558182744473187}
   audioSource: {fileID: 7268987348757653705}
   speakerSource: {fileID: 5021595928235935099}
---- !u!114 &3817760665193589425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContext
-  audioSource: {fileID: 7268987348757653705}
-  provider: 1
-  enableAcceleration: 1
-  enableKeyboardInput: 0
-  enableTouchInput: 0
-  audioLoopback: 0
-  loopbackKey: 108
-  showVisemes: 0
-  debugVisemesKey: 100
-  skipAudioSource: 0
-  gain: 3
-  debugLaughterKey: 104
-  showLaughter: 0
-  laughterScore: 0
---- !u!114 &5241224884953771230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContextMorphTarget
-  skinnedMeshRenderer: {fileID: 5518425087734892745}
-  visemeToBlendTargets: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  enableVisemeTestKeys: 0
-  mouthExaggeration: 1.5
-  visemeTestKeys: 600000000900000071000000770000006500000072000000740000007900000075000000690000006f000000700000005b0000005d0000005c000000
-  laughterKey: 301
-  laughterBlendTarget: 15
-  laughterThreshold: 0.639
-  laughterMultiplier: 2.11
-  smoothAmount: 41
 --- !u!65 &579598021935221838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -906,6 +852,14 @@ MonoBehaviour:
   smoothing: 0.55
   ppRescueBlend: 0.35
   ppRescueThreshold: 0.12
+  useTextGuidedMFCC: 1
+  testTranscript: My mama bakes warm bread, and Papa pours more coffee for me.
+  textGuidedStrength: 0.7
+  textGuidedSmoothWindow: 4
+  showModeLabel: 1
+  testClip: {fileID: 0}
+  playTestClipOnStart: 0
+  playbackSpeed: 1
   logTimings: 1
 --- !u!114 &-6047319904845741997
 MonoBehaviour:
@@ -937,6 +891,8 @@ MonoBehaviour:
   - 1
   - 1.8
   - 1.5
+  vLipOpenScale: 1
+  mergedOpenMouthScale: 1
   ppClosureThreshold: 0.25
   ppFastSmoothing: 0.15
   visemeBlendShapeNames:
@@ -1004,7 +960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PanelNPCController
   idleClip: {fileID: 0}
   talkingClip: {fileID: 0}
-  pointingClip: {fileID: -203655887218126122, guid: 5b8db8ec0774733409648c226a0fb36b, type: 3}
+  pointingClip: {fileID: 0}
   crossfadeDuration: 0.25
   panelGestureDuration: 5
   enableLookAt: 1

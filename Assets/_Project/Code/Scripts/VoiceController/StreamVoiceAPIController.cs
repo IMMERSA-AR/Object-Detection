@@ -49,6 +49,7 @@ public class VoiceAPIController : MonoBehaviour
     public AudioSource speakerSource; // The new child source (for your ears)
     private bool isRecording  = false;
     private bool _wasSpeaking = false;  // tracks audio state to fire Neutral only once
+    private string _lastReplyText = null;  // latest NPC reply text (for text-guided lip-sync)
 
     // WebSocket variables
     private ClientWebSocket websocket;
@@ -145,6 +146,10 @@ public class VoiceAPIController : MonoBehaviour
     {
         try
         {
+            // Clean up any previous (possibly faulted) socket/token first
+            try { websocket?.Abort(); websocket?.Dispose(); } catch { }
+            try { cts?.Cancel();      cts?.Dispose();      } catch { }
+
             websocket = new ClientWebSocket();
             cts = new CancellationTokenSource();
             _sessionActive = false;
@@ -170,7 +175,7 @@ public class VoiceAPIController : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogError("💥 Connection failed: " + e.Message);
-            UpdateUI("Offline", Color.red);
+            UpdateUI("Can't connect. Check Wi-Fi & try again!", Color.red);
         }
     }
 
@@ -204,29 +209,29 @@ public class VoiceAPIController : MonoBehaviour
             AudioClip clip = audioQueue.Dequeue();
             Debug.Log($"▶️ Playing chunk | length={clip.length}s");
 
-            // --- SOURCE 1: MOURAD'S LIPS (MUTED) ---
-            // This feeds the audio to Meta's tollbooth to move the mouth.
-            // We mute it so it doesn't accidentally output glitchy/silent audio.
+            // --- SINGLE SOURCE ---
+            // The source you HEAR is the same one the lip-sync tracks, so lips can
+            // never drift from the audio. (CustomLipSyncContext reads THIS source's
+            // timeSamples.) The old dual-source setup — a muted timing source plus a
+            // separate audible speakerSource — was a leftover from when Meta's lip-sync
+            // tollbooth needed the muted feed. With our custom lip-sync it's gone, and
+            // two sources only risked desync.
             audioSource.Stop();
             audioSource.loop = false;
             audioSource.clip = clip;
-            audioSource.mute = false;
+            audioSource.mute = false;        // audible
             audioSource.volume = 1f;
+            audioSource.spatialBlend = 1f;   // voice comes FROM Mourad
             audioSource.Play();
 
-            // --- SOURCE 2: THE ACTUAL AUDIO (UNMUTED) ---
-            // This bypasses Meta entirely and goes straight to your headset.
-            if (speakerSource != null)
-            {
-                speakerSource.Stop();
-                speakerSource.loop = false;
-                speakerSource.clip = clip;
-                speakerSource.mute = false;
-                speakerSource.spatialBlend = 1f; // Set to 1 so the voice comes FROM Mourad
-                speakerSource.Play();
-            }
+            // speakerSource is no longer used — make sure it isn't double-playing.
+            if (speakerSource != null) speakerSource.Stop();
 
-            if (karimAnimator != null) karimAnimator.SetBool("IsTalking", true);
+            if (karimAnimator != null)
+            {
+                karimAnimator.SetBool("IsTalking",  true);
+                karimAnimator.SetBool("IsThinking", false);
+            }
         }
 
 
@@ -299,7 +304,18 @@ public class VoiceAPIController : MonoBehaviour
             // --- SEND AUDIO CHUNKS ---
             Debug.Log("🎤 Starting microphone recording...");
             UpdateUI("Listening...", Color.red);
+
+            // If a previous session left the mic running, release it first.
+            if (Microphone.IsRecording(micDevice)) Microphone.End(micDevice);
             recordingClip = Microphone.Start(micDevice, true, 300, 16000);
+            if (recordingClip == null)
+            {
+                Debug.LogError("🎤 Microphone.Start returned null — mic unavailable.");
+                UpdateUI("Mic problem. Try again!", Color.red);
+                isRecording = false;
+                return;
+            }
+
             int lastPos = 0;
             int chunkIndex = 0;
 
@@ -330,6 +346,7 @@ public class VoiceAPIController : MonoBehaviour
             // --- END OF UTTERANCE ---
             Debug.Log("📤 Sending end_of_utterance...");
             UpdateUI("Thinking...", Color.yellow);
+            if (karimAnimator != null) karimAnimator.SetBool("IsThinking", true);
             await SendTextMsg(JsonUtility.ToJson(new EndUtteranceMsg()));
 
             // --- RECEIVE RESPONSE ---
@@ -347,12 +364,21 @@ public class VoiceAPIController : MonoBehaviour
                 if (response.type == "error")
                 {
                     Debug.LogError("❌ Server error: " + response.message);
+                    UpdateUI("I didn't catch that. Try again!", Color.red);
                     break;
                 }
 
                 if (response.type == "reply_text_done")
                 {
                     Debug.Log($"💬 Reply: \"{response.text}\" | emotion: {response.emotion}");
+                    _lastReplyText = response.text;   // for text-guided lip-sync
+
+                    // Begin a text-guided utterance: builds the viseme sequence and
+                    // resets the streaming cursor BEFORE the audio chunks arrive.
+                    string replyText = response.text;
+                    lock (mainThreadActions)
+                        mainThreadActions.Enqueue(() => customLipSyncContext?.BeginUtterance(replyText));
+
                     if (!string.IsNullOrEmpty(response.emotion))
                     {
                         string emotion = response.emotion;
@@ -366,6 +392,11 @@ public class VoiceAPIController : MonoBehaviour
                 {
                     Debug.Log($"🏁 TTS done! Chunks received: {audioChunksReceived}. WebSocket staying open.");
                     UpdateUI("", Color.white);
+                    // Clear the text-guided sequence so any stray audio that arrives
+                    // before the NEXT reply_text_done falls back to raw MFCC instead of
+                    // parking on this reply's leftover (exhausted) visemes.
+                    lock (mainThreadActions)
+                        mainThreadActions.Enqueue(() => customLipSyncContext?.EndUtterance());
                     break; // leave WebSocket open — context preserved for next turn
                 }
 
@@ -397,8 +428,15 @@ public class VoiceAPIController : MonoBehaviour
         {
             Debug.LogError("💥 WebSocket Error: " + e.Message);
             Debug.LogError("Stack: " + e.StackTrace);
-            UpdateUI("Error!", Color.red);
+            UpdateUI("Something went wrong. Point at me & try again!", Color.red);
+
+            // ── Full cleanup so the NEXT trigger press cleanly reconnects ──
             _sessionActive = false;
+            isRecording    = false;                       // so one press starts fresh (not toggles off)
+            try { Microphone.End(micDevice); } catch { }  // release the mic from the dead session
+            try { websocket?.Abort(); }   catch { }       // kill the faulted socket
+            try { websocket?.Dispose(); } catch { }
+            websocket = null;                             // forces ConnectAndStartSession() next time
         }
     }
 
@@ -414,8 +452,13 @@ public class VoiceAPIController : MonoBehaviour
         AudioClip clip = AudioClip.Create("AI_Chunk", samples.Length, 1, 44100, false);
         clip.SetData(samples, 0);
 
-        // Pre-compute MFCC viseme timeline BEFORE enqueuing so it's ready when playback starts
-        customLipSyncContext?.FeedAudioClip(clip);
+        // Pre-compute the viseme timeline BEFORE enqueuing so it's ready at playback.
+        //
+        // Text-guided STREAMING: BeginUtterance() (called on reply_text_done) set up the
+        // full viseme sequence + a cursor. Each chunk here is aligned to the NEXT slice of
+        // that sequence and advances the cursor — so closures (M/P/B) are guaranteed without
+        // buffering the whole reply or changing the backend. No transcript arg needed.
+        customLipSyncContext?.FeedAudioClip(clip, streaming: true);
 
         audioQueue.Enqueue(clip);
     }

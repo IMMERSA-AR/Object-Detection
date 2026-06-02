@@ -837,7 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PanelNPCController
   idleClip: {fileID: 0}
   talkingClip: {fileID: 0}
-  pointingClip: {fileID: -203655887218126122, guid: 5b8db8ec0774733409648c226a0fb36b, type: 3}
+  pointingClip: {fileID: 0}
   crossfadeDuration: 0.25
   panelGestureDuration: 5
   enableLookAt: 1
@@ -965,6 +965,14 @@ MonoBehaviour:
   smoothing: 0.55
   ppRescueBlend: 0.35
   ppRescueThreshold: 0.12
+  useTextGuidedMFCC: 1
+  testTranscript: My mama bakes warm bread, and Papa pours more coffee for me.
+  textGuidedStrength: 0.7
+  textGuidedSmoothWindow: 4
+  showModeLabel: 1
+  testClip: {fileID: 0}
+  playTestClipOnStart: 0
+  playbackSpeed: 1
   logTimings: 0
 --- !u!114 &8779220803461219326
 MonoBehaviour:
@@ -996,6 +1004,8 @@ MonoBehaviour:
   - 1
   - 1.8
   - 1.5
+  vLipOpenScale: 1
+  mergedOpenMouthScale: 1
   ppClosureThreshold: 0.25
   ppFastSmoothing: 0.15
   visemeBlendShapeNames:
@@ -1041,7 +1051,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
