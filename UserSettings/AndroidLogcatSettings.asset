@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 6448,
+        "processId": 13108,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -373,6 +373,42 @@
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 6448,
             "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 17757,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23776,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 32359,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 3554,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 10819,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 13108,
+            "exited": false
         }
     ],
     "m_Tags": {
@@ -429,7 +465,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "Panel",
+        "m_Filter": "chair",
         "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },

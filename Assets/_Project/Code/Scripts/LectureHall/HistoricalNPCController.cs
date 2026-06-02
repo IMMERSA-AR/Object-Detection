@@ -321,20 +321,35 @@ public class HistoricalNPCController : MonoBehaviour
     private Coroutine _sittingSwitchCoroutine;
 
     /// <summary>
-    /// Start randomly cycling through <see cref="sittingClipVariants"/> every
+    /// Start randomly cycling between sitting poses every
     /// <see cref="sittingSwitchInterval"/> seconds (±20% jitter).
+    ///
+    /// Pool = idleClip  +  sittingClipVariants (duplicates removed).
+    /// Requires at least 2 distinct clips in total — if only idleClip is set and
+    /// sittingClipVariants is empty/null, nothing switches (same as before).
+    ///
+    /// Having just ONE entry in sittingClipVariants is enough: the character
+    /// will alternate between idleClip and that variant.
     /// </summary>
     public void StartSittingVariation()
     {
-        if (sittingClipVariants == null || sittingClipVariants.Length < 2)
+        // Build the full pool: base idle clip + unique non-null variants.
+        var pool = new System.Collections.Generic.List<AnimationClip>();
+        if (idleClip != null) pool.Add(idleClip);
+        if (sittingClipVariants != null)
+            foreach (var c in sittingClipVariants)
+                if (c != null && !pool.Contains(c)) pool.Add(c);
+
+        if (pool.Count < 2)
         {
-            Debug.Log($"[NPC] '{name}': sitting variants < 2 — no switching.");
+            Debug.Log($"[NPC] '{name}': sitting pool has < 2 distinct clips — no switching.");
             return;
         }
+
         if (_sittingSwitchCoroutine != null) StopCoroutine(_sittingSwitchCoroutine);
-        _sittingSwitchCoroutine = StartCoroutine(SittingVariationLoop());
-        Debug.Log($"[NPC] '{name}': sitting variation started ({sittingClipVariants.Length} clips, " +
-                  $"every ~{sittingSwitchInterval:F0}s).");
+        _sittingSwitchCoroutine = StartCoroutine(SittingVariationLoop(pool));
+        Debug.Log($"[NPC] '{name}': sitting variation started " +
+                  $"({pool.Count} clips, every ~{sittingSwitchInterval:F0}s).");
     }
 
     /// <summary>Stop cycling and return to whatever clip is currently playing.</summary>
@@ -346,9 +361,9 @@ public class HistoricalNPCController : MonoBehaviour
         Debug.Log($"[NPC] '{name}': sitting variation stopped.");
     }
 
-    private IEnumerator SittingVariationLoop()
+    private IEnumerator SittingVariationLoop(System.Collections.Generic.List<AnimationClip> pool)
     {
-        int lastIndex = -1;
+        int lastIndex = 0;   // start at idleClip (index 0)
 
         while (true)
         {
@@ -357,15 +372,13 @@ public class HistoricalNPCController : MonoBehaviour
             yield return new WaitForSeconds(wait);
 
             int next;
-            do { next = Random.Range(0, sittingClipVariants.Length); }
-            while (next == lastIndex && sittingClipVariants.Length > 1);
+            do { next = Random.Range(0, pool.Count); }
+            while (next == lastIndex && pool.Count > 1);
 
             lastIndex = next;
-            AnimationClip clip = sittingClipVariants[next];
+            AnimationClip clip = pool[next];
             if (clip != null)
-            {
                 CrossfadeTo(clip, $"sitting variant '{clip.name}'");
-            }
         }
     }
 

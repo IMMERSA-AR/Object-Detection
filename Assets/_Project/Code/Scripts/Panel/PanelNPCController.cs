@@ -11,20 +11,27 @@ using UnityEngine.Playables;
 ///   • Standing idle  — plays automatically on spawn, and after narration ends.
 ///   • Talking        — played by PanelDetector while narration audio is active.
 ///
+/// When narration starts, an optional panel-gesture sequence plays first:
+///   1. Crossfade to pointingClip — character points right arm at the panel.
+///   2. Head / eyes look toward the panel for panelGestureDuration seconds.
+///   3. Crossfade back to talkingClip — head / eyes return to tracking the user.
+///
 /// Uses PlayableGraph + AnimationMixerPlayable to crossfade smoothly between clips —
 /// no Animator Controller asset required.
 ///
 /// In LateUpdate, the head and eye bones are rotated toward the user's eye level
 /// (camera position) on top of whatever the animation is doing, giving the impression
-/// that the character is making eye contact.
+/// that the character is making eye contact. During the pointing gesture the same
+/// system redirects gaze toward the panel instead.
 ///
 /// ── Prefab Setup ──────────────────────────────────────────────────────────
 ///  1. Add this component to the character prefab root.
 ///  2. Assign Idle Clip  / Talking Clip in the Inspector (or leave empty and inject
 ///     them at runtime via Init() if you reuse the same prefab across scenes).
-///  3. Set the correct bone names for Head, Neck, Left Eye, Right Eye
+///  3. Optionally assign Pointing Clip for the panel-gesture feature.
+///  4. Set the correct bone names for Head, Neck, Left Eye, Right Eye
 ///     (defaults match CC4 rigs; see tooltips for Mixamo alternatives).
-///  4. The Animator component needs a Humanoid Avatar assigned.
+///  5. The Animator component needs a Humanoid Avatar assigned.
 /// </summary>
 [DisallowMultipleComponent]
 public class PanelNPCController : MonoBehaviour
@@ -37,11 +44,23 @@ public class PanelNPCController : MonoBehaviour
              "Falls back to idle clip if left empty.")]
     public AnimationClip talkingClip;
 
+    [Tooltip("Pointing clip — played at the START of each narration for panelGestureDuration seconds.\n" +
+             "Use a clip where the character extends their right arm forward / presents something.\n" +
+             "Leave empty to skip the gesture and jump straight to the talking clip.")]
+    public AnimationClip pointingClip;
+
     [Header("Crossfade")]
     [Tooltip("Duration in seconds to blend from the current animation to the next.\n" +
              "0 = instant snap.  0.25 is a good starting point.")]
     [Range(0f, 1f)]
     public float crossfadeDuration = 0.25f;
+
+    [Header("Panel Gesture")]
+    [Tooltip("How long (seconds) the character points at the panel and looks at it\n" +
+             "before returning to the talking animation and looking at the user.\n" +
+             "Only used when pointingClip is assigned.")]
+    [Min(0.5f)]
+    public float panelGestureDuration = 5f;
 
     // ── Look-At ───────────────────────────────────────────────────────────────
     [Header("Head & Eye Look-At")]
@@ -69,9 +88,8 @@ public class PanelNPCController : MonoBehaviour
     public string rightEyeBoneName = "CC_Base_R_Eye";
 
     [Space]
-    [Tooltip("How strongly the head turns toward the user.\n" +
-             "0 = no head turn, 1 = full rotation to face the user.\n" +
-             "0.5 is a subtle, natural-feeling turn.")]
+    [Tooltip("How strongly the head turns toward the look-at target.\n" +
+             "0 = no head turn, 1 = full rotation.  0.5 is natural.")]
     [Range(0f, 1f)]
     public float headLookWeight = 0.5f;
 
@@ -80,13 +98,13 @@ public class PanelNPCController : MonoBehaviour
     [Range(0f, 90f)]
     public float maxHeadLookAngle = 50f;
 
-    [Tooltip("How quickly the head rotation smoothly tracks the user.")]
+    [Tooltip("How quickly the head rotation smoothly tracks the target.")]
     [Range(1f, 15f)]
     public float headLookSpeed = 4f;
 
     [Space]
-    [Tooltip("How strongly the eyes rotate toward the user.\n" +
-             "1 = eyes always point directly at the camera (full tracking).")]
+    [Tooltip("How strongly the eyes rotate toward the look-at target.\n" +
+             "1 = eyes always point directly at the target (full tracking).")]
     [Range(0f, 1f)]
     public float eyeLookWeight = 1f;
 
@@ -95,7 +113,7 @@ public class PanelNPCController : MonoBehaviour
     [Range(0f, 40f)]
     public float maxEyeLookAngle = 25f;
 
-    [Tooltip("How quickly the eye rotation smoothly tracks the user.\n" +
+    [Tooltip("How quickly the eye rotation smoothly tracks the target.\n" +
              "Eyes should respond faster than the head (8–12 feels natural).")]
     [Range(1f, 20f)]
     public float eyeLookSpeed = 10f;
@@ -112,6 +130,11 @@ public class PanelNPCController : MonoBehaviour
     private Coroutine                _fadeCoroutine;
     private bool                     _graphReady;
 
+    // ── Private — panel gesture ───────────────────────────────────────────────
+    private Vector3   _panelWorldPos;
+    private bool      _hasPanelPos;
+    private Coroutine _gestureCoroutine;
+
     // ── Private — look-at ────────────────────────────────────────────────────
     private Transform  _camera;
     private Transform  _headBone;
@@ -121,6 +144,10 @@ public class PanelNPCController : MonoBehaviour
     private Quaternion _headSmoothRot;
     private Quaternion _eyeSmoothRot;
     private bool       _lookAtInitialized;
+
+    // Null  → look at the user (camera position).
+    // Non-null → look at this world position (used during panel-gesture phase).
+    private Vector3?   _lookAtOverride;
 
     // ── Unity lifecycle ───────────────────────────────────────────────────────
 
@@ -150,6 +177,17 @@ public class PanelNPCController : MonoBehaviour
         BuildGraph();
         PlayIdle();
         SetupLookAt();
+    }
+
+    /// <summary>
+    /// Tells the controller where the detected panel is in world space.
+    /// PanelDetector calls this right after Init() so the panel-gesture knows
+    /// which direction to have the character point and look.
+    /// </summary>
+    public void SetPanelPosition(Vector3 worldPos)
+    {
+        _panelWorldPos = worldPos;
+        _hasPanelPos   = true;
     }
 
     private void Update()
@@ -182,8 +220,9 @@ public class PanelNPCController : MonoBehaviour
             _lookAtInitialized = true;
         }
 
-        // Target = camera position = user's eye level.
-        Vector3 target = _camera.position;
+        // During the pointing gesture, look at the panel.
+        // Otherwise look at the user (camera = eye level).
+        Vector3 target = _lookAtOverride.HasValue ? _lookAtOverride.Value : _camera.position;
 
         ApplyHeadLookAt(target);
         ApplyEyeLookAt(target);
@@ -191,13 +230,22 @@ public class PanelNPCController : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (_fadeCoroutine != null) StopCoroutine(_fadeCoroutine);
+        if (_fadeCoroutine   != null) StopCoroutine(_fadeCoroutine);
+        if (_gestureCoroutine != null) StopCoroutine(_gestureCoroutine);
         if (_graph.IsValid()) _graph.Destroy();
     }
 
     /// <summary>Switch to the standing idle animation (with crossfade).</summary>
     public void PlayIdle()
     {
+        // Cancel any in-progress gesture so returning to idle is always clean.
+        if (_gestureCoroutine != null)
+        {
+            StopCoroutine(_gestureCoroutine);
+            _gestureCoroutine = null;
+        }
+        _lookAtOverride = null;   // return gaze to user
+
         if (idleClip == null)
         {
             Debug.LogWarning($"[PanelNPCController] '{name}': Idle Clip is not assigned.");
@@ -206,16 +254,70 @@ public class PanelNPCController : MonoBehaviour
         CrossfadeTo(idleClip, "idle");
     }
 
-    /// <summary>Switch to the talking animation (with crossfade).</summary>
+    /// <summary>
+    /// Switch to the talking animation (with crossfade).
+    /// If pointingClip is assigned AND the panel position is known, first plays
+    /// the pointing gesture for panelGestureDuration seconds (head/eyes look at
+    /// the panel), then crossfades into the talking clip (head/eyes return to the user).
+    /// </summary>
     public void PlayTalking()
     {
-        AnimationClip clip = talkingClip != null ? talkingClip : idleClip;
-        if (clip == null)
+        // Cancel any leftover gesture from a previous narration.
+        if (_gestureCoroutine != null)
         {
-            Debug.LogWarning($"[PanelNPCController] '{name}': Neither Talking Clip nor Idle Clip is assigned.");
-            return;
+            StopCoroutine(_gestureCoroutine);
+            _gestureCoroutine = null;
         }
-        CrossfadeTo(clip, "talking");
+
+        if (pointingClip != null && _hasPanelPos)
+        {
+            _gestureCoroutine = StartCoroutine(PanelGestureCoroutine());
+        }
+        else
+        {
+            // No gesture — go straight to talking.
+            AnimationClip clip = talkingClip != null ? talkingClip : idleClip;
+            if (clip == null)
+            {
+                Debug.LogWarning($"[PanelNPCController] '{name}': Neither Talking Clip nor Idle Clip is assigned.");
+                return;
+            }
+            CrossfadeTo(clip, "talking");
+        }
+    }
+
+    // ── Panel gesture ─────────────────────────────────────────────────────────
+
+    /// <summary>
+    /// Phase 1 (panelGestureDuration s): play pointingClip, head/eyes look at the panel.
+    /// Phase 2: crossfade to talkingClip, head/eyes return to the user.
+    /// </summary>
+    private IEnumerator PanelGestureCoroutine()
+    {
+        // ── Phase 1: point at the panel ───────────────────────────────────────
+        CrossfadeTo(pointingClip, "pointing");
+
+        // Redirect gaze toward the panel centre.
+        // Use the panel's world position directly — the head-look system will
+        // clamp it to maxHeadLookAngle so extreme angles look natural.
+        _lookAtOverride = _panelWorldPos;
+
+        Debug.Log($"[PanelNPCController] '{name}' panel gesture START — " +
+                  $"pointing at {_panelWorldPos:F2} for {panelGestureDuration:F1}s.");
+
+        yield return new WaitForSeconds(panelGestureDuration);
+
+        // ── Phase 2: return to talking animation, look at user ────────────────
+        AnimationClip talkClip = talkingClip != null ? talkingClip : idleClip;
+        if (talkClip != null)
+            CrossfadeTo(talkClip, "talking");
+
+        _lookAtOverride = null;   // back to camera / user
+
+        Debug.Log($"[PanelNPCController] '{name}' panel gesture END — " +
+                  "returned to talking clip, gaze back to user.");
+
+        _gestureCoroutine = null;
     }
 
     // ── Look-At setup ─────────────────────────────────────────────────────────
@@ -253,12 +355,11 @@ public class PanelNPCController : MonoBehaviour
     /// <summary>
     /// Turns the head (and neck partially) toward <paramref name="target"/>,
     /// on top of the animation's bone rotation.
-    /// Uses a horizontal signed angle so the head never flips when the user is
-    /// behind or to the side.
     /// </summary>
     private void ApplyHeadLookAt(Vector3 target)
     {
-        // Look at the user's eye level — use camera Y so we don't look down or up.
+        // Use the target's Y only if it's significantly different from eye height,
+        // otherwise keep the head at the bone's own height to avoid tilting too much.
         Vector3 eyeTarget = new Vector3(target.x, _headBone.position.y, target.z);
 
         Vector3 toTarget = eyeTarget - _headBone.position;
@@ -293,10 +394,8 @@ public class PanelNPCController : MonoBehaviour
     // ── Look-At — eyes ───────────────────────────────────────────────────────
 
     /// <summary>
-    /// Rotates the eye bones so the pupils point directly at the camera (user's eye),
+    /// Rotates the eye bones so the pupils point toward <paramref name="target"/>,
     /// clamped to <see cref="maxEyeLookAngle"/> to prevent the eyeballs sliding off-mesh.
-    /// A single shared smooth rotation is used for both eyes (parallax is negligible
-    /// at talking distance).
     /// </summary>
     private void ApplyEyeLookAt(Vector3 target)
     {
@@ -311,16 +410,13 @@ public class PanelNPCController : MonoBehaviour
 
         Vector3 toTarget = (target - eyeCenter).normalized;
 
-        // Build the desired world-space rotation: forward = toward user.
-        // Use Vector3.up as the "up" reference so eyes don't roll sideways.
+        // Build the desired world-space rotation: forward = toward target.
         Quaternion desired = Quaternion.LookRotation(toTarget, Vector3.up);
 
         // Smooth toward desired — eyes react faster than the head.
         _eyeSmoothRot = Quaternion.Slerp(_eyeSmoothRot, desired,
                                          Time.deltaTime * eyeLookSpeed);
 
-        // Apply to each eye, clamped against the bone's CURRENT animated forward
-        // to avoid exceeding maxEyeLookAngle even if the head is mid-turn.
         RotateEyeBone(_leftEyeBone,  _eyeSmoothRot);
         RotateEyeBone(_rightEyeBone, _eyeSmoothRot);
     }
@@ -329,16 +425,13 @@ public class PanelNPCController : MonoBehaviour
     {
         if (eyeBone == null) return;
 
-        // Animated rotation for this frame (set by the PlayableGraph just before LateUpdate).
         Quaternion animRot = eyeBone.rotation;
 
-        // Clamp: if the angle from animated forward to desired is too large, dial it back.
         float angle = Quaternion.Angle(animRot, smoothDesired);
         Quaternion clamped = angle > maxEyeLookAngle
             ? Quaternion.Slerp(animRot, smoothDesired, maxEyeLookAngle / angle)
             : smoothDesired;
 
-        // Blend between pure animation and the clamped look-at.
         eyeBone.rotation = Quaternion.Slerp(animRot, clamped, eyeLookWeight);
     }
 

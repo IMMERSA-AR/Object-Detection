@@ -123,7 +123,37 @@ namespace LipSync
             _predictor?.Dispose();
         }
 
-        // ── Public API (called by VoiceAPIController) ─────────────────────
+        // ── Public API (called by VoiceAPIController / LectureHallManager) ──
+
+        /// <summary>
+        /// Idempotent bootstrap — initialises the MFCC extractor and Sentis predictor
+        /// if they have not been created yet (e.g. the GameObject was inactive at scene
+        /// load so Awake/Start never ran). Safe to call multiple times.
+        /// </summary>
+        public void EnsureInitialized()
+        {
+            if (_mfcc == null)
+                _mfcc = new MFCCExtractor();
+
+            if (_predictor != null && _predictor.IsReady) return;
+
+            if (modelAsset == null)
+            {
+                Debug.LogError("[LipSync] EnsureInitialized: modelAsset is NULL — " +
+                               "drag viseme_model.onnx into the Inspector.");
+                return;
+            }
+
+            try
+            {
+                _predictor = new VisemePredictor(modelAsset, backendType);
+                Debug.Log("[LipSync] EnsureInitialized: predictor ready. IsReady=" + _predictor.IsReady);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[LipSync] EnsureInitialized failed: {ex.Message}");
+            }
+        }
 
         /// <summary>
         /// Pre-compute the viseme timeline for an incoming TTS AudioClip.
@@ -179,6 +209,16 @@ namespace LipSync
             if (logTimings)
                 Debug.Log($"[LipSync] {clip.length:F2}s clip → {mfccFrames.Length} frames " +
                           $"processed in {(Time.realtimeSinceStartup - t0) * 1000f:F1} ms");
+        }
+
+        /// <summary>
+        /// Immediately zeros all viseme weights so the mouth closes at the end of narration.
+        /// Call this just before disabling the component (e.g. when narration finishes in PanelDetector).
+        /// </summary>
+        public void ResetVisemes()
+        {
+            Array.Clear(_smoothed,      0, _smoothed.Length);
+            Array.Clear(CurrentVisemes, 0, CurrentVisemes.Length);
         }
 
         /// <summary>

@@ -487,6 +487,9 @@ public class PanelDetector : MonoBehaviour
         if (panelNPCCtrl != null)
         {
             panelNPCCtrl.Init(entry.idleClip, entry.talkingClip);
+            // Tell the controller where the panel is so the pointing gesture knows
+            // which direction to aim the arm and redirect the head/eyes.
+            panelNPCCtrl.SetPanelPosition(panelWorldPos);
         }
         else
         {

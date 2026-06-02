@@ -42,6 +42,29 @@ public class LectureHallManager : MonoBehaviour
              "Fine-tune this if the character floats above or sinks through the seat.")]
     public float sittingYOffset = 0f;
 
+    [Header("Chair Detection — Environment Scan")]
+    [Tooltip("Minimum height above floor for a surface to count as a chair seat (metres).")]
+    public float chairScanMinHeight = 0.30f;
+
+    [Tooltip("Maximum height above floor for a surface to count as a chair seat (metres).")]
+    public float chairScanMaxHeight = 0.70f;
+
+    [Tooltip("Grid ray spacing for the chair scan (metres). Finer = more accurate but slower.")]
+    public float chairScanGridStep = 0.08f;
+
+    [Tooltip("Cluster radius: environment hits within this distance are merged into one chair (metres).")]
+    public float chairScanClusterRadius = 0.35f;
+
+    [Tooltip("Minimum ray hits a chair cluster must have to be accepted.\n" +
+             "Lower = detects smaller seats; higher = filters out noise.")]
+    public int chairScanMinHits = 4;
+
+    [Tooltip("How far in front of the user to scan for chairs (metres).")]
+    public float chairScanForwardRange = 6.0f;
+
+    [Tooltip("How far left/right of the user's forward to scan (metres).")]
+    public float chairScanSideRange = 4.0f;
+
     [Header("Desk Detection — Grid Scan")]
     [Tooltip("Minimum height above floor to count as a desk surface (metres).\n" +
              "Just above the tallest chair seat (~0.65 m) so chairs are excluded.")]
@@ -341,13 +364,26 @@ public class LectureHallManager : MonoBehaviour
     private void SpawnStudentsAtChairs(List<Vector3> chairPositions, Vector3 lookTarget)
     {
         bool mainMuradSpawned = false;
+        float camY = Camera.main != null ? Camera.main.transform.position.y : 1.7f;
 
         foreach (Vector3 pos in chairPositions)
         {
             // Per-chair facing — rotate to match the real chair, not toward a shared point.
             Vector3 chairForward = EstimateChairForward(pos);
             Quaternion rot = Quaternion.LookRotation(chairForward);
-            Vector3 perChairLookTarget = pos + chairForward * 2f;
+
+            // ── Floor-Y correction ────────────────────────────────────────────
+            // MRUK anchor Y = seat surface height (e.g. 0.63 m for a couch).
+            // Sitting animations expect the character root at FLOOR level, because
+            // Mixamo/Reallusion clips keep the root at Y=0 and raise the hips ~0.45 m.
+            // spawnAtSeatSurface lets you opt in to seat-surface spawning only if
+            // your animation's root is already at hip/seat height.
+            Vector3 spawnPos = pos;
+            spawnPos.y = spawnAtSeatSurface
+                ? pos.y + sittingYOffset
+                : FindFloorY(pos, camY) + sittingYOffset;
+
+            Vector3 perChairLookTarget = spawnPos + chairForward * 2f;
 
             GameObject prefabToSpawn;
             AnimationClip variantClip = null;
@@ -375,7 +411,13 @@ public class LectureHallManager : MonoBehaviour
                 ? rot * Quaternion.Euler(0f, 180f, 0f)
                 : rot;
 
-            GameObject spawned = Instantiate(prefabToSpawn, pos, spawnRot);
+            // Apply Murad's backrest offset in his local space so his back rests
+            // against the chair backrest (matches the progressive and promote paths).
+            Vector3 finalPos = isMainMurad
+                ? spawnPos + spawnRot * muradSeatOffset
+                : spawnPos;
+
+            GameObject spawned = Instantiate(prefabToSpawn, finalPos, spawnRot);
             EnsureBlockerCollider(spawned);
             _spawnedNPCs.Add(spawned);
 
@@ -424,14 +466,9 @@ public class LectureHallManager : MonoBehaviour
                     anim.SetBool("IsSitting", true);
                 }
 
-                // Murad animation is driven purely by the Animator Controller (MuradController.controller).
-                // IsSitting=true (set above) keeps the Animator in its default Sitting Idle state.
-                // RunLectureSequence() will inject the Humanoid muradSittingClip via
-                // AnimatorOverrideController to fix T-pose from the Generic clip in the asset.
-                // SpawnDoctorAt() will call SetHeadLookTarget(doctorPos) on him
-                Debug.Log($"[LectureHall] Murad seated at {pos}  euler={spawnRot.eulerAngles}  " +
-                          $"world_fwd={spawned.transform.forward:F2}  " +
-                          $"(flipMuradFacing={flipMuradFacing}).");
+                Debug.Log($"[LectureHall] Murad seated at {finalPos}  (anchor Y={pos.y:F2}→floor Y={spawnPos.y:F2})  " +
+                          $"euler={spawnRot.eulerAngles}  world_fwd={spawned.transform.forward:F2}  " +
+                          $"(flipMuradFacing={flipMuradFacing}  spawnAtSeatSurface={spawnAtSeatSurface}).");
             }
             else
             {
@@ -1186,6 +1223,26 @@ public class LectureHallManager : MonoBehaviour
             Debug.Log($"[LectureHall] ✓ MuradSittingPoseDriver started — " +
                       $"clip='{config.muradSittingClip.name}'  length={config.muradSittingClip.length:F2}s  " +
                       $"isHumanMotion={config.muradSittingClip.humanMotion}");
+
+            // ── Wire sitting variants from HistoricalNPCController (if present) ─
+            // The Murad prefab may carry a HistoricalNPCController with
+            // sittingClipVariants configured in the Inspector.  We read those clips
+            // and the switch interval and hand them to the sitting driver so Murad
+            // cycles between sitting poses exactly like the other students do.
+            // HistoricalNPCController on Murad is NOT initialised (no Init() call) —
+            // it acts only as an Inspector-friendly config container here.
+            var muradHNPC_cfg = _mainMuradInstance.GetComponent<HistoricalNPCController>();
+            if (muradHNPC_cfg != null &&
+                muradHNPC_cfg.sittingClipVariants != null &&
+                muradHNPC_cfg.sittingClipVariants.Length > 0)
+            {
+                _sittingDriver.variantClips    = muradHNPC_cfg.sittingClipVariants;
+                _sittingDriver.switchInterval  = muradHNPC_cfg.sittingSwitchInterval;
+                _sittingDriver.StartSittingVariation();
+                Debug.Log($"[LectureHall] MuradSittingPoseDriver: " +
+                          $"{muradHNPC_cfg.sittingClipVariants.Length} variant clip(s) wired — " +
+                          $"switching every ~{muradHNPC_cfg.sittingSwitchInterval:F0}s.");
+            }
 
             // ── Wire head look-at toward the doctor ───────────────────────────
             // Search _spawnedNPCs for the Doctor role — the doctor may not be in
@@ -2002,6 +2059,73 @@ public class LectureHallManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Scans the environment using EnvironmentRaycastManager to find horizontal
+    /// surfaces at chair-seat height in front of the user.
+    /// Does NOT require any MRUK anchor labels — works from the raw depth mesh alone.
+    /// Returns world positions of detected chairs, suitable for StartLectureWithChairs().
+    /// </summary>
+    /// <param name="floorY">World-space Y of the room floor (from MRUK FLOOR anchor or camera fallback).</param>
+    public List<Vector3> FindChairsByEnvironmentScan(float floorY)
+    {
+        var positions = new List<Vector3>();
+
+        if (_envRaycast == null)
+        {
+            Debug.LogWarning("[LectureHall] FindChairsByEnvironmentScan: no EnvironmentRaycastManager in scene — " +
+                             "falling back to grid spawn.");
+            return positions;
+        }
+
+        Transform cam = Camera.main?.transform;
+        if (cam == null) return positions;
+
+        float yMin      = floorY + chairScanMinHeight;
+        float yMax      = floorY + chairScanMaxHeight;
+        float castFromY = yMax + 0.30f;
+        float castDist  = (yMax - yMin) + 0.50f;
+
+        Vector3 fwd   = new Vector3(cam.forward.x, 0f, cam.forward.z);
+        if (fwd.sqrMagnitude < 0.001f) fwd = Vector3.forward;
+        fwd.Normalize();
+        Vector3 right = Vector3.Cross(Vector3.up, fwd).normalized;
+        Vector3 camXZ = new Vector3(cam.position.x, 0f, cam.position.z);
+
+        var rawHits = new List<Vector3>();
+
+        for (float f = 0.3f; f <= chairScanForwardRange; f += chairScanGridStep)
+        {
+            for (float s = -chairScanSideRange; s <= chairScanSideRange; s += chairScanGridStep)
+            {
+                Vector3 xzPos  = camXZ + fwd * f + right * s;
+                Vector3 origin = new Vector3(xzPos.x, castFromY, xzPos.z);
+
+                if (!_envRaycast.Raycast(new Ray(origin, Vector3.down), out var hit, castDist))
+                    continue;
+
+                // Reject non-horizontal surfaces (walls, slanted objects).
+                if (Vector3.Dot(hit.normal, Vector3.up) < 0.70f) continue;
+
+                // Reject surfaces outside the chair-height band.
+                if (hit.point.y < yMin || hit.point.y > yMax) continue;
+
+                rawHits.Add(hit.point);
+            }
+        }
+
+        Debug.Log($"[LectureHall] Chair env scan: {rawHits.Count} hit(s) at " +
+                  $"Y={yMin:F2}–{yMax:F2} m  (floorY={floorY:F2}).");
+
+        if (rawHits.Count == 0) return positions;
+
+        var clusters = ClusterSurfaces(rawHits, chairScanClusterRadius, chairScanMinHits);
+        foreach (var c in clusters) positions.Add(c);
+
+        Debug.Log($"[LectureHall] Chair env scan: {positions.Count} chair(s) found " +
+                  $"from {rawHits.Count} hit(s)  (minHits={chairScanMinHits}).");
+        return positions;
+    }
+
+    /// <summary>
     /// PRIMARY desk finder: fires a downward ray grid at desk height and picks
     /// the horizontal surface cluster that lies furthest along the user→chairs
     /// direction (i.e. on the far side of the chairs, near the front wall).
@@ -2195,8 +2319,73 @@ public class LectureHallManager : MonoBehaviour
         /// <summary>
         /// Humanoid sitting animation clip (e.g. a Mixamo "Sitting Idle" .anim
         /// imported with Rig = Humanoid). Must NOT be null.
+        /// Switched at runtime by the variation coroutine.
         /// </summary>
         public AnimationClip clip;
+
+        // ── Sitting variation ─────────────────────────────────────────────────
+        /// <summary>
+        /// Additional sitting poses to cycle through.
+        /// Populated from HistoricalNPCController.sittingClipVariants at runtime.
+        /// The pool is: [base clip] + [variantClips], cycled randomly.
+        /// </summary>
+        public AnimationClip[] variantClips;
+
+        /// <summary>Seconds between pose switches (±20 % jitter).</summary>
+        public float switchInterval = 15f;
+
+        private Coroutine    _variationCoroutine;
+        private AnimationClip _baseClip;
+
+        /// <summary>
+        /// Starts the sitting-variation loop.
+        /// Call after setting clip, variantClips, and switchInterval.
+        /// </summary>
+        public void StartSittingVariation()
+        {
+            _baseClip = clip;
+
+            // Build full pool: base clip + unique non-null variants.
+            var pool = new System.Collections.Generic.List<AnimationClip>();
+            if (_baseClip != null) pool.Add(_baseClip);
+            if (variantClips != null)
+                foreach (var c in variantClips)
+                    if (c != null && !pool.Contains(c)) pool.Add(c);
+
+            if (pool.Count < 2)
+            {
+                Debug.Log("[MuradSittingPoseDriver] Variation pool has < 2 clips — no switching.");
+                return;
+            }
+
+            if (_variationCoroutine != null) StopCoroutine(_variationCoroutine);
+            _variationCoroutine = StartCoroutine(SittingVariationLoop(pool));
+            Debug.Log($"[MuradSittingPoseDriver] Sitting variation started — " +
+                      $"{pool.Count} clips, switching every ~{switchInterval:F0}s.");
+        }
+
+        private IEnumerator SittingVariationLoop(System.Collections.Generic.List<AnimationClip> pool)
+        {
+            int lastIdx = 0;   // start index = base clip
+
+            while (true)
+            {
+                float jitter = switchInterval * 0.2f;
+                float wait   = switchInterval + UnityEngine.Random.Range(-jitter, jitter);
+                yield return new WaitForSeconds(wait);
+
+                // Pick a different clip from the pool.
+                int next;
+                do { next = UnityEngine.Random.Range(0, pool.Count); }
+                while (next == lastIdx && pool.Count > 1);
+
+                lastIdx = next;
+                clip    = pool[next];
+                _t      = 0f;   // restart playback from the beginning of the new clip
+
+                Debug.Log($"[MuradSittingPoseDriver] Switched to sitting variant '{clip.name}'.");
+            }
+        }
 
         private float _t = 0f;
 
@@ -2275,6 +2464,15 @@ public class LectureHallManager : MonoBehaviour
                               $"Neck = '{(_neckBone != null ? _neckBone.name : "not found")}'");
                 else
                     Debug.LogWarning("[MuradSittingPoseDriver] Head bone not found — head look-at inactive.");
+            }
+        }
+
+        void OnDestroy()
+        {
+            if (_variationCoroutine != null)
+            {
+                StopCoroutine(_variationCoroutine);
+                _variationCoroutine = null;
             }
         }
 

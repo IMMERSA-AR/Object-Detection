@@ -822,6 +822,7 @@ MonoBehaviour:
   headLookWeight: 0.7
   headMaxAngle: 70
   headLookSpeed: 4
+  crossfadeDuration: 0.25
 --- !u!114 &1284445198853816754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,6 +837,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PanelNPCController
   idleClip: {fileID: 0}
   talkingClip: {fileID: 0}
+  pointingClip: {fileID: -203655887218126122, guid: 5b8db8ec0774733409648c226a0fb36b, type: 3}
+  crossfadeDuration: 0.25
+  panelGestureDuration: 5
+  enableLookAt: 1
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  leftEyeBoneName: CC_Base_L_Eye
+  rightEyeBoneName: CC_Base_R_Eye
+  headLookWeight: 0.5
+  maxHeadLookAngle: 50
+  headLookSpeed: 4
+  eyeLookWeight: 1
+  maxEyeLookAngle: 25
+  eyeLookSpeed: 10
 --- !u!82 &3554530436912391422
 AudioSource:
   m_ObjectHideFlags: 0

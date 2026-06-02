@@ -23,7 +23,7 @@ MonoBehaviour:
   - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
     sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
   - prefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
-    sittingClip: {fileID: -203655887218126122, guid: cf4f9c27c2211464f9b2823873b829b6, type: 3}
+    sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
   studentSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
   muradSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
   muradStandingClip: {fileID: 0}

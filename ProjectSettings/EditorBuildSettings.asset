@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PassthroughCameraApiSamples/StartScene/StartScene.unity
     guid: 69e1b31c45bac42f88f75017ee404de1
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Level/Scenes/UI/UISet.unity
     guid: 69abe3ff62e83494c9b9411ae4293615
   - enabled: 1

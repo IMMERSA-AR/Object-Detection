@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Meta.XR.MRUtilityKit;
 
 public class ExperienceManager : MonoBehaviour
 {
@@ -13,6 +14,17 @@ public class ExperienceManager : MonoBehaviour
     [Header("Lecture Hall")]
     [Tooltip("Drag the LectureHallManager GameObject here")]
     public LectureHallManager lectureHallManager;
+
+    [Header("Chair Detection")]
+    [Tooltip("How long (seconds) to wait for MRUK to load the room before giving up and\n" +
+             "using the grid-based spawn fallback. Increase on slower devices.")]
+    public float mrukWaitTimeout = 10f;
+
+    [Tooltip("How long (seconds) to wait for MRUK to report the room floor Y.\n" +
+             "MRUK is used only to get an accurate floor height — chair positions\n" +
+             "are found by environment raycast, no anchor labels required.\n" +
+             "If MRUK times out, floor Y falls back to cameraY − 1.7 m.")]
+    public float mrukFloorWaitTimeout = 5f;
 
     public ExperienceConfig ActiveConfig { get; private set; }
 
@@ -47,15 +59,11 @@ public class ExperienceManager : MonoBehaviour
         StartCoroutine(BeginLectureHallSequence(experiences[0]));
     }
 
-    /// <summary>
-    /// Immediately disables the [BuildingBlock] RoomModel GameObject (and any similarly
-    /// named siblings) that Meta's Building Block system places in the scene to
-    /// visualise the room mesh as a blue overlay.
-    /// </summary>
+    // ── Room-model / MRUK-mesh hiding ────────────────────────────────────────
+
     private void DisableRoomModelBuildingBlock()
     {
         int found = 0;
-        // FindObjectsByType searches all root and non-root GameObjects including inactive ones.
 #if UNITY_2023_1_OR_NEWER
         foreach (GameObject go in FindObjectsByType<GameObject>(
                      FindObjectsInactive.Include, FindObjectsSortMode.None))
@@ -74,7 +82,6 @@ public class ExperienceManager : MonoBehaviour
                     found++;
                 }
 
-                // Also disable all MeshRenderers on it (in case SetActive is undone)
                 foreach (MeshRenderer mr in go.GetComponentsInChildren<MeshRenderer>(true))
                     mr.enabled = false;
             }
@@ -85,32 +92,20 @@ public class ExperienceManager : MonoBehaviour
                       "disable it manually in the Hierarchy if the blue overlay persists.");
     }
 
-    /// <summary>
-    /// Polls every 0.5 s for up to 30 s after the room is ready, disabling every
-    /// MeshRenderer that belongs to MRUK-spawned objects (GlobalMeshAnchor, room
-    /// walls, EffectMesh, etc.). The GlobalMeshAnchor is built asynchronously and
-    /// arrives several seconds after the room object — a one-shot check is too early.
-    /// </summary>
     private IEnumerator HideMRUKVisualizationWhenReady()
     {
-        // ── Wait for room to exist ────────────────────────────────────
         float timeout = 20f;
         float elapsed = 0f;
         while (elapsed < timeout)
         {
             yield return null;
             elapsed += Time.deltaTime;
-            if (Meta.XR.MRUtilityKit.MRUK.Instance != null &&
-                Meta.XR.MRUtilityKit.MRUK.Instance.GetCurrentRoom() != null)
+            if (MRUK.Instance != null && MRUK.Instance.GetCurrentRoom() != null)
                 break;
         }
 
-        if (Meta.XR.MRUtilityKit.MRUK.Instance == null) yield break;
+        if (MRUK.Instance == null) yield break;
 
-        // ── Poll every 0.5 s for 30 s ────────────────────────────────
-        // GlobalMeshAnchor spawns asynchronously (often 5-10 s after the room).
-        // We keep sweeping until we've had at least one successful hide, then
-        // continue for a short grace period in case more objects appear.
         int totalHidden = 0;
         float pollEnd = Time.time + 30f;
 
@@ -130,16 +125,11 @@ public class ExperienceManager : MonoBehaviour
                   $"Total renderers disabled: {totalHidden}.");
     }
 
-    /// <summary>
-    /// Single-pass sweep that disables all currently-enabled MeshRenderers that
-    /// belong to MRUK / OVRScene objects. Returns the count newly disabled.
-    /// </summary>
     private int DisableMRUKRenderers()
     {
         int count = 0;
 
-        // ── Pass 1: children of MRUK.Instance ────────────────────────
-        var mruk = Meta.XR.MRUtilityKit.MRUK.Instance;
+        var mruk = MRUK.Instance;
         if (mruk != null)
         {
             foreach (MeshRenderer mr in
@@ -151,7 +141,6 @@ public class ExperienceManager : MonoBehaviour
             }
         }
 
-        // ── Pass 2: GlobalMeshAnchor via room API ─────────────────────
         var room = mruk?.GetCurrentRoom();
         if (room?.GlobalMeshAnchor != null)
         {
@@ -165,9 +154,6 @@ public class ExperienceManager : MonoBehaviour
             }
         }
 
-        // ── Pass 3: scene-wide hierarchy search ───────────────────────
-        // Walk every enabled MeshRenderer's ancestor chain; disable the renderer
-        // if any ancestor name contains an MRUK / OVRScene / meta keyword.
 #if UNITY_2023_1_OR_NEWER
         var allMR = FindObjectsByType<MeshRenderer>(
                         FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -178,7 +164,6 @@ public class ExperienceManager : MonoBehaviour
         {
             if (!mr.enabled) continue;
 
-            // Walk up the transform hierarchy
             Transform t = mr.transform;
             bool isMRUK = false;
             while (t != null && !isMRUK)
@@ -201,9 +186,17 @@ public class ExperienceManager : MonoBehaviour
         return count;
     }
 
+    // ── Lecture hall sequence ─────────────────────────────────────────────────
+
     /// <summary>
-    /// Plays the optional intro audio (if assigned), waits for it to finish,
-    /// then kicks off the lecture hall sequence via LectureHallManager.
+    /// Main sequence:
+    ///   1. Play optional intro audio.
+    ///   2. Start chair-detection audio.
+    ///   3. Get floor Y — wait briefly for MRUK FLOOR anchor; fall back to cameraY−1.7m.
+    ///   4. Scan environment depth mesh for chair-height horizontal surfaces
+    ///      (no MRUK anchor labels required — works from raw room scan alone).
+    ///   5a. If chairs found → StartLectureWithChairs().
+    ///   5b. If none found   → StartLecture() (grid fallback).
     /// </summary>
     private IEnumerator BeginLectureHallSequence(ExperienceConfig config)
     {
@@ -215,12 +208,12 @@ public class ExperienceManager : MonoBehaviour
         {
             if (src != null)
             {
-                src.loop = false;   // safety — never loop the intro clip
+                src.loop = false;
                 src.Stop();
                 src.clip = config.introAudioClip;
                 src.Play();
                 Debug.Log($"[ExperienceManager] Playing intro audio: '{config.introAudioClip.name}' " +
-                          $"({config.introAudioClip.length:F1}s) — chair detection will start when it ends.");
+                          $"({config.introAudioClip.length:F1}s).");
 
                 yield return new WaitForSeconds(config.introAudioClip.length);
 
@@ -229,23 +222,76 @@ public class ExperienceManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("[ExperienceManager] introAudioClip set but lectureHallManager.lectureAudioSource is null — skipping.");
+                Debug.LogWarning("[ExperienceManager] introAudioClip set but lectureAudioSource is null — skipping.");
             }
         }
 
-        // ── 2. Detection audio + start lecture ──────────────────────
-        // LectureHallManager handles MRUK chair detection internally.
+        // ── 2. Chair-detection phase audio (looping) ────────────────
         lectureHallManager.PlayDetectionAudio(config.chairDetectionAudioClip);
-        lectureHallManager.StartLecture(config, OnLectureComplete);
+
+        // ── 3. Get floor Y from MRUK FLOOR anchor ───────────────────
+        // We wait briefly just for the FLOOR anchor — we do NOT need MRUK to
+        // label any furniture. Chair positions come from the environment depth scan.
+        Debug.Log($"[ExperienceManager] Waiting for MRUK FLOOR anchor (timeout={mrukFloorWaitTimeout:F0}s)…");
+
+        float floorY = float.MinValue;
+        float waited = 0f;
+        while (waited < mrukFloorWaitTimeout)
+        {
+            if (MRUK.Instance != null && MRUK.Instance.GetCurrentRoom() != null)
+            {
+                MRUKRoom room = MRUK.Instance.GetCurrentRoom();
+                foreach (MRUKAnchor anchor in room.Anchors)
+                {
+                    if (anchor.HasLabel("FLOOR"))
+                    {
+                        floorY = anchor.transform.position.y;
+                        Debug.Log($"[ExperienceManager] MRUK FLOOR anchor found at Y={floorY:F2}.");
+                        break;
+                    }
+                }
+                if (floorY > float.MinValue) break;
+            }
+            yield return new WaitForSeconds(0.5f);
+            waited += 0.5f;
+        }
+
+        if (floorY <= float.MinValue)
+        {
+            floorY = Camera.main != null ? Camera.main.transform.position.y - 1.7f : 0f;
+            Debug.LogWarning($"[ExperienceManager] No MRUK FLOOR anchor — using camera fallback: Y={floorY:F2}.");
+        }
+
+        // ── 4. Scan environment depth mesh for chair-height surfaces ─
+        // No labels needed — the scan fires downward rays and finds any
+        // horizontal surface between chairScanMinHeight and chairScanMaxHeight
+        // above the floor, exactly like the room scan the user already did.
+        Debug.Log("[ExperienceManager] Scanning environment for chairs…");
+        List<Vector3> chairPositions = lectureHallManager.FindChairsByEnvironmentScan(floorY);
+
+        // ── 5. Launch lecture ────────────────────────────────────────
+        if (chairPositions.Count > 0)
+        {
+            Debug.Log($"[ExperienceManager] {chairPositions.Count} chair(s) found — " +
+                      "starting chair-based lecture spawn.");
+            lectureHallManager.StartLectureWithChairs(chairPositions, config, OnLectureComplete);
+        }
+        else
+        {
+            Debug.LogWarning("[ExperienceManager] No chairs detected by environment scan — " +
+                             "falling back to grid-based spawn.");
+            lectureHallManager.StartLecture(config, OnLectureComplete);
+        }
     }
 
-    // Called when the lecture sequence finishes.
+    // ── Callbacks ─────────────────────────────────────────────────────────────
+
     private void OnLectureComplete()
     {
         Debug.Log("[ExperienceManager] Lecture complete.");
     }
 
-    // ── Return to start (wire to a restart button if needed) ─────────
+    // ── Return to start ───────────────────────────────────────────────────────
 
     public void ReturnToMenu()
     {
