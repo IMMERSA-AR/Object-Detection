@@ -133,6 +133,22 @@ public class PanelDetector : MonoBehaviour
              "(same setup as the Murad Q&A prefab in the lecture hall scene).")]
     public LineRenderer laserPointer;
 
+    [Header("Detection Box")]
+    [Tooltip("Optional LineRenderer that draws a rectangle on the wall around the panel\n" +
+             "currently being detected (like a QR-scan frame). Create a child GameObject\n" +
+             "with a LineRenderer (Use World Space ON, width ~0.01, a bright material) and\n" +
+             "drag it here. Leave empty to disable the box.")]
+    public LineRenderer detectionBox;
+
+    [Tooltip("Box colour while scanning / not yet confirmed.")]
+    public Color detectionBoxColor = new Color(0.1f, 0.8f, 1f, 1f);
+
+    [Tooltip("Shrinks/grows the detection rectangle around its centre.\n" +
+             "1 = exact YOLO box. Lower it (e.g. 0.7) if the box is bigger than the panel,\n" +
+             "raise it (e.g. 1.1) if it's smaller. Tune until it frames the panel.")]
+    [Range(0.3f, 1.3f)]
+    public float detectionBoxScale = 0.8f;
+
     // ── Audio ─────────────────────────────────────────────────────────────────
     [Header("Audio")]
     [Tooltip("Delay in seconds between character spawn and narration start.")]
@@ -287,6 +303,19 @@ public class PanelDetector : MonoBehaviour
     }
 
     /// <summary>
+    /// Destroys EVERY character spawned so far and clears the tracking list.
+    /// Used when restarting the whole experience.
+    /// </summary>
+    public void ClearAllSpawnedCharacters()
+    {
+        foreach (var go in _spawnedCharacters)
+            if (go != null) Destroy(go);
+        _spawnedCharacters.Clear();
+        LastSpawnedCharacter = null;
+        Debug.Log("[PanelDetector] All spawned characters destroyed.");
+    }
+
+    /// <summary>
     /// Clears all accumulated hit data and starts a fresh scan.
     /// Already-confirmed panels stay excluded permanently (each banner is detected
     /// and spawns its character only ONCE). Call ResetConfirmedPanels() if you ever
@@ -343,6 +372,7 @@ public class PanelDetector : MonoBehaviour
             if (_abortScan)
             {
                 _scanning = false;
+                HideDetectionBox();
                 Debug.Log("[PanelDetector] Scan aborted before a panel was confirmed.");
                 yield break;
             }
@@ -371,6 +401,7 @@ public class PanelDetector : MonoBehaviour
         }
 
         _scanning = false;
+        HideDetectionBox();   // box only shows while a scan pass is actively running
 
         // If we were asked to stop, do not confirm/spawn anything.
         if (_abortScan)
@@ -497,10 +528,9 @@ public class PanelDetector : MonoBehaviour
             spawnRot = Quaternion.LookRotation(toUser);
         }
 
-        // Keep the new character clear of any already-spawned ones. Nudge sideways
-        // (along the wall, perpendicular to the user→panel direction) until it no
-        // longer sits within minCharacterSeparation of an existing character.
-        spawnXZ = ResolveSeparation(spawnXZ, toUser);
+        // NOTE: each character spawns directly in front of ITS OWN panel (no sideways
+        // nudging). Panels are physically separated on the wall, so the characters are
+        // naturally apart — and they never drift into the gap between two panels.
 
         float floorY  = GetFloorY(spawnXZ, camY);
         Vector3 spawnPos = new Vector3(spawnXZ.x, floorY + spawnYOffset, spawnXZ.z);
@@ -850,9 +880,63 @@ public class PanelDetector : MonoBehaviour
                       $"conf={det.conf:F2}  pos={hit.point:F2}");
         }
 
+        // Draw the scan box around the highest-confidence detection this frame
+        // (kept is sorted by confidence, so kept[0] is the strongest). Hide if none.
+        if (kept.Count > 0) DrawDetectionBox(kept[0]);
+        else                HideDetectionBox();
+
         inputTensor.Dispose();
         out0.Dispose();
         cpu0.Dispose();
+    }
+
+    // ── Detection box (QR-style frame around the panel being scanned) ───────────
+
+    /// <summary>Projects the detection's 4 bbox corners onto the wall and draws a
+    /// world-space rectangle. Hides the box if any corner has no depth hit.</summary>
+    private void DrawDetectionBox(RawDetection det)
+    {
+        if (detectionBox == null || _envRaycast == null || Camera.main == null) return;
+
+        // Scale the box around its centre so it frames the panel tightly.
+        float halfW = det.w * 0.5f * detectionBoxScale;
+        float halfH = det.h * 0.5f * detectionBoxScale;
+
+        // Pixel-space corners (in 640-px model input): TL, TR, BR, BL.
+        Vector2[] corners =
+        {
+            new Vector2(det.cx - halfW, det.cy - halfH),
+            new Vector2(det.cx + halfW, det.cy - halfH),
+            new Vector2(det.cx + halfW, det.cy + halfH),
+            new Vector2(det.cx - halfW, det.cy + halfH),
+        };
+
+        var world = new Vector3[4];
+        for (int i = 0; i < 4; i++)
+        {
+            float vx = Mathf.Clamp01(corners[i].x / InputSize);
+            float vy = Mathf.Clamp01(1f - corners[i].y / InputSize);
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(vx, vy, 0f));
+            if (!_envRaycast.Raycast(ray, out var hit, 10f))
+            {
+                HideDetectionBox();   // a corner missed the wall — skip this frame
+                return;
+            }
+            world[i] = hit.point;
+        }
+
+        detectionBox.useWorldSpace = true;
+        detectionBox.loop          = true;
+        detectionBox.positionCount = 4;
+        detectionBox.SetPositions(world);
+        detectionBox.startColor = detectionBoxColor;
+        detectionBox.endColor   = detectionBoxColor;
+        detectionBox.enabled    = true;
+    }
+
+    private void HideDetectionBox()
+    {
+        if (detectionBox != null) detectionBox.enabled = false;
     }
 
     // ── NMS ───────────────────────────────────────────────────────────────────

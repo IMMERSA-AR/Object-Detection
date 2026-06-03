@@ -63,8 +63,6 @@ public class RepeatDialog : MonoBehaviour
     private void Awake()
     {
         if (dialogRoot == null) dialogRoot = gameObject;
-        _yesCol = EnsureCollider(yesButton);
-        _noCol  = EnsureCollider(noButton);
         if (yesButton != null) _yesImg = yesButton.GetComponent<UnityEngine.UI.Image>();
         if (noButton  != null) _noImg  = noButton.GetComponent<UnityEngine.UI.Image>();
         HideImmediate();
@@ -83,6 +81,19 @@ public class RepeatDialog : MonoBehaviour
         dialogRoot.SetActive(true);
         _active = true;
 
+        // Size the click colliders NOW (dialog is active, so a Horizontal/Vertical
+        // Layout Group has finalised each button's rect). Doing this in Awake() while
+        // the dialog was inactive produced zero-size colliders → buttons unclickable.
+        RefreshColliders();
+
+        if (rightController == null && leftController == null)
+            Debug.LogWarning("[RepeatDialog] No controllers assigned — buttons cannot be clicked. " +
+                             "Assign Right/Left Controller in the Inspector.");
+        if (_yesCol == null || _noCol == null)
+            Debug.LogWarning("[RepeatDialog] Yes/No button colliders missing — assign Yes Button / No Button.");
+
+        Debug.Log($"[RepeatDialog] Shown: \"{message.Replace("\n", " ")}\"");
+
         if (laserPointer != null)
         {
             laserPointer.positionCount = 2;
@@ -90,6 +101,17 @@ public class RepeatDialog : MonoBehaviour
         }
         SetButtonColor(_yesImg, normalColor);
         SetButtonColor(_noImg,  normalColor);
+    }
+
+    /// <summary>Forces layout to settle, then (re)builds correctly sized button colliders.</summary>
+    private void RefreshColliders()
+    {
+        var rt = dialogRoot.GetComponent<RectTransform>();
+        if (rt != null)
+            UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
+
+        _yesCol = EnsureCollider(yesButton);
+        _noCol  = EnsureCollider(noButton);
     }
 
     /// <summary>Hides the dialog without invoking any callback.</summary>
@@ -118,18 +140,20 @@ public class RepeatDialog : MonoBehaviour
         Vector3   laserEnd = Vector3.zero;
         Transform aim      = null;
 
-        // Test right, then left (left wins only if it actually hits a button).
-        if (TryRaycast(_rightOrLeft(true), out Vector3 rEnd, out Collider rHit))
+        // Aim with the right controller first, then the left. A hit on the Yes/No
+        // button (or any of its children) selects that button.
+        if (TryRaycast(rightController, out Vector3 rEnd, out Transform rHit))
         {
             aim = rightController; laserEnd = rEnd;
-            if (rHit == _yesCol) overYes = true;
-            else if (rHit == _noCol) overNo = true;
+            if      (IsPartOf(rHit, yesButton)) overYes = true;
+            else if (IsPartOf(rHit, noButton))  overNo  = true;
         }
-        if (!overYes && !overNo && TryRaycast(_rightOrLeft(false), out Vector3 lEnd, out Collider lHit))
+        if (!overYes && !overNo && TryRaycast(leftController, out Vector3 lEnd, out Transform lHit))
         {
-            if (lHit != null || aim == null) { aim = leftController; laserEnd = lEnd; }
-            if (lHit == _yesCol) overYes = true;
-            else if (lHit == _noCol) overNo = true;
+            bool hitsButton = IsPartOf(lHit, yesButton) || IsPartOf(lHit, noButton);
+            if (hitsButton || aim == null) { aim = leftController; laserEnd = lEnd; }
+            if      (IsPartOf(lHit, yesButton)) overYes = true;
+            else if (IsPartOf(lHit, noButton))  overNo  = true;
         }
 
         // Laser visual
@@ -154,6 +178,7 @@ public class RepeatDialog : MonoBehaviour
                         || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger);
             if (pressed)
             {
+                Debug.Log($"[RepeatDialog] {(overYes ? "YES" : "NO")} button clicked.");
                 Action chosen = overYes ? _onYes : _onNo;
                 Hide();                 // close first so callbacks can re-open it
                 chosen?.Invoke();
@@ -165,19 +190,26 @@ public class RepeatDialog : MonoBehaviour
 
     // ── Helpers ────────────────────────────────────────────────────────────────
 
-    private bool TryRaycast(Transform controller, out Vector3 endPoint, out Collider hitCol)
+    private bool TryRaycast(Transform controller, out Vector3 endPoint, out Transform hitT)
     {
         endPoint = Vector3.zero;
-        hitCol   = null;
+        hitT     = null;
         if (controller == null) return false;
 
         endPoint = controller.position + controller.forward * maxPointDistance;
         if (Physics.Raycast(controller.position, controller.forward, out RaycastHit hit, maxPointDistance))
         {
             endPoint = hit.point;
-            hitCol   = hit.collider;
+            hitT     = hit.transform;
         }
         return true;
+    }
+
+    /// <summary>True if the ray hit is the object itself or any of its children.</summary>
+    private static bool IsPartOf(Transform hit, GameObject root)
+    {
+        if (hit == null || root == null) return false;
+        return hit == root.transform || hit.IsChildOf(root.transform);
     }
 
     private static void SetButtonColor(UnityEngine.UI.Image img, Color c)
@@ -185,22 +217,31 @@ public class RepeatDialog : MonoBehaviour
         if (img != null) img.color = c;
     }
 
-    /// <summary>Adds a BoxCollider sized to the button's RectTransform if none exists.</summary>
+    /// <summary>Adds (or re-sizes) a BoxCollider to match the button's current RectTransform.</summary>
     private static Collider EnsureCollider(GameObject button)
     {
         if (button == null) return null;
 
-        var existing = button.GetComponent<Collider>();
-        if (existing != null) return existing;
+        var box = button.GetComponent<BoxCollider>();
+        if (box == null) box = button.AddComponent<BoxCollider>();
 
-        var box = button.AddComponent<BoxCollider>();
-        var rt  = button.GetComponent<RectTransform>();
+        var rt = button.GetComponent<RectTransform>();
         if (rt != null)
         {
             Rect r = rt.rect;
-            box.size   = new Vector3(r.width, r.height, 1f);
-            box.center = new Vector3((0.5f - rt.pivot.x) * r.width,
-                                     (0.5f - rt.pivot.y) * r.height,
+            // Guard against a zero-size rect (layout not yet built).
+            float w = Mathf.Max(r.width,  1f);
+            float h = Mathf.Max(r.height, 1f);
+
+            // These buttons are thin (~40px tall), which makes a flat collider almost
+            // impossible to hit with a laser. Keep the WIDTH at the button width (so the
+            // Yes/No colliders stay horizontally separate → no overlap/swap), but make
+            // the collider much TALLER and give it real DEPTH so the ray reliably hits it.
+            float boxH = h * 2.5f;                 // taller → easy to aim at
+            float boxZ = Mathf.Max(w, h) * 1.0f;   // thick slab → ray always intersects
+            box.size   = new Vector3(w, boxH, boxZ);
+            box.center = new Vector3((0.5f - rt.pivot.x) * w,
+                                     (0.5f - rt.pivot.y) * h,
                                      0f);
         }
         return box;

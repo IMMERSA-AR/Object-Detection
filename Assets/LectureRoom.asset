@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
   introAudioClip: {fileID: 8300000, guid: d14616d3252587f46a0e70c982c4d5cb, type: 3}
   chairDetectionAudioClip: {fileID: 8300000, guid: f602bb128f9ae2042bb53905e235ea1c, type: 3}
-  lectureAudioClip: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
+  lectureAudioClip: {fileID: 8300000, guid: 82f5bb30f7452df4f8c1ed2e2100d2f3, type: 3}
   lectureAudioTranscript: "\"Alright everyone, remember the Maclaurin series from
     calculus? We used algebraic powers of x as base building blocks to rewrite functions
     like e to the power of x. Now, the mathematician Joseph Fourier introduced a

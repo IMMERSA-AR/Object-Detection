@@ -92,6 +92,18 @@ public class PanelSceneManager : MonoBehaviour
              "(ignored when an audio clip is supplied — panel stays until the clip ends).")]
     public float guidanceDisplayDuration = 6f;
 
+    [Header("UI Placement")]
+    [Tooltip("Root transform of the whole dialog UI (e.g. ContentRoot). When a guidance\n" +
+             "message or repeat dialog is shown, this is moved in front of the user and\n" +
+             "rotated to face them. Leave empty to keep the UI at its fixed scene position.")]
+    public Transform uiRoot;
+
+    [Tooltip("Distance in metres the UI is placed in front of the user when shown.")]
+    public float uiDistance = 1.5f;
+
+    [Tooltip("Vertical offset from eye level for the UI (negative = lower).")]
+    public float uiVerticalOffset = -0.1f;
+
     [Header("Repeat Dialog (Yes/No)")]
     [Tooltip("The reusable two-button confirmation dialog (RepeatDialog component).\n" +
              "Used both for 'Repeat this story?' after each panel and for\n" +
@@ -102,7 +114,7 @@ public class PanelSceneManager : MonoBehaviour
     [Tooltip("Question shown after a story ends (per-panel repeat).")]
     [TextArea(2, 4)]
     public string repeatStoryQuestion =
-        "The story has ended.\nWould you like to hear it again?";
+        "The story has ended. Do you want to hear it again?";
 
     [Tooltip("Voice-over for the 'repeat this story?' question. Optional.")]
     public AudioClip repeatStoryClip;
@@ -110,7 +122,7 @@ public class PanelSceneManager : MonoBehaviour
     [Tooltip("Question shown after every panel has been explored (whole-experience restart).")]
     [TextArea(2, 4)]
     public string restartExperienceQuestion =
-        "You have explored all the panels.\nWould you like to restart the whole experience?";
+        "Do you want to restart the whole experience?";
 
     [Tooltip("Voice-over for the 'restart the whole experience?' question. Optional.")]
     public AudioClip restartExperienceClip;
@@ -121,7 +133,6 @@ public class PanelSceneManager : MonoBehaviour
     // ── Private state ──────────────────────────────────────────────────
 
     private bool _narrationDone;
-    private bool _firstScan = true;
     private int _lastConfirmedClass = -1;
     private string _lastConfirmedName = "";
     private Coroutine _guidanceCoroutine;
@@ -134,6 +145,9 @@ public class PanelSceneManager : MonoBehaviour
 
     /// <summary>True while a Yes/No repeat dialog is open (detection paused).</summary>
     private bool _dialogOpen;
+
+    /// <summary>The running audio/text lead-in coroutine before a scan (so we can cancel it).</summary>
+    private Coroutine _flowCoroutine;
 
     // Track spawned characters so we can destroy them before the next scan
     private readonly List<GameObject> _spawnedCharacters = new List<GameObject>();
@@ -165,62 +179,100 @@ public class PanelSceneManager : MonoBehaviour
 
     private void Start()
     {
-        // Hide rescan button until narration finishes
         SetRescanButton(false);
-        BeginScanning();
+
+        // Hide both dialogs at startup so nothing (e.g. the placeholder text) shows
+        // during the intro. The first real guidance appears only after the intro ends.
+        if (guidancePanel != null) guidancePanel.SetActive(false);
+        if (repeatDialog != null) repeatDialog.Hide();
+
+        StartCoroutine(IntroThenFirstScan());
     }
 
     // ── Public API (called by buttons or external scripts) ─────────────
 
-    /// <summary>Destroy all spawned characters and restart a fresh scan.</summary>
+    /// <summary>Destroy all spawned characters and restart the whole experience.</summary>
     public void RescanButtonPressed()
     {
         Debug.Log("[PanelSceneManager] Rescan requested.");
         ClearSpawnedCharacters();
-        BeginScanning();
+        panelDetector?.ResetConfirmedPanels();
+        StartScanSequence(playNextPanelFirst: false);
     }
 
     // ── Internal flow ──────────────────────────────────────────────────
+    //
+    // Sequential, one panel at a time:
+    //   intro → [scan-guidance audio+text → SCAN] → panel found (box shown) →
+    //   detected audio+text → user clicks character → story →
+    //   "repeat?" dialog → Yes: replay story / No: "next panel" audio →
+    //   scan-guidance audio → SCAN again …  After maxPanels: "restart?" dialog.
 
-    private void BeginScanning()
+    /// <summary>Plays the intro once (if set), then runs the first scan sequence.</summary>
+    private IEnumerator IntroThenFirstScan()
     {
-        _narrationDone = false;
-        _lastConfirmedClass = -1;
-        _lastConfirmedName = "";
+        if (introAudioClip != null)
+        {
+            _introPlaying = true;
+            PlayAudio(introAudioClip, loop: false);
+            yield return new WaitForSeconds(introAudioClip.length);
+            _introPlaying = false;
+        }
+        StartScanSequence(playNextPanelFirst: false);
+    }
 
-        SetRescanButton(false);
+    /// <summary>
+    /// Runs the audio/text lead-in, then starts a fresh scan.
+    ///   playNextPanelFirst = true  → "move to another panel" voice first, then scan guidance.
+    ///   playNextPanelFirst = false → straight to the scan guidance (first scan / restart).
+    /// </summary>
+    private void StartScanSequence(bool playNextPanelFirst)
+    {
+        if (_flowCoroutine != null) StopCoroutine(_flowCoroutine);
+        _flowCoroutine = StartCoroutine(ScanSequence(playNextPanelFirst));
+    }
 
-        // Start or restart detection
+    private IEnumerator ScanSequence(bool playNextPanelFirst)
+    {
+        // 1. (Optional) "move to another panel" instruction.
+        if (playNextPanelFirst)
+        {
+            ShowGuidance(
+                "Move to another exhibition panel to continue your exploration.",
+                guidanceNextPanelClip);
+            yield return WaitGuidance(guidanceNextPanelClip);
+        }
+
+        // 2. Scan guidance ("aim your device at a panel").
+        ShowGuidance(
+            "Direct your device toward one of the exhibition panels and hold steady.\n" +
+            "Panel detection will begin automatically.",
+            guidanceScanClip);
+        yield return WaitGuidance(guidanceScanClip);
+        HideGuidance();
+
+        // 3. Begin scanning (with optional ambient loop).
+        if (scanningAudioClip != null)
+            PlayAudio(scanningAudioClip, loop: true);
+
+        _flowCoroutine = null;
+        StartFreshScan();
+    }
+
+    /// <summary>Waits for a guidance clip to finish, or guidanceDisplayDuration if none.</summary>
+    private IEnumerator WaitGuidance(AudioClip clip)
+    {
+        if (clip != null) yield return new WaitForSeconds(clip.length + 0.3f);
+        else yield return new WaitForSeconds(guidanceDisplayDuration);
+    }
+
+    /// <summary>Starts a fresh scan pass (already-confirmed panels stay excluded).</summary>
+    private void StartFreshScan()
+    {
         if (panelDetector == null) return;
-
-        if (_firstScan)
-        {
-            _firstScan = false;
-
-            if (introAudioClip != null)
-            {
-                // Play intro first — detection starts only after the intro finishes.
-                _introPlaying = true;
-                PlayAudio(introAudioClip, loop: false);
-                StartCoroutine(StartDetectionAfterIntro(introAudioClip.length));
-            }
-            else
-            {
-                // No intro — start scanning immediately with optional ambient loop.
-                if (scanningAudioClip != null)
-                    PlayAudio(scanningAudioClip, loop: true);
-
-                panelDetector.StartDetection();
-            }
-        }
-        else
-        {
-            // Rescans: ambient scanning loop (intro is a one-time thing only).
-            if (scanningAudioClip != null)
-                PlayAudio(scanningAudioClip, loop: true);
-
-            panelDetector.ResetDetection();   // clear hits and rescan
-        }
+        if (panelDetector.IsScanning) return;
+        if (panelDetector.ConfirmedCount >= maxPanels) return;
+        panelDetector.ResetDetection();
     }
 
     /// <summary>Called by PanelDetector.OnPanelConfirmed.</summary>
@@ -231,39 +283,30 @@ public class PanelSceneManager : MonoBehaviour
 
         Debug.Log($"[PanelSceneManager] Panel confirmed: [{classId}] '{panelName}'");
 
-        // Stop ONLY the looping scanning ambience — never cut the one-shot intro,
-        // which must keep playing "regardless of the banners".
+        // Detection has stopped (the scan coroutine ends on confirm). We do NOT
+        // auto-resume — the user must click the character to hear the story.
+        // Stop the looping scanning ambience.
         if (audioSource != null && audioSource.isPlaying && audioSource.loop)
             audioSource.Stop();
 
-        // Detected sound only if nothing is currently playing (so it never cuts the intro).
-        if (detectedAudioClip != null && (audioSource == null || !audioSource.isPlaying))
-            PlayAudio(detectedAudioClip, loop: false);
-
+        // "Panel recognized — point at the character" guidance + voice (auto-hides).
         ShowGuidance(
             "Panel recognized.\n" +
-            "Point your controller at the character and press the trigger to begin the story.",
+            "Point your controller at the character and pull the trigger to begin the story.",
             guidanceDetectedClip);
-
-        // Either keep scanning for the next panel (continuous) or stop if we've
-        // reached the maximum number of panels. The user can still click the
-        // spawned character to hear its story — that pauses detection automatically.
-        if (panelDetector.ConfirmedCount >= maxPanels)
-        {
-            Debug.Log($"[PanelSceneManager] Max panels ({maxPanels}) reached — detection complete.");
-        }
-        else
-        {
-            StartCoroutine(ResumeScanAfterDelay(autoRescanDelay));
-        }
     }
 
     /// <summary>Called by PanelDetector.OnNarrationStarted — pause detection while audio plays.</summary>
     private void OnNarrationStarted()
     {
         _narrationPlaying = true;
-        Debug.Log("[PanelSceneManager] Narration started — pausing detection until it ends.");
+        Debug.Log("[PanelSceneManager] Narration started — pausing detection and stopping scan audio.");
         panelDetector?.StopDetection();
+
+        // Stop the looping scanning ambience so it doesn't play UNDER the story
+        // (both on first play and on replay). Never cut a non-looping clip (e.g. intro).
+        if (audioSource != null && audioSource.isPlaying && audioSource.loop)
+            audioSource.Stop();
     }
 
     /// <summary>Called by PanelDetector.OnNarrationFinished.</summary>
@@ -304,17 +347,17 @@ public class PanelSceneManager : MonoBehaviour
     private void DeclineRepeat()
     {
         _dialogOpen = false;
+        Debug.Log("[PanelSceneManager] Repeat declined — moving on.");
+
+        // If every panel is done, offer to restart the whole experience.
         if (panelDetector != null && panelDetector.ConfirmedCount >= maxPanels)
         {
             OfferRestartExperience();
             return;
         }
 
-        ShowGuidance(
-            "Move to another exhibition panel to continue your exploration.",
-            guidanceNextPanelClip);
-
-        ResumeScanIfAllowed();
+        // Otherwise: "move to another panel" voice → scan guidance voice → scan.
+        StartScanSequence(playNextPanelFirst: true);
     }
 
     /// <summary>After all panels are done, ask whether to restart everything.</summary>
@@ -338,15 +381,12 @@ public class PanelSceneManager : MonoBehaviour
     {
         _dialogOpen = false;
         Debug.Log("[PanelSceneManager] Restarting the whole experience.");
-        ClearSpawnedCharacters();
-        panelDetector?.ResetConfirmedPanels();   // all panels eligible again
+        panelDetector?.ClearAllSpawnedCharacters();   // destroy ALL characters
+        ClearSpawnedCharacters();                     // also clear manager-tracked list
+        panelDetector?.ResetConfirmedPanels();        // all panels eligible again
 
-        ShowGuidance(
-            "Restarting the experience.\n" +
-            "Direct your device toward one of the exhibition panels.",
-            guidanceScanClip);
-
-        ResumeScanIfAllowed();
+        // Straight back into the scan sequence (scan guidance → scan).
+        StartScanSequence(playNextPanelFirst: false);
     }
 
     /// <summary>"Restart → No": end the experience. Characters remain interactive,
@@ -358,75 +398,18 @@ public class PanelSceneManager : MonoBehaviour
         ShowGuidance("Thank you for visiting the exhibition.", thankYouClip);
     }
 
-    /// <summary>Called by PanelDetector.OnScanCompletedNoResult — keep scanning continuously.</summary>
+    /// <summary>Called by PanelDetector.OnScanCompletedNoResult — a scan pass found
+    /// nothing. Keep scanning (silently, ambience already playing) until a panel
+    /// appears, unless we're paused for narration / a dialog / the panel limit.</summary>
     private void OnScanFoundNothing()
     {
-        // A scan pass ended without finding a panel. Keep scanning unless we are
-        // paused for narration or have hit the panel limit.
-        ResumeScanIfAllowed();
-    }
-
-    /// <summary>
-    /// Resumes scanning only when it is allowed:
-    ///   • not already scanning,
-    ///   • no narration audio currently playing,
-    ///   • fewer than maxPanels confirmed.
-    /// </summary>
-    private void ResumeScanIfAllowed()
-    {
         if (panelDetector == null) return;
+        if (panelDetector.ConfirmedCount >= maxPanels) return;
+        if (_narrationPlaying || _dialogOpen) return;
+        if (panelDetector.IsScanning) return;
 
-        if (panelDetector.ConfirmedCount >= maxPanels)
-        {
-            Debug.Log($"[PanelSceneManager] Max panels ({maxPanels}) reached — detection stays off.");
-            return;
-        }
-        if (_narrationPlaying)
-        {
-            Debug.Log("[PanelSceneManager] Narration in progress — detection resumes when it ends.");
-            return;
-        }
-        if (_dialogOpen)
-        {
-            Debug.Log("[PanelSceneManager] Repeat dialog open — detection resumes after the user answers.");
-            return;
-        }
-        if (panelDetector.IsScanning)
-            return;   // a scan is already running — nothing to do
-
-        BeginScanning();   // keeps existing characters alive; only resets UI + detection
-    }
-
-    /// <summary>Waits, then resumes scanning for the next panel (if allowed).</summary>
-    private IEnumerator ResumeScanAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        ResumeScanIfAllowed();
-    }
-
-    /// <summary>
-    /// Waits for the intro clip to finish, then:
-    ///  1. Clears _introPlaying so the narration gate opens.
-    ///  2. Starts panel detection.
-    ///  3. Optionally switches to the scanning ambient loop.
-    /// </summary>
-    private IEnumerator StartDetectionAfterIntro(float introDuration)
-    {
-        yield return new WaitForSeconds(introDuration);
-
-        _introPlaying = false;
-        Debug.Log("[PanelSceneManager] Intro finished — starting panel detection.");
-
-        ShowGuidance(
-            "Direct your device toward one of the exhibition panels and hold steady.\n" +
-            "Panel detection will begin automatically.",
-            guidanceScanClip);
-
-        if (scanningAudioClip != null)
-            PlayAudio(scanningAudioClip, loop: true);
-
-        if (panelDetector != null)
-            panelDetector.StartDetection();
+        // Re-scan immediately — do NOT replay the scan-guidance voice each pass.
+        panelDetector.ResetDetection();
     }
 
     // ── Character tracking ─────────────────────────────────────────────
@@ -477,12 +460,43 @@ public class PanelSceneManager : MonoBehaviour
     /// </summary>
     private void ShowGuidance(string message, AudioClip clip)
     {
-        if (guidancePanel == null || guidanceBodyText == null) return;
+        if (guidancePanel == null)
+        {
+            Debug.LogWarning("[PanelSceneManager] ShowGuidance: 'Guidance Panel' is NOT assigned in the " +
+                             "Inspector — nothing will appear. Drag the guidance dialog GameObject here.");
+            return;
+        }
+        if (guidanceBodyText == null)
+        {
+            Debug.LogWarning("[PanelSceneManager] ShowGuidance: 'Guidance Body Text' is NOT assigned in the " +
+                             "Inspector — nothing will appear. Drag the BodyText (TextMeshProUGUI) here.");
+            return;
+        }
+
+        Debug.Log($"[PanelSceneManager] ShowGuidance → \"{message.Replace("\n", " ")}\"  " +
+                  $"(panel '{guidancePanel.name}', clip={(clip != null ? clip.name : "none")})");
 
         if (_guidanceCoroutine != null)
             StopCoroutine(_guidanceCoroutine);
 
         _guidanceCoroutine = StartCoroutine(GuidanceRoutine(message, clip));
+    }
+
+    /// <summary>Moves the whole dialog UI in front of the user and faces it toward them.</summary>
+    private void PositionUIInFrontOfUser()
+    {
+        if (uiRoot == null) return;
+        Transform cam = Camera.main != null ? Camera.main.transform : null;
+        if (cam == null) return;
+
+        Vector3 fwd = cam.forward;
+        fwd.y = 0f;
+        if (fwd.sqrMagnitude < 0.001f) fwd = Vector3.forward;
+        fwd.Normalize();
+
+        uiRoot.position = cam.position + fwd * uiDistance + Vector3.up * uiVerticalOffset;
+        // Face the user: the canvas front (+Z) points away from the camera so text is readable.
+        uiRoot.rotation = Quaternion.LookRotation(uiRoot.position - cam.position, Vector3.up);
     }
 
     /// <summary>Plays a one-shot voice-over through the guidance AudioSource (no-op if null).</summary>
