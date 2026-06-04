@@ -460,7 +460,7 @@ public class VoiceAPIController : MonoBehaviour
         // full viseme sequence + a cursor. Each chunk here is aligned to the NEXT slice of
         // that sequence and advances the cursor — so closures (M/P/B) are guaranteed without
         // buffering the whole reply or changing the backend. No transcript arg needed.
-        customLipSyncContext?.FeedAudioClip(clip);
+        customLipSyncContext?.FeedAudioClip(clip, streaming: true);
 
         audioQueue.Enqueue(clip);
     }

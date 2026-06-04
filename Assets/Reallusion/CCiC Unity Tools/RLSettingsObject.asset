@@ -21,10 +21,13 @@ MonoBehaviour:
   criticalUpdateRequired: 0
   shaderUpdateInProgress: 0
   runtimeUpdateInProgress: 0
+  shaderUpdateInProgress: 0
+  runtimeUpdateInProgress: 0
   pendingShaderUninstall: 0
   pendingRuntimeUninstall: 0
   pendingShaderInstall: 0
   pendingRuntimeInstall: 0
+  performPostInstallationShaderCheck: 0
   performPostInstallationShaderCheck: 0
   performPostInstallationRuntimeCheck: 0
   updateMessage: 'Shader package: URP173 2.2.2 has been imported.
@@ -170,9 +173,12 @@ MonoBehaviour:
     are also functions to remove and install different shader packages if required."}]'
   lastPath: Assets/Reallusion/CCiC Unity Tools/RLSettingsObject.asset
   toolVersion: 2.2.6
+  toolVersion: 2.2.6
   shaderToolVersion: 2.2.3
   InstalledShaderRevision: 0
+  InstalledShaderRevision: 0
   runtimeToolVersion: 2.2.3
+  installedRuntimeRevision: 0
   installedRuntimeRevision: 0
   showProps: 1
   lastExportPath: 

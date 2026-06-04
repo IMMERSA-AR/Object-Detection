@@ -1,4 +1,4 @@
-Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+Library: D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --platform=Android
 --minimum-os-version=
 --backend=burst-llvm-19
@@ -10,11 +10,11 @@ Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --target-framework=NetFramework
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Scene\Image-Processing-GP\Temp\Burst
+--temp-folder=D:\Senior 2\GP\7agt aya\scene\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Scene\Image-Processing-GP\Library\Burst
---output=D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Senior 2\GP\7agt aya\scene\Library\Burst
+--output=D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.InferenceEngine.IParallelForBatchExtensions+ParallelForBatchJobStruct`1[[Unity.InferenceEngine.CPUBackend+RoiAlignJob, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null]], Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.InferenceEngine.CPUBackend+RoiAlignJob&, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--d42ee2bc95898300bd4529a7ed8351c6
@@ -87,11 +87,11 @@ Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Scene\Image-Processing-GP\Temp\Burst
+--temp-folder=D:\Senior 2\GP\7agt aya\scene\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Scene\Image-Processing-GP\Library\Burst
---output=D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Senior 2\GP\7agt aya\scene\Library\Burst
+--output=D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[UnityEngine.Rendering.GPUInstanceDataBuffer+ConvertCPUInstancesToGPUInstancesJob, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.GPUInstanceDataBuffer+ConvertCPUInstancesToGPUInstancesJob&, Unity.RenderPipelines.GPUDriven.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--a917331aad44b603aa293fb2ddd84845
@@ -162,11 +162,11 @@ Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Scene\Image-Processing-GP\Temp\Burst
+--temp-folder=D:\Senior 2\GP\7agt aya\scene\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Scene\Image-Processing-GP\Library\Burst
---output=D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Senior 2\GP\7agt aya\scene\Library\Burst
+--output=D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.InferenceEngine.IParallelForBatchExtensions+ParallelForBatchJobStruct`1[[Unity.InferenceEngine.CPUBackend+PowIntIntJob, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null]], Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.InferenceEngine.CPUBackend+PowIntIntJob&, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--cad9b066c2a26702953c79fbfa9d4f38
@@ -280,11 +280,11 @@ Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --target-framework=NetFramework
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Scene\Image-Processing-GP\Temp\Burst
+--temp-folder=D:\Senior 2\GP\7agt aya\scene\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Scene\Image-Processing-GP\Library\Burst
---output=D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Senior 2\GP\7agt aya\scene\Library\Burst
+--output=D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[Unity.InferenceEngine.CPUBackend+GlobalAverageVariancePoolJob, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.InferenceEngine.CPUBackend+GlobalAverageVariancePoolJob&, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--910c73bd53072ad0ad2d61c12396dc96
@@ -298,11 +298,11 @@ Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Scene\Image-Processing-GP\Temp\Burst
+--temp-folder=D:\Senior 2\GP\7agt aya\scene\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Scene\Image-Processing-GP\Library\Burst
---output=D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Senior 2\GP\7agt aya\scene\Library\Burst
+--output=D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.InferenceEngine.CPUBackend+ConvJob, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null::CanUseDepthwiseConvKernel(Unity.InferenceEngine.CPUBackend+ConvJob*, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null)--39658a002cb60b47c1eee2ef5f799014
@@ -316,11 +316,11 @@ Library: D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\l
 --float-precision=Standard
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\Scene\Image-Processing-GP\Temp\Burst
+--temp-folder=D:\Senior 2\GP\7agt aya\scene\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=D:\Scene\Image-Processing-GP\Library\Burst
---output=D:\Scene\Image-Processing-GP\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
+--decode-folder=D:\Senior 2\GP\7agt aya\scene\Library\Burst
+--output=D:\Senior 2\GP\7agt aya\scene\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobParallelForExtensions+ParallelForJobStruct`1[[Unity.InferenceEngine.BurstJobsCastTensor+Float16BytesAsFloatJob, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(Unity.InferenceEngine.BurstJobsCastTensor+Float16BytesAsFloatJob&, Unity.InferenceEngine, Version=2.6.1.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--555042b7a513cf04aa2b5b588bbf50d4

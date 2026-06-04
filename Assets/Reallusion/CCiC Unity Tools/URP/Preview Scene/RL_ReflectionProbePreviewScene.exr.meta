@@ -4,6 +4,7 @@ TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -20,6 +21,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
     flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
@@ -68,6 +70,7 @@ TextureImporter:
   cookieLightType: 2
   platformSettings:
   - serializedVersion: 4
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,6 +114,7 @@ TextureImporter:
     sprites: []
     outline: []
     customData: 
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -120,6 +124,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
     spriteCustomMetadata:
       entries: []
     nameFileIdTable: {}

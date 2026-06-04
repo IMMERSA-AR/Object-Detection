@@ -12,21 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ad77b93144e2a4e8d663e4a5ff97ef, type: 3}
   m_Name: LectureRoom
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceConfig
-  experienceType: 1
-  experienceName: Lecture Hall
-  description: 'Location Requirement: 7th floor, Architecture Building. Please stand
-    directly in front of the room before starting'
-  buttonLabel: Begin
-  anchorLabel: 56
-  minConfidence: 0.5
-  maxAnchorDistance: 3
-  muradBehaviour: 0
-  standBesideOffset: 0.5
-  heightOffset: 0
-  forwardOffset: 0
   introAudioClip: {fileID: 8300000, guid: d14616d3252587f46a0e70c982c4d5cb, type: 3}
   chairDetectionAudioClip: {fileID: 8300000, guid: f602bb128f9ae2042bb53905e235ea1c, type: 3}
-  lectureAudioClip: {fileID: 8300000, guid: 11c4414ee71505c4b83888fbac470fc5, type: 3}
+  lectureAudioClip: {fileID: 8300000, guid: 82f5bb30f7452df4f8c1ed2e2100d2f3, type: 3}
+  lectureAudioTranscript: "\"Alright everyone, remember the Maclaurin series from
+    calculus? We used algebraic powers of x as base building blocks to rewrite functions
+    like e to the power of x. Now, the mathematician Joseph Fourier introduced a
+    brilliant twist, but exclusively for periodic functions\u2014waveforms that repeat
+    infinitely over a constant period, T. Instead of powers of x, Fourier's building
+    blocks are sines and cosines! And here is our golden rule for the day: integrating
+    a periodic function over any full period\u2014from 'a' to 'a plus T'\u2014yields
+    the exact same mathematical value as integrating cleanly from zero to T. With
+    that logic established, let us define the explicit mathematical structure of
+    the Fourier series itself.\"\r\n"
   mainMuradPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
   studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
   studentPrefabVariants:
@@ -34,11 +32,16 @@ MonoBehaviour:
     sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
   - prefab: {fileID: 3381418713629169961, guid: c7f1c4212081d98478c45a911aafe904, type: 3}
     sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
-  studentSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
-  muradSittingClip: {fileID: 7400000, guid: d7feb27fe0ca3994d9178c19e46f6db9, type: 2}
+  - prefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
+    sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+  studentSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
+  muradSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
   muradStandingClip: {fileID: 0}
   muradWalkingClip: {fileID: 0}
   doctorPrefab: {fileID: 1589601983855728114, guid: 4d51e960bdee08146928083f482b5c94, type: 3}
+  doctorIdleClip: {fileID: 0}
+  doctorTalkingClip: {fileID: 0}
+  doctorStandingAfterLectureClip: {fileID: 0}
   studentRows: 2
   studentsPerRow: 3
   obeliskScanningAudioClip: {fileID: 0}

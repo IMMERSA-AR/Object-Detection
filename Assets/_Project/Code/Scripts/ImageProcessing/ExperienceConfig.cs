@@ -3,46 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewExperience", menuName = "MuradXR/Experience Config")]
 public class ExperienceConfig : ScriptableObject
 {
-    [Header("Experience Type")]
-    [Tooltip("CharacterPlacement = YOLO detects anchor then spawns Murad.\nLectureHall = constant scene + lecture audio + then Murad Q&A.")]
-    public ExperienceType experienceType = ExperienceType.CharacterPlacement;
 
-    [Header("Display")]
-    [Tooltip("Name shown as the card title")]
-    public string experienceName = "New Experience";
-
-    [Tooltip("Short description shown on the card")]
-    [TextArea(2, 3)]
-    public string description = "Description here.";
-
-    [Tooltip("Text on the button — make it immersive! e.g. 'Enter the Hall'")]
-    public string buttonLabel = "Begin";
-
-    [Header("Anchor Detection")]
-    [Tooltip("Which YOLO label to detect as the anchor object")]
-    public YOLOv9Labels anchorLabel = YOLOv9Labels.chair;
-
-    [Tooltip("Minimum YOLO confidence to accept this anchor (0-1)")]
-    [Range(0f, 1f)]
-    public float minConfidence = 0.5f;
-
-    [Tooltip("Maximum distance from player to accept the anchor (meters)")]
-    public float maxAnchorDistance = 3.0f;
-
-    [Header("Murad Behaviour")]
-    public MuradBehaviour muradBehaviour = MuradBehaviour.SitOnAnchor;
-
-    [Tooltip("How far beside the anchor Murad stands (StandBesideAnchor only)")]
-    public float standBesideOffset = 0.5f;
-
-    [Header("Position Fine-Tuning")]
-    [Tooltip("Height offset relative to detected anchor surface")]
-    public float heightOffset = 0f;
-
-    [Tooltip("Forward/backward offset from anchor center")]
-    public float forwardOffset = 0f;
-
-    [Header("Lecture Hall (ExperienceType = LectureHall only)")]
+    [Header("Lecture Hall")]
     [Tooltip("Optional intro audio clip played the moment the user clicks Begin.\n" +
                  "Chair detection waits until this clip finishes before starting.\n" +
                  "Leave empty to start chair detection immediately.")]
@@ -55,6 +17,12 @@ public class ExperienceConfig : ScriptableObject
 
     [Tooltip("The pre-recorded lecture audio script")]
     public AudioClip lectureAudioClip;
+
+    [Tooltip("Full transcript of the lecture audio clip.\n" +
+             "Used by CustomLipSyncContext for text-guided lip sync.\n" +
+             "Leave empty to fall back to raw MFCC (mouth still moves, but less accurate).")]
+    [TextArea(3, 8)]
+    public string lectureAudioTranscript;
 
     [Tooltip("Prefab for the MAIN Murad (who sits, then stands up to talk)")]
     public GameObject mainMuradPrefab;
@@ -84,20 +52,21 @@ public class ExperienceConfig : ScriptableObject
              "IMPORTANT: the FBX must be imported as Humanoid (Rig tab → Animation Type → Humanoid).")]
     public AnimationClip muradSittingClip;
 
-    [Tooltip("Standing idle clip played while Murad stands up and during Q&A after the lecture.\n" +
-             "Download 'Standing Idle' or 'Breathing Idle' from Mixamo, set Rig → Humanoid, drag here.\n" +
-             "If empty, the Animator Controller (IsStanding bool) handles standing — requires the\n" +
-             "Animator Controller to have a proper Standing Idle state.")]
-    public AnimationClip muradStandingClip;
-
-    [Tooltip("Walking clip played while Murad walks toward the user after the lecture.\n" +
-             "Download 'Walking' from Mixamo, set Rig → Humanoid, drag here.\n" +
-             "If empty AND muradStandingClip is set, Murad glides (standing idle while moving).\n" +
-             "If both are empty, the Animator Controller (IsWalking bool) handles walking.")]
-    public AnimationClip muradWalkingClip;
-
     [Tooltip("Prefab for the 1918 doctor/professor NPC (must have HistoricalNPCController)")]
     public GameObject doctorPrefab;
+
+    [Header("Doctor Animation Clips")]
+    [Tooltip("Standing idle clip played while the doctor is waiting / not lecturing.\n" +
+             "If empty, falls back to whatever idleClip is set on the prefab itself.")]
+    public AnimationClip doctorIdleClip;
+
+    [Tooltip("Talking / lecturing clip played while the lecture audio is playing.\n" +
+             "If empty, falls back to whatever talkingClip is set on the prefab itself.")]
+    public AnimationClip doctorTalkingClip;
+
+    [Tooltip("Standing idle clip played AFTER the lecture ends (doctor stops talking).\n" +
+             "If empty, falls back to doctorIdleClip, then to the prefab's standingAfterLectureClip.")]
+    public AnimationClip doctorStandingAfterLectureClip;
 
     [Tooltip("Number of student rows")]
     public int studentRows = 2;
@@ -105,36 +74,17 @@ public class ExperienceConfig : ScriptableObject
     [Tooltip("Number of seats per row")]
     public int studentsPerRow = 3;
 
-    [Header("Obelisk (ExperienceType = Obelisk only)")]
-    [Tooltip("Audio clip played on loop while scanning for the obelisk.\n" +
-             "Leave empty for silence during detection.")]
+    [Header("Obelisk")]
+    [Tooltip("Audio clip that loops while scanning for the obelisk.")]
     public AudioClip obeliskScanningAudioClip;
 
     [Tooltip("Audio clip played once when the obelisk is confirmed detected.")]
     public AudioClip obeliskDetectedAudioClip;
 
-    [Tooltip("Text shown on the scanning UI while looking for the obelisk.\n" +
-             "e.g. 'Point the camera at the obelisk…'")]
+    [Tooltip("Guidance text shown on the scanning UI while looking for the obelisk.")]
     public string obeliskGuidanceText = "Point the camera at the obelisk…";
 }
 
-public enum MuradBehaviour
-{
-    SitOnAnchor,        // Walk to anchor and sit — e.g. lecture room chair
-    StandBesideAnchor   // Walk beside anchor and stand — e.g. obelisk
-}
-
-public enum ExperienceType
-{
-    CharacterPlacement, // YOLO detects anchor → Murad walks to it
-    LectureHall,        // Constant 1918 scene → lecture audio → Murad Q&A
-    Obelisk             // Classical IP detects obelisk → characters spawn around it
-}
-
-/// <summary>
-/// One entry in ExperienceConfig.studentPrefabVariants — pairs a character
-/// prefab with an optional per-character sitting clip.
-/// </summary>
 [System.Serializable]
 public class StudentVariant
 {

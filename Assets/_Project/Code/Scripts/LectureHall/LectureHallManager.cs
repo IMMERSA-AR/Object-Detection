@@ -134,6 +134,12 @@ public class LectureHallManager : MonoBehaviour
              "Assign basic_audio_murad.mp3 here.")]
     public AudioClip greetingAudioClip;
 
+    [Tooltip("Full transcript of the greeting audio clip.\n" +
+             "Used by CustomLipSyncContext for text-guided lip sync.\n" +
+             "Leave empty to fall back to raw MFCC.")]
+    [TextArea(3, 8)]
+    public string greetingAudioTranscript;
+
     [Tooltip("AudioSource used for the chair-detection phase audio.\n" +
              "Add a second AudioSource component to this GameObject, set Loop = ON and\n" +
              "Play On Awake = OFF, then drag it here. The clip is assigned at runtime\n" +
@@ -765,8 +771,7 @@ public class LectureHallManager : MonoBehaviour
         }
 
         // ── Start sitting variation if variants are assigned on the prefab ────
-        // TODO: HistoricalNPCController has no StartSittingVariation() — commented out to compile.
-        // ctrl.StartSittingVariation();
+        ctrl.StartSittingVariation();
     }
 
     /// <summary>
@@ -965,20 +970,17 @@ public class LectureHallManager : MonoBehaviour
             // without any clips baked into the prefab.
             // Only overrides when the config field is non-null; prefab defaults
             // are kept for any field left empty in ExperienceConfig.
-            // TODO: ExperienceConfig has no doctorIdleClip/doctorTalkingClip/
-            // doctorStandingAfterLectureClip fields — clip injection commented out to compile.
-            // The doctor uses the clips baked into its prefab instead.
-            // if (config.doctorIdleClip    != null) ctrl.idleClip                 = config.doctorIdleClip;
-            // if (config.doctorTalkingClip != null) ctrl.talkingClip              = config.doctorTalkingClip;
-            //
-            // // Standing-after-lecture fallback chain:
-            // //   1. config.doctorStandingAfterLectureClip  (most specific)
-            // //   2. config.doctorIdleClip                  (same idle used elsewhere)
-            // //   3. ctrl.standingAfterLectureClip           (whatever was on the prefab)
-            // if (config.doctorStandingAfterLectureClip != null)
-            //     ctrl.standingAfterLectureClip = config.doctorStandingAfterLectureClip;
-            // else if (config.doctorIdleClip != null && ctrl.standingAfterLectureClip == null)
-            //     ctrl.standingAfterLectureClip = config.doctorIdleClip;
+            if (config.doctorIdleClip    != null) ctrl.idleClip                 = config.doctorIdleClip;
+            if (config.doctorTalkingClip != null) ctrl.talkingClip              = config.doctorTalkingClip;
+
+            // Standing-after-lecture fallback chain:
+            //   1. config.doctorStandingAfterLectureClip  (most specific)
+            //   2. config.doctorIdleClip                  (same idle used elsewhere)
+            //   3. ctrl.standingAfterLectureClip           (whatever was on the prefab)
+            if (config.doctorStandingAfterLectureClip != null)
+                ctrl.standingAfterLectureClip = config.doctorStandingAfterLectureClip;
+            else if (config.doctorIdleClip != null && ctrl.standingAfterLectureClip == null)
+                ctrl.standingAfterLectureClip = config.doctorIdleClip;
 
             ctrl.Init(NPCRole.Doctor, facingTarget);
         }
@@ -1235,20 +1237,18 @@ public class LectureHallManager : MonoBehaviour
             // cycles between sitting poses exactly like the other students do.
             // HistoricalNPCController on Murad is NOT initialised (no Init() call) —
             // it acts only as an Inspector-friendly config container here.
-            // TODO: HistoricalNPCController has no sittingClipVariants/sittingSwitchInterval
-            // fields — Murad sitting-variant wiring commented out to compile.
-            // var muradHNPC_cfg = _mainMuradInstance.GetComponent<HistoricalNPCController>();
-            // if (muradHNPC_cfg != null &&
-            //     muradHNPC_cfg.sittingClipVariants != null &&
-            //     muradHNPC_cfg.sittingClipVariants.Length > 0)
-            // {
-            //     _sittingDriver.variantClips    = muradHNPC_cfg.sittingClipVariants;
-            //     _sittingDriver.switchInterval  = muradHNPC_cfg.sittingSwitchInterval;
-            //     _sittingDriver.StartSittingVariation();
-            //     Debug.Log($"[LectureHall] MuradSittingPoseDriver: " +
-            //               $"{muradHNPC_cfg.sittingClipVariants.Length} variant clip(s) wired — " +
-            //               $"switching every ~{muradHNPC_cfg.sittingSwitchInterval:F0}s.");
-            // }
+            var muradHNPC_cfg = _mainMuradInstance.GetComponent<HistoricalNPCController>();
+            if (muradHNPC_cfg != null &&
+                muradHNPC_cfg.sittingClipVariants != null &&
+                muradHNPC_cfg.sittingClipVariants.Length > 0)
+            {
+                _sittingDriver.variantClips    = muradHNPC_cfg.sittingClipVariants;
+                _sittingDriver.switchInterval  = muradHNPC_cfg.sittingSwitchInterval;
+                _sittingDriver.StartSittingVariation();
+                Debug.Log($"[LectureHall] MuradSittingPoseDriver: " +
+                          $"{muradHNPC_cfg.sittingClipVariants.Length} variant clip(s) wired — " +
+                          $"switching every ~{muradHNPC_cfg.sittingSwitchInterval:F0}s.");
+            }
 
             // ── Wire head look-at toward the doctor ───────────────────────────
             // Search _spawnedNPCs for the Doctor role — the doctor may not be in
@@ -1339,7 +1339,7 @@ public class LectureHallManager : MonoBehaviour
                     doctorLipSyncCtx.enabled = true;
 
                     // Pre-compute the viseme timeline for the lecture clip.
-                    doctorLipSyncCtx.FeedAudioClip(config.lectureAudioClip);
+                    doctorLipSyncCtx.FeedAudioClip(config.lectureAudioClip, config.lectureAudioTranscript);
 
                     // Play the clip on the context's own AudioSource at volume=0
                     // so CustomLipSyncContext.Update() can track timeSamples.
@@ -1742,7 +1742,7 @@ public class LectureHallManager : MonoBehaviour
 
                 if (lipCtx != null)
                 {
-                    lipCtx.FeedAudioClip(greetingAudioClip);
+                    lipCtx.FeedAudioClip(greetingAudioClip, greetingAudioTranscript);
                     Debug.Log("[LectureHall] Greeting: FeedAudioClip called on CustomLipSyncContext.");
                 }
                 else
