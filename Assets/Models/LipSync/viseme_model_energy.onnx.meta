@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/_Project/AiModels/viseme_model_energy.onnx.meta
-guid: 54ab34241fad313418b64725eed6f591
-========
-guid: 6c2df77293e16eb4d8cf817639fa2a3a
->>>>>>>> e0afbfc0059c54dc8e4e4a47fb25f6cc458afd0e:Assets/Models/LipSync/viseme_model_energy.onnx.meta
+guid: f65607335b3d74348adb7d1270085aad
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
