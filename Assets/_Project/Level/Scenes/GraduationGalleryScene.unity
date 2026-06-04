@@ -4273,7 +4273,7 @@ MonoBehaviour:
     idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
     talkingClip: {fileID: 5528149604612604457, guid: ab37c3e3cdbfe524c86c3b5fca92c8e8, type: 3}
   - panelName: Mechanical Engineering
-    characterPrefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
+    characterPrefab: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
     narrationClip: {fileID: 8300000, guid: 6284497ff551f7045b3f4042eab2dd7e, type: 3}
     narrationTranscript: 'Look up at the iconic Dome of Cairo University... a true,
       enduring monument to education. Just below it, notice how a beautifully carved

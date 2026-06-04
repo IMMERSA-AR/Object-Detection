@@ -8,7 +8,8 @@ public class SceneLoader : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public enum TargetScene
     {
         ObeliskScene,
-        LectureHallScene
+        LectureHallScene,
+        GraduationGalleryScene
     }
 
     [Header("Scene Selection")]
