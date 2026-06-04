@@ -19,11 +19,13 @@ MonoBehaviour:
   postInstallShowUpdateWindow: 0
   postInstallShowPopupNotWindow: 0
   criticalUpdateRequired: 0
+  shaderUpdateInProgress: 0
+  runtimeUpdateInProgress: 0
   pendingShaderUninstall: 0
   pendingRuntimeUninstall: 0
   pendingShaderInstall: 0
   pendingRuntimeInstall: 0
-  performPostInstallationCheck: 0
+  performPostInstallationShaderCheck: 0
   performPostInstallationRuntimeCheck: 0
   updateMessage: 'Shader package: URP173 2.2.2 has been imported.
 
@@ -32,7 +34,7 @@ MonoBehaviour:
 
 '
   updateAvailable: 1
-  lastUpdateCheck: 639157264332638833
+  lastUpdateCheck: 639160216704901792
   jsonTagName: 2.2.6
   jsonHtmlUrl: https://github.com/soupday/CCiC-Unity-Tools/releases/tag/2.2.6
   jsonPublishedAt: 2026-04-07T20:05:42Z
@@ -167,9 +169,11 @@ MonoBehaviour:
     the version of Unity and pipeline and present options to fix this.\r\n\r\nThere
     are also functions to remove and install different shader packages if required."}]'
   lastPath: Assets/Reallusion/CCiC Unity Tools/RLSettingsObject.asset
-  toolVersion: 2.2.3
+  toolVersion: 2.2.6
   shaderToolVersion: 2.2.3
+  InstalledShaderRevision: 0
   runtimeToolVersion: 2.2.3
+  installedRuntimeRevision: 0
   showProps: 1
   lastExportPath: 
   isClientLocal: 1

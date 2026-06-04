@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
+using UnityEngine.Serialization;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
@@ -22,11 +23,16 @@ public class VoiceAPIController : MonoBehaviour
 
     [Header("UI & Animation Indicators")]
     public TMP_Text statusText;
-    public Animator karimAnimator;
+    [FormerlySerializedAs("karimAnimator")]
+    public Animator animator;
 
     [Header("Custom Lip Sync Integration")]
     [Tooltip("Drag the GameObject that has CustomLipSyncContext attached (usually the NPC root).")]
     public LipSync.CustomLipSyncContext customLipSyncContext;
+
+    [Header("Emotion")]
+    [Tooltip("Drag the GameObject that has EmotionController attached (usually the NPC face mesh root).")]
+    public EmotionController emotionController;
 
     [Header("Quest AR/VR Interaction")]
     [Tooltip("Drag the RightControllerAnchor from your OVRCameraRig here")]
@@ -43,19 +49,18 @@ public class VoiceAPIController : MonoBehaviour
     [Header("Audio Output")]
     public AudioSource audioSource; // Mourad's main source (for lips)
     public AudioSource speakerSource; // The new child source (for your ears)
-    private bool isRecording = false;
+    private bool isRecording  = false;
+    private bool _wasSpeaking = false;  // tracks audio state to fire Neutral only once
+    private string _lastReplyText = null;  // latest NPC reply text (for text-guided lip-sync)
 
     // WebSocket variables
     private ClientWebSocket websocket;
     private CancellationTokenSource cts;
+    private bool _sessionActive = false;
 
     // Audio Queue for playing incoming mini-chunks smoothly
     private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
     private readonly Queue<Action> mainThreadActions = new Queue<Action>();
-
-    // True from first tts_audio_chunk until tts_done — prevents IsTalking
-    // flickering off between chunks when the queue is briefly empty.
-    private bool _ttsActive = false;
     void Start()
     {
         if (statusText == null)
@@ -64,7 +69,7 @@ public class VoiceAPIController : MonoBehaviour
 
             if (statusText != null)
             {
-                statusText.text = "";
+                statusText.text = "Hello!";
                 statusText.color = Color.white;
             }
             else
@@ -96,12 +101,17 @@ public class VoiceAPIController : MonoBehaviour
             Debug.Log($"🎧 Listener on: {l.gameObject.name} | enabled={l.enabled}");
         Debug.Log($"🔊 AudioSource on: {gameObject.name} | enabled={audioSource.enabled}");
         Debug.Log($"🔊 AudioSource output: {(audioSource.outputAudioMixerGroup == null ? "No mixer - direct output" : audioSource.outputAudioMixerGroup.name)}");
+        // ── RAY DIAGNOSTICS ───────────────────────────────────────────────
+        Debug.Log($"[RAY] rightController = {(rightController == null ? "NULL ✗" : rightController.name + " ✓")}");
+        Debug.Log($"[RAY] laserPointer     = {(laserPointer   == null ? "NULL ✗" : laserPointer.name   + " ✓")}");
+        Debug.Log($"[RAY] npcCollider      = {(npcCollider    == null ? "NULL ✗" : npcCollider.name    + " ✓")}");
+
         // Initialize laser renderer
         if (laserPointer != null)
         {
             laserPointer.positionCount = 2;
-            laserPointer.startWidth = 0.005f;
-            laserPointer.endWidth = 0.005f;
+            laserPointer.startWidth = 0.02f;   // was 0.005 — widened so it's visible in VR
+            laserPointer.endWidth = 0.02f;
             laserPointer.SetPosition(0, Vector3.zero);
             laserPointer.SetPosition(1, Vector3.zero);
         }
@@ -116,16 +126,13 @@ public class VoiceAPIController : MonoBehaviour
             Debug.LogWarning("[VoiceAPI] CustomLipSyncContext not found! " +
                              "Drag the NPC root (with CustomLipSyncContext) into the Inspector.");
 
-        // Auto-find the Animator on this prefab if not assigned in the Inspector.
-        // This is needed when Murad is spawned at runtime (not placed in the scene).
-        if (karimAnimator == null)
-        {
-            karimAnimator = GetComponentInChildren<Animator>();
-            if (karimAnimator != null)
-                Debug.Log($"[VoiceAPI] Animator auto-found: {karimAnimator.gameObject.name}");
-            else
-                Debug.LogWarning("[VoiceAPI] No Animator found on Murad — talking animation won't play.");
-        }
+        // Auto-find EmotionController on this GameObject (or its children) if not assigned
+        if (emotionController == null)
+            emotionController = GetComponentInChildren<EmotionController>();
+
+        if (emotionController == null)
+            Debug.LogWarning("[VoiceAPI] EmotionController not found! " +
+                             "Add EmotionController to Mourad's face mesh and assign faceMesh.");
 
         if (Microphone.devices.Length > 0)
         {
@@ -133,6 +140,45 @@ public class VoiceAPIController : MonoBehaviour
             Debug.Log("Microphone ready: " + micDevice);
         }
         else Debug.LogError("No microphone detected!");
+
+        _ = ConnectAndStartSession();
+    }
+
+    private async Task ConnectAndStartSession()
+    {
+        try
+        {
+            // Clean up any previous (possibly faulted) socket/token first
+            try { websocket?.Abort(); websocket?.Dispose(); } catch { }
+            try { cts?.Cancel();      cts?.Dispose();      } catch { }
+
+            websocket = new ClientWebSocket();
+            cts = new CancellationTokenSource();
+            _sessionActive = false;
+
+            Debug.Log("🔌 Connecting to: " + wsUrl);
+            UpdateUI("Connecting...", Color.yellow);
+            await websocket.ConnectAsync(new Uri(wsUrl), cts.Token);
+            Debug.Log("✅ Connected!");
+
+            string welcomeMsg = await ReceiveTextMsg();
+            Debug.Log("📨 Welcome: " + welcomeMsg);
+
+            SessionStartMsg startMsg = new SessionStartMsg { character_id = characterId };
+            await SendTextMsg(JsonUtility.ToJson(startMsg));
+
+            string startAck = await ReceiveTextMsg();
+            Debug.Log("📨 Session ACK: " + startAck);
+
+            _sessionActive = true;
+            UpdateUI("Hello!", Color.white);
+            Debug.Log("✅ Session ready — WebSocket will stay open across interactions.");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("💥 Connection failed: " + e.Message);
+            UpdateUI("Can't connect. Check Wi-Fi & try again!", Color.red);
+        }
     }
 
     void Update()
@@ -151,47 +197,42 @@ public class VoiceAPIController : MonoBehaviour
         }
 
 
+        // Reset face to Neutral ONCE when Mourad finishes speaking (not every frame)
+        bool isSpeaking = audioQueue.Count > 0 || audioSource.isPlaying;
+        if (_wasSpeaking && !isSpeaking)
+        {
+            if (animator != null) animator.SetBool("IsTalking", false);
+            emotionController?.PlayEmotion("Neutral");
+        }
+        _wasSpeaking = isSpeaking;
+
         if (audioQueue.Count > 0 && !audioSource.isPlaying)
         {
             AudioClip clip = audioQueue.Dequeue();
             Debug.Log($"▶️ Playing chunk | length={clip.length}s");
 
-            // --- SOURCE 1: MOURAD'S LIPS ---
-            // This feeds the audio to Meta's lip sync to move the mouth.
+            // --- SINGLE SOURCE ---
+            // The source you HEAR is the same one the lip-sync tracks, so lips can
+            // never drift from the audio. (CustomLipSyncContext reads THIS source's
+            // timeSamples.) The old dual-source setup — a muted timing source plus a
+            // separate audible speakerSource — was a leftover from when Meta's lip-sync
+            // tollbooth needed the muted feed. With our custom lip-sync it's gone, and
+            // two sources only risked desync.
             audioSource.Stop();
             audioSource.loop = false;
             audioSource.clip = clip;
-            audioSource.mute = false;
+            audioSource.mute = false;        // audible
             audioSource.volume = 1f;
+            audioSource.spatialBlend = 1f;   // voice comes FROM Mourad
             audioSource.Play();
 
-            // --- SOURCE 2: THE ACTUAL AUDIO (UNMUTED) ---
-            // This bypasses Meta entirely and goes straight to your headset.
-            if (speakerSource != null)
-            {
-                speakerSource.Stop();
-                speakerSource.loop = false;
-                speakerSource.clip = clip;
-                speakerSource.mute = false;
-                speakerSource.spatialBlend = 1f;
-                speakerSource.Play();
-            }
+            // speakerSource is no longer used — make sure it isn't double-playing.
+            if (speakerSource != null) speakerSource.Stop();
 
-            // Start talking animation
-            if (karimAnimator != null)
+            if (animator != null)
             {
-                karimAnimator.SetBool("IsTalking", true);
-                karimAnimator.SetBool("IsStanding", false);
-            }
-        }
-        else if (!_ttsActive && audioQueue.Count == 0 && !audioSource.isPlaying)
-        {
-            // tts_done received AND queue drained AND nothing playing — stop animation
-            if (karimAnimator != null && karimAnimator.GetBool("IsTalking"))
-            {
-                karimAnimator.SetBool("IsTalking", false);
-                karimAnimator.SetBool("IsStanding", true);
-                Debug.Log("🎤 Murad finished talking — returning to idle.");
+                animator.SetBool("IsTalking",  true);
+                animator.SetBool("IsThinking", false);
             }
         }
 
@@ -252,32 +293,31 @@ public class VoiceAPIController : MonoBehaviour
     }
     private async Task RecordingSessionTask()
     {
-        websocket = new ClientWebSocket();
-        cts = new CancellationTokenSource();
-
         try
         {
-            // --- 1. CONNECT ---
-            Debug.Log("🔌 [1/5] Connecting to: " + wsUrl);
-            UpdateUI("Connecting...", Color.yellow);
-            await websocket.ConnectAsync(new Uri(wsUrl), cts.Token);
-            Debug.Log("✅ [1/5] Connected!");
+            // Reconnect if the server dropped the connection between turns
+            if (websocket == null || websocket.State != WebSocketState.Open)
+            {
+                Debug.LogWarning("⚠️ WebSocket not open — reconnecting (context will reset)...");
+                await ConnectAndStartSession();
+                if (!_sessionActive) return;
+            }
 
-            string welcomeMsg = await ReceiveTextMsg();
-            Debug.Log("📨 Welcome: " + welcomeMsg);
-
-            // --- 2. START SESSION ---
-            Debug.Log("🚀 [2/5] Sending start_session | character=" + characterId);
-            SessionStartMsg startMsg = new SessionStartMsg { character_id = characterId };
-            await SendTextMsg(JsonUtility.ToJson(startMsg));
-
-            string startAck = await ReceiveTextMsg();
-            Debug.Log("📨 Session ACK: " + startAck);
-
-            // --- 3. SEND AUDIO CHUNKS ---
-            Debug.Log("🎤 [3/5] Starting microphone recording...");
+            // --- SEND AUDIO CHUNKS ---
+            Debug.Log("🎤 Starting microphone recording...");
             UpdateUI("Listening...", Color.red);
+
+            // If a previous session left the mic running, release it first.
+            if (Microphone.IsRecording(micDevice)) Microphone.End(micDevice);
             recordingClip = Microphone.Start(micDevice, true, 300, 16000);
+            if (recordingClip == null)
+            {
+                Debug.LogError("🎤 Microphone.Start returned null — mic unavailable.");
+                UpdateUI("Mic problem. Try again!", Color.red);
+                isRecording = false;
+                return;
+            }
+
             int lastPos = 0;
             int chunkIndex = 0;
 
@@ -305,39 +345,61 @@ public class VoiceAPIController : MonoBehaviour
             Microphone.End(micDevice);
             Debug.Log($"🛑 Microphone stopped. Total chunks sent: {chunkIndex}");
 
-            // --- 4. END OF UTTERANCE ---
-            Debug.Log("📤 [4/5] Sending end_of_utterance...");
+            // --- END OF UTTERANCE ---
+            Debug.Log("📤 Sending end_of_utterance...");
             UpdateUI("Thinking...", Color.yellow);
+            if (animator != null) animator.SetBool("IsThinking", true);
             await SendTextMsg(JsonUtility.ToJson(new EndUtteranceMsg()));
 
-            // --- 5. RECEIVE OUTPUTS ---
-            Debug.Log("👂 [5/5] Waiting for server response...");
+            // --- RECEIVE RESPONSE ---
+            Debug.Log("👂 Waiting for server response...");
             int audioChunksReceived = 0;
 
             while (websocket.State == WebSocketState.Open)
             {
                 Debug.Log($"⏳ Waiting for message... {DateTime.Now:HH:mm:ss.fff}");
                 string msg = await ReceiveTextMsg();
-                Debug.Log($"📨 Message completely downloaded at {DateTime.Now:HH:mm:ss.fff}");
+                Debug.Log($"📨 Message at {DateTime.Now:HH:mm:ss.fff}");
                 ServerMsg response = JsonUtility.FromJson<ServerMsg>(msg);
                 Debug.Log($"📨 Server msg type='{response.type}' | raw={msg}");
 
                 if (response.type == "error")
                 {
                     Debug.LogError("❌ Server error: " + response.message);
+                    UpdateUI("I didn't catch that. Try again!", Color.red);
                     break;
+                }
+
+                if (response.type == "reply_text_done")
+                {
+                    Debug.Log($"💬 Reply: \"{response.text}\" | emotion: {response.emotion}");
+                    _lastReplyText = response.text;   // for text-guided lip-sync
+
+                    // Begin a text-guided utterance: builds the viseme sequence and
+                    // resets the streaming cursor BEFORE the audio chunks arrive.
+                    string replyText = response.text;
+                    lock (mainThreadActions)
+                        mainThreadActions.Enqueue(() => customLipSyncContext?.BeginUtterance(replyText));
+
+                    if (!string.IsNullOrEmpty(response.emotion))
+                    {
+                        string emotion = response.emotion;
+                        lock (mainThreadActions)
+                            mainThreadActions.Enqueue(() => emotionController?.PlayEmotion(emotion));
+                    }
+                    continue;
                 }
 
                 if (response.type == "tts_done")
                 {
-                    Debug.Log($"🏁 TTS done! Total audio chunks received: {audioChunksReceived}");
-                    // Signal Update() that all chunks have arrived — it will turn off
-                    // IsTalking only after the queue is fully drained and audio stops.
+                    Debug.Log($"🏁 TTS done! Chunks received: {audioChunksReceived}. WebSocket staying open.");
+                    UpdateUI("Hello!", Color.white);
+                    // Clear the text-guided sequence so any stray audio that arrives
+                    // before the NEXT reply_text_done falls back to raw MFCC instead of
+                    // parking on this reply's leftover (exhausted) visemes.
                     lock (mainThreadActions)
-                    {
-                        mainThreadActions.Enqueue(() => _ttsActive = false);
-                    }
-                    break;
+                        mainThreadActions.Enqueue(() => customLipSyncContext?.EndUtterance());
+                    break; // leave WebSocket open — context preserved for next turn
                 }
 
                 if (response.type == "tts_audio_chunk")
@@ -355,13 +417,7 @@ public class VoiceAPIController : MonoBehaviour
 
                     lock (mainThreadActions)
                     {
-                        // Mark TTS as active on first chunk so IsTalking stays true
-                        // even when the queue is briefly empty between chunks.
-                        mainThreadActions.Enqueue(() =>
-                        {
-                            _ttsActive = true;
-                            ProcessReceivedWav(audioBytes);
-                        });
+                        mainThreadActions.Enqueue(() => ProcessReceivedWav(audioBytes));
                     }
                 }
                 else
@@ -369,17 +425,20 @@ public class VoiceAPIController : MonoBehaviour
                     Debug.Log($"ℹ️ Skipping msg type='{response.type}'");
                 }
             }
-
-            Debug.Log("🔒 Closing WebSocket...");
-            await websocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Done", cts.Token);
-            UpdateUI("", Color.white);
-            Debug.Log("✅ Session complete.");
         }
         catch (Exception e)
         {
             Debug.LogError("💥 WebSocket Error: " + e.Message);
             Debug.LogError("Stack: " + e.StackTrace);
-            UpdateUI("Error!", Color.red);
+            UpdateUI("Something went wrong. Point at me & try again!", Color.red);
+
+            // ── Full cleanup so the NEXT trigger press cleanly reconnects ──
+            _sessionActive = false;
+            isRecording    = false;                       // so one press starts fresh (not toggles off)
+            try { Microphone.End(micDevice); } catch { }  // release the mic from the dead session
+            try { websocket?.Abort(); }   catch { }       // kill the faulted socket
+            try { websocket?.Dispose(); } catch { }
+            websocket = null;                             // forces ConnectAndStartSession() next time
         }
     }
 
@@ -395,7 +454,12 @@ public class VoiceAPIController : MonoBehaviour
         AudioClip clip = AudioClip.Create("AI_Chunk", samples.Length, 1, 44100, false);
         clip.SetData(samples, 0);
 
-        // Pre-compute MFCC viseme timeline BEFORE enqueuing so it's ready when playback starts
+        // Pre-compute the viseme timeline BEFORE enqueuing so it's ready at playback.
+        //
+        // Text-guided STREAMING: BeginUtterance() (called on reply_text_done) set up the
+        // full viseme sequence + a cursor. Each chunk here is aligned to the NEXT slice of
+        // that sequence and advances the cursor — so closures (M/P/B) are guaranteed without
+        // buffering the whole reply or changing the backend. No transcript arg needed.
         customLipSyncContext?.FeedAudioClip(clip);
 
         audioQueue.Enqueue(clip);
@@ -531,10 +595,11 @@ public class EndUtteranceMsg
 [Serializable]
 public class ServerMsg
 {
-    public string type;        // "tts_audio_chunk", "tts_done", "error", 
+    public string type;        // "tts_audio_chunk", "tts_done", "error",
                                // "partial_transcript", "final_transcript", "reply_text_done"
     public string audio;       // present on tts_audio_chunk
     public int chunk_index;
     public string text;        // present on transcripts / reply
     public string message;     // present on error/ack
+    public string emotion;     // present on reply_text_done: "happy", "sad", "angry", etc.
 }

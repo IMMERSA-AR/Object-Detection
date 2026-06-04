@@ -68,6 +68,10 @@ public class ObeliskDetectionClient : MonoBehaviour
     private float _lastCX, _lastCY;   // normalized center (0-1)
     private float _lastHeight;         // normalized height
 
+    // Reused capture buffer — allocated once to avoid per-frame GC pressure.
+    private const int CapW = 640, CapH = 480;
+    private Texture2D _captureTex;
+
     // Passthrough camera (Meta XR) — provides the real-world camera feed on Quest.
     // The virtual Camera.main render does NOT include passthrough (it's a compositor
     // overlay), so we need this to send frames the server can actually detect from.
@@ -86,10 +90,15 @@ public class ObeliskDetectionClient : MonoBehaviour
     private void Start()
     {
         _serverUrl = $"http://{serverIP}:{serverPort}";
-        Debug.Log($"[ObeliskClient] Server URL: {_serverUrl}");
+        _captureTex = new Texture2D(CapW, CapH, TextureFormat.RGB24, false);
 
         if (scanningUI != null) scanningUI.SetActive(false);
         if (detectedUI != null) detectedUI.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (_captureTex != null) Destroy(_captureTex);
     }
 
     // ── Public API ─────────────────────────────────────────────
@@ -240,55 +249,43 @@ public class ObeliskDetectionClient : MonoBehaviour
 
     private byte[] CaptureFrameAsJpeg()
     {
-        const int capW = 640, capH = 480;
-
-        // Primary path: passthrough camera gives the real-world feed on Quest.
-        // Camera.main renders only virtual objects — passthrough is a compositor
-        // overlay and never appears in a Camera.main render.
-        if (_cameraAccess != null && _cameraAccess.IsPlaying)
+        RenderTexture rt = null;
+        try
         {
-            Texture camTex = _cameraAccess.GetTexture();
-            if (camTex != null)
+            if (_cameraAccess != null && _cameraAccess.IsPlaying)
             {
-                RenderTexture rt = RenderTexture.GetTemporary(capW, capH, 0, RenderTextureFormat.ARGB32);
-                Graphics.Blit(camTex, rt);
-
-                RenderTexture.active = rt;
-                Texture2D tex = new Texture2D(capW, capH, TextureFormat.RGB24, false);
-                tex.ReadPixels(new Rect(0, 0, capW, capH), 0, 0);
-                tex.Apply();
-                RenderTexture.active = null;
-                RenderTexture.ReleaseTemporary(rt);
-
-                byte[] jpg = tex.EncodeToJPG(75);
-                Destroy(tex);
-                return jpg;
+                Texture camTex = _cameraAccess.GetTexture();
+                if (camTex != null)
+                {
+                    rt = RenderTexture.GetTemporary(CapW, CapH, 0, RenderTextureFormat.ARGB32);
+                    Graphics.Blit(camTex, rt);
+                }
             }
-        }
 
-        // Fallback: virtual camera render — useful in the Unity Editor only.
-        Camera cam = Camera.main;
-        if (cam == null)
+            if (rt == null)
+            {
+                Camera cam = Camera.main;
+                if (cam == null)
+                {
+                    Debug.LogWarning("[ObeliskClient] No passthrough camera and no main camera found.");
+                    return null;
+                }
+                rt = RenderTexture.GetTemporary(CapW, CapH, 0);
+                cam.targetTexture = rt;
+                cam.Render();
+                cam.targetTexture = null;
+            }
+
+            RenderTexture.active = rt;
+            _captureTex.ReadPixels(new Rect(0, 0, CapW, CapH), 0, 0);
+            _captureTex.Apply();
+            RenderTexture.active = null;
+            return _captureTex.EncodeToJPG(75);
+        }
+        finally
         {
-            Debug.LogWarning("[ObeliskClient] No passthrough camera and no main camera found.");
-            return null;
+            if (rt != null) RenderTexture.ReleaseTemporary(rt);
         }
-
-        RenderTexture fallbackRt = RenderTexture.GetTemporary(capW, capH, 0);
-        cam.targetTexture = fallbackRt;
-        cam.Render();
-        cam.targetTexture = null;
-
-        RenderTexture.active = fallbackRt;
-        Texture2D fallbackTex = new Texture2D(capW, capH, TextureFormat.RGB24, false);
-        fallbackTex.ReadPixels(new Rect(0, 0, capW, capH), 0, 0);
-        fallbackTex.Apply();
-        RenderTexture.active = null;
-        RenderTexture.ReleaseTemporary(fallbackRt);
-
-        byte[] fallbackJpg = fallbackTex.EncodeToJPG(75);
-        Destroy(fallbackTex);
-        return fallbackJpg;
     }
 
     // ── Spawn characters around the obelisk ───────────────────

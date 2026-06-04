@@ -280,7 +280,7 @@ public class ObjectDetector : MonoBehaviour
     [Header("Environment Sampling")]
     [SerializeField] private Unity.InferenceEngine.ModelAsset sentisModel;
     [SerializeField] private Unity.InferenceEngine.BackendType backend = Unity.InferenceEngine.BackendType.CPU;
-    [SerializeField] private float inferenceInterval = 0.1f;
+    [SerializeField] private float inferenceInterval = 0.5f;
     [SerializeField] private int kLayersPerFrame = 20;
 
     private PassthroughCameraAccess _cameraAccess;
@@ -402,7 +402,6 @@ public class ObjectDetector : MonoBehaviour
         }
 
         totalFramesProcessed++;
-        Debug.Log($"[SYSTEM] AI Frame Count: {totalFramesProcessed} | Time: {Time.time}");
 
         var tensorShape = new Unity.InferenceEngine.TensorShape(1, 3, InputSize, InputSize);
         var inputTensor = new Unity.InferenceEngine.Tensor<float>(tensorShape);
@@ -466,9 +465,11 @@ public class ObjectDetector : MonoBehaviour
                 filteredCoords.Add(h);
                 filteredLabels.Add(classId);
                 filteredConfs.Add(maxConf);
-
-                Debug.Log($"[YOLO] {(YOLOv9Labels)classId} ({maxConf * 100f:F0}%)");
             }
+
+            // Yield every 200 boxes to keep the main thread responsive
+            if (i % 200 == 0)
+                yield return null;
         }
 
         Debug.Log($"[YOLO] Frame done. Detections: {filteredLabels.Count}");

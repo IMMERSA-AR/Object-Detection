@@ -47,6 +47,17 @@ namespace LipSync
             1.5f,  // 14 ou
         };
 
+        [Header("Open-Mouth Caps")]
+        [Range(0f, 1f)]
+        [Tooltip("Scale the 'V_Lip_Open' blend shape (driven by TH/SS/nn/RR).\n" +
+                 "Lower it to reduce how far the mouth opens on those sounds.")]
+        public float vLipOpenScale = 1f;
+
+        [Range(0f, 1f)]
+        [Tooltip("Scale the 'Merged_Open_Mouth' blend shape (driven by kk/aa).\n" +
+                 "Lower it to reduce the wide jaw opening.")]
+        public float mergedOpenMouthScale = 1f;
+
         [Header("Smoothing Override")]
         [Tooltip("When PP (lip closure) probability exceeds this threshold,\n" +
                  "use the fast smoothing value instead — makes M/P/B snappier.")]
@@ -85,8 +96,11 @@ namespace LipSync
         // ── Private ───────────────────────────────────────────────────────
         private CustomLipSyncContext _context;
         private int[]                _bsIndices;
+        private int                  _vLipOpenIdx   = -1;  // cached index of "V_Lip_Open"
+        private int                  _mergedOpenIdx = -1;  // cached index of "Merged_Open_Mouth"
         private HashSet<int>         _managedIndices = new HashSet<int>();
         private Dictionary<int, float> _frameWeights = new Dictionary<int, float>();
+        private float                _baseSmoothingCache = -1f; // captured once from context
 
         // ── Unity lifecycle ───────────────────────────────────────────────
 
@@ -121,13 +135,15 @@ namespace LipSync
             float[] visemes = _context.CurrentVisemes;
 
             // ── PP fast-smoothing override ────────────────────────────────
-            // If the model is firing PP strongly right now, temporarily swap
-            // the context's smoothing to make the lip closure snappier.
-            // We read the RAW timeline value (before smoothing) via the
-            // public API already available.
-            float rawPP = _context.CurrentVisemes[1]; // smoothed PP
+            // Cache the inspector value on first use so we can restore it.
+            if (_baseSmoothingCache < 0f)
+                _baseSmoothingCache = _context.smoothing;
+
+            float rawPP = _context.CurrentVisemes[1];
             if (rawPP >= ppClosureThreshold)
                 _context.smoothing = Mathf.Lerp(_context.smoothing, ppFastSmoothing, 0.3f);
+            else
+                _context.smoothing = Mathf.Lerp(_context.smoothing, _baseSmoothingCache, 0.3f);
 
             // ── Accumulate blend-shape contributions (SUM strategy) ───────
             _frameWeights.Clear();
@@ -144,6 +160,12 @@ namespace LipSync
                 else
                     _frameWeights[bsIdx] = contribution;
             }
+
+            // ── Scale down the open-mouth shapes (independent caps) ───────
+            if (_vLipOpenIdx >= 0 && _frameWeights.ContainsKey(_vLipOpenIdx))
+                _frameWeights[_vLipOpenIdx] *= vLipOpenScale;
+            if (_mergedOpenIdx >= 0 && _frameWeights.ContainsKey(_mergedOpenIdx))
+                _frameWeights[_mergedOpenIdx] *= mergedOpenMouthScale;
 
             // ── Apply to mesh ─────────────────────────────────────────────
             foreach (int bsIdx in _managedIndices)
@@ -175,6 +197,10 @@ namespace LipSync
                     Debug.LogWarning($"[LipSync] Blend shape '{name}' not found on " +
                                      $"'{mesh.name}'. Viseme slot {i} will be silent.");
             }
+
+            // Cache the two open-mouth shapes so we can scale them down independently
+            _vLipOpenIdx   = mesh.GetBlendShapeIndex("V_Lip_Open");
+            _mergedOpenIdx = mesh.GetBlendShapeIndex("Merged_Open_Mouth");
 
             Debug.Log($"[LipSync] Cached {_managedIndices.Count} unique blend shapes on '{mesh.name}'.");
         }

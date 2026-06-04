@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using Meta.XR;
 using Meta.XR.MRUtilityKit;
@@ -21,8 +22,12 @@ public class ObeliskYOLODetector : MonoBehaviour
 
     [Header("YOLO Model")]
     [SerializeField] private ModelAsset sentisModel;
+#if UNITY_EDITOR
     [SerializeField] private BackendType backend = BackendType.CPU;
-    [SerializeField] private int layersPerFrame = 10;
+#else
+    [SerializeField] private BackendType backend = BackendType.GPUCompute;
+#endif
+    [SerializeField] private int layersPerFrame = 50;  // raise in Inspector if it was 10
 
     [Header("Detection")]
     [SerializeField] private bool autoStart = true;
@@ -41,8 +46,21 @@ public class ObeliskYOLODetector : MonoBehaviour
 
     [Header("Time Machine")]
     [SerializeField] private GameObject timeMachine;
-    [Tooltip("Distance (metres) to the right of the user the time machine spawns.")]
-    [SerializeField] private float timeMachineSideOffset = 1.0f;
+    [Tooltip("Distance (metres) IN FRONT of the user the time machine spawns.")]
+    [SerializeField] private float timeMachineForwardOffset = 2.5f;
+    [Tooltip("Vertical offset (metres) added on top of the floor height. " +
+             "Set to 0 if the prefab pivot is at its base; increase if the pivot " +
+             "is centred and the machine sinks into the floor.")]
+    [SerializeField] private float timeMachineHeightOffset = 0f;
+
+    [Header("Hassan")]
+    [Tooltip("Hassan character — placed to the RIGHT of the time machine (same " +
+             "camera-right axis used to place the time machine).")]
+    [SerializeField] private GameObject hassan;
+    [Tooltip("Distance (metres) further RIGHT of the time machine Hassan stands.")]
+    [SerializeField] private float hassanRightOffset = 1.0f;
+    [Tooltip("Yaw rotation (degrees) applied to Hassan when he spawns.")]
+    [SerializeField] private float hassanYaw = -90f;
 
     [Header("UI")]
     [SerializeField] private GameObject scanningUI;
@@ -93,6 +111,9 @@ public class ObeliskYOLODetector : MonoBehaviour
         if (timeMachine != null)
             timeMachine.SetActive(false);
 
+        if (hassan != null)
+            hassan.SetActive(false);
+
         if (characterRoot != null)
             characterRoot.gameObject.SetActive(false);
 
@@ -104,14 +125,11 @@ public class ObeliskYOLODetector : MonoBehaviour
 
         if (_envRaycast == null)
             Debug.LogWarning("[ObeliskYOLO] EnvironmentRaycastManager missing.");
-
-        LoadModel();
     }
 
     private void Start()
     {
-        if (autoStart)
-            StartDetection();
+        StartCoroutine(LoadModelAsync());
     }
 
     private void OnDestroy()
@@ -231,8 +249,6 @@ public class ObeliskYOLODetector : MonoBehaviour
             DumpRenderTexture(rt, Time.frameCount);
         }
 
-        _inputTensor ??= new Tensor<float>(new TensorShape(1, 3, InputSize, InputSize));
-
         TextureTransform texTransform = new TextureTransform()
             .SetDimensions(InputSize, InputSize)
             .SetTensorLayout(TensorLayout.NCHW);
@@ -300,50 +316,16 @@ public class ObeliskYOLODetector : MonoBehaviour
 
         for (int i = 0; i < numBoxes; i++)
         {
-            float x1, y1, x2, y2, conf, cls;
+            float conf = cpu[0, i, 4];
 
-            try
-            {
-                x1   = cpu[0, i, 0];
-                y1   = cpu[0, i, 1];
-                x2   = cpu[0, i, 2];
-                y2   = cpu[0, i, 3];
-                conf = cpu[0, i, 4];
-                cls  = cpu[0, i, 5];
-            }
-            catch (Exception e)
-            {
-                Debug.LogError($"[ObeliskYOLO] Tensor indexing failed at box {i}\n{e}");
-                break;
-            }
-
-            if (float.IsNaN(conf) || float.IsInfinity(conf))
-                continue;
-
-            conf = Mathf.Clamp01(conf);
-
-            if (i < 5)
-            {
-                Debug.Log(
-                    $"DET {i:D2} | CONF={conf:F3} | CLS={cls:F0} | " +
-                    $"XYXY=({x1:F1},{y1:F1}) -> ({x2:F1},{y2:F1})");
-            }
-
-            if (conf < confidenceThreshold)
-                continue;
-
-            if (conf <= bestConfPx)
+            if (float.IsNaN(conf) || float.IsInfinity(conf) || conf < confidenceThreshold || conf <= bestConfPx)
                 continue;
 
             bestConfPx = conf;
-            bestX1Px = x1;
-            bestY1Px = y1;
-            bestX2Px = x2;
-            bestY2Px = y2;
-
-            Debug.Log(
-                $"[ObeliskYOLO] NEW BEST -> CONF={bestConfPx:F3} " +
-                $"BOX_PX=({x1:F1},{y1:F1},{x2:F1},{y2:F1})");
+            bestX1Px   = cpu[0, i, 0];
+            bestY1Px   = cpu[0, i, 1];
+            bestX2Px   = cpu[0, i, 2];
+            bestY2Px   = cpu[0, i, 3];
         }
 
         cpu.Dispose();
@@ -387,13 +369,6 @@ public class ObeliskYOLODetector : MonoBehaviour
         // Final state diagnostic
         // ─────────────────────────────────────────────────────
 
-        Debug.Log(
-            $"[ObeliskYOLO] FINAL STATE: " +
-            $"conf={bestConf:F4} " +
-            $"center=({bestCx:F3},{bestCy:F3}) " +
-            $"size=({bestCw:F3}x{bestCh:F3}) " +
-            $"threshold={confidenceThreshold:F3}");
-
         // ─────────────────────────────────────────────────────
         // UI Debug Overlay
         // ─────────────────────────────────────────────────────
@@ -432,9 +407,7 @@ public class ObeliskYOLODetector : MonoBehaviour
         _lastCX = (_consecutiveHits == 1) ? bestCx : Mathf.Lerp(_lastCX, bestCx, 0.3f);
         _lastCY = (_consecutiveHits == 1) ? bestCy : Mathf.Lerp(_lastCY, bestCy, 0.3f);
 
-        Debug.Log(
-            $"[ObeliskYOLO] VALID DETECTION! " +
-            $"CONF={bestConf:F3} | HITS={_consecutiveHits}/{confirmFrames}");
+        Debug.Log($"[ObeliskYOLO] VALID DETECTION! CONF={bestConf:F3} | HITS={_consecutiveHits}/{confirmFrames}");
 
         if (_consecutiveHits >= confirmFrames)
         {
@@ -494,14 +467,38 @@ public class ObeliskYOLODetector : MonoBehaviour
 
         Debug.Log($"[ObeliskYOLO] Calculated Ground Position: {_obeliskBase}");
 
+        Vector3 timeMachinePos = GetTimeMachinePosition(_obeliskBase);
+
         if (timeMachine != null)
         {
-            timeMachine.transform.position = GetTimeMachinePosition(_obeliskBase);
+            timeMachine.transform.position = timeMachinePos;
+            timeMachine.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             timeMachine.SetActive(true);
+        }
+
+        // Hassan stands `hassanRightOffset` metres to the RIGHT of the time machine
+        // (computed from the time machine position, so they stay together). His feet
+        // sit on the floor (he doesn't inherit the machine's vertical offset).
+        if (hassan != null)
+        {
+            Vector3 hassanPos = timeMachinePos + GetCameraRight() * hassanRightOffset;
+            hassanPos.y = _obeliskBase.y;
+            hassan.transform.position = hassanPos;
+            hassan.transform.rotation = Quaternion.Euler(0f, hassanYaw, 0f);
+            hassan.SetActive(true);
         }
 
         if (characterRoot != null)
             characterRoot.gameObject.SetActive(false);
+    }
+
+    /// <summary>Flattened camera-right vector (XZ plane) — the "right of the user" axis.</summary>
+    private Vector3 GetCameraRight()
+    {
+        if (Camera.main == null) return Vector3.right;
+        Vector3 r = Camera.main.transform.right;
+        r.y = 0f;
+        return r.normalized;
     }
 
     public void ToggleCharacters()
@@ -522,15 +519,52 @@ public class ObeliskYOLODetector : MonoBehaviour
 
             characterRoot.position = pos;
             characterRoot.rotation = Quaternion.identity;
-            characterRoot.gameObject.SetActive(true);
 
-            Debug.Log($"[ObeliskYOLO] Characters active at world coordinate: {pos}");
+            // Reveal characters ONE PER FRAME instead of all 8 in a single frame.
+            // Activating 8 skinned characters at once causes a big hitch (animator
+            // init + GPU upload + first-render shader work all land together).
+            // Spreading it over a few frames turns one giant spike into tiny ones.
+            if (_revealRoutine != null) StopCoroutine(_revealRoutine);
+            _revealRoutine = StartCoroutine(StaggeredReveal());
+
+            Debug.Log($"[ObeliskYOLO] Characters revealing at world coordinate: {pos}");
         }
         else
         {
+            if (_revealRoutine != null) { StopCoroutine(_revealRoutine); _revealRoutine = null; }
             characterRoot.gameObject.SetActive(false);
             Debug.Log("[ObeliskYOLO] Characters hidden.");
         }
+    }
+
+    private Coroutine _revealRoutine;
+
+    // Activates the character root with its children hidden, then switches each
+    // character on across consecutive frames to spread the activation cost.
+    private IEnumerator StaggeredReveal()
+    {
+        int n = characterRoot.childCount;
+        var children = new Transform[n];
+        var wanted   = new bool[n];
+
+        // Remember which children were meant to be visible, then hide them all.
+        for (int i = 0; i < n; i++)
+        {
+            children[i] = characterRoot.GetChild(i);
+            wanted[i]   = children[i].gameObject.activeSelf;
+            children[i].gameObject.SetActive(false);
+        }
+
+        characterRoot.gameObject.SetActive(true);
+
+        // Turn on one character per frame.
+        for (int i = 0; i < n; i++)
+        {
+            if (wanted[i]) children[i].gameObject.SetActive(true);
+            yield return null;
+        }
+
+        _revealRoutine = null;
     }
 
     private Vector3 FindObeliskBase()
@@ -565,62 +599,126 @@ public class ObeliskYOLODetector : MonoBehaviour
         if (Camera.main == null)
             return obeliskBase;
 
-        // Spawn the time machine `timeMachineSideOffset` metres to the
-        // RIGHT OF THE USER (the camera), at the floor height determined
-        // from the obelisk-base raycast.
-        Vector3 camPos   = Camera.main.transform.position;
-        Vector3 camRight = Camera.main.transform.right;
-
-        // Flatten the right vector to the XZ plane so the time machine sits
-        // upright at floor level regardless of how the user's head is tilted.
-        camRight.y = 0f;
-        camRight.Normalize();
+        Vector3 camPos     = Camera.main.transform.position;
+        Vector3 camForward = Camera.main.transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
 
         return new Vector3(
-            camPos.x + camRight.x * timeMachineSideOffset,
-            obeliskBase.y,
-            camPos.z + camRight.z * timeMachineSideOffset);
+            camPos.x + camForward.x * timeMachineForwardOffset,
+            obeliskBase.y + timeMachineHeightOffset,
+            camPos.z + camForward.z * timeMachineForwardOffset);
     }
+
+    [Header("Floor")]
+    [Tooltip("Trust the FloorLevel tracking origin and place the obelisk base / time machine / " +
+             "characters on the floor at 'Floor Y' (the floor's world Y, 0 with FloorLevel " +
+             "tracking + rig at origin) instead of the MRUK/depth/cam-1.7 guessing that was " +
+             "sinking everything to mid-height.")]
+    [SerializeField] private bool useFloorLevelOrigin = true;
+    [Tooltip("World Y of the real floor. Leave 0 for FloorLevel tracking; nudge if your rig isn't at world origin.")]
+    [SerializeField] private float floorY = 0f;
 
     private float GetFloorY(Vector3 xzPos)
     {
-        float camY = Camera.main != null
-            ? Camera.main.transform.position.y
-            : 1.7f;
+        // FloorLevel tracking origin puts the real floor at a known plane, so trust that
+        // instead of the MRUK/depth/cam-1.7 chain that was sinking everything to mid-height.
+        if (useFloorLevelOrigin)
+            return floorY;
 
-        return camY - 1.7f;
+        // 1. MRUK — the real, scanned floor.
+        try
+        {
+            if (MRUK.Instance != null)
+            {
+                MRUKRoom room = MRUK.Instance.GetCurrentRoom();
+                if (room != null)
+                {
+                    // 1a. Cast straight down at the obelisk's XZ and let MRUK
+                    //     return the exact floor surface height there.
+                    Vector3 origin = new Vector3(xzPos.x, xzPos.y + 2f, xzPos.z);
+                    if (room.Raycast(new Ray(origin, Vector3.down), 5f, out RaycastHit rayHit, out MRUKAnchor hitAnchor)
+                        && hitAnchor != null && hitAnchor.HasLabel("FLOOR"))
+                    {
+                        Debug.Log($"[ObeliskYOLO] Floor Y from MRUK raycast: {rayHit.point.y:F3} m");
+                        return rayHit.point.y;
+                    }
+
+                    // 1b. Fall back to the room's floor anchor height (floor is flat).
+                    if (room.FloorAnchors != null && room.FloorAnchors.Count > 0)
+                    {
+                        float fy = room.FloorAnchors[0].transform.position.y;
+                        Debug.Log($"[ObeliskYOLO] Floor Y from MRUK floor anchor: {fy:F3} m");
+                        return fy;
+                    }
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning("[ObeliskYOLO] MRUK floor lookup failed: " + e.Message);
+        }
+
+        // 2. Environment depth raycast straight down.
+        if (_envRaycast != null)
+        {
+            Vector3 camPos = Camera.main != null ? Camera.main.transform.position : Vector3.up * 1.7f;
+            Vector3 origin = new Vector3(xzPos.x, camPos.y, xzPos.z);
+            if (_envRaycast.Raycast(new Ray(origin, Vector3.down), out var hit, 3f)
+                && Vector3.Dot(hit.normal, Vector3.up) > 0.7f)
+            {
+                Debug.Log($"[ObeliskYOLO] Floor Y from depth raycast: {hit.point.y:F3} m");
+                return hit.point.y;
+            }
+        }
+
+        // 3. Heuristic fallback: assume eyes ~1.7 m above the floor.
+        float camYFallback = Camera.main != null ? Camera.main.transform.position.y : 1.7f;
+        float fallback = camYFallback - 1.7f;
+        Debug.LogWarning($"[ObeliskYOLO] Floor Y fallback (cam - 1.7): {fallback:F3} m");
+        return fallback;
     }
 
     // ─────────────────────────────────────────────────────────
     // Model Loading
     // ─────────────────────────────────────────────────────────
 
-    private void LoadModel()
+    private IEnumerator LoadModelAsync()
     {
         if (sentisModel == null)
         {
             Debug.LogError("[ObeliskYOLO] No model assigned.");
-            return;
+            yield break;
         }
 
-        try
+        // Load model bytes on a background thread so the main thread stays responsive
+        Model loadedModel = null;
+        Exception loadError = null;
+        var task = Task.Run(() =>
         {
-            _model = ModelLoader.Load(sentisModel);
-            _engine = new Worker(_model, backend);
-            _modelLoaded = true;
+            try { loadedModel = ModelLoader.Load(sentisModel); }
+            catch (Exception e) { loadError = e; }
+        });
 
-            Debug.Log($"[ObeliskYOLO] Model engine initialized successfully via {backend}.");
+        while (!task.IsCompleted)
+            yield return null;
 
-            // Diagnostic: log model I/O shapes
-            foreach (var input in _model.inputs)
-                Debug.Log($"[ObeliskYOLO] Model IN: {input.name} shape={input.shape}");
-
-            foreach (var outputDesc in _model.outputs)
-                Debug.Log($"[ObeliskYOLO] Model OUT: {outputDesc.name}");
-        }
-        catch (Exception e)
+        if (loadError != null)
         {
-            Debug.LogError($"[ObeliskYOLO] Critical failure loading NN model:\n{e}");
+            Debug.LogError($"[ObeliskYOLO] Critical failure loading NN model:\n{loadError}");
+            yield break;
         }
+
+        // Worker must be created on the main thread
+        _model = loadedModel;
+        _engine = new Worker(_model, backend);
+        // Pre-allocate the input tensor once so RunInference never allocates mid-frame
+        _inputTensor = new Tensor<float>(new TensorShape(1, 3, InputSize, InputSize));
+        _modelLoaded = true;
+
+        Debug.Log($"[ObeliskYOLO] Model loaded via {backend}.");
+
+        if (autoStart)
+            StartDetection();
     }
 }
