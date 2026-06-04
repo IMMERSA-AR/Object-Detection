@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!137 &21148226 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 950315656668134822, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
-  m_PrefabInstance: {fileID: 1641843649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &37266640
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 2181142109175761509, guid: 9affa8a3efa80404da4c179140b4b691, type: 3}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!114 &66809139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2104,6 +2101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 6102649312023527673, guid: ddae4174fc82e7d46a17a4baa4725316, type: 3}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!114 &76791367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,6 +2547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 7400000, guid: 7736c8889b85d4841a3e44286acf679a, type: 2}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!114 &275520969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2926,6 +2927,8 @@ MonoBehaviour:
   statusHUD: {fileID: 0}
   dumpInputFrames: 0
   dumpEveryNFrames: 120
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!4 &445009760
 Transform:
   m_ObjectHideFlags: 0
@@ -3269,6 +3272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 4103990813465633847, guid: ddae4174fc82e7d46a17a4baa4725316, type: 3}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!114 &589695826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3455,6 +3460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 6102649312023527673, guid: 9affa8a3efa80404da4c179140b4b691, type: 3}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!114 &634867072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3997,7 +4004,7 @@ MonoBehaviour:
   cues:
   - time: 13
     image: {fileID: 21300000, guid: 876c3fefeccaf7640aca5fb45a1bdb52, type: 3}
-    videoClip: {fileID: 32900000, guid: 58e3791d4874c31458667fa106400b7c, type: 3}
+    videoClip: {fileID: 32900000, guid: a2faa34c611cfe5449321d24650d520c, type: 3}
     videoSpeed: 0.9
     fadeIn: 0.6
     year: 1816
@@ -4009,8 +4016,8 @@ MonoBehaviour:
     year: 1816
   - time: 29
     image: {fileID: 21300000, guid: db42ac0496821684bb03a8655ae12c7b, type: 3}
-    videoClip: {fileID: 32900000, guid: 1609f7bc4d3f0c24782024c16cf54720, type: 3}
-    videoSpeed: 1
+    videoClip: {fileID: 32900000, guid: 508d7ae4b4bea38448d24de3cfcb34e3, type: 3}
+    videoSpeed: 0.75
     fadeIn: 0.6
     year: 1834
   - time: 37
@@ -4021,7 +4028,7 @@ MonoBehaviour:
     year: 1834
   - time: 43
     image: {fileID: 21300000, guid: 29b81b1b5aa7eea4297e2a86e762d359, type: 3}
-    videoClip: {fileID: 32900000, guid: 0c50e965434f85740a24804dc5540796, type: 3}
+    videoClip: {fileID: 32900000, guid: 3033001d661fb834db7364b339103d8f, type: 3}
     videoSpeed: 0.5
     fadeIn: 0.6
     year: 1868
@@ -7782,9 +7789,17 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2146894923780836710, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2186781336919993261, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323703522854571254, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3627671646073782873, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       propertyPath: m_CastShadows
@@ -7834,6 +7849,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4828160238302030075, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       propertyPath: m_Name
       value: Hassan
@@ -7854,6 +7873,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6770170694864756985, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7243562409098888988, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -7870,22 +7893,10 @@ PrefabInstance:
       addedObject: {fileID: 1641843659}
     - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1641843658}
-    - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1641843657}
     - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1641843656}
-    - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1641843655}
-    - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1641843654}
-    - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1641843653}
     - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1641843652}
@@ -7927,62 +7938,10 @@ MonoBehaviour:
   onArrived:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1641843653
+--- !u!114 &1641843653 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641843651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c944a6cc0b5a854b995908f1f44d29a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
-  faceMesh: {fileID: 21148226}
-  mouthExaggeration: 0.8
-  perVisemeMultiplier:
-  - 1
-  - 2
-  - 1.5
-  - 1
-  - 1
-  - 1
-  - 1.2
-  - 1
-  - 1
-  - 1
-  - 1.2
-  - 1
-  - 1
-  - 1.8
-  - 1.5
-  vLipOpenScale: 1
-  mergedOpenMouthScale: 1
-  ppClosureThreshold: 0.25
-  ppFastSmoothing: 0.15
-  visemeBlendShapeNames:
-  - V_None
-  - V_Explosive
-  - V_Dental_Lip
-  - V_Lip_Open
-  - V_Open
-  - Merged_Open_Mouth
-  - V_Affricate
-  - V_Lip_Open
-  - V_Lip_Open
-  - V_Lip_Open
-  - Merged_Open_Mouth
-  - Mouth_Drop_Lower
-  - Mouth_Drop_Lower
-  - V_Tight_O
-  - V_Tight
-  showDebugOverlay: 1
---- !u!114 &1641843654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2323703522854571254, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+  m_PrefabInstance: {fileID: 1641843649}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641843651}
   m_Enabled: 1
@@ -7990,20 +7949,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
-  modelAsset: {fileID: 5022602860645237092, guid: 54ab34241fad313418b64725eed6f591, type: 3}
-  backendType: 512
-  smoothing: 0.55
-  ppRescueBlend: 0.35
-  ppRescueThreshold: 0.12
-  useTextGuidedMFCC: 1
-  testTranscript: 
-  textGuidedStrength: 0.7
-  textGuidedSmoothWindow: 4
-  showModeLabel: 1
-  testClip: {fileID: 0}
-  playTestClipOnStart: 0
-  playbackSpeed: 1
-  logTimings: 1
+--- !u!82 &1641843654 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6770170694864756985, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+  m_PrefabInstance: {fileID: 1641843649}
+  m_PrefabAsset: {fileID: 0}
 --- !u!120 &1641843655
 LineRenderer:
   serializedVersion: 3
@@ -8114,27 +8064,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!65 &1641843656
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641843651}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1641843657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8152,110 +8081,13 @@ MonoBehaviour:
   role: mohandeskhana-student
   statusText: {fileID: 1319750059}
   animator: {fileID: 0}
-  customLipSyncContext: {fileID: 1641843654}
+  customLipSyncContext: {fileID: 1641843653}
   emotionController: {fileID: 0}
   rightController: {fileID: 0}
-  npcCollider: {fileID: 1641843656}
+  npcCollider: {fileID: 0}
   laserPointer: {fileID: 1641843655}
-  audioSource: {fileID: 1641843658}
+  audioSource: {fileID: 1641843654}
   speakerSource: {fileID: 2143525016}
---- !u!82 &1641843658
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641843651}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1641843659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8269,6 +8101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 7400000, guid: 9f45ab469e1986e4c9ea35cfb043af6e, type: 2}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!95 &1641843660 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1460707613227065994, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
@@ -8597,6 +8431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayAnimationOnStart
   clip: {fileID: 1710609447137295473, guid: ddae4174fc82e7d46a17a4baa4725316, type: 3}
+  useFloorLevelOrigin: 1
+  floorY: 0
 --- !u!114 &1824364692
 MonoBehaviour:
   m_ObjectHideFlags: 0
