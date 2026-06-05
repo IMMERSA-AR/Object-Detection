@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 32064,
+        "processId": 23346,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,115 +11,565 @@
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 18712,
+            "processId": 6925,
             "exited": true
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 28449,
+            "processId": 17972,
             "exited": true
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 9157,
+            "processId": 20894,
             "exited": true
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 16510,
+            "processId": 7094,
             "exited": true
         },
         {
             "deviceId": "340YC10GCK09SX",
-            "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 25284,
+            "name": "com.oculus.vrshell",
+            "processId": 2831,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 5731,
+            "processId": 13153,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 12204,
+            "processId": 15384,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 16720,
+            "processId": 22026,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 22650,
+            "processId": 24954,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 7330,
+            "processId": 6524,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 26190,
+            "processId": 8409,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 14447,
+            "processId": 30579,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 19676,
+            "processId": 4187,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 23975,
+            "processId": 13615,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 7307,
+            "processId": 12080,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 16140,
+            "processId": 13962,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 2581,
+            "processId": 15605,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 28355,
+            "processId": 17758,
             "exited": false
         },
         {
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
-            "processId": 32064,
+            "processId": 20382,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 22960,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 25832,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 31513,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 6696,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 13954,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 24416,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 7110,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 9530,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 16559,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 22151,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23324,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 7050,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 11046,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27347,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 3082,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 12946,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 20970,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 3769,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 20542,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23269,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 25283,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 28924,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 722,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 4601,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 5696,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 9031,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 10845,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 7990,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 3547,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 16951,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27346,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 15510,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 19055,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 24525,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 29392,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 31193,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 16437,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 21864,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 9080,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 11520,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 1133,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 6448,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 17757,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23776,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 32359,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 3554,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 10819,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 13108,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 14455,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 20230,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 20285,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 29102,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 7121,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 8810,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 14842,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 8142,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 13058,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 18630,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 24583,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27571,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 7340,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 24133,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 28045,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 30061,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23422,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 27380,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 29805,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 13532,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 24165,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 31488,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 8741,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 14094,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 18419,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 21018,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 23346,
             "exited": false
         }
     ],
@@ -177,7 +627,7 @@
         "AutoCapture": true
     },
     "m_FilterOptions": {
-        "m_Filter": "Butt",
+        "m_Filter": "voi",
         "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },
