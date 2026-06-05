@@ -7906,6 +7906,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1641843662}
+    - targetCorrespondingSourceObject: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1641843663}
   m_SourcePrefab: {fileID: 100100000, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
 --- !u!4 &1641843650 stripped
 Transform:
@@ -8084,7 +8087,7 @@ MonoBehaviour:
   customLipSyncContext: {fileID: 1641843653}
   emotionController: {fileID: 0}
   rightController: {fileID: 0}
-  npcCollider: {fileID: 0}
+  npcCollider: {fileID: 1641843663}
   laserPointer: {fileID: 1641843655}
   audioSource: {fileID: 1641843654}
   speakerSource: {fileID: 2143525016}
@@ -8146,6 +8149,27 @@ MonoBehaviour:
   blinkDuration: 0.09
   blendNameLeft: 
   blendNameRight: 
+--- !u!65 &1641843663
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641843651}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1729693877
 GameObject:
   m_ObjectHideFlags: 0

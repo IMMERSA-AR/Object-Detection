@@ -685,10 +685,10 @@ PrefabInstance:
       addedObject: {fileID: 6026302955490528404}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73b190d8db8932b489f5131158ba6fa0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1060311104426947032}
+      addedObject: {fileID: 61293156219942881}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73b190d8db8932b489f5131158ba6fa0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1761717455959567819}
+      addedObject: {fileID: 1610615585543648541}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: 73b190d8db8932b489f5131158ba6fa0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3860905918081976492}
@@ -4803,10 +4803,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
   role: 1
-  idleClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
-  talkingClip: {fileID: 7400000, guid: 7c48fc0884cb3ac41833ea4e863f50fe, type: 2}
+  idleClip: {fileID: 7400000, guid: d09467bccff47b346b9fa6da5676b469, type: 2}
+  talkingClip: {fileID: 5528149604612604457, guid: ab37c3e3cdbfe524c86c3b5fca92c8e8, type: 3}
   standingAfterLectureClip: {fileID: 7400000, guid: 58be8b94b354b714bb832cf3d27902e6, type: 2}
   walkingClip: {fileID: 0}
+  sittingClipVariants: []
+  sittingSwitchInterval: 8
   paceDistance: 0.6
   paceSpeed: 0.5
   lookSpeed: 1.2
@@ -4820,6 +4822,7 @@ MonoBehaviour:
   headLookWeight: 0
   headMaxAngle: 70
   headLookSpeed: 4
+  crossfadeDuration: 0.25
 --- !u!82 &6026302955490528404
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4917,7 +4920,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1060311104426947032
+--- !u!114 &61293156219942881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4926,24 +4929,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 5185450414936038345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContext
-  audioSource: {fileID: 3741039624004264798, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
-  provider: 1
-  enableAcceleration: 1
-  enableKeyboardInput: 0
-  enableTouchInput: 0
-  audioLoopback: 0
-  loopbackKey: 108
-  showVisemes: 0
-  debugVisemesKey: 100
-  skipAudioSource: 0
-  gain: 1
-  debugLaughterKey: 104
-  showLaughter: 0
-  laughterScore: 0
---- !u!114 &-1761717455959567819
+  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
+  modelAsset: {fileID: 5022602860645237092, guid: f65607335b3d74348adb7d1270085aad, type: 3}
+  backendType: 512
+  smoothing: 0.55
+  ppRescueBlend: 0.35
+  ppRescueThreshold: 0.12
+  useTextGuidedMFCC: 1
+  testTranscript: My mama bakes warm bread, and Papa pours more coffee for me.
+  textGuidedStrength: 0.7
+  textGuidedSmoothWindow: 4
+  showModeLabel: 1
+  testClip: {fileID: 0}
+  playTestClipOnStart: 0
+  playbackSpeed: 1
+  logTimings: 0
+--- !u!114 &1610615585543648541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4952,19 +4955,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 5185450414936038345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c944a6cc0b5a854b995908f1f44d29a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContextMorphTarget
-  skinnedMeshRenderer: {fileID: 4816385997478066844, guid: 250fad6855d40a84a9b0e7fc59c83456, type: 3}
-  visemeToBlendTargets: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e000000
-  enableVisemeTestKeys: 0
+  m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncMorphTarget
+  faceMesh: {fileID: 227674835030770725}
   mouthExaggeration: 1.5
-  visemeTestKeys: 600000000900000071000000770000006500000072000000740000007900000075000000690000006f000000700000005b0000005d0000005c000000
-  laughterKey: 301
-  laughterBlendTarget: 15
-  laughterThreshold: 0.5
-  laughterMultiplier: 1.5
-  smoothAmount: 70
+  perVisemeMultiplier:
+  - 1
+  - 2
+  - 1.5
+  - 1
+  - 1
+  - 1
+  - 1.2
+  - 1
+  - 1
+  - 1
+  - 1.2
+  - 1
+  - 1
+  - 1.8
+  - 1.5
+  vLipOpenScale: 1
+  mergedOpenMouthScale: 1
+  ppClosureThreshold: 0.25
+  ppFastSmoothing: 0.15
+  visemeBlendShapeNames:
+  - V_None
+  - V_Explosive
+  - V_Dental_Lip
+  - V_Lip_Open
+  - V_Open
+  - Merged_Open_Mouth
+  - V_Affricate
+  - V_Lip_Open
+  - V_Lip_Open
+  - V_Lip_Open
+  - Merged_Open_Mouth
+  - Mouth_Drop_Lower
+  - Mouth_Drop_Lower
+  - V_Tight_O
+  - V_Tight
+  showDebugOverlay: 1
 --- !u!4 &5207942505216405037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 248074432326912181, guid: 73b190d8db8932b489f5131158ba6fa0, type: 3}

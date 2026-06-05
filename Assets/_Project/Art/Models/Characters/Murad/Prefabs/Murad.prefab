@@ -547,6 +547,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5301076498473630320}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 959885029011199110}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8062099933693035434}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -679,7 +685,7 @@ MonoBehaviour:
   characterId: s1
   role: mohandeskhana-student
   statusText: {fileID: 0}
-  karimAnimator: {fileID: 0}
+  animator: {fileID: 0}
   customLipSyncContext: {fileID: 30779773708188026}
   emotionController: {fileID: 0}
   rightController: {fileID: 0}
@@ -847,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
-  modelAsset: {fileID: 5022602860645237092, guid: 6c2df77293e16eb4d8cf817639fa2a3a, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: f65607335b3d74348adb7d1270085aad, type: 3}
   backendType: 512
   smoothing: 0.55
   ppRescueBlend: 0.35
@@ -974,6 +980,44 @@ MonoBehaviour:
   eyeLookWeight: 1
   maxEyeLookAngle: 25
   eyeLookSpeed: 10
+--- !u!114 &959885029011199110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf59c481378634240903b6da352b902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCBlinking
+  minInterval: 2.5
+  maxInterval: 6
+  blinkDuration: 0.09
+  blendNameLeft: 
+  blendNameRight: 
+--- !u!114 &8062099933693035434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c925dc7a9522043a3c978949a11812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadLookAtUser
+  target: {fileID: 0}
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  headWeight: 0.7
+  neckWeight: 0.4
+  maxAngle: 70
+  trackSpeed: 5
+  bodyYawOffset: 0
+  active: 1
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
