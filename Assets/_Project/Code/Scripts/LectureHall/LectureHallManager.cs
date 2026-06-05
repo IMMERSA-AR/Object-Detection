@@ -1378,11 +1378,14 @@ public class LectureHallManager : MonoBehaviour
             // ── Step 4: Stop doctor's lip-sync source and reset mouth to neutral ─
             if (doctorLipSyncAudio != null) doctorLipSyncAudio.Stop();
 
-            // Disable the context so it stops updating visemes and the mouth closes.
+            // Zero out all viseme weights BEFORE disabling so CustomLipSyncMorphTarget
+            // writes 0 to every blend shape and the mouth closes cleanly. Without this
+            // the last frame's visemes are frozen and the doctor's mouth stays open.
             if (doctorLipSyncCtx != null)
             {
+                doctorLipSyncCtx.ResetVisemes();
                 doctorLipSyncCtx.enabled = false;
-                Debug.Log("[LectureHall] Doctor CustomLipSyncContext disabled — mouth reset to neutral.");
+                Debug.Log("[LectureHall] Doctor CustomLipSyncContext reset + disabled — mouth closed.");
             }
         }
 
