@@ -96,7 +96,7 @@ public partial class LectureHallManager : MonoBehaviour
 
         if (chairPositions == null || chairPositions.Count == 0)
         {
-            Debug.LogWarning("[LectureHall] No chairs found");
+            Debug.LogWarning("[LectureHall] can not find any chair");
             StartLecture(config, onComplete);
             return;
         }
@@ -108,7 +108,7 @@ public partial class LectureHallManager : MonoBehaviour
         var frontChairs = FilterChairsInFront(chairPositions, cam.position, forward);
         if (frontChairs.Count == 0)
         {
-            Debug.LogWarning("[LectureHall] No chairs in front of user");
+            Debug.LogWarning("[LectureHall] There is not chair in front of the user");
             frontChairs = chairPositions;
         }
 

@@ -108,10 +108,10 @@ public partial class LectureHallManager
         ctrl.Init(NPCRole.Student, lookTarget);
         var studentSMRs = npc.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true);
         Bounds expandedBounds = new Bounds(Vector3.zero, Vector3.one * 4f);
-        foreach (var smr in studentSMRs)
+        foreach (var skinMeshRenderer in studentSMRs)
         {
-            smr.updateWhenOffscreen = true;
-            smr.localBounds = expandedBounds;
+            skinMeshRenderer.updateWhenOffscreen = true;
+            skinMeshRenderer.localBounds = expandedBounds;
         }
         if (studentSMRs.Length == 0)
             Debug.LogWarning($"Lecture Hall:  character has no skinned mesh renderer");
@@ -228,8 +228,8 @@ public partial class LectureHallManager
             ctrl.Init(NPCRole.Doctor, facingTarget);
         }
 
-        foreach (var smr in doctor.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true))
-            smr.updateWhenOffscreen = true;
+        foreach (var skinMeshRenderer in doctor.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true))
+            skinMeshRenderer.updateWhenOffscreen = true;
 
         EnsureBlockerCollider(doctor);
         _spawnedNPCs.Add(doctor);
@@ -308,8 +308,8 @@ public partial class LectureHallManager
                         muradAnim.SetBool("IsSitting", true);
                     }
 
-                    foreach (var smr in murad.GetComponentsInChildren<SkinnedMeshRenderer>(true))
-                        smr.updateWhenOffscreen = true;
+                    foreach (var skinMeshRenderer in murad.GetComponentsInChildren<SkinnedMeshRenderer>(true))
+                        skinMeshRenderer.updateWhenOffscreen = true;
 
                     EnsureBlockerCollider(murad);
                     _spawnedNPCs.Add(murad);

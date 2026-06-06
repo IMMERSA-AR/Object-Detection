@@ -358,7 +358,6 @@ public class PanelDetector : MonoBehaviour
         if (panelNPCCtrl != null)
         {
             panelNPCCtrl.Init(entry.idleClip, entry.talkingClip);
-            panelNPCCtrl.SetPanelPosition(panelWorldPos);
         }
         else
         {

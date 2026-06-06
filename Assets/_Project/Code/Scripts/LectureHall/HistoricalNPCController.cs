@@ -81,7 +81,7 @@ public class HistoricalNPCController : MonoBehaviour
     private Transform _neckBone;
     private Vector3 _headLookTarget;
     private bool _hasHeadLookTarget;
-    private Quaternion _headSmoothRot;
+    private Quaternion _headSmoothRotation;
     private bool _headInitialized;
     private Coroutine _sittingSwitchCoroutine;
 
@@ -95,7 +95,7 @@ public class HistoricalNPCController : MonoBehaviour
 
         if (_animator != null && _animator.runtimeAnimatorController != null)
         {
-            Debug.Log($"[NPC] {gameObject.name}: removing animator controller");
+            Debug.Log($"NPC:  {gameObject.name}: removing animator controller");
             _animator.runtimeAnimatorController = null;
         }
 
@@ -118,16 +118,11 @@ public class HistoricalNPCController : MonoBehaviour
 
             if (_headBone == null)
             {
-                // var sb = new System.Text.StringBuilder();
-                // sb.AppendLine($"[NPC] Head bone is not found");
-                // foreach (Transform t in GetComponentsInChildren<Transform>())
-                //     sb.AppendLine($"  {t.name}");
-                // Debug.LogWarning(sb.ToString());
-                Debug.LogWarning($"[NPC] Head bone not found.");
+                Debug.LogWarning($"NPC:  Head bone not found.");
             }
             else
             {
-                Debug.Log($"[NPC]  Head bone = '{_headBone.name}'  " + $"Neck bone = '{(_neckBone != null ? _neckBone.name : "Not Found")}'");
+                Debug.Log($"NPC:   Head bone = '{_headBone.name}'  " + $"Neck bone = '{(_neckBone != null ? _neckBone.name : "Not Found")}'");
             }
 
             if (facingTarget.HasValue)
@@ -154,7 +149,7 @@ public class HistoricalNPCController : MonoBehaviour
             gameObject.AddComponent<NPCBlinking>();
 
         AnimationTransition(idleClip, "idle");
-        Debug.Log($"[NPC] {gameObject.name} is defined as {role}");
+        Debug.Log($"NPC:  {gameObject.name} is defined as {role}");
     }
 
     private void Update()
@@ -196,17 +191,17 @@ public class HistoricalNPCController : MonoBehaviour
         {
             AnimationClip clip = talkingClip != null ? talkingClip : idleClip;
             AnimationTransition(clip, "talking");
-            Debug.Log($"[NPC] Doctor is giving a lecture.");
+            Debug.Log($"NPC:  Doctor is giving a lecture.");
         }
         else
         {
             AnimationClip standClip = standingAfterLectureClip != null ? standingAfterLectureClip : idleClip;
 
             if (standingAfterLectureClip == null)
-                Debug.LogWarning($"[NPC] {gameObject.name}: Can not find standing after lecture clip.");
+                Debug.LogWarning($"NPC:  {gameObject.name}: Can not find standing after lecture clip.");
 
             AnimationTransition(standClip, "standing idle");
-            Debug.Log($"[NPC] Lecture finished. Now doctor is standing.");
+            Debug.Log($"NPC:  Lecture finished. Now doctor is standing.");
         }
     }
 
@@ -226,7 +221,7 @@ public class HistoricalNPCController : MonoBehaviour
             return;
         if (!_headInitialized)
         {
-            _headSmoothRot = _headBone.rotation;
+            _headSmoothRotation = _headBone.rotation;
             _headInitialized = true;
         }
         ApplyHeadLookAt();
@@ -255,11 +250,11 @@ public class HistoricalNPCController : MonoBehaviour
 
         Quaternion animRot = _headBone.rotation;
         Quaternion desired = Quaternion.AngleAxis(clampedAngle, Vector3.up) * animRot;
-        _headSmoothRot = Quaternion.Slerp(_headSmoothRot, desired, Time.deltaTime * headLookSpeed);
-        _headBone.rotation = Quaternion.Slerp(animRot, _headSmoothRot, headLookWeight);
+        _headSmoothRotation = Quaternion.Slerp(_headSmoothRotation, desired, Time.deltaTime * headLookSpeed);
+        _headBone.rotation = Quaternion.Slerp(animRot, _headSmoothRotation, headLookWeight);
 
         if (_neckBone != null)
-            _neckBone.rotation = Quaternion.Slerp(_neckBone.rotation, _headSmoothRot, headLookWeight * 0.4f);
+            _neckBone.rotation = Quaternion.Slerp(_neckBone.rotation, _headSmoothRotation, headLookWeight * 0.4f);
     }
 
     // Allow multiple sitting options 
@@ -276,7 +271,7 @@ public class HistoricalNPCController : MonoBehaviour
 
         if (pool.Count < 2)
         {
-            Debug.Log($"[NPC] '{name}': The sitting options are less than 2 so there is no switching.");
+            Debug.Log($"NPC:  '{name}': The sitting options are less than 2 so there is no switching.");
             return;
         }
 
@@ -293,7 +288,7 @@ public class HistoricalNPCController : MonoBehaviour
             return;
         StopCoroutine(_sittingSwitchCoroutine);
         _sittingSwitchCoroutine = null;
-        Debug.Log($"[NPC] '{name}': sitting variation stopped.");
+        Debug.Log($"NPC:  '{name}': sitting variation stopped.");
     }
 
     private IEnumerator SittingVariationLoop(System.Collections.Generic.List<AnimationClip> pool)
@@ -344,7 +339,7 @@ public class HistoricalNPCController : MonoBehaviour
         output.SetSourcePlayable(_mixer);
         _graph.Play();
         _graphReady = true;
-        Debug.Log($"[NPC] {gameObject.name}: PlayableGraph, the starting clip is:'{initialClip.name}'.");
+        Debug.Log($"NPC:  {gameObject.name}: PlayableGraph, the starting clip is:'{initialClip.name}'.");
     }
 
     // Transferring Animations 
@@ -358,14 +353,14 @@ public class HistoricalNPCController : MonoBehaviour
         }
         if (targetClip == null)
         {
-            Debug.LogWarning($"[NPC] {gameObject.name}: Can't find the clip");
+            Debug.LogWarning($"NPC:  {gameObject.name}: Can't find the clip");
             return;
         }
 
         if (!_graphReady)
         {
             BuildGraph(targetClip);
-            Debug.Log($"[NPC] {gameObject.name} playing {label}: '{targetClip.name}'");
+            Debug.Log($"NPC:  {gameObject.name} playing {label}: '{targetClip.name}'");
             return;
         }
 
@@ -454,9 +449,9 @@ public class HistoricalNPCController : MonoBehaviour
         breathPhaseOffset = Random.Range(0f, Mathf.PI * 2f);
 
         if (_headBone == null)
-            Debug.LogWarning($"[NPC] {gameObject.name}: can't find head bone");
+            Debug.LogWarning($"NPC:  {gameObject.name}: can't find head bone");
         else
-            Debug.Log($"[NPC] {gameObject.name} head bone is found");
+            Debug.Log($"NPC:  {gameObject.name} head bone is found");
 
         _headLookTarget = initialLookTarget;
         _hasHeadLookTarget = true;
@@ -491,7 +486,7 @@ public class HistoricalNPCController : MonoBehaviour
         {
             _graph.Destroy();
             _graphReady = false;
-            Debug.Log($"[NPC] {gameObject.name}: PlayableGraph stopped");
+            Debug.Log($"NPC:  {gameObject.name}: PlayableGraph stopped");
         }
     }
 
@@ -516,7 +511,7 @@ public class HistoricalNPCController : MonoBehaviour
     {
         if (!_graphReady) return;
         _slotA.SetSpeed(1f);
-        Debug.Log($"[NPC] {gameObject.name}: PlayableGraph resumed");
+        Debug.Log($"NPC:  {gameObject.name}: PlayableGraph resumed");
     }
 
     public float GetRemainingPlayableTime(float holdNormalised)
