@@ -5,91 +5,42 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using TMPro;
 
-/// <summary>
-/// Audio-driven storytelling: as a narration clip plays, pictures fade in one by
-/// one inside rounded-edge frames arranged in a circle around the user.
-///
-/// • Frames are built procedurally at runtime (rounded-rect sprite generated in
-///   code) — no prefab or sprite asset required.
-/// • Each picture's reveal is synced to the AUDIO playback head (narration.time),
-///   so it stays aligned even if frames are dropped.
-/// • Frames billboard to face the user.
-///
-/// Setup: drop this on an empty GameObject, assign an AudioSource + clip, and fill
-/// the Cues list (image + time). Call Play() (or enable autoPlay).
-/// </summary>
 public class AudioStoryCircle : MonoBehaviour
 {
     [System.Serializable]
     public class StoryCue
     {
-        [Tooltip("Seconds into the narration when this picture appears.")]
+
         public float time;
-
-        [Tooltip("The picture to show. Ignored if a Video Clip is assigned below.")]
         public Sprite image;
-
-        [Tooltip("Optional: play a short video in this frame INSTEAD of the static image. " +
-                 "Keep it to ONE video in the whole story and short (~2s) — the Quest's " +
-                 "hardware decoder can only handle one stream comfortably.")]
         public VideoClip videoClip;
-
-        [Tooltip("Playback speed for this cue's Video Clip. 1 = normal, 0.5 = half speed, " +
-                 "2 = double. Ignored for image cues.")]
         public float videoSpeed = 1f;
-
-        [Tooltip("Fade-in duration in seconds.")]
         public float fadeIn = 0.6f;
-
-        [Tooltip("Optional caption shown BELOW the picture (e.g. the year \"1918\"). " +
-                 "Leave empty for no caption.")]
         public string year;
     }
 
     [Header("Audio")]
     [SerializeField] private AudioSource narration;
     [SerializeField] private AudioClip storyClip;
-    [Tooltip("Play immediately on Start. Leave OFF to trigger it later (e.g. when " +
-             "the user passes through the time machine).")]
     [SerializeField] private bool autoPlay = false;
-    [Tooltip("Seconds to wait for head tracking before placing the circle. " +
-             "Set to 0 when triggered by the portal (tracking is already established).")]
     [SerializeField] private float startupDelay = 0.5f;
 
     [Header("Story")]
-    [Tooltip("Pictures + their timestamps. Order doesn't matter; sorted by time at runtime.")]
     [SerializeField] private StoryCue[] cues;
 
     [Header("Circle Layout")]
-    [Tooltip("Radius of the circle of frames around the user (metres).")]
     [SerializeField] private float radius = 2.0f;
-    [Tooltip("Height of the frames relative to the headset (metres). 0 = eye level.")]
     [SerializeField] private float heightOffset = 0f;
-    [Tooltip("Angle (degrees) of the FIRST frame, measured clockwise from straight ahead.")]
     [SerializeField] private float startAngle = 0f;
-    [Tooltip("Total angular spread of all frames (360 = full circle around the user).")]
     [SerializeField] private float arcSpan = 360f;
-    [Tooltip("Rotate the ring anticlockwise by HALF the spacing so the user's forward sits " +
-             "BETWEEN the first two frames instead of dead-ahead of the first one. Use this " +
-             "when frames 1 & 2 are a matched pair (e.g. Citadel + Mohammed Ali) you want both " +
-             "visible at the start.")]
     [SerializeField] private bool centerForwardBetweenFirstTwo = false;
 
     [Header("Frame Appearance")]
-    [Tooltip("Target HEIGHT of every frame (metres). Width is derived from each " +
-             "picture's aspect ratio so all frames share a consistent visual weight " +
-             "while keeping the correct shape (portrait / landscape).")]
     [SerializeField] private float frameHeight = 0.8f;
-    [Tooltip("Clamp on how wide/tall a frame may get relative to its height. Kept " +
-             "wide so frames match their images and fill completely (no white gaps). " +
-             "x = min aspect, y = max aspect.")]
     [SerializeField] private Vector2 aspectClamp = new Vector2(0.3f, 3.2f);
-    [Tooltip("Corner radius in pixels of the 256px-tall generated texture (≈ % of height).")]
     [SerializeField] private float cornerRadius = 26f;
-    [Tooltip("Border (matte) thickness around the picture (metres).")]
     [SerializeField] private float borderThickness = 0.03f;
     [SerializeField] private Color borderColor = Color.white;
-    [Tooltip("If true, each frame turns to face the user.")]
     [SerializeField] private bool faceUser = true;
 
     [Header("Year Caption")]
@@ -159,10 +110,6 @@ public class AudioStoryCircle : MonoBehaviour
         if (autoPlay) Play();
     }
 
-    /// <summary>
-    /// Pre-creates the rounded sprite and all frame GameObjects (hidden).
-    /// Runs once, off the critical path, so Play() does no heavy work.
-    /// </summary>
     private void Prewarm()
     {
         if (_prewarmed) return;

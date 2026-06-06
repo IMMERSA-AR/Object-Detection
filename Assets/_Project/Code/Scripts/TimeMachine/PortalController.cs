@@ -8,7 +8,6 @@ public class SH_PortalController : MonoBehaviour
 
     void Start()
     {
-        // Start the portal at zero size so it's "closed"
         transform.localScale = Vector3.zero;
         StartCoroutine(OpenPortal());
     }
@@ -19,7 +18,6 @@ public class SH_PortalController : MonoBehaviour
         while (timer < 1f)
         {
             timer += Time.deltaTime * openSpeed;
-            // Smoothly grows the portal from 0 to its full size
             transform.localScale = Vector3.Lerp(Vector3.zero, targetScale, timer);
             yield return null;
         }

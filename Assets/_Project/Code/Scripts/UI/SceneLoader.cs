@@ -25,9 +25,6 @@ public class SceneLoader : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void Update()
     {
-        // QUEST APPS BEHAVIOR: 
-        // If the player's pointer ray is actively hovering over this card
-        // AND they press the physical 'A' button on the Right Controller
         if (isHovered && toggleComponent != null && toggleComponent.interactable)
         {
             if (OVRInput.GetDown(OVRInput.Button.One))
@@ -37,7 +34,6 @@ public class SceneLoader : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
     }
 
-    // This catches Meta's default Pointer Ray Click (Trigger button)
     public void LoadTargetScene(bool isOn)
     {
         if (isOn)
@@ -53,13 +49,11 @@ public class SceneLoader : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         SceneManager.LoadScene(finalSceneName);
     }
 
-    // Track when the player's controller ray points at the button
     public void OnPointerEnter(PointerEventData eventData)
     {
         isHovered = true;
     }
 
-    // Track when the player's controller ray points away
     public void OnPointerExit(PointerEventData eventData)
     {
         isHovered = false;

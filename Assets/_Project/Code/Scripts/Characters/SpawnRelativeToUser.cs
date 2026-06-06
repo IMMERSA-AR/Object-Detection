@@ -2,13 +2,8 @@ using UnityEngine;
 
 public class SpawnRelativeToUser : MonoBehaviour
 {
-    [Tooltip("Metres forward (+) or back (-) from the headset.")]
     public float forwardOffset = 0f;
-
-    [Tooltip("Metres right (+) or left (-) from the headset.")]
     public float rightOffset = 0f;
-
-    [Tooltip("Metres up (+) or down (-) from the headset.")]
     public float verticalOffset = -1.7f;
 
     private void Start()

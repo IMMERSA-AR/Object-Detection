@@ -1,74 +1,70 @@
-Shader "Custom/SH_Glow"
+Shader "Custom/Time Machine/SH_Glow_Rewritten"
 {
     Properties
     {
         _GlowColor ("Glow Color", Color) = (0.5, 0.0, 1.0, 1.0)
         _Intensity ("Glow Intensity", Range(0, 10)) = 1.5
-        _Falloff ("Softness", Range(0.1, 5.0)) = 1.5
+        _Softness ("Softness", Range(0.1, 5.0)) = 1.5
     }
 
     SubShader
     {
-        // "IgnoreProjector" is good practice for VR transparents
-        Tags { "RenderType"="Transparent" "Queue"="Transparent" "IgnoreProjector"="True" }
-        
-        // Additive Blending (Adds light to the background)
-        Blend One One 
-        ZWrite Off
-        Cull Off
+        Tags { "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline" }
 
         Pass
         {
-            CGPROGRAM
+            Cull Off
+            ZWrite Off
+            Blend One One
+
+            HLSLPROGRAM
+
             #pragma vertex vert
             #pragma fragment frag
-            #include "UnityCG.cginc"
 
-            struct appdata
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+            struct Attributes
             {
-                float4 vertex : POSITION;
+                float4 positionOS : POSITION;
                 float2 uv : TEXCOORD0;
             };
 
-            struct v2f
+            struct Varyings
             {
+                float4 positionHCS : SV_POSITION;
                 float2 uv : TEXCOORD0;
-                float4 vertex : SV_POSITION;
             };
 
-            float4 _GlowColor;
-            float _Intensity;
-            float _Falloff;
+            CBUFFER_START(UnityPerMaterial)
+                float4 _GlowColor;
+                float _Intensity;
+                float _Softness;
+            CBUFFER_END
 
-            v2f vert (appdata v)
+            Varyings vert(Attributes IN)
             {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = v.uv;
-                return o;
+                Varyings OUT;
+                OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
+                OUT.uv = IN.uv;
+                return OUT;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            half4 frag(Varyings IN) : SV_Target
             {
-                // 1. Center the UV coordinates to (0,0)
-                float2 uv = i.uv - 0.5;
-                
-                // 2. Measure distance from the center
-                float dist = length(uv);
+                float2 centeredUV = IN.uv - 0.5;
+                float r = length(centeredUV);
 
-                // 3. Create the radial gradient
-                // Multiply distance by 2 so the fade hits pure black exactly at the quad's edges
-                float glowMask = saturate(1.0 - (dist * 2.0));
+                float glowMask = saturate(1.0 - (r * 2.0)); // multiply distance by 2 so the fade hits pure black exactly at the quad's edges
 
-                // 4. Bend the gradient curve to make it look softer and more natural
-                glowMask = pow(glowMask, _Falloff);
+                glowMask = pow(glowMask, _Softness); // bend the gradient curve to make it look softer and more natural
 
-                // 5. Apply color and intensity
-                float3 finalColor = _GlowColor.rgb * glowMask * _Intensity;
+                float pulse = 1.0 + sin(_Time.y * 3.0) * 0.2; // fluctuating pulse
+                float3 color = _GlowColor.rgb * glowMask * _Intensity * pulse;
 
-                return float4(finalColor, 1.0);
+                return float4(color, 1.0);
             }
-            ENDCG
+            ENDHLSL
         }
     }
 }
