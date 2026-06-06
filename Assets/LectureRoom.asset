@@ -26,16 +26,16 @@ MonoBehaviour:
     that logic established, let us define the explicit mathematical structure of
     the Fourier series itself.\"\r\n"
   mainMuradPrefab: {fileID: 597805309522532133, guid: 94e8d3f92bf9eaf4f8e99d960b386a2b, type: 3}
-  studentPrefab: {fileID: 597805309522532133, guid: 6d45e4b3dba653e42882b654664b9fe8, type: 3}
+  studentPrefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
   studentPrefabVariants:
   - prefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
-    sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
+    sittingClip: {fileID: 7400000, guid: d7bd3b5027b353e4da87baea7ae8cdd4, type: 2}
   - prefab: {fileID: 1142660484036570145, guid: f16551fa53f6cc140b421bfef826d5de, type: 3}
-    sittingClip: {fileID: 7400000, guid: d489dd98b3ef55e4da1853f059556ade, type: 2}
+    sittingClip: {fileID: 7400000, guid: d7bd3b5027b353e4da87baea7ae8cdd4, type: 2}
   - prefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
     sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
   studentSittingClip: {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}
-  muradSittingClip: {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
+  muradSittingClip: {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}
   doctorPrefab: {fileID: 5185450414936038345, guid: 5bc77d30d56f4b54b8dffe52c85e0a54, type: 3}
   doctorIdleClip: {fileID: 0}
   doctorTalkingClip: {fileID: 0}

@@ -121,33 +121,33 @@ public class PanelNPCController : MonoBehaviour
     // ── Private — animation ───────────────────────────────────────────────────
     private Animator _animator;
 
-    private PlayableGraph            _graph;
-    private AnimationMixerPlayable   _mixer;
-    private AnimationClipPlayable    _slotA;
-    private AnimationClipPlayable    _slotB;
-    private AnimationClip            _clipA;
-    private AnimationClip            _clipB;
-    private Coroutine                _fadeCoroutine;
-    private bool                     _graphReady;
+    private PlayableGraph _graph;
+    private AnimationMixerPlayable _mixer;
+    private AnimationClipPlayable _slotA;
+    private AnimationClipPlayable _slotB;
+    private AnimationClip _clipA;
+    private AnimationClip _clipB;
+    private Coroutine _fadeCoroutine;
+    private bool _graphReady;
 
     // ── Private — panel gesture ───────────────────────────────────────────────
-    private Vector3   _panelWorldPos;
-    private bool      _hasPanelPos;
+    private Vector3 _panelWorldPos;
+    private bool _hasPanelPos;
     private Coroutine _gestureCoroutine;
 
     // ── Private — look-at ────────────────────────────────────────────────────
-    private Transform  _camera;
-    private Transform  _headBone;
-    private Transform  _neckBone;
-    private Transform  _leftEyeBone;
-    private Transform  _rightEyeBone;
+    private Transform _camera;
+    private Transform _headBone;
+    private Transform _neckBone;
+    private Transform _leftEyeBone;
+    private Transform _rightEyeBone;
     private Quaternion _headSmoothRot;
     private Quaternion _eyeSmoothRot;
-    private bool       _lookAtInitialized;
+    private bool _lookAtInitialized;
 
     // Null  → look at the user (camera position).
     // Non-null → look at this world position (used during panel-gesture phase).
-    private Vector3?   _lookAtOverride;
+    private Vector3? _lookAtOverride;
 
     // ── Unity lifecycle ───────────────────────────────────────────────────────
 
@@ -168,7 +168,7 @@ public class PanelNPCController : MonoBehaviour
     /// </summary>
     public void Init(AnimationClip overrideIdle = null, AnimationClip overrideTalking = null)
     {
-        if (overrideIdle    != null) idleClip    = overrideIdle;
+        if (overrideIdle != null) idleClip = overrideIdle;
         if (overrideTalking != null) talkingClip = overrideTalking;
 
         if (_animator != null)
@@ -187,7 +187,7 @@ public class PanelNPCController : MonoBehaviour
     public void SetPanelPosition(Vector3 worldPos)
     {
         _panelWorldPos = worldPos;
-        _hasPanelPos   = true;
+        _hasPanelPos = true;
     }
 
     private void Update()
@@ -214,8 +214,8 @@ public class PanelNPCController : MonoBehaviour
         // pop from identity to the animated pose.
         if (!_lookAtInitialized)
         {
-            _headSmoothRot     = _headBone.rotation;
-            _eyeSmoothRot      = _leftEyeBone != null ? _leftEyeBone.rotation
+            _headSmoothRot = _headBone.rotation;
+            _eyeSmoothRot = _leftEyeBone != null ? _leftEyeBone.rotation
                                                       : _headBone.rotation;
             _lookAtInitialized = true;
         }
@@ -230,7 +230,7 @@ public class PanelNPCController : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (_fadeCoroutine   != null) StopCoroutine(_fadeCoroutine);
+        if (_fadeCoroutine != null) StopCoroutine(_fadeCoroutine);
         if (_gestureCoroutine != null) StopCoroutine(_gestureCoroutine);
         if (_graph.IsValid()) _graph.Destroy();
     }
@@ -324,10 +324,10 @@ public class PanelNPCController : MonoBehaviour
 
     private void SetupLookAt()
     {
-        _camera       = Camera.main?.transform;
-        _headBone     = FindDeepChild(transform, headBoneName);
-        _neckBone     = FindDeepChild(transform, neckBoneName);
-        _leftEyeBone  = FindDeepChild(transform, leftEyeBoneName);
+        _camera = Camera.main?.transform;
+        _headBone = FindDeepChild(transform, headBoneName);
+        _neckBone = FindDeepChild(transform, neckBoneName);
+        _leftEyeBone = FindDeepChild(transform, leftEyeBoneName);
         _rightEyeBone = FindDeepChild(transform, rightEyeBoneName);
 
         // Log what was found so the user can correct bone names in the Inspector.
@@ -344,8 +344,8 @@ public class PanelNPCController : MonoBehaviour
         {
             Debug.Log($"[PanelNPCController] '{name}' look-at bones — " +
                       $"Head: '{_headBone.name}'  " +
-                      $"Neck: '{(_neckBone     != null ? _neckBone.name     : "NOT FOUND")}'  " +
-                      $"L.Eye: '{(_leftEyeBone  != null ? _leftEyeBone.name  : "NOT FOUND")}'  " +
+                      $"Neck: '{(_neckBone != null ? _neckBone.name : "NOT FOUND")}'  " +
+                      $"L.Eye: '{(_leftEyeBone != null ? _leftEyeBone.name : "NOT FOUND")}'  " +
                       $"R.Eye: '{(_rightEyeBone != null ? _rightEyeBone.name : "NOT FOUND")}'");
         }
     }
@@ -366,19 +366,19 @@ public class PanelNPCController : MonoBehaviour
         if (toTarget.sqrMagnitude < 0.001f) return;
 
         // Signed horizontal angle between body forward and target direction.
-        Vector3 bodyFwd    = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
-        Vector3 targetFlat = new Vector3(toTarget.x,          0f, toTarget.z).normalized;
-        float   angleY     = Vector3.SignedAngle(bodyFwd, targetFlat, Vector3.up);
+        Vector3 bodyFwd = new Vector3(transform.forward.x, 0f, transform.forward.z).normalized;
+        Vector3 targetFlat = new Vector3(toTarget.x, 0f, toTarget.z).normalized;
+        float angleY = Vector3.SignedAngle(bodyFwd, targetFlat, Vector3.up);
 
         // Clamp so the head doesn't turn past a natural range.
         float clampedAngle = Mathf.Clamp(angleY, -maxHeadLookAngle, maxHeadLookAngle);
 
         // Apply the horizontal rotation ON TOP OF the animation's bone rotation.
-        Quaternion animRot  = _headBone.rotation;
-        Quaternion desired  = Quaternion.AngleAxis(clampedAngle, Vector3.up) * animRot;
+        Quaternion animRot = _headBone.rotation;
+        Quaternion desired = Quaternion.AngleAxis(clampedAngle, Vector3.up) * animRot;
 
         // Smooth toward the desired rotation.
-        _headSmoothRot  = Quaternion.Slerp(_headSmoothRot, desired,
+        _headSmoothRot = Quaternion.Slerp(_headSmoothRot, desired,
                                            Time.deltaTime * headLookSpeed);
 
         // Blend between pure animation and the look-at rotation.
@@ -403,8 +403,8 @@ public class PanelNPCController : MonoBehaviour
 
         // Reference eye position: midpoint of whichever eyes are present.
         Vector3 eyeCenter = Vector3.zero;
-        int     count     = 0;
-        if (_leftEyeBone  != null) { eyeCenter += _leftEyeBone.position;  count++; }
+        int count = 0;
+        if (_leftEyeBone != null) { eyeCenter += _leftEyeBone.position; count++; }
         if (_rightEyeBone != null) { eyeCenter += _rightEyeBone.position; count++; }
         eyeCenter /= count;
 
@@ -417,7 +417,7 @@ public class PanelNPCController : MonoBehaviour
         _eyeSmoothRot = Quaternion.Slerp(_eyeSmoothRot, desired,
                                          Time.deltaTime * eyeLookSpeed);
 
-        RotateEyeBone(_leftEyeBone,  _eyeSmoothRot);
+        RotateEyeBone(_leftEyeBone, _eyeSmoothRot);
         RotateEyeBone(_rightEyeBone, _eyeSmoothRot);
     }
 
@@ -449,7 +449,7 @@ public class PanelNPCController : MonoBehaviour
 
         _mixer = AnimationMixerPlayable.Create(_graph, 2);
 
-        AnimationClip placeholder = idleClip    != null ? idleClip
+        AnimationClip placeholder = idleClip != null ? idleClip
                                   : talkingClip != null ? talkingClip : null;
 
         if (placeholder == null)

@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "340YC10GCK09SX",
         "name": "com.UnityTechnologies.com.unity.template.urpblank",
-        "processId": 23346,
+        "processId": 13092,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -570,6 +570,18 @@
             "deviceId": "340YC10GCK09SX",
             "name": "com.UnityTechnologies.com.unity.template.urpblank",
             "processId": 23346,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 2362,
+            "exited": false
+        },
+        {
+            "deviceId": "340YC10GCK09SX",
+            "name": "com.UnityTechnologies.com.unity.template.urpblank",
+            "processId": 13092,
             "exited": false
         }
     ],

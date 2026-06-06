@@ -550,9 +550,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 959885029011199110}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8062099933693035434}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -937,6 +934,7 @@ MonoBehaviour:
   walkingClip: {fileID: 0}
   sittingClipVariants:
   - {fileID: -203655887218126122, guid: 39d11422ed3310f4d96a812bfe70234e, type: 3}
+  - {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}
   sittingSwitchInterval: 15
   paceDistance: 0.6
   paceSpeed: 0.5
@@ -992,32 +990,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf59c481378634240903b6da352b902f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCBlinking
-  minInterval: 2.5
-  maxInterval: 6
-  blinkDuration: 0.09
-  blendNameLeft: 
-  blendNameRight: 
---- !u!114 &8062099933693035434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c925dc7a9522043a3c978949a11812, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HeadLookAtUser
-  target: {fileID: 0}
-  headBoneName: CC_Base_Head
-  neckBoneName: CC_Base_NeckTwist01
-  headWeight: 0.7
-  neckWeight: 0.4
-  maxAngle: 70
-  trackSpeed: 5
-  bodyYawOffset: 0
-  active: 1
+  MinInterval: 2.5
+  MaxInterval: 6
+  BlinkDuration: 0.09
+  LeftEyeBlendName: 
+  RightEyeBlendName: 
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

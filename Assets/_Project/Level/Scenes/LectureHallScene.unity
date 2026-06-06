@@ -316,8 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fed02d1e0459b4cb6afed768d5aa76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExperienceManager
-  experiences:
-  - {fileID: 11400000, guid: b96d3f2606bf1ab469ff623a6427994d, type: 2}
+  experience: {fileID: 11400000, guid: b96d3f2606bf1ab469ff623a6427994d, type: 2}
   lectureHallManager: {fileID: 2112026628}
   mrukWaitTimeout: 10
   mrukFloorWaitTimeout: 5
@@ -1018,7 +1017,6 @@ GameObject:
   - component: {fileID: 282470191}
   - component: {fileID: 282470195}
   - component: {fileID: 282470196}
-  - component: {fileID: 282470198}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1083,23 +1081,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: meta.xr.mrutilitykit::Meta.XR.EnvironmentRaycastManager
   CustomTrackingSpace: {fileID: 0}
---- !u!114 &282470198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282470184}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6cc973cf8ce57140ab9994e748d1a71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MuradController
-  animator: {fileID: 0}
-  moveSpeed: 1.5
-  stoppingDistance: 0.6
-  rotationSpeed: 8
-  seatHeightOffset: 0
 --- !u!1 &283990867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,81 +2851,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 845213262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &551216384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 551216387}
-  - component: {fileID: 551216386}
-  - component: {fileID: 551216385}
-  m_Layer: 0
-  m_Name: '[BuildingBlock] Spatial Anchor Core'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &551216385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551216384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af86c86a626dba44ba7d1d4ebd5bdad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onAnchorCreateCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  _onAnchorsLoadCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  _onAnchorsEraseAllCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  _onAnchorEraseCompleted:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &551216386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551216384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
-  blockId: a383f5ea-3856-4c23-a11c-7fdbb9408035
-  instanceId: 6483b8be-70c8-4acc-b34f-a59ac4dbc5aa
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 
-    _installationVariants: []
---- !u!4 &551216387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551216384}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594259740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,13 +3069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9364bfb18a8b1e648811b947189fcba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PassthroughVintageFilter
-  saturation: -0.35
-  brightness: -0.15
-  contrast: 0.2
-  redScale: 1.35
-  greenScale: 1
-  blueScale: 0.45
-  _layer: {fileID: 0}
 --- !u!1 &606640898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3886,8 +3785,6 @@ MonoBehaviour:
   leftController: {fileID: 0}
   laserPointer: {fileID: 0}
   maxPointDistance: 10
-  normalColor: {r: 1, g: 1, b: 1, a: 0.2}
-  highlightColor: {r: 0.26, g: 0.72, b: 0.51, a: 0.9}
 --- !u!114 &869916842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9550,7 +9447,6 @@ GameObject:
   - component: {fileID: 2112026628}
   - component: {fileID: 2112026627}
   - component: {fileID: 2112026629}
-  - component: {fileID: 2112026630}
   m_Layer: 0
   m_Name: LectureHallManager
   m_TagString: Untagged
@@ -9691,34 +9587,31 @@ MonoBehaviour:
   doctorBehindDeskOffset: 0.5
   doctorInFrontOfScreenOffset: 0.8
   sittingYOffset: 0
-  chairScanMinHeight: 0.3
-  chairScanMaxHeight: 0.7
+  chairMinHeight: 0.3
+  chairMaxHeight: 0.7
   chairScanGridStep: 0.08
   chairScanClusterRadius: 0.35
-  chairScanMinHits: 4
+  minHitsForChair: 4
   chairScanForwardRange: 6
   chairScanSideRange: 4
-  deskMinAboveFloor: 0.65
-  deskMaxAboveFloor: 0.95
+  deskMinHeight: 0.65
+  deskMaxHeight: 0.95
   deskGridStep: 0.1
   deskClusterRadius: 0.3
-  deskMinHits: 6
+  minHitsForDesk: 6
   spawnAtSeatSurface: 0
   flipChairForward: 0
   flipMuradFacing: 0
   muradSeatOffset: {x: 0, y: 0, z: -0.1}
-  muradSitHoldNormalised: 0
   chairAnchorMatchRadius: 0.5
   chairBackrestProbeHeight: 0.75
-  lectureLightsRoot: {fileID: 0}
   lectureAudioSource: {fileID: 2112026627}
   greetingAudioClip: {fileID: 8300000, guid: 19fce4bd88db425429e85da65e354423, type: 3}
   greetingAudioTranscript: "\"Ahlan wa sahlan! I am Murad, a student here at the
     school. It is not often we receive visitors from\u2026 another time. Please,
     ask me anything you wish to know.\""
-  detectionAudioSource: {fileID: 2112026629}
-  lectureUI: {fileID: 0}
-  muradFinalDistance: 1.2
+  chairDetectionAudioSource: {fileID: 2112026629}
+  muradMinDistanceFromUser: 1.2
 --- !u!82 &2112026629
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9816,40 +9709,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2112026630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112026625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b6717d5d8ff4fa43b91d6f237959b8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LectureHallProps
-  podiumPrefab: {fileID: 0}
-  chalkboardPrefab: {fileID: 0}
-  chandelierPrefab: {fileID: 0}
-  portraitPrefab: {fileID: 0}
-  clockPrefab: {fileID: 0}
-  podiumForwardOffset: 0.6
-  podiumYOffset: 0
-  chalkboardBehindOffset: 0.2
-  chalkboardSideOffset: 1.2
-  chalkboardYOffset: -0.2
-  chalkboardYRotationOffset: -90
-  chandelierHeight: 2.2
-  chandelierRotationOffset: {x: -90, y: 0, z: 0}
-  chandelierScale: 1
-  chalkboardScale: 0.2
-  podiumScale: 1
-  portraitScale: 1
-  clockScale: 1
-  wallOffsetDistance: 0.05
-  portraitHeight: 1.6
-  clockHeight: 1.8
-  maxPortraits: 2
 --- !u!1 &2130832667
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,6 +9877,5 @@ SceneRoots:
   - {fileID: 207542422}
   - {fileID: 56200035}
   - {fileID: 2112026626}
-  - {fileID: 551216387}
   - {fileID: 1802581395}
   - {fileID: 283990874}

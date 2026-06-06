@@ -10968,7 +10968,8 @@ MonoBehaviour:
   standingAfterLectureClip: {fileID: 0}
   walkingClip: {fileID: 0}
   sittingClipVariants:
-  - {fileID: 7400000, guid: c211e4f27b337374da1bd24f6074696a, type: 2}
+  - {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
+  - {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}
   sittingSwitchInterval: 10
   paceDistance: 0.6
   paceSpeed: 0.5
