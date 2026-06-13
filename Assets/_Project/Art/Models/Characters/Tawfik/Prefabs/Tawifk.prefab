@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
-  modelAsset: {fileID: 5022602860645237092, guid: 6c2df77293e16eb4d8cf817639fa2a3a, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: 62b20b0eb29c715488f08bf242ef17ee, type: 3}
   backendType: 512
   smoothing: 0.55
   ppRescueBlend: 0.35

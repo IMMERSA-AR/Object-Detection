@@ -34,6 +34,11 @@ public class VoiceAPIController : MonoBehaviour
     [Tooltip("Drag the GameObject that has EmotionController attached (usually the NPC face mesh root).")]
     public EmotionController emotionController;
 
+    [Header("Inactivity Timer")]
+    [Tooltip("Seconds of silence before the restart dialog is triggered")]
+    public float inactivityTimeout = 20f;
+    public System.Action onInactivityTimeout;
+
     [Header("Quest AR/VR Interaction")]
     [Tooltip("Drag the RightControllerAnchor from your OVRCameraRig here")]
     public Transform rightController;
@@ -50,8 +55,10 @@ public class VoiceAPIController : MonoBehaviour
     public AudioSource audioSource; // Mourad's main source (for lips)
     public AudioSource speakerSource; // The new child source (for your ears)
     private bool isRecording  = false;
-    private bool _wasSpeaking = false;  // tracks audio state to fire Neutral only once
-    private string _lastReplyText = null;  // latest NPC reply text (for text-guided lip-sync)
+    private bool _wasSpeaking = false;
+    private string _lastReplyText = null;
+    private float _inactivityTimer;
+    private bool _inactivityActive = false;
 
     // WebSocket variables
     private ClientWebSocket websocket;
@@ -61,6 +68,12 @@ public class VoiceAPIController : MonoBehaviour
     // Audio Queue for playing incoming mini-chunks smoothly
     private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
     private readonly Queue<Action> mainThreadActions = new Queue<Action>();
+    private void OnEnable()
+    {
+        _inactivityTimer = inactivityTimeout;
+        _inactivityActive = true;
+    }
+
     void Start()
     {
         if (statusText == null)
@@ -69,8 +82,7 @@ public class VoiceAPIController : MonoBehaviour
 
             if (statusText != null)
             {
-                statusText.text = "Hello!";
-                statusText.color = Color.white;
+                statusText.text = "";
             }
             else
             {
@@ -171,7 +183,7 @@ public class VoiceAPIController : MonoBehaviour
             Debug.Log("📨 Session ACK: " + startAck);
 
             _sessionActive = true;
-            UpdateUI("Hello!", Color.white);
+            UpdateUI("", Color.white);
             Debug.Log("✅ Session ready — WebSocket will stay open across interactions.");
         }
         catch (Exception e)
@@ -187,6 +199,19 @@ public class VoiceAPIController : MonoBehaviour
         {
             while (mainThreadActions.Count > 0)
                 mainThreadActions.Dequeue().Invoke();
+        }
+
+        // Inactivity timer — fires OnQAComplete if user is idle too long
+        if (_inactivityActive && !isRecording && (audioQueue.Count == 0) && !audioSource.isPlaying)
+        {
+            _inactivityTimer -= Time.deltaTime;
+            if (_inactivityTimer <= 0f)
+            {
+                _inactivityActive = false;
+                var cb = onInactivityTimeout;
+                onInactivityTimeout = null;
+                cb?.Invoke();
+            }
         }
 
         if (audioSource == null)
@@ -233,6 +258,11 @@ public class VoiceAPIController : MonoBehaviour
             {
                 animator.SetBool("IsTalking",  true);
                 animator.SetBool("IsThinking", false);
+                Debug.Log("[VoiceAPI] IsTalking=true, IsThinking=false");
+            }
+            else
+            {
+                Debug.LogError("[VoiceAPI] animator is NULL when trying to set IsTalking.");
             }
         }
 
@@ -265,6 +295,7 @@ public class VoiceAPIController : MonoBehaviour
     public void ToggleRecording()
     {
         Debug.Log("SUCCESS: NPC was clicked!");
+        _inactivityTimer = inactivityTimeout; // reset on any interaction
 
         if (!isRecording)
         {
@@ -286,8 +317,7 @@ public class VoiceAPIController : MonoBehaviour
             // INSTANT UI UPDATE: User clicked again to stop
             if (statusText != null)
             {
-                statusText.text = "Thinking...";
-                statusText.color = Color.yellow;
+                statusText.text = "";
             }
         }
     }
@@ -347,8 +377,23 @@ public class VoiceAPIController : MonoBehaviour
 
             // --- END OF UTTERANCE ---
             Debug.Log("📤 Sending end_of_utterance...");
-            UpdateUI("Thinking...", Color.yellow);
-            if (animator != null) animator.SetBool("IsThinking", true);
+            UpdateUI("", Color.white);
+            if (animator != null)
+            {
+                animator.SetBool("IsThinking", true);
+                Debug.Log($"[VoiceAPI] IsThinking=true set on animator: {animator.gameObject.name}");
+
+                // Check if IsThinking parameter actually exists
+                bool hasParam = false;
+                for (int p = 0; p < animator.parameterCount; p++)
+                    if (animator.parameters[p].name == "IsThinking") { hasParam = true; break; }
+                if (!hasParam)
+                    Debug.LogError("[VoiceAPI] IsThinking parameter does NOT exist in the Animator! Add it in the Animator window.");
+            }
+            else
+            {
+                Debug.LogError("[VoiceAPI] animator is NULL — IsThinking cannot be set. Check MuradController auto-assignment.");
+            }
             await SendTextMsg(JsonUtility.ToJson(new EndUtteranceMsg()));
 
             // --- RECEIVE RESPONSE ---
@@ -393,7 +438,8 @@ public class VoiceAPIController : MonoBehaviour
                 if (response.type == "tts_done")
                 {
                     Debug.Log($"🏁 TTS done! Chunks received: {audioChunksReceived}. WebSocket staying open.");
-                    UpdateUI("Hello!", Color.white);
+                    _inactivityTimer = inactivityTimeout; // reset after Murad finishes speaking
+                    UpdateUI("", Color.white);
                     // Clear the text-guided sequence so any stray audio that arrives
                     // before the NEXT reply_text_done falls back to raw MFCC instead of
                     // parking on this reply's leftover (exhausted) visemes.

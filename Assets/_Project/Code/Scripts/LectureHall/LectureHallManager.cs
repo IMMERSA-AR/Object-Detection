@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using Meta.XR;
 
 public partial class LectureHallManager : MonoBehaviour
@@ -40,12 +42,47 @@ public partial class LectureHallManager : MonoBehaviour
     public float chairAnchorMatchRadius = 0.5f;
     public float chairBackrestProbeHeight = 0.75f;
 
+    [Header("Guidance Panel")]
+    public GameObject guidancePanel;
+    public TextMeshProUGUI guidanceBodyText;
+    public AudioSource guidanceAudioSource;
+    public float guidanceDisplayDuration = 6f;
+
+    [Header("Guidance Audio Clips")]
+    public AudioClip guidanceChairScanClip;
+    public AudioClip guidanceLectureEndClip;
+    public AudioClip guidanceQAClip;
+    public AudioClip guidanceRestartClip;
+    public AudioClip guidanceThankYouClip;
+
+    [Header("Guidance Messages")]
+    [TextArea(2, 4)]
+    public string msgChairScan = "Look around the room at the chairs and hold steady. The chairs will be detected automatically, and the students will take their seats.";
+    [TextArea(2, 4)]
+    public string msgLectureEnd = "The lecture has ended. Would you like to experience it again?";
+    [TextArea(2, 4)]
+    public string msgQA = "Aim your controller at Murad and press button A to begin the Q&A session.";
+    [TextArea(2, 4)]
+    public string msgRestart = "Would you like to restart the entire experience from the beginning?";
+    [TextArea(2, 4)]
+    public string msgThankYou = "Thank you for attending the lecture.";
+
+    [Header("Guidance Dialog")]
+    public RepeatDialog repeatDialog;
+
+    [Header("UI Placement")]
+    public Transform uiDialogueRoot;
+    public float uiDistanceFromUser = 1.5f;
+    public float uiVerticalOffset = -0.1f;
+
     [Header("Audio")]
     public AudioSource lectureAudioSource;
     public AudioClip greetingAudioClip;
     [TextArea(3, 8)]
     public string greetingAudioTranscript;
     public AudioSource chairDetectionAudioSource;
+
+    private Coroutine _guidanceCoroutine;
 
     private readonly List<GameObject> _spawnedNPCs = new List<GameObject>();
     private Action _onLectureComplete;
@@ -59,6 +96,9 @@ public partial class LectureHallManager : MonoBehaviour
     private void Awake()
     {
         _envRaycast = FindAnyObjectByType<EnvironmentRaycastManager>();
+
+        if (guidancePanel != null)
+            guidancePanel.SetActive(false);
     }
 
     //Fallback function if no chairs found
@@ -177,14 +217,207 @@ public partial class LectureHallManager : MonoBehaviour
         StartCoroutine(RunLectureSequence(config));
     }
 
+    // ── Guidance helpers (mirrored from PanelSceneManager) ────────────────
+
+    public IEnumerator ShowChairScanGuidanceAndWait()
+    {
+        _guidanceCoroutine = StartCoroutine(GuidanceRoutine(msgChairScan, guidanceChairScanClip));
+        yield return _guidanceCoroutine;
+    }
+
+    public void OnQAComplete()
+    {
+        HideGuidance();
+        if (repeatDialog != null)
+        {
+            // Murad is standing in front — raise dialog above his head
+            // YES = restart everything from scratch, NO = end with thank-you
+            ShowRepeatDialog(msgRestart, guidanceRestartClip,
+                             onYes: RestartExperience, onNo: EndExperience,
+                             raiseAboveCharacter: true);
+        }
+        else
+        {
+            EndExperience();
+        }
+    }
+
+    internal void ShowRepeatDialog(string message, AudioClip clip, System.Action onYes, System.Action onNo,
+                                   bool raiseAboveCharacter = false)
+    {
+        HideGuidance();
+        if (raiseAboveCharacter)
+            PositionUIAboveCharacter();
+        else
+            PositionUIInFrontOfUser();
+        EnsureRepeatDialogParentsActive();
+        PlayGuidanceVoice(clip);
+        repeatDialog.Show(message, onYes: onYes, onNo: onNo);
+    }
+
+    // Positions the UI beside Murad (to his left from the user's perspective)
+    internal void PositionUIAboveCharacter()
+    {
+        if (uiDialogueRoot == null) return;
+        Transform cam = Camera.main != null ? Camera.main.transform : null;
+        if (cam == null) return;
+
+        Vector3 fwd = cam.forward;
+        fwd.y = 0f;
+        if (fwd.sqrMagnitude < 0.001f) fwd = Vector3.forward;
+        fwd.Normalize();
+
+        // Place dialog beside Murad: same forward distance, offset to the right
+        Vector3 right = Vector3.Cross(Vector3.up, fwd).normalized;
+        uiDialogueRoot.position = cam.position
+                                 + fwd   * uiDistanceFromUser
+                                 + right * 0.6f
+                                 + Vector3.up * uiVerticalOffset;
+        uiDialogueRoot.rotation = Quaternion.LookRotation(uiDialogueRoot.position - cam.position, Vector3.up);
+    }
+
+    private void EnsureRepeatDialogParentsActive()
+    {
+        if (repeatDialog == null) return;
+        Transform t = repeatDialog.transform.parent;
+        while (t != null)
+        {
+            if (!t.gameObject.activeSelf)
+                t.gameObject.SetActive(true);
+            t = t.parent;
+        }
+
+        // Force the dialog canvas to render in front of all scene geometry
+        Canvas dialogCanvas = repeatDialog.GetComponentInParent<Canvas>();
+        if (dialogCanvas != null)
+        {
+            dialogCanvas.overrideSorting = true;
+            dialogCanvas.sortingOrder = 999;
+        }
+    }
+
+    internal void ShowGuidance(string message, AudioClip clip)
+    {
+        if (guidancePanel == null)
+        {
+            Debug.LogWarning("[LectureHallManager] ShowGuidance: guidancePanel not assigned in Inspector.");
+            return;
+        }
+        if (guidanceBodyText == null)
+        {
+            Debug.LogWarning("[LectureHallManager] ShowGuidance: guidanceBodyText not assigned in Inspector.");
+            return;
+        }
+
+        if (_guidanceCoroutine != null)
+            StopCoroutine(_guidanceCoroutine);
+
+        _guidanceCoroutine = StartCoroutine(GuidanceRoutine(message, clip));
+    }
+
+    internal void HideGuidance()
+    {
+        if (_guidanceCoroutine != null)
+        {
+            StopCoroutine(_guidanceCoroutine);
+            _guidanceCoroutine = null;
+        }
+        if (guidanceAudioSource != null) guidanceAudioSource.Stop();
+        if (guidancePanel != null) guidancePanel.SetActive(false);
+    }
+
+    internal void PlayGuidanceVoice(AudioClip clip)
+    {
+        if (guidanceAudioSource == null || clip == null) return;
+        guidanceAudioSource.Stop();
+        guidanceAudioSource.PlayOneShot(clip);
+    }
+
+    private void PositionUIInFrontOfUser()
+    {
+        if (uiDialogueRoot == null) return;
+        Transform cam = Camera.main != null ? Camera.main.transform : null;
+        if (cam == null) return;
+
+        Vector3 fwd = cam.forward;
+        fwd.y = 0f;
+        if (fwd.sqrMagnitude < 0.001f) fwd = Vector3.forward;
+        fwd.Normalize();
+
+        uiDialogueRoot.position = cam.position + fwd * uiDistanceFromUser + Vector3.up * uiVerticalOffset;
+        uiDialogueRoot.rotation = Quaternion.LookRotation(uiDialogueRoot.position - cam.position, Vector3.up);
+    }
+
+    private IEnumerator GuidanceRoutine(string message, AudioClip clip)
+    {
+        PositionUIInFrontOfUser();
+        guidanceBodyText.text = message;
+        guidancePanel.SetActive(true);
+
+        // Render guidance panel on top of all scene geometry
+        Canvas guidanceCanvas = guidancePanel.GetComponentInParent<Canvas>();
+        if (guidanceCanvas != null)
+        {
+            guidanceCanvas.overrideSorting = true;
+            guidanceCanvas.sortingOrder = 999;
+        }
+
+        if (guidanceAudioSource != null && clip != null)
+        {
+            guidanceAudioSource.Stop();
+            guidanceAudioSource.PlayOneShot(clip);
+            yield return new WaitForSeconds(clip.length + 0.5f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(guidanceDisplayDuration);
+        }
+
+        guidancePanel.SetActive(false);
+        _guidanceCoroutine = null;
+    }
+
+    private void RestartExperience()
+    {
+        Debug.Log("[LectureHallManager] Restarting the whole experience.");
+        ClearScene();
+        if (ExperienceManager.Instance != null)
+            ExperienceManager.Instance.ReturnToMenu();
+    }
+
+    private void EndExperience()
+    {
+        Debug.Log("[LectureHallManager] Experience ended.");
+        ShowGuidance(msgThankYou, guidanceThankYouClip);
+    }
+
     public void ClearScene()
     {
         StopAllCoroutines();
+
+        // Hide the repeat dialog so its Update loop can't fire callbacks after clear
+        if (repeatDialog != null)
+            repeatDialog.Hide();
+
+        HideGuidance();
+
+        // Disable Murad's voice controller before destroying to stop any pending callbacks
+        if (_mainMuradInstance != null)
+        {
+            var qaVoice = _mainMuradInstance.GetComponent<VoiceAPIController>();
+            if (qaVoice != null)
+            {
+                qaVoice.onInactivityTimeout = null;
+                qaVoice.enabled = false;
+            }
+        }
+
         if (lectureAudioSource != null)
             lectureAudioSource.Stop();
 
         if (chairDetectionAudioSource != null)
             chairDetectionAudioSource.Stop();
+
         foreach (var npc in _spawnedNPCs)
         {
             if (npc == null)
@@ -201,6 +434,7 @@ public partial class LectureHallManager : MonoBehaviour
             if (npc != null) Destroy(npc);
 
         _spawnedNPCs.Clear();
+        _mainMuradInstance = null;
         _shuffledStudentVariants = null;
         _variantCursor = 0;
         _lectureActive = false;

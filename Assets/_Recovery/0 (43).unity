@@ -1621,13 +1621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd32bc3578df1e4284f56c92d849a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MatchCameraHeight
-  cameraTransform: {fileID: 0}
-  matchX: 1
-  matchY: 1
-  xOffset: 0
-  yOffset: 0
-  continuous: 1
-  smoothTime: 0.15
 --- !u!1 &557062255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,8 +2553,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RepeatDialog
   dialogRoot: {fileID: 1057214123}
   messageText: {fileID: 1239612596}
-  yesButton: {fileID: 1239612594}
-  noButton: {fileID: 1239612595}
+  yesButton: {fileID: 1239612595}
+  noButton: {fileID: 1239612594}
   rightController: {fileID: 413932175}
   leftController: {fileID: 1183832015}
   laserPointer: {fileID: 0}
@@ -2840,7 +2833,6 @@ MonoBehaviour:
   uiDialogueRoot: {fileID: 702215909}
   uiDistanceFromUser: 1.5
   uiVerticalOffset: -0.1
-  uiFollowSpeed: 2
   repeatDialog: {fileID: 1057214126}
   repeatStoryQuestion: The story has ended. Do you want to hear it again?
   repeatStoryClip: {fileID: 8300000, guid: 8ce21a0d1943e834fbd8ec6e64360cf6, type: 3}
@@ -4269,8 +4261,8 @@ MonoBehaviour:
       immense heavy lifting required to build a nation. From these quiet classrooms
       to the construction sites... this is exactly where the minds that shaped modern
       Egypt... were forged.
-    idleClip: {fileID: 7400000, guid: d09467bccff47b346b9fa6da5676b469, type: 2}
-    talkingClip: {fileID: 7400000, guid: feb3fecf0aa02494bbed49ffe61310c6, type: 2}
+    idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
+    talkingClip: {fileID: 5528149604612604457, guid: ab37c3e3cdbfe524c86c3b5fca92c8e8, type: 3}
   - panelName: Mechanical Engineering
     characterPrefab: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
     narrationClip: {fileID: 8300000, guid: 6284497ff551f7045b3f4042eab2dd7e, type: 3}
@@ -4280,8 +4272,8 @@ MonoBehaviour:
       captures our deepest philosophy... We teach our students to design with timeless,
       artistic beauty... while mastering the raw, powerful mechanics that drive the
       modern world. '
-    idleClip: {fileID: 7400000, guid: d09467bccff47b346b9fa6da5676b469, type: 2}
-    talkingClip: {fileID: 7400000, guid: feb3fecf0aa02494bbed49ffe61310c6, type: 2}
+    idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
+    talkingClip: {fileID: 7400000, guid: 328d86418454f5d4bbd88770d94bce78, type: 2}
   - panelName: Mechanical Engineering
     characterPrefab: {fileID: 4154945946437003611, guid: 5190b692202d1b44fa8e552df81c29ea, type: 3}
     narrationClip: {fileID: 8300000, guid: 3bb647952e6d9f0468579ed7bf905792, type: 3}
@@ -4291,7 +4283,7 @@ MonoBehaviour:
       the absolute cutting edge of human science. We taught our students how to safely
       harness extreme pressure and motion... to power the factories of a newly growing
       Egypt '
-    idleClip: {fileID: 7400000, guid: d09467bccff47b346b9fa6da5676b469, type: 2}
+    idleClip: {fileID: 7400000, guid: 1e692bdf502a63b4bbedcfa202895d1b, type: 2}
     talkingClip: {fileID: 5528149604612604457, guid: ab37c3e3cdbfe524c86c3b5fca92c8e8, type: 3}
   - panelName: 
     characterPrefab: {fileID: 0}

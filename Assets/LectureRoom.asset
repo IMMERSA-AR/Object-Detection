@@ -30,8 +30,8 @@ MonoBehaviour:
   studentPrefabVariants:
   - prefab: {fileID: 8477728797250022676, guid: 3ac9139eaed9b7a408d3cac24c9531a4, type: 3}
     sittingClip: {fileID: 7400000, guid: d7bd3b5027b353e4da87baea7ae8cdd4, type: 2}
-  - prefab: {fileID: 1142660484036570145, guid: f16551fa53f6cc140b421bfef826d5de, type: 3}
-    sittingClip: {fileID: 7400000, guid: d7bd3b5027b353e4da87baea7ae8cdd4, type: 2}
+  - prefab: {fileID: 5327342390939624010, guid: b525b1565ffcd5349848fe95ed0fbe4a, type: 3}
+    sittingClip: {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}
   - prefab: {fileID: 6149931150455730840, guid: c9f28093b9f7cd84cac40d4351881100, type: 3}
     sittingClip: {fileID: -203655887218126122, guid: 808333dd772e6a34eaaefb18db001847, type: 3}
   studentSittingClip: {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}

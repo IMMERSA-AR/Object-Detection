@@ -35,6 +35,8 @@ public class PanelSceneManager : MonoBehaviour
     public Transform uiDialogueRoot;
     public float uiDistanceFromUser = 1.5f;
     public float uiVerticalOffset = -0.1f;
+    [Tooltip("How fast the UI follows the user while visible. 0 = fixed, 2 = gentle lag, 8 = near-instant.")]
+    public float uiFollowSpeed = 2f;
 
     [Header("Repeat Dialog ")]
     public RepeatDialog repeatDialog;
@@ -85,6 +87,26 @@ public class PanelSceneManager : MonoBehaviour
             repeatDialog.Hide();
 
         StartCoroutine(IntroThenFirstScan());
+    }
+
+    private void Update()
+    {
+        if (uiDialogueRoot == null || Camera.main == null) return;
+
+        bool anyVisible = (guidancePanel != null && guidancePanel.activeSelf) || _dialogOpen;
+        if (!anyVisible) return;
+
+        Transform cam = Camera.main.transform;
+        Vector3 fwd = cam.forward;
+        fwd.y = 0f;
+        if (fwd.sqrMagnitude < 0.001f) fwd = Vector3.forward;
+        fwd.Normalize();
+
+        Vector3 targetPos = cam.position + fwd * uiDistanceFromUser + Vector3.up * uiVerticalOffset;
+        Quaternion targetRot = Quaternion.LookRotation(targetPos - cam.position, Vector3.up);
+
+        uiDialogueRoot.position = Vector3.Lerp(uiDialogueRoot.position, targetPos, Time.deltaTime * uiFollowSpeed);
+        uiDialogueRoot.rotation = Quaternion.Slerp(uiDialogueRoot.rotation, targetRot, Time.deltaTime * uiFollowSpeed);
     }
 
     public void RescanButtonPressed()
@@ -208,8 +230,11 @@ public class PanelSceneManager : MonoBehaviour
         {
             HideGuidance();
             _dialogOpen = true;
+            PositionUIInFrontOfUser();   // snap before showing so dialog appears right in front
+            EnsureCanvasOnTop(repeatDialog.GetComponentInParent<Canvas>());
             PlayGuidanceVoice(repeatStoryClip);
-            repeatDialog.Show(repeatStoryQuestion, onYes: ReplayStory, onNo: DeclineRepeat);
+            // noButton is the one the user physically aims at as "YES" — callbacks swapped to match
+            repeatDialog.Show(repeatStoryQuestion, onYes: DeclineRepeat, onNo: ReplayStory);
         }
         else
         {
@@ -253,6 +278,8 @@ public class PanelSceneManager : MonoBehaviour
         {
             HideGuidance();
             _dialogOpen = true;
+            PositionUIInFrontOfUser();   // snap before showing so dialog appears right in front
+            EnsureCanvasOnTop(repeatDialog.GetComponentInParent<Canvas>());
             PlayGuidanceVoice(restartExperienceClip);
             repeatDialog.Show(restartExperienceQuestion, onYes: RestartExperience, onNo: EndExperience);
         }
@@ -407,8 +434,17 @@ public class PanelSceneManager : MonoBehaviour
 
     private IEnumerator GuidanceRoutine(string message, AudioClip clip)
     {
+        PositionUIInFrontOfUser();   // snap immediately so Update's lerp starts from the right place
         guidanceBodyText.text = message;
         guidancePanel.SetActive(true);
+
+        // Render guidance panel on top of all scene geometry
+        Canvas guidanceCanvas = guidancePanel.GetComponentInParent<Canvas>();
+        if (guidanceCanvas != null)
+        {
+            guidanceCanvas.overrideSorting = true;
+            guidanceCanvas.sortingOrder = 999;
+        }
 
         if (guidanceAudioSource != null && clip != null)
         {
@@ -423,5 +459,12 @@ public class PanelSceneManager : MonoBehaviour
 
         guidancePanel.SetActive(false);
         _guidanceCoroutine = null;
+    }
+
+    private void EnsureCanvasOnTop(Canvas canvas)
+    {
+        if (canvas == null) return;
+        canvas.overrideSorting = true;
+        canvas.sortingOrder = 999;
     }
 }

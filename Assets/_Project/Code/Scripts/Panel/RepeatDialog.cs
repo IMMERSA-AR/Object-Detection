@@ -157,11 +157,29 @@ public class RepeatDialog : MonoBehaviour
             return false;
 
         endPoint = controller.position + controller.forward * maxPointDistance;
-        if (Physics.Raycast(controller.position, controller.forward, out RaycastHit hit, maxPointDistance))
+
+        // Use RaycastAll so Murad's collider doesn't block the buttons behind him
+        RaycastHit[] hits = Physics.RaycastAll(controller.position, controller.forward, maxPointDistance);
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+
+        // First pass: prefer a button hit even if something is in front
+        foreach (var h in hits)
         {
-            endPoint = hit.point;
-            hitT = hit.transform;
+            if (IsPartOf(h.transform, yesButton) || IsPartOf(h.transform, noButton))
+            {
+                endPoint = h.point;
+                hitT = h.transform;
+                return true;
+            }
         }
+
+        // Fall back to closest hit
+        if (hits.Length > 0)
+        {
+            endPoint = hits[0].point;
+            hitT = hits[0].transform;
+        }
+
         return true;
     }
 

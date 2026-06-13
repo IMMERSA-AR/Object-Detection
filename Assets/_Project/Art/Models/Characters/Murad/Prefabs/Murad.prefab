@@ -685,6 +685,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   customLipSyncContext: {fileID: 30779773708188026}
   emotionController: {fileID: 0}
+  inactivityTimeout: 20
   rightController: {fileID: 0}
   npcCollider: {fileID: 579598021935221838}
   laserPointer: {fileID: 4496558182744473187}
@@ -856,7 +857,7 @@ MonoBehaviour:
   ppRescueBlend: 0.35
   ppRescueThreshold: 0.12
   useTextGuidedMFCC: 1
-  testTranscript: My mama bakes warm bread, and Papa pours more coffee for me.
+  testTranscript: 
   textGuidedStrength: 0.7
   textGuidedSmoothWindow: 4
   showModeLabel: 1

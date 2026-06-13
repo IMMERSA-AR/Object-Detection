@@ -146,18 +146,25 @@ public partial class LectureHallManager
         // standing animation assigned to the doctor
         NotifyDoctorLecturing(false);
 
-        // trigger murad to stand and walk touser
-        if (_mainMuradInstance != null)
-        {
-            StartCoroutine(MainMuradApproachUser());
-        }
+        // Message 2: offer to repeat the lecture before Murad approaches
+        if (repeatDialog != null)
+            ShowRepeatDialog(msgLectureEnd, guidanceLectureEndClip, onYes: ReplayLecture, onNo: ProceedToMurad);
         else
-        {
-            if (ExperienceManager.Instance != null)
-            {
-                Debug.Log("Lecture Hall:  Lecture finished, handing control to ExperienceManager if murad is not found");
-            }
-        }
+            ProceedToMurad();
+    }
+
+    private void ReplayLecture()
+    {
+        Debug.Log("[LectureHallManager] Replaying lecture.");
+        StartCoroutine(RunLectureSequence(currentConfig));
+    }
+
+    private void ProceedToMurad()
+    {
+        if (_mainMuradInstance != null)
+            StartCoroutine(MainMuradApproachUser());
+        else
+            Debug.Log("Lecture Hall: Lecture finished, murad not found.");
     }
 
     private static Quaternion FaceTowards(Vector3 fromPos, Vector3 lookAt)
@@ -330,9 +337,9 @@ public partial class LectureHallManager
             _mainMuradInstance.transform.rotation = Quaternion.Slerp(_mainMuradInstance.transform.rotation, Quaternion.LookRotation(dir), rotSpeed * Time.deltaTime);
 
             float step = Mathf.Min(walkSpeed * Time.deltaTime, distToTarget);
-            Vector3 newPos = _mainMuradInstance.transform.position + dir * step;
-            newPos.y = floorY;
-            _mainMuradInstance.transform.position = newPos;
+            // Use cc.Move so CharacterController respects student colliders (no clipping)
+            Vector3 motion = dir * step + Vector3.down * 0.1f;
+            cc.Move(motion);
 
             yield return null;
         }
@@ -349,6 +356,11 @@ public partial class LectureHallManager
             _mainMuradInstance.transform.rotation = Quaternion.Slerp(_mainMuradInstance.transform.rotation, target, rotSpeed * Time.deltaTime);
             yield return null;
         }
+
+        // Message 3: guide user to start Q&A — raise above Murad, wait to finish before enabling Q&A
+        PositionUIAboveCharacter();
+        _guidanceCoroutine = StartCoroutine(GuidanceRoutine(msgQA, guidanceQAClip));
+        yield return _guidanceCoroutine;
 
         // starting Q&A phase;
         MuradController muradQAAI = _mainMuradInstance?.GetComponent<MuradController>();
@@ -377,8 +389,9 @@ public partial class LectureHallManager
                 foreach (Canvas c in _mainMuradInstance.GetComponentsInChildren<Canvas>(includeInactive: true))
                     c.enabled = true;
 
+                qaVoice.onInactivityTimeout = OnQAComplete;
                 qaVoice.enabled = true;
-                Debug.Log("Lecture Hall:  VoiceAPIController is now enables for Q&A");
+                Debug.Log("Lecture Hall:  VoiceAPIController is now enabled for Q&A");
             }
         }
 

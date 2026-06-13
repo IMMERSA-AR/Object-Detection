@@ -70,6 +70,9 @@ public class ExperienceManager : MonoBehaviour
             }
         }
 
+        // Show Message 1 and wait for it to finish before detection starts
+        yield return StartCoroutine(lectureHallManager.ShowChairScanGuidanceAndWait());
+
         lectureHallManager.PlayDetectionAudio(config.chairDetectionAudioClip);
         Debug.Log($"[ExperienceManager] Waiting for MRUK to detect floor anchor");
 
@@ -123,6 +126,9 @@ public class ExperienceManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        // Stop any in-progress BeginLectureHallSequence before starting a fresh one
+        StopAllCoroutines();
+
         if (lectureHallManager != null)
         {
             lectureHallManager.ClearScene();

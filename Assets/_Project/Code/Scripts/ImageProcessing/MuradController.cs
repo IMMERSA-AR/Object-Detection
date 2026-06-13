@@ -19,24 +19,54 @@ public class MuradController : MonoBehaviour
 
     void Start()
     {
-        if (animator == null)   // This condition try to find animator in the children 
-        {
+        if (animator == null)
             animator = GetComponentInChildren<Animator>();
-        }
 
         if (animator == null)
         {
-            Debug.LogWarning("[MuradController] No animator found on the object or its children");
+            Debug.LogError("[MuradController] No animator found on the object or its children");
             enabled = false;
             return;
+        }
+
+        Debug.Log($"[MuradController] Animator found: {animator.gameObject.name}");
+
+        // Log all animator parameters
+        string paramList = "";
+        for (int p = 0; p < animator.parameterCount; p++)
+            paramList += animator.parameters[p].name + " ";
+        Debug.Log($"[MuradController] Animator parameters: [{paramList.Trim()}]");
+
+        // Auto-assign animator to VoiceAPIController on the same GameObject
+        VoiceAPIController voiceCtrl = GetComponent<VoiceAPIController>();
+        if (voiceCtrl != null)
+        {
+            if (voiceCtrl.animator == null)
+            {
+                voiceCtrl.animator = animator;
+                Debug.Log("[MuradController] Auto-assigned Animator to VoiceAPIController.");
+            }
+            else
+            {
+                Debug.Log($"[MuradController] VoiceAPIController already has animator: {voiceCtrl.animator.gameObject.name}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[MuradController] VoiceAPIController not found on same GameObject.");
         }
 
         if (!enabled)
             return;
 
+        Debug.Log("[MuradController] Setting IsStanding=true, IsWalking=false, IsSitting=false");
         animator.SetBool("IsStanding", true);
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsSitting", false);
+
+        // Log current animator state
+        var state = animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log($"[MuradController] Current state hash: {state.shortNameHash} | normalizedTime: {state.normalizedTime}");
     }
 
     void Update()

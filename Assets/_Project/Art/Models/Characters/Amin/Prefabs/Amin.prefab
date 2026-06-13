@@ -4938,7 +4938,7 @@ MonoBehaviour:
   ppRescueBlend: 0.35
   ppRescueThreshold: 0.12
   useTextGuidedMFCC: 1
-  testTranscript: My mama bakes warm bread, and Papa pours more coffee for me.
+  testTranscript: 
   textGuidedStrength: 0.7
   textGuidedSmoothWindow: 4
   showModeLabel: 1
@@ -4976,8 +4976,8 @@ MonoBehaviour:
   - 1
   - 1.8
   - 1.5
-  vLipOpenScale: 1
-  mergedOpenMouthScale: 1
+  vLipOpenScale: 0.496
+  mergedOpenMouthScale: 0.489
   ppClosureThreshold: 0.25
   ppFastSmoothing: 0.15
   visemeBlendShapeNames:
