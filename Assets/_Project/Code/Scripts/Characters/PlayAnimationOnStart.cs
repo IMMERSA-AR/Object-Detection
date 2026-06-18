@@ -10,6 +10,14 @@ public class PlayAnimationOnStart : MonoBehaviour
 {
     public AnimationClip clip;
 
+    [Header("Floor")]
+    [Tooltip("Trust the FloorLevel tracking origin: stand the character on the floor at 'Floor Y' " +
+             "(0 with FloorLevel tracking + rig at world origin) instead of the MRUK/depth/cam-1.7 " +
+             "guessing that was sinking everyone to mid-height.")]
+    public bool useFloorLevelOrigin = true;
+    [Tooltip("World Y of the real floor. Leave 0 for FloorLevel tracking; nudge if your rig isn't at world origin.")]
+    public float floorY = 0f;
+
     private PlayableGraph _graph;
     private AnimationClipPlayable _playable;
     private EnvironmentRaycastManager _envRaycast;
@@ -21,19 +29,19 @@ public class PlayAnimationOnStart : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(InitAndPlay());
+        // Start the animation IMMEDIATELY so the character never shows its imported
+        // T-pose / bind pose. The floor snap needs head-tracking / MRUK to be ready,
+        // so it stays deferred — but it must NOT hold up the animation.
+        PlayClip();
+        StartCoroutine(SnapToFloorDelayed());
     }
 
-    private IEnumerator InitAndPlay()
+    private void PlayClip()
     {
-        yield return new WaitForSeconds(1.2f);
-
-        SnapToFloor();
-
         if (clip == null)
         {
             Debug.LogWarning($"[PlayAnimationOnStart] No clip assigned on {gameObject.name}.");
-            yield break;
+            return;
         }
 
         _graph = PlayableGraph.Create(gameObject.name + "_AnimGraph");
@@ -46,16 +54,40 @@ public class PlayAnimationOnStart : MonoBehaviour
         _graph.Play();
     }
 
+    private IEnumerator SnapToFloorDelayed()
+    {
+        yield return new WaitForSeconds(1.2f);
+        SnapToFloor();
+    }
+
     private void SnapToFloor()
     {
-        float camY = Camera.main != null ? Camera.main.transform.position.y : 1.7f;
-        float floorY = FindFloorY(transform.position, camY);
+        // FloorLevel tracking puts the real floor at a known plane (floorY, = 0), so trust
+        // that instead of the MRUK/depth/cam-1.7 chain that was sinking everyone to mid-height.
+        float floor = useFloorLevelOrigin
+            ? floorY
+            : FindFloorY(transform.position, Camera.main != null ? Camera.main.transform.position.y : 1.7f);
+
+        // Place the character's FEET on the floor, not its pivot. CC4 pivots often sit at
+        // the waist/centre, so snapping the pivot straight to the floor buries the lower
+        // half. feetGap is how far the pivot sits above the lowest point of the mesh.
+        float feetGap = transform.position.y - GetRenderersBottomY();
 
         Vector3 pos = transform.position;
-        pos.y = floorY;
+        pos.y = floor + feetGap;
         transform.position = pos;
 
-        Debug.Log($"[PlayAnimationOnStart] {gameObject.name} snapped to floor Y={floorY:F3}");
+        Debug.Log($"[PlayAnimationOnStart] {gameObject.name} snapped — floor={floor:F2}, feetGap={feetGap:F2}");
+    }
+
+    // World-space Y of the lowest point of the character's meshes (≈ the feet).
+    private float GetRenderersBottomY()
+    {
+        var rends = GetComponentsInChildren<Renderer>();
+        float minY = float.MaxValue;
+        foreach (var r in rends)
+            if (r != null) minY = Mathf.Min(minY, r.bounds.min.y);
+        return (minY == float.MaxValue) ? transform.position.y : minY;
     }
 
     private float FindFloorY(Vector3 xzPos, float cameraY)

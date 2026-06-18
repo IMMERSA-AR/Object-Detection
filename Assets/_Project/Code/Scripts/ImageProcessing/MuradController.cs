@@ -11,75 +11,78 @@ public class MuradController : MonoBehaviour
     public float rotationSpeed = 8f;
 
     [Header("Sitting Adjustment")]
-    [Tooltip("Adjust height when seated — negative moves down")]
     public float seatHeightOffset = 0f;
 
-    [Tooltip("Adjust forward/backward when seated")]
-    public float seatForwardOffset = 0f;
-
     private Vector3 _targetPosition;
-    private bool _isWalkingToTarget = false;
-    private bool _isSitting = false;
-    private bool _rotationComplete = false;
-
-    private MuradBehaviour _behaviour = MuradBehaviour.SitOnAnchor;
-    private Vector3 _facingTarget;
-    private bool _hasFacingTarget = false;
-    private bool _isStandingAtAnchor = false;
-    private Vector3 _lockedStandPosition;
-    private Quaternion _lockedStandRotation;
+    private bool _movingToTarget = false;
+    private bool _isSittingOnChair = false;
 
     void Start()
     {
-        // Search root and all children — Animator may not be on the root object.
         if (animator == null)
             animator = GetComponentInChildren<Animator>();
 
         if (animator == null)
         {
-            // LogWarning (not LogError) — this fires on scene-placed Manager objects
-            // that don't own an Animator.  MuradController is only meaningful on
-            // Murad's prefab; placing it elsewhere is harmless but generates noise.
-            // Remove this component from any non-Murad scene object to silence this.
-            Debug.LogWarning("[MuradController] No Animator found on '" + gameObject.name +
-                             "' or its children — MuradController disabled on this object. " +
-                             "If this is a Manager/LectureHallManager, remove the MuradController component from it in the Inspector.");
+            Debug.LogError("[MuradController] No animator found on the object or its children");
             enabled = false;
             return;
         }
 
-        // Only drive the standing idle state when this component is actively running
-        // (i.e. NOT when LectureHallManager has disabled it for the seated phase).
-        // Calling SetBool here was overriding the IsSitting = true that
-        // LectureHallManager sets right after Instantiate, making Murad T-pose.
-        if (!enabled) return;
+        Debug.Log($"[MuradController] Animator found: {animator.gameObject.name}");
 
+        // Log all animator parameters
+        string paramList = "";
+        for (int p = 0; p < animator.parameterCount; p++)
+            paramList += animator.parameters[p].name + " ";
+        Debug.Log($"[MuradController] Animator parameters: [{paramList.Trim()}]");
+
+        // Auto-assign animator to VoiceAPIController on the same GameObject
+        VoiceAPIController voiceCtrl = GetComponent<VoiceAPIController>();
+        if (voiceCtrl != null)
+        {
+            if (voiceCtrl.animator == null)
+            {
+                voiceCtrl.animator = animator;
+                Debug.Log("[MuradController] Auto-assigned Animator to VoiceAPIController.");
+            }
+            else
+            {
+                Debug.Log($"[MuradController] VoiceAPIController already has animator: {voiceCtrl.animator.gameObject.name}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[MuradController] VoiceAPIController not found on same GameObject.");
+        }
+
+        if (!enabled)
+            return;
+
+        Debug.Log("[MuradController] Setting IsStanding=true, IsWalking=false, IsSitting=false");
         animator.SetBool("IsStanding", true);
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsSitting", false);
+
+        // Log current animator state
+        var state = animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log($"[MuradController] Current state hash: {state.shortNameHash} | normalizedTime: {state.normalizedTime}");
     }
 
     void Update()
     {
-        if (animator == null) return;
-
-        if (_isStandingAtAnchor)
+        if (animator == null)
         {
-            transform.position = _lockedStandPosition;
-            transform.rotation = _lockedStandRotation;
+            Debug.LogWarning("[MuradController] Animator is not assigned");
+            return;
+        }
+        if (_isSittingOnChair || !_movingToTarget)
+        {
             return;
         }
 
-        if (_isSitting || !_isWalkingToTarget)
-            return;
-
-        Vector3 flatTarget = new Vector3(
-            _targetPosition.x,
-            transform.position.y,
-            _targetPosition.z);
-
+        Vector3 flatTarget = new Vector3(_targetPosition.x, transform.position.y, _targetPosition.z);
         float distance = Vector3.Distance(transform.position, flatTarget);
-
         if (distance > stoppingDistance)
         {
             animator.SetBool("IsStanding", false);
@@ -90,18 +93,14 @@ public class MuradController : MonoBehaviour
             if (direction != Vector3.zero)
             {
                 Quaternion targetRot = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(
-                    transform.rotation, targetRot, rotationSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSpeed * Time.deltaTime);
             }
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
         else
         {
             animator.SetBool("IsWalking", false);
-            if (_behaviour == MuradBehaviour.StandBesideAnchor)
-                ArriveAndStand();
-            else
-                ArriveAndSit();
+            ArriveAndSit();
         }
     }
 
@@ -109,86 +108,30 @@ public class MuradController : MonoBehaviour
     {
         animator.SetBool("IsStanding", false);
         animator.SetBool("IsSitting", true);
-
-        // Do NOT rotate toward the user here — the chair orientation is already
-        // set by LectureHallManager at spawn time and must be preserved.
-        // Murad faces the front of the room (away from the user) while seated,
-        // exactly like the other students. He turns to face the user only when
-        // he stands up and walks over after the lecture ends.
-
-        transform.position = new Vector3(
-            _targetPosition.x,
-            _targetPosition.y + seatHeightOffset,
-            _targetPosition.z);
-
-        _isWalkingToTarget = false;
-        _isSitting = true;
-        Debug.Log("[Murad] Sitting down!");
-    }
-
-    private void ArriveAndStand()
-    {
-        animator.SetBool("IsStanding", true);
-        animator.SetBool("IsWalking", false);
-        animator.SetBool("IsSitting", false);
-
-        Quaternion standRot = transform.rotation;
-        if (_hasFacingTarget)
-        {
-            Vector3 toAnchor = _facingTarget - transform.position;
-            toAnchor.y = 0;
-            if (toAnchor.sqrMagnitude > 0.001f)
-                standRot = Quaternion.LookRotation(toAnchor);
-        }
-
-        _lockedStandPosition = new Vector3(
-            _targetPosition.x, _targetPosition.y, _targetPosition.z);
-        _lockedStandRotation = standRot;
-
-        transform.position = _lockedStandPosition;
-        transform.rotation = _lockedStandRotation;
-
-        _isWalkingToTarget = false;
-        _isStandingAtAnchor = true;
-        Debug.Log("[Murad] Standing beside anchor.");
-    }
-
-    public void ApplyConfig(ExperienceConfig config)
-    {
-        _behaviour = config.muradBehaviour;
-        seatHeightOffset = config.heightOffset;
-        seatForwardOffset = config.forwardOffset;
+        transform.position = new Vector3(_targetPosition.x, _targetPosition.y + seatHeightOffset, _targetPosition.z);
+        _movingToTarget = false;
+        _isSittingOnChair = true;
+        Debug.Log("Character [Murad] is sitting down");
     }
 
     public void WalkToChair(Vector3 chairLocation)
     {
-        if (_isSitting) return;
-        _behaviour = MuradBehaviour.SitOnAnchor;
+        if (_isSittingOnChair)
+        {
+            return;
+        }
         _targetPosition = chairLocation;
-        _isWalkingToTarget = true;
-        _rotationComplete = false;
-        Debug.Log($"[Murad] Walking to chair at {chairLocation}");
-    }
-
-    public void WalkToAnchorAndStand(Vector3 walkTarget, Vector3 facingTarget)
-    {
-        _behaviour = MuradBehaviour.StandBesideAnchor;
-        _targetPosition = walkTarget;
-        _facingTarget = facingTarget;
-        _hasFacingTarget = true;
-        _isWalkingToTarget = true;
-        _isStandingAtAnchor = false;
-        Debug.Log($"[Murad] Walking to stand beside anchor at {walkTarget}");
+        _movingToTarget = true;
+        Debug.Log("Character [Murad] is walking to the chair");
     }
 
     public void StandUp()
     {
-        _isSitting = false;
-        _isStandingAtAnchor = false;
-        _isWalkingToTarget = false;
+        _isSittingOnChair = false;
+        _movingToTarget = false;
         animator.SetBool("IsSitting", false);
         animator.SetBool("IsWalking", false);
         animator.SetBool("IsStanding", true);
-        Debug.Log("[Murad] Standing up");
+        Debug.Log("Character [Murad] is standing up");
     }
 }

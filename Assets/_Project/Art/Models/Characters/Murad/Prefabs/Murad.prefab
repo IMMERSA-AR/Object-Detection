@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4747962948313757172, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Mesh
@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 9000000, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
     - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       propertyPath: m_Controller
@@ -528,12 +528,6 @@ PrefabInstance:
       addedObject: {fileID: 1630863593729111506}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3817760665193589425}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5241224884953771230}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 579598021935221838}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
@@ -547,6 +541,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: -6047319904845741997}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8138619050359305066}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5301076498473630320}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 959885029011199110}
     - targetCorrespondingSourceObject: {fileID: 8304175215116285622, guid: ad09ec57616b718419e64bc5fae41900, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5235203546343656140}
@@ -679,61 +682,15 @@ MonoBehaviour:
   characterId: s1
   role: mohandeskhana-student
   statusText: {fileID: 0}
-  karimAnimator: {fileID: 0}
+  animator: {fileID: 0}
   customLipSyncContext: {fileID: 30779773708188026}
+  emotionController: {fileID: 0}
+  inactivityTimeout: 20
   rightController: {fileID: 0}
   npcCollider: {fileID: 579598021935221838}
   laserPointer: {fileID: 4496558182744473187}
   audioSource: {fileID: 7268987348757653705}
   speakerSource: {fileID: 5021595928235935099}
---- !u!114 &3817760665193589425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43c520a9bad8a3489109c869f454576, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContext
-  audioSource: {fileID: 7268987348757653705}
-  provider: 1
-  enableAcceleration: 1
-  enableKeyboardInput: 0
-  enableTouchInput: 0
-  audioLoopback: 0
-  loopbackKey: 108
-  showVisemes: 0
-  debugVisemesKey: 100
-  skipAudioSource: 0
-  gain: 3
-  debugLaughterKey: 104
-  showLaughter: 0
-  laughterScore: 0
---- !u!114 &5241224884953771230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597805309522532133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b97b38f2f1fd24185315141a6c6a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.LipSync::OVRLipSyncContextMorphTarget
-  skinnedMeshRenderer: {fileID: 5518425087734892745}
-  visemeToBlendTargets: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  enableVisemeTestKeys: 0
-  mouthExaggeration: 1.5
-  visemeTestKeys: 600000000900000071000000770000006500000072000000740000007900000075000000690000006f000000700000005b0000005d0000005c000000
-  laughterKey: 301
-  laughterBlendTarget: 15
-  laughterThreshold: 0.639
-  laughterMultiplier: 2.11
-  smoothAmount: 41
 --- !u!65 &579598021935221838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -882,7 +839,6 @@ MonoBehaviour:
   stoppingDistance: 0.6
   rotationSpeed: 8
   seatHeightOffset: -0.45
-  seatForwardOffset: 0
 --- !u!114 &30779773708188026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,11 +851,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed8487834242704a9cd97679fac3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LipSync.CustomLipSyncContext
-  modelAsset: {fileID: 5022602860645237092, guid: 92b700e6e77d7a24b8f6ba7fef329972, type: 3}
+  modelAsset: {fileID: 5022602860645237092, guid: f65607335b3d74348adb7d1270085aad, type: 3}
   backendType: 512
   smoothing: 0.55
   ppRescueBlend: 0.35
   ppRescueThreshold: 0.12
+  useTextGuidedMFCC: 1
+  testTranscript: 
+  textGuidedStrength: 0.7
+  textGuidedSmoothWindow: 4
+  showModeLabel: 1
+  testClip: {fileID: 0}
+  playTestClipOnStart: 0
+  playbackSpeed: 1
   logTimings: 1
 --- !u!114 &-6047319904845741997
 MonoBehaviour:
@@ -931,6 +895,8 @@ MonoBehaviour:
   - 1
   - 1.8
   - 1.5
+  vLipOpenScale: 1
+  mergedOpenMouthScale: 1
   ppClosureThreshold: 0.25
   ppFastSmoothing: 0.15
   visemeBlendShapeNames:
@@ -950,6 +916,86 @@ MonoBehaviour:
   - V_Tight_O
   - V_Tight
   showDebugOverlay: 1
+--- !u!114 &8138619050359305066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b38578f7960e24bb159fb07808ee90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HistoricalNPCController
+  role: 0
+  idleClip: {fileID: 0}
+  talkingClip: {fileID: 0}
+  standingAfterLectureClip: {fileID: 0}
+  walkingClip: {fileID: 0}
+  sittingClipVariants:
+  - {fileID: -203655887218126122, guid: 39d11422ed3310f4d96a812bfe70234e, type: 3}
+  - {fileID: 7400000, guid: d498f9913702a8c4eaf0f4f1a0549e54, type: 2}
+  sittingSwitchInterval: 15
+  paceDistance: 0.6
+  paceSpeed: 0.5
+  lookSpeed: 1.2
+  maxLookAngle: 45
+  spineBoneName: mixamorig:Spine
+  breathDepth: 1.2
+  breathRate: 13
+  breathPhaseOffset: 0
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  headLookWeight: 0.7
+  headMaxAngle: 70
+  headLookSpeed: 4
+  crossfadeDuration: 0.25
+--- !u!114 &5301076498473630320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78401683be0149b42948dd4b54e46531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PanelNPCController
+  idleClip: {fileID: 0}
+  talkingClip: {fileID: 0}
+  pointingClip: {fileID: 0}
+  crossfadeDuration: 0.25
+  panelGestureDuration: 5
+  enableLookAt: 1
+  headBoneName: CC_Base_Head
+  neckBoneName: CC_Base_NeckTwist01
+  leftEyeBoneName: CC_Base_L_Eye
+  rightEyeBoneName: CC_Base_R_Eye
+  headLookWeight: 0.5
+  maxHeadLookAngle: 50
+  headLookSpeed: 4
+  eyeLookWeight: 1
+  maxEyeLookAngle: 25
+  eyeLookSpeed: 10
+--- !u!114 &959885029011199110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597805309522532133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf59c481378634240903b6da352b902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCBlinking
+  MinInterval: 2.5
+  MaxInterval: 6
+  BlinkDuration: 0.09
+  LeftEyeBlendName: 
+  RightEyeBlendName: 
 --- !u!4 &627146613400150513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 882335638797273989, guid: ad09ec57616b718419e64bc5fae41900, type: 3}

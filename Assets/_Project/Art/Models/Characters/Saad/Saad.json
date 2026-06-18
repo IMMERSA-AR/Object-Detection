@@ -5,7 +5,7 @@
             "Name": true,
             "SupportShaderSelect": true
         },
-        "Export Directory": "D:/University/Graduation Project/GP - 1/Assets/Reallusion/Exports/Saad2",
+        "Export Directory": "D:/University/Graduation Project/GP - 1/Assets/Reallusion/Exports/SaadFix",
         "Object": {
             "Saad": {
                 "Generation": "RL_CC3_Plus",
@@ -600,16 +600,20 @@
                         "CC_Base_R_Pinky3": {},
                         "CC_Base_R_UpperarmTwist01": {},
                         "CC_Base_R_UpperarmTwist02": {},
+                        "CC_Base_Tongue": {},
                         "CC_Base_Body": {},
                         "Brows_Light": {},
                         "Lash_Up_Short_Sparse": {},
                         "Lash_Low_Short_Sparse": {},
                         "CC_Base_TearLine": {},
                         "CC_Base_EyeOcclusion": {},
+                        "CC_Base_Teeth": {},
                         "Boxers": {},
+                        "CC_Base_Eye": {},
                         "Sport_sneakers": {},
                         "Slim_fit_pants": {},
                         "Layered_sweater": {},
+                        "CC_Base_Tear_Ducts": {},
                         "Classic_Slick_Back": {}
                     }
                 },
@@ -5964,8 +5968,8 @@
                     }
                 },
                 "Meshes": {
-                    "CC_Base_Body": {
-                        "SubD Level": 2,
+                    "CC_Base_Tongue": {
+                        "SubD Level": 0,
                         "Materials": {
                             "Std_Tongue": {
                                 "Material Type": "Pbr",
@@ -6038,7 +6042,7 @@
                                         ]
                                     },
                                     "AO": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Tongue/Std_Tongue_ao.jpg",
+                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Tongue/Std_Tongue/Std_Tongue_ao.jpg",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -6048,12 +6052,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Tongue/Std_Tongue_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Tongue/Std_Tongue_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -6061,10 +6059,10 @@
                                     "Shader Name": "RLTongue",
                                     "Image": {
                                         "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroN.png"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MicroN.png"
                                         },
                                         "Gradient AO": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_GradAO.jpg"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tongue/Std_Tongue/Std_Tongue_GradAO.jpg"
                                         }
                                     },
                                     "Variable": {
@@ -6094,7 +6092,12 @@
                                     "DecayScale": 0.15000000596046449,
                                     "Lerp": 0.8999999761581421
                                 }
-                            },
+                            }
+                        }
+                    },
+                    "CC_Base_Body": {
+                        "SubD Level": 0,
+                        "Materials": {
                             "Std_Skin_Head": {
                                 "Material Type": "Pbr",
                                 "MultiUV Index": 0,
@@ -6142,7 +6145,7 @@
                                         ]
                                     },
                                     "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Skin_Head_Normal.png",
+                                        "Texture Path": "./Saad.fbm/Std_Skin_Head_Normal.jpg",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -6164,12 +6167,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {
@@ -6196,7 +6193,7 @@
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_SSSMap.png"
                                         },
                                         "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroN.png"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MicroN.png"
                                         },
                                         "Cheek Fore UpperLip Chin Mask": {
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_CFULCMask.tga"
@@ -6530,7 +6527,7 @@
                                         ]
                                     },
                                     "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Skin_Body_Normal.png",
+                                        "Texture Path": "./Saad.fbm/Std_Skin_Body_Normal.jpg",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -6552,12 +6549,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Body/Std_Skin_Body_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Body/Std_Skin_Body_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {
@@ -6581,7 +6572,7 @@
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Body/Std_Skin_Body_SSSMap.png"
                                         },
                                         "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroN.png"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MicroN.png"
                                         },
                                         "MicroNormalMask": {
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Body/Std_Skin_Body_MicroNMask.jpg"
@@ -6702,7 +6693,7 @@
                                         ]
                                     },
                                     "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Skin_Arm_Normal.png",
+                                        "Texture Path": "./Saad.fbm/Std_Skin_Arm_Normal.jpg",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -6724,12 +6715,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Arm/Std_Skin_Arm_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Arm/Std_Skin_Arm_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {
@@ -6753,7 +6738,7 @@
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Arm/Std_Skin_Arm_SSSMap.png"
                                         },
                                         "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroN.png"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MicroN.png"
                                         },
                                         "MicroNormalMask": {
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Arm/Std_Skin_Arm_MicroNMask.jpg"
@@ -6874,7 +6859,7 @@
                                         ]
                                     },
                                     "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Skin_Leg_Normal.png",
+                                        "Texture Path": "./Saad.fbm/Std_Skin_Leg_Normal.jpg",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -6896,12 +6881,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Leg/Std_Skin_Leg_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Leg/Std_Skin_Leg_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {
@@ -6925,7 +6904,7 @@
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Leg/Std_Skin_Leg_SSSMap.png"
                                         },
                                         "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroN.png"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MicroN.png"
                                         },
                                         "MicroNormalMask": {
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Leg/Std_Skin_Leg_MicroNMask.jpg"
@@ -7046,7 +7025,7 @@
                                         ]
                                     },
                                     "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Nails_Normal.png",
+                                        "Texture Path": "./Saad.fbm/Std_Nails_Normal.jpg",
                                         "Strength": 100.0,
                                         "Offset": [
                                             0.0,
@@ -7068,12 +7047,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {
@@ -7097,7 +7070,7 @@
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_SSSMap.jpg"
                                         },
                                         "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroN.png"
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_MicroN.png"
                                         },
                                         "MicroNormalMask": {
                                             "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Nails/Std_Nails_MicroNMask.jpg"
@@ -7226,18 +7199,6 @@
                                             1.0
                                         ]
                                     },
-                                    "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Eyelash_Normal.png",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
                                     "AO": {
                                         "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eyelash/Std_Eyelash_ao.jpg",
                                         "Strength": 100.0,
@@ -7249,12 +7210,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eyelash/Std_Eyelash_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eyelash/Std_Eyelash_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {
@@ -7265,1073 +7220,11 @@
                                         "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eyelash/Std_Eyelash_ResourceMap_WSNormal.png"
                                     }
                                 }
-                            },
-                            "CC_Base_Tear_Ducts": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": true,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    125.00000762939453,
-                                    125.00000762939453,
-                                    125.00000762939453
-                                ],
-                                "Specular Color": [
-                                    68.6969985961914,
-                                    68.6969985961914,
-                                    68.6969985961914
-                                ],
-                                "Opacity": 1.0,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/CC_Base_Tear_Ducts_Diffuse.png",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    }
-                                },
-                                "Resource Textures": {
-                                    "Position": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_ResourceMap_Position.png"
-                                    },
-                                    "WSNormal": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_ResourceMap_WSNormal.png"
-                                    }
-                                },
-                                "Custom Shader": {
-                                    "Shader Name": "RLHead",
-                                    "Image": {},
-                                    "Variable": {
-                                        "BaseColor Blend2 Strength": 0.0,
-                                        "NormalMap Blend Strength": 0.0,
-                                        "_BaseColorMap Brightness": 0.0,
-                                        "_BaseColorMap Saturation": 0.0,
-                                        "Flip MicroNormal Y": 1.0,
-                                        "MicroNormal Tiling": 40.0,
-                                        "MicroNormal Strength": 0.125,
-                                        "Keep Original Roughness": 1.0,
-                                        "Original Roughness Strength": 0.8500000238418579,
-                                        "Cavity Strength": 0.30000001192092898,
-                                        "Micro Roughness Scale": 0.04699999839067459,
-                                        "Nose Roughness Scale": -0.00800000037997961,
-                                        "Mouth Roughness Scale": 0.03400000184774399,
-                                        "UpperLid Roughness Scale": -0.30000001192092898,
-                                        "InnerLid Roughness Scale": -0.4410000145435333,
-                                        "Ear Roughness Scale": 0.0,
-                                        "Neck Roughness Scale": 0.0,
-                                        "Cheek Roughness Scale": 0.0,
-                                        "Forehead Roughness Scale": 0.0,
-                                        "UpperLip Roughness Scale": 0.0,
-                                        "Chin Roughness Scale": 0.0,
-                                        "Unmasked Roughness Scale": 0.050999999046325687,
-                                        "Edge Roughness Multiplier": 0.0,
-                                        "_Specular": 0.5,
-                                        "SSS Metallic Threshold": 1.0,
-                                        "Inner Mouth Ao": 2.5,
-                                        "Nostril Ao": 2.5,
-                                        "Lips Gap Ao": 2.5,
-                                        "Nose Scatter Scale": 1.0,
-                                        "Mouth Scatter Scale": 1.0,
-                                        "UpperLid Scatter Scale": 1.0,
-                                        "InnerLid Scatter Scale": 1.0,
-                                        "Ear Scatter Scale": 0.9390000104904175,
-                                        "Neck Scatter Scale": 1.0,
-                                        "Cheek Scatter Scale": 1.0,
-                                        "Forehead Scatter Scale": 1.0,
-                                        "UpperLip Scatter Scale": 1.0,
-                                        "Chin Scatter Scale": 1.0,
-                                        "Unmasked Scatter Scale": 1.0,
-                                        "_Active Human Color": 0.0,
-                                        "_Active Blend Map": 0.0,
-                                        "_Blend Map Color": [
-                                            247.35000610351563,
-                                            201.45001220703126,
-                                            155.5500030517578
-                                        ],
-                                        "_Blend Map Strength": 0.20000000298023225,
-                                        "padding1": [
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "_Active": 0.0,
-                                        "_Skin Color Range": [
-                                            247.35000610351563,
-                                            201.45001220703126,
-                                            155.5500030517578
-                                        ],
-                                        "_Range": 0.15000000596046449,
-                                        "_Skin Preset": [
-                                            0.0,
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "_Red": 24.0,
-                                        "_Yellow": 22.0,
-                                        "_Black": 0.0,
-                                        "padding Last4": 0.0
-                                    }
-                                },
-                                "Subsurface Scatter": {
-                                    "Falloff": [
-                                        189.0,
-                                        67.0,
-                                        56.0
-                                    ],
-                                    "Radius": 1.7289999723434449,
-                                    "Distribution": 0.8999999761581421,
-                                    "IOR": 1.2999999523162842,
-                                    "DecayScale": 0.15000000596046449,
-                                    "Lerp": 0.8500000238418579
-                                },
-                                "Wrinkle": {
-                                    "Textures": {
-                                        "Diffuse_1": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Diffuse1.png"
-                                        },
-                                        "Diffuse_2": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Diffuse2.png"
-                                        },
-                                        "Diffuse_3": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Diffuse3.png"
-                                        },
-                                        "Normal_1": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Normal1.png"
-                                        },
-                                        "Normal_2": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Normal2.png"
-                                        },
-                                        "Normal_3": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Normal3.png"
-                                        },
-                                        "Roughness_1": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Roughness1.png"
-                                        },
-                                        "Roughness_2": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Roughness2.png"
-                                        },
-                                        "Roughness_3": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Roughness3.png"
-                                        },
-                                        "Flow_1": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Flow1.jpg"
-                                        },
-                                        "Flow_2": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Flow2.jpg"
-                                        },
-                                        "Flow_3": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Flow3.jpg"
-                                        }
-                                    },
-                                    "WrinkleRules": [
-                                        "head_wm1_normal_head_wm1_blink_L",
-                                        "head_wm1_normal_head_wm1_blink_R",
-                                        "head_wm1_normal_head_wm1_browRaiseInner_L",
-                                        "head_wm1_normal_head_wm1_browRaiseInner_R",
-                                        "head_wm1_normal_head_wm1_browRaiseOuter_L",
-                                        "head_wm1_normal_head_wm1_browRaiseOuter_R",
-                                        "head_wm1_normal_head_wm1_chinRaise_L",
-                                        "head_wm1_normal_head_wm1_chinRaise_R",
-                                        "head_wm1_normal_head_wm1_jawOpen",
-                                        "head_wm1_normal_head_wm1_purse_DL",
-                                        "head_wm1_normal_head_wm1_purse_DR",
-                                        "head_wm1_normal_head_wm1_purse_UL",
-                                        "head_wm1_normal_head_wm1_purse_UR",
-                                        "head_wm1_normal_head_wm1_squintInner_L",
-                                        "head_wm1_normal_head_wm1_squintInner_R",
-                                        "head_wm2_normal_head_wm2_browsDown_L",
-                                        "head_wm2_normal_head_wm2_browsDown_R",
-                                        "head_wm2_normal_head_wm2_browsLateral_L",
-                                        "head_wm2_normal_head_wm2_browsLateral_R",
-                                        "head_wm2_normal_head_wm2_mouthStretch_L",
-                                        "head_wm2_normal_head_wm2_mouthStretch_R",
-                                        "head_wm2_normal_head_wm2_neckStretch_L",
-                                        "head_wm2_normal_head_wm2_neckStretch_R",
-                                        "head_wm2_normal_head_wm2_noseWrinkler_L",
-                                        "head_wm2_normal_head_wm2_noseWrinkler_R",
-                                        "head_wm2_normal_head_wm2_noseCrease_L",
-                                        "head_wm2_normal_head_wm2_noseCrease_R",
-                                        "head_wm3_normal_head_wm3_cheekRaiseInner_L",
-                                        "head_wm3_normal_head_wm3_cheekRaiseInner_R",
-                                        "head_wm3_normal_head_wm3_cheekRaiseOuter_L",
-                                        "head_wm3_normal_head_wm3_cheekRaiseOuter_R",
-                                        "head_wm3_normal_head_wm3_cheekRaiseUpper_L",
-                                        "head_wm3_normal_head_wm3_cheekRaiseUpper_R",
-                                        "head_wm3_normal_head_wm3_smile_L",
-                                        "head_wm3_normal_head_wm3_smile_R",
-                                        "head_wm3_normal_head_wm13_lips_DL",
-                                        "head_wm3_normal_head_wm13_lips_DR",
-                                        "head_wm3_normal_head_wm13_lips_UL",
-                                        "head_wm3_normal_head_wm13_lips_UR",
-                                        "head_wm1_normal_head_wm13_lips_DL",
-                                        "head_wm1_normal_head_wm13_lips_DR",
-                                        "head_wm1_normal_head_wm13_lips_UL",
-                                        "head_wm1_normal_head_wm13_lips_UR"
-                                    ],
-                                    "WrinkleEaseStrength": [
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0,
-                                        50.0
-                                    ],
-                                    "WrinkleRuleWeights": [
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0,
-                                        1.0
-                                    ],
-                                    "WrinkleOverallWeight": 1.0
-                                }
-                            },
-                            "Std_Upper_Teeth": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": false,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    125.00000762939453,
-                                    125.00000762939453,
-                                    125.00000762939453
-                                ],
-                                "Specular Color": [
-                                    229.5,
-                                    229.5,
-                                    229.5
-                                ],
-                                "Opacity": 1.0,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Metallic": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/Std_Upper_Teeth_Diffuse.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Roughness": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Upper_Teeth_Normal.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "AO": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_ao.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_HDRP.png"
-                                    }
-                                },
-                                "Resource Textures": {},
-                                "Custom Shader": {
-                                    "Shader Name": "RLTeethGum",
-                                    "Image": {
-                                        "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_MicroN.png"
-                                        },
-                                        "Gradient AO": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_GradAO.jpg"
-                                        },
-                                        "Gums Mask": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_GumsMask.jpg"
-                                        }
-                                    },
-                                    "Variable": {
-                                        "Flip MicroNormal Y": 1.0,
-                                        "Teeth MicroNormal Tiling": 10.0,
-                                        "Teeth MicroNormal Strength": 0.30000001192092898,
-                                        "Gums MicroNormal Tiling": 10.0,
-                                        "Gums MicroNormal Strength": 0.30000001192092898,
-                                        "Teeth Edge Color": [
-                                            80.0,
-                                            30.0,
-                                            20.0
-                                        ],
-                                        "Is Upper Teeth": 1.0,
-                                        "Teeth Brightness": 0.6589999794960022,
-                                        "Teeth Desaturation": -0.21299999952316285,
-                                        "Gums Brightness": 0.6159999966621399,
-                                        "Gums Desaturation": -0.01899999938905239,
-                                        "Front Roughness": 0.4000000059604645,
-                                        "Front Specular": 0.30000001192092898,
-                                        "Front AO": 1.5,
-                                        "Back AO": 0.0,
-                                        "Back Roughness": 0.0,
-                                        "Back Specular": 0.0,
-                                        "Gums Scatter": 0.5,
-                                        "Teeth Scatter": 0.6499999761581421
-                                    }
-                                },
-                                "Subsurface Scatter": {
-                                    "Falloff": [
-                                        166.0,
-                                        123.0,
-                                        101.0
-                                    ],
-                                    "Radius": 1.5,
-                                    "Distribution": 0.9300000071525574,
-                                    "IOR": 1.5,
-                                    "DecayScale": 1.0,
-                                    "Lerp": 0.8999999761581421
-                                }
-                            },
-                            "Std_Lower_Teeth": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": false,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    125.00000762939453,
-                                    125.00000762939453,
-                                    125.00000762939453
-                                ],
-                                "Specular Color": [
-                                    229.5,
-                                    229.5,
-                                    229.5
-                                ],
-                                "Opacity": 1.0,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Metallic": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/Std_Lower_Teeth_Diffuse.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Roughness": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Lower_Teeth_Normal.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "AO": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Lower_Teeth/Std_Lower_Teeth_ao.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Lower_Teeth/Std_Lower_Teeth_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Lower_Teeth/Std_Lower_Teeth_HDRP.png"
-                                    }
-                                },
-                                "Resource Textures": {},
-                                "Custom Shader": {
-                                    "Shader Name": "RLTeethGum",
-                                    "Image": {
-                                        "MicroNormal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_MicroN.png"
-                                        },
-                                        "Gradient AO": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_GradAO.jpg"
-                                        },
-                                        "Gums Mask": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Upper_Teeth/Std_Upper_Teeth_GumsMask.jpg"
-                                        }
-                                    },
-                                    "Variable": {
-                                        "Flip MicroNormal Y": 1.0,
-                                        "Teeth MicroNormal Tiling": 10.0,
-                                        "Teeth MicroNormal Strength": 0.30000001192092898,
-                                        "Gums MicroNormal Tiling": 10.0,
-                                        "Gums MicroNormal Strength": 0.30000001192092898,
-                                        "Teeth Edge Color": [
-                                            80.0,
-                                            30.0,
-                                            20.0
-                                        ],
-                                        "Is Upper Teeth": 0.0,
-                                        "Teeth Brightness": 0.6589999794960022,
-                                        "Teeth Desaturation": -0.21299999952316285,
-                                        "Gums Brightness": 0.6159999966621399,
-                                        "Gums Desaturation": -0.01899999938905239,
-                                        "Front Roughness": 0.4000000059604645,
-                                        "Front Specular": 0.30000001192092898,
-                                        "Front AO": 1.5,
-                                        "Back AO": 0.0,
-                                        "Back Roughness": 0.0,
-                                        "Back Specular": 0.0,
-                                        "Gums Scatter": 0.5,
-                                        "Teeth Scatter": 0.6499999761581421
-                                    }
-                                },
-                                "Subsurface Scatter": {
-                                    "Falloff": [
-                                        165.0,
-                                        121.0,
-                                        101.0
-                                    ],
-                                    "Radius": 1.5,
-                                    "Distribution": 0.9300000071525574,
-                                    "IOR": 1.5,
-                                    "DecayScale": 1.0,
-                                    "Lerp": 0.8999999761581421
-                                }
-                            },
-                            "Std_Eye_R": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": false,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    50.000003814697269,
-                                    50.000003814697269,
-                                    50.000003814697269
-                                ],
-                                "Specular Color": [
-                                    229.00001525878907,
-                                    229.00001525878907,
-                                    229.00001525878907
-                                ],
-                                "Opacity": 1.0,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Metallic": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/Std_Eye_R_Diffuse.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Roughness": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Eye_R_Normal.png",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eye_R/Std_Eye_R_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eye_R/Std_Eye_R_MetallicAlpha.png"
-                                    }
-                                },
-                                "Resource Textures": {}
-                            },
-                            "Std_Cornea_R": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": false,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    50.000003814697269,
-                                    50.000003814697269,
-                                    50.000003814697269
-                                ],
-                                "Specular Color": [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ],
-                                "Opacity": 0.800000011920929,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Metallic": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/Std_Cornea_R_Diffuse.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Roughness": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "AO": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_ao.jpg",
-                                        "Strength": 50.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_HDRP.png"
-                                    }
-                                },
-                                "Resource Textures": {},
-                                "Custom Shader": {
-                                    "Shader Name": "RLEye",
-                                    "Image": {
-                                        "Iris Normal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_IrisN.png"
-                                        },
-                                        "Sclera Normal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_ScleraN.png"
-                                        },
-                                        "EyeBlendMap2": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_BCBMap.jpg"
-                                        },
-                                        "Inner Iris Mask": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_IrisMask.png"
-                                        },
-                                        "Sclera": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_Sclera.jpg"
-                                        }
-                                    },
-                                    "Variable": {
-                                        "BlendMap2 Strength": 0.0,
-                                        "Shadow Radius": 0.4000000059604645,
-                                        "Shadow Hardness": 0.5,
-                                        "Specular Scale": 0.800000011920929,
-                                        "Is Left Eye": 1.0,
-                                        "Eye Corner Darkness Color": [
-                                            255.0,
-                                            187.9860076904297,
-                                            178.9998016357422
-                                        ],
-                                        "Iris Depth Scale": 0.8999999761581421,
-                                        "_Iris Roughness": 0.0,
-                                        "Iris Color Brightness": 1.0,
-                                        "Pupil Scale": 0.9549999833106995,
-                                        "_IoR": 1.399999976158142,
-                                        "Iris Cloudy Color": [
-                                            0.0,
-                                            2.549999952316284,
-                                            2.549999952316284
-                                        ],
-                                        "Iris Inner Color": [
-                                            255.0,
-                                            223.0,
-                                            125.0
-                                        ],
-                                        "Iris Inner Scale": 0.0,
-                                        "Iris UV Radius": 0.1599999964237213,
-                                        "Iris UV Scale": 1.0,
-                                        "padding Last": 0.0,
-                                        "padding Last2": 0.0,
-                                        "padding Last3": 0.0,
-                                        "Iris Color": [
-                                            255.0,
-                                            255.0,
-                                            255.0
-                                        ],
-                                        "Limbus UV Width Color": 0.04500000178813934,
-                                        "Limbus Dark Scale": 6.5,
-                                        "ScleraBrightness": 0.6499999761581421,
-                                        "Sclera Roughness": 0.20000000298023225,
-                                        "Sclera Flatten Normal": 0.8999999761581421,
-                                        "Sclera Normal UV Scale": 0.5,
-                                        "Sclera UV Radius": 0.9300000071525574,
-                                        "replaecIrisDisplacementMap": 1.0
-                                    }
-                                },
-                                "Subsurface Scatter": {
-                                    "Falloff": [
-                                        255.0,
-                                        255.0,
-                                        255.0
-                                    ],
-                                    "Radius": 5.0,
-                                    "Distribution": 0.9300000071525574,
-                                    "IOR": 1.5499999523162842,
-                                    "DecayScale": 1.0,
-                                    "Lerp": 0.8500000238418579
-                                }
-                            },
-                            "Std_Eye_L": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": false,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    50.000003814697269,
-                                    50.000003814697269,
-                                    50.000003814697269
-                                ],
-                                "Specular Color": [
-                                    229.00001525878907,
-                                    229.00001525878907,
-                                    229.00001525878907
-                                ],
-                                "Opacity": 1.0,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Metallic": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/Std_Eye_L_Diffuse.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Roughness": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Normal": {
-                                        "Texture Path": "./Saad.fbm/Std_Eye_L_Normal.png",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eye_L/Std_Eye_L_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Eye_L/Std_Eye_L_MetallicAlpha.png"
-                                    }
-                                },
-                                "Resource Textures": {}
-                            },
-                            "Std_Cornea_L": {
-                                "Material Type": "Pbr",
-                                "MultiUV Index": 0,
-                                "Two Side": false,
-                                "Diffuse Color": [
-                                    255.0,
-                                    255.0,
-                                    255.0
-                                ],
-                                "Ambient Color": [
-                                    50.000003814697269,
-                                    50.000003814697269,
-                                    50.000003814697269
-                                ],
-                                "Specular Color": [
-                                    0.0,
-                                    0.0,
-                                    0.0
-                                ],
-                                "Opacity": 0.800000011920929,
-                                "Self Illumination": 0.0,
-                                "Textures": {
-                                    "Metallic": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Base Color": {
-                                        "Texture Path": "./Saad.fbm/Std_Cornea_L_Diffuse.jpg",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "Roughness": {
-                                        "Texture Path": "",
-                                        "Strength": 100.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "AO": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_L/Std_Cornea_L_ao.jpg",
-                                        "Strength": 50.0,
-                                        "Offset": [
-                                            0.0,
-                                            0.0
-                                        ],
-                                        "Tiling": [
-                                            1.0,
-                                            1.0
-                                        ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_L/Std_Cornea_L_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_L/Std_Cornea_L_HDRP.png"
-                                    }
-                                },
-                                "Resource Textures": {},
-                                "Custom Shader": {
-                                    "Shader Name": "RLEye",
-                                    "Image": {
-                                        "Iris Normal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_IrisN.png"
-                                        },
-                                        "Sclera Normal": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_ScleraN.png"
-                                        },
-                                        "EyeBlendMap2": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_BCBMap.jpg"
-                                        },
-                                        "Inner Iris Mask": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_IrisMask.png"
-                                        },
-                                        "Sclera": {
-                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Cornea_R/Std_Cornea_R_Sclera.jpg"
-                                        }
-                                    },
-                                    "Variable": {
-                                        "BlendMap2 Strength": 0.0,
-                                        "Shadow Radius": 0.4000000059604645,
-                                        "Shadow Hardness": 0.5,
-                                        "Specular Scale": 0.800000011920929,
-                                        "Is Left Eye": 1.0,
-                                        "Eye Corner Darkness Color": [
-                                            255.0,
-                                            187.9860076904297,
-                                            178.9998016357422
-                                        ],
-                                        "Iris Depth Scale": 0.8999999761581421,
-                                        "_Iris Roughness": 0.0,
-                                        "Iris Color Brightness": 1.0,
-                                        "Pupil Scale": 0.9549999833106995,
-                                        "_IoR": 1.399999976158142,
-                                        "Iris Cloudy Color": [
-                                            0.0,
-                                            2.549999952316284,
-                                            2.549999952316284
-                                        ],
-                                        "Iris Inner Color": [
-                                            255.0,
-                                            223.0,
-                                            125.0
-                                        ],
-                                        "Iris Inner Scale": 0.0,
-                                        "Iris UV Radius": 0.1599999964237213,
-                                        "Iris UV Scale": 1.0,
-                                        "padding Last": 0.0,
-                                        "padding Last2": 0.0,
-                                        "padding Last3": 0.0,
-                                        "Iris Color": [
-                                            255.0,
-                                            255.0,
-                                            255.0
-                                        ],
-                                        "Limbus UV Width Color": 0.04500000178813934,
-                                        "Limbus Dark Scale": 6.5,
-                                        "ScleraBrightness": 0.6499999761581421,
-                                        "Sclera Roughness": 0.20000000298023225,
-                                        "Sclera Flatten Normal": 0.8999999761581421,
-                                        "Sclera Normal UV Scale": 0.5,
-                                        "Sclera UV Radius": 0.9300000071525574,
-                                        "replaecIrisDisplacementMap": 1.0
-                                    }
-                                },
-                                "Subsurface Scatter": {
-                                    "Falloff": [
-                                        255.0,
-                                        255.0,
-                                        255.0
-                                    ],
-                                    "Radius": 5.0,
-                                    "Distribution": 0.9300000071525574,
-                                    "IOR": 1.5499999523162842,
-                                    "DecayScale": 1.0,
-                                    "Lerp": 0.8500000238418579
-                                }
                             }
                         }
                     },
                     "Brows_Light": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Brows_Hair_Transparency": {
                                 "Material Type": "Pbr",
@@ -8415,12 +7308,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Brows_Light/Brows_Light/Brows_Hair_Transparency/Brows_Hair_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Brows_Light/Brows_Light/Brows_Hair_Transparency/Brows_Hair_Transparency_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -8594,12 +7481,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Brows_Light/Brows_Light/Brows_Base_Transparency/Brows_Base_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Brows_Light/Brows_Light/Brows_Base_Transparency/Brows_Base_Transparency_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {}
@@ -8674,12 +7555,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Brows_Light/Brows_Light/Brows_Color_Transparency/Brows_Color_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Brows_Light/Brows_Light/Brows_Color_Transparency/Brows_Color_Transparency_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {}
@@ -8687,7 +7562,7 @@
                         }
                     },
                     "Lash_Up_Short_Sparse": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Lash_Fine_Transparency": {
                                 "Material Type": "Pbr",
@@ -8771,12 +7646,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Lash_Up_Short_Sparse/Lash_Up_Short_Sparse/Lash_Fine_Transparency/Lash_Fine_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Lash_Up_Short_Sparse/Lash_Up_Short_Sparse/Lash_Fine_Transparency/Lash_Fine_Transparency_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -8883,7 +7752,7 @@
                         }
                     },
                     "Lash_Low_Short_Sparse": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Lash_Thick_Transparency": {
                                 "Material Type": "Pbr",
@@ -8967,12 +7836,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Lash_Low_Short_Sparse/Lash_Low_Short_Sparse/Lash_Thick_Transparency/Lash_Thick_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Lash_Low_Short_Sparse/Lash_Low_Short_Sparse/Lash_Thick_Transparency/Lash_Thick_Transparency_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -9079,7 +7942,7 @@
                         }
                     },
                     "CC_Base_TearLine": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Std_Tearline_R": {
                                 "Material Type": "Pbr",
@@ -9126,12 +7989,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/CC_Base_TearLine/CC_Base_TearLine/Std_Tearline_R/Std_Tearline_R_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/CC_Base_TearLine/CC_Base_TearLine/Std_Tearline_R/Std_Tearline_R_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -9199,12 +8056,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/CC_Base_TearLine/CC_Base_TearLine/Std_Tearline_L/Std_Tearline_L_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/CC_Base_TearLine/CC_Base_TearLine/Std_Tearline_L/Std_Tearline_L_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -9230,7 +8081,7 @@
                         }
                     },
                     "CC_Base_EyeOcclusion": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Std_Eye_Occlusion_R": {
                                 "Material Type": "Pbr",
@@ -9277,12 +8128,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/CC_Base_EyeOcclusion/CC_Base_EyeOcclusion/Std_Eye_Occlusion_R/Std_Eye_Occlusion_R_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/CC_Base_EyeOcclusion/CC_Base_EyeOcclusion/Std_Eye_Occlusion_R/Std_Eye_Occlusion_R_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -9406,12 +8251,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/CC_Base_EyeOcclusion/CC_Base_EyeOcclusion/Std_Eye_Occlusion_L/Std_Eye_Occlusion_L_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/CC_Base_EyeOcclusion/CC_Base_EyeOcclusion/Std_Eye_Occlusion_L/Std_Eye_Occlusion_L_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -9492,8 +8331,285 @@
                             }
                         }
                     },
+                    "CC_Base_Teeth": {
+                        "SubD Level": 0,
+                        "Materials": {
+                            "Std_Upper_Teeth": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": false,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    125.00000762939453,
+                                    125.00000762939453,
+                                    125.00000762939453
+                                ],
+                                "Specular Color": [
+                                    229.5,
+                                    229.5,
+                                    229.5
+                                ],
+                                "Opacity": 1.0,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/Std_Upper_Teeth_Diffuse.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Normal": {
+                                        "Texture Path": "./Saad.fbm/Std_Upper_Teeth_Normal.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "AO": {
+                                        "Texture Path": "./textures/Saad/CC_Base_Teeth/CC_Base_Teeth/Std_Upper_Teeth/Std_Upper_Teeth_ao.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {},
+                                "Custom Shader": {
+                                    "Shader Name": "RLTeethGum",
+                                    "Image": {
+                                        "MicroNormal": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Teeth/CC_Base_Teeth/Std_Upper_Teeth/Std_Upper_Teeth_MicroN.png"
+                                        },
+                                        "Gradient AO": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tongue/Std_Tongue/Std_Tongue_GradAO.jpg"
+                                        },
+                                        "Gums Mask": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Teeth/CC_Base_Teeth/Std_Upper_Teeth/Std_Upper_Teeth_GumsMask.jpg"
+                                        }
+                                    },
+                                    "Variable": {
+                                        "Flip MicroNormal Y": 1.0,
+                                        "Teeth MicroNormal Tiling": 10.0,
+                                        "Teeth MicroNormal Strength": 0.30000001192092898,
+                                        "Gums MicroNormal Tiling": 10.0,
+                                        "Gums MicroNormal Strength": 0.30000001192092898,
+                                        "Teeth Edge Color": [
+                                            80.0,
+                                            30.0,
+                                            20.0
+                                        ],
+                                        "Is Upper Teeth": 1.0,
+                                        "Teeth Brightness": 0.6589999794960022,
+                                        "Teeth Desaturation": -0.21299999952316285,
+                                        "Gums Brightness": 0.6159999966621399,
+                                        "Gums Desaturation": -0.01899999938905239,
+                                        "Front Roughness": 0.4000000059604645,
+                                        "Front Specular": 0.30000001192092898,
+                                        "Front AO": 1.5,
+                                        "Back AO": 0.0,
+                                        "Back Roughness": 0.0,
+                                        "Back Specular": 0.0,
+                                        "Gums Scatter": 0.5,
+                                        "Teeth Scatter": 0.6499999761581421
+                                    }
+                                },
+                                "Subsurface Scatter": {
+                                    "Falloff": [
+                                        166.0,
+                                        123.0,
+                                        101.0
+                                    ],
+                                    "Radius": 1.5,
+                                    "Distribution": 0.9300000071525574,
+                                    "IOR": 1.5,
+                                    "DecayScale": 1.0,
+                                    "Lerp": 0.8999999761581421
+                                }
+                            },
+                            "Std_Lower_Teeth": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": false,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    125.00000762939453,
+                                    125.00000762939453,
+                                    125.00000762939453
+                                ],
+                                "Specular Color": [
+                                    229.5,
+                                    229.5,
+                                    229.5
+                                ],
+                                "Opacity": 1.0,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/Std_Lower_Teeth_Diffuse.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Normal": {
+                                        "Texture Path": "./Saad.fbm/Std_Lower_Teeth_Normal.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "AO": {
+                                        "Texture Path": "./textures/Saad/CC_Base_Teeth/CC_Base_Teeth/Std_Lower_Teeth/Std_Lower_Teeth_ao.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {},
+                                "Custom Shader": {
+                                    "Shader Name": "RLTeethGum",
+                                    "Image": {
+                                        "MicroNormal": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Teeth/CC_Base_Teeth/Std_Upper_Teeth/Std_Upper_Teeth_MicroN.png"
+                                        },
+                                        "Gradient AO": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tongue/Std_Tongue/Std_Tongue_GradAO.jpg"
+                                        },
+                                        "Gums Mask": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Teeth/CC_Base_Teeth/Std_Upper_Teeth/Std_Upper_Teeth_GumsMask.jpg"
+                                        }
+                                    },
+                                    "Variable": {
+                                        "Flip MicroNormal Y": 1.0,
+                                        "Teeth MicroNormal Tiling": 10.0,
+                                        "Teeth MicroNormal Strength": 0.30000001192092898,
+                                        "Gums MicroNormal Tiling": 10.0,
+                                        "Gums MicroNormal Strength": 0.30000001192092898,
+                                        "Teeth Edge Color": [
+                                            80.0,
+                                            30.0,
+                                            20.0
+                                        ],
+                                        "Is Upper Teeth": 0.0,
+                                        "Teeth Brightness": 0.6589999794960022,
+                                        "Teeth Desaturation": -0.21299999952316285,
+                                        "Gums Brightness": 0.6159999966621399,
+                                        "Gums Desaturation": -0.01899999938905239,
+                                        "Front Roughness": 0.4000000059604645,
+                                        "Front Specular": 0.30000001192092898,
+                                        "Front AO": 1.5,
+                                        "Back AO": 0.0,
+                                        "Back Roughness": 0.0,
+                                        "Back Specular": 0.0,
+                                        "Gums Scatter": 0.5,
+                                        "Teeth Scatter": 0.6499999761581421
+                                    }
+                                },
+                                "Subsurface Scatter": {
+                                    "Falloff": [
+                                        165.0,
+                                        121.0,
+                                        101.0
+                                    ],
+                                    "Radius": 1.5,
+                                    "Distribution": 0.9300000071525574,
+                                    "IOR": 1.5,
+                                    "DecayScale": 1.0,
+                                    "Lerp": 0.8999999761581421
+                                }
+                            }
+                        }
+                    },
                     "Boxers": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Boxers": {
                                 "Material Type": "Pbr",
@@ -9628,20 +8744,467 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Boxers/Boxers/Boxers/Boxers_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Boxers/Boxers/Boxers/Boxers_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {}
                             }
                         }
                     },
+                    "CC_Base_Eye": {
+                        "SubD Level": 0,
+                        "Materials": {
+                            "Std_Eye_R": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": false,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    50.000003814697269,
+                                    50.000003814697269,
+                                    50.000003814697269
+                                ],
+                                "Specular Color": [
+                                    229.00001525878907,
+                                    229.00001525878907,
+                                    229.00001525878907
+                                ],
+                                "Opacity": 1.0,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/Std_Eye_R_Diffuse.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Normal": {
+                                        "Texture Path": "./Saad.fbm/Std_Eye_R_Normal.png",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {}
+                            },
+                            "Std_Cornea_R": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": false,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    50.000003814697269,
+                                    50.000003814697269,
+                                    50.000003814697269
+                                ],
+                                "Specular Color": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "Opacity": 0.800000011920929,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/Std_Cornea_R_Diffuse.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "AO": {
+                                        "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_ao.jpg",
+                                        "Strength": 50.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {},
+                                "Custom Shader": {
+                                    "Shader Name": "RLEye",
+                                    "Image": {
+                                        "Iris Normal": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_IrisN.png"
+                                        },
+                                        "Sclera Normal": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_ScleraN.png"
+                                        },
+                                        "EyeBlendMap2": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_BCBMap.jpg"
+                                        },
+                                        "Inner Iris Mask": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_IrisMask.png"
+                                        },
+                                        "Sclera": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_Sclera.jpg"
+                                        }
+                                    },
+                                    "Variable": {
+                                        "BlendMap2 Strength": 0.0,
+                                        "Shadow Radius": 0.4000000059604645,
+                                        "Shadow Hardness": 0.5,
+                                        "Specular Scale": 0.800000011920929,
+                                        "Is Left Eye": 1.0,
+                                        "Eye Corner Darkness Color": [
+                                            255.0,
+                                            187.9860076904297,
+                                            178.9998016357422
+                                        ],
+                                        "Iris Depth Scale": 0.8999999761581421,
+                                        "_Iris Roughness": 0.0,
+                                        "Iris Color Brightness": 1.0,
+                                        "Pupil Scale": 0.9549999833106995,
+                                        "_IoR": 1.399999976158142,
+                                        "Iris Cloudy Color": [
+                                            0.0,
+                                            2.549999952316284,
+                                            2.549999952316284
+                                        ],
+                                        "Iris Inner Color": [
+                                            255.0,
+                                            223.0,
+                                            125.0
+                                        ],
+                                        "Iris Inner Scale": 0.0,
+                                        "Iris UV Radius": 0.1599999964237213,
+                                        "Iris UV Scale": 1.0,
+                                        "padding Last": 0.0,
+                                        "padding Last2": 0.0,
+                                        "padding Last3": 0.0,
+                                        "Iris Color": [
+                                            255.0,
+                                            255.0,
+                                            255.0
+                                        ],
+                                        "Limbus UV Width Color": 0.04500000178813934,
+                                        "Limbus Dark Scale": 6.5,
+                                        "ScleraBrightness": 0.6499999761581421,
+                                        "Sclera Roughness": 0.20000000298023225,
+                                        "Sclera Flatten Normal": 0.8999999761581421,
+                                        "Sclera Normal UV Scale": 0.5,
+                                        "Sclera UV Radius": 0.9300000071525574,
+                                        "replaecIrisDisplacementMap": 1.0
+                                    }
+                                },
+                                "Subsurface Scatter": {
+                                    "Falloff": [
+                                        255.0,
+                                        255.0,
+                                        255.0
+                                    ],
+                                    "Radius": 5.0,
+                                    "Distribution": 0.9300000071525574,
+                                    "IOR": 1.5499999523162842,
+                                    "DecayScale": 1.0,
+                                    "Lerp": 0.8500000238418579
+                                }
+                            },
+                            "Std_Eye_L": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": false,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    50.000003814697269,
+                                    50.000003814697269,
+                                    50.000003814697269
+                                ],
+                                "Specular Color": [
+                                    229.00001525878907,
+                                    229.00001525878907,
+                                    229.00001525878907
+                                ],
+                                "Opacity": 1.0,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/Std_Eye_L_Diffuse.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Normal": {
+                                        "Texture Path": "./Saad.fbm/Std_Eye_L_Normal.png",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {}
+                            },
+                            "Std_Cornea_L": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": false,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    50.000003814697269,
+                                    50.000003814697269,
+                                    50.000003814697269
+                                ],
+                                "Specular Color": [
+                                    0.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                "Opacity": 0.800000011920929,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Metallic": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/Std_Cornea_L_Diffuse.jpg",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "Roughness": {
+                                        "Texture Path": "",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    },
+                                    "AO": {
+                                        "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_L/Std_Cornea_L_ao.jpg",
+                                        "Strength": 50.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {},
+                                "Custom Shader": {
+                                    "Shader Name": "RLEye",
+                                    "Image": {
+                                        "Iris Normal": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_IrisN.png"
+                                        },
+                                        "Sclera Normal": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_ScleraN.png"
+                                        },
+                                        "EyeBlendMap2": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_BCBMap.jpg"
+                                        },
+                                        "Inner Iris Mask": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_IrisMask.png"
+                                        },
+                                        "Sclera": {
+                                            "Texture Path": "./textures/Saad/CC_Base_Eye/CC_Base_Eye/Std_Cornea_R/Std_Cornea_R_Sclera.jpg"
+                                        }
+                                    },
+                                    "Variable": {
+                                        "BlendMap2 Strength": 0.0,
+                                        "Shadow Radius": 0.4000000059604645,
+                                        "Shadow Hardness": 0.5,
+                                        "Specular Scale": 0.800000011920929,
+                                        "Is Left Eye": 1.0,
+                                        "Eye Corner Darkness Color": [
+                                            255.0,
+                                            187.9860076904297,
+                                            178.9998016357422
+                                        ],
+                                        "Iris Depth Scale": 0.8999999761581421,
+                                        "_Iris Roughness": 0.0,
+                                        "Iris Color Brightness": 1.0,
+                                        "Pupil Scale": 0.9549999833106995,
+                                        "_IoR": 1.399999976158142,
+                                        "Iris Cloudy Color": [
+                                            0.0,
+                                            2.549999952316284,
+                                            2.549999952316284
+                                        ],
+                                        "Iris Inner Color": [
+                                            255.0,
+                                            223.0,
+                                            125.0
+                                        ],
+                                        "Iris Inner Scale": 0.0,
+                                        "Iris UV Radius": 0.1599999964237213,
+                                        "Iris UV Scale": 1.0,
+                                        "padding Last": 0.0,
+                                        "padding Last2": 0.0,
+                                        "padding Last3": 0.0,
+                                        "Iris Color": [
+                                            255.0,
+                                            255.0,
+                                            255.0
+                                        ],
+                                        "Limbus UV Width Color": 0.04500000178813934,
+                                        "Limbus Dark Scale": 6.5,
+                                        "ScleraBrightness": 0.6499999761581421,
+                                        "Sclera Roughness": 0.20000000298023225,
+                                        "Sclera Flatten Normal": 0.8999999761581421,
+                                        "Sclera Normal UV Scale": 0.5,
+                                        "Sclera UV Radius": 0.9300000071525574,
+                                        "replaecIrisDisplacementMap": 1.0
+                                    }
+                                },
+                                "Subsurface Scatter": {
+                                    "Falloff": [
+                                        255.0,
+                                        255.0,
+                                        255.0
+                                    ],
+                                    "Radius": 5.0,
+                                    "Distribution": 0.9300000071525574,
+                                    "IOR": 1.5499999523162842,
+                                    "DecayScale": 1.0,
+                                    "Lerp": 0.8500000238418579
+                                }
+                            }
+                        }
+                    },
                     "Sport_sneakers": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Sport_sneakers": {
                                 "Material Type": "Pbr",
@@ -9724,12 +9287,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Sport_sneakers/Sport_sneakers/Sport_sneakers/Sport_sneakers_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Sport_sneakers/Sport_sneakers/Sport_sneakers/Sport_sneakers_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {}
@@ -9737,7 +9294,7 @@
                         }
                     },
                     "Slim_fit_pants": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Slim_fit_pants": {
                                 "Material Type": "Pbr",
@@ -9820,12 +9377,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Slim_fit_pants/Slim_fit_pants/Slim_fit_pants/Slim_fit_pants_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Slim_fit_pants/Slim_fit_pants/Slim_fit_pants/Slim_fit_pants_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {}
@@ -9833,7 +9384,7 @@
                         }
                     },
                     "Layered_sweater": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Layered_sweater": {
                                 "Material Type": "Pbr",
@@ -9928,20 +9479,325 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Layered_sweater/Layered_sweater/Layered_sweater/Layered_sweater_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Layered_sweater/Layered_sweater/Layered_sweater/Layered_sweater_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {}
                             }
                         }
                     },
+                    "CC_Base_Tear_Ducts": {
+                        "SubD Level": 0,
+                        "Materials": {
+                            "CC_Base_Tear_Ducts": {
+                                "Material Type": "Pbr",
+                                "MultiUV Index": 0,
+                                "Two Side": true,
+                                "Diffuse Color": [
+                                    255.0,
+                                    255.0,
+                                    255.0
+                                ],
+                                "Ambient Color": [
+                                    125.00000762939453,
+                                    125.00000762939453,
+                                    125.00000762939453
+                                ],
+                                "Specular Color": [
+                                    68.6969985961914,
+                                    68.6969985961914,
+                                    68.6969985961914
+                                ],
+                                "Opacity": 1.0,
+                                "Self Illumination": 0.0,
+                                "Textures": {
+                                    "Base Color": {
+                                        "Texture Path": "./Saad.fbm/CC_Base_Tear_Ducts_Diffuse.png",
+                                        "Strength": 100.0,
+                                        "Offset": [
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "Tiling": [
+                                            1.0,
+                                            1.0
+                                        ]
+                                    }
+                                },
+                                "Resource Textures": {
+                                    "Position": {
+                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_ResourceMap_Position.png"
+                                    },
+                                    "WSNormal": {
+                                        "Texture Path": "./textures/Saad/Saad/CC_Base_Body/Std_Skin_Head/Std_Skin_Head_ResourceMap_WSNormal.png"
+                                    }
+                                },
+                                "Custom Shader": {
+                                    "Shader Name": "RLHead",
+                                    "Image": {},
+                                    "Variable": {
+                                        "BaseColor Blend2 Strength": 0.0,
+                                        "NormalMap Blend Strength": 0.0,
+                                        "_BaseColorMap Brightness": 0.0,
+                                        "_BaseColorMap Saturation": 0.0,
+                                        "Flip MicroNormal Y": 1.0,
+                                        "MicroNormal Tiling": 40.0,
+                                        "MicroNormal Strength": 0.125,
+                                        "Keep Original Roughness": 1.0,
+                                        "Original Roughness Strength": 0.8500000238418579,
+                                        "Cavity Strength": 0.30000001192092898,
+                                        "Micro Roughness Scale": 0.04699999839067459,
+                                        "Nose Roughness Scale": -0.00800000037997961,
+                                        "Mouth Roughness Scale": 0.03400000184774399,
+                                        "UpperLid Roughness Scale": -0.30000001192092898,
+                                        "InnerLid Roughness Scale": -0.4410000145435333,
+                                        "Ear Roughness Scale": 0.0,
+                                        "Neck Roughness Scale": 0.0,
+                                        "Cheek Roughness Scale": 0.0,
+                                        "Forehead Roughness Scale": 0.0,
+                                        "UpperLip Roughness Scale": 0.0,
+                                        "Chin Roughness Scale": 0.0,
+                                        "Unmasked Roughness Scale": 0.050999999046325687,
+                                        "Edge Roughness Multiplier": 0.0,
+                                        "_Specular": 0.5,
+                                        "SSS Metallic Threshold": 1.0,
+                                        "Inner Mouth Ao": 2.5,
+                                        "Nostril Ao": 2.5,
+                                        "Lips Gap Ao": 2.5,
+                                        "Nose Scatter Scale": 1.0,
+                                        "Mouth Scatter Scale": 1.0,
+                                        "UpperLid Scatter Scale": 1.0,
+                                        "InnerLid Scatter Scale": 1.0,
+                                        "Ear Scatter Scale": 0.9390000104904175,
+                                        "Neck Scatter Scale": 1.0,
+                                        "Cheek Scatter Scale": 1.0,
+                                        "Forehead Scatter Scale": 1.0,
+                                        "UpperLip Scatter Scale": 1.0,
+                                        "Chin Scatter Scale": 1.0,
+                                        "Unmasked Scatter Scale": 1.0,
+                                        "_Active Human Color": 0.0,
+                                        "_Active Blend Map": 0.0,
+                                        "_Blend Map Color": [
+                                            247.35000610351563,
+                                            201.45001220703126,
+                                            155.5500030517578
+                                        ],
+                                        "_Blend Map Strength": 0.20000000298023225,
+                                        "padding1": [
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "_Active": 0.0,
+                                        "_Skin Color Range": [
+                                            247.35000610351563,
+                                            201.45001220703126,
+                                            155.5500030517578
+                                        ],
+                                        "_Range": 0.15000000596046449,
+                                        "_Skin Preset": [
+                                            0.0,
+                                            0.0,
+                                            0.0
+                                        ],
+                                        "_Red": 24.0,
+                                        "_Yellow": 22.0,
+                                        "_Black": 0.0,
+                                        "padding Last4": 0.0
+                                    }
+                                },
+                                "Subsurface Scatter": {
+                                    "Falloff": [
+                                        189.0,
+                                        67.0,
+                                        56.0
+                                    ],
+                                    "Radius": 1.7289999723434449,
+                                    "Distribution": 0.8999999761581421,
+                                    "IOR": 1.2999999523162842,
+                                    "DecayScale": 0.15000000596046449,
+                                    "Lerp": 0.8500000238418579
+                                },
+                                "Wrinkle": {
+                                    "Textures": {
+                                        "Diffuse_1": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Diffuse1.png"
+                                        },
+                                        "Diffuse_2": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Diffuse2.png"
+                                        },
+                                        "Diffuse_3": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Diffuse3.png"
+                                        },
+                                        "Normal_1": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Normal1.png"
+                                        },
+                                        "Normal_2": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Normal2.png"
+                                        },
+                                        "Normal_3": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Normal3.png"
+                                        },
+                                        "Roughness_1": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Roughness1.png"
+                                        },
+                                        "Roughness_2": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Roughness2.png"
+                                        },
+                                        "Roughness_3": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Roughness3.png"
+                                        },
+                                        "Flow_1": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Flow1.jpg"
+                                        },
+                                        "Flow_2": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Flow2.jpg"
+                                        },
+                                        "Flow_3": {
+                                            "Texture Path": "./textures/Saad/Saad/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts/CC_Base_Tear_Ducts_Wrinkle_Flow3.jpg"
+                                        }
+                                    },
+                                    "WrinkleRules": [
+                                        "head_wm1_normal_head_wm1_blink_L",
+                                        "head_wm1_normal_head_wm1_blink_R",
+                                        "head_wm1_normal_head_wm1_browRaiseInner_L",
+                                        "head_wm1_normal_head_wm1_browRaiseInner_R",
+                                        "head_wm1_normal_head_wm1_browRaiseOuter_L",
+                                        "head_wm1_normal_head_wm1_browRaiseOuter_R",
+                                        "head_wm1_normal_head_wm1_chinRaise_L",
+                                        "head_wm1_normal_head_wm1_chinRaise_R",
+                                        "head_wm1_normal_head_wm1_jawOpen",
+                                        "head_wm1_normal_head_wm1_purse_DL",
+                                        "head_wm1_normal_head_wm1_purse_DR",
+                                        "head_wm1_normal_head_wm1_purse_UL",
+                                        "head_wm1_normal_head_wm1_purse_UR",
+                                        "head_wm1_normal_head_wm1_squintInner_L",
+                                        "head_wm1_normal_head_wm1_squintInner_R",
+                                        "head_wm2_normal_head_wm2_browsDown_L",
+                                        "head_wm2_normal_head_wm2_browsDown_R",
+                                        "head_wm2_normal_head_wm2_browsLateral_L",
+                                        "head_wm2_normal_head_wm2_browsLateral_R",
+                                        "head_wm2_normal_head_wm2_mouthStretch_L",
+                                        "head_wm2_normal_head_wm2_mouthStretch_R",
+                                        "head_wm2_normal_head_wm2_neckStretch_L",
+                                        "head_wm2_normal_head_wm2_neckStretch_R",
+                                        "head_wm2_normal_head_wm2_noseWrinkler_L",
+                                        "head_wm2_normal_head_wm2_noseWrinkler_R",
+                                        "head_wm2_normal_head_wm2_noseCrease_L",
+                                        "head_wm2_normal_head_wm2_noseCrease_R",
+                                        "head_wm3_normal_head_wm3_cheekRaiseInner_L",
+                                        "head_wm3_normal_head_wm3_cheekRaiseInner_R",
+                                        "head_wm3_normal_head_wm3_cheekRaiseOuter_L",
+                                        "head_wm3_normal_head_wm3_cheekRaiseOuter_R",
+                                        "head_wm3_normal_head_wm3_cheekRaiseUpper_L",
+                                        "head_wm3_normal_head_wm3_cheekRaiseUpper_R",
+                                        "head_wm3_normal_head_wm3_smile_L",
+                                        "head_wm3_normal_head_wm3_smile_R",
+                                        "head_wm3_normal_head_wm13_lips_DL",
+                                        "head_wm3_normal_head_wm13_lips_DR",
+                                        "head_wm3_normal_head_wm13_lips_UL",
+                                        "head_wm3_normal_head_wm13_lips_UR",
+                                        "head_wm1_normal_head_wm13_lips_DL",
+                                        "head_wm1_normal_head_wm13_lips_DR",
+                                        "head_wm1_normal_head_wm13_lips_UL",
+                                        "head_wm1_normal_head_wm13_lips_UR"
+                                    ],
+                                    "WrinkleEaseStrength": [
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0,
+                                        50.0
+                                    ],
+                                    "WrinkleRuleWeights": [
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "WrinkleOverallWeight": 1.0
+                                }
+                            }
+                        }
+                    },
                     "Classic_Slick_Back": {
-                        "SubD Level": 2,
+                        "SubD Level": 0,
                         "Materials": {
                             "Hair_Transparency": {
                                 "Material Type": "Pbr",
@@ -10050,12 +9906,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Classic_Slick_Back/Classic_Slick_Back/Hair_Transparency/Hair_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Classic_Slick_Back/Classic_Slick_Back/Hair_Transparency/Hair_Transparency_HDRP.png"
                                     }
                                 },
                                 "Resource Textures": {},
@@ -10226,12 +10076,6 @@
                                             1.0,
                                             1.0
                                         ]
-                                    },
-                                    "MetallicAlpha": {
-                                        "Texture Path": "./textures/Saad/Classic_Slick_Back/Classic_Slick_Back/Hair_Clap_Transparency/Hair_Clap_Transparency_MetallicAlpha.png"
-                                    },
-                                    "HDRP": {
-                                        "Texture Path": "./textures/Saad/Classic_Slick_Back/Classic_Slick_Back/Hair_Clap_Transparency/Hair_Clap_Transparency_MetallicAlpha.png"
                                     }
                                 },
                                 "Resource Textures": {}
